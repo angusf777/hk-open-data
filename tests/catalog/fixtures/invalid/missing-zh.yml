@@ -1,0 +1,43 @@
+schemaVersion: 1
+id: official:missing-zh
+sourceReference: HKAPI-MISSING-ZH
+type: official
+publicationStatus: published
+name:
+  en: Missing Chinese Name
+summary:
+  en: This record intentionally omits Traditional Chinese fields.
+translationStatus: seeded
+provider:
+  name:
+    en: Example Provider
+  type: public-authority
+categories:
+  - government
+protocols:
+  - https
+formats:
+  - json
+authentication: none
+access: open-endpoint
+urls:
+  landing: https://example.invalid/
+  documentation: null
+  terms: null
+languages:
+  - en
+verification:
+  status: candidate
+  checkedAt: 2026-08-31
+  evidenceUrl: https://example.invalid/
+termsEvidence:
+  state: not-reviewed
+  checkedAt: 2026-08-31
+  note:
+    en: No permission conclusion is recorded.
+  attribution: null
+  restrictions: []
+integrations:
+  connector: none
+  sdk: none
+  mcp: none

@@ -1,0 +1,32 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://angusf777.github.io/hk-open-data/schemas/catalogue.schema.json",
+  "title": "Generated HK Open Data catalogue",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schemaVersion", "resources", "counts"],
+  "properties": {
+    "schemaVersion": { "const": 1 },
+    "resources": {
+      "type": "array",
+      "items": { "$ref": "resource.schema.json" }
+    },
+    "counts": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["total", "byType", "byTermsEvidenceState", "byTranslationStatus"],
+      "properties": {
+        "total": { "type": "integer", "minimum": 0 },
+        "byType": { "$ref": "#/$defs/countMap" },
+        "byTermsEvidenceState": { "$ref": "#/$defs/countMap" },
+        "byTranslationStatus": { "$ref": "#/$defs/countMap" }
+      }
+    }
+  },
+  "$defs": {
+    "countMap": {
+      "type": "object",
+      "additionalProperties": { "type": "integer", "minimum": 0 }
+    }
+  }
+}

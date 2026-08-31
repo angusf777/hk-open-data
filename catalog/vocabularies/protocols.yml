@@ -1,0 +1,19 @@
+version: 1
+values:
+  - arcgis
+  - file
+  - graphql
+  - https
+  - mcp
+  - odata
+  - ogc
+  - other
+  - rest
+  - rss
+  - sse
+  - stdio
+  - streamable-http
+  - websocket
+  - wfs
+  - wms
+  - xml

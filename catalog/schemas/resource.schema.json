@@ -1,0 +1,236 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://angusf777.github.io/hk-open-data/schemas/resource.schema.json",
+  "title": "HK Open Data resource",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schemaVersion",
+    "id",
+    "sourceReference",
+    "type",
+    "publicationStatus",
+    "name",
+    "summary",
+    "translationStatus",
+    "provider",
+    "categories",
+    "protocols",
+    "formats",
+    "authentication",
+    "access",
+    "urls",
+    "languages",
+    "verification",
+    "termsEvidence",
+    "integrations"
+  ],
+  "properties": {
+    "schemaVersion": { "const": 1 },
+    "id": {
+      "type": "string",
+      "pattern": "^(official|external|mcp):[a-z0-9][a-z0-9-]*$"
+    },
+    "sourceReference": {
+      "type": "string",
+      "pattern": "^[A-Z][A-Z0-9-]{2,63}$"
+    },
+    "type": { "enum": ["official", "external", "mcp"] },
+    "publicationStatus": { "enum": ["published", "draft", "archived"] },
+    "name": { "$ref": "#/$defs/localizedRequired" },
+    "summary": { "$ref": "#/$defs/localizedRequired" },
+    "translationStatus": { "enum": ["seeded", "reviewed"] },
+    "provider": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["name", "type"],
+      "properties": {
+        "name": { "$ref": "#/$defs/localizedRequired" },
+        "type": {
+          "enum": [
+            "public-authority",
+            "third-party",
+            "community-project",
+            "academic",
+            "nonprofit"
+          ]
+        }
+      }
+    },
+    "categories": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": { "type": "string", "pattern": "^[a-z0-9][a-z0-9-]*$" }
+    },
+    "tags": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": { "type": "string", "minLength": 1, "maxLength": 64 }
+    },
+    "protocols": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": {
+        "enum": [
+          "https",
+          "rest",
+          "graphql",
+          "rss",
+          "xml",
+          "ogc",
+          "wfs",
+          "wms",
+          "arcgis",
+          "odata",
+          "websocket",
+          "mcp",
+          "stdio",
+          "sse",
+          "streamable-http",
+          "file",
+          "other"
+        ]
+      }
+    },
+    "formats": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": {
+        "enum": [
+          "json",
+          "xml",
+          "csv",
+          "rss",
+          "geojson",
+          "pdf",
+          "xlsx",
+          "html",
+          "text",
+          "binary",
+          "mcp",
+          "other"
+        ]
+      }
+    },
+    "authentication": {
+      "enum": [
+        "none",
+        "api-key",
+        "oauth2",
+        "registration",
+        "session",
+        "unknown",
+        "not-applicable"
+      ]
+    },
+    "access": {
+      "enum": [
+        "open-endpoint",
+        "registration-required",
+        "credential-required",
+        "repository",
+        "download",
+        "unknown"
+      ]
+    },
+    "urls": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["landing", "documentation", "terms"],
+      "properties": {
+        "landing": { "$ref": "#/$defs/nullableUri" },
+        "documentation": { "$ref": "#/$defs/nullableUri" },
+        "terms": { "$ref": "#/$defs/nullableUri" }
+      }
+    },
+    "languages": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": { "enum": ["en", "zh-Hant", "zh-Hans", "other"] }
+    },
+    "availability": { "type": ["string", "null"], "maxLength": 240 },
+    "updateCadence": { "type": ["string", "null"], "maxLength": 240 },
+    "verification": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["status", "checkedAt", "evidenceUrl"],
+      "properties": {
+        "status": {
+          "enum": [
+            "candidate",
+            "metadata-reviewed",
+            "link-verified",
+            "source-reviewed",
+            "stale",
+            "unavailable"
+          ]
+        },
+        "checkedAt": { "type": "string", "format": "date" },
+        "evidenceUrl": { "type": "string", "format": "uri", "pattern": "^https://" }
+      }
+    },
+    "termsEvidence": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["state", "checkedAt", "note", "attribution", "restrictions"],
+      "properties": {
+        "state": {
+          "enum": [
+            "not-reviewed",
+            "official-terms-linked",
+            "restriction-identified",
+            "ambiguity-identified",
+            "provider-confirmation-recorded"
+          ]
+        },
+        "checkedAt": { "type": "string", "format": "date" },
+        "note": { "$ref": "#/$defs/localizedRequired" },
+        "attribution": {
+          "oneOf": [
+            { "type": "null" },
+            { "$ref": "#/$defs/localizedRequired" }
+          ]
+        },
+        "restrictions": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": { "$ref": "#/$defs/localizedRequired" }
+        }
+      }
+    },
+    "integrations": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["connector", "sdk", "mcp"],
+      "properties": {
+        "connector": { "$ref": "#/$defs/integrationState" },
+        "sdk": { "$ref": "#/$defs/integrationState" },
+        "mcp": { "$ref": "#/$defs/integrationState" }
+      }
+    }
+  },
+  "$defs": {
+    "localizedRequired": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["en", "zh-Hant"],
+      "properties": {
+        "en": { "type": "string", "minLength": 1, "maxLength": 500 },
+        "zh-Hant": { "type": "string", "minLength": 1, "maxLength": 500 }
+      }
+    },
+    "nullableUri": {
+      "oneOf": [
+        { "type": "null" },
+        { "type": "string", "format": "uri", "pattern": "^https://" }
+      ]
+    },
+    "integrationState": {
+      "enum": ["none", "candidate", "planned", "available", "deprecated"]
+    }
+  }
+}
