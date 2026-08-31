@@ -65,3 +65,28 @@ This entry qualifies the named local commit and generated metadata package only.
 a GitHub push, required hosted CI, Pages deployment, release publication, provider permission,
 production deployment, legal clearance, or independent certification. Those outcomes require
 separate evidence after they actually occur.
+
+## 2026-08-31 — v0.1.0 rate-limit remediation candidate
+
+- **Tested commit:** `307765e9043cab62a19a44c84c54d1c501e964de`
+- **Branch:** `codex/fix-api-rate-limits`
+- **Finding scope:** 23 open high-severity `js/missing-rate-limiting` CodeQL alerts observed on the
+  prior public `main` revision `7261d172746108fb189e0e07e9db27d1fd78b748`
+- **Control:** `@fastify/rate-limit` `11.2.0`, globally enforced before route handlers; exact trusted
+  proxy addresses for the included admin and portal Nginx services; caller-supplied forwarding
+  headers replaced at those proxies
+
+| Command or gate | Observed result |
+| --- | --- |
+| Focused API, OpenAPI and MCP tests | Passed: requests 1–100 accepted and request 101 rejected; spoofed forwarding header could not reset a direct-client bucket; separate clients behind an explicit trusted proxy received separate buckets; rejection caused no repository side effect; `Retry-After`, correlation ID and retryable `RATE_LIMITED` envelope preserved; MCP emitted the safe retryable error |
+| OpenAPI and contract drift | All 24 operations declare the shared `429` response; Swagger Parser validation passed; the eight-contract manifest hash matched |
+| `make verify-all` | Passed after the final proxy change: deterministic 521-resource catalogue, browser/accessibility checks, 57 API tests with 3 intentional Docker-only skips, all workspace tests/type checks/builds, Python lint/type/tests, secret scan, public-boundary scan and repository policy tests |
+| `make verify-integrated` | 10/10 Docker integration tests passed with the fixed edge subnet and trusted-proxy identities |
+| Production dependency and Trivy scans | `pnpm audit --prod` reported no known vulnerability; lockfiles, repository-owned configuration outside the documented PostGIS bootstrap acceptance, and the CycloneDX SBOM reported zero high/critical findings |
+| Independent security review | Literal `CLEAN`; prior OpenAPI type-cast and proxy shared-bucket findings verified resolved; hosted CodeQL remained an explicit post-merge gate |
+| `sh scripts/package-release.sh 0.1.0` and checksum verification from `artifacts/` | Passed; 469 licensed CycloneDX 1.6 components (407 npm and 62 Python); catalogue SHA-256 `cd7e7f1899dff1cf39e0bc51326d92529e771918b103c91a6f59587174c03c09`; SBOM SHA-256 `0a8f8fe91fad4f176b62219194d6fb55cfe13145ad93c6b6735564a54bf79cfa` |
+
+This entry qualifies the named local commit and regenerated package only. It does not claim the
+hosted CodeQL alerts are closed, nor does it record merge, tag, release publication, provider
+permission, production deployment, legal clearance, or independent certification. Release remains
+blocked until protected-branch CI and hosted CodeQL succeed on the published candidate.
