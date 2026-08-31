@@ -1,6 +1,7 @@
 import { describe, expect, it, vi } from "vitest";
 
 import { RestPlatformClient } from "./client.js";
+import { safeToolError } from "./errors.js";
 import { callerToken } from "./http-auth.js";
 
 describe("REST-backed MCP parity", () => {
@@ -48,5 +49,34 @@ describe("REST-backed MCP parity", () => {
     expect(callerToken(null)).toBeUndefined();
     expect(callerToken("Bearer caller-token")).toBe("caller-token");
     expect(() => callerToken("Basic unsafe")).toThrow(/bearer token/i);
+  });
+
+  it("surfaces an API rate limit as a safe retryable tool error", async () => {
+    const fetcher = vi.fn<typeof fetch>().mockResolvedValue(
+      new Response(
+        JSON.stringify({
+          code: "RATE_LIMITED",
+          message: "Too many requests; retry after 1 minute",
+          retryable: true,
+          correlation_id: "corr-rate-limit",
+        }),
+        { status: 429, headers: { "retry-after": "60" } },
+      ),
+    );
+    const client = new RestPlatformClient({
+      baseUrl: "https://api.example/v1",
+      fetcher,
+    });
+
+    const error = await client.call("status_summary", {}).catch((caught: unknown) => caught);
+    const result = safeToolError(error);
+
+    expect(result.isError).toBe(true);
+    expect(JSON.parse(result.content[0]?.type === "text" ? result.content[0].text : "{}")).toEqual({
+      code: "RATE_LIMITED",
+      message: "Too many requests; retry after 1 minute",
+      retryable: true,
+      correlation_id: "corr-rate-limit",
+    });
   });
 });

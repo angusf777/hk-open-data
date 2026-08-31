@@ -1,5 +1,6 @@
 import { randomUUID } from "node:crypto";
 
+import rateLimit from "@fastify/rate-limit";
 import type { OperatingProfile } from "@hk-open-data/schemas";
 import Fastify, { type FastifyInstance } from "fastify";
 import { ZodError } from "zod";
@@ -34,6 +35,7 @@ export interface BuildAppDependencies {
   webhookEndpointValidator?: (endpoint: string) => Promise<void>;
   webhookSender?: WebhookSender;
   operatingProfile?: OperatingProfile;
+  trustedProxies?: string[];
 }
 
 export function buildApp(dependencies: BuildAppDependencies): FastifyInstance {
@@ -41,11 +43,25 @@ export function buildApp(dependencies: BuildAppDependencies): FastifyInstance {
     logger: false,
     genReqId: () => randomUUID(),
     bodyLimit: 1_048_576,
+    trustProxy: dependencies.trustedProxies ?? false,
   });
   const clock = dependencies.clock ?? (() => new Date());
   const operatingProfile = dependencies.operatingProfile ?? "catalogue";
   const startedAt = clock().getTime();
   let completedRequests = 0;
+
+  app.register(rateLimit, {
+    global: true,
+    max: 100,
+    timeWindow: 60_000,
+    errorResponseBuilder: (_request, context) =>
+      new HttpError(
+        context.statusCode,
+        "RATE_LIMITED",
+        `Too many requests; retry after ${context.after}`,
+        true,
+      ),
+  });
 
   app.addHook("onRequest", async (request, reply) => {
     reply.header("x-correlation-id", request.id);
@@ -54,47 +70,6 @@ export function buildApp(dependencies: BuildAppDependencies): FastifyInstance {
   });
   app.addHook("onResponse", async () => {
     completedRequests += 1;
-  });
-
-  app.get("/health/live", async () => ({
-    status: "live",
-    operating_profile: operatingProfile,
-  }));
-  app.get("/health/ready", async (_request, reply) => {
-    try {
-      await dependencies.repository.healthCheck();
-      return { status: "ready", operating_profile: operatingProfile };
-    } catch {
-      return reply.status(503).send({
-        status: "not_ready",
-        operating_profile: operatingProfile,
-      });
-    }
-  });
-  app.get("/metrics", async (_request, reply) => {
-    const operational = await dependencies.repository.metricsSnapshot(clock().toISOString());
-    return reply
-      .type("text/plain; version=0.0.4; charset=utf-8")
-      .send(
-        `# HELP hk_platform_uptime_seconds Process uptime in seconds.\n` +
-          `# TYPE hk_platform_uptime_seconds gauge\n` +
-          `hk_platform_uptime_seconds ${Math.max(0, (clock().getTime() - startedAt) / 1000)}\n` +
-          `# HELP hk_platform_http_requests_completed_total Completed HTTP requests.\n` +
-          `# TYPE hk_platform_http_requests_completed_total counter\n` +
-          `hk_platform_http_requests_completed_total ${completedRequests}\n` +
-          `# HELP hk_platform_scheduler_backlog Jobs delayed by more than five minutes.\n` +
-          `# TYPE hk_platform_scheduler_backlog gauge\n` +
-          `hk_platform_scheduler_backlog ${operational.schedulerBacklog}\n` +
-          `# HELP hk_platform_delayed_checks Active monitors outside cadence.\n` +
-          `# TYPE hk_platform_delayed_checks gauge\n` +
-          `hk_platform_delayed_checks ${operational.delayedChecks}\n` +
-          `# HELP hk_platform_stale_connectors Active connectors without a recent success.\n` +
-          `# TYPE hk_platform_stale_connectors gauge\n` +
-          `hk_platform_stale_connectors ${operational.staleConnectors}\n` +
-          `# HELP hk_platform_failed_webhooks Retry and dead-letter deliveries.\n` +
-          `# TYPE hk_platform_failed_webhooks gauge\n` +
-          `hk_platform_failed_webhooks ${operational.failedWebhooks}\n`,
-      );
   });
 
   async function authenticate(
@@ -128,21 +103,64 @@ export function buildApp(dependencies: BuildAppDependencies): FastifyInstance {
     authenticate,
     operatingProfile,
   };
-  registerAdminRoutes(app, context);
-  registerSourceRoutes(app, context);
-  registerRecordRoutes(app, context);
-  registerEventRoutes(app, context);
-  registerQualityRoutes(app, context);
-  registerWebhookRoutes(
-    app,
-    context,
-    webhookStore,
-    dependencies.webhookEndpointValidator ??
-      (async (endpoint) => {
-        await resolveSafeWebhookEndpoint(endpoint);
-      }),
-    dependencies.webhookSender ?? new SafeWebhookSender(),
-  );
+  app.register(async (routes) => {
+    routes.get("/health/live", async () => ({
+      status: "live",
+      operating_profile: operatingProfile,
+    }));
+    routes.get("/health/ready", async (_request, reply) => {
+      try {
+        await dependencies.repository.healthCheck();
+        return { status: "ready", operating_profile: operatingProfile };
+      } catch {
+        return reply.status(503).send({
+          status: "not_ready",
+          operating_profile: operatingProfile,
+        });
+      }
+    });
+    routes.get("/metrics", async (_request, reply) => {
+      const operational = await dependencies.repository.metricsSnapshot(clock().toISOString());
+      return reply
+        .type("text/plain; version=0.0.4; charset=utf-8")
+        .send(
+          `# HELP hk_platform_uptime_seconds Process uptime in seconds.\n` +
+            `# TYPE hk_platform_uptime_seconds gauge\n` +
+            `hk_platform_uptime_seconds ${Math.max(0, (clock().getTime() - startedAt) / 1000)}\n` +
+            `# HELP hk_platform_http_requests_completed_total Completed HTTP requests.\n` +
+            `# TYPE hk_platform_http_requests_completed_total counter\n` +
+            `hk_platform_http_requests_completed_total ${completedRequests}\n` +
+            `# HELP hk_platform_scheduler_backlog Jobs delayed by more than five minutes.\n` +
+            `# TYPE hk_platform_scheduler_backlog gauge\n` +
+            `hk_platform_scheduler_backlog ${operational.schedulerBacklog}\n` +
+            `# HELP hk_platform_delayed_checks Active monitors outside cadence.\n` +
+            `# TYPE hk_platform_delayed_checks gauge\n` +
+            `hk_platform_delayed_checks ${operational.delayedChecks}\n` +
+            `# HELP hk_platform_stale_connectors Active connectors without a recent success.\n` +
+            `# TYPE hk_platform_stale_connectors gauge\n` +
+            `hk_platform_stale_connectors ${operational.staleConnectors}\n` +
+            `# HELP hk_platform_failed_webhooks Retry and dead-letter deliveries.\n` +
+            `# TYPE hk_platform_failed_webhooks gauge\n` +
+            `hk_platform_failed_webhooks ${operational.failedWebhooks}\n`,
+        );
+    });
+
+    registerAdminRoutes(routes, context);
+    registerSourceRoutes(routes, context);
+    registerRecordRoutes(routes, context);
+    registerEventRoutes(routes, context);
+    registerQualityRoutes(routes, context);
+    registerWebhookRoutes(
+      routes,
+      context,
+      webhookStore,
+      dependencies.webhookEndpointValidator ??
+        (async (endpoint) => {
+          await resolveSafeWebhookEndpoint(endpoint);
+        }),
+      dependencies.webhookSender ?? new SafeWebhookSender(),
+    );
+  });
 
   app.setNotFoundHandler(async (request, reply) => {
     await reply.status(404).send({

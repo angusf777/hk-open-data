@@ -97,6 +97,22 @@ def test_provider_workers_do_not_join_the_public_edge() -> None:
     assert value["networks"]["egress"].get("internal") is not True
 
 
+def test_only_fixed_web_proxies_supply_forwarded_client_addresses() -> None:
+    value = compose()
+    services = value["services"]
+    assert value["networks"]["edge"]["ipam"]["config"] == [
+        {"subnet": "172.30.250.0/24"}
+    ]
+    assert services["admin"]["networks"]["edge"]["ipv4_address"] == "172.30.250.30"
+    assert services["portal"]["networks"]["edge"]["ipv4_address"] == "172.30.250.31"
+    assert services["api"]["environment"]["TRUSTED_PROXY_CIDRS"] == (
+        "172.30.250.30,172.30.250.31"
+    )
+    nginx = (ROOT / "infra/docker/web.nginx.conf").read_text(encoding="utf-8")
+    assert "proxy_set_header X-Forwarded-For $remote_addr;" in nginx
+    assert "$proxy_add_x_forwarded_for" not in nginx
+
+
 def test_runtime_images_are_pinned_and_plaintext_secrets_are_absent() -> None:
     services = compose()["services"]
     expected_local_images = {

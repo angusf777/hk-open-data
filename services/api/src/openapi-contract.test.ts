@@ -71,11 +71,24 @@ const verifier: TokenVerifier = {
 
 interface DereferencedOpenApi {
   components: { schemas: Record<string, object> };
+  paths: Record<string, Record<string, { responses: Record<string, object> }>>;
 }
 
 describe("OpenAPI response contract", () => {
+  it("declares the shared rate-limit response on every operation", async () => {
+    const document = (await SwaggerParser.dereference(openapiPath)) as unknown as DereferencedOpenApi;
+    const operations = Object.entries(document.paths).flatMap(([path, pathItem]) =>
+      Object.entries(pathItem).map(([method, operation]) => ({ path, method, operation })),
+    );
+
+    expect(operations).toHaveLength(24);
+    for (const { path, method, operation } of operations) {
+      expect(operation.responses["429"], `${method.toUpperCase()} ${path}`).toBeDefined();
+    }
+  });
+
   it("validates representative status and source-record responses", async () => {
-    const document = (await SwaggerParser.dereference(openapiPath)) as DereferencedOpenApi;
+    const document = (await SwaggerParser.dereference(openapiPath)) as unknown as DereferencedOpenApi;
     const ajv = new Ajv2020({ strict: false, allErrors: true });
     const addFormats = (addFormatsModule.default ?? addFormatsModule) as unknown as (
       instance: Ajv2020,

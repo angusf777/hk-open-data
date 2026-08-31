@@ -3,7 +3,7 @@
   "info": {
     "title": "HK Open Data Self-hosted Runtime",
     "version": "1.0.0-draft",
-    "description": "Normative v0 REST surface. Public status operations are explicitly marked; all other operations require an audience-bound bearer token."
+    "description": "Normative v0 REST surface. Public status operations are explicitly marked; all other operations require an audience-bound bearer token. Every operation is subject to the application rate limit and can return 429 with Retry-After."
   },
   "servers": [
     {"url": "/", "description": "Current environment; deployment supplies the origin"}
@@ -33,7 +33,8 @@
         ],
         "responses": {
           "200": {"description": "Visible source summaries", "content": {"application/json": {"schema": {"$ref": "#/components/schemas/SourcePage"}}}},
-          "401": {"$ref": "#/components/responses/Unauthorized"}
+          "401": {"$ref": "#/components/responses/Unauthorized"},
+          "429": {"$ref": "#/components/responses/TooManyRequests"}
         }
       }
     },
@@ -46,7 +47,8 @@
         "parameters": [{"$ref": "#/components/parameters/SourceId"}, {"$ref": "#/components/parameters/IfMatch"}],
         "responses": {
           "200": {"description": "Source definition and current health", "content": {"application/json": {"schema": {"$ref": "#/components/schemas/SourceDetail"}}}},
-          "404": {"$ref": "#/components/responses/NotFound"}
+          "404": {"$ref": "#/components/responses/NotFound"},
+          "429": {"$ref": "#/components/responses/TooManyRequests"}
         }
       }
     },
@@ -68,7 +70,8 @@
         ],
         "responses": {
           "200": {"description": "Authorized source records", "content": {"application/json": {"schema": {"$ref": "#/components/schemas/SourceRecordPage"}}}},
-          "401": {"$ref": "#/components/responses/Unauthorized"}
+          "401": {"$ref": "#/components/responses/Unauthorized"},
+          "429": {"$ref": "#/components/responses/TooManyRequests"}
         }
       }
     },
@@ -81,7 +84,8 @@
         "parameters": [{"name": "source_record_id", "in": "path", "required": true, "schema": {"type": "string"}}],
         "responses": {
           "200": {"description": "One source record with lineage", "content": {"application/json": {"schema": {"$ref": "./source_record.schema.json"}}}},
-          "404": {"$ref": "#/components/responses/NotFound"}
+          "404": {"$ref": "#/components/responses/NotFound"},
+          "429": {"$ref": "#/components/responses/TooManyRequests"}
         }
       }
     },
@@ -102,7 +106,8 @@
           {"name": "affected_entity", "in": "query", "schema": {"type": "string"}}
         ],
         "responses": {
-          "200": {"description": "Authorized canonical events", "content": {"application/json": {"schema": {"$ref": "#/components/schemas/EventPage"}}}}
+          "200": {"description": "Authorized canonical events", "content": {"application/json": {"schema": {"$ref": "#/components/schemas/EventPage"}}}},
+          "429": {"$ref": "#/components/responses/TooManyRequests"}
         }
       }
     },
@@ -115,7 +120,8 @@
         "parameters": [{"name": "event_id", "in": "path", "required": true, "schema": {"type": "string"}}],
         "responses": {
           "200": {"description": "One canonical event", "content": {"application/json": {"schema": {"$ref": "./canonical_event.schema.json"}}}},
-          "404": {"$ref": "#/components/responses/NotFound"}
+          "404": {"$ref": "#/components/responses/NotFound"},
+          "429": {"$ref": "#/components/responses/TooManyRequests"}
         }
       }
     },
@@ -130,7 +136,8 @@
           {"name": "provider", "in": "query", "schema": {"type": "string"}}
         ],
         "responses": {
-          "200": {"description": "Reviewed public status summary", "content": {"application/json": {"schema": {"$ref": "#/components/schemas/StatusSummary"}}}}
+          "200": {"description": "Reviewed public status summary", "content": {"application/json": {"schema": {"$ref": "#/components/schemas/StatusSummary"}}}},
+          "429": {"$ref": "#/components/responses/TooManyRequests"}
         }
       }
     },
@@ -147,7 +154,8 @@
           {"name": "outcome", "in": "query", "schema": {"type": "string"}}
         ],
         "responses": {
-          "200": {"description": "Public target views; bearer tokens may reveal authorized private targets", "content": {"application/json": {"schema": {"$ref": "#/components/schemas/MonitorTargetPage"}}}}
+          "200": {"description": "Public target views; bearer tokens may reveal authorized private targets", "content": {"application/json": {"schema": {"$ref": "#/components/schemas/MonitorTargetPage"}}}},
+          "429": {"$ref": "#/components/responses/TooManyRequests"}
         }
       }
     },
@@ -163,7 +171,8 @@
         ],
         "responses": {
           "200": {"description": "Target and reviewed observation history", "content": {"application/json": {"schema": {"$ref": "#/components/schemas/MonitorTargetDetail"}}}},
-          "404": {"$ref": "#/components/responses/NotFound"}
+          "404": {"$ref": "#/components/responses/NotFound"},
+          "429": {"$ref": "#/components/responses/TooManyRequests"}
         }
       }
     },
@@ -183,7 +192,8 @@
           {"name": "opened_to", "in": "query", "schema": {"type": "string", "format": "date-time"}}
         ],
         "responses": {
-          "200": {"description": "Reviewed public incidents or authorized private incidents", "content": {"application/json": {"schema": {"$ref": "#/components/schemas/IncidentPage"}}}}
+          "200": {"description": "Reviewed public incidents or authorized private incidents", "content": {"application/json": {"schema": {"$ref": "#/components/schemas/IncidentPage"}}}},
+          "429": {"$ref": "#/components/responses/TooManyRequests"}
         }
       }
     },
@@ -196,7 +206,8 @@
         "parameters": [{"$ref": "#/components/parameters/IncidentId"}],
         "responses": {
           "200": {"description": "Incident view filtered by caller authorization", "content": {"application/json": {"schema": {"$ref": "./incident.schema.json"}}}},
-          "404": {"$ref": "#/components/responses/NotFound"}
+          "404": {"$ref": "#/components/responses/NotFound"},
+          "429": {"$ref": "#/components/responses/TooManyRequests"}
         }
       }
     },
@@ -207,7 +218,7 @@
         "tags": ["Webhooks"],
         "security": [{"bearerAuth": []}],
         "parameters": [{"$ref": "#/components/parameters/Limit"}],
-        "responses": {"200": {"description": "Tenant webhook subscriptions", "content": {"application/json": {"schema": {"$ref": "#/components/schemas/WebhookSubscriptionList"}}}}}
+        "responses": {"200": {"description": "Tenant webhook subscriptions", "content": {"application/json": {"schema": {"$ref": "#/components/schemas/WebhookSubscriptionList"}}}}, "429": {"$ref": "#/components/responses/TooManyRequests"}}
       },
       "post": {
         "operationId": "createWebhookSubscription",
@@ -218,7 +229,8 @@
         "requestBody": {"required": true, "content": {"application/json": {"schema": {"$ref": "#/components/schemas/WebhookSubscriptionInput"}}}},
         "responses": {
           "201": {"description": "Pending subscription awaiting endpoint challenge", "content": {"application/json": {"schema": {"$ref": "#/components/schemas/WebhookSubscription"}}}},
-          "409": {"description": "Idempotency conflict", "content": {"application/json": {"schema": {"$ref": "#/components/schemas/Error"}}}}
+          "409": {"description": "Idempotency conflict", "content": {"application/json": {"schema": {"$ref": "#/components/schemas/Error"}}}},
+          "429": {"$ref": "#/components/responses/TooManyRequests"}
         }
       }
     },
@@ -229,7 +241,7 @@
         "tags": ["Webhooks"],
         "security": [{"bearerAuth": []}],
         "parameters": [{"name": "subscription_id", "in": "path", "required": true, "schema": {"type": "string"}}],
-        "responses": {"200": {"description": "Activated subscription", "content": {"application/json": {"schema": {"$ref": "#/components/schemas/WebhookSubscription"}}}}}
+        "responses": {"200": {"description": "Activated subscription", "content": {"application/json": {"schema": {"$ref": "#/components/schemas/WebhookSubscription"}}}}, "429": {"$ref": "#/components/responses/TooManyRequests"}}
       }
     },
     "/v1/webhook-deliveries": {
@@ -239,7 +251,7 @@
         "tags": ["Webhooks"],
         "security": [{"bearerAuth": []}],
         "parameters": [{"$ref": "#/components/parameters/Limit"}],
-        "responses": {"200": {"description": "Tenant webhook delivery history", "content": {"application/json": {"schema": {"$ref": "#/components/schemas/WebhookDeliveryList"}}}}}
+        "responses": {"200": {"description": "Tenant webhook delivery history", "content": {"application/json": {"schema": {"$ref": "#/components/schemas/WebhookDeliveryList"}}}}, "429": {"$ref": "#/components/responses/TooManyRequests"}}
       }
     },
     "/v1/admin/audit": {
@@ -249,7 +261,7 @@
         "tags": ["Administration"],
         "security": [{"bearerAuth": []}],
         "parameters": [{"$ref": "#/components/parameters/Cursor"}, {"$ref": "#/components/parameters/Limit"}, {"name": "target_id", "in": "query", "schema": {"type": "string"}}],
-        "responses": {"200": {"description": "Audit entries", "content": {"application/json": {"schema": {"$ref": "#/components/schemas/AuditPage"}}}}}
+        "responses": {"200": {"description": "Audit entries", "content": {"application/json": {"schema": {"$ref": "#/components/schemas/AuditPage"}}}}, "429": {"$ref": "#/components/responses/TooManyRequests"}}
       }
     },
     "/v1/admin/sources/{source_id}/approval-decisions": {
@@ -262,7 +274,8 @@
         "requestBody": {"required": true, "content": {"application/json": {"schema": {"$ref": "#/components/schemas/SourceApprovalDecision"}}}},
         "responses": {
           "201": {"description": "Immutable approval decision recorded", "content": {"application/json": {"schema": {"$ref": "#/components/schemas/SourceDetail"}}}},
-          "403": {"$ref": "#/components/responses/Forbidden"}
+          "403": {"$ref": "#/components/responses/Forbidden"},
+          "429": {"$ref": "#/components/responses/TooManyRequests"}
         }
       }
     },
@@ -276,7 +289,8 @@
         "requestBody": {"required": true, "content": {"application/json": {"schema": {"$ref": "#/components/schemas/MonitorActivationInput"}}}},
         "responses": {
           "201": {"description": "Monitor baseline and scheduler activation recorded", "content": {"application/json": {"schema": {"$ref": "#/components/schemas/MonitorTargetSummary"}}}},
-          "409": {"$ref": "#/components/responses/Conflict"}
+          "409": {"$ref": "#/components/responses/Conflict"},
+          "429": {"$ref": "#/components/responses/TooManyRequests"}
         }
       }
     },
@@ -290,7 +304,8 @@
         "requestBody": {"required": true, "content": {"application/json": {"schema": {"$ref": "#/components/schemas/ConnectorActivationInput"}}}},
         "responses": {
           "201": {"description": "Connector version and scheduler job activated", "content": {"application/json": {"schema": {"$ref": "#/components/schemas/SourceDetail"}}}},
-          "409": {"$ref": "#/components/responses/Conflict"}
+          "409": {"$ref": "#/components/responses/Conflict"},
+          "429": {"$ref": "#/components/responses/TooManyRequests"}
         }
       }
     },
@@ -302,7 +317,7 @@
         "security": [{"bearerAuth": []}],
         "parameters": [{"$ref": "#/components/parameters/IncidentId"}, {"$ref": "#/components/parameters/IfMatch"}],
         "requestBody": {"required": true, "content": {"application/json": {"schema": {"$ref": "#/components/schemas/ReasonInput"}}}},
-        "responses": {"200": {"description": "Acknowledged incident", "content": {"application/json": {"schema": {"$ref": "./incident.schema.json"}}}}, "409": {"$ref": "#/components/responses/Conflict"}}
+        "responses": {"200": {"description": "Acknowledged incident", "content": {"application/json": {"schema": {"$ref": "./incident.schema.json"}}}}, "409": {"$ref": "#/components/responses/Conflict"}, "429": {"$ref": "#/components/responses/TooManyRequests"}}
       }
     },
     "/v1/admin/incidents/{incident_id}/suppress": {
@@ -313,7 +328,7 @@
         "security": [{"bearerAuth": []}],
         "parameters": [{"$ref": "#/components/parameters/IncidentId"}, {"$ref": "#/components/parameters/IfMatch"}],
         "requestBody": {"required": true, "content": {"application/json": {"schema": {"$ref": "#/components/schemas/SuppressionInput"}}}},
-        "responses": {"200": {"description": "Time-bounded suppression recorded", "content": {"application/json": {"schema": {"$ref": "./incident.schema.json"}}}}, "409": {"$ref": "#/components/responses/Conflict"}}
+        "responses": {"200": {"description": "Time-bounded suppression recorded", "content": {"application/json": {"schema": {"$ref": "./incident.schema.json"}}}}, "409": {"$ref": "#/components/responses/Conflict"}, "429": {"$ref": "#/components/responses/TooManyRequests"}}
       }
     },
     "/v1/admin/incidents/{incident_id}/resolve": {
@@ -324,7 +339,7 @@
         "security": [{"bearerAuth": []}],
         "parameters": [{"$ref": "#/components/parameters/IncidentId"}, {"$ref": "#/components/parameters/IfMatch"}],
         "requestBody": {"required": true, "content": {"application/json": {"schema": {"$ref": "#/components/schemas/ResolutionInput"}}}},
-        "responses": {"200": {"description": "Resolved incident after recovery gate", "content": {"application/json": {"schema": {"$ref": "./incident.schema.json"}}}}, "409": {"$ref": "#/components/responses/Conflict"}}
+        "responses": {"200": {"description": "Resolved incident after recovery gate", "content": {"application/json": {"schema": {"$ref": "./incident.schema.json"}}}}, "409": {"$ref": "#/components/responses/Conflict"}, "429": {"$ref": "#/components/responses/TooManyRequests"}}
       }
     },
     "/v1/admin/incidents/{incident_id}/publish": {
@@ -335,7 +350,7 @@
         "security": [{"bearerAuth": []}],
         "parameters": [{"$ref": "#/components/parameters/IncidentId"}, {"$ref": "#/components/parameters/IfMatch"}],
         "requestBody": {"required": true, "content": {"application/json": {"schema": {"$ref": "#/components/schemas/PublicationInput"}}}},
-        "responses": {"200": {"description": "Reviewed wording published", "content": {"application/json": {"schema": {"$ref": "./incident.schema.json"}}}}, "409": {"$ref": "#/components/responses/Conflict"}}
+        "responses": {"200": {"description": "Reviewed wording published", "content": {"application/json": {"schema": {"$ref": "./incident.schema.json"}}}}, "409": {"$ref": "#/components/responses/Conflict"}, "429": {"$ref": "#/components/responses/TooManyRequests"}}
       }
     },
     "/v1/admin/incidents/{incident_id}/correct": {
@@ -346,7 +361,7 @@
         "security": [{"bearerAuth": []}],
         "parameters": [{"$ref": "#/components/parameters/IncidentId"}, {"$ref": "#/components/parameters/IfMatch"}],
         "requestBody": {"required": true, "content": {"application/json": {"schema": {"$ref": "#/components/schemas/CorrectionInput"}}}},
-        "responses": {"200": {"description": "Correction and prior wording recorded", "content": {"application/json": {"schema": {"$ref": "./incident.schema.json"}}}}, "409": {"$ref": "#/components/responses/Conflict"}}
+        "responses": {"200": {"description": "Correction and prior wording recorded", "content": {"application/json": {"schema": {"$ref": "./incident.schema.json"}}}}, "409": {"$ref": "#/components/responses/Conflict"}, "429": {"$ref": "#/components/responses/TooManyRequests"}}
       }
     }
   },
@@ -366,7 +381,8 @@
       "Unauthorized": {"description": "Missing or invalid token", "content": {"application/json": {"schema": {"$ref": "#/components/schemas/Error"}}}},
       "Forbidden": {"description": "Insufficient scope or project/tenant access", "content": {"application/json": {"schema": {"$ref": "#/components/schemas/Error"}}}},
       "NotFound": {"description": "Object absent or hidden from caller", "content": {"application/json": {"schema": {"$ref": "#/components/schemas/Error"}}}},
-      "Conflict": {"description": "State or optimistic-concurrency conflict", "content": {"application/json": {"schema": {"$ref": "#/components/schemas/Error"}}}}
+      "Conflict": {"description": "State or optimistic-concurrency conflict", "content": {"application/json": {"schema": {"$ref": "#/components/schemas/Error"}}}},
+      "TooManyRequests": {"description": "Application request limit exceeded; retry after the number of seconds in Retry-After", "headers": {"Retry-After": {"required": true, "schema": {"type": "integer", "minimum": 1}}}, "content": {"application/json": {"schema": {"$ref": "#/components/schemas/Error"}}}}
     },
     "schemas": {
       "PageMeta": {
