@@ -90,3 +90,30 @@ This entry qualifies the named local commit and regenerated package only. It doe
 hosted CodeQL alerts are closed, nor does it record merge, tag, release publication, provider
 permission, production deployment, legal clearance, or independent certification. Release remains
 blocked until protected-branch CI and hosted CodeQL succeed on the published candidate.
+
+## 2026-08-31 — v0.1.0 public release
+
+- **Published commit:** `63c85083485bb1b07676f55c8d08dfb12ecb8a55`
+- **Merged change:** pull request `#17`, `security: enforce API request rate limits`
+- **Immutable tag and release:** `v0.1.0`,
+  <https://github.com/angusf777/hk-open-data/releases/tag/v0.1.0>
+- **Pages deployment:** <https://angusf777.github.io/hk-open-data/>
+- **Repository state:** public, Apache-2.0, Issues and Discussions enabled, HTTPS Pages, strict
+  required status checks and linear history; force pushes and branch deletion disabled
+
+| Published gate or observation | Observed result |
+| --- | --- |
+| Pull request `#17` | All eight reported checks passed, including catalogue, TypeScript, Python, browser, boundary, JavaScript/TypeScript CodeQL and Python CodeQL |
+| Main CI run `33408418682` | Passed all five required jobs at the published commit |
+| Main CodeQL run `33408418714` | JavaScript/TypeScript and Python analyses passed; the code-scanning API then reported zero open alerts, closing all 23 prior high-severity missing-rate-limit findings |
+| Pages run `33408418679` | Build and deployment passed at the published commit |
+| Release run `33408624340` | Verification, 10/10 Docker integration tests, packaging, checksum verification, immutable tag creation and GitHub Release publication all passed |
+| Tag integrity | Annotated tag `v0.1.0` resolves to the same `63c8508` commit as published `main` |
+| Published asset verification | A fresh download passed the attached `SHA256SUMS`; catalogue SHA-256 `cd7e7f1899dff1cf39e0bc51326d92529e771918b103c91a6f59587174c03c09`; Linux release-runner SBOM SHA-256 `76dd986437cc626395bc2d81481179b77d47c085046ce3fbf11d13760f747a2c`; 469 licensed CycloneDX 1.6 components |
+| Live Pages browser check | HTTP 200; branded title; one-result source search; English and Traditional Chinese safeguards; direct static resource permalink; zero requests outside GitHub Pages; zero tested Axe WCAG violations on catalogue and detail; zero mobile overflow |
+| Repository security APIs | Zero open code-scanning alerts and zero open secret-scanning alerts |
+
+This entry records actual GitHub publication and observed live Pages behaviour. It does not imply
+provider permission, legal clearance, current upstream accuracy, production operation of the
+optional API/MCP runtime, service availability, or independent certification. The static catalogue
+remains an independent community project; upstream sources and current terms remain controlling.
