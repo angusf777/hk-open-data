@@ -30,6 +30,7 @@ target-version = "py312"
 
 [tool.ruff.lint]
 select = ["E", "F", "I", "B", "UP", "RUF"]
+allowed-confusables = ["，", "；"]
 
 [tool.mypy]
 python_version = "3.12"

@@ -1,0 +1,2 @@
+MCP ID,Category,Server,GitHub URL,Direct Hong Kong relevance,Authority model,Priority score,Tier,Project matches,Recommended role,Build / reuse,Verification status,Notes
+MCP-T01,Developer Tools,example/synthetic-mcp,https://github.com/example/synthetic-mcp,No,Community implementation,1.0,P3,P01,Test only,Evaluate,README-level review; production verification pending,Synthetic fixture.

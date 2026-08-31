@@ -1,0 +1,49 @@
+schemaVersion: 1
+id: external:ext-051
+sourceReference: EXT-051
+type: external
+publicationStatus: published
+name:
+  en: Exchangerate.dev
+  zh-Hant: Exchangerate.dev
+summary:
+  en: Live/historical FX with broad pair coverage.
+  zh-Hant: 與香港用途相關的第三方「Exchangerate.dev」資源。使用前請核實供應者文件、保安及現行條款。
+translationStatus: seeded
+provider:
+  name:
+    en: Exchangerate.dev
+    zh-Hant: Exchangerate.dev
+  type: third-party
+categories:
+- currency-exchange
+tags:
+- Global with HK coverage
+protocols:
+- https
+formats:
+- other
+authentication: none
+access: open-endpoint
+urls:
+  landing: https://exchangerate.dev/docs
+  documentation: https://exchangerate.dev/docs
+  terms: null
+languages:
+- en
+verification:
+  status: candidate
+  checkedAt: '2026-08-31'
+  evidenceUrl: https://exchangerate.dev/docs
+termsEvidence:
+  state: ambiguity-identified
+  checkedAt: '2026-08-31'
+  note:
+    en: Available source notes indicate that current provider or dataset-specific terms require review.
+    zh-Hant: 現有來源註記顯示，使用前須審查現行供應者或個別數據集條款。
+  attribution: null
+  restrictions: []
+integrations:
+  connector: none
+  sdk: none
+  mcp: none

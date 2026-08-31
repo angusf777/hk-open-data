@@ -1,0 +1,2 @@
+ID,Domain,Subdomain,API / Feed / Dataset Family,Provider,Access Class,Timeliness,Update Cadence,Protocol / Format,Authentication,Official Documentation / Catalogue,Reuse / Rights,Operational Status,Coverage / What You Can Build,Limitations / Implementation Notes,Verified
+HKAPI-T01,Government & Law,Testing,Synthetic Official API,Example Authority,Open REST/JSON,On request,Daily,HTTPS GET / JSON,None,https://example.invalid/official,Verify dataset-specific terms,Test fixture,Exercise the official importer.,Synthetic fixture.,2026-08-31

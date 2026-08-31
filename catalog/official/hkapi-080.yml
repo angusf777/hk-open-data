@@ -1,0 +1,51 @@
+schemaVersion: 1
+id: official:hkapi-080
+sourceReference: HKAPI-080
+type: official
+publicationStatus: published
+name:
+  en: Land-boundary vehicle throughput
+  zh-Hant: Land-boundary vehicle throughput
+summary:
+  en: Vehicle throughput by control point.
+  zh-Hant: 由 Customs and Excise Department 提供的「Land-boundary vehicle throughput」資源。請參閱官方文件及最新上游條款。
+translationStatus: seeded
+provider:
+  name:
+    en: Customs and Excise Department
+    zh-Hant: Customs and Excise Department
+  type: public-authority
+categories:
+- transportation
+tags:
+- Border
+protocols:
+- file
+formats:
+- other
+authentication: none
+access: download
+urls:
+  landing: https://data.gov.hk/en-datasets/search/land%20boundary%20vehicle%20throughput
+  documentation: https://data.gov.hk/en-datasets/search/land%20boundary%20vehicle%20throughput
+  terms: null
+languages:
+- en
+verification:
+  status: metadata-reviewed
+  checkedAt: '2026-08-27'
+  evidenceUrl: https://data.gov.hk/en-datasets/search/land%20boundary%20vehicle%20throughput
+termsEvidence:
+  state: ambiguity-identified
+  checkedAt: '2026-08-27'
+  note:
+    en: Available source notes indicate that current provider or dataset-specific terms require review.
+    zh-Hant: 現有來源註記顯示，使用前須審查現行供應者或個別數據集條款。
+  attribution: null
+  restrictions: []
+integrations:
+  connector: none
+  sdk: none
+  mcp: none
+availability: 'Source index status: Active'
+updateCadence: Quarterly

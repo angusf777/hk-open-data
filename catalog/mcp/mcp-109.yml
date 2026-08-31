@@ -1,0 +1,49 @@
+schemaVersion: 1
+id: mcp:mcp-109
+sourceReference: MCP-109
+type: mcp
+publicationStatus: published
+name:
+  en: jbechtel-97/dealflowpro-mcp-server
+  zh-Hant: jbechtel-97/dealflowpro-mcp-server
+summary:
+  en: Community MCP candidate for Hong Kong data-tooling evaluation. Review its repository, licence, maintenance and security before use.
+  zh-Hant: 供香港數據工具評估的社群 MCP 候選項目「jbechtel-97/dealflowpro-mcp-server」。使用前請審查其程式庫、授權、維護狀況及保安。
+translationStatus: seeded
+provider:
+  name:
+    en: jbechtel-97/dealflowpro-mcp-server
+    zh-Hant: jbechtel-97/dealflowpro-mcp-server
+  type: community-project
+categories:
+- real-estate
+tags:
+- P07
+protocols:
+- mcp
+formats:
+- mcp
+authentication: not-applicable
+access: repository
+urls:
+  landing: https://github.com/jbechtel-97/dealflowpro-mcp-server
+  documentation: https://github.com/jbechtel-97/dealflowpro-mcp-server
+  terms: null
+languages:
+- en
+verification:
+  status: candidate
+  checkedAt: '2026-08-31'
+  evidenceUrl: https://github.com/jbechtel-97/dealflowpro-mcp-server
+termsEvidence:
+  state: not-reviewed
+  checkedAt: '2026-08-31'
+  note:
+    en: No current project review of upstream terms is recorded.
+    zh-Hant: 本項目尚未記錄對上游條款的當前審查。
+  attribution: null
+  restrictions: []
+integrations:
+  connector: none
+  sdk: none
+  mcp: candidate

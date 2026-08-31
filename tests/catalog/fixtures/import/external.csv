@@ -1,0 +1,2 @@
+Source ID,Priority,Utility score,Coverage class,Category,API,Hong Kong-useful capability,Auth in repository,HTTPS,CORS,Open-source suitability,Commercial / terms risk,Recommended production role,Provider documentation,Repository category
+EXT-T01,P3,1,Test-only,Test Data,Synthetic External API,Exercise the external importer.,No,Yes,Unknown,Unknown,Terms require review.,Test only,https://example.invalid/external,https://example.invalid/category

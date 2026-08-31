@@ -1,0 +1,49 @@
+schemaVersion: 1
+id: external:ext-046
+sourceReference: EXT-046
+type: external
+publicationStatus: published
+name:
+  en: Exchangeratesapi.io
+  zh-Hant: Exchangeratesapi.io
+summary:
+  en: Exchange-rate conversion.
+  zh-Hant: 與香港用途相關的第三方「Exchangeratesapi.io」資源。使用前請核實供應者文件、保安及現行條款。
+translationStatus: seeded
+provider:
+  name:
+    en: Exchangeratesapi.io
+    zh-Hant: Exchangeratesapi.io
+  type: third-party
+categories:
+- currency-exchange
+tags:
+- Global with HK coverage
+protocols:
+- https
+formats:
+- other
+authentication: api-key
+access: credential-required
+urls:
+  landing: https://exchangeratesapi.io
+  documentation: https://exchangeratesapi.io
+  terms: null
+languages:
+- en
+verification:
+  status: candidate
+  checkedAt: '2026-08-31'
+  evidenceUrl: https://exchangeratesapi.io
+termsEvidence:
+  state: ambiguity-identified
+  checkedAt: '2026-08-31'
+  note:
+    en: Available source notes indicate that current provider or dataset-specific terms require review.
+    zh-Hant: 現有來源註記顯示，使用前須審查現行供應者或個別數據集條款。
+  attribution: null
+  restrictions: []
+integrations:
+  connector: none
+  sdk: none
+  mcp: none

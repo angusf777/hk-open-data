@@ -1,0 +1,51 @@
+schemaVersion: 1
+id: official:hkapi-100
+sourceReference: HKAPI-100
+type: official
+publicationStatus: published
+name:
+  en: Smart lamppost meteorological data
+  zh-Hant: Smart lamppost meteorological data
+summary:
+  en: Hyperlocal weather from selected lampposts.
+  zh-Hant: 由 Hong Kong Observatory 提供的「Smart lamppost meteorological data」資源。請參閱官方文件及最新上游條款。
+translationStatus: seeded
+provider:
+  name:
+    en: Hong Kong Observatory
+    zh-Hant: Hong Kong Observatory
+  type: public-authority
+categories:
+- climate-weather
+tags:
+- Smart lamppost
+protocols:
+- file
+formats:
+- json
+authentication: none
+access: open-endpoint
+urls:
+  landing: https://www.hko.gov.hk/en/abouthko/opendata_intro.htm
+  documentation: https://www.hko.gov.hk/en/abouthko/opendata_intro.htm
+  terms: null
+languages:
+- en
+verification:
+  status: metadata-reviewed
+  checkedAt: '2026-08-27'
+  evidenceUrl: https://www.hko.gov.hk/en/abouthko/opendata_intro.htm
+termsEvidence:
+  state: ambiguity-identified
+  checkedAt: '2026-08-27'
+  note:
+    en: Available source notes indicate that current provider or dataset-specific terms require review.
+    zh-Hant: 現有來源註記顯示，使用前須審查現行供應者或個別數據集條款。
+  attribution: null
+  restrictions: []
+integrations:
+  connector: none
+  sdk: none
+  mcp: none
+availability: 'Source index status: Active'
+updateCadence: Every 10 minutes

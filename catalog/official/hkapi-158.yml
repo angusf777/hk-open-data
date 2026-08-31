@@ -1,0 +1,51 @@
+schemaVersion: 1
+id: official:hkapi-158
+sourceReference: HKAPI-158
+type: official
+publicationStatus: published
+name:
+  en: Reservoir storage
+  zh-Hant: Reservoir storage
+summary:
+  en: Reservoir storage levels.
+  zh-Hant: 由 Water Supplies Department 提供的「Reservoir storage」資源。請參閱官方文件及最新上游條款。
+translationStatus: seeded
+provider:
+  name:
+    en: Water Supplies Department
+    zh-Hant: Water Supplies Department
+  type: public-authority
+categories:
+- utilities-infrastructure
+tags:
+- Water
+protocols:
+- https
+formats:
+- csv
+authentication: none
+access: download
+urls:
+  landing: https://data.gov.hk/en-datasets/search/reservoir%20storage%20WSD
+  documentation: https://data.gov.hk/en-datasets/search/reservoir%20storage%20WSD
+  terms: null
+languages:
+- en
+verification:
+  status: metadata-reviewed
+  checkedAt: '2026-08-27'
+  evidenceUrl: https://data.gov.hk/en-datasets/search/reservoir%20storage%20WSD
+termsEvidence:
+  state: ambiguity-identified
+  checkedAt: '2026-08-27'
+  note:
+    en: Available source notes indicate that current provider or dataset-specific terms require review.
+    zh-Hant: 現有來源註記顯示，使用前須審查現行供應者或個別數據集條款。
+  attribution: null
+  restrictions: []
+integrations:
+  connector: none
+  sdk: none
+  mcp: none
+availability: 'Source index status: Active'
+updateCadence: Weekly

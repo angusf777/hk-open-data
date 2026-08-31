@@ -1,0 +1,49 @@
+schemaVersion: 1
+id: external:ext-056
+sourceReference: EXT-056
+type: external
+publicationStatus: published
+name:
+  en: Finage
+  zh-Hant: Finage
+summary:
+  en: Stocks, currencies, crypto, indices and ETFs.
+  zh-Hant: 與香港用途相關的第三方「Finage」資源。使用前請核實供應者文件、保安及現行條款。
+translationStatus: seeded
+provider:
+  name:
+    en: Finage
+    zh-Hant: Finage
+  type: third-party
+categories:
+- finance
+tags:
+- Global with HK coverage
+protocols:
+- https
+formats:
+- other
+authentication: api-key
+access: credential-required
+urls:
+  landing: https://finage.co.uk
+  documentation: https://finage.co.uk
+  terms: null
+languages:
+- en
+verification:
+  status: candidate
+  checkedAt: '2026-08-31'
+  evidenceUrl: https://finage.co.uk
+termsEvidence:
+  state: ambiguity-identified
+  checkedAt: '2026-08-31'
+  note:
+    en: Available source notes indicate that current provider or dataset-specific terms require review.
+    zh-Hant: 現有來源註記顯示，使用前須審查現行供應者或個別數據集條款。
+  attribution: null
+  restrictions: []
+integrations:
+  connector: none
+  sdk: none
+  mcp: none

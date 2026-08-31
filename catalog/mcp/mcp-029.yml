@@ -1,0 +1,53 @@
+schemaVersion: 1
+id: mcp:mcp-029
+sourceReference: MCP-029
+type: mcp
+publicationStatus: published
+name:
+  en: googleapis/genai-toolbox
+  zh-Hant: googleapis/genai-toolbox
+summary:
+  en: Community MCP candidate for Hong Kong data-tooling evaluation. Review its repository, licence, maintenance and security before use.
+  zh-Hant: 供香港數據工具評估的社群 MCP 候選項目「googleapis/genai-toolbox」。使用前請審查其程式庫、授權、維護狀況及保安。
+translationStatus: seeded
+provider:
+  name:
+    en: googleapis/genai-toolbox
+    zh-Hant: googleapis/genai-toolbox
+  type: community-project
+categories:
+- databases
+tags:
+- P01
+- P02
+- P05
+- P14
+- P16
+protocols:
+- mcp
+formats:
+- mcp
+authentication: not-applicable
+access: repository
+urls:
+  landing: https://github.com/googleapis/genai-toolbox
+  documentation: https://github.com/googleapis/genai-toolbox
+  terms: null
+languages:
+- en
+verification:
+  status: candidate
+  checkedAt: '2026-08-31'
+  evidenceUrl: https://github.com/googleapis/genai-toolbox
+termsEvidence:
+  state: not-reviewed
+  checkedAt: '2026-08-31'
+  note:
+    en: No current project review of upstream terms is recorded.
+    zh-Hant: 本項目尚未記錄對上游條款的當前審查。
+  attribution: null
+  restrictions: []
+integrations:
+  connector: none
+  sdk: none
+  mcp: candidate

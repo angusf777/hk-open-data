@@ -1,0 +1,49 @@
+schemaVersion: 1
+id: external:ext-117
+sourceReference: EXT-117
+type: external
+publicationStatus: published
+name:
+  en: Notion
+  zh-Hant: Notion
+summary:
+  en: Read/write workspace pages and databases.
+  zh-Hant: 與香港用途相關的第三方「Notion」資源。使用前請核實供應者文件、保安及現行條款。
+translationStatus: seeded
+provider:
+  name:
+    en: Notion
+    zh-Hant: Notion
+  type: third-party
+categories:
+- documents-productivity
+tags:
+- Infrastructure/enabler
+protocols:
+- https
+formats:
+- other
+authentication: oauth2
+access: credential-required
+urls:
+  landing: https://developers.notion.com/docs/getting-started
+  documentation: https://developers.notion.com/docs/getting-started
+  terms: null
+languages:
+- en
+verification:
+  status: candidate
+  checkedAt: '2026-08-31'
+  evidenceUrl: https://developers.notion.com/docs/getting-started
+termsEvidence:
+  state: ambiguity-identified
+  checkedAt: '2026-08-31'
+  note:
+    en: Available source notes indicate that current provider or dataset-specific terms require review.
+    zh-Hant: 現有來源註記顯示，使用前須審查現行供應者或個別數據集條款。
+  attribution: null
+  restrictions: []
+integrations:
+  connector: none
+  sdk: none
+  mcp: none

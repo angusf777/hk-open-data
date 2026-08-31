@@ -1,0 +1,51 @@
+schemaVersion: 1
+id: official:hkapi-157
+sourceReference: HKAPI-157
+type: official
+publicationStatus: published
+name:
+  en: Hong Kong Energy End-use Data
+  zh-Hant: Hong Kong Energy End-use Data
+summary:
+  en: Sectoral/fuel energy consumption.
+  zh-Hant: 由 Electrical and Mechanical Services Department 提供的「Hong Kong Energy End-use Data」資源。請參閱官方文件及最新上游條款。
+translationStatus: seeded
+provider:
+  name:
+    en: Electrical and Mechanical Services Department
+    zh-Hant: Electrical and Mechanical Services Department
+  type: public-authority
+categories:
+- utilities-infrastructure
+tags:
+- Energy
+protocols:
+- https
+formats:
+- csv
+authentication: none
+access: download
+urls:
+  landing: https://data.gov.hk/en-datasets/search/Energy%20End-use%20Data
+  documentation: https://data.gov.hk/en-datasets/search/Energy%20End-use%20Data
+  terms: null
+languages:
+- en
+verification:
+  status: metadata-reviewed
+  checkedAt: '2026-08-27'
+  evidenceUrl: https://data.gov.hk/en-datasets/search/Energy%20End-use%20Data
+termsEvidence:
+  state: ambiguity-identified
+  checkedAt: '2026-08-27'
+  note:
+    en: Available source notes indicate that current provider or dataset-specific terms require review.
+    zh-Hant: 現有來源註記顯示，使用前須審查現行供應者或個別數據集條款。
+  attribution: null
+  restrictions: []
+integrations:
+  connector: none
+  sdk: none
+  mcp: none
+availability: 'Source index status: Active'
+updateCadence: Annual

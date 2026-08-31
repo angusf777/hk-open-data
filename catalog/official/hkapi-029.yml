@@ -1,0 +1,51 @@
+schemaVersion: 1
+id: official:hkapi-029
+sourceReference: HKAPI-029
+type: official
+publicationStatus: published
+name:
+  en: Green Minibus real-time arrival APIs
+  zh-Hant: Green Minibus real-time arrival APIs
+summary:
+  en: Routes, stops, route-stop relations, ETA by route-stop/stop and last-update time.
+  zh-Hant: 由 Transport Department 提供的「Green Minibus real-time arrival APIs」資源。請參閱官方文件及最新上游條款。
+translationStatus: seeded
+provider:
+  name:
+    en: Transport Department
+    zh-Hant: Transport Department
+  type: public-authority
+categories:
+- transportation
+tags:
+- Minibus ETA
+protocols:
+- https
+formats:
+- json
+authentication: none
+access: open-endpoint
+urls:
+  landing: https://data.gov.hk/en-data/dataset/hk-td-sm_7-real-time-arrival-data-of-gmb
+  documentation: https://data.gov.hk/en-data/dataset/hk-td-sm_7-real-time-arrival-data-of-gmb
+  terms: null
+languages:
+- en
+verification:
+  status: metadata-reviewed
+  checkedAt: '2026-08-27'
+  evidenceUrl: https://data.gov.hk/en-data/dataset/hk-td-sm_7-real-time-arrival-data-of-gmb
+termsEvidence:
+  state: ambiguity-identified
+  checkedAt: '2026-08-27'
+  note:
+    en: Available source notes indicate that current provider or dataset-specific terms require review.
+    zh-Hant: 現有來源註記顯示，使用前須審查現行供應者或個別數據集條款。
+  attribution: null
+  restrictions: []
+integrations:
+  connector: none
+  sdk: none
+  mcp: none
+availability: 'Source index status: Active'
+updateCadence: ETA every 1 minute; other data as needed

@@ -1,0 +1,53 @@
+schemaVersion: 1
+id: external:ext-032
+sourceReference: EXT-032
+type: external
+publicationStatus: published
+name:
+  en: Storm Glass
+  zh-Hant: Storm Glass
+summary:
+  en: Marine weather from multiple sources.
+  zh-Hant: 與香港用途相關的第三方「Storm Glass」資源。使用前請核實供應者文件、保安及現行條款。
+translationStatus: seeded
+provider:
+  name:
+    en: Storm Glass
+    zh-Hant: Storm Glass
+  type: third-party
+categories:
+- weather
+tags:
+- Global with HK coverage
+protocols:
+- https
+formats:
+- other
+authentication: api-key
+access: credential-required
+urls:
+  landing: https://stormglass.io/
+  documentation: https://stormglass.io/
+  terms: null
+languages:
+- en
+verification:
+  status: candidate
+  checkedAt: '2026-08-31'
+  evidenceUrl: https://stormglass.io/
+termsEvidence:
+  state: restriction-identified
+  checkedAt: '2026-08-31'
+  note:
+    en: Available source notes identify an upstream condition or restriction; consult the provider's current terms.
+    zh-Hant: 現有來源註記識別了上游條件或限制；請查閱供應者的現行條款。
+  attribution:
+    en: Source notes indicate an attribution condition; verify the provider's current wording.
+    zh-Hant: 來源註記顯示有署名條件；請核實供應者的現行文字。
+  restrictions:
+  - en: An upstream condition or restriction was identified; its current source wording controls.
+    zh-Hant: 已識別上游條件或限制；應以上游來源的現行文字為準。
+integrations:
+  connector: none
+  sdk: none
+  mcp: none

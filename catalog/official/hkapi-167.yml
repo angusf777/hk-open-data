@@ -1,0 +1,51 @@
+schemaVersion: 1
+id: official:hkapi-167
+sourceReference: HKAPI-167
+type: official
+publicationStatus: published
+name:
+  en: LegCo voting results
+  zh-Hant: LegCo voting results
+summary:
+  en: Voting outcomes and member-level data.
+  zh-Hant: 由 Legislative Council Secretariat 提供的「LegCo voting results」資源。請參閱官方文件及最新上游條款。
+translationStatus: seeded
+provider:
+  name:
+    en: Legislative Council Secretariat
+    zh-Hant: Legislative Council Secretariat
+  type: public-authority
+categories:
+- government-law
+tags:
+- Voting
+protocols:
+- file
+formats:
+- other
+authentication: none
+access: download
+urls:
+  landing: https://www.legco.gov.hk/general/english/open-legco/open-data.html
+  documentation: https://www.legco.gov.hk/general/english/open-legco/open-data.html
+  terms: null
+languages:
+- en
+verification:
+  status: metadata-reviewed
+  checkedAt: '2026-08-27'
+  evidenceUrl: https://www.legco.gov.hk/general/english/open-legco/open-data.html
+termsEvidence:
+  state: ambiguity-identified
+  checkedAt: '2026-08-27'
+  note:
+    en: Available source notes indicate that current provider or dataset-specific terms require review.
+    zh-Hant: 現有來源註記顯示，使用前須審查現行供應者或個別數據集條款。
+  attribution: null
+  restrictions: []
+integrations:
+  connector: none
+  sdk: none
+  mcp: none
+availability: 'Source index status: Active'
+updateCadence: After votes

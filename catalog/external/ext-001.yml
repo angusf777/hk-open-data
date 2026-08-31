@@ -1,0 +1,53 @@
+schemaVersion: 1
+id: external:ext-001
+sourceReference: EXT-001
+type: external
+publicationStatus: published
+name:
+  en: Hong Kong GeoData Store
+  zh-Hant: Hong Kong GeoData Store
+summary:
+  en: Authoritative Hong Kong geospatial datasets and map layers.
+  zh-Hant: 與香港用途相關的第三方「Hong Kong GeoData Store」資源。使用前請核實供應者文件、保安及現行條款。
+translationStatus: seeded
+provider:
+  name:
+    en: Hong Kong GeoData Store
+    zh-Hant: Hong Kong GeoData Store
+  type: third-party
+categories:
+- geocoding
+tags:
+- HK-native
+protocols:
+- https
+formats:
+- other
+authentication: none
+access: open-endpoint
+urls:
+  landing: https://geodata.gov.hk/gs/
+  documentation: https://geodata.gov.hk/gs/
+  terms: null
+languages:
+- en
+verification:
+  status: candidate
+  checkedAt: '2026-08-31'
+  evidenceUrl: https://geodata.gov.hk/gs/
+termsEvidence:
+  state: restriction-identified
+  checkedAt: '2026-08-31'
+  note:
+    en: Available source notes identify an upstream condition or restriction; consult the provider's current terms.
+    zh-Hant: 現有來源註記識別了上游條件或限制；請查閱供應者的現行條款。
+  attribution:
+    en: Source notes indicate an attribution condition; verify the provider's current wording.
+    zh-Hant: 來源註記顯示有署名條件；請核實供應者的現行文字。
+  restrictions:
+  - en: An upstream condition or restriction was identified; its current source wording controls.
+    zh-Hant: 已識別上游條件或限制；應以上游來源的現行文字為準。
+integrations:
+  connector: none
+  sdk: none
+  mcp: none

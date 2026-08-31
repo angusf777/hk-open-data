@@ -1,0 +1,53 @@
+schemaVersion: 1
+id: mcp:mcp-076
+sourceReference: MCP-076
+type: mcp
+publicationStatus: published
+name:
+  en: segentic-lab/periscope-mcp
+  zh-Hant: segentic-lab/periscope-mcp
+summary:
+  en: Community MCP candidate for Hong Kong data-tooling evaluation. Review its repository, licence, maintenance and security before use.
+  zh-Hant: 供香港數據工具評估的社群 MCP 候選項目「segentic-lab/periscope-mcp」。使用前請審查其程式庫、授權、維護狀況及保安。
+translationStatus: seeded
+provider:
+  name:
+    en: segentic-lab/periscope-mcp
+    zh-Hant: segentic-lab/periscope-mcp
+  type: community-project
+categories:
+- browser-automation
+tags:
+- P01
+- P02
+- P05
+- P06
+- P12
+protocols:
+- mcp
+formats:
+- mcp
+authentication: not-applicable
+access: repository
+urls:
+  landing: https://github.com/segentic-lab/periscope-mcp
+  documentation: https://github.com/segentic-lab/periscope-mcp
+  terms: null
+languages:
+- en
+verification:
+  status: candidate
+  checkedAt: '2026-08-31'
+  evidenceUrl: https://github.com/segentic-lab/periscope-mcp
+termsEvidence:
+  state: not-reviewed
+  checkedAt: '2026-08-31'
+  note:
+    en: No current project review of upstream terms is recorded.
+    zh-Hant: 本項目尚未記錄對上游條款的當前審查。
+  attribution: null
+  restrictions: []
+integrations:
+  connector: none
+  sdk: none
+  mcp: candidate

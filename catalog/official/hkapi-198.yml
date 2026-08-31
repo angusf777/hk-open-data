@@ -1,0 +1,51 @@
+schemaVersion: 1
+id: official:hkapi-198
+sourceReference: HKAPI-198
+type: official
+publicationStatus: published
+name:
+  en: SmartPLAY facility-session availability
+  zh-Hant: SmartPLAY facility-session availability
+summary:
+  en: Verified feeds include tennis, turf soccer, basketball, badminton and volleyball.
+  zh-Hant: 由 Leisure and Cultural Services Department 提供的「SmartPLAY facility-session availability」資源。請參閱官方文件及最新上游條款。
+translationStatus: seeded
+provider:
+  name:
+    en: Leisure and Cultural Services Department
+    zh-Hant: Leisure and Cultural Services Department
+  type: public-authority
+categories:
+- recreation-tourism
+tags:
+- Sports booking
+protocols:
+- https
+formats:
+- json
+authentication: none
+access: open-endpoint
+urls:
+  landing: https://data.gov.hk/en-datasets/search/SmartPLAY%20facility%20session%20availability
+  documentation: https://data.gov.hk/en-datasets/search/SmartPLAY%20facility%20session%20availability
+  terms: null
+languages:
+- en
+verification:
+  status: metadata-reviewed
+  checkedAt: '2026-08-27'
+  evidenceUrl: https://data.gov.hk/en-datasets/search/SmartPLAY%20facility%20session%20availability
+termsEvidence:
+  state: ambiguity-identified
+  checkedAt: '2026-08-27'
+  note:
+    en: Available source notes indicate that current provider or dataset-specific terms require review.
+    zh-Hant: 現有來源註記顯示，使用前須審查現行供應者或個別數據集條款。
+  attribution: null
+  restrictions: []
+integrations:
+  connector: none
+  sdk: none
+  mcp: none
+availability: 'Source index status: Active'
+updateCadence: Every 5 minutes

@@ -1,0 +1,51 @@
+schemaVersion: 1
+id: external:ext-073
+sourceReference: EXT-073
+type: external
+publicationStatus: published
+name:
+  en: Navitia
+  zh-Hant: Navitia
+summary:
+  en: Public-transport journey planning API.
+  zh-Hant: 與香港用途相關的第三方「Navitia」資源。使用前請核實供應者文件、保安及現行條款。
+translationStatus: seeded
+provider:
+  name:
+    en: Navitia
+    zh-Hant: Navitia
+  type: third-party
+categories:
+- transportation
+tags:
+- Global with HK coverage
+protocols:
+- https
+formats:
+- other
+authentication: api-key
+access: credential-required
+urls:
+  landing: https://doc.navitia.io/
+  documentation: https://doc.navitia.io/
+  terms: null
+languages:
+- en
+verification:
+  status: candidate
+  checkedAt: '2026-08-31'
+  evidenceUrl: https://doc.navitia.io/
+termsEvidence:
+  state: restriction-identified
+  checkedAt: '2026-08-31'
+  note:
+    en: Available source notes identify an upstream condition or restriction; consult the provider's current terms.
+    zh-Hant: 現有來源註記識別了上游條件或限制；請查閱供應者的現行條款。
+  attribution: null
+  restrictions:
+  - en: An upstream condition or restriction was identified; its current source wording controls.
+    zh-Hant: 已識別上游條件或限制；應以上游來源的現行文字為準。
+integrations:
+  connector: none
+  sdk: none
+  mcp: none

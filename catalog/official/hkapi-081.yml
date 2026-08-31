@@ -1,0 +1,51 @@
+schemaVersion: 1
+id: official:hkapi-081
+sourceReference: HKAPI-081
+type: official
+publicationStatus: published
+name:
+  en: Ocean-going vessel arrivals/departures
+  zh-Hant: Ocean-going vessel arrivals/departures
+summary:
+  en: Recent arrivals/departures, due arrivals and vessels in port.
+  zh-Hant: 由 Marine Department 提供的「Ocean-going vessel arrivals/departures」資源。請參閱官方文件及最新上游條款。
+translationStatus: seeded
+provider:
+  name:
+    en: Marine Department
+    zh-Hant: Marine Department
+  type: public-authority
+categories:
+- transportation
+tags:
+- Marine traffic
+protocols:
+- xml
+formats:
+- xml
+authentication: none
+access: open-endpoint
+urls:
+  landing: https://data.gov.hk/en-datasets/search/ocean-going%20vessel%20arrivals%20departures
+  documentation: https://data.gov.hk/en-datasets/search/ocean-going%20vessel%20arrivals%20departures
+  terms: null
+languages:
+- en
+verification:
+  status: metadata-reviewed
+  checkedAt: '2026-08-27'
+  evidenceUrl: https://data.gov.hk/en-datasets/search/ocean-going%20vessel%20arrivals%20departures
+termsEvidence:
+  state: ambiguity-identified
+  checkedAt: '2026-08-27'
+  note:
+    en: Available source notes indicate that current provider or dataset-specific terms require review.
+    zh-Hant: 現有來源註記顯示，使用前須審查現行供應者或個別數據集條款。
+  attribution: null
+  restrictions: []
+integrations:
+  connector: none
+  sdk: none
+  mcp: none
+availability: 'Source index status: Active'
+updateCadence: Every 20 minutes

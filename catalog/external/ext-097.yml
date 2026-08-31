@@ -1,0 +1,49 @@
+schemaVersion: 1
+id: external:ext-097
+sourceReference: EXT-097
+type: external
+publicationStatus: published
+name:
+  en: Vett
+  zh-Hant: Vett
+summary:
+  en: Name/company checks against sanctions and watchlists.
+  zh-Hant: 與香港用途相關的第三方「Vett」資源。使用前請核實供應者文件、保安及現行條款。
+translationStatus: seeded
+provider:
+  name:
+    en: Vett
+    zh-Hant: Vett
+  type: third-party
+categories:
+- government
+tags:
+- Global with HK coverage
+protocols:
+- https
+formats:
+- other
+authentication: none
+access: open-endpoint
+urls:
+  landing: https://wimberly.solutions/api/free-sanctions-check/
+  documentation: https://wimberly.solutions/api/free-sanctions-check/
+  terms: null
+languages:
+- en
+verification:
+  status: candidate
+  checkedAt: '2026-08-31'
+  evidenceUrl: https://wimberly.solutions/api/free-sanctions-check/
+termsEvidence:
+  state: ambiguity-identified
+  checkedAt: '2026-08-31'
+  note:
+    en: Available source notes indicate that current provider or dataset-specific terms require review.
+    zh-Hant: 現有來源註記顯示，使用前須審查現行供應者或個別數據集條款。
+  attribution: null
+  restrictions: []
+integrations:
+  connector: none
+  sdk: none
+  mcp: none

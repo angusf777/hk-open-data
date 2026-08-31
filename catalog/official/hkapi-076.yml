@@ -1,0 +1,51 @@
+schemaVersion: 1
+id: official:hkapi-076
+sourceReference: HKAPI-076
+type: official
+publicationStatus: published
+name:
+  en: HKIA flight information open dataset
+  zh-Hant: HKIA flight information open dataset
+summary:
+  en: Previous-day arrivals/departures and history.
+  zh-Hant: 由 Airport Authority Hong Kong 提供的「HKIA flight information open dataset」資源。請參閱官方文件及最新上游條款。
+translationStatus: seeded
+provider:
+  name:
+    en: Airport Authority Hong Kong
+    zh-Hant: Airport Authority Hong Kong
+  type: public-authority
+categories:
+- transportation
+tags:
+- Aviation
+protocols:
+- file
+formats:
+- json
+authentication: none
+access: download
+urls:
+  landing: https://data.gov.hk/en-datasets/search/Airport%20Authority%20flight%20information
+  documentation: https://data.gov.hk/en-datasets/search/Airport%20Authority%20flight%20information
+  terms: null
+languages:
+- en
+verification:
+  status: metadata-reviewed
+  checkedAt: '2026-08-27'
+  evidenceUrl: https://data.gov.hk/en-datasets/search/Airport%20Authority%20flight%20information
+termsEvidence:
+  state: ambiguity-identified
+  checkedAt: '2026-08-27'
+  note:
+    en: Available source notes indicate that current provider or dataset-specific terms require review.
+    zh-Hant: 現有來源註記顯示，使用前須審查現行供應者或個別數據集條款。
+  attribution: null
+  restrictions: []
+integrations:
+  connector: none
+  sdk: none
+  mcp: none
+availability: 'Source index status: Historical only'
+updateCadence: Daily

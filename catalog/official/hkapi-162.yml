@@ -1,0 +1,51 @@
+schemaVersion: 1
+id: official:hkapi-162
+sourceReference: HKAPI-162
+type: official
+publicationStatus: published
+name:
+  en: CLP EV charging-station reference data
+  zh-Hant: CLP EV charging-station reference data
+summary:
+  en: Charger locations and attributes.
+  zh-Hant: 由 CLP Power Hong Kong 提供的「CLP EV charging-station reference data」資源。請參閱官方文件及最新上游條款。
+translationStatus: seeded
+provider:
+  name:
+    en: CLP Power Hong Kong
+    zh-Hant: CLP Power Hong Kong
+  type: public-authority
+categories:
+- utilities-infrastructure
+tags:
+- EV charging
+protocols:
+- https
+formats:
+- json
+authentication: none
+access: download
+urls:
+  landing: https://data.gov.hk/en-datasets/search/CLP%20EV%20charging%20station
+  documentation: https://data.gov.hk/en-datasets/search/CLP%20EV%20charging%20station
+  terms: null
+languages:
+- en
+verification:
+  status: metadata-reviewed
+  checkedAt: '2026-08-27'
+  evidenceUrl: https://data.gov.hk/en-datasets/search/CLP%20EV%20charging%20station
+termsEvidence:
+  state: ambiguity-identified
+  checkedAt: '2026-08-27'
+  note:
+    en: Available source notes indicate that current provider or dataset-specific terms require review.
+    zh-Hant: 現有來源註記顯示，使用前須審查現行供應者或個別數據集條款。
+  attribution: null
+  restrictions: []
+integrations:
+  connector: none
+  sdk: none
+  mcp: none
+availability: 'Source index status: Active'
+updateCadence: As network changes

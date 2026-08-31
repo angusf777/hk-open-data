@@ -1,0 +1,49 @@
+schemaVersion: 1
+id: external:ext-039
+sourceReference: EXT-039
+type: external
+publicationStatus: published
+name:
+  en: PM2.5 Open Data Portal
+  zh-Hant: PM2.5 Open Data Portal
+summary:
+  en: Low-cost PM2.5 sensor data.
+  zh-Hant: 與香港用途相關的第三方「PM2.5 Open Data Portal」資源。使用前請核實供應者文件、保安及現行條款。
+translationStatus: seeded
+provider:
+  name:
+    en: PM2.5 Open Data Portal
+    zh-Hant: PM2.5 Open Data Portal
+  type: third-party
+categories:
+- environment
+tags:
+- Global with HK coverage
+protocols:
+- https
+formats:
+- other
+authentication: none
+access: open-endpoint
+urls:
+  landing: https://pm25.lass-net.org/#apis
+  documentation: https://pm25.lass-net.org/#apis
+  terms: null
+languages:
+- en
+verification:
+  status: candidate
+  checkedAt: '2026-08-31'
+  evidenceUrl: https://pm25.lass-net.org/#apis
+termsEvidence:
+  state: ambiguity-identified
+  checkedAt: '2026-08-31'
+  note:
+    en: Available source notes indicate that current provider or dataset-specific terms require review.
+    zh-Hant: 現有來源註記顯示，使用前須審查現行供應者或個別數據集條款。
+  attribution: null
+  restrictions: []
+integrations:
+  connector: none
+  sdk: none
+  mcp: none

@@ -1,0 +1,51 @@
+schemaVersion: 1
+id: official:hkapi-118
+sourceReference: HKAPI-118
+type: official
+publicationStatus: published
+name:
+  en: Smart lamppost air-quality data
+  zh-Hant: Smart lamppost air-quality data
+summary:
+  en: Historical NO, NO2 and PM2.5 through 2026-01-31.
+  zh-Hant: 由 Environmental Protection Department 提供的「Smart lamppost air-quality data」資源。請參閱官方文件及最新上游條款。
+translationStatus: seeded
+provider:
+  name:
+    en: Environmental Protection Department
+    zh-Hant: Environmental Protection Department
+  type: public-authority
+categories:
+- environment
+tags:
+- Smart lamppost
+protocols:
+- file
+formats:
+- other
+authentication: none
+access: open-endpoint
+urls:
+  landing: https://data.gov.hk/en-data/dataset/hk-epd-lamppost-air-quality-lamppost
+  documentation: https://data.gov.hk/en-data/dataset/hk-epd-lamppost-air-quality-lamppost
+  terms: null
+languages:
+- en
+verification:
+  status: metadata-reviewed
+  checkedAt: '2026-08-27'
+  evidenceUrl: https://data.gov.hk/en-data/dataset/hk-epd-lamppost-air-quality-lamppost
+termsEvidence:
+  state: ambiguity-identified
+  checkedAt: '2026-08-27'
+  note:
+    en: Available source notes indicate that current provider or dataset-specific terms require review.
+    zh-Hant: 現有來源註記顯示，使用前須審查現行供應者或個別數據集條款。
+  attribution: null
+  restrictions: []
+integrations:
+  connector: none
+  sdk: none
+  mcp: none
+availability: 'Source index status: Retired'
+updateCadence: No live updates

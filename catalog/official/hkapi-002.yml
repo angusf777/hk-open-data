@@ -1,0 +1,51 @@
+schemaVersion: 1
+id: official:hkapi-002
+sourceReference: HKAPI-002
+type: official
+publicationStatus: published
+name:
+  en: DATA.GOV.HK CKAN package details
+  zh-Hant: DATA.GOV.HK CKAN package details
+summary:
+  en: Retrieve dataset metadata and resource URLs for a known ID.
+  zh-Hant: 由 Digital Policy Office 提供的「DATA.GOV.HK CKAN package details」資源。請參閱官方文件及最新上游條款。
+translationStatus: seeded
+provider:
+  name:
+    en: Digital Policy Office
+    zh-Hant: Digital Policy Office
+  type: public-authority
+categories:
+- platforms-discovery
+tags:
+- Catalogue metadata
+protocols:
+- https
+formats:
+- json
+authentication: none
+access: open-endpoint
+urls:
+  landing: https://data.gov.hk/en/help/ckan-api
+  documentation: https://data.gov.hk/en/help/ckan-api
+  terms: null
+languages:
+- en
+verification:
+  status: metadata-reviewed
+  checkedAt: '2026-08-27'
+  evidenceUrl: https://data.gov.hk/en/help/ckan-api
+termsEvidence:
+  state: ambiguity-identified
+  checkedAt: '2026-08-27'
+  note:
+    en: Available source notes indicate that current provider or dataset-specific terms require review.
+    zh-Hant: 現有來源註記顯示，使用前須審查現行供應者或個別數據集條款。
+  attribution: null
+  restrictions: []
+integrations:
+  connector: none
+  sdk: none
+  mcp: none
+availability: 'Source index status: Active'
+updateCadence: Metadata changes

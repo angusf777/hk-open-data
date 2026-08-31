@@ -1,0 +1,51 @@
+schemaVersion: 1
+id: official:hkapi-241
+sourceReference: HKAPI-241
+type: official
+publicationStatus: published
+name:
+  en: DSS school information and fees
+  zh-Hant: DSS school information and fees
+summary:
+  en: DSS profiles and fees.
+  zh-Hant: 由 Education Bureau 提供的「DSS school information and fees」資源。請參閱官方文件及最新上游條款。
+translationStatus: seeded
+provider:
+  name:
+    en: Education Bureau
+    zh-Hant: Education Bureau
+  type: public-authority
+categories:
+- education-social-welfare
+tags:
+- School types
+protocols:
+- file
+formats:
+- csv
+authentication: none
+access: download
+urls:
+  landing: https://data.gov.hk/en-datasets/search/DSS%20school%20fees
+  documentation: https://data.gov.hk/en-datasets/search/DSS%20school%20fees
+  terms: null
+languages:
+- en
+verification:
+  status: metadata-reviewed
+  checkedAt: '2026-08-27'
+  evidenceUrl: https://data.gov.hk/en-datasets/search/DSS%20school%20fees
+termsEvidence:
+  state: ambiguity-identified
+  checkedAt: '2026-08-27'
+  note:
+    en: Available source notes indicate that current provider or dataset-specific terms require review.
+    zh-Hant: 現有來源註記顯示，使用前須審查現行供應者或個別數據集條款。
+  attribution: null
+  restrictions: []
+integrations:
+  connector: none
+  sdk: none
+  mcp: none
+availability: 'Source index status: Active'
+updateCadence: Annual/regular

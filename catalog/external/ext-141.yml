@@ -1,0 +1,51 @@
+schemaVersion: 1
+id: external:ext-141
+sourceReference: EXT-141
+type: external
+publicationStatus: published
+name:
+  en: Google Books
+  zh-Hant: Google Books
+summary:
+  en: Book metadata and search.
+  zh-Hant: 與香港用途相關的第三方「Google Books」資源。使用前請核實供應者文件、保安及現行條款。
+translationStatus: seeded
+provider:
+  name:
+    en: Google Books
+    zh-Hant: Google Books
+  type: third-party
+categories:
+- books
+tags:
+- Global reference data
+protocols:
+- https
+formats:
+- other
+authentication: oauth2
+access: credential-required
+urls:
+  landing: https://developers.google.com/books/
+  documentation: https://developers.google.com/books/
+  terms: null
+languages:
+- en
+verification:
+  status: candidate
+  checkedAt: '2026-08-31'
+  evidenceUrl: https://developers.google.com/books/
+termsEvidence:
+  state: restriction-identified
+  checkedAt: '2026-08-31'
+  note:
+    en: Available source notes identify an upstream condition or restriction; consult the provider's current terms.
+    zh-Hant: 現有來源註記識別了上游條件或限制；請查閱供應者的現行條款。
+  attribution: null
+  restrictions:
+  - en: An upstream condition or restriction was identified; its current source wording controls.
+    zh-Hant: 已識別上游條件或限制；應以上游來源的現行文字為準。
+integrations:
+  connector: none
+  sdk: none
+  mcp: none

@@ -1,0 +1,51 @@
+schemaVersion: 1
+id: official:hkapi-252
+sourceReference: HKAPI-252
+type: official
+publicationStatus: published
+name:
+  en: Pre-primary institution social-work services
+  zh-Hant: Pre-primary institution social-work services
+summary:
+  en: Service teams and participating institutions.
+  zh-Hant: 由 Social Welfare Department 提供的「Pre-primary institution social-work services」資源。請參閱官方文件及最新上游條款。
+translationStatus: seeded
+provider:
+  name:
+    en: Social Welfare Department
+    zh-Hant: Social Welfare Department
+  type: public-authority
+categories:
+- education-social-welfare
+tags:
+- School social work
+protocols:
+- https
+formats:
+- csv
+authentication: none
+access: download
+urls:
+  landing: https://data.gov.hk/en-datasets/search/pre-primary%20social%20work%20services
+  documentation: https://data.gov.hk/en-datasets/search/pre-primary%20social%20work%20services
+  terms: null
+languages:
+- en
+verification:
+  status: metadata-reviewed
+  checkedAt: '2026-08-27'
+  evidenceUrl: https://data.gov.hk/en-datasets/search/pre-primary%20social%20work%20services
+termsEvidence:
+  state: ambiguity-identified
+  checkedAt: '2026-08-27'
+  note:
+    en: Available source notes indicate that current provider or dataset-specific terms require review.
+    zh-Hant: 現有來源註記顯示，使用前須審查現行供應者或個別數據集條款。
+  attribution: null
+  restrictions: []
+integrations:
+  connector: none
+  sdk: none
+  mcp: none
+availability: 'Source index status: Active'
+updateCadence: As services change

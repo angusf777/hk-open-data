@@ -1,0 +1,52 @@
+schemaVersion: 1
+id: official:hkapi-178
+sourceReference: HKAPI-178
+type: official
+publicationStatus: published
+name:
+  en: Government Logistics Department open tenders
+  zh-Hant: Government Logistics Department open tenders
+summary:
+  en: Open tender notices.
+  zh-Hant: 由 Government Logistics Department 提供的「Government Logistics Department open tenders」資源。請參閱官方文件及最新上游條款。
+translationStatus: seeded
+provider:
+  name:
+    en: Government Logistics Department
+    zh-Hant: Government Logistics Department
+  type: public-authority
+categories:
+- government-law
+tags:
+- Procurement
+protocols:
+- file
+formats:
+- json
+- csv
+authentication: none
+access: download
+urls:
+  landing: https://data.gov.hk/en-datasets/search/GLD%20open%20tenders
+  documentation: https://data.gov.hk/en-datasets/search/GLD%20open%20tenders
+  terms: null
+languages:
+- en
+verification:
+  status: metadata-reviewed
+  checkedAt: '2026-08-27'
+  evidenceUrl: https://data.gov.hk/en-datasets/search/GLD%20open%20tenders
+termsEvidence:
+  state: ambiguity-identified
+  checkedAt: '2026-08-27'
+  note:
+    en: Available source notes indicate that current provider or dataset-specific terms require review.
+    zh-Hant: 現有來源註記顯示，使用前須審查現行供應者或個別數據集條款。
+  attribution: null
+  restrictions: []
+integrations:
+  connector: none
+  sdk: none
+  mcp: none
+availability: 'Source index status: Active'
+updateCadence: As tenders publish

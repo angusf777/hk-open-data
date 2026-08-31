@@ -1,0 +1,51 @@
+schemaVersion: 1
+id: official:hkapi-145
+sourceReference: HKAPI-145
+type: official
+publicationStatus: published
+name:
+  en: C&SD Web Table API — supported tables
+  zh-Hant: C&SD Web Table API — supported tables
+summary:
+  en: Population, trade, labour, prices, national accounts, business, tourism and more.
+  zh-Hant: 由 Census and Statistics Department 提供的「C&SD Web Table API — supported tables」資源。請參閱官方文件及最新上游條款。
+translationStatus: seeded
+provider:
+  name:
+    en: Census and Statistics Department
+    zh-Hant: Census and Statistics Department
+  type: public-authority
+categories:
+- finance-statistics
+tags:
+- Official statistics
+protocols:
+- https
+formats:
+- json
+authentication: none
+access: open-endpoint
+urls:
+  landing: https://www.censtatd.gov.hk/en/web_table.html
+  documentation: https://www.censtatd.gov.hk/en/web_table.html
+  terms: null
+languages:
+- en
+verification:
+  status: metadata-reviewed
+  checkedAt: '2026-08-27'
+  evidenceUrl: https://www.censtatd.gov.hk/en/web_table.html
+termsEvidence:
+  state: ambiguity-identified
+  checkedAt: '2026-08-27'
+  note:
+    en: Available source notes indicate that current provider or dataset-specific terms require review.
+    zh-Hant: 現有來源註記顯示，使用前須審查現行供應者或個別數據集條款。
+  attribution: null
+  restrictions: []
+integrations:
+  connector: none
+  sdk: none
+  mcp: none
+availability: 'Source index status: Active'
+updateCadence: Table-specific

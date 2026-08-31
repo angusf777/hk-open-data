@@ -1,0 +1,16 @@
+{
+  "byTermsEvidenceState": {
+    "ambiguity-identified": 331,
+    "not-reviewed": 111,
+    "restriction-identified": 79
+  },
+  "byTranslationStatus": {
+    "seeded": 521
+  },
+  "byType": {
+    "external": 145,
+    "mcp": 111,
+    "official": 265
+  },
+  "total": 521
+}

@@ -1,0 +1,51 @@
+schemaVersion: 1
+id: official:hkapi-060
+sourceReference: HKAPI-060
+type: official
+publicationStatus: published
+name:
+  en: Traffic snapshot images
+  zh-Hant: Traffic snapshot images
+summary:
+  en: Camera snapshots for visual road-condition monitoring.
+  zh-Hant: 由 Transport Department 提供的「Traffic snapshot images」資源。請參閱官方文件及最新上游條款。
+translationStatus: seeded
+provider:
+  name:
+    en: Transport Department
+    zh-Hant: Transport Department
+  type: public-authority
+categories:
+- transportation
+tags:
+- Traffic cameras
+protocols:
+- xml
+formats:
+- xml
+authentication: none
+access: open-endpoint
+urls:
+  landing: https://data.gov.hk/en-datasets/search/traffic%20snapshot%20images
+  documentation: https://data.gov.hk/en-datasets/search/traffic%20snapshot%20images
+  terms: null
+languages:
+- en
+verification:
+  status: metadata-reviewed
+  checkedAt: '2026-08-27'
+  evidenceUrl: https://data.gov.hk/en-datasets/search/traffic%20snapshot%20images
+termsEvidence:
+  state: ambiguity-identified
+  checkedAt: '2026-08-27'
+  note:
+    en: Available source notes indicate that current provider or dataset-specific terms require review.
+    zh-Hant: 現有來源註記顯示，使用前須審查現行供應者或個別數據集條款。
+  attribution: null
+  restrictions: []
+integrations:
+  connector: none
+  sdk: none
+  mcp: none
+availability: 'Source index status: Active'
+updateCadence: Frequent

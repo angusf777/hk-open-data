@@ -1,0 +1,50 @@
+schemaVersion: 1
+id: mcp:mcp-108
+sourceReference: MCP-108
+type: mcp
+publicationStatus: published
+name:
+  en: hyperionxmota/cook-county-property-mcp
+  zh-Hant: hyperionxmota/cook-county-property-mcp
+summary:
+  en: Community MCP candidate for Hong Kong data-tooling evaluation. Review its repository, licence, maintenance and security before use.
+  zh-Hant: 供香港數據工具評估的社群 MCP 候選項目「hyperionxmota/cook-county-property-mcp」。使用前請審查其程式庫、授權、維護狀況及保安。
+translationStatus: seeded
+provider:
+  name:
+    en: hyperionxmota/cook-county-property-mcp
+    zh-Hant: hyperionxmota/cook-county-property-mcp
+  type: community-project
+categories:
+- real-estate
+tags:
+- P07
+- P13
+protocols:
+- mcp
+formats:
+- mcp
+authentication: not-applicable
+access: repository
+urls:
+  landing: https://github.com/hyperionxmota/cook-county-property-mcp
+  documentation: https://github.com/hyperionxmota/cook-county-property-mcp
+  terms: null
+languages:
+- en
+verification:
+  status: candidate
+  checkedAt: '2026-08-31'
+  evidenceUrl: https://github.com/hyperionxmota/cook-county-property-mcp
+termsEvidence:
+  state: not-reviewed
+  checkedAt: '2026-08-31'
+  note:
+    en: No current project review of upstream terms is recorded.
+    zh-Hant: 本項目尚未記錄對上游條款的當前審查。
+  attribution: null
+  restrictions: []
+integrations:
+  connector: none
+  sdk: none
+  mcp: candidate

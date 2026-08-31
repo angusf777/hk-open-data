@@ -14,7 +14,11 @@ FIXTURES = Path(__file__).parent / "fixtures"
 
 
 def test_catalogue_loader_ignores_schema_and_vocabulary_yaml() -> None:
-    assert load_records(Path("catalog")) == []
+    paths = {record["_path"] for record in load_records(Path("catalog"))}
+
+    assert paths
+    assert all("/schemas/" not in path for path in paths)
+    assert all("/vocabularies/" not in path for path in paths)
 
 
 def test_valid_record_passes_schema_validation() -> None:

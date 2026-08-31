@@ -1,0 +1,51 @@
+schemaVersion: 1
+id: mcp:mcp-094
+sourceReference: MCP-094
+type: mcp
+publicationStatus: published
+name:
+  en: arthurpanhku/DocSentinel
+  zh-Hant: arthurpanhku/DocSentinel
+summary:
+  en: Community MCP candidate for Hong Kong data-tooling evaluation. Review its repository, licence, maintenance and security before use.
+  zh-Hant: 供香港數據工具評估的社群 MCP 候選項目「arthurpanhku/DocSentinel」。使用前請審查其程式庫、授權、維護狀況及保安。
+translationStatus: seeded
+provider:
+  name:
+    en: arthurpanhku/DocSentinel
+    zh-Hant: arthurpanhku/DocSentinel
+  type: community-project
+categories:
+- security
+tags:
+- P02
+- P05
+- P10
+protocols:
+- mcp
+formats:
+- mcp
+authentication: not-applicable
+access: repository
+urls:
+  landing: https://github.com/arthurpanhku/DocSentinel
+  documentation: https://github.com/arthurpanhku/DocSentinel
+  terms: null
+languages:
+- en
+verification:
+  status: candidate
+  checkedAt: '2026-08-31'
+  evidenceUrl: https://github.com/arthurpanhku/DocSentinel
+termsEvidence:
+  state: not-reviewed
+  checkedAt: '2026-08-31'
+  note:
+    en: No current project review of upstream terms is recorded.
+    zh-Hant: 本項目尚未記錄對上游條款的當前審查。
+  attribution: null
+  restrictions: []
+integrations:
+  connector: none
+  sdk: none
+  mcp: candidate

@@ -1,0 +1,56 @@
+schemaVersion: 1
+id: official:hkapi-117
+sourceReference: HKAPI-117
+type: official
+publicationStatus: published
+name:
+  en: Habitat and ecological spatial datasets
+  zh-Hant: Habitat and ecological spatial datasets
+summary:
+  en: Habitat maps and planning layers.
+  zh-Hant: 由 Environmental Protection Department 提供的「Habitat and ecological spatial datasets」資源。請參閱官方文件及最新上游條款。
+translationStatus: seeded
+provider:
+  name:
+    en: Environmental Protection Department
+    zh-Hant: Environmental Protection Department
+  type: public-authority
+categories:
+- environment
+tags:
+- Habitats
+protocols:
+- wfs
+- wms
+formats:
+- other
+authentication: none
+access: open-endpoint
+urls:
+  landing: https://data.gov.hk/en-datasets/search/habitat%20map%20CSDI
+  documentation: https://data.gov.hk/en-datasets/search/habitat%20map%20CSDI
+  terms: null
+languages:
+- en
+verification:
+  status: metadata-reviewed
+  checkedAt: '2026-08-27'
+  evidenceUrl: https://data.gov.hk/en-datasets/search/habitat%20map%20CSDI
+termsEvidence:
+  state: restriction-identified
+  checkedAt: '2026-08-27'
+  note:
+    en: Available source notes identify an upstream condition or restriction; consult the provider's current terms.
+    zh-Hant: 現有來源註記識別了上游條件或限制；請查閱供應者的現行條款。
+  attribution:
+    en: Source notes indicate an attribution condition; verify the provider's current wording.
+    zh-Hant: 來源註記顯示有署名條件；請核實供應者的現行文字。
+  restrictions:
+  - en: An upstream condition or restriction was identified; its current source wording controls.
+    zh-Hant: 已識別上游條件或限制；應以上游來源的現行文字為準。
+integrations:
+  connector: none
+  sdk: none
+  mcp: none
+availability: 'Source index status: Active'
+updateCadence: Versioned

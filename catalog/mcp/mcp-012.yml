@@ -1,0 +1,52 @@
+schemaVersion: 1
+id: mcp:mcp-012
+sourceReference: MCP-012
+type: mcp
+publicationStatus: published
+name:
+  en: mroops0111/openapi-mcp-gateway
+  zh-Hant: mroops0111/openapi-mcp-gateway
+summary:
+  en: Community MCP candidate for Hong Kong data-tooling evaluation. Review its repository, licence, maintenance and security before use.
+  zh-Hant: 供香港數據工具評估的社群 MCP 候選項目「mroops0111/openapi-mcp-gateway」。使用前請審查其程式庫、授權、維護狀況及保安。
+translationStatus: seeded
+provider:
+  name:
+    en: mroops0111/openapi-mcp-gateway
+    zh-Hant: mroops0111/openapi-mcp-gateway
+  type: community-project
+categories:
+- developer-tools
+tags:
+- P01
+- P15
+- P17
+- P18
+protocols:
+- mcp
+formats:
+- mcp
+authentication: not-applicable
+access: repository
+urls:
+  landing: https://github.com/mroops0111/openapi-mcp-gateway
+  documentation: https://github.com/mroops0111/openapi-mcp-gateway
+  terms: null
+languages:
+- en
+verification:
+  status: candidate
+  checkedAt: '2026-08-31'
+  evidenceUrl: https://github.com/mroops0111/openapi-mcp-gateway
+termsEvidence:
+  state: not-reviewed
+  checkedAt: '2026-08-31'
+  note:
+    en: No current project review of upstream terms is recorded.
+    zh-Hant: 本項目尚未記錄對上游條款的當前審查。
+  attribution: null
+  restrictions: []
+integrations:
+  connector: none
+  sdk: none
+  mcp: candidate

@@ -1,0 +1,51 @@
+schemaVersion: 1
+id: official:hkapi-083
+sourceReference: HKAPI-083
+type: official
+publicationStatus: published
+name:
+  en: Vessel Traffic Management System report
+  zh-Hant: Vessel Traffic Management System report
+summary:
+  en: Due entry, intended departure, entries, departures, in-port and transit.
+  zh-Hant: 由 Marine Department 提供的「Vessel Traffic Management System report」資源。請參閱官方文件及最新上游條款。
+translationStatus: seeded
+provider:
+  name:
+    en: Marine Department
+    zh-Hant: Marine Department
+  type: public-authority
+categories:
+- transportation
+tags:
+- Marine traffic
+protocols:
+- xml
+formats:
+- xml
+authentication: none
+access: open-endpoint
+urls:
+  landing: https://data.gov.hk/en-datasets/search/Vessel%20Traffic%20Management%20System%20report
+  documentation: https://data.gov.hk/en-datasets/search/Vessel%20Traffic%20Management%20System%20report
+  terms: null
+languages:
+- en
+verification:
+  status: metadata-reviewed
+  checkedAt: '2026-08-27'
+  evidenceUrl: https://data.gov.hk/en-datasets/search/Vessel%20Traffic%20Management%20System%20report
+termsEvidence:
+  state: ambiguity-identified
+  checkedAt: '2026-08-27'
+  note:
+    en: Available source notes indicate that current provider or dataset-specific terms require review.
+    zh-Hant: 現有來源註記顯示，使用前須審查現行供應者或個別數據集條款。
+  attribution: null
+  restrictions: []
+integrations:
+  connector: none
+  sdk: none
+  mcp: none
+availability: 'Source index status: Active'
+updateCadence: Daily

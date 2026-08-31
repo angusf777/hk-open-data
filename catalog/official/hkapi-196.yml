@@ -1,0 +1,51 @@
+schemaVersion: 1
+id: official:hkapi-196
+sourceReference: HKAPI-196
+type: official
+publicationStatus: published
+name:
+  en: Licensed karaoke establishments
+  zh-Hant: Licensed karaoke establishments
+summary:
+  en: Licensed karaoke locations.
+  zh-Hant: 由 Home Affairs Department 提供的「Licensed karaoke establishments」資源。請參閱官方文件及最新上游條款。
+translationStatus: seeded
+provider:
+  name:
+    en: Home Affairs Department
+    zh-Hant: Home Affairs Department
+  type: public-authority
+categories:
+- food-licensing
+tags:
+- Entertainment licensing
+protocols:
+- https
+formats:
+- csv
+authentication: none
+access: download
+urls:
+  landing: https://data.gov.hk/en-datasets/search/licensed%20karaoke%20establishments
+  documentation: https://data.gov.hk/en-datasets/search/licensed%20karaoke%20establishments
+  terms: null
+languages:
+- en
+verification:
+  status: metadata-reviewed
+  checkedAt: '2026-08-27'
+  evidenceUrl: https://data.gov.hk/en-datasets/search/licensed%20karaoke%20establishments
+termsEvidence:
+  state: ambiguity-identified
+  checkedAt: '2026-08-27'
+  note:
+    en: Available source notes indicate that current provider or dataset-specific terms require review.
+    zh-Hant: 現有來源註記顯示，使用前須審查現行供應者或個別數據集條款。
+  attribution: null
+  restrictions: []
+integrations:
+  connector: none
+  sdk: none
+  mcp: none
+availability: 'Source index status: Active'
+updateCadence: Regular

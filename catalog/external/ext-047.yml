@@ -1,0 +1,49 @@
+schemaVersion: 1
+id: external:ext-047
+sourceReference: EXT-047
+type: external
+publicationStatus: published
+name:
+  en: Currency-api
+  zh-Hant: Currency-api
+summary:
+  en: Open currency-rate API with broad currency coverage.
+  zh-Hant: 與香港用途相關的第三方「Currency-api」資源。使用前請核實供應者文件、保安及現行條款。
+translationStatus: seeded
+provider:
+  name:
+    en: Currency-api
+    zh-Hant: Currency-api
+  type: third-party
+categories:
+- currency-exchange
+tags:
+- Global with HK coverage
+protocols:
+- https
+formats:
+- other
+authentication: none
+access: open-endpoint
+urls:
+  landing: https://github.com/fawazahmed0/currency-api#readme
+  documentation: https://github.com/fawazahmed0/currency-api#readme
+  terms: null
+languages:
+- en
+verification:
+  status: candidate
+  checkedAt: '2026-08-31'
+  evidenceUrl: https://github.com/fawazahmed0/currency-api#readme
+termsEvidence:
+  state: ambiguity-identified
+  checkedAt: '2026-08-31'
+  note:
+    en: Available source notes indicate that current provider or dataset-specific terms require review.
+    zh-Hant: 現有來源註記顯示，使用前須審查現行供應者或個別數據集條款。
+  attribution: null
+  restrictions: []
+integrations:
+  connector: none
+  sdk: none
+  mcp: none

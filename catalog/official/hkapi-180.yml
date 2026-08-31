@@ -1,0 +1,51 @@
+schemaVersion: 1
+id: official:hkapi-180
+sourceReference: HKAPI-180
+type: official
+publicationStatus: published
+name:
+  en: EventHK information APIs
+  zh-Hant: EventHK information APIs
+summary:
+  en: Historical EventHK listings.
+  zh-Hant: 由 Digital Policy Office 提供的「EventHK information APIs」資源。請參閱官方文件及最新上游條款。
+translationStatus: seeded
+provider:
+  name:
+    en: Digital Policy Office
+    zh-Hant: Digital Policy Office
+  type: public-authority
+categories:
+- government-law
+tags:
+- Events
+protocols:
+- https
+formats:
+- json
+authentication: none
+access: open-endpoint
+urls:
+  landing: https://data.gov.hk/en-data/dataset/hk-dpo-mobileapps-eventhk-information
+  documentation: https://data.gov.hk/en-data/dataset/hk-dpo-mobileapps-eventhk-information
+  terms: null
+languages:
+- en
+verification:
+  status: metadata-reviewed
+  checkedAt: '2026-08-27'
+  evidenceUrl: https://data.gov.hk/en-data/dataset/hk-dpo-mobileapps-eventhk-information
+termsEvidence:
+  state: ambiguity-identified
+  checkedAt: '2026-08-27'
+  note:
+    en: Available source notes indicate that current provider or dataset-specific terms require review.
+    zh-Hant: 現有來源註記顯示，使用前須審查現行供應者或個別數據集條款。
+  attribution: null
+  restrictions: []
+integrations:
+  connector: none
+  sdk: none
+  mcp: none
+availability: 'Source index status: Retired'
+updateCadence: No updates after 2026-06-08
