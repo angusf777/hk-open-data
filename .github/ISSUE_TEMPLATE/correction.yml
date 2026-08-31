@@ -1,0 +1,48 @@
+name: Catalogue correction or takedown
+description: Report inaccurate metadata, an authoritative change, or a rights concern.
+title: "[Correction]: "
+labels: [correction]
+body:
+  - type: markdown
+    attributes:
+      value: >-
+        For sensitive security reports use private vulnerability reporting. You may omit sensitive
+        details and point to the correction and takedown policy.
+  - type: input
+    id: resource
+    attributes:
+      label: Resource ID or catalogue URL
+    validations:
+      required: true
+  - type: input
+    id: field
+    attributes:
+      label: Contested field
+    validations:
+      required: true
+  - type: input
+    id: authority
+    attributes:
+      label: Authoritative source URL
+      placeholder: https://
+    validations:
+      required: true
+  - type: textarea
+    id: discrepancy
+    attributes:
+      label: Observed discrepancy
+    validations:
+      required: true
+  - type: textarea
+    id: correction
+    attributes:
+      label: Requested correction
+    validations:
+      required: true
+  - type: dropdown
+    id: urgency
+    attributes:
+      label: Urgency
+      options: [Routine correction, Time-sensitive source change, Rights or takedown concern]
+    validations:
+      required: true

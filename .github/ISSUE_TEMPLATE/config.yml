@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Private security report
+    url: https://github.com/angusf777/hk-open-data/security/advisories/new
+    about: Report vulnerabilities privately; do not publish credentials or exploit details.
+  - name: Correction and takedown policy
+    url: https://github.com/angusf777/hk-open-data/blob/main/docs/governance/CORRECTIONS_AND_TAKEDOWNS.md
+    about: Read the evidence correction, rights concern, and takedown process.

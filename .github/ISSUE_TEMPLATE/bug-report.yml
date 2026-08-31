@@ -1,0 +1,36 @@
+name: Bug report
+description: Report a reproducible problem in the catalogue or self-hosted toolkit.
+title: "[Bug]: "
+labels: [bug]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: What happened?
+    validations:
+      required: true
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Minimal reproduction
+      description: Remove credentials, provider response bodies, personal data, and private logs.
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Version or commit
+    validations:
+      required: true
+  - type: dropdown
+    id: profile
+    attributes:
+      label: Operating profile
+      options: [Static catalogue, Catalogue profile, Observe profile, Fabric profile, Not applicable]
+    validations:
+      required: true
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment
+      description: OS, Node, Python, browser, and Docker versions where relevant.

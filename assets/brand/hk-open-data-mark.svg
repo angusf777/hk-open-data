@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="144" viewBox="0 0 640 144" role="img" aria-labelledby="title desc">
+  <title id="title">HK Open Data Civic Signal mark</title>
+  <desc id="desc">Three abstract data routes beside the HK Open Data wordmark.</desc>
+  <rect width="640" height="144" rx="12" fill="#f8f7f3"/>
+  <g fill="none" stroke-linecap="round" stroke-width="6">
+    <path d="M28 108h54c18 0 28-10 28-28V36" stroke="#c81e3a"/>
+    <path d="M28 82h34c18 0 28-10 28-28V24" stroke="#18212f"/>
+    <path d="M28 56h14c18 0 28-10 28-28V20" stroke="#617084"/>
+  </g>
+  <g fill="#c81e3a"><circle cx="28" cy="108" r="8"/><circle cx="110" cy="36" r="8"/></g>
+  <g fill="#18212f"><circle cx="28" cy="82" r="8"/><circle cx="90" cy="54" r="8"/></g>
+  <g fill="#617084"><circle cx="28" cy="56" r="8"/><circle cx="70" cy="28" r="8"/></g>
+  <text x="154" y="83" fill="#18212f" font-family="Inter, Arial, sans-serif" font-size="48" font-weight="800" letter-spacing="1">HK OPEN DATA</text>
+  <rect x="156" y="101" width="104" height="6" rx="3" fill="#c81e3a"/>
+</svg>

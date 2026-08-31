@@ -1,0 +1,73 @@
+name: Resource request
+description: Suggest a Hong Kong-relevant public-data, API, or read-only MCP resource.
+title: "[Resource]: "
+labels: [catalogue]
+body:
+  - type: markdown
+    attributes:
+      value: >-
+        Share factual provenance only. A listing or evidence link is not a legal-permission decision.
+  - type: input
+    id: name
+    attributes:
+      label: Resource name
+    validations:
+      required: true
+  - type: dropdown
+    id: type
+    attributes:
+      label: Resource type
+      options: [Official public resource, External developer resource, Read-only MCP integration]
+    validations:
+      required: true
+  - type: textarea
+    id: relevance
+    attributes:
+      label: Hong Kong relevance
+      description: Explain the concrete Hong Kong use case or coverage.
+    validations:
+      required: true
+  - type: input
+    id: provider
+    attributes:
+      label: Provider
+    validations:
+      required: true
+  - type: input
+    id: landing
+    attributes:
+      label: Official landing URL
+      placeholder: https://
+    validations:
+      required: true
+  - type: input
+    id: documentation
+    attributes:
+      label: Documentation URL
+      placeholder: https://
+  - type: input
+    id: terms
+    attributes:
+      label: Terms or licence URL
+      placeholder: https://
+  - type: textarea
+    id: access
+    attributes:
+      label: Factual access notes
+      description: Describe authentication, format, limits, or observed restrictions without guessing.
+    validations:
+      required: true
+  - type: input
+    id: checked
+    attributes:
+      label: Evidence checked date
+      placeholder: YYYY-MM-DD
+    validations:
+      required: true
+  - type: checkboxes
+    id: confirmation
+    attributes:
+      label: Submission confirmation
+      options:
+        - label: I included no credentials or restricted data, provider payloads, or personal data.
+          required: true

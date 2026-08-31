@@ -1,0 +1,69 @@
+name: CI
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  catalogue:
+    name: catalogue
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262  # v4
+      - uses: ./.github/actions/setup
+      - run: make verify-catalogue
+
+  typescript:
+    name: typescript
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262  # v4
+      - uses: ./.github/actions/setup
+      - run: pnpm typecheck
+      - run: pnpm -r --if-present test
+      - run: pnpm build
+
+  python:
+    name: python
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262  # v4
+      - uses: ./.github/actions/setup
+      - run: uv run ruff check scripts services tests packages/sdk-python/src
+      - run: uv run mypy services/worker packages/sdk-python/src
+      - run: uv run pytest tests/catalog tests/contract tests/security packages/sdk-python/tests -q
+
+  browser:
+    name: browser
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262  # v4
+      - uses: ./.github/actions/setup
+        with:
+          install-browser: "true"
+      - run: make verify-site
+
+  boundary:
+    name: boundary
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262  # v4
+      - uses: ./.github/actions/setup
+      - run: node --test tests/repository/*.test.mjs
+      - run: node scripts/check-public-boundary.mjs
+      - run: node scripts/check-secrets.mjs
+      - run: node scripts/check-contract-drift.mjs
+      - run: uv run pytest tests/repository -q

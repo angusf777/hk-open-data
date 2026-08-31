@@ -1,0 +1,13 @@
+[
+  {"name":"catalogue","color":"C81E3A","description":"Resource catalogue metadata"},
+  {"name":"connector","color":"1F6FEB","description":"Self-hosted source connector"},
+  {"name":"documentation","color":"0E8A16","description":"Documentation improvement"},
+  {"name":"translation","color":"7057FF","description":"English or Traditional Chinese translation"},
+  {"name":"terms-evidence","color":"D4C5F9","description":"Terms, licence, attribution, or restriction evidence"},
+  {"name":"security","color":"B60205","description":"Security hardening; vulnerabilities must be reported privately"},
+  {"name":"good first issue","color":"7057FF","description":"Scoped contribution for a new contributor"},
+  {"name":"help wanted","color":"008672","description":"Maintainer welcomes community help"},
+  {"name":"stale-source","color":"FBCA04","description":"Automated or observed source health finding"},
+  {"name":"correction","color":"E99695","description":"Catalogue correction or takedown request"},
+  {"name":"bug","color":"D73A4A","description":"Reproducible product defect"}
+]
