@@ -4,16 +4,16 @@ terraform {
 
 resource "terraform_data" "deployment_contract" {
   input = {
-    enable_runtime        = var.enable_runtime
-    enable_raw_evidence   = var.enable_raw_evidence
-    source_approvals      = var.source_approval_inputs
-    environment  = var.environment
-    network      = var.network
-    database     = var.database
-    object_store = var.object_store
-    identity     = var.identity
-    domains      = var.domains
-    telemetry    = var.telemetry
+    enable_runtime      = var.enable_runtime
+    enable_raw_evidence = var.enable_raw_evidence
+    source_approvals    = var.source_approval_inputs
+    environment         = var.environment
+    network             = var.network
+    database            = var.database
+    object_store        = var.object_store
+    identity            = var.identity
+    domains             = var.domains
+    telemetry           = var.telemetry
   }
 
   lifecycle {

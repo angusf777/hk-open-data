@@ -1,5 +1,5 @@
 module "platform_contract" {
-  source      = "../../modules/platform"
+  source              = "../../modules/platform"
   environment         = "local"
   enable_runtime      = false
   enable_raw_evidence = false
