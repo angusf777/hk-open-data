@@ -28,18 +28,18 @@ formats:
 authentication: none
 access: open-endpoint
 urls:
-  landing: https://portal.csdi.gov.hk/csdi-webpage/mapapi
-  documentation: https://portal.csdi.gov.hk/csdi-webpage/mapapi
-  terms: null
+  landing: https://portal.csdi.gov.hk/csdi-webpage/apilist
+  documentation: https://portal.csdi.gov.hk/csdi-webpage/apilist
+  terms: https://portal.csdi.gov.hk/csdi-webpage/doc/TNC
 languages:
 - en
 verification:
   status: metadata-reviewed
-  checkedAt: '2026-08-27'
-  evidenceUrl: https://portal.csdi.gov.hk/csdi-webpage/mapapi
+  checkedAt: '2026-08-31'
+  evidenceUrl: https://portal.csdi.gov.hk/csdi-webpage/apilist
 termsEvidence:
   state: restriction-identified
-  checkedAt: '2026-08-27'
+  checkedAt: '2026-08-31'
   note:
     en: Available source notes identify an upstream condition or restriction; consult the provider's current terms.
     zh-Hant: 現有來源註記識別了上游條件或限制；請查閱供應者的現行條款。

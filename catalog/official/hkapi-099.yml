@@ -26,15 +26,15 @@ formats:
 authentication: none
 access: open-endpoint
 urls:
-  landing: https://www.hko.gov.hk/en/gts/time/ntp.htm
-  documentation: https://www.hko.gov.hk/en/gts/time/ntp.htm
+  landing: https://www.hko.gov.hk/en/nts/ntime.htm
+  documentation: https://www.hko.gov.hk/en/nts/ntime.htm
   terms: null
 languages:
 - en
 verification:
   status: metadata-reviewed
-  checkedAt: '2026-08-27'
-  evidenceUrl: https://www.hko.gov.hk/en/gts/time/ntp.htm
+  checkedAt: '2026-08-31'
+  evidenceUrl: https://www.hko.gov.hk/en/nts/ntime.htm
 termsEvidence:
   state: ambiguity-identified
   checkedAt: '2026-08-27'

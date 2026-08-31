@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import hashlib
+import json
 import os
 import subprocess
 from pathlib import Path
@@ -43,6 +44,15 @@ def test_release_package_contains_metadata_not_provider_data(tmp_path: Path) -> 
     )
     assert '"resources"' in catalogue
     assert "provider payload" not in catalogue.lower()
+
+    sbom_path = tmp_path / "hk-open-data-sbom-v0.1.0.cdx.json"
+    sbom_text = sbom_path.read_text(encoding="utf-8")
+    sbom = json.loads(sbom_text)
+    assert sbom["bomFormat"] == "CycloneDX"
+    assert sbom["specVersion"] == "1.6"
+    assert len(sbom["components"]) >= 400
+    assert all(component.get("licenses") for component in sbom["components"])
+    assert str(ROOT) not in sbom_text
 
 
 def test_normal_packaging_requires_a_clean_tree() -> None:

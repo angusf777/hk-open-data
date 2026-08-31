@@ -26,23 +26,27 @@ formats:
 authentication: none
 access: open-endpoint
 urls:
-  landing: https://api.hkmapservice.gov.hk/
-  documentation: https://api.hkmapservice.gov.hk/
-  terms: null
+  landing: https://portal.csdi.gov.hk/csdi-webpage/apidoc/TopographicMapAPI
+  documentation: https://portal.csdi.gov.hk/csdi-webpage/apidoc/TopographicMapAPI
+  terms: https://portal.csdi.gov.hk/csdi-webpage/doc/TNC
 languages:
 - en
 verification:
   status: metadata-reviewed
-  checkedAt: '2026-08-27'
-  evidenceUrl: https://api.hkmapservice.gov.hk/
+  checkedAt: '2026-08-31'
+  evidenceUrl: https://portal.csdi.gov.hk/csdi-webpage/apidoc/TopographicMapAPI
 termsEvidence:
-  state: ambiguity-identified
-  checkedAt: '2026-08-27'
+  state: restriction-identified
+  checkedAt: '2026-08-31'
   note:
-    en: Available source notes indicate that current provider or dataset-specific terms require review.
-    zh-Hant: 現有來源註記顯示，使用前須審查現行供應者或個別數據集條款。
-  attribution: null
-  restrictions: []
+    en: The current provider page identifies attribution, copyright, rate, and downstream imagery conditions; its current wording controls.
+    zh-Hant: 現行供應者頁面列出署名、版權、流量及下游影像條件；應以該頁現行文字為準。
+  attribution:
+    en: The provider page requires the Lands Department logo and its specified copyright notice in map applications.
+    zh-Hant: 供應者頁面要求地圖應用顯示地政總署標誌及其指定版權告示。
+  restrictions:
+  - en: Rate, copyright, attribution, imagery, and TLS conditions are stated on the provider page.
+    zh-Hant: 供應者頁面列有流量、版權、署名、影像及 TLS 條件。
 integrations:
   connector: none
   sdk: none

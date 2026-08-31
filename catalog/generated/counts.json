@@ -1,8 +1,8 @@
 {
   "byTermsEvidenceState": {
-    "ambiguity-identified": 331,
+    "ambiguity-identified": 330,
     "not-reviewed": 111,
-    "restriction-identified": 79
+    "restriction-identified": 80
   },
   "byTranslationStatus": {
     "seeded": 521

@@ -1,12 +1,10 @@
 FROM ghcr.io/astral-sh/uv:0.8.14 AS uv
-FROM python:3.12.11-slim-bookworm
+FROM python:3.12.11-alpine3.22
 ENV PYTHONDONTWRITEBYTECODE=1 PYTHONUNBUFFERED=1 UV_COMPILE_BYTECODE=1
 WORKDIR /app
-RUN apt-get update \
-    && apt-get upgrade --yes \
-    && rm -rf /var/lib/apt/lists/* \
-    && groupadd --gid 10001 app \
-    && useradd --uid 10001 --gid app --no-create-home app
+RUN apk upgrade --no-cache \
+    && addgroup -g 10001 app \
+    && adduser -D -u 10001 -G app app
 COPY --from=uv /uv /uvx /bin/
 COPY pyproject.toml uv.lock ./
 RUN uv sync --frozen --no-dev

@@ -28,15 +28,15 @@ formats:
 authentication: none
 access: open-endpoint
 urls:
-  landing: https://www.als.ogcio.gov.hk/docs/
-  documentation: https://www.als.ogcio.gov.hk/docs/
+  landing: https://data.gov.hk/en-data/dataset/hk-dpo-als_01-als
+  documentation: https://www.als.gov.hk/docs/Data_Dictionary_for_ALS_EN.pdf
   terms: null
 languages:
 - en
 verification:
   status: metadata-reviewed
-  checkedAt: '2026-08-27'
-  evidenceUrl: https://www.als.ogcio.gov.hk/docs/
+  checkedAt: '2026-08-31'
+  evidenceUrl: https://portal.csdi.gov.hk/csdi-webpage/dataset/dpo_rcd_1629267205232_33603
 termsEvidence:
   state: ambiguity-identified
   checkedAt: '2026-08-27'

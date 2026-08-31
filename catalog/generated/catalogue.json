@@ -1,9 +1,9 @@
 {
   "counts": {
     "byTermsEvidenceState": {
-      "ambiguity-identified": 331,
+      "ambiguity-identified": 330,
       "not-reviewed": 111,
-      "restriction-identified": 79
+      "restriction-identified": 80
     },
     "byTranslationStatus": {
       "seeded": 521
@@ -17238,13 +17238,13 @@
       "type": "official",
       "updateCadence": "Metadata changes",
       "urls": {
-        "documentation": "https://data.gov.hk/en/help/ckan-api",
-        "landing": "https://data.gov.hk/en/help/ckan-api",
+        "documentation": "https://data.gov.hk/en/help/ckan-api-development-guide",
+        "landing": "https://data.gov.hk/en/help/ckan-api-development-guide",
         "terms": null
       },
       "verification": {
-        "checkedAt": "2026-08-27",
-        "evidenceUrl": "https://data.gov.hk/en/help/ckan-api",
+        "checkedAt": "2026-08-31",
+        "evidenceUrl": "https://data.gov.hk/en/help/ckan-api-development-guide",
         "status": "metadata-reviewed"
       }
     },
@@ -17305,13 +17305,13 @@
       "type": "official",
       "updateCadence": "Metadata changes",
       "urls": {
-        "documentation": "https://data.gov.hk/en/help/ckan-api",
-        "landing": "https://data.gov.hk/en/help/ckan-api",
+        "documentation": "https://data.gov.hk/en/help/ckan-api-development-guide",
+        "landing": "https://data.gov.hk/en/help/ckan-api-development-guide",
         "terms": null
       },
       "verification": {
-        "checkedAt": "2026-08-27",
-        "evidenceUrl": "https://data.gov.hk/en/help/ckan-api",
+        "checkedAt": "2026-08-31",
+        "evidenceUrl": "https://data.gov.hk/en/help/ckan-api-development-guide",
         "status": "metadata-reviewed"
       }
     },
@@ -17372,13 +17372,13 @@
       "type": "official",
       "updateCadence": "Metadata changes",
       "urls": {
-        "documentation": "https://data.gov.hk/en/help/ckan-api",
-        "landing": "https://data.gov.hk/en/help/ckan-api",
+        "documentation": "https://data.gov.hk/en/help/ckan-api-development-guide",
+        "landing": "https://data.gov.hk/en/help/ckan-api-development-guide",
         "terms": null
       },
       "verification": {
-        "checkedAt": "2026-08-27",
-        "evidenceUrl": "https://data.gov.hk/en/help/ckan-api",
+        "checkedAt": "2026-08-31",
+        "evidenceUrl": "https://data.gov.hk/en/help/ckan-api-development-guide",
         "status": "metadata-reviewed"
       }
     },
@@ -17439,13 +17439,13 @@
       "type": "official",
       "updateCadence": "Metadata changes",
       "urls": {
-        "documentation": "https://data.gov.hk/en/help/ckan-api",
-        "landing": "https://data.gov.hk/en/help/ckan-api",
+        "documentation": "https://data.gov.hk/en/help/ckan-api-development-guide",
+        "landing": "https://data.gov.hk/en/help/ckan-api-development-guide",
         "terms": null
       },
       "verification": {
-        "checkedAt": "2026-08-27",
-        "evidenceUrl": "https://data.gov.hk/en/help/ckan-api",
+        "checkedAt": "2026-08-31",
+        "evidenceUrl": "https://data.gov.hk/en/help/ckan-api-development-guide",
         "status": "metadata-reviewed"
       }
     },
@@ -18200,7 +18200,7 @@
           "en": "Source notes indicate an attribution condition; verify the provider's current wording.",
           "zh-Hant": "來源註記顯示有署名條件；請核實供應者的現行文字。"
         },
-        "checkedAt": "2026-08-27",
+        "checkedAt": "2026-08-31",
         "note": {
           "en": "Available source notes identify an upstream condition or restriction; consult the provider's current terms.",
           "zh-Hant": "現有來源註記識別了上游條件或限制；請查閱供應者的現行條款。"
@@ -18217,13 +18217,13 @@
       "type": "official",
       "updateCadence": "Depends on service",
       "urls": {
-        "documentation": "https://portal.csdi.gov.hk/csdi-webpage/mapapi",
-        "landing": "https://portal.csdi.gov.hk/csdi-webpage/mapapi",
-        "terms": null
+        "documentation": "https://portal.csdi.gov.hk/csdi-webpage/apilist",
+        "landing": "https://portal.csdi.gov.hk/csdi-webpage/apilist",
+        "terms": "https://portal.csdi.gov.hk/csdi-webpage/doc/TNC"
       },
       "verification": {
-        "checkedAt": "2026-08-27",
-        "evidenceUrl": "https://portal.csdi.gov.hk/csdi-webpage/mapapi",
+        "checkedAt": "2026-08-31",
+        "evidenceUrl": "https://portal.csdi.gov.hk/csdi-webpage/apilist",
         "status": "metadata-reviewed"
       }
     },
@@ -18625,13 +18625,13 @@
       "type": "official",
       "updateCadence": "As address data updates",
       "urls": {
-        "documentation": "https://www.als.ogcio.gov.hk/docs/",
-        "landing": "https://www.als.ogcio.gov.hk/docs/",
+        "documentation": "https://www.als.gov.hk/docs/Data_Dictionary_for_ALS_EN.pdf",
+        "landing": "https://data.gov.hk/en-data/dataset/hk-dpo-als_01-als",
         "terms": null
       },
       "verification": {
-        "checkedAt": "2026-08-27",
-        "evidenceUrl": "https://www.als.ogcio.gov.hk/docs/",
+        "checkedAt": "2026-08-31",
+        "evidenceUrl": "https://portal.csdi.gov.hk/csdi-webpage/dataset/dpo_rcd_1629267205232_33603",
         "status": "metadata-reviewed"
       }
     },
@@ -18746,26 +18746,34 @@
         "Basemap"
       ],
       "termsEvidence": {
-        "attribution": null,
-        "checkedAt": "2026-08-27",
-        "note": {
-          "en": "Available source notes indicate that current provider or dataset-specific terms require review.",
-          "zh-Hant": "現有來源註記顯示，使用前須審查現行供應者或個別數據集條款。"
+        "attribution": {
+          "en": "The provider page requires the Lands Department logo and its specified copyright notice in map applications.",
+          "zh-Hant": "供應者頁面要求地圖應用顯示地政總署標誌及其指定版權告示。"
         },
-        "restrictions": [],
-        "state": "ambiguity-identified"
+        "checkedAt": "2026-08-31",
+        "note": {
+          "en": "The current provider page identifies attribution, copyright, rate, and downstream imagery conditions; its current wording controls.",
+          "zh-Hant": "現行供應者頁面列出署名、版權、流量及下游影像條件；應以該頁現行文字為準。"
+        },
+        "restrictions": [
+          {
+            "en": "Rate, copyright, attribution, imagery, and TLS conditions are stated on the provider page.",
+            "zh-Hant": "供應者頁面列有流量、版權、署名、影像及 TLS 條件。"
+          }
+        ],
+        "state": "restriction-identified"
       },
       "translationStatus": "seeded",
       "type": "official",
       "updateCadence": "As map updates",
       "urls": {
-        "documentation": "https://api.hkmapservice.gov.hk/",
-        "landing": "https://api.hkmapservice.gov.hk/",
-        "terms": null
+        "documentation": "https://portal.csdi.gov.hk/csdi-webpage/apidoc/TopographicMapAPI",
+        "landing": "https://portal.csdi.gov.hk/csdi-webpage/apidoc/TopographicMapAPI",
+        "terms": "https://portal.csdi.gov.hk/csdi-webpage/doc/TNC"
       },
       "verification": {
-        "checkedAt": "2026-08-27",
-        "evidenceUrl": "https://api.hkmapservice.gov.hk/",
+        "checkedAt": "2026-08-31",
+        "evidenceUrl": "https://portal.csdi.gov.hk/csdi-webpage/apidoc/TopographicMapAPI",
         "status": "metadata-reviewed"
       }
     },
@@ -18817,7 +18825,7 @@
           "en": "Source notes indicate an attribution condition; verify the provider's current wording.",
           "zh-Hant": "來源註記顯示有署名條件；請核實供應者的現行文字。"
         },
-        "checkedAt": "2026-08-27",
+        "checkedAt": "2026-08-31",
         "note": {
           "en": "Available source notes identify an upstream condition or restriction; consult the provider's current terms.",
           "zh-Hant": "現有來源註記識別了上游條件或限制；請查閱供應者的現行條款。"
@@ -18834,13 +18842,13 @@
       "type": "official",
       "updateCadence": "As data updates",
       "urls": {
-        "documentation": "https://portal.csdi.gov.hk/csdi-webpage/mapapi",
-        "landing": "https://portal.csdi.gov.hk/csdi-webpage/mapapi",
-        "terms": null
+        "documentation": "https://portal.csdi.gov.hk/csdi-webpage/apidoc/LotIndexAPI",
+        "landing": "https://portal.csdi.gov.hk/csdi-webpage/apidoc/LotIndexAPI",
+        "terms": "https://portal.csdi.gov.hk/csdi-webpage/doc/TNC"
       },
       "verification": {
-        "checkedAt": "2026-08-27",
-        "evidenceUrl": "https://portal.csdi.gov.hk/csdi-webpage/mapapi",
+        "checkedAt": "2026-08-31",
+        "evidenceUrl": "https://portal.csdi.gov.hk/csdi-webpage/apidoc/LotIndexAPI",
         "status": "metadata-reviewed"
       }
     },
@@ -18892,7 +18900,7 @@
           "en": "Source notes indicate an attribution condition; verify the provider's current wording.",
           "zh-Hant": "來源註記顯示有署名條件；請核實供應者的現行文字。"
         },
-        "checkedAt": "2026-08-27",
+        "checkedAt": "2026-08-31",
         "note": {
           "en": "Available source notes identify an upstream condition or restriction; consult the provider's current terms.",
           "zh-Hant": "現有來源註記識別了上游條件或限制；請查閱供應者的現行條款。"
@@ -18909,13 +18917,13 @@
       "type": "official",
       "updateCadence": "As data updates",
       "urls": {
-        "documentation": "https://portal.csdi.gov.hk/csdi-webpage/mapapi",
-        "landing": "https://portal.csdi.gov.hk/csdi-webpage/mapapi",
-        "terms": null
+        "documentation": "https://portal.csdi.gov.hk/csdi-webpage/apidoc/LPPUNSearchAPI",
+        "landing": "https://portal.csdi.gov.hk/csdi-webpage/apidoc/LPPUNSearchAPI",
+        "terms": "https://portal.csdi.gov.hk/csdi-webpage/doc/TNC"
       },
       "verification": {
-        "checkedAt": "2026-08-27",
-        "evidenceUrl": "https://portal.csdi.gov.hk/csdi-webpage/mapapi",
+        "checkedAt": "2026-08-31",
+        "evidenceUrl": "https://portal.csdi.gov.hk/csdi-webpage/apidoc/LPPUNSearchAPI",
         "status": "metadata-reviewed"
       }
     },
@@ -23882,13 +23890,13 @@
       "type": "official",
       "updateCadence": "Continuous",
       "urls": {
-        "documentation": "https://www.hko.gov.hk/en/gts/time/ntp.htm",
-        "landing": "https://www.hko.gov.hk/en/gts/time/ntp.htm",
+        "documentation": "https://www.hko.gov.hk/en/nts/ntime.htm",
+        "landing": "https://www.hko.gov.hk/en/nts/ntime.htm",
         "terms": null
       },
       "verification": {
-        "checkedAt": "2026-08-27",
-        "evidenceUrl": "https://www.hko.gov.hk/en/gts/time/ntp.htm",
+        "checkedAt": "2026-08-31",
+        "evidenceUrl": "https://www.hko.gov.hk/en/nts/ntime.htm",
         "status": "metadata-reviewed"
       }
     },
@@ -28301,13 +28309,13 @@
       "type": "official",
       "updateCadence": "Event-driven",
       "urls": {
-        "documentation": "https://www.legco.gov.hk/general/english/open-legco/open-data.html",
-        "landing": "https://www.legco.gov.hk/general/english/open-legco/open-data.html",
+        "documentation": "https://www.legco.gov.hk/en/open-legco/open-data/webcast-api.html",
+        "landing": "https://www.legco.gov.hk/en/open-legco/open-data/webcast-api.html",
         "terms": null
       },
       "verification": {
-        "checkedAt": "2026-08-27",
-        "evidenceUrl": "https://www.legco.gov.hk/general/english/open-legco/open-data.html",
+        "checkedAt": "2026-08-31",
+        "evidenceUrl": "https://www.legco.gov.hk/en/open-legco/open-data/webcast-api.html",
         "status": "metadata-reviewed"
       }
     },
@@ -28368,13 +28376,13 @@
       "type": "official",
       "updateCadence": "As bills progress",
       "urls": {
-        "documentation": "https://www.legco.gov.hk/general/english/open-legco/open-data.html",
-        "landing": "https://www.legco.gov.hk/general/english/open-legco/open-data.html",
+        "documentation": "https://www.legco.gov.hk/en/open-legco/open-data/bills-database.html",
+        "landing": "https://www.legco.gov.hk/en/open-legco/open-data/bills-database.html",
         "terms": null
       },
       "verification": {
-        "checkedAt": "2026-08-27",
-        "evidenceUrl": "https://www.legco.gov.hk/general/english/open-legco/open-data.html",
+        "checkedAt": "2026-08-31",
+        "evidenceUrl": "https://www.legco.gov.hk/en/open-legco/open-data/bills-database.html",
         "status": "metadata-reviewed"
       }
     },
@@ -28435,13 +28443,13 @@
       "type": "official",
       "updateCadence": "As meetings change",
       "urls": {
-        "documentation": "https://www.legco.gov.hk/general/english/open-legco/open-data.html",
-        "landing": "https://www.legco.gov.hk/general/english/open-legco/open-data.html",
+        "documentation": "https://www.legco.gov.hk/en/open-legco/open-data/meeting-schedule.html",
+        "landing": "https://www.legco.gov.hk/en/open-legco/open-data/meeting-schedule.html",
         "terms": null
       },
       "verification": {
-        "checkedAt": "2026-08-27",
-        "evidenceUrl": "https://www.legco.gov.hk/general/english/open-legco/open-data.html",
+        "checkedAt": "2026-08-31",
+        "evidenceUrl": "https://www.legco.gov.hk/en/open-legco/open-data/meeting-schedule.html",
         "status": "metadata-reviewed"
       }
     },
@@ -28502,13 +28510,13 @@
       "type": "official",
       "updateCadence": "As records publish",
       "urls": {
-        "documentation": "https://www.legco.gov.hk/general/english/open-legco/open-data.html",
-        "landing": "https://www.legco.gov.hk/general/english/open-legco/open-data.html",
+        "documentation": "https://www.legco.gov.hk/en/open-legco/open-data/questions-at-council-meetings.html",
+        "landing": "https://www.legco.gov.hk/en/open-legco/open-data/questions-at-council-meetings.html",
         "terms": null
       },
       "verification": {
-        "checkedAt": "2026-08-27",
-        "evidenceUrl": "https://www.legco.gov.hk/general/english/open-legco/open-data.html",
+        "checkedAt": "2026-08-31",
+        "evidenceUrl": "https://www.legco.gov.hk/en/open-legco/open-data/questions-at-council-meetings.html",
         "status": "metadata-reviewed"
       }
     },
@@ -28569,13 +28577,13 @@
       "type": "official",
       "updateCadence": "After votes",
       "urls": {
-        "documentation": "https://www.legco.gov.hk/general/english/open-legco/open-data.html",
-        "landing": "https://www.legco.gov.hk/general/english/open-legco/open-data.html",
+        "documentation": "https://www.legco.gov.hk/en/open-legco/open-data/voting-result-database.html",
+        "landing": "https://www.legco.gov.hk/en/open-legco/open-data/voting-result-database.html",
         "terms": null
       },
       "verification": {
-        "checkedAt": "2026-08-27",
-        "evidenceUrl": "https://www.legco.gov.hk/general/english/open-legco/open-data.html",
+        "checkedAt": "2026-08-31",
+        "evidenceUrl": "https://www.legco.gov.hk/en/open-legco/open-data/voting-result-database.html",
         "status": "metadata-reviewed"
       }
     },
@@ -28703,13 +28711,13 @@
       "type": "official",
       "updateCadence": "After proceedings publish",
       "urls": {
-        "documentation": "https://www.legco.gov.hk/general/english/open-legco/open-data.html",
-        "landing": "https://www.legco.gov.hk/general/english/open-legco/open-data.html",
+        "documentation": "https://www.legco.gov.hk/en/open-legco/open-data/hansard-database.html",
+        "landing": "https://www.legco.gov.hk/en/open-legco/open-data/hansard-database.html",
         "terms": null
       },
       "verification": {
-        "checkedAt": "2026-08-27",
-        "evidenceUrl": "https://www.legco.gov.hk/general/english/open-legco/open-data.html",
+        "checkedAt": "2026-08-31",
+        "evidenceUrl": "https://www.legco.gov.hk/en/open-legco/open-data/hansard-database.html",
         "status": "metadata-reviewed"
       }
     },

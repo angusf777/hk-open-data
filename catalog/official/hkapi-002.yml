@@ -26,15 +26,15 @@ formats:
 authentication: none
 access: open-endpoint
 urls:
-  landing: https://data.gov.hk/en/help/ckan-api
-  documentation: https://data.gov.hk/en/help/ckan-api
+  landing: https://data.gov.hk/en/help/ckan-api-development-guide
+  documentation: https://data.gov.hk/en/help/ckan-api-development-guide
   terms: null
 languages:
 - en
 verification:
   status: metadata-reviewed
-  checkedAt: '2026-08-27'
-  evidenceUrl: https://data.gov.hk/en/help/ckan-api
+  checkedAt: '2026-08-31'
+  evidenceUrl: https://data.gov.hk/en/help/ckan-api-development-guide
 termsEvidence:
   state: ambiguity-identified
   checkedAt: '2026-08-27'
