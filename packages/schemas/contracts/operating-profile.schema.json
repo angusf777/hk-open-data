@@ -1,0 +1,58 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://angusf777.github.io/hk-open-data/contracts/operating-profile.schema.json",
+  "title": "HK Open Data operating profile",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["profile", "providerAccess", "rawEvidence", "evidenceMode"],
+  "properties": {
+    "profile": { "enum": ["catalogue", "observe", "fabric"] },
+    "providerAccess": { "type": "boolean" },
+    "rawEvidence": { "type": "boolean" },
+    "evidenceMode": { "enum": ["none", "digest", "raw"] },
+    "objectStore": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["endpoint", "bucket", "accessKey", "secretKey"],
+      "properties": {
+        "endpoint": { "type": "string", "minLength": 1 },
+        "bucket": { "type": "string", "minLength": 1 },
+        "accessKey": { "type": "string", "minLength": 1 },
+        "secretKey": { "type": "string", "minLength": 1 }
+      }
+    }
+  },
+  "allOf": [
+    {
+      "if": { "properties": { "profile": { "const": "catalogue" } } },
+      "then": {
+        "properties": {
+          "providerAccess": { "const": false },
+          "rawEvidence": { "const": false },
+          "evidenceMode": { "const": "none" }
+        }
+      }
+    },
+    {
+      "if": { "properties": { "profile": { "const": "observe" } } },
+      "then": {
+        "properties": {
+          "providerAccess": { "const": true },
+          "rawEvidence": { "const": false },
+          "evidenceMode": { "const": "digest" }
+        }
+      }
+    },
+    {
+      "if": { "properties": { "profile": { "const": "fabric" } } },
+      "then": {
+        "required": ["objectStore"],
+        "properties": {
+          "providerAccess": { "const": true },
+          "rawEvidence": { "const": true },
+          "evidenceMode": { "const": "raw" }
+        }
+      }
+    }
+  ]
+}

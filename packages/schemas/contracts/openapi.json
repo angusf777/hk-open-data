@@ -1,0 +1,563 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "HK Open Data Self-hosted Runtime",
+    "version": "1.0.0-draft",
+    "description": "Normative v0 REST surface. Public status operations are explicitly marked; all other operations require an audience-bound bearer token."
+  },
+  "servers": [
+    {"url": "/", "description": "Current environment; deployment supplies the origin"}
+  ],
+  "tags": [
+    {"name": "Sources", "description": "Approved-source catalogue and health metadata"},
+    {"name": "Records", "description": "Immutable source records and provenance"},
+    {"name": "Events", "description": "Normalized domain events"},
+    {"name": "Quality", "description": "Reviewed target health and incident views"},
+    {"name": "Webhooks", "description": "Authenticated event-delivery subscriptions"},
+    {"name": "Administration", "description": "Audited approval and incident transitions"}
+  ],
+  "paths": {
+    "/v1/sources": {
+      "get": {
+        "operationId": "listSources",
+        "summary": "List visible sources",
+        "tags": ["Sources"],
+        "security": [{}, {"bearerAuth": []}],
+        "parameters": [
+          {"$ref": "#/components/parameters/Cursor"},
+          {"$ref": "#/components/parameters/Limit"},
+          {"name": "project", "in": "query", "schema": {"type": "string", "pattern": "^P[0-9]{2}$"}},
+          {"name": "authority_class", "in": "query", "schema": {"type": "string"}},
+          {"name": "freshness_status", "in": "query", "schema": {"type": "string"}},
+          {"name": "approval_status", "in": "query", "schema": {"type": "string"}}
+        ],
+        "responses": {
+          "200": {"description": "Visible source summaries", "content": {"application/json": {"schema": {"$ref": "#/components/schemas/SourcePage"}}}},
+          "401": {"$ref": "#/components/responses/Unauthorized"}
+        }
+      }
+    },
+    "/v1/sources/{source_id}": {
+      "get": {
+        "operationId": "getSource",
+        "summary": "Get one source and its current health",
+        "tags": ["Sources"],
+        "security": [{}, {"bearerAuth": []}],
+        "parameters": [{"$ref": "#/components/parameters/SourceId"}, {"$ref": "#/components/parameters/IfMatch"}],
+        "responses": {
+          "200": {"description": "Source definition and current health", "content": {"application/json": {"schema": {"$ref": "#/components/schemas/SourceDetail"}}}},
+          "404": {"$ref": "#/components/responses/NotFound"}
+        }
+      }
+    },
+    "/v1/source-records": {
+      "get": {
+        "operationId": "querySourceRecords",
+        "summary": "Query authorized source records",
+        "tags": ["Records"],
+        "security": [{"bearerAuth": []}],
+        "parameters": [
+          {"$ref": "#/components/parameters/Cursor"},
+          {"$ref": "#/components/parameters/Limit"},
+          {"name": "source_id", "in": "query", "schema": {"type": "string"}},
+          {"name": "observed_from", "in": "query", "schema": {"type": "string", "format": "date-time"}},
+          {"name": "observed_to", "in": "query", "schema": {"type": "string", "format": "date-time"}},
+          {"name": "published_from", "in": "query", "schema": {"type": "string", "format": "date-time"}},
+          {"name": "published_to", "in": "query", "schema": {"type": "string", "format": "date-time"}},
+          {"name": "language", "in": "query", "schema": {"type": "string"}}
+        ],
+        "responses": {
+          "200": {"description": "Authorized source records", "content": {"application/json": {"schema": {"$ref": "#/components/schemas/SourceRecordPage"}}}},
+          "401": {"$ref": "#/components/responses/Unauthorized"}
+        }
+      }
+    },
+    "/v1/source-records/{source_record_id}": {
+      "get": {
+        "operationId": "getSourceRecord",
+        "summary": "Get one source record with lineage",
+        "tags": ["Records"],
+        "security": [{"bearerAuth": []}],
+        "parameters": [{"name": "source_record_id", "in": "path", "required": true, "schema": {"type": "string"}}],
+        "responses": {
+          "200": {"description": "One source record with lineage", "content": {"application/json": {"schema": {"$ref": "./source_record.schema.json"}}}},
+          "404": {"$ref": "#/components/responses/NotFound"}
+        }
+      }
+    },
+    "/v1/events": {
+      "get": {
+        "operationId": "queryEvents",
+        "summary": "Query authorized canonical events",
+        "tags": ["Events"],
+        "security": [{"bearerAuth": []}],
+        "parameters": [
+          {"$ref": "#/components/parameters/Cursor"},
+          {"$ref": "#/components/parameters/Limit"},
+          {"name": "event_type", "in": "query", "schema": {"type": "string"}},
+          {"name": "status", "in": "query", "schema": {"type": "string"}},
+          {"name": "severity", "in": "query", "schema": {"type": "string"}},
+          {"name": "observed_from", "in": "query", "schema": {"type": "string", "format": "date-time"}},
+          {"name": "observed_to", "in": "query", "schema": {"type": "string", "format": "date-time"}},
+          {"name": "affected_entity", "in": "query", "schema": {"type": "string"}}
+        ],
+        "responses": {
+          "200": {"description": "Authorized canonical events", "content": {"application/json": {"schema": {"$ref": "#/components/schemas/EventPage"}}}}
+        }
+      }
+    },
+    "/v1/events/{event_id}": {
+      "get": {
+        "operationId": "getEvent",
+        "summary": "Get one canonical event",
+        "tags": ["Events"],
+        "security": [{"bearerAuth": []}],
+        "parameters": [{"name": "event_id", "in": "path", "required": true, "schema": {"type": "string"}}],
+        "responses": {
+          "200": {"description": "One canonical event", "content": {"application/json": {"schema": {"$ref": "./canonical_event.schema.json"}}}},
+          "404": {"$ref": "#/components/responses/NotFound"}
+        }
+      }
+    },
+    "/v1/status/summary": {
+      "get": {
+        "operationId": "getPublicStatusSummary",
+        "summary": "Get the reviewed public status summary",
+        "tags": ["Quality"],
+        "security": [{}, {"bearerAuth": []}],
+        "parameters": [
+          {"name": "project", "in": "query", "schema": {"type": "string", "pattern": "^P[0-9]{2}$"}},
+          {"name": "provider", "in": "query", "schema": {"type": "string"}}
+        ],
+        "responses": {
+          "200": {"description": "Reviewed public status summary", "content": {"application/json": {"schema": {"$ref": "#/components/schemas/StatusSummary"}}}}
+        }
+      }
+    },
+    "/v1/monitor-targets": {
+      "get": {
+        "operationId": "listMonitorTargets",
+        "summary": "List visible monitor targets",
+        "tags": ["Quality"],
+        "security": [{}, {"bearerAuth": []}],
+        "parameters": [
+          {"$ref": "#/components/parameters/Cursor"},
+          {"$ref": "#/components/parameters/Limit"},
+          {"name": "provider", "in": "query", "schema": {"type": "string"}},
+          {"name": "outcome", "in": "query", "schema": {"type": "string"}}
+        ],
+        "responses": {
+          "200": {"description": "Public target views; bearer tokens may reveal authorized private targets", "content": {"application/json": {"schema": {"$ref": "#/components/schemas/MonitorTargetPage"}}}}
+        }
+      }
+    },
+    "/v1/monitor-targets/{monitor_id}": {
+      "get": {
+        "operationId": "getMonitorTarget",
+        "summary": "Get a monitor target and reviewed history",
+        "tags": ["Quality"],
+        "security": [{}, {"bearerAuth": []}],
+        "parameters": [
+          {"$ref": "#/components/parameters/MonitorId"},
+          {"name": "history_limit", "in": "query", "schema": {"type": "integer", "minimum": 1, "maximum": 100, "default": 20}}
+        ],
+        "responses": {
+          "200": {"description": "Target and reviewed observation history", "content": {"application/json": {"schema": {"$ref": "#/components/schemas/MonitorTargetDetail"}}}},
+          "404": {"$ref": "#/components/responses/NotFound"}
+        }
+      }
+    },
+    "/v1/incidents": {
+      "get": {
+        "operationId": "listIncidents",
+        "summary": "List visible incidents",
+        "tags": ["Quality"],
+        "security": [{}, {"bearerAuth": []}],
+        "parameters": [
+          {"$ref": "#/components/parameters/Cursor"},
+          {"$ref": "#/components/parameters/Limit"},
+          {"name": "status", "in": "query", "schema": {"type": "string"}},
+          {"name": "severity", "in": "query", "schema": {"type": "string"}},
+          {"name": "source_id", "in": "query", "schema": {"type": "string"}},
+          {"name": "opened_from", "in": "query", "schema": {"type": "string", "format": "date-time"}},
+          {"name": "opened_to", "in": "query", "schema": {"type": "string", "format": "date-time"}}
+        ],
+        "responses": {
+          "200": {"description": "Reviewed public incidents or authorized private incidents", "content": {"application/json": {"schema": {"$ref": "#/components/schemas/IncidentPage"}}}}
+        }
+      }
+    },
+    "/v1/incidents/{incident_id}": {
+      "get": {
+        "operationId": "getIncident",
+        "summary": "Get one visible incident",
+        "tags": ["Quality"],
+        "security": [],
+        "parameters": [{"$ref": "#/components/parameters/IncidentId"}],
+        "responses": {
+          "200": {"description": "Incident view filtered by caller authorization", "content": {"application/json": {"schema": {"$ref": "./incident.schema.json"}}}},
+          "404": {"$ref": "#/components/responses/NotFound"}
+        }
+      }
+    },
+    "/v1/webhook-subscriptions": {
+      "get": {
+        "operationId": "listWebhookSubscriptions",
+        "summary": "List the caller tenant's webhook subscriptions",
+        "tags": ["Webhooks"],
+        "security": [{"bearerAuth": []}],
+        "parameters": [{"$ref": "#/components/parameters/Limit"}],
+        "responses": {"200": {"description": "Tenant webhook subscriptions", "content": {"application/json": {"schema": {"$ref": "#/components/schemas/WebhookSubscriptionList"}}}}}
+      },
+      "post": {
+        "operationId": "createWebhookSubscription",
+        "summary": "Create a webhook subscription",
+        "tags": ["Webhooks"],
+        "security": [{"bearerAuth": []}],
+        "parameters": [{"name": "Idempotency-Key", "in": "header", "required": true, "schema": {"type": "string", "minLength": 16, "maxLength": 128}}],
+        "requestBody": {"required": true, "content": {"application/json": {"schema": {"$ref": "#/components/schemas/WebhookSubscriptionInput"}}}},
+        "responses": {
+          "201": {"description": "Pending subscription awaiting endpoint challenge", "content": {"application/json": {"schema": {"$ref": "#/components/schemas/WebhookSubscription"}}}},
+          "409": {"description": "Idempotency conflict", "content": {"application/json": {"schema": {"$ref": "#/components/schemas/Error"}}}}
+        }
+      }
+    },
+    "/v1/webhook-subscriptions/{subscription_id}/verify": {
+      "post": {
+        "operationId": "verifyWebhookSubscription",
+        "summary": "Challenge and activate a tenant webhook endpoint",
+        "tags": ["Webhooks"],
+        "security": [{"bearerAuth": []}],
+        "parameters": [{"name": "subscription_id", "in": "path", "required": true, "schema": {"type": "string"}}],
+        "responses": {"200": {"description": "Activated subscription", "content": {"application/json": {"schema": {"$ref": "#/components/schemas/WebhookSubscription"}}}}}
+      }
+    },
+    "/v1/webhook-deliveries": {
+      "get": {
+        "operationId": "listWebhookDeliveries",
+        "summary": "List delivery and dead-letter history for the caller tenant",
+        "tags": ["Webhooks"],
+        "security": [{"bearerAuth": []}],
+        "parameters": [{"$ref": "#/components/parameters/Limit"}],
+        "responses": {"200": {"description": "Tenant webhook delivery history", "content": {"application/json": {"schema": {"$ref": "#/components/schemas/WebhookDeliveryList"}}}}}
+      }
+    },
+    "/v1/admin/audit": {
+      "get": {
+        "operationId": "listAuditEntries",
+        "summary": "List append-only administrative audit evidence",
+        "tags": ["Administration"],
+        "security": [{"bearerAuth": []}],
+        "parameters": [{"$ref": "#/components/parameters/Cursor"}, {"$ref": "#/components/parameters/Limit"}, {"name": "target_id", "in": "query", "schema": {"type": "string"}}],
+        "responses": {"200": {"description": "Audit entries", "content": {"application/json": {"schema": {"$ref": "#/components/schemas/AuditPage"}}}}}
+      }
+    },
+    "/v1/admin/sources/{source_id}/approval-decisions": {
+      "post": {
+        "operationId": "recordSourceApprovalDecision",
+        "summary": "Record an audited source approval decision",
+        "tags": ["Administration"],
+        "security": [{"bearerAuth": []}],
+        "parameters": [{"$ref": "#/components/parameters/SourceId"}, {"$ref": "#/components/parameters/IfMatch"}],
+        "requestBody": {"required": true, "content": {"application/json": {"schema": {"$ref": "#/components/schemas/SourceApprovalDecision"}}}},
+        "responses": {
+          "201": {"description": "Immutable approval decision recorded", "content": {"application/json": {"schema": {"$ref": "#/components/schemas/SourceDetail"}}}},
+          "403": {"$ref": "#/components/responses/Forbidden"}
+        }
+      }
+    },
+    "/v1/admin/monitor-targets/{monitor_id}/activate": {
+      "post": {
+        "operationId": "activateMonitorTarget",
+        "summary": "Activate a monitor with reviewed approval and baseline evidence",
+        "tags": ["Administration"],
+        "security": [{"bearerAuth": []}],
+        "parameters": [{"$ref": "#/components/parameters/MonitorId"}, {"$ref": "#/components/parameters/IfMatch"}],
+        "requestBody": {"required": true, "content": {"application/json": {"schema": {"$ref": "#/components/schemas/MonitorActivationInput"}}}},
+        "responses": {
+          "201": {"description": "Monitor baseline and scheduler activation recorded", "content": {"application/json": {"schema": {"$ref": "#/components/schemas/MonitorTargetSummary"}}}},
+          "409": {"$ref": "#/components/responses/Conflict"}
+        }
+      }
+    },
+    "/v1/admin/sources/{source_id}/connectors": {
+      "post": {
+        "operationId": "activateConnector",
+        "summary": "Activate an approved connector version and scheduler job",
+        "tags": ["Administration"],
+        "security": [{"bearerAuth": []}],
+        "parameters": [{"$ref": "#/components/parameters/SourceId"}, {"$ref": "#/components/parameters/IfMatch"}],
+        "requestBody": {"required": true, "content": {"application/json": {"schema": {"$ref": "#/components/schemas/ConnectorActivationInput"}}}},
+        "responses": {
+          "201": {"description": "Connector version and scheduler job activated", "content": {"application/json": {"schema": {"$ref": "#/components/schemas/SourceDetail"}}}},
+          "409": {"$ref": "#/components/responses/Conflict"}
+        }
+      }
+    },
+    "/v1/admin/incidents/{incident_id}/acknowledge": {
+      "post": {
+        "operationId": "acknowledgeIncident",
+        "summary": "Acknowledge an open incident",
+        "tags": ["Administration"],
+        "security": [{"bearerAuth": []}],
+        "parameters": [{"$ref": "#/components/parameters/IncidentId"}, {"$ref": "#/components/parameters/IfMatch"}],
+        "requestBody": {"required": true, "content": {"application/json": {"schema": {"$ref": "#/components/schemas/ReasonInput"}}}},
+        "responses": {"200": {"description": "Acknowledged incident", "content": {"application/json": {"schema": {"$ref": "./incident.schema.json"}}}}, "409": {"$ref": "#/components/responses/Conflict"}}
+      }
+    },
+    "/v1/admin/incidents/{incident_id}/suppress": {
+      "post": {
+        "operationId": "suppressIncident",
+        "summary": "Suppress an incident for a bounded period",
+        "tags": ["Administration"],
+        "security": [{"bearerAuth": []}],
+        "parameters": [{"$ref": "#/components/parameters/IncidentId"}, {"$ref": "#/components/parameters/IfMatch"}],
+        "requestBody": {"required": true, "content": {"application/json": {"schema": {"$ref": "#/components/schemas/SuppressionInput"}}}},
+        "responses": {"200": {"description": "Time-bounded suppression recorded", "content": {"application/json": {"schema": {"$ref": "./incident.schema.json"}}}}, "409": {"$ref": "#/components/responses/Conflict"}}
+      }
+    },
+    "/v1/admin/incidents/{incident_id}/resolve": {
+      "post": {
+        "operationId": "resolveIncident",
+        "summary": "Resolve an incident with evidence",
+        "tags": ["Administration"],
+        "security": [{"bearerAuth": []}],
+        "parameters": [{"$ref": "#/components/parameters/IncidentId"}, {"$ref": "#/components/parameters/IfMatch"}],
+        "requestBody": {"required": true, "content": {"application/json": {"schema": {"$ref": "#/components/schemas/ResolutionInput"}}}},
+        "responses": {"200": {"description": "Resolved incident after recovery gate", "content": {"application/json": {"schema": {"$ref": "./incident.schema.json"}}}}, "409": {"$ref": "#/components/responses/Conflict"}}
+      }
+    },
+    "/v1/admin/incidents/{incident_id}/publish": {
+      "post": {
+        "operationId": "publishIncident",
+        "summary": "Publish reviewed bilingual incident wording",
+        "tags": ["Administration"],
+        "security": [{"bearerAuth": []}],
+        "parameters": [{"$ref": "#/components/parameters/IncidentId"}, {"$ref": "#/components/parameters/IfMatch"}],
+        "requestBody": {"required": true, "content": {"application/json": {"schema": {"$ref": "#/components/schemas/PublicationInput"}}}},
+        "responses": {"200": {"description": "Reviewed wording published", "content": {"application/json": {"schema": {"$ref": "./incident.schema.json"}}}}, "409": {"$ref": "#/components/responses/Conflict"}}
+      }
+    },
+    "/v1/admin/incidents/{incident_id}/correct": {
+      "post": {
+        "operationId": "correctIncident",
+        "summary": "Correct published incident wording while retaining history",
+        "tags": ["Administration"],
+        "security": [{"bearerAuth": []}],
+        "parameters": [{"$ref": "#/components/parameters/IncidentId"}, {"$ref": "#/components/parameters/IfMatch"}],
+        "requestBody": {"required": true, "content": {"application/json": {"schema": {"$ref": "#/components/schemas/CorrectionInput"}}}},
+        "responses": {"200": {"description": "Correction and prior wording recorded", "content": {"application/json": {"schema": {"$ref": "./incident.schema.json"}}}}, "409": {"$ref": "#/components/responses/Conflict"}}
+      }
+    }
+  },
+  "components": {
+    "securitySchemes": {
+      "bearerAuth": {"type": "http", "scheme": "bearer", "bearerFormat": "JWT", "description": "Audience-bound token issued by the deployment's approved OIDC provider."}
+    },
+    "parameters": {
+      "Cursor": {"name": "cursor", "in": "query", "schema": {"type": "string"}},
+      "Limit": {"name": "limit", "in": "query", "schema": {"type": "integer", "minimum": 1, "maximum": 200, "default": 50}},
+      "SourceId": {"name": "source_id", "in": "path", "required": true, "schema": {"type": "string", "pattern": "^(HKAPI|EXT)-[0-9]{3}$"}},
+      "MonitorId": {"name": "monitor_id", "in": "path", "required": true, "schema": {"type": "string", "pattern": "^P14-M[0-9]{3}$"}},
+      "IncidentId": {"name": "incident_id", "in": "path", "required": true, "schema": {"type": "string", "pattern": "^INC-[0-9]{4}-[0-9]{6}$"}},
+      "IfMatch": {"name": "If-Match", "in": "header", "required": true, "schema": {"type": "string"}, "description": "Current audit version for optimistic concurrency."}
+    },
+    "responses": {
+      "Unauthorized": {"description": "Missing or invalid token", "content": {"application/json": {"schema": {"$ref": "#/components/schemas/Error"}}}},
+      "Forbidden": {"description": "Insufficient scope or project/tenant access", "content": {"application/json": {"schema": {"$ref": "#/components/schemas/Error"}}}},
+      "NotFound": {"description": "Object absent or hidden from caller", "content": {"application/json": {"schema": {"$ref": "#/components/schemas/Error"}}}},
+      "Conflict": {"description": "State or optimistic-concurrency conflict", "content": {"application/json": {"schema": {"$ref": "#/components/schemas/Error"}}}}
+    },
+    "schemas": {
+      "PageMeta": {
+        "type": "object",
+        "required": ["next_cursor"],
+        "properties": {"next_cursor": {"type": ["string", "null"]}},
+        "additionalProperties": false
+      },
+      "SourceSummary": {
+        "type": "object",
+        "required": ["source_id", "operating_profile", "name", "provider", "authority_class", "approval_status", "freshness_status", "last_success_at", "version"],
+        "properties": {
+          "source_id": {"type": "string"},
+          "catalogue_id": {"type": "string", "pattern": "^(official|external|mcp):[a-z0-9][a-z0-9-]*$"},
+          "catalogue_verified_at": {"type": "string", "format": "date"},
+          "terms_evidence_state": {"enum": ["not-reviewed", "official-terms-linked", "restriction-identified", "ambiguity-identified", "provider-confirmation-recorded"]},
+          "operating_profile": {"enum": ["catalogue", "observe", "fabric"]},
+          "source_group_id": {"type": ["string", "null"]},
+          "name": {"type": "string"},
+          "provider": {"type": "string"},
+          "authority_class": {"type": "string"},
+          "approval_status": {"type": "string"},
+          "freshness_status": {"type": "string"},
+          "last_success_at": {"type": ["string", "null"], "format": "date-time"},
+          "limitations": {"type": "array", "items": {"type": "string"}},
+          "documentation_url": {"type": ["string", "null"], "format": "uri"},
+          "cadence": {"type": "string"},
+          "approved_uses": {"type": "array", "items": {"type": "string"}},
+          "version": {"type": "integer", "minimum": 1}
+        },
+        "additionalProperties": false
+      },
+      "SourceDetail": {
+        "allOf": [
+          {"$ref": "#/components/schemas/SourceSummary"},
+          {"type": "object", "required": ["documentation_url", "cadence", "approved_uses"]}
+        ]
+      },
+      "SourcePage": {"type": "object", "required": ["items", "page"], "properties": {"items": {"type": "array", "items": {"$ref": "#/components/schemas/SourceSummary"}}, "page": {"$ref": "#/components/schemas/PageMeta"}}, "additionalProperties": false},
+      "SourceRecordPage": {"type": "object", "required": ["items", "page"], "properties": {"items": {"type": "array", "items": {"$ref": "./source_record.schema.json"}}, "page": {"$ref": "#/components/schemas/PageMeta"}}, "additionalProperties": false},
+      "EventPage": {"type": "object", "required": ["items", "page"], "properties": {"items": {"type": "array", "items": {"$ref": "./canonical_event.schema.json"}}, "page": {"$ref": "#/components/schemas/PageMeta"}}, "additionalProperties": false},
+      "MonitorTargetSummary": {
+        "type": "object",
+        "required": ["monitor_id", "source_id", "provider", "name", "outcome", "last_checked_at", "public_visibility", "baseline_version"],
+        "properties": {
+          "monitor_id": {"type": "string"},
+          "source_id": {"type": "string"},
+          "provider": {"type": "string"},
+          "name": {"type": "string"},
+          "outcome": {"type": "string"},
+          "last_checked_at": {"type": ["string", "null"], "format": "date-time"},
+          "public_visibility": {"enum": ["public", "private", "pending_review", "private_until_review"]},
+          "baseline_version": {"type": ["integer", "null"], "minimum": 1},
+          "activation_status": {"enum": ["specified_pending_approval", "approved", "suspended", "retired"]},
+          "operator_identity": {"type": ["string", "null"]},
+          "rule_version": {"type": ["string", "null"]},
+          "version": {"type": "integer", "minimum": 1}
+        },
+        "additionalProperties": false
+      },
+      "MonitorTargetPage": {"type": "object", "required": ["items", "page"], "properties": {"items": {"type": "array", "items": {"$ref": "#/components/schemas/MonitorTargetSummary"}}, "page": {"$ref": "#/components/schemas/PageMeta"}}, "additionalProperties": false},
+      "MonitorTargetDetail": {"type": "object", "required": ["target", "observations", "incidents"], "properties": {"target": {"$ref": "#/components/schemas/MonitorTargetSummary"}, "observations": {"type": "array", "items": {"$ref": "./monitor_observation.schema.json"}}, "incidents": {"type": "array", "items": {"$ref": "./incident.schema.json"}}}, "additionalProperties": false},
+      "IncidentPage": {"type": "object", "required": ["items", "page"], "properties": {"items": {"type": "array", "items": {"$ref": "./incident.schema.json"}}, "page": {"$ref": "#/components/schemas/PageMeta"}}, "additionalProperties": false},
+      "StatusSummary": {
+        "type": "object",
+        "required": ["operating_profile", "generated_at", "overall", "counts", "current_incidents"],
+        "properties": {
+          "operating_profile": {"enum": ["catalogue", "observe", "fabric"]},
+          "generated_at": {"type": "string", "format": "date-time"},
+          "overall": {"enum": ["operational", "degraded", "major_outage", "unknown"]},
+          "counts": {"type": "object", "additionalProperties": {"type": "integer", "minimum": 0}},
+          "current_incidents": {"type": "array", "items": {"$ref": "./incident.schema.json"}}
+        },
+        "additionalProperties": false
+      },
+      "WebhookSubscriptionInput": {
+        "type": "object",
+        "required": ["endpoint", "event_types"],
+        "properties": {
+          "endpoint": {"type": "string", "format": "uri", "pattern": "^https://"},
+          "event_types": {"type": "array", "minItems": 1, "items": {"type": "string"}, "uniqueItems": true},
+          "source_ids": {"type": "array", "items": {"type": "string"}, "uniqueItems": true}
+        },
+        "additionalProperties": false
+      },
+      "WebhookSubscription": {
+        "type": "object",
+        "required": ["subscription_id", "state", "endpoint", "event_types"],
+        "properties": {
+          "subscription_id": {"type": "string"},
+          "state": {"enum": ["pending_challenge", "active", "suspended", "revoked"]},
+          "endpoint": {"type": "string", "format": "uri"},
+          "event_types": {"type": "array", "items": {"type": "string"}}
+          ,"source_ids": {"type": "array", "items": {"type": "string"}}
+          ,"created_at": {"type": "string", "format": "date-time"}
+          ,"updated_at": {"type": "string", "format": "date-time"}
+        },
+        "additionalProperties": false
+      },
+      "WebhookSubscriptionList": {"type": "object", "required": ["items"], "properties": {"items": {"type": "array", "items": {"$ref": "#/components/schemas/WebhookSubscription"}}}, "additionalProperties": false},
+      "WebhookDeliveryList": {"type": "object", "required": ["items"], "properties": {"items": {"type": "array", "items": {"type": "object", "required": ["delivery_attempt_id", "subscription_id", "endpoint", "event_id", "event_type", "attempt_number", "status", "first_attempt_at"], "properties": {"delivery_attempt_id": {"type": "string"}, "subscription_id": {"type": "string"}, "endpoint": {"type": "string", "format": "uri"}, "event_id": {"type": "string"}, "event_type": {"type": "string"}, "attempt_number": {"type": "integer", "minimum": 1}, "status": {"enum": ["pending", "processing", "retry", "delivered", "dead_letter"]}, "next_attempt_at": {"type": ["string", "null"], "format": "date-time"}, "first_attempt_at": {"type": "string", "format": "date-time"}, "completed_at": {"type": ["string", "null"], "format": "date-time"}, "response_status": {"type": ["integer", "null"]}}, "additionalProperties": false}}}, "additionalProperties": false},
+      "AuditPage": {"type": "object", "required": ["items", "page"], "properties": {"items": {"type": "array", "items": {"type": "object", "required": ["audit_id", "actor", "action", "target_type", "target_id", "reason", "before_hash", "after_hash", "occurred_at", "metadata"], "properties": {"audit_id": {"type": "string"}, "actor": {"type": "string"}, "action": {"type": "string"}, "target_type": {"type": "string"}, "target_id": {"type": "string"}, "reason": {"type": "string"}, "before_hash": {"type": "string"}, "after_hash": {"type": "string"}, "occurred_at": {"type": "string", "format": "date-time"}, "metadata": {"type": "object"}}, "additionalProperties": false}}, "page": {"$ref": "#/components/schemas/PageMeta"}}, "additionalProperties": false},
+      "SourceApprovalDecision": {
+        "type": "object",
+        "required": ["decision", "projects", "purposes", "storage", "retention", "redistribution", "attribution", "evidence", "expires_at", "reason"],
+        "properties": {
+          "decision": {"enum": ["approved", "restricted", "rejected", "revoked"]},
+          "projects": {"type": "array", "minItems": 1, "items": {"type": "string"}},
+          "purposes": {"type": "array", "minItems": 1, "items": {"type": "string"}},
+          "storage": {"type": "string"},
+          "retention": {"type": "string"},
+          "redistribution": {"type": "string"},
+          "attribution": {"type": "string"},
+          "evidence": {"type": "array", "minItems": 1, "items": {"type": "string", "format": "uri"}},
+          "expires_at": {"type": "string", "format": "date-time"},
+          "reason": {"type": "string", "minLength": 1}
+        },
+        "additionalProperties": false
+      },
+      "MonitorActivationInput": {
+        "type": "object",
+        "required": ["reason", "operator_identity", "rule_version", "public_visibility", "baseline"],
+        "properties": {
+          "reason": {"type": "string", "minLength": 1},
+          "operator_identity": {"type": "string", "minLength": 1},
+          "rule_version": {"type": "string", "minLength": 1},
+          "public_visibility": {"enum": ["public", "private"]},
+          "baseline": {
+            "type": "object",
+            "required": ["evidence_observation_ids", "freshness_rule", "schema_shape", "required_pointers"],
+            "properties": {
+              "evidence_observation_ids": {"type": "array", "minItems": 1, "items": {"type": "string"}},
+              "freshness_rule": {"type": "string", "minLength": 1},
+              "schema_shape": {"type": "object", "additionalProperties": {"type": "string"}},
+              "required_pointers": {"type": "array", "items": {"type": "string"}},
+              "identifier_pointer": {"type": ["string", "null"]},
+              "identifier_pattern": {"type": ["string", "null"]},
+              "provider_timestamp_pointer": {"type": ["string", "null"]},
+              "max_age_seconds": {"type": ["integer", "null"], "minimum": 1},
+              "event_list_pointer": {"type": ["string", "null"]},
+              "bilingual_primary_pointer": {"type": ["string", "null"]},
+              "bilingual_peer_pointer": {"type": ["string", "null"]},
+              "geometry_pointer": {"type": ["string", "null"]},
+              "cursor_current_pointer": {"type": ["string", "null"]},
+              "cursor_next_pointer": {"type": ["string", "null"]}
+            },
+            "additionalProperties": false
+          }
+        },
+        "additionalProperties": false
+      },
+      "ConnectorActivationInput": {
+        "type": "object",
+        "required": ["connector_id", "source_group_id", "code_version", "endpoint", "method", "request_body", "project", "purpose", "timeout_ms", "max_response_bytes", "max_compressed_response_bytes", "max_attempts", "pagination", "cadence_seconds", "fixture_evidence_url", "live_probe_evidence_url", "reason"],
+        "properties": {
+          "connector_id": {"type": "string", "pattern": "^[A-Z0-9][A-Z0-9._-]{2,127}$"},
+          "source_group_id": {"type": "string", "pattern": "^P01-SG-(0[1-9]|10)$"},
+          "code_version": {"type": "string", "minLength": 1},
+          "endpoint": {"type": "string", "format": "uri", "pattern": "^https://"},
+          "method": {"enum": ["GET", "POST"]},
+          "request_body": {"type": ["object", "null"]},
+          "project": {"const": "P01"},
+          "purpose": {"const": "connector-observation"},
+          "timeout_ms": {"type": "integer", "minimum": 1, "maximum": 120000},
+          "max_response_bytes": {"type": "integer", "minimum": 1, "maximum": 1073741824},
+          "max_compressed_response_bytes": {"type": "integer", "minimum": 1, "maximum": 1073741824},
+          "max_attempts": {"type": "integer", "minimum": 1, "maximum": 5},
+          "pagination": {"type": ["object", "null"], "properties": {"next_url_pointer": {"type": "string", "pattern": "^/"}, "max_pages": {"type": "integer", "minimum": 1, "maximum": 100}}, "required": ["next_url_pointer", "max_pages"], "additionalProperties": false},
+          "cadence_seconds": {"type": "integer", "minimum": 1, "maximum": 2592000},
+          "fixture_evidence_url": {"type": "string", "format": "uri"},
+          "live_probe_evidence_url": {"type": "string", "format": "uri"},
+          "reason": {"type": "string", "minLength": 1}
+        },
+        "additionalProperties": false
+      },
+      "ReasonInput": {"type": "object", "required": ["reason"], "properties": {"reason": {"type": "string", "minLength": 1}}, "additionalProperties": false},
+      "SuppressionInput": {"type": "object", "required": ["reason", "expires_at"], "properties": {"reason": {"type": "string", "minLength": 1}, "expires_at": {"type": "string", "format": "date-time"}}, "additionalProperties": false},
+      "ResolutionInput": {"type": "object", "required": ["reason", "cause", "evidence_observation_ids"], "properties": {"reason": {"type": "string", "minLength": 1}, "cause": {"type": "string", "minLength": 1}, "evidence_observation_ids": {"type": "array", "minItems": 2, "items": {"type": "string"}}}, "additionalProperties": false},
+      "PublicationInput": {"type": "object", "required": ["reason", "public_summary"], "properties": {"reason": {"type": "string", "minLength": 1}, "public_summary": {"type": "object", "required": ["en", "zh_Hant"], "properties": {"en": {"type": "string", "minLength": 1}, "zh_Hant": {"type": "string", "minLength": 1}}, "additionalProperties": false}}, "additionalProperties": false},
+      "CorrectionInput": {"type": "object", "required": ["reason", "public_summary", "correction_reference"], "properties": {"reason": {"type": "string", "minLength": 1}, "public_summary": {"type": "object", "required": ["en", "zh_Hant"], "properties": {"en": {"type": "string", "minLength": 1}, "zh_Hant": {"type": "string", "minLength": 1}}, "additionalProperties": false}, "correction_reference": {"type": "string", "minLength": 1}}, "additionalProperties": false},
+      "Error": {
+        "type": "object",
+        "required": ["code", "message", "retryable", "correlation_id"],
+        "properties": {
+          "code": {"type": "string"},
+          "message": {"type": "string"},
+          "retryable": {"type": "boolean"},
+          "correlation_id": {"type": "string"}
+        },
+        "additionalProperties": false
+      }
+    }
+  }
+}

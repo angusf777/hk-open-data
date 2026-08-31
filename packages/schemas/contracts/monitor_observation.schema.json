@@ -1,0 +1,41 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:hk-public-data:schema:monitor-observation:1",
+  "title": "P14 Monitor Observation",
+  "type": "object",
+  "required": ["observation_id", "monitor_id", "started_at", "finished_at", "outcome", "check_results", "latency_ms", "evidence_hash", "baseline_version", "seeded_failure"],
+  "properties": {
+    "observation_id": {"type": "string", "pattern": "^OBS-[A-Za-z0-9_-]{8,128}$"},
+    "monitor_id": {"type": "string", "pattern": "^P14-M[0-9]{3}$"},
+    "started_at": {"type": "string", "format": "date-time"},
+    "finished_at": {"type": "string", "format": "date-time"},
+    "outcome": {"enum": ["pass", "degraded", "fail", "maintenance", "suppressed", "unknown"]},
+    "http_status": {"type": ["integer", "null"], "minimum": 100, "maximum": 599},
+    "latency_ms": {"type": "integer", "minimum": 0},
+    "provider_timestamp": {"type": ["string", "null"], "format": "date-time"},
+    "freshness_age_seconds": {"type": ["integer", "null"], "minimum": 0},
+    "content_hash": {"type": ["string", "null"], "pattern": "^[a-f0-9]{64}$"},
+    "schema_fingerprint": {"type": ["string", "null"], "pattern": "^[a-f0-9]{64}$"},
+    "evidence_hash": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+    "connector_run_id": {"type": ["string", "null"], "pattern": "^CR-[A-Za-z0-9_-]{8,128}$"},
+    "baseline_version": {"type": "string", "minLength": 1},
+    "check_results": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["check", "outcome", "code"],
+        "properties": {
+          "check": {"enum": ["availability", "media", "contract", "freshness", "schema", "semantic", "bilingual", "geometry", "redirect", "hash"]},
+          "outcome": {"enum": ["pass", "degraded", "fail", "not_applicable", "unknown"]},
+          "code": {"type": "string", "minLength": 1},
+          "message": {"type": ["string", "null"]}
+        },
+        "additionalProperties": false
+      }
+    },
+    "seeded_failure": {"type": "boolean"},
+    "correlation_id": {"type": ["string", "null"]}
+  },
+  "additionalProperties": false
+}

@@ -1,0 +1,13 @@
+services:
+  catalog:
+    ports: !reset []
+  api:
+    ports: !reset []
+  mcp:
+    ports: !reset []
+  admin:
+    ports: !reset []
+  portal:
+    ports: !reset []
+  prometheus:
+    ports: !reset []

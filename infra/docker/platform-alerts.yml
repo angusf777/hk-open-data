@@ -1,0 +1,38 @@
+groups:
+  - name: hk-platform-operations
+    rules:
+      - alert: SchedulerBacklog
+        expr: hk_platform_scheduler_backlog > 0
+        for: 5m
+        labels: { severity: warning }
+        annotations:
+          summary: Scheduler jobs are more than five minutes late
+          runbook: docs/runbooks/provider-outage.md
+      - alert: DelayedMonitorChecks
+        expr: hk_platform_delayed_checks > 0
+        for: 5m
+        labels: { severity: warning }
+        annotations:
+          summary: Active quality checks are outside cadence
+          runbook: docs/runbooks/provider-outage.md
+      - alert: StaleConnectors
+        expr: hk_platform_stale_connectors > 0
+        for: 10m
+        labels: { severity: warning }
+        annotations:
+          summary: Active connectors have no cadence-valid success
+          runbook: docs/runbooks/stale-source.md
+      - alert: FailedWebhookDeliveries
+        expr: hk_platform_failed_webhooks > 0
+        for: 10m
+        labels: { severity: warning }
+        annotations:
+          summary: Webhook deliveries require retry or dead-letter review
+          runbook: docs/runbooks/provider-outage.md
+      - alert: PlatformApiUnavailable
+        expr: up{job="platform-api"} == 0
+        for: 2m
+        labels: { severity: critical }
+        annotations:
+          summary: Platform API metrics endpoint is unavailable
+          runbook: docs/runbooks/restore.md

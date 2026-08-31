@@ -12,6 +12,7 @@
     "catalog:check": "uv run python scripts/catalog.py check",
     "test": "pnpm -r --if-present test && uv run pytest -q",
     "test:browser": "playwright test",
+    "test:contract": "pnpm --filter @hk-open-data/api test -- openapi-contract.test.ts",
     "typecheck": "pnpm -r --if-present typecheck",
     "build": "pnpm -r --if-present build",
     "check:boundary": "node scripts/check-public-boundary.mjs"
@@ -25,7 +26,8 @@
     "@axe-core/playwright": "4.10.2",
     "@playwright/test": "1.58.2",
     "@types/node": "22.20.1",
-    "typescript": "7.0.2"
+    "typescript": "7.0.2",
+    "vitest": "4.1.11"
   },
   "pnpm": {
     "onlyBuiltDependencies": ["esbuild"]

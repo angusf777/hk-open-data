@@ -1,0 +1,38 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:hk-public-data:schema:incident:1",
+  "title": "P14 Quality Incident",
+  "type": "object",
+  "required": ["incident_id", "source_id", "status", "severity", "category", "monitor_ids", "observation_ids", "opened_at", "last_observed_at", "public_state", "audit_version"],
+  "properties": {
+    "incident_id": {"type": "string", "pattern": "^INC-[0-9]{4}-[0-9]{6}$"},
+    "source_id": {"type": "string", "pattern": "^(HKAPI|EXT)-[0-9]{3}$"},
+    "status": {"enum": ["candidate", "open", "acknowledged", "monitoring", "resolved", "suppressed"]},
+    "severity": {"enum": ["minor", "moderate", "major", "critical"]},
+    "category": {"enum": ["availability", "freshness", "contract", "schema", "semantic", "bilingual", "geometry", "security", "delivery"]},
+    "monitor_ids": {"type": "array", "minItems": 1, "items": {"type": "string", "pattern": "^P14-M[0-9]{3}$"}, "uniqueItems": true},
+    "observation_ids": {"type": "array", "minItems": 1, "items": {"type": "string", "pattern": "^OBS-[A-Za-z0-9_-]{8,128}$"}, "uniqueItems": true},
+    "opened_at": {"type": "string", "format": "date-time"},
+    "last_observed_at": {"type": "string", "format": "date-time"},
+    "acknowledged_at": {"type": ["string", "null"], "format": "date-time"},
+    "acknowledged_by": {"type": ["string", "null"]},
+    "resolved_at": {"type": ["string", "null"], "format": "date-time"},
+    "resolved_by": {"type": ["string", "null"]},
+    "suppression_reason": {"type": ["string", "null"]},
+    "suppression_expires_at": {"type": ["string", "null"], "format": "date-time"},
+    "internal_summary": {"type": ["string", "null"]},
+    "public_state": {"enum": ["private", "review_required", "published", "corrected", "withdrawn"]},
+    "public_summary": {
+      "type": ["object", "null"],
+      "properties": {
+        "en": {"type": ["string", "null"]},
+        "zh_Hant": {"type": ["string", "null"]}
+      },
+      "additionalProperties": false
+    },
+    "cause": {"type": ["string", "null"]},
+    "correction_reference": {"type": ["string", "null"]},
+    "audit_version": {"type": "integer", "minimum": 1}
+  },
+  "additionalProperties": false
+}

@@ -1,0 +1,1 @@
+{"definition":{"connector_id":"CONN-P01-SG-02","source_group_id":"P01-SG-02","source_id":"HKAPI-005","endpoint":"https://app.data.gov.hk/v1/historical-archive/list-files","method":"GET","project":"P01","purpose":"connector-observation","timeout_ms":30000,"max_response_bytes":10485760},"expected_records":2}

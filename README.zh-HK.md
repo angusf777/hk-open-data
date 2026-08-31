@@ -3,6 +3,7 @@
 [![授權：Apache-2.0](https://img.shields.io/github/license/angusf777/hk-open-data)](LICENSE)
 [![GitHub 星標](https://img.shields.io/github/stars/angusf777/hk-open-data?style=flat)](https://github.com/angusf777/hk-open-data/stargazers)
 [![目錄資源](https://img.shields.io/badge/catalogue-521_resources-c81e3a)](catalog/generated/counts.json)
+[![持續整合](https://github.com/angusf777/hk-open-data/actions/workflows/ci.yml/badge.svg)](https://github.com/angusf777/hk-open-data/actions/workflows/ci.yml)
 
 > **獨立社群項目。** 本儲存庫並非由香港特別行政區政府或任何列出的提供者營運，亦不代表
 > 與其有關聯或獲其認可。本項目是資源目錄及可選用的自託管工具，而不是託管數據服務。
@@ -29,7 +30,8 @@
 
 - **尋找：** 在一個雙語索引搜尋，毋須各自保存私人書籤清單。
 - **評估：** 開啟上游來源前，先查看提供者、存取方式、協定、最近核查日期及權利證據狀態。
-- **開發：** 產生可重現的 JSON，供本機應用使用；正式發佈後亦可選用自託管 P01/P14 執行環境。
+- **開發：** 產生可重現的 JSON，供本機應用使用，亦可按需執行預設拒絕存取的自託管
+  P01/P14 工具。
 - **改善：** 以小型、附來源證據的拉取請求修正單一 YAML 紀錄。
 
 靜態網站只會讀取本儲存庫產生的 JSON，不會呼叫提供者、複製其數據集、建立帳戶或追蹤
@@ -75,14 +77,15 @@ make catalogue
 
 ## 可選用的自託管工具
 
-本儲存庫的設計容許加入兩個本機、預設拒絕存取的執行組件，而不會把項目變成託管轉售服務：
+本儲存庫包含兩個可選用的本機、預設拒絕存取的執行組件，而不會把項目變成託管轉售服務：
 
 - **P01 — Public Data Fabric：** 本機標準化唯讀存取、SDK 介面及唯讀 MCP 工具。
 - **P14 — API Quality Observatory：** 只為明確啟用的來源執行本機探測及建立質素證據。
 
-預設 `catalogue` 設定不會產生提供者流量；`observe` 只擬在明確啟用後保存摘要證據；
-`fabric` 只擬為已獲來源批准的情況保存原始證據。P01/P14 執行環境目前仍在開發分支建構，
-**尚未成為已發佈介面**。目標合約及啟用界線見[執行環境指南](docs/getting-started/runtime.md)。
+直接執行 `docker compose up` 只會啟動 `catalogue`，不會產生提供者流量；`observe` 是明確選用
+的摘要證據模式；`fabric` 則為營運者另行批准的來源加入原始證據保存。所有預載來源及連接器
+均維持未啟用。設定、驗證、本機介面及啟用界線見雙語
+[執行環境指南](docs/getting-started/runtime.zh-HK.md)。
 
 ## 架構
 
@@ -107,10 +110,8 @@ make catalogue
 
 ## 路線圖
 
-- 發佈雙語目錄及可重現的發佈成品。
-- 完成並獨立驗證可選用的自託管 P01/P14 執行環境。
-- 透過小型、附證據的貢獻擴展來源覆蓋。
-- 記錄經人手審閱的繁體中文翻譯，不把機器植入文字誤稱為已審閱。
+`Now / Next / Later` 計劃及「未經全新權利及架構審查，不會提供中央託管數據服務」的明確界線，
+見 [ROADMAP.md](ROADMAP.md)。
 
 ## 授權及上游材料
 

@@ -3,14 +3,21 @@ name = "hk-open-data"
 version = "0.1.0"
 description = "Validation and self-hosted tooling for the HK Open Data catalogue."
 requires-python = ">=3.12"
-dependencies = []
+dependencies = [
+  "boto3>=1.40,<2",
+  "httpx>=0.28,<1",
+  "psycopg[binary]>=3.2,<4",
+  "pydantic>=2.11,<3",
+]
 
 [dependency-groups]
 dev = [
   "jsonschema>=4.25,<5",
   "mypy>=1.17,<2",
+  "pip-audit>=2.9,<3",
   "pytest>=9.0.3,<10",
   "pyyaml>=6.0,<7",
+  "respx>=0.22,<1",
   "ruff>=0.12,<1",
   "types-jsonschema>=4.25,<5",
   "types-pyyaml>=6.0,<7",
@@ -22,7 +29,7 @@ package = false
 [tool.pytest.ini_options]
 testpaths = ["tests"]
 addopts = "-q"
-pythonpath = ["."]
+pythonpath = [".", "services/worker", "packages/sdk-python/src"]
 
 [tool.ruff]
 line-length = 100
@@ -35,3 +42,4 @@ allowed-confusables = ["，", "；"]
 [tool.mypy]
 python_version = "3.12"
 strict = true
+mypy_path = "services/worker"

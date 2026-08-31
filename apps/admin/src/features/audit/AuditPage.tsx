@@ -1,0 +1,5 @@
+import { useQuery } from "@tanstack/react-query";
+import { DataTable } from "@hk-open-data/ui";
+import { useAdminApi } from "../../context.js";
+import { formatHkt } from "../../format.js";
+export function AuditPage() { const api = useAdminApi(); const query = useQuery({ queryKey: ["audit"], queryFn: () => api.listAudit() }); return <div className="standard-page"><header className="page-header"><div><p className="eyebrow">APPEND-ONLY CONTROL</p><h1>Audit</h1><p>Who changed what, why, and which evidence supported the change.</p></div></header>{query.isPending ? <p role="status">Loading audit history…</p> : <DataTable caption="Audit history" rows={query.data ?? []} rowKey={(item) => item.id} columns={[{ key: "time", label: "Occurred", render: (item) => formatHkt(item.occurredAt) }, { key: "actor", label: "Actor", render: (item) => item.actor }, { key: "action", label: "Action", render: (item) => item.action }, { key: "target", label: "Target", render: (item) => item.targetId }, { key: "reason", label: "Reason", render: (item) => item.reason }]} />}</div>; }

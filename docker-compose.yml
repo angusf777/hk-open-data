@@ -1,0 +1,329 @@
+name: hk-open-data
+
+x-runtime-hardening: &runtime-hardening
+  read_only: true
+  cap_drop: [ALL]
+  security_opt: [no-new-privileges:true]
+  pids_limit: 256
+  mem_limit: 512m
+  cpus: 1.0
+
+x-runtime-profiles: &runtime-profiles
+  - observe
+  - fabric
+
+x-worker-environment: &worker-environment
+  DATABASE_URL: postgresql://hk_platform:${POSTGRES_APP_PASSWORD:-}@postgres:5432/${POSTGRES_DB:-hk_open_data}
+  SOURCE_GROUPS_PATH: /contracts/p01-source-groups.csv
+  MONITOR_TARGETS_PATH: /contracts/p14-monitor-targets.csv
+  WORKER_READY_PATH: /tmp/worker-ready
+  WORKER_POLL_SECONDS: ${WORKER_POLL_SECONDS:-5}
+
+services:
+  catalog:
+    <<: *runtime-hardening
+    build:
+      context: .
+      dockerfile: infra/docker/catalog.Dockerfile
+    user: "101:101"
+    ports:
+      - "127.0.0.1:${CATALOG_PORT:-8080}:8080"
+    tmpfs:
+      - /var/cache/nginx:size=16m,mode=0750,uid=101,gid=101
+      - /var/run:size=1m,mode=0750,uid=101,gid=101
+      - /tmp:size=8m,mode=0750,uid=101,gid=101
+    healthcheck:
+      test: [CMD-SHELL, "wget -qO- http://127.0.0.1:8080/healthz >/dev/null"]
+      interval: 5s
+      timeout: 3s
+      retries: 12
+
+  postgres:
+    profiles: *runtime-profiles
+    # The upstream PostGIS Alpine image is amd64-only; Docker Desktop emulates it on Apple Silicon.
+    platform: linux/amd64
+    build:
+      context: .
+      dockerfile: infra/docker/postgres.Dockerfile
+    environment:
+      POSTGRES_DB: ${POSTGRES_DB:-hk_open_data}
+      POSTGRES_USER: ${POSTGRES_ADMIN_USER:-hk_admin}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-}
+      POSTGRES_APP_PASSWORD: ${POSTGRES_APP_PASSWORD:-}
+      POSTGRES_WEBHOOK_PASSWORD: ${POSTGRES_WEBHOOK_PASSWORD:-}
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+    networks: [data]
+    healthcheck:
+      # pg_isready also succeeds against the temporary bootstrap server. Requiring PID 1 to be
+      # postgres prevents dependants from racing the entrypoint's final restart.
+      test: [CMD-SHELL, "test \"$$(cat /proc/1/comm)\" = postgres && pg_isready -U $${POSTGRES_USER} -d $${POSTGRES_DB}"]
+      interval: 5s
+      timeout: 5s
+      retries: 20
+
+  migrate:
+    <<: *runtime-hardening
+    profiles: *runtime-profiles
+    build:
+      context: .
+      dockerfile: infra/docker/api.Dockerfile
+    user: "10001:10001"
+    command: ["/bin/sh", "-ec", "node services/api/dist/migrate-cli.js && node services/api/dist/seed-cli.js"]
+    environment:
+      DATABASE_URL: postgresql://${POSTGRES_ADMIN_USER:-hk_admin}:${POSTGRES_PASSWORD:-}@postgres:5432/${POSTGRES_DB:-hk_open_data}
+    depends_on:
+      postgres:
+        condition: service_healthy
+    networks: [data]
+
+  api:
+    <<: *runtime-hardening
+    profiles: *runtime-profiles
+    build:
+      context: .
+      dockerfile: infra/docker/api.Dockerfile
+    user: "10001:10001"
+    environment:
+      HOST: 0.0.0.0
+      PORT: "3000"
+      HKOD_PROFILE: ${HKOD_PROFILE:-observe}
+      DATABASE_URL: postgresql://hk_platform:${POSTGRES_APP_PASSWORD:-}@postgres:5432/${POSTGRES_DB:-hk_open_data}
+      WEBHOOK_DATABASE_URL: postgresql://hk_webhook_worker:${POSTGRES_WEBHOOK_PASSWORD:-}@postgres:5432/${POSTGRES_DB:-hk_open_data}
+      OIDC_ISSUER: ${OIDC_ISSUER:-https://identity.example.invalid/}
+      OIDC_AUDIENCE: ${OIDC_AUDIENCE:-https://api.example.invalid}
+      OIDC_JWKS_URL: ${OIDC_JWKS_URL:-https://identity.example.invalid/.well-known/jwks.json}
+      WEBHOOK_SECRET_ENCRYPTION_KEY: ${WEBHOOK_SECRET_ENCRYPTION_KEY:-}
+      OTEL_EXPORTER_OTLP_ENDPOINT: http://otel-collector:4318
+    depends_on:
+      migrate:
+        condition: service_completed_successfully
+    networks: [data, edge, telemetry]
+    ports:
+      - "127.0.0.1:${API_PORT:-3000}:3000"
+    healthcheck:
+      test: [CMD, node, -e, "fetch('http://127.0.0.1:3000/health/ready').then(r=>{if(!r.ok)process.exit(1)}).catch(()=>process.exit(1))"]
+      interval: 5s
+      timeout: 3s
+      retries: 20
+
+  worker-observe:
+    <<: *runtime-hardening
+    profiles: [observe]
+    build:
+      context: .
+      dockerfile: infra/docker/worker.Dockerfile
+    user: "10001:10001"
+    environment:
+      <<: *worker-environment
+      HKOD_PROFILE: observe
+      HKOD_ENABLE_PROVIDER_ACCESS: "true"
+      HKOD_ENABLE_RAW_EVIDENCE: "false"
+    depends_on:
+      migrate:
+        condition: service_completed_successfully
+    networks: [data, egress, telemetry]
+    tmpfs:
+      - /tmp:size=8m,mode=0750,uid=10001,gid=10001
+    healthcheck:
+      test: [CMD, /app/.venv/bin/python, -c, "from pathlib import Path; raise SystemExit(0 if Path('/tmp/worker-ready').is_file() else 1)"]
+      interval: 5s
+      timeout: 3s
+      retries: 20
+
+  worker-fabric:
+    <<: *runtime-hardening
+    profiles: [fabric]
+    build:
+      context: .
+      dockerfile: infra/docker/worker.Dockerfile
+    user: "10001:10001"
+    environment:
+      <<: *worker-environment
+      HKOD_PROFILE: fabric
+      HKOD_ENABLE_PROVIDER_ACCESS: "true"
+      HKOD_ENABLE_RAW_EVIDENCE: "true"
+      OBJECT_STORE_ENDPOINT: http://object-store:9000
+      OBJECT_STORE_BUCKET: ${OBJECT_STORE_BUCKET:-raw-snapshots}
+      OBJECT_STORE_ACCESS_KEY: ${OBJECT_STORE_ACCESS_KEY:-}
+      OBJECT_STORE_SECRET_KEY: ${OBJECT_STORE_SECRET_KEY:-}
+    depends_on:
+      migrate:
+        condition: service_completed_successfully
+      object-store-init:
+        condition: service_completed_successfully
+    networks: [data, egress, telemetry]
+    tmpfs:
+      - /tmp:size=8m,mode=0750,uid=10001,gid=10001
+    healthcheck:
+      test: [CMD, /app/.venv/bin/python, -c, "from pathlib import Path; raise SystemExit(0 if Path('/tmp/worker-ready').is_file() else 1)"]
+      interval: 5s
+      timeout: 3s
+      retries: 20
+
+  mcp:
+    <<: *runtime-hardening
+    profiles: *runtime-profiles
+    build:
+      context: .
+      dockerfile: infra/docker/mcp.Dockerfile
+    user: "10001:10001"
+    environment:
+      MCP_HOST: 0.0.0.0
+      MCP_PORT: "3100"
+      MCP_ALLOWED_HOSTS: localhost,127.0.0.1,mcp
+      MCP_ALLOWED_ORIGINS: localhost,127.0.0.1
+      MCP_ALLOW_INTERNAL_HTTP: "true"
+      PLATFORM_API_URL: http://api:3000/v1
+    depends_on:
+      api:
+        condition: service_healthy
+    networks: [edge]
+    ports:
+      - "127.0.0.1:${MCP_PORT:-3100}:3100"
+    healthcheck:
+      test: [CMD, node, -e, "fetch('http://127.0.0.1:3100/healthz').then(r=>{if(!r.ok)process.exit(1)}).catch(()=>process.exit(1))"]
+      interval: 5s
+      timeout: 3s
+      retries: 20
+
+  admin:
+    <<: *runtime-hardening
+    profiles: *runtime-profiles
+    build:
+      context: .
+      dockerfile: infra/docker/web.Dockerfile
+      args:
+        APP: admin
+        API_BASE_URL: /v1
+        HKOD_PROFILE: ${HKOD_PROFILE:-observe}
+    user: "101:101"
+    depends_on:
+      api:
+        condition: service_healthy
+    networks: [edge]
+    ports:
+      - "127.0.0.1:${ADMIN_PORT:-4175}:8080"
+    tmpfs:
+      - /var/cache/nginx:size=16m,mode=0750,uid=101,gid=101
+      - /var/run:size=1m,mode=0750,uid=101,gid=101
+      - /tmp:size=8m,mode=0750,uid=101,gid=101
+    healthcheck:
+      test: [CMD-SHELL, "wget -qO- http://127.0.0.1:8080/healthz >/dev/null"]
+      interval: 5s
+      timeout: 3s
+      retries: 20
+
+  portal:
+    <<: *runtime-hardening
+    profiles: *runtime-profiles
+    build:
+      context: .
+      dockerfile: infra/docker/web.Dockerfile
+      args:
+        APP: portal
+        API_BASE_URL: /v1
+        HKOD_PROFILE: ${HKOD_PROFILE:-observe}
+    user: "101:101"
+    depends_on:
+      api:
+        condition: service_healthy
+    networks: [edge]
+    ports:
+      - "127.0.0.1:${PORTAL_PORT:-4174}:8080"
+    tmpfs:
+      - /var/cache/nginx:size=16m,mode=0750,uid=101,gid=101
+      - /var/run:size=1m,mode=0750,uid=101,gid=101
+      - /tmp:size=8m,mode=0750,uid=101,gid=101
+    healthcheck:
+      test: [CMD-SHELL, "wget -qO- http://127.0.0.1:8080/healthz >/dev/null"]
+      interval: 5s
+      timeout: 3s
+      retries: 20
+
+  object-store:
+    profiles: [fabric]
+    image: rustfs/rustfs@sha256:41fe89380f4120a337790c02af192c3fe7bb55c3edc2e6e9357b487b47c6ab21
+    entrypoint: [/bin/sh, -ec]
+    command: ["test -n \"$$RUSTFS_ACCESS_KEY\" && test -n \"$$RUSTFS_SECRET_KEY\"; exec /entrypoint.sh rustfs"]
+    environment:
+      RUSTFS_ACCESS_KEY: ${OBJECT_STORE_ACCESS_KEY:-}
+      RUSTFS_SECRET_KEY: ${OBJECT_STORE_SECRET_KEY:-}
+    volumes:
+      - object-data:/data
+      - object-logs:/logs
+    networks: [data]
+    cap_drop: [ALL]
+    security_opt: [no-new-privileges:true]
+    pids_limit: 256
+    mem_limit: 1g
+    cpus: 1.0
+    healthcheck:
+      test: [CMD-SHELL, "curl --fail --silent http://127.0.0.1:9000/minio/health/live >/dev/null"]
+      interval: 5s
+      timeout: 3s
+      retries: 20
+
+  object-store-init:
+    <<: *runtime-hardening
+    profiles: [fabric]
+    build:
+      context: .
+      dockerfile: infra/docker/worker.Dockerfile
+    user: "10001:10001"
+    command: [/app/.venv/bin/python, -m, hk_data_worker.object_store_init]
+    environment:
+      OBJECT_STORE_ENDPOINT: http://object-store:9000
+      OBJECT_STORE_BUCKET: ${OBJECT_STORE_BUCKET:-raw-snapshots}
+      OBJECT_STORE_ACCESS_KEY: ${OBJECT_STORE_ACCESS_KEY:-}
+      OBJECT_STORE_SECRET_KEY: ${OBJECT_STORE_SECRET_KEY:-}
+    depends_on:
+      object-store:
+        condition: service_healthy
+    networks: [data]
+
+  otel-collector:
+    profiles: *runtime-profiles
+    image: otel/opentelemetry-collector-contrib@sha256:45392d534c1edcc809c2d112394029246bc679d2ae5ea7081414a1fc74f2c621
+    command: [--config=/etc/otelcol/config.yaml]
+    volumes:
+      - ./infra/docker/otel-collector.yaml:/etc/otelcol/config.yaml:ro
+    networks: [telemetry]
+    read_only: true
+    cap_drop: [ALL]
+    security_opt: [no-new-privileges:true]
+    pids_limit: 128
+    mem_limit: 256m
+    cpus: 0.5
+
+  prometheus:
+    profiles: *runtime-profiles
+    image: prom/prometheus@sha256:76947e7ef22f8a698fc638f706685909be425dbe09bd7a2cd7aca849f79b5f64
+    command: [--config.file=/etc/prometheus/prometheus.yml, --storage.tsdb.path=/prometheus]
+    volumes:
+      - ./infra/docker/prometheus.yml:/etc/prometheus/prometheus.yml:ro
+      - ./infra/docker/platform-alerts.yml:/etc/prometheus/platform-alerts.yml:ro
+      - prometheus-data:/prometheus
+    networks: [telemetry]
+    ports:
+      - "127.0.0.1:${PROMETHEUS_PORT:-9090}:9090"
+    read_only: true
+    cap_drop: [ALL]
+    security_opt: [no-new-privileges:true]
+    pids_limit: 128
+    mem_limit: 512m
+    cpus: 0.5
+
+networks:
+  data:
+    internal: true
+  edge: {}
+  egress: {}
+  telemetry:
+    internal: true
+
+volumes:
+  postgres-data: {}
+  object-data: {}
+  object-logs: {}
+  prometheus-data: {}

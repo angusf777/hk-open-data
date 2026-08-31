@@ -1,0 +1,1 @@
+{"definition":{"connector_id":"CONN-P01-SG-10","source_group_id":"P01-SG-10","source_id":"HKAPI-021","endpoint":"https://www.als.ogcio.gov.hk/lookup","method":"GET","project":"P01","purpose":"connector-observation","timeout_ms":15000,"max_response_bytes":1048576},"expected_records":1}

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<evaluations contract_version="2026-08-28.v1">
+  <evaluation id="source-catalogue-and-detail">
+    <question>Which P01 sources are visible, and what is the current definition for HKAPI-001?</question>
+    <call tool="sources_list">{"project":"P01","limit":10}</call>
+    <call tool="source_get">{"source_id":"HKAPI-001"}</call>
+    <expected_tools>sources_list,source_get</expected_tools>
+  </evaluation>
+  <evaluation id="recent-source-records">
+    <question>Which approved records from HKAPI-001 were observed after the start of 28 August?</question>
+    <call tool="source_records_query">{"source_id":"HKAPI-001","observed_from":"2026-08-28T00:00:00Z","limit":20}</call>
+    <expected_tools>source_records_query</expected_tools>
+  </evaluation>
+  <evaluation id="record-provenance">
+    <question>Show the provenance identifiers for source record SR-00000001 without returning raw bytes.</question>
+    <call tool="source_record_get">{"source_record_id":"SR-00000001","include_lineage":true}</call>
+    <expected_tools>source_record_get</expected_tools>
+  </evaluation>
+  <evaluation id="active-events">
+    <question>Which active source-change events have been observed since the morning checkpoint?</question>
+    <call tool="events_query">{"event_type":"source.changed","status":"active","observed_from":"2026-08-28T08:00:00Z","limit":20}</call>
+    <expected_tools>events_query</expected_tools>
+  </evaluation>
+  <evaluation id="event-evidence">
+    <question>What evidence and limitations support canonical event EV-00000001?</question>
+    <call tool="event_get">{"event_id":"EV-00000001"}</call>
+    <expected_tools>event_get</expected_tools>
+  </evaluation>
+  <evaluation id="provider-target-health">
+    <question>List Digital Policy Office monitor targets currently reporting pass.</question>
+    <call tool="monitor_targets_list">{"provider":"Digital Policy Office","outcome":"pass","limit":50}</call>
+    <expected_tools>monitor_targets_list</expected_tools>
+  </evaluation>
+  <evaluation id="target-history">
+    <question>Show the latest ten observations and visible incidents for monitor P14-M001.</question>
+    <call tool="monitor_target_get">{"monitor_id":"P14-M001","history_limit":10}</call>
+    <expected_tools>monitor_target_get</expected_tools>
+  </evaluation>
+  <evaluation id="major-incidents">
+    <question>Which major open incidents are visible for HKAPI-001?</question>
+    <call tool="incidents_list">{"status":"open","severity":"major","source_id":"HKAPI-001","limit":20}</call>
+    <expected_tools>incidents_list</expected_tools>
+  </evaluation>
+  <evaluation id="incident-timeline">
+    <question>What is the reviewed evidence timeline for incident INC-2026-000001?</question>
+    <call tool="incident_get">{"incident_id":"INC-2026-000001"}</call>
+    <expected_tools>incident_get</expected_tools>
+  </evaluation>
+  <evaluation id="public-status">
+    <question>What is the current public aggregate status for the platform?</question>
+    <call tool="status_summary">{}</call>
+    <expected_tools>status_summary</expected_tools>
+  </evaluation>
+</evaluations>

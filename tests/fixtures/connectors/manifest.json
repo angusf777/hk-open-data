@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "origin": "synthetic-authored",
+  "containsUpstreamPayloads": false,
+  "disclaimer": "These fixtures test connector shapes only. They are not evidence of provider permission, availability, accuracy, endorsement, or production fitness.",
+  "files": {
+    "p01-sg-01/request.json": "e1e9051612513996b7b5bec6758a8708ba0fb8058f4b40dc23d1f77a89bb80d2",
+    "p01-sg-01/response.json": "cb3f976131b9261c07d32f2acb3251464af4eb334cf010a736fa1fd8e177eefe",
+    "p01-sg-02/request.json": "154e11060260a26111e274db15b804d921798dc8fd378b448204d899c070ec8a",
+    "p01-sg-02/response.json": "0c1f9fe3a7b3e158c320389d5df1535693a64a17bed1cfc18e09aeb1272f69e7",
+    "p01-sg-03/request.json": "df67c55046496fae8caebbb0ca30a6c1b7b2b91dd0bea24b38b850aee17c347f",
+    "p01-sg-03/response.json": "8f75b3c0c8de5b6ebd236eddb8cd4f9ba7e7d0208a56d2a6fd231ffeb7d9ce57",
+    "p01-sg-04/request.json": "6e880bb9f964d72f6b88f100419cc2ec380fea6fa33138222ce239b2679d6dd4",
+    "p01-sg-04/response.json": "789e29bbde14ad2693cebbed12070af918a8e8d40f203ce562e998a7e614b11c",
+    "p01-sg-05/request.json": "d2aee97f837f87e737640bd07d75e14bfd130938235c0842022930ba934e6a85",
+    "p01-sg-05/response.json": "4a292a57c50554deb7078d9e751e8c74b24a8e0cd183949c43fb8661cc775fa7",
+    "p01-sg-06/request.json": "b1a1411192f2caf5f64b6bdda3557cc5e15f7fb4d6cf0ac2c9a99c61d4c9eb7f",
+    "p01-sg-06/response.json": "ba53b20742dc1940b53e89d0faad85862c997d3aeb16d44c847ef9b3e8ed852e",
+    "p01-sg-07/request.json": "80d434feb88807984a4cd8d7f0a87bac075e26519ead1207eceaae22d54668ed",
+    "p01-sg-07/response.json": "59ba507fa8de28df0c24e959e7d81cc6afc971b20ac838f88ba4b43520c6c2c0",
+    "p01-sg-08/request.json": "5d2c77cc173c42eeb20e971b45b03036fd192bdd9cdc0372fe20ab84d5aa8a54",
+    "p01-sg-08/response.json": "6550c40e240fb15516f2c424b5ea49e734827403f925bf333784d48f26e91981",
+    "p01-sg-09/request.json": "fc5030ccf9ae34d154e0269f2179ceee411ff6d074ce3c488136c90ab17cdac9",
+    "p01-sg-09/response.json": "29653b1828ef4eeccef26420f0b8124ebfd0979f513485640b05ba99158b0a2c",
+    "p01-sg-10/request.json": "7573566b5fd33c625d2d9faf8acaaa748c4bee12757c5e7c9e72abb2eb156de0",
+    "p01-sg-10/response.json": "11805f149348589c6f35981722a83fd655e94aca7778f21a5f080ab51bc98edf"
+  }
+}

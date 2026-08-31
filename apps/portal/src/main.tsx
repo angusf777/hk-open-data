@@ -1,0 +1,11 @@
+import { StrictMode } from "react";
+import { createRoot } from "react-dom/client";
+import "@hk-open-data/ui/tokens.css";
+import "./styles.css";
+import { PortalApp } from "./App.js";
+import { createFixturePortalApi, createLivePortalApi } from "./api.js";
+import type { OperatingProfile } from "@hk-open-data/sdk-typescript";
+const baseUrl = import.meta.env.VITE_API_BASE_URL as string | undefined;
+const configuredProfile = import.meta.env.VITE_HKOD_PROFILE as string | undefined;
+const operatingProfile: OperatingProfile = configuredProfile === "observe" || configuredProfile === "fabric" ? configuredProfile : "catalogue";
+createRoot(document.getElementById("root")!).render(<StrictMode><PortalApp api={baseUrl === undefined || baseUrl === "" ? createFixturePortalApi() : createLivePortalApi(baseUrl)} operatingProfile={operatingProfile} /></StrictMode>);

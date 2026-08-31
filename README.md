@@ -3,6 +3,7 @@
 [![License: Apache-2.0](https://img.shields.io/github/license/angusf777/hk-open-data)](LICENSE)
 [![GitHub stars](https://img.shields.io/github/stars/angusf777/hk-open-data?style=flat)](https://github.com/angusf777/hk-open-data/stargazers)
 [![Catalogue resources](https://img.shields.io/badge/catalogue-521_resources-c81e3a)](catalog/generated/counts.json)
+[![CI](https://github.com/angusf777/hk-open-data/actions/workflows/ci.yml/badge.svg)](https://github.com/angusf777/hk-open-data/actions/workflows/ci.yml)
 
 > **Independent community project.** This repository is not operated by, affiliated with, or
 > endorsed by the Hong Kong Government or any listed provider. It is a catalogue and optional
@@ -31,8 +32,8 @@ services, and community tools. HK Open Data turns that landscape into reviewable
 - **Discover:** search one bilingual index instead of maintaining private bookmark lists.
 - **Evaluate:** see provider, access method, protocol, last check, and rights-evidence state before
   opening an upstream source.
-- **Build:** generate deterministic JSON for local applications and, once released, opt into a
-  self-hosted P01/P14 runtime.
+- **Build:** generate deterministic JSON for local applications and optionally run the fail-closed,
+  self-hosted P01/P14 toolkit.
 - **Improve:** correct one YAML record through a small, source-backed pull request.
 
 The static site reads only repository-generated JSON. It does not call providers, copy their
@@ -80,17 +81,17 @@ professional advice where appropriate. Read [Source Rights and Evidence](docs/go
 
 ## Optional self-hosted toolkit
 
-The repository is designed to add two local, fail-closed runtime components without turning this
+The repository includes two optional local, fail-closed runtime components without turning this
 project into a hosted resale service:
 
 - **P01 — Public Data Fabric:** local normalized read access, SDK surfaces, and read-only MCP tools.
 - **P14 — API Quality Observatory:** local probes and quality evidence for explicitly enabled
   sources.
 
-The default `catalogue` profile performs no provider traffic. `observe` is intended for explicit,
-digest-only checks; `fabric` is intended for approved raw-evidence retention. The P01/P14 runtime is
-under active construction on the development branch and is **not yet a released interface**. Its
-target contract and activation boundaries are documented in the
+Plain `docker compose up` starts only the `catalogue` profile and performs no provider traffic.
+`observe` is an explicit, digest-only runtime; `fabric` adds raw-evidence retention for sources the
+operator has separately approved. All seeded sources and connectors remain inactive. Setup,
+verification, local endpoints, and activation boundaries are documented in the bilingual
 [runtime guide](docs/getting-started/runtime.md).
 
 ## Architecture
@@ -117,10 +118,8 @@ vulnerabilities privately under [SECURITY.md](SECURITY.md).
 
 ## Roadmap
 
-- Publish the bilingual catalogue and deterministic release artifact.
-- Complete and independently verify the optional self-hosted P01/P14 runtime.
-- Expand source coverage through small, evidence-backed contributions.
-- Record human-reviewed Traditional Chinese translations without overstating seeded text.
+See [ROADMAP.md](ROADMAP.md) for the `Now / Next / Later` plan and the explicit boundary against a
+centrally hosted data service without a new rights and architecture review.
 
 ## Licence and upstream material
 

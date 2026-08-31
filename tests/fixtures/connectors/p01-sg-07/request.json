@@ -1,0 +1,1 @@
+{"definition":{"connector_id":"CONN-P01-SG-07","source_group_id":"P01-SG-07","source_id":"HKAPI-018","endpoint":"https://api.hkma.gov.hk/public/market-data-and-statistics/sample","method":"GET","project":"P01","purpose":"connector-observation","timeout_ms":30000,"max_response_bytes":10485760},"expected_records":2}

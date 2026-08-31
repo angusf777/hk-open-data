@@ -1,0 +1,1 @@
+{"definition":{"connector_id":"CONN-P01-SG-06","source_group_id":"P01-SG-06","source_id":"HKAPI-017","endpoint":"https://www.censtatd.gov.hk/api/get.php","method":"POST","request_body":{"table":"310-31001"},"project":"P01","purpose":"connector-observation","timeout_ms":30000,"max_response_bytes":10485760},"expected_records":2}
