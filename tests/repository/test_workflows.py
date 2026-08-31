@@ -35,6 +35,19 @@ def test_pages_uploads_only_static_catalogue_dist() -> None:
     assert deploy["permissions"] == {"pages": "write", "id-token": "write"}
 
 
+def test_release_verifies_checksums_from_the_artifact_directory() -> None:
+    release = workflow("release.yml")
+    jobs = release["jobs"]
+    assert isinstance(jobs, dict)
+    package = jobs["package"]
+    assert isinstance(package, dict)
+    steps = package["steps"]
+    assert isinstance(steps, list)
+    checksum = next(step for step in steps if "shasum -a 256 -c" in str(step.get("run", "")))
+    assert checksum["run"] == "shasum -a 256 -c SHA256SUMS"
+    assert checksum["working-directory"] == "artifacts"
+
+
 def test_external_actions_are_pinned_to_full_commits() -> None:
     for path in sorted((ROOT / ".github").rglob("*.yml")):
         for line in path.read_text(encoding="utf-8").splitlines():

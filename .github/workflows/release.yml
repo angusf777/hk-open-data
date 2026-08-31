@@ -32,7 +32,8 @@ jobs:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1  # v7.0.1
       - uses: ./.github/actions/setup
       - run: sh scripts/package-release.sh "${{ inputs.version }}"
-      - run: shasum -a 256 -c artifacts/SHA256SUMS
+      - run: shasum -a 256 -c SHA256SUMS
+        working-directory: artifacts
       - uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a  # v7.0.1
         with:
           name: release-v${{ inputs.version }}
