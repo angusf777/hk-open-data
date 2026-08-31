@@ -34,5 +34,16 @@ test("repository configuration is idempotent and uses no fictitious teams", asyn
   assert.ok(calls.some((call) => call.method === "PATCH" && call.path.endsWith("/labels/catalogue")));
   assert.ok(calls.some((call) => call.method === "POST" && call.path.endsWith("/labels")));
   assert.ok(calls.some((call) => call.path.endsWith("/topics")));
+  const protection = calls.find((call) => call.path.endsWith("/branches/main/protection"));
+  assert.deepEqual(protection?.body.required_status_checks.contexts, [
+    "catalogue",
+    "typescript",
+    "python",
+    "browser",
+    "boundary",
+  ]);
+  assert.equal(protection?.body.required_pull_request_reviews, null);
+  assert.equal(protection?.body.allow_force_pushes, false);
+  assert.equal(protection?.body.allow_deletions, false);
   assert.doesNotMatch(JSON.stringify(calls), /team|codeowner/i);
 });

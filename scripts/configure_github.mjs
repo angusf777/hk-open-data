@@ -31,6 +31,10 @@ export async function configureRepository(owner, repository, api = ghApi) {
     has_issues: true,
     has_discussions: true,
     has_wiki: false,
+    allow_merge_commit: false,
+    allow_rebase_merge: true,
+    allow_squash_merge: true,
+    delete_branch_on_merge: true,
   });
   await api("PUT", `${repo}/topics`, {
     names: [
@@ -60,6 +64,22 @@ export async function configureRepository(owner, repository, api = ghApi) {
     }
   }
   await api("PUT", `${repo}/private-vulnerability-reporting`);
+  await api("PUT", `${repo}/branches/main/protection`, {
+    required_status_checks: {
+      strict: true,
+      contexts: ["catalogue", "typescript", "python", "browser", "boundary"],
+    },
+    enforce_admins: false,
+    required_pull_request_reviews: null,
+    restrictions: null,
+    required_linear_history: true,
+    allow_force_pushes: false,
+    allow_deletions: false,
+    block_creations: false,
+    required_conversation_resolution: true,
+    lock_branch: false,
+    allow_fork_syncing: true,
+  });
 }
 
 async function main() {
