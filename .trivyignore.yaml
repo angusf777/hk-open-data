@@ -1,0 +1,10 @@
+misconfigurations:
+  - id: AVD-DS-0002
+    paths:
+      - infra/docker/postgres.Dockerfile
+    expired_at: 2027-08-31
+    statement: >-
+      The official PostGIS entrypoint starts as root only to initialize and set ownership on a new
+      database volume, then execs PostgreSQL as the unprivileged postgres user. Setting USER in this
+      derived Dockerfile breaks clean-volume initialization. The database is not edge-exposed and
+      application roles remain least-privileged. Reassess before the expiry date.

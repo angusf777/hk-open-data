@@ -99,6 +99,17 @@ def test_provider_workers_do_not_join_the_public_edge() -> None:
 
 def test_runtime_images_are_pinned_and_plaintext_secrets_are_absent() -> None:
     services = compose()["services"]
+    expected_local_images = {
+        "catalog": "hk-open-data-catalog:0.1.0",
+        "api": "hk-open-data-api:0.1.0",
+        "worker-observe": "hk-open-data-worker:0.1.0",
+        "worker-fabric": "hk-open-data-worker:0.1.0",
+        "mcp": "hk-open-data-mcp:0.1.0",
+        "admin": "hk-open-data-admin:0.1.0",
+        "portal": "hk-open-data-portal:0.1.0",
+    }
+    for name, image in expected_local_images.items():
+        assert services[name]["image"] == image, name
     for name in {"object-store", "otel-collector", "prometheus"}:
         image = services[name]["image"]
         assert "@sha256:" in image, name
