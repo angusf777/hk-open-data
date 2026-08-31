@@ -11,6 +11,7 @@
     "catalog:generate": "uv run python scripts/catalog.py generate",
     "catalog:check": "uv run python scripts/catalog.py check",
     "test": "pnpm -r --if-present test && uv run pytest -q",
+    "test:browser": "playwright test",
     "typecheck": "pnpm -r --if-present typecheck",
     "build": "pnpm -r --if-present build",
     "check:boundary": "node scripts/check-public-boundary.mjs"
@@ -19,5 +20,14 @@
     "apps/*",
     "packages/*",
     "services/*"
-  ]
+  ],
+  "devDependencies": {
+    "@axe-core/playwright": "4.10.2",
+    "@playwright/test": "1.58.2",
+    "@types/node": "22.20.1",
+    "typescript": "7.0.2"
+  },
+  "pnpm": {
+    "onlyBuiltDependencies": ["esbuild"]
+  }
 }
