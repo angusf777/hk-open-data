@@ -98,6 +98,7 @@ services:
       OIDC_AUDIENCE: ${OIDC_AUDIENCE:-https://api.example.invalid}
       OIDC_JWKS_URL: ${OIDC_JWKS_URL:-https://identity.example.invalid/.well-known/jwks.json}
       WEBHOOK_SECRET_ENCRYPTION_KEY: ${WEBHOOK_SECRET_ENCRYPTION_KEY:-}
+      TRUSTED_PROXY_CIDRS: 172.30.250.30,172.30.250.31
       OTEL_EXPORTER_OTLP_ENDPOINT: http://otel-collector:4318
     depends_on:
       migrate:
@@ -209,7 +210,9 @@ services:
     depends_on:
       api:
         condition: service_healthy
-    networks: [edge]
+    networks:
+      edge:
+        ipv4_address: 172.30.250.30
     ports:
       - "127.0.0.1:${ADMIN_PORT:-4175}:8080"
     tmpfs:
@@ -237,7 +240,9 @@ services:
     depends_on:
       api:
         condition: service_healthy
-    networks: [edge]
+    networks:
+      edge:
+        ipv4_address: 172.30.250.31
     ports:
       - "127.0.0.1:${PORTAL_PORT:-4174}:8080"
     tmpfs:
@@ -326,7 +331,10 @@ services:
 networks:
   data:
     internal: true
-  edge: {}
+  edge:
+    ipam:
+      config:
+        - subnet: 172.30.250.0/24
   egress: {}
   telemetry:
     internal: true

@@ -26,6 +26,10 @@ const deliveryStore = new PostgresWebhookStore(
   deliveryPool,
   new WebhookSecretProtector(required("WEBHOOK_SECRET_ENCRYPTION_KEY")),
 );
+const trustedProxies = (process.env.TRUSTED_PROXY_CIDRS ?? "")
+  .split(",")
+  .map((entry) => entry.trim())
+  .filter((entry) => entry.length > 0);
 const app = buildApp({
   repository: createPostgresRepository(pool),
   webhookStore,
@@ -35,6 +39,7 @@ const app = buildApp({
     jwksUrl: required("OIDC_JWKS_URL"),
   }),
   operatingProfile: parseOperatingProfile(process.env.HKOD_PROFILE),
+  trustedProxies,
 });
 
 const webhookSender = new SafeWebhookSender();

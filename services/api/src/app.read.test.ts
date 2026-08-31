@@ -1,4 +1,4 @@
-import { describe, expect, it } from "vitest";
+import { describe, expect, it, vi } from "vitest";
 
 import { buildApp } from "./app.js";
 import type { RequestPrincipal, TokenVerifier } from "./auth.js";
@@ -148,19 +148,24 @@ const verifier: TokenVerifier = {
   },
 };
 
-function app() {
+function memoryRepository() {
+  return new MemoryPlatformRepository({
+    sources: [source],
+    sourceRecords: [record],
+    events: [event],
+    monitorTargets: [publicTarget, privateTarget],
+    observations: [observation],
+    incidents: [incident],
+  });
+}
+
+function app(repository = memoryRepository(), trustedProxies: string[] = []) {
   return buildApp({
-    repository: new MemoryPlatformRepository({
-      sources: [source],
-      sourceRecords: [record],
-      events: [event],
-      monitorTargets: [publicTarget, privateTarget],
-      observations: [observation],
-      incidents: [incident],
-    }),
+    repository,
     verifier,
     clock: () => new Date(observedAt),
     operatingProfile: "observe",
+    trustedProxies,
   });
 }
 
@@ -203,6 +208,73 @@ describe("REST read surface", () => {
       counts: { pass: 1 },
       current_incidents: [],
     });
+  });
+
+  it("rate limits repeated API requests from one client", async () => {
+    const repository = memoryRepository();
+    const getStatusSummary = vi.spyOn(repository, "getStatusSummary");
+    const instance = app(repository);
+    for (let attempt = 0; attempt < 100; attempt += 1) {
+      const response = await instance.inject({ method: "GET", url: "/v1/status/summary" });
+      expect(response.statusCode).toBe(200);
+    }
+
+    const limited = await instance.inject({ method: "GET", url: "/v1/status/summary" });
+    expect(limited.statusCode).toBe(429);
+    expect(limited.headers["retry-after"]).toBeDefined();
+    const body = limited.json();
+    expect(limited.headers["x-correlation-id"]).toBe(body.correlation_id);
+    expect(body).toMatchObject({
+      code: "RATE_LIMITED",
+      retryable: true,
+      correlation_id: expect.any(String),
+    });
+    expect(getStatusSummary).toHaveBeenCalledTimes(100);
+
+    const spoofed = await instance.inject({
+      method: "GET",
+      url: "/v1/status/summary",
+      headers: { "x-forwarded-for": "198.51.100.10" },
+    });
+    expect(spoofed.statusCode).toBe(429);
+    expect(getStatusSummary).toHaveBeenCalledTimes(100);
+
+    const otherClient = await instance.inject({
+      method: "GET",
+      url: "/v1/status/summary",
+      remoteAddress: "198.51.100.20",
+    });
+    expect(otherClient.statusCode).toBe(200);
+    expect(getStatusSummary).toHaveBeenCalledTimes(101);
+  });
+
+  it("isolates forwarded clients only behind an explicitly trusted proxy", async () => {
+    const instance = app(memoryRepository(), ["192.0.2.10"]);
+    for (let attempt = 0; attempt < 100; attempt += 1) {
+      const response = await instance.inject({
+        method: "GET",
+        url: "/v1/status/summary",
+        remoteAddress: "192.0.2.10",
+        headers: { "x-forwarded-for": "198.51.100.10" },
+      });
+      expect(response.statusCode).toBe(200);
+    }
+
+    const limited = await instance.inject({
+      method: "GET",
+      url: "/v1/status/summary",
+      remoteAddress: "192.0.2.10",
+      headers: { "x-forwarded-for": "198.51.100.10" },
+    });
+    expect(limited.statusCode).toBe(429);
+
+    const otherForwardedClient = await instance.inject({
+      method: "GET",
+      url: "/v1/status/summary",
+      remoteAddress: "192.0.2.10",
+      headers: { "x-forwarded-for": "198.51.100.20" },
+    });
+    expect(otherForwardedClient.statusCode).toBe(200);
   });
 
   it("rejects source-record reads without records:read", async () => {
