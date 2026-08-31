@@ -1,0 +1,23 @@
+{
+  "name": "hk-open-data",
+  "private": true,
+  "version": "0.1.0",
+  "packageManager": "pnpm@10.0.0",
+  "engines": {
+    "node": ">=22.0.0"
+  },
+  "scripts": {
+    "catalog:validate": "uv run python scripts/catalog.py validate",
+    "catalog:generate": "uv run python scripts/catalog.py generate",
+    "catalog:check": "uv run python scripts/catalog.py check",
+    "test": "pnpm -r --if-present test && uv run pytest -q",
+    "typecheck": "pnpm -r --if-present typecheck",
+    "build": "pnpm -r --if-present build",
+    "check:boundary": "node scripts/check-public-boundary.mjs"
+  },
+  "workspaces": [
+    "apps/*",
+    "packages/*",
+    "services/*"
+  ]
+}
