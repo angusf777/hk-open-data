@@ -5,7 +5,7 @@ import { fileURLToPath } from "node:url";
 import { parse } from "csv-parse/sync";
 import { z } from "zod";
 
-export const CONTRACT_VERSION = "2026-08-28.v1" as const;
+export const CONTRACT_VERSION = "2026-09-01.v1" as const;
 
 const pendingStatus = z.literal("specified_pending_approval");
 const sourceGroupId = z.string().regex(/^P01-SG-(0[1-9]|10)$/);

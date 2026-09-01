@@ -8,6 +8,7 @@ import type { PlatformReadClient } from "./client.js";
 import { safeToolError } from "./errors.js";
 import { formatToolResult } from "./format.js";
 import { outputSchema } from "./schemas.js";
+import { accessRecipeToolSchemas } from "./tools/access-recipes.js";
 import { eventToolSchemas } from "./tools/events.js";
 import { qualityToolSchemas } from "./tools/quality.js";
 import { sourceToolSchemas } from "./tools/sources.js";
@@ -24,6 +25,8 @@ export const NORMATIVE_TOOL_NAMES = [
   "incidents_list",
   "incident_get",
   "status_summary",
+  "access_recipes_list",
+  "access_recipe_get",
 ] as const;
 
 const descriptions: Record<(typeof NORMATIVE_TOOL_NAMES)[number], string> = {
@@ -38,6 +41,8 @@ const descriptions: Record<(typeof NORMATIVE_TOOL_NAMES)[number], string> = {
   incidents_list: "List reviewed incidents visible to the caller.",
   incident_get: "Get one visible incident and reviewed evidence timeline.",
   status_summary: "Return aggregate read-only platform status.",
+  access_recipes_list: "List bounded technical access recipes without contacting providers.",
+  access_recipe_get: "Get one technical access recipe and its generated code examples.",
 };
 
 const annotations = {
@@ -86,5 +91,17 @@ export function createMcpServer(platform: PlatformReadClient): McpServer {
   registerReadTool(server, platform, "incidents_list", qualityToolSchemas.incidents_list);
   registerReadTool(server, platform, "incident_get", qualityToolSchemas.incident_get);
   registerReadTool(server, platform, "status_summary", qualityToolSchemas.status_summary);
+  registerReadTool(
+    server,
+    platform,
+    "access_recipes_list",
+    accessRecipeToolSchemas.access_recipes_list,
+  );
+  registerReadTool(
+    server,
+    platform,
+    "access_recipe_get",
+    accessRecipeToolSchemas.access_recipe_get,
+  );
   return server;
 }

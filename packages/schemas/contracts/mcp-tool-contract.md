@@ -1,6 +1,6 @@
 # HK Open Data read-only MCP tool contract
 
-**Contract version:** `2026-08-28.v1`  
+**Contract version:** `2026-09-01.v1`
 **Runtime rule:** read-only; no third-party MCP dependency
 
 The MCP server is an alternate read transport over the same authorized application services used by the REST API. It must not query upstream providers directly, bypass approval state, expose raw credentials or turn external content into instructions.
@@ -11,7 +11,7 @@ Every successful tool result contains:
 
 ```json
 {
-  "contract_version": "2026-08-28.v1",
+  "contract_version": "2026-09-01.v1",
   "data": {},
   "evidence": {
     "source_record_ids": [],
@@ -117,6 +117,24 @@ Returns aggregate status without accepting inputs that can change system state.
 - Inputs: `project` and `provider` filters only
 - Required scope: none for public view; `status:read` for private view
 - Output: target counts by outcome, current public incidents and last-updated time
+
+### `access_recipes_list`
+
+Lists the project-authored technical access recipes stored by the REST service.
+
+- Inputs: `adapter`, `status`, `authentication`, `freshness`, `cursor`, `limit`
+- Required scope: none
+- Output: bounded recipe summaries, generated examples, verification status and limitations
+- Provider traffic: none; this tool reads the local recipe registry only
+
+### `access_recipe_get`
+
+Gets one project-authored access recipe and its generated code examples.
+
+- Inputs: `source_reference`
+- Required scope: none
+- Output: endpoint template, bounded parameters, authentication setup, response shape, examples and limitations
+- Provider traffic: none; this tool cannot execute a recipe or accept an arbitrary URL
 
 ## Explicitly prohibited tools
 

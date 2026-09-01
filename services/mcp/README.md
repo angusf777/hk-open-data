@@ -1,6 +1,6 @@
 # HK Public Data read-only MCP
 
-This project-provided server exposes the eleven tools pinned in
+This project-provided server exposes the thirteen tools pinned in
 [`packages/schemas/contracts/mcp-tool-contract.md`](../../packages/schemas/contracts/mcp-tool-contract.md).
 It calls only the
 platform REST service; it does not fetch provider URLs, return raw object bodies, or expose writes.
@@ -52,4 +52,4 @@ npx @modelcontextprotocol/inspector --cli node services/mcp/dist/stdio.js \
 
 The test suite checks the exact tool list, strict input schemas, pinned tool fingerprint,
 structured evidence output, 25,000-character cap, prohibited-tool absence, modern HTTP behavior,
-and ten deterministic evaluation questions.
+and twelve deterministic evaluation questions.

@@ -79,4 +79,43 @@ describe("REST-backed MCP parity", () => {
       correlation_id: "corr-rate-limit",
     });
   });
+
+  it("routes recipe tools only to the read-only access registry", async () => {
+    const recipe = {
+      source_reference: "HKAPI-001",
+      status: "fixture-tested",
+      effective_status: "fixture-tested",
+      limitations: ["Technical recipe only."],
+      examples: { python: "import httpx" },
+    };
+    const fetcher = vi
+      .fn<typeof fetch>()
+      .mockResolvedValue(new Response(JSON.stringify(recipe), { status: 200 }));
+    const client = new RestPlatformClient({
+      baseUrl: "https://api.example/v1",
+      fetcher,
+    });
+
+    const result = await client.call("access_recipe_get", { source_reference: "HKAPI-001" });
+
+    expect(result.data.item).toEqual(recipe);
+    expect(result).not.toHaveProperty("provider_response_body");
+    expect(fetcher).toHaveBeenCalledTimes(1);
+    expect(String(fetcher.mock.calls[0]?.[0])).toBe(
+      "https://api.example/v1/access-recipes/HKAPI-001",
+    );
+  });
+
+  it("maps MCP freshness to the REST verification filter", async () => {
+    const fetcher = vi.fn<typeof fetch>().mockResolvedValue(
+      new Response(JSON.stringify({ items: [], page: { next_cursor: null } }), { status: 200 }),
+    );
+    const client = new RestPlatformClient({ baseUrl: "https://api.example/v1", fetcher });
+
+    await client.call("access_recipes_list", { freshness: "current", limit: 10 });
+
+    const url = new URL(String(fetcher.mock.calls[0]?.[0]));
+    expect(url.searchParams.get("verification_freshness")).toBe("current");
+    expect(url.searchParams.has("freshness")).toBe(false);
+  });
 });

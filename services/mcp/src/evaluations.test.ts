@@ -36,15 +36,15 @@ function evaluations(): Evaluation[] {
 }
 
 describe("read-only MCP evaluations", () => {
-  it("contains ten unique stable questions whose expected answers resolve through tools", async () => {
+  it("contains twelve unique stable questions whose expected answers resolve through tools", async () => {
     const fixtures = evaluations();
-    expect(fixtures).toHaveLength(10);
-    expect(new Set(fixtures.map((fixture) => fixture.id)).size).toBe(10);
-    expect(new Set(fixtures.map((fixture) => fixture.question)).size).toBe(10);
+    expect(fixtures).toHaveLength(12);
+    expect(new Set(fixtures.map((fixture) => fixture.id)).size).toBe(12);
+    expect(new Set(fixtures.map((fixture) => fixture.question)).size).toBe(12);
     const platform: PlatformReadClient = {
       async call(name, input) {
         return {
-          contract_version: "2026-08-28.v1",
+          contract_version: "2026-09-01.v1",
           data: { tool: name, input },
           evidence: {
             source_record_ids: ["SR-EVAL0001"],

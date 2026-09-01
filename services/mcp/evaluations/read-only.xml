@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<evaluations contract_version="2026-08-28.v1">
+<evaluations contract_version="2026-09-01.v1">
   <evaluation id="source-catalogue-and-detail">
     <question>Which P01 sources are visible, and what is the current definition for HKAPI-001?</question>
     <call tool="sources_list">{"project":"P01","limit":10}</call>
@@ -50,5 +50,15 @@
     <question>What is the current public aggregate status for the platform?</question>
     <call tool="status_summary">{}</call>
     <expected_tools>status_summary</expected_tools>
+  </evaluation>
+  <evaluation id="access-recipes-list">
+    <question>Which fixture-tested CKAN access recipes are available without provider traffic?</question>
+    <call tool="access_recipes_list">{"adapter":"ckan-action","status":"fixture-tested","limit":20}</call>
+    <expected_tools>access_recipes_list</expected_tools>
+  </evaluation>
+  <evaluation id="access-recipe-detail">
+    <question>Show the bounded technical access recipe and code examples for HKAPI-001.</question>
+    <call tool="access_recipe_get">{"source_reference":"HKAPI-001"}</call>
+    <expected_tools>access_recipe_get</expected_tools>
   </evaluation>
 </evaluations>

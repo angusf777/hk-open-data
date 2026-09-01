@@ -7,7 +7,7 @@ const page = {
 
 export const outputSchema = z
   .object({
-    contract_version: z.literal("2026-08-28.v1"),
+    contract_version: z.literal("2026-09-01.v1"),
     data: z.record(z.string(), z.json()),
     evidence: z
       .object({
@@ -81,4 +81,41 @@ export const schemas = {
     .strict(),
   incident_get: z.object({ incident_id: z.string().regex(/^INC-[0-9]{4}-[0-9]{6}$/) }).strict(),
   status_summary: z.object({ project: z.string().optional(), provider: z.string().optional() }).strict(),
+  access_recipes_list: z
+    .object({
+      adapter: z
+        .enum([
+          "none",
+          "ckan-action",
+          "rest-json",
+          "odata",
+          "arcgis-rest",
+          "ogc-wfs",
+          "ogc-wms",
+          "xml",
+          "csv",
+          "rss",
+          "file-download",
+        ])
+        .optional(),
+      status: z
+        .enum([
+          "live-verified",
+          "fixture-tested",
+          "credential-required",
+          "manual-only",
+          "blocked",
+          "unavailable",
+        ])
+        .optional(),
+      authentication: z
+        .enum(["none", "api-key", "bearer", "basic", "oauth2", "registration"])
+        .optional(),
+      freshness: z.enum(["current", "stale", "never"]).optional(),
+      ...page,
+    })
+    .strict(),
+  access_recipe_get: z
+    .object({ source_reference: z.string().regex(/^HKAPI-[0-9]{3}$/) })
+    .strict(),
 } as const;

@@ -7,7 +7,7 @@ import { createMcpServer } from "./server.js";
 const clientImpl: PlatformReadClient = {
   async call() {
     return {
-      contract_version: "2026-08-28.v1",
+      contract_version: "2026-09-01.v1",
       data: { content: "x".repeat(30_000) },
       evidence: {
         source_record_ids: [],
@@ -66,7 +66,7 @@ describe("MCP security boundary", () => {
     const boundaryClient: PlatformReadClient = {
       async call() {
         return {
-          contract_version: "2026-08-28.v1",
+          contract_version: "2026-09-01.v1",
           data: { content: "x".repeat(24_000) },
           evidence: {
             source_record_ids: [],

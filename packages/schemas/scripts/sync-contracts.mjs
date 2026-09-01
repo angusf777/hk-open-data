@@ -3,7 +3,7 @@ import { copyFileSync, mkdirSync, readFileSync, writeFileSync } from "node:fs";
 import { dirname, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
 
-const contractVersion = "2026-08-28.v1";
+const contractVersion = "2026-09-01.v1";
 const packageRoot = resolve(dirname(fileURLToPath(import.meta.url)), "..");
 
 function option(name, fallback) {

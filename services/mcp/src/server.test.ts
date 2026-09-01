@@ -14,7 +14,7 @@ const readClient: PlatformReadClient = {
   async call(name, input) {
     calls.push({ name, input });
     return {
-      contract_version: "2026-08-28.v1",
+      contract_version: "2026-09-01.v1",
       data: { name, input, source_record_ids: ["SR-00000001"] },
       evidence: {
         source_record_ids: ["SR-00000001"],
@@ -45,7 +45,7 @@ async function connectedClient(): Promise<Client> {
 afterEach(async () => closeCurrent?.());
 
 describe("first-party read-only MCP server", () => {
-  it("exposes exactly the eleven normative tools with read-only annotations", async () => {
+  it("exposes exactly the thirteen normative tools with read-only annotations", async () => {
     const client = await connectedClient();
     const result = await client.listTools();
 
@@ -64,7 +64,7 @@ describe("first-party read-only MCP server", () => {
       { name: "sources_list", input: { project: "P01", cursor: "opaque", limit: 25 } },
     ]);
     expect(result.structuredContent).toMatchObject({
-      contract_version: "2026-08-28.v1",
+      contract_version: "2026-09-01.v1",
       evidence: { source_record_ids: ["SR-00000001"] },
       next_cursor: null,
     });
@@ -91,7 +91,7 @@ describe("first-party read-only MCP server", () => {
     });
     await client.connect(transport);
 
-    expect((await client.listTools()).tools).toHaveLength(11);
+    expect((await client.listTools()).tools).toHaveLength(13);
     const result = await client.callTool({ name: "status_summary", arguments: {} });
     expect(result.isError).not.toBe(true);
     await client.close();

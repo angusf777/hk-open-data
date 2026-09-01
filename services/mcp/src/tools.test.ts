@@ -29,6 +29,21 @@ describe("normative MCP tool contract", () => {
     await Promise.all([client.connect(clientTransport), server.connect(serverTransport)]);
     const tools = (await client.listTools()).tools;
 
+    expect(NORMATIVE_TOOL_NAMES).toEqual([
+      "sources_list",
+      "source_get",
+      "source_records_query",
+      "source_record_get",
+      "events_query",
+      "event_get",
+      "monitor_targets_list",
+      "monitor_target_get",
+      "incidents_list",
+      "incident_get",
+      "status_summary",
+      "access_recipes_list",
+      "access_recipe_get",
+    ]);
     expect(documented).toEqual(NORMATIVE_TOOL_NAMES);
     expect(toolFingerprint(tools)).toBe(PINNED_TOOL_FINGERPRINT);
     expect(tools.every((tool) => tool.inputSchema.additionalProperties === false)).toBe(true);

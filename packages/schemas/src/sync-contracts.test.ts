@@ -31,7 +31,7 @@ describe("contract synchronization", () => {
       readFileSync(resolve(output, "contract-manifest.json"), "utf8"),
     ) as { contract_version: string; files: Record<string, string> };
 
-    expect(manifest.contract_version).toBe("2026-08-28.v1");
+    expect(manifest.contract_version).toBe("2026-09-01.v1");
     expect(Object.keys(manifest.files).sort()).toEqual([
       "canonical_event.schema.json",
       "connector_run.schema.json",

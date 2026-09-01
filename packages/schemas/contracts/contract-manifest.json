@@ -1,12 +1,12 @@
 {
-  "contract_version": "2026-08-28.v1",
+  "contract_version": "2026-09-01.v1",
   "files": {
     "source_record.schema.json": "e7658cd7f9562d833ac258d92c45030ad5642d1a5c5fb7b7316d682f9a164ffb",
     "canonical_event.schema.json": "8c8b526d0a203f23b81ce0ba72a71c8bbf2a1187b87617751069045af3d25b6b",
     "connector_run.schema.json": "91beb3d1c351f5601677fef057c15b3f230da222f44a54c2bb32f0f6b5d973d2",
     "monitor_observation.schema.json": "2a2e682c7fe77f22cf380c6e75b52037d5c678d5c334fba8c196175d9db8b869",
     "incident.schema.json": "f9be6232da10c7c7676d25bfbaa29d7d4126919da5ecec59c0fc6353f70dd542",
-    "mcp_allowlist.schema.json": "a75c28d10b63ff506a6e60ccc554c9be5d22e67a4abf60237afedbe94d437f85",
+    "mcp_allowlist.schema.json": "0631402d97e312857065e1808a175a6d3ff9a35306299577801b488b84e9754e",
     "operating-profile.schema.json": "bc2c76d835258e79773e8427b83cdf0684617a1834b926a91dc6eb7695799ed6",
     "openapi.json": "9838d3b786d661f406f06616122cc58655200ebfa97c2033578ca678a6951a11"
   }

@@ -6,7 +6,7 @@ export interface EvidenceEnvelope {
 }
 
 export interface ToolEnvelope {
-  contract_version: "2026-08-28.v1";
+  contract_version: "2026-09-01.v1";
   data: Record<string, unknown>;
   evidence: EvidenceEnvelope;
   next_cursor: string | null;
@@ -42,6 +42,8 @@ const routeByTool: Record<string, { path: string; detailKey?: string }> = {
   incidents_list: { path: "incidents" },
   incident_get: { path: "incidents", detailKey: "incident_id" },
   status_summary: { path: "status/summary" },
+  access_recipes_list: { path: "access-recipes" },
+  access_recipe_get: { path: "access-recipes", detailKey: "source_reference" },
 };
 
 function strings(value: unknown): string[] {
@@ -109,6 +111,10 @@ export class RestPlatformClient implements PlatformReadClient {
     if (name === "source_record_get") {
       delete values["include_lineage"];
     }
+    if (name === "access_recipes_list" && values["freshness"] !== undefined) {
+      values["verification_freshness"] = values["freshness"];
+      delete values["freshness"];
+    }
     const url = new URL(`${this.#baseUrl}/${path}`);
     for (const [key, value] of Object.entries(values)) {
       if (value !== undefined) {
@@ -151,7 +157,7 @@ export class RestPlatformClient implements PlatformReadClient {
       );
     }
     return {
-      contract_version: "2026-08-28.v1",
+      contract_version: "2026-09-01.v1",
       data,
       evidence: {
         source_record_ids: sourceRecordIds(payload),

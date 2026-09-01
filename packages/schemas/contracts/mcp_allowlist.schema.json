@@ -10,6 +10,7 @@
     "repository_url": {"type": "string", "format": "uri"},
     "package": {"type": ["string", "null"]},
     "version": {"type": ["string", "null"]},
+    "tool_contract_version": {"type": ["string", "null"]},
     "artifact_hash": {"type": ["string", "null"], "pattern": "^[a-f0-9]{64}$"},
     "approved_tools": {"type": "array", "items": {"type": "string", "minLength": 1}, "uniqueItems": true},
     "denied_tools": {"type": "array", "items": {"type": "string", "minLength": 1}, "uniqueItems": true},
@@ -32,10 +33,11 @@
     {
       "if": {"properties": {"status": {"enum": ["approved", "restricted"]}}, "required": ["status"]},
       "then": {
-        "required": ["package", "version", "artifact_hash", "approved_tools", "denied_tools", "transport", "allowed_network_hosts", "filesystem_roots", "read_only", "human_approval_required", "owner", "approved_by", "approved_at", "expires_at"],
+        "required": ["package", "version", "tool_contract_version", "artifact_hash", "approved_tools", "denied_tools", "transport", "allowed_network_hosts", "filesystem_roots", "read_only", "human_approval_required", "owner", "approved_by", "approved_at", "expires_at"],
         "properties": {
           "package": {"type": "string", "minLength": 1},
           "version": {"type": "string", "minLength": 1},
+          "tool_contract_version": {"const": "2026-09-01.v1"},
           "artifact_hash": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
           "transport": {"enum": ["stdio", "streamable_http", "sse", "other"]},
           "owner": {"type": "string", "minLength": 1},

@@ -47,7 +47,7 @@ promise, and any provider page can change after this audit.
   storage are not published by the release Compose topology.
 - External requests are off by default, protected against SSRF, bounded by size and timeout, and
   require the relevant mode, source activation, review, and recorded rule version.
-- REST and SDK surfaces are bounded; the eleven MCP tools are read-only.
+- REST and SDK surfaces are bounded; the thirteen MCP tools are read-only.
 - Synthetic connector fixtures carry checksums and provenance. No provider payload is included in
   the repository or release artifacts.
 - Restore verification compares migrations, row counts, hashes, object evidence, RPO, and RTO in an

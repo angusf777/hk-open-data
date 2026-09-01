@@ -5,7 +5,7 @@ from typing import Annotated, Literal
 
 from pydantic import BaseModel, ConfigDict, Field, field_validator
 
-CONTRACT_VERSION = "2026-08-28.v1"
+CONTRACT_VERSION = "2026-09-01.v1"
 HttpsUrl = Annotated[str, Field(pattern=r"^https://")]
 Sha256 = Annotated[str, Field(pattern=r"^[a-f0-9]{64}$")]
 
