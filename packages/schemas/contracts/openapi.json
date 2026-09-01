@@ -10,6 +10,7 @@
   ],
   "tags": [
     {"name": "Sources", "description": "Approved-source catalogue and health metadata"},
+    {"name": "Access", "description": "Read-only technical access recipes and examples"},
     {"name": "Records", "description": "Immutable source records and provenance"},
     {"name": "Events", "description": "Normalized domain events"},
     {"name": "Quality", "description": "Reviewed target health and incident views"},
@@ -47,6 +48,44 @@
         "parameters": [{"$ref": "#/components/parameters/SourceId"}, {"$ref": "#/components/parameters/IfMatch"}],
         "responses": {
           "200": {"description": "Source definition and current health", "content": {"application/json": {"schema": {"$ref": "#/components/schemas/SourceDetail"}}}},
+          "404": {"$ref": "#/components/responses/NotFound"},
+          "429": {"$ref": "#/components/responses/TooManyRequests"}
+        }
+      }
+    },
+    "/v1/access-recipes": {
+      "get": {
+        "operationId": "listAccessRecipes",
+        "summary": "List source access recipes",
+        "tags": ["Access"],
+        "security": [{}],
+        "parameters": [
+          {"$ref": "#/components/parameters/Cursor"},
+          {"$ref": "#/components/parameters/Limit"},
+          {"name": "adapter", "in": "query", "schema": {"$ref": "#/components/schemas/AccessAdapter"}},
+          {"name": "status", "in": "query", "schema": {"$ref": "#/components/schemas/AccessStatus"}},
+          {"name": "authentication", "in": "query", "schema": {"enum": ["none", "api-key", "bearer", "basic", "oauth2", "registration"]}},
+          {"name": "verification_freshness", "in": "query", "schema": {"enum": ["current", "stale", "never"]}}
+        ],
+        "responses": {
+          "200": {"description": "Bounded source access recipes", "content": {"application/json": {"schema": {"$ref": "#/components/schemas/AccessRecipePage"}}}},
+          "400": {"description": "Unsupported access-recipe filter", "content": {"application/json": {"schema": {"$ref": "#/components/schemas/Error"}}}},
+          "429": {"$ref": "#/components/responses/TooManyRequests"}
+        }
+      }
+    },
+    "/v1/access-recipes/{source_reference}": {
+      "get": {
+        "operationId": "getAccessRecipe",
+        "summary": "Get one source access recipe",
+        "tags": ["Access"],
+        "security": [{}],
+        "parameters": [
+          {"name": "source_reference", "in": "path", "required": true, "schema": {"type": "string", "pattern": "^HKAPI-[0-9]{3}$"}}
+        ],
+        "responses": {
+          "200": {"description": "One source access recipe", "content": {"application/json": {"schema": {"$ref": "#/components/schemas/AccessRecipe"}}}},
+          "400": {"description": "Invalid source reference", "content": {"application/json": {"schema": {"$ref": "#/components/schemas/Error"}}}},
           "404": {"$ref": "#/components/responses/NotFound"},
           "429": {"$ref": "#/components/responses/TooManyRequests"}
         }
@@ -422,6 +461,84 @@
         ]
       },
       "SourcePage": {"type": "object", "required": ["items", "page"], "properties": {"items": {"type": "array", "items": {"$ref": "#/components/schemas/SourceSummary"}}, "page": {"$ref": "#/components/schemas/PageMeta"}}, "additionalProperties": false},
+      "AccessStatus": {
+        "enum": ["live-verified", "fixture-tested", "credential-required", "manual-only", "blocked", "unavailable"]
+      },
+      "AccessAdapter": {
+        "enum": ["none", "ckan-action", "rest-json", "odata", "arcgis-rest", "ogc-wfs", "ogc-wms", "xml", "csv", "rss", "file-download"]
+      },
+      "VerificationSummary": {
+        "type": "object",
+        "required": ["checked_at", "valid_until", "outcome", "error_code", "recipe_sha256", "final_host", "http_status", "elapsed_ms", "media_type", "response_bytes", "response_sha256", "schema_fingerprint", "parsed_record_count", "limitations", "tool_version"],
+        "properties": {
+          "checked_at": {"type": "string", "format": "date-time"},
+          "valid_until": {"type": "string", "format": "date-time"},
+          "outcome": {"enum": ["success", "failure"]},
+          "error_code": {"type": ["string", "null"]},
+          "recipe_sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+          "final_host": {"type": "string"},
+          "http_status": {"type": ["integer", "null"], "minimum": 100, "maximum": 599},
+          "elapsed_ms": {"type": "integer", "minimum": 0},
+          "media_type": {"type": ["string", "null"]},
+          "response_bytes": {"type": "integer", "minimum": 0},
+          "response_sha256": {"type": ["string", "null"], "pattern": "^[a-f0-9]{64}$"},
+          "schema_fingerprint": {"type": ["string", "null"], "pattern": "^[a-f0-9]{64}$"},
+          "parsed_record_count": {"type": "integer", "minimum": 0},
+          "limitations": {"type": "array", "items": {"type": "string"}},
+          "tool_version": {"type": "string"}
+        },
+        "additionalProperties": false
+      },
+      "AccessRecipe": {
+        "type": "object",
+        "required": ["schema_version", "source_reference", "recipe_version", "adapter", "status", "effective_status", "documentation_url", "limitations", "authentication", "request", "response", "reason", "next_action", "recipe_sha256", "examples", "verification"],
+        "properties": {
+          "schema_version": {"const": 1},
+          "source_reference": {"type": "string", "pattern": "^HKAPI-[0-9]{3}$"},
+          "recipe_version": {"type": "string", "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$"},
+          "adapter": {"$ref": "#/components/schemas/AccessAdapter"},
+          "status": {"$ref": "#/components/schemas/AccessStatus"},
+          "effective_status": {"$ref": "#/components/schemas/AccessStatus"},
+          "documentation_url": {"type": "string", "format": "uri", "pattern": "^https://"},
+          "limitations": {"type": "array", "minItems": 1, "items": {"type": "string"}},
+          "authentication": {
+            "type": "object",
+            "required": ["type", "environment_variables", "setup"],
+            "properties": {
+              "type": {"enum": ["none", "api-key", "bearer", "basic", "oauth2", "registration"]},
+              "environment_variables": {"type": "array", "items": {"type": "string", "pattern": "^[A-Z][A-Z0-9_]{2,127}$"}},
+              "setup": {"type": ["string", "null"]}
+            },
+            "additionalProperties": false
+          },
+          "request": {"type": ["object", "null"]},
+          "response": {"type": ["object", "null"]},
+          "reason": {"type": ["string", "null"]},
+          "next_action": {"type": ["string", "null"]},
+          "recipe_sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+          "examples": {
+            "type": "object",
+            "required": ["curl", "python", "typescript"],
+            "properties": {
+              "curl": {"type": ["string", "null"]},
+              "python": {"type": ["string", "null"]},
+              "typescript": {"type": ["string", "null"]}
+            },
+            "additionalProperties": false
+          },
+          "verification": {"oneOf": [{"$ref": "#/components/schemas/VerificationSummary"}, {"type": "null"}]}
+        },
+        "additionalProperties": false
+      },
+      "AccessRecipePage": {
+        "type": "object",
+        "required": ["items", "page"],
+        "properties": {
+          "items": {"type": "array", "items": {"$ref": "#/components/schemas/AccessRecipe"}},
+          "page": {"$ref": "#/components/schemas/PageMeta"}
+        },
+        "additionalProperties": false
+      },
       "SourceRecordPage": {"type": "object", "required": ["items", "page"], "properties": {"items": {"type": "array", "items": {"$ref": "./source_record.schema.json"}}, "page": {"$ref": "#/components/schemas/PageMeta"}}, "additionalProperties": false},
       "EventPage": {"type": "object", "required": ["items", "page"], "properties": {"items": {"type": "array", "items": {"$ref": "./canonical_event.schema.json"}}, "page": {"$ref": "#/components/schemas/PageMeta"}}, "additionalProperties": false},
       "MonitorTargetSummary": {

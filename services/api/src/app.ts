@@ -1,7 +1,7 @@
 import { randomUUID } from "node:crypto";
 
 import rateLimit from "@fastify/rate-limit";
-import type { AccessRecipe, OperatingProfile } from "@hk-open-data/schemas";
+import type { GeneratedAccessRecipe, OperatingProfile } from "@hk-open-data/schemas";
 import Fastify, { type FastifyInstance } from "fastify";
 import { ZodError } from "zod";
 
@@ -14,9 +14,11 @@ import {
   type TokenVerifier,
 } from "./auth.js";
 import { HttpError } from "./errors.js";
+import { AccessRegistry } from "./access-registry.js";
 import { RepositoryError } from "./repository.js";
 import type { PlatformRepository } from "./repository.js";
 import { registerAdminRoutes } from "./routes/admin.js";
+import { registerAccessRecipeRoutes } from "./routes/access-recipes.js";
 import { registerEventRoutes } from "./routes/events.js";
 import { registerQualityRoutes } from "./routes/quality.js";
 import { registerRecordRoutes } from "./routes/records.js";
@@ -36,7 +38,7 @@ export interface BuildAppDependencies {
   webhookSender?: WebhookSender;
   operatingProfile?: OperatingProfile;
   trustedProxies?: string[];
-  accessRecipes?: readonly AccessRecipe[];
+  accessRecipes?: readonly GeneratedAccessRecipe[];
 }
 
 export function buildApp(dependencies: BuildAppDependencies): FastifyInstance {
@@ -107,6 +109,7 @@ export function buildApp(dependencies: BuildAppDependencies): FastifyInstance {
       (dependencies.accessRecipes ?? []).map((recipe) => [recipe.sourceReference, recipe]),
     ),
   };
+  const accessRegistry = new AccessRegistry(dependencies.accessRecipes ?? [], clock);
   app.register(async (routes) => {
     routes.get("/health/live", async () => ({
       status: "live",
@@ -150,6 +153,7 @@ export function buildApp(dependencies: BuildAppDependencies): FastifyInstance {
     });
 
     registerAdminRoutes(routes, context);
+    registerAccessRecipeRoutes(routes, accessRegistry);
     registerSourceRoutes(routes, context);
     registerRecordRoutes(routes, context);
     registerEventRoutes(routes, context);

@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import type { AccessRecipe } from "@hk-open-data/schemas";
+import type { GeneratedAccessRecipe } from "@hk-open-data/schemas";
 
 import { buildApp } from "./app.js";
 import type { RequestPrincipal, TokenVerifier } from "./auth.js";
@@ -42,7 +42,7 @@ const connectorBody = {
   reason: "Fixture and live-sandbox probe reviewed",
 };
 
-const accessRecipe: AccessRecipe = {
+const accessRecipe: GeneratedAccessRecipe = {
   schemaVersion: 1,
   sourceReference: "HKAPI-001",
   recipeVersion: "1.0.0",
@@ -94,6 +94,14 @@ const accessRecipe: AccessRecipe = {
   },
   reason: null,
   nextAction: null,
+  effectiveStatus: "fixture-tested",
+  recipeSha256: "a".repeat(64),
+  examples: {
+    curl: "curl https://data.gov.hk/en-data/api/3/action/package_list",
+    python: "import httpx",
+    typescript: "await fetch('https://data.gov.hk/en-data/api/3/action/package_list');",
+  },
+  verification: null,
 };
 
 const incident: Incident = {

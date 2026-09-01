@@ -1,4 +1,4 @@
-import type { AccessRecipe, OperatingProfile } from "@hk-open-data/schemas";
+import type { GeneratedAccessRecipe, OperatingProfile } from "@hk-open-data/schemas";
 
 import type { RequestPrincipal, Scope } from "../auth.js";
 import type { PlatformRepository } from "../repository.js";
@@ -7,7 +7,7 @@ export interface RouteContext {
   repository: PlatformRepository;
   clock: () => Date;
   operatingProfile: OperatingProfile;
-  accessRecipes: ReadonlyMap<string, AccessRecipe>;
+  accessRecipes: ReadonlyMap<string, GeneratedAccessRecipe>;
   authenticate(
     authorization: string | undefined,
     requiredScopes: readonly Scope[],

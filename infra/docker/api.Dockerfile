@@ -8,6 +8,7 @@ RUN pnpm install --frozen-lockfile --filter @hk-open-data/api... --filter @hk-op
 COPY packages/schemas packages/schemas
 COPY services/api services/api
 COPY catalog/generated catalog/generated
+COPY access/generated access/generated
 RUN pnpm --filter @hk-open-data/schemas build && pnpm --filter @hk-open-data/api build
 
 FROM node:22.22.0-alpine3.22 AS prod-deps
@@ -36,6 +37,7 @@ COPY --from=build --chown=10001:10001 /app/packages/schemas/package.json /app/pa
 COPY --from=build --chown=10001:10001 /app/packages/schemas/dist /app/packages/schemas/dist
 COPY --from=build --chown=10001:10001 /app/packages/schemas/contracts /app/packages/schemas/contracts
 COPY --from=build --chown=10001:10001 /app/catalog/generated /app/catalog/generated
+COPY --from=build --chown=10001:10001 /app/access/generated /app/access/generated
 USER 10001:10001
 EXPOSE 3000
 CMD ["node", "services/api/dist/server.js"]

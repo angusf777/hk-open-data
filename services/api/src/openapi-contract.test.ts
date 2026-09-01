@@ -2,6 +2,7 @@ import { dirname, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
 
 import SwaggerParser from "@apidevtools/swagger-parser";
+import { loadAccessRecipeIndex } from "@hk-open-data/schemas";
 import { Ajv2020 } from "ajv/dist/2020.js";
 import * as addFormatsModule from "ajv-formats";
 import { describe, expect, it } from "vitest";
@@ -81,7 +82,7 @@ describe("OpenAPI response contract", () => {
       Object.entries(pathItem).map(([method, operation]) => ({ path, method, operation })),
     );
 
-    expect(operations).toHaveLength(24);
+    expect(operations).toHaveLength(26);
     for (const { path, method, operation } of operations) {
       expect(operation.responses["429"], `${method.toUpperCase()} ${path}`).toBeDefined();
     }
@@ -97,6 +98,9 @@ describe("OpenAPI response contract", () => {
     const validateStatus = ajv.compile(document.components.schemas["StatusSummary"]!);
     const validateRecordPage = ajv.compile(document.components.schemas["SourceRecordPage"]!);
     const validateTargetPage = ajv.compile(document.components.schemas["MonitorTargetPage"]!);
+    const validateAccessRecipePage = ajv.compile(
+      document.components.schemas["AccessRecipePage"]!,
+    );
     const app = buildApp({
       repository: new MemoryPlatformRepository({
         sources: [source],
@@ -105,6 +109,7 @@ describe("OpenAPI response contract", () => {
       }),
       verifier,
       clock: () => new Date(observedAt),
+      accessRecipes: loadAccessRecipeIndex().recipes.slice(0, 3),
     });
 
     const status = await app.inject({ method: "GET", url: "/v1/status/summary" });
@@ -114,9 +119,14 @@ describe("OpenAPI response contract", () => {
       headers: { authorization: "Bearer test" },
     });
     const targets = await app.inject({ method: "GET", url: "/v1/monitor-targets" });
+    const accessRecipes = await app.inject({ method: "GET", url: "/v1/access-recipes" });
 
     expect(validateStatus(status.json()), ajv.errorsText(validateStatus.errors)).toBe(true);
     expect(validateRecordPage(records.json()), ajv.errorsText(validateRecordPage.errors)).toBe(true);
     expect(validateTargetPage(targets.json()), ajv.errorsText(validateTargetPage.errors)).toBe(true);
+    expect(
+      validateAccessRecipePage(accessRecipes.json()),
+      ajv.errorsText(validateAccessRecipePage.errors),
+    ).toBe(true);
   });
 });
