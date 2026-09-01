@@ -18,13 +18,13 @@ describe("public catalogue contract", () => {
       integrations: { connector: "available" },
       accessRecipe: {
         sourceReference: "HKAPI-001",
-        effectiveStatus: "fixture-tested",
+        effectiveStatus: "live-verified",
       },
     });
     expect(catalogue.counts).toMatchObject({
       accessExecutable: 37,
-      accessLiveVerified: 0,
-      byAccessStatus: { "fixture-tested": 37, "manual-only": 228 },
+      accessLiveVerified: 29,
+      byAccessStatus: { "live-verified": 29, "fixture-tested": 8, "manual-only": 228 },
     });
   });
 });

@@ -15,7 +15,7 @@ behaviour. It is not a general allowlist. Each entry is path-scoped and expires 
 - **Compensating controls:** No public database port; internal data network; least-privileged
   application and webhook roles; no broad host mount; pinned base image; runtime container and image
   vulnerability scans.
-- **Reassessment:** Recheck whether the upstream image offers a supported rootless initialization
+- **Reassessment:** Recheck whether the original image offers a supported rootless initialization
   path before the expiry date.
 
 This acceptance does not qualify a deployment or waive an operator's responsibility to secure the

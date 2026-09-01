@@ -81,3 +81,35 @@ credentials, Terraform state, local environment files, logs, caches, and private
 Local test and scan results are recorded in `RELEASE_EVIDENCE.md`. GitHub publication, required CI,
 Pages deployment, release creation, and live acceptance must be recorded separately after they
 actually occur. A local green suite does not imply those external outcomes.
+
+## 2026-09-01 source-access toolkit addendum
+
+The source-access expansion is locally qualified for a future release with these public boundaries:
+
+- All 265 official catalogue entries have source-specific access guidance. Thirty-seven have
+  executable, read-only request recipes with deterministic curl, Python and TypeScript examples;
+  228 provide manual guidance to the source's official documentation.
+- A bounded anonymous check on 2026-09-01 verified 29 executable recipes. Eight remain supported by
+  synthetic fixtures only. These labels are dated technical evidence, not an uptime promise or a
+  permission statement.
+- The catalogue shows ten resources initially and can filter by access evidence. It does not contact
+  a listed source unless a person deliberately uses an example or verification command.
+- REST and both SDKs expose the same generated recipes. The two MCP recipe tools list or retrieve
+  guidance only and cannot execute a source request.
+- The default self-hosted profile serves the catalogue without source requests. The two optional
+  profiles require an explicit selection; every included source and connector remains inactive
+  until separately configured.
+- The data-access profile keeps its object store private. Container checks confirmed that both
+  optional profiles start with zero active sources and that REST and MCP return the same recipe hash
+  and evidence status as the generated registry.
+
+Local qualification covered the complete repository gate, the PostgreSQL/PostGIS migration and
+isolation tests, synthetic connector raw-byte persistence, both Docker profiles, REST/MCP parity,
+browser and accessibility behavior, dependency audits, deterministic generation, and secret and
+public-boundary scans. The exact commands and observed results are recorded in
+`RELEASE_EVIDENCE.md`.
+
+This addendum does not amend source terms or grant permission to use, cache, scrape, combine,
+redistribute, or commercialize any third-party content. It also does not record a GitHub push,
+hosted CI result, Pages deployment, release publication, source-owner approval, production
+operation, legal clearance, or independent certification.

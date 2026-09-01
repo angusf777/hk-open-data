@@ -23,6 +23,9 @@ docker build \
   --platform linux/amd64 \
   --tag "$POSTGRES_TEST_IMAGE" \
   --file infra/docker/postgres.Dockerfile \
-  ..
+  .
 pnpm --filter @hk-open-data/api exec vitest run src/postgres-container.test.ts
+uv run pytest \
+  tests/integration/test_job_execution.py::test_connector_job_persists_raw_bytes_before_parsing_records \
+  -q
 uv run pytest tests/integration/test_compose_config.py -q

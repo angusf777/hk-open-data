@@ -10,7 +10,7 @@ Use when a local MCP client or gateway token must lose access to the self-hosted
 ## Procedure
 
 Revoke the identity-provider token or client, terminate active transport sessions, and rotate any
-shared local secret. Do not change upstream provider accounts through this runbook.
+shared local secret. Do not change source-provider accounts through this runbook.
 
 ## Verification
 

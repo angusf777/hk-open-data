@@ -44,7 +44,7 @@ verify-runtime:
 	node scripts/check-secrets.mjs
 
 verify-integrated:
-	RUN_DOCKER_TESTS=1 uv run pytest tests/integration/test_compose_config.py -q
+	sh scripts/run-integrated-tests.sh
 
 verify-all: verify-catalogue verify-access verify-site verify-runtime check-boundary check-secrets test-repository
 

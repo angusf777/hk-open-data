@@ -3,7 +3,7 @@
 **Contract version:** `2026-09-01.v1`
 **Runtime rule:** read-only; no third-party MCP dependency
 
-The MCP server is an alternate read transport over the same authorized application services used by the REST API. It must not query upstream providers directly, bypass approval state, expose raw credentials or turn external content into instructions.
+The MCP server is an alternate read transport over the same authorized application services used by the REST API. It must not query listed sources directly, bypass approval state, expose raw credentials or turn external content into instructions.
 
 ## Common response envelope
 
@@ -23,7 +23,7 @@ Every successful tool result contains:
 }
 ```
 
-Errors contain `code`, `message`, `retryable` and `correlation_id`. They never contain secrets, upstream authorization headers or raw stack traces.
+Errors contain `code`, `message`, `retryable` and `correlation_id`. They never contain secrets, source authorization headers or raw stack traces.
 
 ## Tools
 
@@ -125,7 +125,7 @@ Lists the project-authored technical access recipes stored by the REST service.
 - Inputs: `adapter`, `status`, `authentication`, `freshness`, `cursor`, `limit`
 - Required scope: none
 - Output: bounded recipe summaries, generated examples, verification status and limitations
-- Provider traffic: none; this tool reads the local recipe registry only
+- Requests to listed sources: none; this tool reads the local recipe registry only
 
 ### `access_recipe_get`
 
@@ -134,7 +134,7 @@ Gets one project-authored access recipe and its generated code examples.
 - Inputs: `source_reference`
 - Required scope: none
 - Output: endpoint template, bounded parameters, authentication setup, response shape, examples and limitations
-- Provider traffic: none; this tool cannot execute a recipe or accept an arbitrary URL
+- Requests to listed sources: none; this tool cannot execute a recipe or accept an arbitrary URL
 
 ## Explicitly prohibited tools
 

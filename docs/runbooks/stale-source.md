@@ -5,7 +5,7 @@ Use this when the last provider timestamp exceeds the source-specific freshness 
 ## Preconditions
 
 - Distinguish provider publication time from local retrieval time.
-- Check the schedule lease and last completed run before attributing the delay upstream.
+- Check the schedule lease and last completed run before attributing the delay to the listed source.
 
 ## Procedure
 

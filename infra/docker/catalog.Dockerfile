@@ -10,6 +10,7 @@ RUN pnpm install --frozen-lockfile --filter @hk-open-data/catalog...
 RUN uv sync --frozen
 COPY apps/catalog apps/catalog
 COPY catalog catalog
+COPY access/generated access/generated
 COPY scripts/catalog.py scripts/catalog.py
 RUN pnpm --filter @hk-open-data/catalog build && cp -R apps/catalog/dist /site
 

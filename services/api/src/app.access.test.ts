@@ -26,7 +26,7 @@ describe("public access recipe routes", () => {
     const fetchSpy = vi.spyOn(globalThis, "fetch");
     const response = await app().inject({
       method: "GET",
-      url: "/v1/access-recipes?status=fixture-tested&limit=2",
+      url: "/v1/access-recipes?status=live-verified&limit=2",
     });
 
     expect(response.statusCode).toBe(200);
@@ -34,8 +34,8 @@ describe("public access recipe routes", () => {
     expect(body.items).toHaveLength(2);
     expect(body.items[0]).toMatchObject({
       source_reference: "HKAPI-001",
-      status: "fixture-tested",
-      effective_status: "fixture-tested",
+      status: "live-verified",
+      effective_status: "live-verified",
     });
     expect(body.page).toEqual({ next_cursor: "HKAPI-002" });
     expect(JSON.stringify(body)).not.toMatch(/authorization|cookie|secret-token/i);

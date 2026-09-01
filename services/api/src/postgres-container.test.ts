@@ -16,7 +16,12 @@ describe.skipIf(!dockerEnabled)("PostgreSQL 16/PostGIS integration", () => {
   let tenantPool: Pool;
 
   beforeAll(async () => {
-    container = await new PostgreSqlContainer(postgresImage).start();
+    container = await new PostgreSqlContainer(postgresImage)
+      .withEnvironment({
+        POSTGRES_APP_PASSWORD: "app-runtime-test",
+        POSTGRES_WEBHOOK_PASSWORD: "webhook-runtime-test",
+      })
+      .start();
     pool = new Pool({ connectionString: container.getConnectionUri() });
     await applyMigrations(pool);
     await pool.query(

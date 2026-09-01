@@ -1,7 +1,7 @@
 # Credential rotation
 
-Use this for operator-owned database, object-store, identity, or webhook credentials. Upstream
-provider credentials are outside this repository.
+Use this for database, object-store, identity, or webhook credentials managed by your deployment.
+Source-provider credentials are outside this repository.
 
 ## Preconditions
 
@@ -10,7 +10,7 @@ provider credentials are outside this repository.
 
 ## Procedure
 
-Create the replacement in the operator's secret store, update one service at a time, verify it,
+Create the replacement in your secret manager, update one service at a time, verify it,
 then revoke the old value. Never place functional credentials in Compose, issues, logs, or commits.
 
 ## Verification

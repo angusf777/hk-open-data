@@ -148,3 +148,35 @@ Python TLS trust path). TLS verification was not weakened. These results describ
 from this host; evidence expires at each record's `validUntil` timestamp and does not guarantee
 future availability, provider approval, data quality, licensing, or permission for commercial use,
 caching, scraping or redistribution.
+
+## 2026-09-01 — source-access toolkit local release qualification
+
+- **Tested tree base:** `b58a19bc6ca772953959594b38d9c0411d9c6d41`
+- **Branch:** `codex/source-access-toolkit-implementation`
+- **Environment:** macOS arm64; Node.js `v22.22.3`; pnpm `10.0.0`; uv `0.11.16`;
+  Docker `29.7.2`; Compose `5.5.0`
+- **Catalogue:** 521 resources; 265 official; ten shown initially
+- **Access registry:** 265 classified; 37 executable; 29 live-verified; 8 fixture-tested;
+  228 manual-only; zero unclassified
+- **Contract manifest:** `2026-09-01.v1`; eight synchronized contracts
+
+| Command or gate | Observed result |
+| --- | --- |
+| `make verify-all` | Passed: deterministic 521-resource catalogue and 265-recipe registry; 6/6 Chromium catalogue/accessibility scenarios; all workspace tests, type checks and builds; Ruff; strict mypy; full Python suite; secret and public-boundary scans; 25/25 repository policy tests |
+| `make verify-integrated` | Passed: 3/3 PostgreSQL 16/PostGIS tests, 1/1 synthetic connector raw-byte persistence test, and 13/13 Docker/Compose integration tests |
+| Docker profile checks | The API and web health checks passed; the optional observation and data-access profiles started with zero active sources; the data-access profile used private object storage; REST and MCP HKAPI-001 recipe hash/status matched the generated registry |
+| `node scripts/check-contract-drift.mjs` | Passed; all eight contract hashes matched the manifest |
+| `pnpm audit --prod` | No known production dependency vulnerabilities reported |
+| `uv run pip-audit` | No known vulnerabilities reported for published Python dependencies; the two repository-local packages were correctly skipped because they are not PyPI distributions |
+| `node scripts/check-secrets.mjs` and public-boundary checks | Passed; metadata-only source evidence and public files met the repository safeguards |
+| `git diff --check` | Passed with no whitespace error before the qualification record was added |
+
+Two stale unit expectations were found and corrected during the broad gate after HKAPI-001 moved
+from fixture-tested to live-verified. The isolated database test was also aligned with the hardened
+image's required runtime-role passwords. Focused tests passed after each correction, followed by
+the complete green gates above.
+
+This entry qualifies the local source-access toolkit tree only. It does not record a GitHub push,
+hosted CI, Pages deployment, tag, release publication, source-owner permission, production
+deployment, legal clearance, or independent acceptance. Live-verification evidence is bounded to
+the recorded date and validity period; original source terms remain controlling.

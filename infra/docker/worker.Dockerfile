@@ -7,7 +7,9 @@ RUN apk upgrade --no-cache \
     && adduser -D -u 10001 -G app app
 COPY --from=uv /uv /uvx /bin/
 COPY pyproject.toml uv.lock ./
-RUN uv sync --frozen --no-dev
+COPY services/worker/pyproject.toml services/worker/pyproject.toml
+COPY packages/sdk-python/pyproject.toml packages/sdk-python/pyproject.toml
+RUN uv sync --frozen --no-dev --package hk-data-worker --no-install-package hk-data-worker
 COPY --chown=10001:10001 services/worker services/worker
 COPY --chown=10001:10001 access/recipes access/recipes
 COPY --chown=10001:10001 access/schemas access/schemas
