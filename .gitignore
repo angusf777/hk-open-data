@@ -24,3 +24,4 @@ playwright-report/
 *.sqlite3
 *.db
 .superpowers/
+.worktrees/
