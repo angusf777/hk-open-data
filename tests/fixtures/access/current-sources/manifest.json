@@ -1,0 +1,122 @@
+{
+  "HKAPI-001": {
+    "documentationUrl": "https://data.gov.hk/en/help/ckan-api-development-guide",
+    "file": "ckan-list.json",
+    "fixtureSha256": "7f1bf1ca0d13e03c8f5267a66f227f042be7b352b08b34ad441107767aa0bc6b",
+    "mediaType": "application/json",
+    "provenance": "synthetic-authored",
+    "recipeSha256": "c6fb11862c9e7fbe201eb4b7f566860bbe802f5b795a626b54099e8fb135e0c4"
+  },
+  "HKAPI-002": {
+    "documentationUrl": "https://data.gov.hk/en/help/ckan-api-development-guide",
+    "file": "ckan-object.json",
+    "fixtureSha256": "2d21d5434ac7e9f43bb47a95fb62689057acdfbc29efe1c6912c29a18105d338",
+    "mediaType": "application/json",
+    "provenance": "synthetic-authored",
+    "recipeSha256": "4719fb60de469a61bd508abb80a1d3abb021d64e414def54562c25cba06d44d9"
+  },
+  "HKAPI-003": {
+    "documentationUrl": "https://data.gov.hk/en/help/ckan-api-development-guide",
+    "file": "ckan-list.json",
+    "fixtureSha256": "7f1bf1ca0d13e03c8f5267a66f227f042be7b352b08b34ad441107767aa0bc6b",
+    "mediaType": "application/json",
+    "provenance": "synthetic-authored",
+    "recipeSha256": "13f37b348f006018a1483f980753486063b2624b62c93fb54e2f7b2fff974121"
+  },
+  "HKAPI-004": {
+    "documentationUrl": "https://data.gov.hk/en/help/ckan-api-development-guide",
+    "file": "ckan-object.json",
+    "fixtureSha256": "2d21d5434ac7e9f43bb47a95fb62689057acdfbc29efe1c6912c29a18105d338",
+    "mediaType": "application/json",
+    "provenance": "synthetic-authored",
+    "recipeSha256": "7dccc7283520ca94f30a750594aa0b1c57698b7c88f8fe735ffac48188af6a53"
+  },
+  "HKAPI-005": {
+    "documentationUrl": "https://data.gov.hk/en/help/api-spec",
+    "file": "archive-list.json",
+    "fixtureSha256": "0b6ce04040d86a02efdbcee7b48567dba0748f60e6e0b0d5f13f0e8af661b60c",
+    "mediaType": "application/json",
+    "provenance": "synthetic-authored",
+    "recipeSha256": "f287d0ad0c980fa96ec6cbc7ce01e7305eb91ce033424c54499bcf6c51a171f9"
+  },
+  "HKAPI-006": null,
+  "HKAPI-007": null,
+  "HKAPI-008": null,
+  "HKAPI-009": null,
+  "HKAPI-010": null,
+  "HKAPI-012": {
+    "documentationUrl": "https://data.gov.hk/en/dev-center",
+    "file": "changed-feed.xml",
+    "fixtureSha256": "8a05dd6f224dc958c82bdc1b2ffd07865cba5c9de993476509243cbf2cc24a1c",
+    "mediaType": "application/rss+xml",
+    "provenance": "synthetic-authored",
+    "recipeSha256": "6627d21f46cedd018b34c108951604795458c65e91fb36cac94c71e44ce1b174"
+  },
+  "HKAPI-013": {
+    "documentationUrl": "https://portal.csdi.gov.hk/csdi-webpage/doc/GeoSpatialServices",
+    "file": "wfs-capabilities.xml",
+    "fixtureSha256": "4129cb9016d8385d7251ede60f2d60c80123e2d508b06989eee067244500f8b5",
+    "mediaType": "application/xml",
+    "provenance": "synthetic-authored",
+    "recipeSha256": "577c19b61df5c9f15cd5015c5dc72569dc38e0adda137173e418ae85897294fd"
+  },
+  "HKAPI-014": {
+    "documentationUrl": "https://portal.csdi.gov.hk/csdi-webpage/doc/GeoSpatialServices",
+    "file": "csw-capabilities.xml",
+    "fixtureSha256": "87faa2a0a31062d7c017470c9282d96a1f7e1ceb64fa53ff785b642036716275",
+    "mediaType": "application/xml",
+    "provenance": "synthetic-authored",
+    "recipeSha256": "2a8d433b8a331bf8254428f6e23c01015815a95f1bc0e90a552ff4e9b1ce9f2b"
+  },
+  "HKAPI-015": null,
+  "HKAPI-016": {
+    "documentationUrl": "https://data.weather.gov.hk/weatherAPI/doc/HKO_Open_Data_API_Documentation.pdf",
+    "file": "hko-weather.json",
+    "fixtureSha256": "387f1a76d4e5f7568f9181e151e20cd4f4f99e05862e3490bf3e8deebcd9067f",
+    "mediaType": "application/json",
+    "provenance": "synthetic-authored",
+    "recipeSha256": "2ebdbbe573bc6c8ca8d70f063ed0bf225e8603a0f9debd978dfc26961531ae85"
+  },
+  "HKAPI-017": null,
+  "HKAPI-018": {
+    "documentationUrl": "https://apidocs.hkma.gov.hk/documentation/market-data-and-statistics/monthly-statistical-bulletin/er-ir/er-eeri-daily/",
+    "file": "hkma.json",
+    "fixtureSha256": "13875a1d14427e3167334313489a71ad5616ac960fbbb11f74d334d2a36eb29b",
+    "mediaType": "application/json",
+    "provenance": "synthetic-authored",
+    "recipeSha256": "afc1a3bd00e1655b21070927e82dc0cd6b14c3f380dad271b7171bbdc9541b12"
+  },
+  "HKAPI-019": null,
+  "HKAPI-020": {
+    "documentationUrl": "https://www.legco.gov.hk/en/open-legco/open-data/questions-at-council-meetings.html",
+    "file": "legco.json",
+    "fixtureSha256": "96859b285189c45045284807428596fab8585d45a5352ab21ec0792e8c591f94",
+    "mediaType": "application/json",
+    "provenance": "synthetic-authored",
+    "recipeSha256": "6d2c0cfe555d4386191bbeb774107a00bba8aabb0f7b07df05a78c1d5abf2ae4"
+  },
+  "HKAPI-021": {
+    "documentationUrl": "https://www.als.gov.hk/docs/Data_Dictionary_for_ALS_EN.pdf",
+    "file": "address.json",
+    "fixtureSha256": "4e53ef4ec0e9b7f5054813cb9f5aef720d27afda40d800a304596815352fe60b",
+    "mediaType": "application/json",
+    "provenance": "synthetic-authored",
+    "recipeSha256": "2a4b8e705db972a352a8a44eebfe8395b5681bc17c7119fc6c70bca433b94eb0"
+  },
+  "HKAPI-023": {
+    "documentationUrl": "https://portal.csdi.gov.hk/csdi-webpage/apidoc/TopographicMapAPI",
+    "file": "tile.png",
+    "fixtureSha256": "9c56983ca5b91bf1888a6ff3557410192041cf5552cc69015d798362b28a4763",
+    "mediaType": "image/png",
+    "provenance": "synthetic-authored",
+    "recipeSha256": "50b77056b939d263887d928ea17c3ee30b629a871ae297d2ba0c237f89abc4dd"
+  },
+  "HKAPI-034": {
+    "documentationUrl": "https://opendata.mtr.com.hk/doc/MTR_BUS_API_Spec_v1.7.pdf",
+    "file": "mtr-bus.json",
+    "fixtureSha256": "43345749e12137a558e21dd06fe750968428837a36851032488b955440caa2e6",
+    "mediaType": "application/json",
+    "provenance": "synthetic-authored",
+    "recipeSha256": "4d1d78266127d4d457664d25efc706062440ad8937557c55b502aa55e2f53c96"
+  }
+}

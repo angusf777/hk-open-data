@@ -1,4 +1,4 @@
-import { parseOperatingProfile } from "@hk-open-data/schemas";
+import { loadAccessRecipeIndex, parseOperatingProfile } from "@hk-open-data/schemas";
 import { Pool } from "pg";
 
 import { buildApp } from "./app.js";
@@ -40,6 +40,7 @@ const app = buildApp({
   }),
   operatingProfile: parseOperatingProfile(process.env.HKOD_PROFILE),
   trustedProxies,
+  accessRecipes: loadAccessRecipeIndex().recipes,
 });
 
 const webhookSender = new SafeWebhookSender();

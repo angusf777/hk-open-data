@@ -103,14 +103,18 @@ def normalize_records(
     raw_hash = sha256(result.body).hexdigest()
     records: list[SourceRecordDraft] = []
     for index, item in enumerate(items):
-        if not isinstance(item, Mapping):
+        if item is None or isinstance(item, dict | list):
+            source_item: object = item
+        else:
+            source_item = {"value": item}
+        if not isinstance(source_item, Mapping):
             raise access_failure(
                 recipe.source_reference,
                 recipe.recipe_version,
                 "SCHEMA_MISMATCH",
                 "A selected record is not an object.",
             )
-        source = {str(key): value for key, value in item.items()}
+        source = {str(key): value for key, value in source_item.items()}
         record_key = _record_key(recipe, source, index)
         data = _mapped_record(recipe, source)
         canonical = _canonical_bytes(data)

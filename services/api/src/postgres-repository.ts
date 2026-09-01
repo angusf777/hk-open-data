@@ -1035,16 +1035,10 @@ class PostgresPlatformRepository implements PlatformRepository {
         connector_id: input.connectorId,
         source_group_id: input.sourceGroupId,
         source_id: input.sourceId,
-        endpoint: input.endpoint,
-        method: input.method,
-        request_body: input.requestBody,
+        recipe_reference: input.recipeReference,
+        parameters: input.parameters,
         project: input.project,
         purpose: input.purpose,
-        timeout_ms: input.timeoutMs,
-        max_response_bytes: input.maxResponseBytes,
-        max_compressed_response_bytes: input.maxCompressedResponseBytes,
-        max_attempts: input.maxAttempts,
-        pagination: input.pagination,
       };
       await client.query(
         `INSERT INTO connector_definition (
@@ -1096,6 +1090,8 @@ class PostgresPlatformRepository implements PlatformRepository {
             sourceId: input.sourceId,
             sourceGroupId: input.sourceGroupId,
             codeVersion: input.codeVersion,
+            recipeReference: input.recipeReference,
+            parameters: input.parameters,
             project: input.project,
             purpose: input.purpose,
             fixtureEvidenceUrl: input.fixtureEvidenceUrl,

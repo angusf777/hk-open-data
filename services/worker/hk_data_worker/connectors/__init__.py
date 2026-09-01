@@ -1,7 +1,9 @@
 from __future__ import annotations
 
+from hk_data_worker.access.registry import REPOSITORY_ROOT, load_recipes
+
 from .address import AddressConnector
-from .base import Connector
+from .base import Connector, RecipeConnector
 from .ckan import CkanConnector
 from .companies import CompaniesConnector
 from .csd import CsdConnector
@@ -28,4 +30,9 @@ CONNECTORS: dict[str, Connector] = {
     )
 }
 
-__all__ = ["CONNECTORS"]
+RECIPE_CONNECTORS: dict[str, RecipeConnector] = {
+    recipe.source_reference: RecipeConnector(recipe)
+    for recipe in load_recipes(REPOSITORY_ROOT / "access" / "recipes" / "official")
+}
+
+__all__ = ["CONNECTORS", "RECIPE_CONNECTORS"]

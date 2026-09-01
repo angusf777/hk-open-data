@@ -297,7 +297,7 @@
     "/v1/admin/sources/{source_id}/connectors": {
       "post": {
         "operationId": "activateConnector",
-        "summary": "Activate an approved connector version and scheduler job",
+        "summary": "Activate an approved source recipe and scheduler job",
         "tags": ["Administration"],
         "security": [{"bearerAuth": []}],
         "parameters": [{"$ref": "#/components/parameters/SourceId"}, {"$ref": "#/components/parameters/IfMatch"}],
@@ -536,21 +536,15 @@
       },
       "ConnectorActivationInput": {
         "type": "object",
-        "required": ["connector_id", "source_group_id", "code_version", "endpoint", "method", "request_body", "project", "purpose", "timeout_ms", "max_response_bytes", "max_compressed_response_bytes", "max_attempts", "pagination", "cadence_seconds", "fixture_evidence_url", "live_probe_evidence_url", "reason"],
+        "required": ["connector_id", "source_group_id", "code_version", "recipe_reference", "parameters", "project", "purpose", "cadence_seconds", "fixture_evidence_url", "live_probe_evidence_url", "reason"],
         "properties": {
           "connector_id": {"type": "string", "pattern": "^[A-Z0-9][A-Z0-9._-]{2,127}$"},
           "source_group_id": {"type": "string", "pattern": "^P01-SG-(0[1-9]|10)$"},
           "code_version": {"type": "string", "minLength": 1},
-          "endpoint": {"type": "string", "format": "uri", "pattern": "^https://"},
-          "method": {"enum": ["GET", "POST"]},
-          "request_body": {"type": ["object", "null"]},
+          "recipe_reference": {"type": "string", "pattern": "^HKAPI-[0-9]{3}$"},
+          "parameters": {"type": "object", "additionalProperties": {"type": ["string", "number", "boolean"]}},
           "project": {"const": "P01"},
           "purpose": {"const": "connector-observation"},
-          "timeout_ms": {"type": "integer", "minimum": 1, "maximum": 120000},
-          "max_response_bytes": {"type": "integer", "minimum": 1, "maximum": 1073741824},
-          "max_compressed_response_bytes": {"type": "integer", "minimum": 1, "maximum": 1073741824},
-          "max_attempts": {"type": "integer", "minimum": 1, "maximum": 5},
-          "pagination": {"type": ["object", "null"], "properties": {"next_url_pointer": {"type": "string", "pattern": "^/"}, "max_pages": {"type": "integer", "minimum": 1, "maximum": 100}}, "required": ["next_url_pointer", "max_pages"], "additionalProperties": false},
           "cadence_seconds": {"type": "integer", "minimum": 1, "maximum": 2592000},
           "fixture_evidence_url": {"type": "string", "format": "uri"},
           "live_probe_evidence_url": {"type": "string", "format": "uri"},

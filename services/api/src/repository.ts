@@ -133,16 +133,10 @@ export interface ActivateConnectorInput {
   sourceGroupId: string;
   connectorId: string;
   codeVersion: string;
-  endpoint: string;
-  method: "GET" | "POST";
-  requestBody: { [key: string]: JsonValue } | null;
+  recipeReference: string;
+  parameters: { [key: string]: string | number | boolean };
   project: string;
   purpose: string;
-  timeoutMs: number;
-  maxResponseBytes: number;
-  maxCompressedResponseBytes: number;
-  maxAttempts: number;
-  pagination: { next_url_pointer: string; max_pages: number } | null;
   cadenceSeconds: number;
   fixtureEvidenceUrl: string;
   liveProbeEvidenceUrl: string;

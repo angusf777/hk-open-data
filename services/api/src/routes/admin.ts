@@ -62,34 +62,14 @@ const connectorActivationInput = z
     connector_id: z.string().regex(/^[A-Z0-9][A-Z0-9._-]{2,127}$/),
     source_group_id: z.string().regex(/^P01-SG-(0[1-9]|10)$/),
     code_version: z.string().trim().min(1),
-    endpoint: z.url().refine((value) => value.startsWith("https://"), "Endpoint must use HTTPS"),
-    method: z.enum(["GET", "POST"]),
-    request_body: z.record(z.string(), z.json()).nullable().default(null),
+    recipe_reference: z.string().regex(/^HKAPI-[0-9]{3}$/),
+    parameters: z.record(z.string(), z.union([z.string(), z.number(), z.boolean()])).default({}),
     project: z.literal("P01"),
     purpose: z.literal("connector-observation"),
-    timeout_ms: z.number().int().positive().max(120_000),
-    max_response_bytes: z.number().int().positive().max(1_073_741_824),
-    max_compressed_response_bytes: z.number().int().positive().max(1_073_741_824),
-    max_attempts: z.number().int().min(1).max(5).default(3),
-    pagination: z
-      .object({
-        next_url_pointer: z.string().regex(/^\//),
-        max_pages: z.number().int().min(1).max(100),
-      })
-      .nullable()
-      .default(null),
     cadence_seconds: z.number().int().positive().max(2_592_000),
     fixture_evidence_url: z.url(),
     live_probe_evidence_url: z.url(),
     reason: z.string().trim().min(1),
-  })
-  .superRefine((value, context) => {
-    if (value.method === "POST" && value.request_body === null) {
-      context.addIssue({ code: "custom", path: ["request_body"], message: "POST requires a body" });
-    }
-    if (value.method === "GET" && value.request_body !== null) {
-      context.addIssue({ code: "custom", path: ["request_body"], message: "GET cannot have a body" });
-    }
   });
 
 function expectedVersion(header: string | string[] | undefined): number {
@@ -231,22 +211,37 @@ export function registerAdminRoutes(app: FastifyInstance, context: RouteContext)
     );
     const params = z.object({ source_id: identifier }).parse(request.params);
     const body = connectorActivationInput.parse(request.body);
+    if (body.recipe_reference !== params.source_id) {
+      throw new HttpError(400, "INVALID_REQUEST", "Recipe reference must match the source ID");
+    }
+    const recipe = context.accessRecipes.get(body.recipe_reference);
+    if (recipe === undefined) {
+      throw new HttpError(400, "INVALID_REQUEST", "Recipe reference is not in the registry");
+    }
+    if (recipe.request === null || recipe.adapter === "none") {
+      throw new HttpError(400, "INVALID_REQUEST", "Recipe is not executable");
+    }
+    const declaredParameters = new Set(recipe.request.parameters.map((item) => item.name));
+    const unknownParameter = Object.keys(body.parameters).find(
+      (name) => !declaredParameters.has(name),
+    );
+    if (unknownParameter !== undefined) {
+      throw new HttpError(
+        400,
+        "INVALID_REQUEST",
+        `Parameter is not declared by the recipe: ${unknownParameter}`,
+      );
+    }
     const source = await context.repository.activateConnector(
       {
         sourceId: params.source_id,
         sourceGroupId: body.source_group_id,
         connectorId: body.connector_id,
         codeVersion: body.code_version,
-        endpoint: body.endpoint,
-        method: body.method,
-        requestBody: body.request_body,
+        recipeReference: body.recipe_reference,
+        parameters: body.parameters,
         project: body.project,
         purpose: body.purpose,
-        timeoutMs: body.timeout_ms,
-        maxResponseBytes: body.max_response_bytes,
-        maxCompressedResponseBytes: body.max_compressed_response_bytes,
-        maxAttempts: body.max_attempts,
-        pagination: body.pagination,
         cadenceSeconds: body.cadence_seconds,
         fixtureEvidenceUrl: body.fixture_evidence_url,
         liveProbeEvidenceUrl: body.live_probe_evidence_url,

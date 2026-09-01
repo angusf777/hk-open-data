@@ -8,15 +8,12 @@ from typing import Any, cast
 import pytest
 from hk_data_worker.execution import DatabaseJobExecutor, ExecutionBlocked, connector_run_id
 from hk_data_worker.hashing import sha256_hex
-from hk_data_worker.models import FetchResult, MonitorTarget, RawObjectRef
+from hk_data_worker.models import ApprovedRequest, FetchResult, MonitorTarget, RawObjectRef
 from hk_data_worker.monitor.baseline import schema_shape
 from hk_data_worker.scheduler import SchedulerJob
 from hk_data_worker.storage import DigestOnlyEvidenceStore
 
 NOW = datetime(2026, 8, 28, 10, tzinfo=UTC)
-FIXTURES = Path(__file__).resolve().parents[1] / "fixtures" / "connectors"
-
-
 class Cursor:
     def __init__(self, row: dict[str, object] | None = None) -> None:
         self._row = row
@@ -77,9 +74,10 @@ class FakeFetcher:
     def __init__(self, body: bytes) -> None:
         self.body = body
         self.calls = 0
+        self.requests: list[ApprovedRequest] = []
 
-    def fetch(self, request: object) -> FetchResult:
-        del request
+    def fetch(self, request: ApprovedRequest) -> FetchResult:
+        self.requests.append(request)
         self.calls += 1
         return FetchResult(
             status_code=200,
@@ -87,22 +85,6 @@ class FakeFetcher:
             body=self.body,
             final_url="https://provider.example/data",
             elapsed_ms=12,
-        )
-
-
-class SequenceFetcher:
-    def __init__(self, pages: list[tuple[str, bytes]]) -> None:
-        self.pages = iter(pages)
-
-    def fetch(self, request: object) -> FetchResult:
-        del request
-        url, body = next(self.pages)
-        return FetchResult(
-            status_code=200,
-            headers={"content-type": "application/json"},
-            body=body,
-            final_url=url,
-            elapsed_ms=10,
         )
 
 
@@ -146,25 +128,40 @@ def target() -> MonitorTarget:
 
 
 def test_connector_job_persists_raw_bytes_before_parsing_records() -> None:
-    request = json.loads((FIXTURES / "p01-sg-01" / "request.json").read_text())
-    body = (FIXTURES / "p01-sg-01" / "response.json").read_bytes()
+    definition = {
+        "connector_id": "CONN-001",
+        "source_group_id": "P01-SG-01",
+        "source_id": "HKAPI-001",
+        "recipe_reference": "HKAPI-001",
+        "parameters": {"limit": 10, "offset": 0},
+        "project": "P01",
+        "purpose": "connector-observation",
+    }
+    body = (
+        Path(__file__).parents[1]
+        / "fixtures"
+        / "access"
+        / "current-sources"
+        / "ckan-list.json"
+    ).read_bytes()
     connection = FakeConnection(
         {
             "FROM connector_definition": {
                 "connector_id": "CONN-001",
                 "source_group_id": "P01-SG-01",
                 "code_version": "1.0.0",
-                "configuration_schema": request["definition"],
+                "configuration_schema": definition,
             },
             "FROM source_approval": approval_row("HKAPI-001"),
         }
     )
     store = FakeStore()
+    fetcher = FakeFetcher(body)
     executor = DatabaseJobExecutor(
         cast(Any, connection),
         targets={},
         evidence_store=store,
-        fetcher=FakeFetcher(body),
+        fetcher=fetcher,
         clock=lambda: NOW,
     )
 
@@ -188,6 +185,9 @@ def test_connector_job_persists_raw_bytes_before_parsing_records() -> None:
         if "INSERT INTO source_record" in sql
     )
     assert store.puts == [body]
+    assert fetcher.requests[0].url == (
+        "https://data.gov.hk/en-data/api/3/action/package_list?limit=10&offset=0"
+    )
     assert raw_insert < record_insert
     assert any(
         "status = %s" in sql and "UPDATE connector_run" in sql for sql in connection.statements
@@ -410,35 +410,24 @@ def test_catalogue_profile_blocks_every_job_before_network_access() -> None:
     assert fetcher.calls == 0
 
 
-def test_later_page_quarantine_never_publishes_records_from_earlier_pages() -> None:
-    request = json.loads((FIXTURES / "p01-sg-01" / "request.json").read_text())
-    request["definition"]["pagination"] = {
-        "next_url_pointer": "/links/next",
-        "max_pages": 3,
+def test_schema_quarantine_never_publishes_partial_records() -> None:
+    definition = {
+        "connector_id": "CONN-001",
+        "source_group_id": "P01-SG-01",
+        "source_id": "HKAPI-001",
+        "recipe_reference": "HKAPI-001",
+        "parameters": {"limit": 10, "offset": 0},
+        "project": "P01",
+        "purpose": "connector-observation",
     }
-    first_url = request["definition"]["endpoint"]
-    second_url = "https://data.gov.hk/data?page=2"
-    first = json.dumps(
-        {
-            "success": True,
-            "result": [{"id": "duplicate", "title": "first"}],
-            "links": {"next": second_url},
-        }
-    ).encode()
-    second = json.dumps(
-        {
-            "success": True,
-            "result": [{"id": "duplicate", "title": "second"}],
-            "links": {"next": None},
-        }
-    ).encode()
+    body = json.dumps({"success": True, "result": "not-an-array"}).encode()
     connection = FakeConnection(
         {
             "FROM connector_definition": {
                 "connector_id": "CONN-001",
                 "source_group_id": "P01-SG-01",
                 "code_version": "1.0.0",
-                "configuration_schema": request["definition"],
+                "configuration_schema": definition,
             },
             "FROM source_approval": approval_row("HKAPI-001"),
         }
@@ -448,7 +437,7 @@ def test_later_page_quarantine_never_publishes_records_from_earlier_pages() -> N
         cast(Any, connection),
         targets={},
         evidence_store=store,
-        fetcher=SequenceFetcher([(first_url, first), (second_url, second)]),
+        fetcher=FakeFetcher(body),
         clock=lambda: NOW,
     )
 
@@ -463,7 +452,7 @@ def test_later_page_quarantine_never_publishes_records_from_earlier_pages() -> N
         )
     )
 
-    assert len(store.puts) == 2
+    assert store.puts == [body]
     assert not any("INSERT INTO source_record" in sql for sql in connection.statements)
     assert any(
         "UPDATE connector_run" in sql and parameters[0] == "quarantined"

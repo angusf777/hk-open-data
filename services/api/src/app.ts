@@ -1,7 +1,7 @@
 import { randomUUID } from "node:crypto";
 
 import rateLimit from "@fastify/rate-limit";
-import type { OperatingProfile } from "@hk-open-data/schemas";
+import type { AccessRecipe, OperatingProfile } from "@hk-open-data/schemas";
 import Fastify, { type FastifyInstance } from "fastify";
 import { ZodError } from "zod";
 
@@ -36,6 +36,7 @@ export interface BuildAppDependencies {
   webhookSender?: WebhookSender;
   operatingProfile?: OperatingProfile;
   trustedProxies?: string[];
+  accessRecipes?: readonly AccessRecipe[];
 }
 
 export function buildApp(dependencies: BuildAppDependencies): FastifyInstance {
@@ -102,6 +103,9 @@ export function buildApp(dependencies: BuildAppDependencies): FastifyInstance {
     clock,
     authenticate,
     operatingProfile,
+    accessRecipes: new Map(
+      (dependencies.accessRecipes ?? []).map((recipe) => [recipe.sourceReference, recipe]),
+    ),
   };
   app.register(async (routes) => {
     routes.get("/health/live", async () => ({

@@ -5,18 +5,20 @@ from datetime import UTC, datetime, timedelta
 from pathlib import Path
 
 import pytest
-from hk_data_worker.connectors import CONNECTORS
+from hk_data_worker.connectors import CONNECTORS, RECIPE_CONNECTORS
 from hk_data_worker.connectors.base import (
     ApprovalDenied,
     ConnectorDefinition,
     ConnectorPagination,
     QuarantineRequired,
+    RecipeConnectorDefinition,
 )
 from hk_data_worker.connectors.pagination import next_page_request
 from hk_data_worker.hashing import sha256_hex
 from hk_data_worker.models import Approval, ApprovedRequest, FetchResult, RawObjectRef
 
 FIXTURES = Path(__file__).resolve().parents[1] / "fixtures" / "connectors"
+ACCESS_FIXTURES = Path(__file__).resolve().parents[1] / "fixtures" / "access" / "current-sources"
 NOW = datetime(2026, 8, 28, 10, tzinfo=UTC)
 
 
@@ -42,6 +44,55 @@ def approval(source_id: str, decision: str = "approved") -> Approval:
 
 def test_registers_exactly_ten_source_group_connectors() -> None:
     assert tuple(CONNECTORS) == tuple(f"P01-SG-{index:02d}" for index in range(1, 11))
+
+
+def test_recipe_connectors_dispatch_by_source_reference() -> None:
+    definition = RecipeConnectorDefinition(
+        connector_id="CONN-HKAPI-001-V1",
+        source_group_id="P01-SG-01",
+        source_id="HKAPI-001",
+        recipe_reference="HKAPI-001",
+        parameters={"limit": 10, "offset": 0},
+        project="P01",
+        purpose="connector-observation",
+    )
+    connector = RECIPE_CONNECTORS[definition.recipe_reference]
+    body = (ACCESS_FIXTURES / "ckan-list.json").read_bytes()
+    raw = RawObjectRef(
+        raw_object_id=f"RAW-{sha256_hex(body)}",
+        object_uri="fixture://access/current-sources/ckan-list.json",
+        sha256=sha256_hex(body),
+        media_type="application/json",
+        size_bytes=len(body),
+        retention_class="rights-specific",
+    )
+    response = FetchResult(
+        status_code=200,
+        headers={"content-type": "application/json"},
+        body=body,
+        final_url="https://data.gov.hk/en-data/api/3/action/package_list?limit=10&offset=0",
+        elapsed_ms=1,
+    )
+
+    planned = connector.plan(definition, approval("HKAPI-001"), at=NOW)
+    records = connector.parse(definition, raw, response)
+
+    assert planned[0].url == response.final_url
+    assert all(record.source_group_id == "P01-SG-01" for record in records)
+    assert all(record.raw_object_id == raw.raw_object_id for record in records)
+
+
+def test_recipe_connector_definition_rejects_source_mismatch() -> None:
+    with pytest.raises(ValueError, match="recipe reference must match source"):
+        RecipeConnectorDefinition(
+            connector_id="CONN-HKAPI-001-V1",
+            source_group_id="P01-SG-01",
+            source_id="HKAPI-001",
+            recipe_reference="HKAPI-002",
+            parameters={},
+            project="P01",
+            purpose="connector-observation",
+        )
 
 
 @pytest.mark.parametrize("group_id", [f"P01-SG-{index:02d}" for index in range(1, 11)])

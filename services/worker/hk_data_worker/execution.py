@@ -11,10 +11,16 @@ from uuid import uuid4
 import psycopg
 from psycopg.rows import dict_row
 
+from .access.errors import AccessFailure
 from .config import EvidenceMode
-from .connectors import CONNECTORS
-from .connectors.base import ConnectorDefinition, QuarantineRequired, SourceRecordDraft
-from .connectors.pagination import next_page_request
+from .connectors import RECIPE_CONNECTORS
+from .connectors.base import (
+    ApprovalDenied,
+    QuarantineRequired,
+    RecipeConnectorDefinition,
+    RecipeUnavailable,
+    SourceRecordDraft,
+)
 from .fetch import BodyTooLarge, EgressDenied, FetchError, FetchTimedOut, SafeFetcher
 from .models import (
     Approval,
@@ -163,16 +169,23 @@ class DatabaseJobExecutor:
         if row is None:
             raise ExecutionBlocked("CONNECTOR_NOT_ACTIVE")
         configuration = _mapping(row["configuration_schema"], code="CONNECTOR_CONFIG_INVALID")
-        definition = ConnectorDefinition.model_validate(configuration)
-        connector = CONNECTORS.get(str(row["source_group_id"]))
+        definition = RecipeConnectorDefinition.model_validate(configuration)
+        connector = RECIPE_CONNECTORS.get(definition.recipe_reference)
         if connector is None:
-            raise ExecutionBlocked("CONNECTOR_FAMILY_UNAVAILABLE")
+            raise ExecutionBlocked("RECIPE_NOT_FOUND")
         approval = self._latest_approval(
             definition.source_id,
             project=definition.project,
             purpose=definition.purpose,
         )
-        requests = connector.plan(definition, approval, at=self._clock())
+        try:
+            requests = connector.plan(definition, approval, at=self._clock())
+        except ApprovalDenied as error:
+            raise ExecutionBlocked("APPROVAL_NOT_EFFECTIVE") from error
+        except RecipeUnavailable as error:
+            raise ExecutionBlocked("RECIPE_NOT_EXECUTABLE") from error
+        except AccessFailure as error:
+            raise ExecutionBlocked("CONNECTOR_PARAMETERS_INVALID") from error
         run_id = connector_run_id(job, str(row["code_version"]))
         started_at = self._clock()
         request_fingerprint = sha256(
@@ -205,50 +218,33 @@ class DatabaseJobExecutor:
         pending_records: list[SourceRecordDraft] = []
         seen_record_keys: set[tuple[str, str]] = set()
         try:
-            for initial_request in requests:
-                request: ApprovedRequest | None = initial_request
-                seen_urls = {initial_request.url}
-                completed_pages = 0
-                while request is not None:
-                    response = self._fetcher.fetch(request)
-                    completed_pages += 1
-                    media_type = response.headers.get(
-                        "content-type", "application/octet-stream"
-                    ).split(";", 1)[0]
-                    raw = self._persist_raw(
-                        response.body,
-                        media_type=media_type,
-                        retention_class=approval.retention,
-                    )
-                    raw_ids.append(raw.raw_object_id)
-                    response_metadata.append(
-                        {
-                            "page": completed_pages,
-                            "status": response.status_code,
-                            "final_url": response.final_url,
-                            "elapsed_ms": response.elapsed_ms,
-                            "raw_object_id": raw.raw_object_id,
-                        }
-                    )
-                    records = connector.parse(definition, raw, response.body)
-                    for record in records:
-                        key = (record.source_id, record.record_key)
-                        if key in seen_record_keys:
-                            raise QuarantineRequired("PAGINATION_DUPLICATE_RECORD")
-                        seen_record_keys.add(key)
-                        pending_records.append(record)
-                    if definition.pagination is None:
-                        request = None
-                    else:
-                        request = next_page_request(
-                            request,
-                            response,
-                            definition.pagination,
-                            completed_pages=completed_pages,
-                            seen_urls=seen_urls,
-                        )
-                        if request is not None:
-                            seen_urls.add(request.url)
+            for request_number, request in enumerate(requests, start=1):
+                response = self._fetcher.fetch(request)
+                media_type = response.headers.get(
+                    "content-type", "application/octet-stream"
+                ).split(";", 1)[0]
+                raw = self._persist_raw(
+                    response.body,
+                    media_type=media_type,
+                    retention_class=approval.retention,
+                )
+                raw_ids.append(raw.raw_object_id)
+                response_metadata.append(
+                    {
+                        "request": request_number,
+                        "status": response.status_code,
+                        "final_url": response.final_url,
+                        "elapsed_ms": response.elapsed_ms,
+                        "raw_object_id": raw.raw_object_id,
+                    }
+                )
+                records = connector.parse(definition, raw, response)
+                for record in records:
+                    key = (record.source_id, record.record_key)
+                    if key in seen_record_keys:
+                        raise QuarantineRequired("DUPLICATE_SOURCE_RECORD")
+                    seen_record_keys.add(key)
+                    pending_records.append(record)
             for record in pending_records:
                 self._connection.execute(
                     """
@@ -276,13 +272,14 @@ class DatabaseJobExecutor:
                         self._clock(),
                     ),
                 )
-        except QuarantineRequired as error:
+        except (AccessFailure, QuarantineRequired) as error:
+            error_code = error.code if isinstance(error, AccessFailure) else str(error)
             self._finish_connector(
                 run_id,
                 status="quarantined",
                 raw_ids=raw_ids,
                 response_metadata=response_metadata,
-                error_code=str(error)[:100] or "PAYLOAD_QUARANTINED",
+                error_code=error_code[:100] or "PAYLOAD_QUARANTINED",
             )
             return
         except Exception:

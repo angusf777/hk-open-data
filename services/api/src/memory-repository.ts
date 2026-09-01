@@ -528,6 +528,8 @@ export class MemoryPlatformRepository implements PlatformRepository {
         sourceId: input.sourceId,
         sourceGroupId: input.sourceGroupId,
         codeVersion: input.codeVersion,
+        recipeReference: input.recipeReference,
+        parameters: input.parameters,
         project: input.project,
         purpose: input.purpose,
         fixtureEvidenceUrl: input.fixtureEvidenceUrl,

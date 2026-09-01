@@ -1,0 +1,21 @@
+schemaVersion: 1
+sourceReference: HKAPI-015
+recipeVersion: 1.0.0
+adapter: none
+status: manual-only
+documentationUrl: https://portal.csdi.gov.hk/csdi-webpage/apilist
+limitations:
+- No executable request is published because the source requires a provider-generated
+  value, prerequisite discovery or a dataset-specific choice.
+- Review current provider terms, attribution, caching and redistribution requirements
+  before use.
+authentication:
+  type: none
+  environmentVariables: []
+  setup: null
+request: null
+response: null
+reason: This record is a directory of map APIs with different request contracts rather
+  than one endpoint.
+nextAction: Choose an API in the official directory and use its published endpoint-specific
+  parameters and terms.

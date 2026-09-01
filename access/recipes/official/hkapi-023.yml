@@ -1,0 +1,54 @@
+schemaVersion: 1
+sourceReference: HKAPI-023
+recipeVersion: 1.0.0
+adapter: file-download
+status: fixture-tested
+documentationUrl: https://portal.csdi.gov.hk/csdi-webpage/apidoc/TopographicMapAPI
+limitations:
+- Technical access example only; review current provider terms, attribution, caching
+  and redistribution requirements before use.
+- The bounded example is not a promise of availability, completeness or fitness for
+  a particular purpose.
+authentication:
+  type: none
+  environmentVariables: []
+  setup: null
+request:
+  method: GET
+  urlTemplate: https://mapapi.geodata.gov.hk/gs/api/v1.0.0/xyz/basemap/HK80/11/287/385.png
+  allowedHosts:
+  - mapapi.geodata.gov.hk
+  parameters: []
+  headers:
+  - name: accept
+    value: image/png
+    environmentVariable: null
+  bodyTemplate: null
+  timeoutMs: 15000
+  maxResponseBytes: 2097152
+  maxPages: 1
+  retry:
+    attempts: 2
+    statusCodes:
+    - 408
+    - 429
+    - 500
+    - 502
+    - 503
+    - 504
+response:
+  mediaTypes:
+  - image/png
+  recordPath: ''
+  idPath: null
+  timestampPath: null
+  pagination:
+    strategy: none
+    nextPath: null
+  normalization:
+    fields: {}
+    language: null
+    geometry: null
+    timestamp: null
+reason: null
+nextAction: null

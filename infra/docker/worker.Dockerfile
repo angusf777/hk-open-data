@@ -9,6 +9,8 @@ COPY --from=uv /uv /uvx /bin/
 COPY pyproject.toml uv.lock ./
 RUN uv sync --frozen --no-dev
 COPY --chown=10001:10001 services/worker services/worker
+COPY --chown=10001:10001 access/recipes access/recipes
+COPY --chown=10001:10001 access/schemas access/schemas
 COPY --chown=10001:10001 packages/schemas/contracts/p01-source-groups.csv /contracts/p01-source-groups.csv
 COPY --chown=10001:10001 packages/schemas/contracts/p14-monitor-targets.csv /contracts/p14-monitor-targets.csv
 ENV PYTHONPATH=/app/services/worker

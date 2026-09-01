@@ -3,10 +3,12 @@ from __future__ import annotations
 import json
 from abc import ABC, abstractmethod
 from datetime import datetime
+from typing import cast
 from urllib.parse import urlsplit
 
 from pydantic import Field, model_validator
 
+from ..access.models import AccessRecipe, JsonScalar
 from ..hashing import sha256_hex
 from ..models import Approval, ApprovedRequest, ContractModel, HttpsUrl, RawObjectRef
 
@@ -16,6 +18,10 @@ class ApprovalDenied(RuntimeError):
 
 
 class QuarantineRequired(RuntimeError):
+    pass
+
+
+class RecipeUnavailable(RuntimeError):
     pass
 
 
@@ -62,6 +68,87 @@ class SourceRecordDraft(ContractModel):
     language: str | None = None
     authority_class: str = "official"
     observed_at: datetime | None = None
+
+
+class RecipeConnectorDefinition(ContractModel):
+    """An activated source recipe with operator-approved parameter overrides."""
+
+    connector_id: str
+    source_group_id: str
+    source_id: str
+    recipe_reference: str
+    parameters: dict[str, JsonScalar] = Field(default_factory=dict)
+    project: str
+    purpose: str
+
+    @model_validator(mode="after")
+    def require_matching_source(self) -> RecipeConnectorDefinition:
+        if self.recipe_reference != self.source_id:
+            raise ValueError("recipe reference must match source")
+        return self
+
+
+class RecipeConnector:
+    """Plans and parses one source using its reviewed, source-specific recipe."""
+
+    def __init__(self, recipe: AccessRecipe) -> None:
+        self.recipe = recipe
+
+    def plan(
+        self,
+        definition: RecipeConnectorDefinition,
+        approval: Approval,
+        *,
+        at: datetime,
+    ) -> tuple[ApprovedRequest, ...]:
+        if definition.recipe_reference != self.recipe.source_reference:
+            raise ValueError("connector definition belongs to a different recipe")
+        if approval.source_id != definition.source_id or not approval.authorizes(
+            project=definition.project,
+            purpose=definition.purpose,
+            at=at,
+        ):
+            raise ApprovalDenied("connector run requires an effective approval")
+        if (
+            self.recipe.request is None
+            or self.recipe.response is None
+            or self.recipe.adapter == "none"
+        ):
+            raise RecipeUnavailable("source recipe is not executable")
+        from ..adapters import ADAPTERS
+
+        adapter = ADAPTERS.get(self.recipe.adapter)
+        if adapter is None:
+            raise RecipeUnavailable("source recipe adapter is unavailable")
+        return adapter.plan(self.recipe, cast(dict[str, object], definition.parameters))
+
+    def parse(
+        self,
+        definition: RecipeConnectorDefinition,
+        raw: RawObjectRef,
+        response: object,
+    ) -> tuple[SourceRecordDraft, ...]:
+        from ..adapters import ADAPTERS
+        from ..models import FetchResult
+
+        if not isinstance(response, FetchResult):
+            raise TypeError("recipe connector requires a fetch result")
+        if sha256_hex(response.body) != raw.sha256:
+            raise QuarantineRequired("RAW_PAYLOAD_HASH_MISMATCH")
+        adapter = ADAPTERS.get(self.recipe.adapter)
+        if adapter is None:
+            raise RecipeUnavailable("source recipe adapter is unavailable")
+        records = adapter.parse(self.recipe, response)
+        return tuple(
+            record.model_copy(
+                update={
+                    "source_group_id": definition.source_group_id,
+                    "raw_object_id": raw.raw_object_id,
+                    "raw_payload_hash": raw.sha256,
+                }
+            )
+            for record in records
+        )
 
 
 class Connector(ABC):

@@ -1,4 +1,5 @@
 import { describe, expect, it } from "vitest";
+import type { AccessRecipe } from "@hk-open-data/schemas";
 
 import { buildApp } from "./app.js";
 import type { RequestPrincipal, TokenVerifier } from "./auth.js";
@@ -31,20 +32,68 @@ const connectorBody = {
   connector_id: "CONN-P01-SG-01-V1",
   source_group_id: "P01-SG-01",
   code_version: "1.0.0",
-  endpoint: "https://data.gov.hk/api/3/action/package_list",
-  method: "GET",
-  request_body: null,
+  recipe_reference: "HKAPI-001",
+  parameters: { limit: 10, offset: 0 },
   project: "P01",
   purpose: "connector-observation",
-  timeout_ms: 30000,
-  max_response_bytes: 10485760,
-  max_compressed_response_bytes: 10485760,
-  max_attempts: 3,
-  pagination: null,
   cadence_seconds: 86400,
   fixture_evidence_url: "https://evidence.example.gov.hk/fixtures/P01-SG-01/1",
   live_probe_evidence_url: "https://evidence.example.gov.hk/probes/P01-SG-01/1",
   reason: "Fixture and live-sandbox probe reviewed",
+};
+
+const accessRecipe: AccessRecipe = {
+  schemaVersion: 1,
+  sourceReference: "HKAPI-001",
+  recipeVersion: "1.0.0",
+  adapter: "ckan-action",
+  status: "fixture-tested",
+  documentationUrl: "https://data.gov.hk/en/help/ckan-api-development-guide",
+  limitations: ["Technical access example only."],
+  authentication: { type: "none", environmentVariables: [], setup: null },
+  request: {
+    method: "GET",
+    urlTemplate: "https://data.gov.hk/en-data/api/3/action/package_list",
+    allowedHosts: ["data.gov.hk"],
+    parameters: [
+      {
+        name: "limit",
+        location: "query",
+        dataType: "integer",
+        required: false,
+        default: 10,
+        example: 10,
+        description: "Maximum dataset identifiers returned.",
+        enum: [],
+      },
+      {
+        name: "offset",
+        location: "query",
+        dataType: "integer",
+        required: false,
+        default: 0,
+        example: 0,
+        description: "Dataset identifier offset.",
+        enum: [],
+      },
+    ],
+    headers: [{ name: "accept", value: "application/json", environmentVariable: null }],
+    bodyTemplate: null,
+    timeoutMs: 15_000,
+    maxResponseBytes: 1_048_576,
+    maxPages: 1,
+    retry: { attempts: 2, statusCodes: [408, 429, 500, 502, 503, 504] },
+  },
+  response: {
+    mediaTypes: ["application/json"],
+    recordPath: "/result",
+    idPath: null,
+    timestampPath: null,
+    pagination: { strategy: "none", nextPath: null },
+    normalization: { fields: {}, language: null, geometry: null, timestamp: null },
+  },
+  reason: null,
+  nextAction: null,
 };
 
 const incident: Incident = {
@@ -132,7 +181,12 @@ function setup() {
   });
   return {
     repository,
-    app: buildApp({ repository, verifier, clock: () => new Date(now) }),
+    app: buildApp({
+      repository,
+      verifier,
+      clock: () => new Date(now),
+      accessRecipes: [accessRecipe],
+    }),
   };
 }
 
@@ -270,6 +324,27 @@ describe("audited administrative routes", () => {
     expect(activated.json()).toMatchObject({ source_id: "HKAPI-001", version: 3 });
     expect((await repository.listAudit({ targetId: "CONN-P01-SG-01-V1", limit: 20 })).items)
       .toMatchObject([{ action: "connector.activated", targetType: "connector_definition" }]);
+  });
+
+  it("rejects a connector recipe mismatch and undeclared parameter", async () => {
+    const { app } = setup();
+    const mismatch = await app.inject({
+      method: "POST",
+      url: "/v1/admin/sources/HKAPI-001/connectors",
+      headers: { authorization: "Bearer approver", "if-match": "1" },
+      payload: { ...connectorBody, recipe_reference: "HKAPI-002" },
+    });
+    const unknown = await app.inject({
+      method: "POST",
+      url: "/v1/admin/sources/HKAPI-001/connectors",
+      headers: { authorization: "Bearer approver", "if-match": "1" },
+      payload: { ...connectorBody, parameters: { arbitrary_url: "https://example.com" } },
+    });
+
+    expect(mismatch.statusCode).toBe(400);
+    expect(mismatch.json()).toMatchObject({ code: "INVALID_REQUEST" });
+    expect(unknown.statusCode).toBe(400);
+    expect(unknown.json()).toMatchObject({ code: "INVALID_REQUEST" });
   });
 
   it("acknowledges an open incident with audited version increment", async () => {
