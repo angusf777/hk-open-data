@@ -1,6 +1,6 @@
 # Source Access Toolkit Design
 
-**Status:** Approved design awaiting implementation planning
+**Status:** Approved for implementation
 **Date:** 2026-09-01
 **Repository:** `angusf777/hk-open-data`
 
