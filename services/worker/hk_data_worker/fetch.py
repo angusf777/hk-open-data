@@ -28,11 +28,23 @@ class EgressDenied(FetchError):
     pass
 
 
+class UnsafeRedirect(EgressDenied):
+    pass
+
+
 class BodyTooLarge(FetchError):
     pass
 
 
 class FetchTimedOut(FetchError):
+    pass
+
+
+class RetryExhausted(FetchError):
+    pass
+
+
+class UnexpectedMediaType(FetchError):
     pass
 
 
@@ -114,8 +126,31 @@ class SafeFetcher:
                                     raise FetchError("redirect response omitted Location")
                                 if redirect_count == self._max_redirects:
                                     raise FetchError("redirect limit exceeded")
-                                current_url = urljoin(current_url, location)
+                                redirected_url = urljoin(current_url, location)
+                                try:
+                                    self._validate_destination(
+                                        redirected_url,
+                                        request.allowed_hosts,
+                                    )
+                                except EgressDenied as error:
+                                    raise UnsafeRedirect(
+                                        "redirect destination is not permitted"
+                                    ) from error
+                                current_url = redirected_url
                                 continue
+                            content_type = response.headers.get("content-type")
+                            media_type = (
+                                None
+                                if content_type is None
+                                else content_type.partition(";")[0].strip().lower()
+                            )
+                            allowed_media_types = {
+                                value.lower() for value in request.allowed_media_types
+                            }
+                            if allowed_media_types and media_type not in allowed_media_types:
+                                raise UnexpectedMediaType(
+                                    "provider response media type is not allowlisted"
+                                )
                             body = bytearray()
                             content_length = response.headers.get("content-length")
                             if (
@@ -141,12 +176,12 @@ class SafeFetcher:
                                         f"response exceeded {request.max_response_bytes} bytes"
                                     )
                                 body.extend(chunk)
-                            retryable = (
-                                response.status_code in {408, 429} or response.status_code >= 500
-                            )
+                            retryable = response.status_code in request.retry_status_codes
                             if retryable and attempt < request.max_attempts:
                                 self._sleeper(self._retry_delay(response, attempt))
                                 break
+                            if retryable:
+                                raise RetryExhausted("configured retries were exhausted")
                             return FetchResult(
                                 status_code=response.status_code,
                                 headers={

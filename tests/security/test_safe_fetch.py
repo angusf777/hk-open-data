@@ -9,13 +9,22 @@ from hk_data_worker.fetch import (
     BodyTooLarge,
     EgressDenied,
     FetchTimedOut,
+    RetryExhausted,
     SafeFetcher,
+    UnexpectedMediaType,
+    UnsafeRedirect,
 )
 from hk_data_worker.models import ApprovedRequest
 
 
 def request(
-    url: str, *, cap: int = 1024, compressed_cap: int = 1024, attempts: int = 1
+    url: str,
+    *,
+    cap: int = 1024,
+    compressed_cap: int = 1024,
+    attempts: int = 1,
+    retry_status_codes: tuple[int, ...] = (408, 429, 500, 502, 503, 504),
+    allowed_media_types: tuple[str, ...] = (),
 ) -> ApprovedRequest:
     return ApprovedRequest(
         method="GET",
@@ -25,6 +34,8 @@ def request(
         max_response_bytes=cap,
         max_compressed_response_bytes=compressed_cap,
         max_attempts=attempts,
+        retry_status_codes=retry_status_codes,
+        allowed_media_types=allowed_media_types,
     )
 
 
@@ -64,7 +75,7 @@ def test_rejects_redirect_to_private_destination() -> None:
 
     fetcher = SafeFetcher(transport=httpx.MockTransport(transport_handler), resolver=resolver)
 
-    with pytest.raises(EgressDenied, match="non-public"):
+    with pytest.raises(UnsafeRedirect, match="redirect destination is not permitted"):
         fetcher.fetch(request("https://public.example/data"))
 
 
@@ -150,3 +161,65 @@ def test_retries_only_configured_transient_statuses_and_honours_retry_after() ->
 
     assert result.status_code == 200
     assert sleeps == [2.0, 0.5]
+
+
+def test_non_configured_error_status_is_returned_without_retry() -> None:
+    calls = 0
+
+    def handler(outbound: httpx.Request) -> httpx.Response:
+        nonlocal calls
+        calls += 1
+        return httpx.Response(500, content=b"{}", request=outbound)
+
+    result = SafeFetcher(
+        transport=httpx.MockTransport(handler),
+        resolver=resolver,
+    ).fetch(
+        request(
+            "https://public.example/data",
+            attempts=3,
+            retry_status_codes=(429,),
+        )
+    )
+
+    assert result.status_code == 500
+    assert calls == 1
+
+
+def test_retry_exhaustion_has_stable_non_secret_error() -> None:
+    fetcher = SafeFetcher(
+        transport=httpx.MockTransport(
+            lambda outbound: httpx.Response(503, content=b"secret body", request=outbound)
+        ),
+        resolver=resolver,
+        sleeper=lambda _seconds: None,
+    )
+
+    with pytest.raises(RetryExhausted, match="configured retries were exhausted") as caught:
+        fetcher.fetch(request("https://public.example/data", attempts=2))
+
+    assert "secret" not in str(caught.value)
+
+
+def test_rejects_unexpected_response_media_type_without_body() -> None:
+    fetcher = SafeFetcher(
+        transport=httpx.MockTransport(
+            lambda outbound: httpx.Response(
+                200,
+                headers={"content-type": "text/html; charset=utf-8"},
+                content=b"secret provider body",
+                request=outbound,
+            )
+        ),
+        resolver=resolver,
+    )
+
+    with pytest.raises(UnexpectedMediaType, match="not allowlisted") as caught:
+        fetcher.fetch(
+            request(
+                "https://public.example/data",
+                allowed_media_types=("application/json",),
+            )
+        )
+
+    assert "secret" not in str(caught.value)

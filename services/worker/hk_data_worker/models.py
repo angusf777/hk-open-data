@@ -87,13 +87,24 @@ class Approval(ContractModel):
 
 
 class ApprovedRequest(ContractModel):
-    method: Literal["GET", "POST"]
+    method: Literal["GET", "POST", "HEAD"]
     url: HttpsUrl
     allowed_hosts: tuple[str, ...]
-    timeout_ms: Annotated[int, Field(gt=0, le=120_000)] = 30_000
-    max_response_bytes: Annotated[int, Field(gt=0, le=1_073_741_824)] = 10 * 1024 * 1024
-    max_compressed_response_bytes: Annotated[int, Field(gt=0, le=1_073_741_824)] = 10 * 1024 * 1024
-    max_attempts: Annotated[int, Field(ge=1, le=5)] = 1
+    timeout_ms: Annotated[int, Field(gt=0, le=60_000)] = 30_000
+    max_response_bytes: Annotated[int, Field(gt=0, le=25 * 1024 * 1024)] = 10 * 1024 * 1024
+    max_compressed_response_bytes: Annotated[int, Field(gt=0, le=25 * 1024 * 1024)] = (
+        10 * 1024 * 1024
+    )
+    max_attempts: Annotated[int, Field(ge=1, le=3)] = 1
+    retry_status_codes: tuple[Annotated[int, Field(ge=100, le=599)], ...] = (
+        408,
+        429,
+        500,
+        502,
+        503,
+        504,
+    )
+    allowed_media_types: tuple[str, ...] = ()
     headers: dict[str, str] = Field(default_factory=dict)
     body: bytes | None = None
 
