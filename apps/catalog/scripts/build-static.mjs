@@ -14,6 +14,7 @@ execFileSync("uv", ["run", "python", "scripts/catalog.py", "check"], {
 execFileSync("pnpm", ["exec", "vite", "build"], { cwd: appRoot, stdio: "inherit" });
 
 for (const name of [
+  "access-recipes.json",
   "catalogue.json",
   "counts.json",
   "official.json",

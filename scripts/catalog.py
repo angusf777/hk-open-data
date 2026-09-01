@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import argparse
+import copy
 import json
 import sys
 import tempfile
@@ -14,10 +15,12 @@ from jsonschema import Draft202012Validator, FormatChecker
 
 REPOSITORY_ROOT = Path(__file__).resolve().parents[1]
 SCHEMA_PATH = REPOSITORY_ROOT / "catalog" / "schemas" / "resource.schema.json"
+ACCESS_INDEX_PATH = REPOSITORY_ROOT / "access" / "generated" / "recipes.json"
 CATALOGUE_ROOT = REPOSITORY_ROOT / "catalog"
 GENERATED_ROOT = CATALOGUE_ROOT / "generated"
 RESOURCE_TYPES = ("external", "mcp", "official")
 OUTPUT_NAMES = (
+    "access-recipes.json",
     "catalogue.json",
     "counts.json",
     "external.json",
@@ -58,6 +61,20 @@ def load_records(root: Path) -> list[dict[str, Any]]:
             value = {"_invalid": value}
         records.append({"_path": str(path), **value})
     return records
+
+
+def load_access_index(path: Path = ACCESS_INDEX_PATH) -> dict[str, Any]:
+    value = json.loads(path.read_text(encoding="utf-8"))
+    if not isinstance(value, dict) or value.get("schemaVersion") != 1:
+        raise ValueError(f"invalid access recipe index: {path}")
+    recipes = value.get("recipes")
+    coverage = value.get("coverage")
+    if not isinstance(recipes, list) or not isinstance(coverage, dict):
+        raise ValueError(f"invalid access recipe index: {path}")
+    for position, recipe in enumerate(recipes):
+        if not isinstance(recipe, dict) or not isinstance(recipe.get("sourceReference"), str):
+            raise ValueError(f"invalid access recipe at position {position}: {path}")
+    return value
 
 
 def _field_path(error: jsonschema.ValidationError) -> str:
@@ -133,16 +150,74 @@ def _counts(records: list[dict[str, Any]]) -> dict[str, Any]:
             values.append(str(value))
         return dict(sorted(Counter(values).items()))
 
+    access_statuses = Counter(
+        str(record["accessRecipe"]["effectiveStatus"])
+        for record in records
+        if isinstance(record.get("accessRecipe"), dict)
+    )
+    access_recipes = [
+        record["accessRecipe"]
+        for record in records
+        if isinstance(record.get("accessRecipe"), dict)
+    ]
     return {
         "total": len(records),
         "byType": count("type"),
         "byTermsEvidenceState": count("termsEvidence", "state"),
         "byTranslationStatus": count("translationStatus"),
+        "byAccessStatus": dict(sorted(access_statuses.items())),
+        "accessExecutable": sum(recipe.get("request") is not None for recipe in access_recipes),
+        "accessLiveVerified": sum(
+            recipe.get("effectiveStatus") == "live-verified" for recipe in access_recipes
+        ),
     }
 
 
-def build_catalogue(records: list[dict[str, Any]]) -> dict[str, Any]:
-    clean = [{key: value for key, value in record.items() if key != "_path"} for record in records]
+def _connector_state(recipe: dict[str, Any]) -> str:
+    if recipe.get("request") is not None and recipe.get("effectiveStatus") in {
+        "live-verified",
+        "fixture-tested",
+        "credential-required",
+    }:
+        return "available"
+    if recipe.get("status") in {"blocked", "unavailable"}:
+        return "planned"
+    return "none"
+
+
+def build_catalogue(
+    records: list[dict[str, Any]], access_index: dict[str, Any]
+) -> dict[str, Any]:
+    clean = [
+        {key: copy.deepcopy(value) for key, value in record.items() if key != "_path"}
+        for record in records
+    ]
+    official_references = {
+        str(record["sourceReference"]) for record in clean if record.get("type") == "official"
+    }
+    recipe_by_reference: dict[str, dict[str, Any]] = {}
+    for recipe in access_index["recipes"]:
+        reference = str(recipe["sourceReference"])
+        if reference in recipe_by_reference:
+            raise ValueError(f"duplicate access recipe: {reference}")
+        recipe_by_reference[reference] = recipe
+
+    missing = sorted(official_references - recipe_by_reference.keys())
+    orphan = sorted(recipe_by_reference.keys() - official_references)
+    findings = [f"missing access recipe: {reference}" for reference in missing]
+    findings.extend(f"orphan access recipe: {reference}" for reference in orphan)
+    if findings:
+        raise ValueError("\n".join(findings))
+
+    for record in clean:
+        if record.get("type") != "official":
+            continue
+        recipe = copy.deepcopy(recipe_by_reference[str(record["sourceReference"])])
+        integrations = copy.deepcopy(record["integrations"])
+        integrations["connector"] = _connector_state(recipe)
+        record["integrations"] = integrations
+        record["accessRecipe"] = recipe
+
     clean.sort(key=lambda item: str(item["id"]))
     return {"schemaVersion": 1, "resources": clean, "counts": _counts(clean)}
 
@@ -164,10 +239,13 @@ def _search_record(record: dict[str, Any]) -> dict[str, Any]:
     }
 
 
-def write_outputs(catalogue: dict[str, Any], output: Path) -> None:
+def write_outputs(
+    catalogue: dict[str, Any], output: Path, access_index: dict[str, Any]
+) -> None:
     output.mkdir(parents=True, exist_ok=True)
     resources = catalogue["resources"]
     values: dict[str, Any] = {
+        "access-recipes.json": access_index,
         "catalogue.json": catalogue,
         "counts.json": catalogue["counts"],
         "search-index.json": [_search_record(record) for record in resources],
@@ -191,18 +269,19 @@ def write_outputs(catalogue: dict[str, Any], output: Path) -> None:
         (output / name).write_bytes(_json_bytes(values[name]))
 
 
-def _validated_catalogue() -> dict[str, Any]:
+def _validated_catalogue() -> tuple[dict[str, Any], dict[str, Any]]:
     records = load_records(CATALOGUE_ROOT)
     errors = validate_records(records)
     if errors:
         raise ValueError("\n".join(errors))
-    return build_catalogue(records)
+    access_index = load_access_index()
+    return build_catalogue(records, access_index), access_index
 
 
-def _check_outputs(catalogue: dict[str, Any]) -> list[str]:
+def _check_outputs(catalogue: dict[str, Any], access_index: dict[str, Any]) -> list[str]:
     with tempfile.TemporaryDirectory(prefix="hk-open-data-catalogue-") as directory:
         expected_root = Path(directory)
-        write_outputs(catalogue, expected_root)
+        write_outputs(catalogue, expected_root, access_index)
         findings = []
         for name in OUTPUT_NAMES:
             committed = GENERATED_ROOT / name
@@ -224,7 +303,7 @@ def main(argv: list[str] | None = None) -> int:
     parser.add_argument("command", choices=("validate", "generate", "check"))
     args = parser.parse_args(argv)
     try:
-        catalogue = _validated_catalogue()
+        catalogue, access_index = _validated_catalogue()
     except (OSError, ValueError, yaml.YAMLError, json.JSONDecodeError) as error:
         print(error, file=sys.stderr)
         return 1
@@ -233,11 +312,11 @@ def main(argv: list[str] | None = None) -> int:
         print(f"validated {catalogue['counts']['total']} resources")
         return 0
     if args.command == "generate":
-        write_outputs(catalogue, GENERATED_ROOT)
+        write_outputs(catalogue, GENERATED_ROOT, access_index)
         print(f"generated {catalogue['counts']['total']} resources")
         return 0
 
-    drift = _check_outputs(catalogue)
+    drift = _check_outputs(catalogue, access_index)
     if drift:
         print("generated catalogue drift: " + ", ".join(drift), file=sys.stderr)
         return 1

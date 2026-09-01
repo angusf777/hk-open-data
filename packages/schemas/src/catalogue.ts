@@ -4,6 +4,8 @@ import { fileURLToPath } from "node:url";
 
 import { z } from "zod";
 
+import { generatedAccessRecipeSchema } from "./access.js";
+
 export const termsEvidenceStateSchema = z.enum([
   "not-reviewed",
   "official-terms-linked",
@@ -39,11 +41,26 @@ export const catalogueResourceSchema = z.object({
     note: localizedTextSchema,
     restrictions: z.array(localizedTextSchema),
   }),
+  integrations: z.object({
+    connector: z.enum(["none", "candidate", "planned", "available", "deprecated"]),
+    sdk: z.enum(["none", "candidate", "planned", "available", "deprecated"]),
+    mcp: z.enum(["none", "candidate", "planned", "available", "deprecated"]),
+  }),
+  accessRecipe: generatedAccessRecipeSchema.optional(),
 });
 
 export const catalogueSchema = z.object({
   schemaVersion: z.literal(1),
   resources: z.array(catalogueResourceSchema),
+  counts: z.object({
+    total: z.number().int().nonnegative(),
+    byType: z.record(z.string(), z.number().int().nonnegative()),
+    byTermsEvidenceState: z.record(z.string(), z.number().int().nonnegative()),
+    byTranslationStatus: z.record(z.string(), z.number().int().nonnegative()),
+    byAccessStatus: z.record(z.string(), z.number().int().nonnegative()),
+    accessExecutable: z.number().int().nonnegative(),
+    accessLiveVerified: z.number().int().nonnegative(),
+  }),
 });
 
 export type Catalogue = z.infer<typeof catalogueSchema>;

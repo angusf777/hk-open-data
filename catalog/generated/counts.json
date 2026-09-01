@@ -1,4 +1,10 @@
 {
+  "accessExecutable": 37,
+  "accessLiveVerified": 0,
+  "byAccessStatus": {
+    "fixture-tested": 37,
+    "manual-only": 228
+  },
   "byTermsEvidenceState": {
     "ambiguity-identified": 330,
     "not-reviewed": 111,

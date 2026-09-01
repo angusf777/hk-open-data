@@ -11,5 +11,20 @@ describe("public catalogue contract", () => {
     expect(catalogue.resources.every((resource) => resource.termsEvidence.checkedAt !== "")).toBe(
       true,
     );
+    const official = catalogue.resources.find(
+      (resource) => resource.sourceReference === "HKAPI-001",
+    );
+    expect(official).toMatchObject({
+      integrations: { connector: "available" },
+      accessRecipe: {
+        sourceReference: "HKAPI-001",
+        effectiveStatus: "fixture-tested",
+      },
+    });
+    expect(catalogue.counts).toMatchObject({
+      accessExecutable: 37,
+      accessLiveVerified: 0,
+      byAccessStatus: { "fixture-tested": 37, "manual-only": 228 },
+    });
   });
 });
