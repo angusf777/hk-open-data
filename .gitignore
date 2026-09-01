@@ -25,3 +25,4 @@ playwright-report/
 *.db
 .superpowers/
 .worktrees/
+access/verification/*.tmp

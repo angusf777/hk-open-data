@@ -162,6 +162,7 @@ export const verificationSummarySchema = z
     checkedAt: z.iso.datetime(),
     validUntil: z.iso.datetime(),
     outcome: z.enum(["success", "failure"]),
+    errorCode: z.string().min(1).nullable(),
     recipeSha256: z.string().regex(/^[a-f0-9]{64}$/),
     finalHost: z.string().min(1),
     httpStatus: z.number().int().min(100).max(599).nullable(),
@@ -182,7 +183,11 @@ export const generatedAccessRecipeSchema = z
     recipeSha256: z.string().regex(/^[a-f0-9]{64}$/),
     effectiveStatus: accessStatusSchema,
     examples: z
-      .object({ curl: z.string().min(1), python: z.string().min(1), typescript: z.string().min(1) })
+      .object({
+        curl: z.string().min(1).nullable(),
+        python: z.string().min(1).nullable(),
+        typescript: z.string().min(1).nullable(),
+      })
       .strict(),
     verification: verificationSummarySchema.nullable(),
   })

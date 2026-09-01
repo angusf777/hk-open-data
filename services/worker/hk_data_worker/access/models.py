@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+from datetime import datetime
 from enum import StrEnum
 from typing import Annotated, Literal
 from urllib.parse import urlsplit
@@ -47,6 +48,7 @@ AdapterName = Literal[
 HttpsUrl = Annotated[str, Field(pattern=r"^https://")]
 EnvironmentVariable = Annotated[str, Field(pattern=r"^[A-Z][A-Z0-9_]{2,127}$")]
 JsonScalar = str | int | float | bool
+Sha256 = Annotated[str, Field(pattern=r"^[a-f0-9]{64}$")]
 
 
 class AuthenticationSpec(AccessContractModel):
@@ -235,4 +237,37 @@ class AccessRecipe(AccessContractModel):
                 raise ValueError("unavailable recipes without a request are not executable")
             if self.request is not None and (self.adapter == "none" or self.response is None):
                 raise ValueError("unavailable recovery checks require an adapter and response")
+        return self
+
+
+class VerificationEvidence(AccessContractModel):
+    schema_version: Literal[1]
+    source_reference: Annotated[str, Field(pattern=r"^HKAPI-[0-9]{3}$")]
+    recipe_version: Annotated[str, Field(pattern=r"^[0-9]+\.[0-9]+\.[0-9]+$")]
+    recipe_sha256: Sha256
+    checked_at: datetime
+    valid_until: datetime
+    outcome: Literal["success", "failure"]
+    error_code: str | None
+    final_host: Annotated[str, Field(min_length=1)]
+    http_status: Annotated[int, Field(ge=100, le=599)] | None
+    elapsed_ms: Annotated[int, Field(ge=0)]
+    media_type: str | None
+    response_bytes: Annotated[int, Field(ge=0)]
+    response_sha256: Sha256 | None
+    schema_fingerprint: Sha256 | None
+    parsed_record_count: Annotated[int, Field(ge=0)]
+    limitations: tuple[Annotated[str, Field(min_length=1)], ...]
+    tool_version: Annotated[str, Field(min_length=1)]
+
+    @model_validator(mode="after")
+    def require_consistent_evidence(self) -> VerificationEvidence:
+        if self.checked_at.tzinfo is None or self.valid_until.tzinfo is None:
+            raise ValueError("verification timestamps must include a timezone")
+        if self.valid_until <= self.checked_at:
+            raise ValueError("verification evidence must expire after it was checked")
+        if self.outcome == "success" and self.error_code is not None:
+            raise ValueError("successful verification evidence cannot declare an error code")
+        if self.outcome == "failure" and not self.error_code:
+            raise ValueError("failed verification evidence requires an error code")
         return self
