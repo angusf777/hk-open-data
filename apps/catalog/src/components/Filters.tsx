@@ -25,7 +25,7 @@ export function Filters({ locale, value, onChange }: FiltersProps) {
   }, []);
   const update = (key: keyof ResourceFilters, next: string) => {
     const filters = { ...value };
-    if (next) filters[key] = next;
+    if (next) Object.assign(filters, { [key]: next });
     else delete filters[key];
     onChange(filters);
   };
@@ -72,6 +72,17 @@ export function Filters({ locale, value, onChange }: FiltersProps) {
             ["registration", text.registration],
           ]}
           onChange={(next) => update("authentication", next)}
+        />
+        <FilterGroup
+          legend={text.sourceAccess}
+          name="access-recipe"
+          value={value.access ?? ""}
+          options={[
+            ["executable", text.hasExecutableRecipe],
+            ["live", text.liveVerified],
+            ["none", text.noAutomatedAccess],
+          ]}
+          onChange={(next) => update("access", next)}
         />
         <FilterGroup
           legend={text.termsEvidence}

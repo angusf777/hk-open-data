@@ -31,7 +31,12 @@ export function searchResources(
         (!filters.type || resource.type === filters.type) &&
         (!filters.authentication || resource.authentication === filters.authentication) &&
         (!filters.termsState || resource.termsEvidence.state === filters.termsState) &&
-        (!filters.category || resource.categories.includes(filters.category))
+        (!filters.category || resource.categories.includes(filters.category)) &&
+        (!filters.access ||
+          (filters.access === "executable" && resource.accessRecipe?.request != null) ||
+          (filters.access === "live" &&
+            resource.accessRecipe?.effectiveStatus === "live-verified") ||
+          (filters.access === "none" && resource.accessRecipe?.request === null))
       );
     })
     .sort((left, right) => left.id.localeCompare(right.id));

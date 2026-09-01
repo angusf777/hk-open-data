@@ -2,6 +2,7 @@ import { ArrowLeft, ExternalLink, FileWarning } from "lucide-react";
 
 import { copy, labelValue } from "../i18n";
 import type { Locale, Resource } from "../types";
+import { AccessPanel } from "./AccessPanel";
 
 interface ResourceDetailProps {
   locale: Locale;
@@ -90,6 +91,8 @@ export function ResourceDetail({ locale, resource, onBack }: ResourceDetailProps
           <MetadataRow label={text.checked} value={resource.verification.checkedAt} />
         </aside>
       </div>
+
+      {resource.accessRecipe && <AccessPanel locale={locale} recipe={resource.accessRecipe} />}
 
       <div className="notes-grid">
         <section>

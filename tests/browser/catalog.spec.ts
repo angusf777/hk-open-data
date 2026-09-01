@@ -16,7 +16,19 @@ test("search, locale and resource permalink work without automatic external requ
   await page.getByRole("link", { name: "查看資源" }).click();
   await expect(page).toHaveURL(/resources\/official%3Ahkapi-001\/$/i);
   await expect(page.getByText(/這項日期化查核不會授予使用權/)).toBeVisible();
+  await expect(page.getByRole("heading", { name: "如何存取此來源" })).toBeVisible();
+  await expect(page.getByRole("tab", { name: "Python" })).toBeVisible();
   expect(outsideRequests).toEqual([]);
+});
+
+test("filters official resources by their generated access status", async ({ page }) => {
+  await page.goto("./");
+  await page.getByLabel("Has executable recipe").check();
+  await expect(page.getByRole("heading", { name: "37 resources" })).toBeVisible();
+
+  await page.getByLabel("No automated access").check();
+  await expect(page.getByRole("heading", { name: "228 resources" })).toBeVisible();
+  await expect(page.getByRole("article")).toHaveCount(10);
 });
 
 test("shows ten resources before the user asks for more", async ({ page }) => {

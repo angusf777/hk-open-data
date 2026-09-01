@@ -25,4 +25,15 @@ describe("searchResources", () => {
       }),
     ).toHaveLength(1);
   });
+
+  it("filters resources by executable recipe", () => {
+    const executable = {
+      ...fixtureResources[0],
+      accessRecipe: { request: {} },
+    } as (typeof fixtureResources)[number];
+
+    expect(searchResources([executable, fixtureResources[1]!], "", { access: "executable" })).toEqual([
+      executable,
+    ]);
+  });
 });

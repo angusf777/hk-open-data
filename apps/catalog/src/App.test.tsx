@@ -28,5 +28,7 @@ describe("catalogue application", () => {
       "href",
       "https://www.hko.gov.hk/en/abouthko/opendata_intro.htm",
     );
+    expect(screen.getByRole("heading", { name: "如何存取此來源" })).toBeVisible();
+    expect(screen.getByRole("tab", { name: "Python" })).toBeVisible();
   });
 });
