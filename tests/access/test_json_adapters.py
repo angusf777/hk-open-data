@@ -43,6 +43,13 @@ def _result(name: str, *, media_type: str = "application/json") -> FetchResult:
     [
         ("ckan-action", "/result", "ckan-list.json", 2, "/id"),
         ("ckan-action", "/result", "ckan-object.json", 1, "/id"),
+        (
+            "data-gov-resource-index",
+            "/result",
+            "data-gov-resource-index.json",
+            1,
+            "/id",
+        ),
         ("odata", "/value", "odata.json", 2, "/id"),
         ("arcgis-rest", "/features", "arcgis.json", 2, "/attributes/OBJECTID"),
         ("rest-json", "/data", "rest.json", 2, "/id"),
@@ -103,3 +110,16 @@ def test_json_adapter_rejects_unexpected_media_type() -> None:
         )
 
     assert caught.value.code == "MEDIA_TYPE_MISMATCH"
+
+
+def test_data_gov_resource_index_requires_a_resource_list() -> None:
+    result = _result("ckan-object.json").model_copy(
+        update={"body": b'{"success":true,"result":{"id":"dataset-one"}}'}
+    )
+
+    with pytest.raises(AccessFailure) as caught:
+        ADAPTERS["data-gov-resource-index"].parse(
+            _recipe("data-gov-resource-index", "/result"), result
+        )
+
+    assert caught.value.code == "SCHEMA_MISMATCH"

@@ -5033,9 +5033,9 @@
         "terms": null
       },
       "verification": {
-        "checkedAt": "2026-08-31",
+        "checkedAt": "2026-09-01",
         "evidenceUrl": "https://opensky-network.org/apidoc/index.html",
-        "status": "candidate"
+        "status": "unavailable"
       }
     },
     {
@@ -5636,9 +5636,9 @@
         "terms": null
       },
       "verification": {
-        "checkedAt": "2026-08-31",
+        "checkedAt": "2026-09-01",
         "evidenceUrl": "https://otx.alienvault.com/api",
-        "status": "candidate"
+        "status": "unavailable"
       }
     },
     {
@@ -5841,9 +5841,9 @@
         "terms": null
       },
       "verification": {
-        "checkedAt": "2026-08-31",
+        "checkedAt": "2026-09-01",
         "evidenceUrl": "https://docs.greynoise.io/reference/get_v3-community-ip",
-        "status": "candidate"
+        "status": "unavailable"
       }
     },
     {
@@ -6646,9 +6646,9 @@
         "terms": null
       },
       "verification": {
-        "checkedAt": "2026-08-31",
+        "checkedAt": "2026-09-01",
         "evidenceUrl": "https://api.gitguardian.com/doc",
-        "status": "candidate"
+        "status": "unavailable"
       }
     },
     {
@@ -9635,9 +9635,9 @@
         "terms": null
       },
       "verification": {
-        "checkedAt": "2026-08-31",
+        "checkedAt": "2026-09-01",
         "evidenceUrl": "https://arxiv.org/help/api/user-manual",
-        "status": "candidate"
+        "status": "unavailable"
       }
     },
     {

@@ -8,6 +8,7 @@ from hk_data_worker.models import ApprovedRequest, FetchResult
 
 ADAPTER_NAMES = (
     "ckan-action",
+    "data-gov-resource-index",
     "rest-json",
     "odata",
     "arcgis-rest",

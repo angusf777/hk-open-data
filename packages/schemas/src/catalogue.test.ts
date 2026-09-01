@@ -22,9 +22,9 @@ describe("public catalogue contract", () => {
       },
     });
     expect(catalogue.counts).toMatchObject({
-      accessExecutable: 37,
-      accessLiveVerified: 29,
-      byAccessStatus: { "live-verified": 29, "fixture-tested": 8, "manual-only": 228 },
+      accessExecutable: 227,
+      accessLiveVerified: 219,
+      byAccessStatus: { "live-verified": 219, "fixture-tested": 8, "manual-only": 38 },
     });
   });
 });

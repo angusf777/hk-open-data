@@ -98,7 +98,10 @@ def render_curl(recipe: AccessRecipe) -> str:
         rendered.extend(("--data", shlex.quote(body)))
     rendered.append(shlex.quote(request.url))
     separator = " \\" + "\n  "
-    return separator.join(rendered) + "\n"
+    example = separator.join(rendered) + "\n"
+    if recipe.adapter == "data-gov-resource-index":
+        example += "# Current underlying resource URLs are in .result.resources[].url\n"
+    return example
 
 
 def _python_headers(recipe: AccessRecipe, headers: tuple[HeaderSpec, ...]) -> list[str]:
@@ -142,10 +145,19 @@ def render_python(recipe: AccessRecipe) -> str:
                 else ")"
             ),
             "    response.raise_for_status()",
-            "    print(response.text)",
-            "",
         ]
     )
+    if recipe.adapter == "data-gov-resource-index":
+        lines.extend(
+            [
+                '    dataset = response.json()["result"]',
+                '    for resource in dataset.get("resources", []):',
+                '        print(resource.get("url", ""))',
+            ]
+        )
+    else:
+        lines.append("    print(response.text)")
+    lines.append("")
     return "\n".join(lines)
 
 
@@ -205,10 +217,19 @@ def render_typescript(recipe: AccessRecipe) -> str:
             "});",
             "",
             'if (!response.ok) throw new Error(`Provider request failed (${response.status})`);',
-            "console.log(await response.text());",
-            "",
         ]
     )
+    if recipe.adapter == "data-gov-resource-index":
+        lines.extend(
+            [
+                "const document = await response.json();",
+                "const dataset = document.result;",
+                "for (const resource of dataset.resources ?? []) console.log(resource.url);",
+            ]
+        )
+    else:
+        lines.append("console.log(await response.text());")
+    lines.append("")
     return "\n".join(lines)
 
 

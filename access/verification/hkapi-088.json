@@ -1,6 +1,6 @@
 {
-  "checkedAt": "2026-09-01T09:06:27.829548Z",
-  "elapsedMs": 198,
+  "checkedAt": "2026-09-01T10:20:42.328385Z",
+  "elapsedMs": 209,
   "errorCode": null,
   "finalHost": "data.weather.gov.hk",
   "httpStatus": 200,
@@ -19,5 +19,5 @@
   "schemaVersion": 1,
   "sourceReference": "HKAPI-088",
   "toolVersion": "0.1.0",
-  "validUntil": "2026-09-08T09:06:27.829548Z"
+  "validUntil": "2026-09-08T10:20:42.328385Z"
 }

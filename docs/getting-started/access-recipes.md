@@ -7,11 +7,20 @@ Each recipe identifies the official documentation, authentication requirements, 
 allowed host, parameters, response type, limitations, and ready-to-copy examples. You can inspect
 all of that locally before deciding whether to contact a listed source.
 
-The current registry covers all 265 official sources in the catalogue: 37 executable recipes with
-synthetic test fixtures and 228 entries with source-specific manual guidance. A bounded check on
-1 September 2026 recorded successful live verification for 29 of the 37 executable recipes. The
-eight other recipes remain fixture-tested. Live evidence expires and never guarantees later
-availability.
+The current registry covers all 265 official sources in the catalogue: 227 executable recipes with
+synthetic test fixtures and 38 entries with source-specific manual guidance. Of the executable
+recipes, 190 contain 356 reviewed source-to-dataset mappings across 350 unique DATA.GOV.HK dataset
+identifiers and resolve them to their current resource URLs;
+the other 37 contact a documented data endpoint directly. A bounded check on 1 September 2026
+recorded successful live verification for all 350 mapped dataset identifiers, all 190 resource
+index defaults, and 29 direct-response recipes.
+The eight other direct-response recipes retain fixture evidence and a recorded live failure. Live
+evidence expires and never guarantees later availability.
+
+The 145 external resources and 111 community MCP projects are catalogue candidates rather than
+source recipes. The current link pass reached or safely redirected 128 external landing pages and
+107 MCP repository links, but it did not authenticate to those APIs or execute third-party MCP
+software. See the [coverage and evidence matrix](../access/coverage.md).
 
 ## Install the development workspace
 
@@ -41,6 +50,20 @@ For a `manual-only` entry, the recipe explains why a safe machine request is not
 gives the next documentation step. The project does not invent an endpoint when the available
 source material identifies only a search page, interactive form, account workflow, or
 dataset-specific choice.
+
+### DATA.GOV.HK resource indexes
+
+`data-gov-resource-index` recipes call the official CKAN `package_show` action with one or more
+reviewed dataset identifiers. The response contains current resource names, formats and URLs. It
+does **not** mean that every linked file or downstream API was downloaded, parsed, licensed, or
+live-tested. For a catalogue entry that represents several datasets, inspect the `id` parameter's
+`enum` and select a reviewed identifier explicitly:
+
+```bash
+uv run --project packages/sdk-python hkdata recipe HKAPI-174
+uv run --project packages/sdk-python hkdata fetch HKAPI-174 \
+  --param id=hk-reo-reopsi01-election-result-lc-2025lcge --output json
+```
 
 ## Make one explicit bounded request
 

@@ -24,13 +24,13 @@ test("search, locale and resource permalink work without automatic external requ
 test("filters official resources by their generated access status", async ({ page }) => {
   await page.goto("./");
   await page.getByLabel("Has executable recipe").check();
-  await expect(page.getByRole("heading", { name: "37 resources" })).toBeVisible();
+  await expect(page.getByRole("heading", { name: "227 resources" })).toBeVisible();
 
   await page.getByLabel("Live verified").check();
-  await expect(page.getByRole("heading", { name: "29 resources" })).toBeVisible();
+  await expect(page.getByRole("heading", { name: "219 resources" })).toBeVisible();
 
   await page.getByLabel("No automated access").check();
-  await expect(page.getByRole("heading", { name: "228 resources" })).toBeVisible();
+  await expect(page.getByRole("heading", { name: "38 resources" })).toBeVisible();
   await expect(page.getByRole("article")).toHaveCount(10);
 });
 

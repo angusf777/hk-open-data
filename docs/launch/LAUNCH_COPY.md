@@ -30,7 +30,7 @@ HK Open Data v0.1.0 是獨立社群維護的香港公共數據、API 及唯讀 M
 
 I built HK Open Data to make Hong Kong's public-data landscape easier to inspect and reuse
 responsibly. It is a bilingual, source-backed catalogue with deterministic JSON, 521 resource
-records, local SDK/API surfaces, and 11 read-only MCP tools. The static site never contacts listed
+records, local SDK/API surfaces, and 13 read-only MCP tools. The static site never contacts listed
 providers. The optional data access and API health tools are self-hosted, and connections stay off
 until the user enables them. Corrections, translations, accessibility improvements, and connectors
 backed by synthetic test data are welcome.

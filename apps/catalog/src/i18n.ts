@@ -214,6 +214,7 @@ const localizedValues: Record<string, [string, string]> = {
   blocked: ["Blocked", "暫不提供"],
   "rest-json": ["REST / JSON", "REST / JSON"],
   "ckan-action": ["CKAN Action API", "CKAN Action API"],
+  "data-gov-resource-index": ["DATA.GOV.HK resource index", "DATA.GOV.HK 資源索引"],
   en: ["English", "英文"],
   "zh-Hant": ["Traditional Chinese", "繁體中文"],
   "zh-Hans": ["Simplified Chinese", "簡體中文"],

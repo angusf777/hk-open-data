@@ -34,8 +34,8 @@ urls:
 languages:
 - en
 verification:
-  status: candidate
-  checkedAt: '2026-08-31'
+  status: unavailable
+  checkedAt: '2026-09-01'
   evidenceUrl: https://github.com/codeislaw101/katzilla
 termsEvidence:
   state: not-reviewed

@@ -1,20 +1,93 @@
 schemaVersion: 1
 sourceReference: HKAPI-244
-recipeVersion: 1.0.0
-adapter: none
-status: manual-only
-documentationUrl: https://data.gov.hk/en-datasets/search/education%20statistics%20enrolment%20classes
+recipeVersion: 1.1.0
+adapter: data-gov-resource-index
+status: live-verified
+documentationUrl: https://data.gov.hk/en-data/dataset/hk-edb-crossbound-num-cbs-var-land
 limitations:
 - Technical access example only; review current provider terms, attribution, caching and redistribution
   requirements before use.
-- The bounded example is not a promise of availability, completeness or fitness for a particular purpose.
+- This recipe resolves official DATA.GOV.HK dataset metadata and current resource URLs; it does not download
+  the underlying resource files or API responses.
+- Availability, schema, licensing and permitted use of each linked resource must be checked against the
+  current provider documentation before use.
 authentication:
   type: none
   environmentVariables: []
   setup: null
-request: null
-response: null
-reason: The catalogue links to a DATA.GOV.HK search result rather than one source-specific stable machine
-  endpoint.
-nextAction: Open the linked result, select the exact official resource, and submit its documented URL
-  and response contract before enabling automated access.
+request:
+  method: GET
+  urlTemplate: https://data.gov.hk/en-data/api/3/action/package_show
+  allowedHosts:
+  - data.gov.hk
+  parameters:
+  - name: id
+    location: query
+    dataType: string
+    required: true
+    default: hk-edb-crossbound-num-cbs-var-land
+    example: hk-edb-crossbound-num-cbs-var-land
+    description: Reviewed DATA.GOV.HK dataset identifier for this catalogue source.
+    enum:
+    - hk-edb-crossbound-num-cbs-var-land
+    - hk-edb-crossbound-num-cross-bound-stu
+    - hk-edb-figustat-acc-stu-kin-gra
+    - hk-edb-figustat-day-sch-lev-sec
+    - hk-edb-figustat-fig-stat-education-and-training-institutions
+    - hk-edb-figustat-fig-stat-government-expenditure
+    - hk-edb-figustat-fig-stat-population-aged-15
+    - hk-edb-figustat-fig-stat-student-enrolment
+    - hk-edb-figustat-key-stat-kindergarten-education
+    - hk-edb-figustat-key-stat-primary-education
+    - hk-edb-figustat-key-stat-secondary-education
+    - hk-edb-figustat-key-stat-special-education
+    - hk-edb-figustat-num-edu-tra-ins-fin
+    - hk-edb-figustat-num-tea-edu-ins-sex
+    - hk-edb-figustat-ope-acc-stu-rep-pri-gra
+    - hk-edb-figustat-ope-acc-stu-rep-pri-sec
+    - hk-edb-figustat-ope-acc-stu-rep-sec-gra
+    - hk-edb-figustat-ope-acc-stu-rep-sec-sec
+    - hk-edb-figustat-stu-day-sch-lev-sec
+    - hk-edb-figustat-stu-enr-lev-edu-sex
+    - hk-edb-figustat-stu-loc-oth-sec-day-gra
+    - hk-edb-figustat-stu-loc-pri-sec-eve-gra
+    - hk-edb-figustat-stu-pri-dis-gra
+    - hk-edb-figustat-stu-sec-dis-gra
+    - hk-edb-figustat-stu-spe-ord-lev
+    - hk-edb-sen-sen-list
+    minimum: null
+    maximum: null
+    pattern: ^[a-z0-9][a-z0-9._-]{2,199}$
+  headers:
+  - name: accept
+    value: application/json
+    environmentVariable: null
+  bodyTemplate: null
+  timeoutMs: 15000
+  maxResponseBytes: 5242880
+  maxPages: 1
+  retry:
+    attempts: 2
+    statusCodes:
+    - 408
+    - 429
+    - 500
+    - 502
+    - 503
+    - 504
+response:
+  mediaTypes:
+  - application/json
+  recordPath: /result
+  idPath: /id
+  timestampPath: null
+  pagination:
+    strategy: none
+    nextPath: null
+  normalization:
+    fields: {}
+    language: null
+    geometry: null
+    timestamp: null
+reason: null
+nextAction: null

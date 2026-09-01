@@ -46,3 +46,23 @@ def test_python_and_typescript_examples_parse_and_use_the_same_url(tmp_path: Pat
     script = tmp_path / "example.mjs"
     script.write_text(typescript_example, encoding="utf-8")
     subprocess.run(["node", "--check", str(script)], check=True)
+
+
+def test_resource_index_examples_point_to_the_underlying_resource_urls(
+    tmp_path: Path,
+) -> None:
+    recipe = load_recipes(FIXTURES / "valid")[0].model_copy(
+        update={"adapter": "data-gov-resource-index"}
+    )
+
+    curl_example = render_example(recipe, "curl")
+    python_example = render_example(recipe, "python")
+    typescript_example = render_example(recipe, "typescript")
+
+    assert ".result.resources" in curl_example
+    assert 'resource.get("url", "")' in python_example
+    assert "dataset.resources" in typescript_example
+    ast.parse(python_example)
+    script = tmp_path / "resource-index.mjs"
+    script.write_text(typescript_example, encoding="utf-8")
+    subprocess.run(["node", "--check", str(script)], check=True)

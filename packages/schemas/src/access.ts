@@ -16,6 +16,7 @@ export const accessStatusSchema = z.enum([
 export const adapterNameSchema = z.enum([
   "none",
   "ckan-action",
+  "data-gov-resource-index",
   "rest-json",
   "odata",
   "arcgis-rest",

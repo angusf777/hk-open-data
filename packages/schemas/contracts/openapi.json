@@ -465,7 +465,7 @@
         "enum": ["live-verified", "fixture-tested", "credential-required", "manual-only", "blocked", "unavailable"]
       },
       "AccessAdapter": {
-        "enum": ["none", "ckan-action", "rest-json", "odata", "arcgis-rest", "ogc-wfs", "ogc-wms", "xml", "csv", "rss", "file-download"]
+        "enum": ["none", "ckan-action", "data-gov-resource-index", "rest-json", "odata", "arcgis-rest", "ogc-wfs", "ogc-wms", "xml", "csv", "rss", "file-download"]
       },
       "VerificationSummary": {
         "type": "object",

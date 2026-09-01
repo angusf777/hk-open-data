@@ -86,16 +86,22 @@ actually occur. A local green suite does not imply those external outcomes.
 
 The source-access expansion is locally qualified for a future release with these public boundaries:
 
-- All 265 official catalogue entries have source-specific access guidance. Thirty-seven have
-  executable, read-only request recipes with deterministic curl, Python and TypeScript examples;
-  228 provide manual guidance to the source's official documentation.
-- A bounded anonymous check on 2026-09-01 verified 29 executable recipes. Eight remain supported by
-  synthetic fixtures only. These labels are dated technical evidence, not an uptime promise or a
-  permission statement.
+- All 265 official catalogue entries have source-specific access guidance. There are 227
+  executable, read-only recipes with deterministic curl, Python and TypeScript examples, plus 38
+  manual guides.
+- Of those recipes, 190 contain 356 reviewed source-to-dataset mappings across 350 unique
+  DATA.GOV.HK identifiers and resolve them to current resource metadata and URLs; they do not fetch
+  every linked payload. A bounded anonymous check on 2026-09-01 verified all 350 identifiers, all
+  190 default package lookups, and 29 of 37 direct-response recipes. Eight direct
+  recipes retain synthetic fixtures and recorded live failures. These labels are dated technical
+  evidence, not an uptime promise or a permission statement.
 - The catalogue shows ten resources initially and can filter by access evidence. It does not contact
   a listed source unless a person deliberately uses an example or verification command.
 - REST and both SDKs expose the same generated recipes. The two MCP recipe tools list or retrieve
   guidance only and cannot execute a source request.
+- The whole-catalogue link pass reached or safely redirected 262 of 270 official URLs, 128 of 145
+  external landing pages, and 107 of 111 MCP repository links. These are reachability results only;
+  external APIs were not authenticated and third-party MCP projects were not installed or run.
 - The default self-hosted profile serves the catalogue without source requests. The two optional
   profiles require an explicit selection; every included source and connector remains inactive
   until separately configured.

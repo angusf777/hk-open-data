@@ -14,7 +14,7 @@ authentication:
   setup: null
 request: null
 response: null
-reason: The catalogue links to a DATA.GOV.HK search result rather than one source-specific stable machine
-  endpoint.
-nextAction: Open the linked result, select the exact official resource, and submit its documented URL
-  and response contract before enabling automated access.
+reason: No matching legal-glossary dataset identifier was present in the reviewed DATA.GOV.HK open-data
+  directory, and the catalogue link does not expose a source-specific machine endpoint.
+nextAction: Keep this entry manual until the Department of Justice publishes a current documented XML
+  URL or DATA.GOV.HK dataset identifier for the glossary.

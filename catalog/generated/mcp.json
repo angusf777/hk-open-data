@@ -461,9 +461,9 @@
         "terms": null
       },
       "verification": {
-        "checkedAt": "2026-08-31",
+        "checkedAt": "2026-09-01",
         "evidenceUrl": "https://github.com/mcp-guardian/mcp-guardian",
-        "status": "candidate"
+        "status": "unavailable"
       }
     },
     {
@@ -3011,9 +3011,9 @@
         "terms": null
       },
       "verification": {
-        "checkedAt": "2026-08-31",
+        "checkedAt": "2026-09-01",
         "evidenceUrl": "https://github.com/codeislaw101/katzilla",
-        "status": "candidate"
+        "status": "unavailable"
       }
     },
     {
@@ -3609,9 +3609,9 @@
         "terms": null
       },
       "verification": {
-        "checkedAt": "2026-08-31",
+        "checkedAt": "2026-09-01",
         "evidenceUrl": "https://github.com/conformi-eu/conformi-search-mcp",
-        "status": "candidate"
+        "status": "unavailable"
       }
     },
     {
@@ -4874,9 +4874,9 @@
         "terms": null
       },
       "verification": {
-        "checkedAt": "2026-08-31",
+        "checkedAt": "2026-09-01",
         "evidenceUrl": "https://github.com/aarsiv-groups/shipi-mcp-server",
-        "status": "candidate"
+        "status": "unavailable"
       }
     },
     {

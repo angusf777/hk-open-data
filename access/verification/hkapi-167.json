@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-09-01T09:00:15.081079Z",
+  "checkedAt": "2026-09-01T10:20:42.328385Z",
   "elapsedMs": 0,
   "errorCode": "SOURCE_UNAVAILABLE",
   "finalHost": "app.legco.gov.hk",
@@ -20,5 +20,5 @@
   "schemaVersion": 1,
   "sourceReference": "HKAPI-167",
   "toolVersion": "0.1.0",
-  "validUntil": "2026-09-08T09:00:15.081079Z"
+  "validUntil": "2026-09-08T10:20:42.328385Z"
 }

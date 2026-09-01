@@ -35,6 +35,7 @@ class AccessStatus(StrEnum):
 AdapterName = Literal[
     "none",
     "ckan-action",
+    "data-gov-resource-index",
     "rest-json",
     "odata",
     "arcgis-rest",

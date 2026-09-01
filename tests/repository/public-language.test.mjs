@@ -68,15 +68,15 @@ test("bilingual guides explain source access with copyable commands and evidence
     assert.match(text, /hkdata verify HKAPI-001/);
   }
   assert.match(english, /265 official sources/i);
-  assert.match(english, /37 executable recipes/i);
-  assert.match(english, /29.*live verification/is);
+  assert.match(english, /227 executable recipes/i);
+  assert.match(english, /219 recipes currently have matching live evidence/is);
   assert.match(english, /does not grant.*commercial use.*caching.*redistribution/is);
   assert.match(guide, /--allow-unverified/);
   assert.match(guide, /GET \/v1\/access-recipes/);
   assert.match(guide, /access_recipes_list/);
   assert.match(guide, /access_recipe_get/);
   assert.match(chinese, /265 項官方來源/);
-  assert.match(chinese, /37 項可執行配方/);
+  assert.match(chinese, /227 項可執行配方/);
 });
 
 test("SDK and service guides document the access recipe surfaces", async () => {

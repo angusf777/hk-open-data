@@ -180,3 +180,35 @@ This entry qualifies the local source-access toolkit tree only. It does not reco
 hosted CI, Pages deployment, tag, release publication, source-owner permission, production
 deployment, legal clearance, or independent acceptance. Live-verification evidence is bounded to
 the recorded date and validity period; original source terms remain controlling.
+
+## 2026-09-01 — DATA.GOV.HK source resolver expansion
+
+- **Tested tree base:** `df2dced409fc70513d638752f46b48e8e32c0e3c`
+- **Branch:** `codex/source-access-toolkit-implementation`
+- **Environment:** macOS arm64; Node.js `v22.22.3`; pnpm `10.0.0`; uv `0.11.16`;
+  uv-managed Python `3.12.11`; Docker `29.7.2`; Compose `5.5.0`
+- **Official access registry:** 265 classified; 227 executable; 219 live-verified; eight
+  fixture-tested with recorded live failures; 38 manual-only; zero unclassified
+- **DATA.GOV.HK mapping:** 190 source records; 356 reviewed source-to-dataset mappings; 350 unique
+  official dataset identifiers
+
+| Command or gate | Observed result |
+| --- | --- |
+| Dataset-level `data_gov_recipes.py --verify-all-datasets --concurrency 3` run | All 350 allowlisted DATA.GOV.HK dataset identifiers returned valid `package_show` metadata; the published manifest contains metadata and hashes, not provider response bodies |
+| `hkdata verify --all-anonymous --concurrency 3` run plus hash refresh | 219 recipes retained matching successful live evidence; the eight known direct-response failures remained fixture-tested and their TLS/media-type safeguards were not weakened |
+| Catalogue link-health run at concurrency three | 526 observations and 29 findings: 262/270 official links, 128/145 external links and 107/111 community MCP repository links were reachable or followed a valid redirect; five external and four MCP records with definite HTTP 404 results were marked unavailable |
+| `make verify-all` | Passed: deterministic catalogue/access projections, 6/6 browser and accessibility scenarios, contract drift, all workspace tests/type checks/builds, Ruff, strict mypy, the full Python suite, secret scan, public-boundary scan and 25/25 repository policy tests |
+| `make verify-integrated` | Passed: 3/3 PostgreSQL/PostGIS API tests, 1/1 raw-byte persistence integration test and 13/13 Docker/Compose integration tests, including the repository's read-only REST and MCP surfaces |
+| `git diff --check` | Passed with no whitespace errors after this qualification record was completed |
+
+The 190 `data-gov-resource-index` recipes resolve reviewed official dataset identifiers to current
+resource names, formats and URLs. Their successful checks establish package-metadata compatibility;
+they do not establish that every linked CSV, JSON feed, geospatial service, download or downstream
+API was fetched, parsed, semantically validated or continuously available.
+
+The external and community MCP collections remain catalogue entries, not bundled connectors. The
+link-health run did not authenticate to external APIs or install and execute third-party MCP code.
+No technical or link check grants permission for commercial use, caching, redistribution, scraping,
+personal-data processing or any other proposed use. Current provider terms, licences, technical
+controls and applicable law remain controlling. This record does not establish a GitHub push,
+hosted CI, Pages deployment, release publication, provider approval or independent certification.

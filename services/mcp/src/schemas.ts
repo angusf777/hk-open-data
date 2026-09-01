@@ -87,6 +87,7 @@ export const schemas = {
         .enum([
           "none",
           "ckan-action",
+          "data-gov-resource-index",
           "rest-json",
           "odata",
           "arcgis-rest",

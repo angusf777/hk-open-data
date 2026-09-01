@@ -1,0 +1,33 @@
+{
+  "approvedRequests": [
+    {
+      "allowed_hosts": [
+        "data.gov.hk"
+      ],
+      "allowed_media_types": [
+        "application/json"
+      ],
+      "body": null,
+      "headers": {
+        "accept": "application/json"
+      },
+      "max_attempts": 2,
+      "max_compressed_response_bytes": 5242880,
+      "max_response_bytes": 5242880,
+      "method": "GET",
+      "retry_status_codes": [
+        408,
+        429,
+        500,
+        502,
+        503,
+        504
+      ],
+      "timeout_ms": 15000,
+      "url": "https://data.gov.hk/en-data/api/3/action/package_show?id=hk-bd-opendata-building-information"
+    }
+  ],
+  "parameters": {
+    "id": "hk-bd-opendata-building-information"
+  }
+}

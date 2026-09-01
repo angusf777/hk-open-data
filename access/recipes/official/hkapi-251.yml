@@ -1,20 +1,68 @@
 schemaVersion: 1
 sourceReference: HKAPI-251
-recipeVersion: 1.0.0
-adapter: none
-status: manual-only
-documentationUrl: https://data.gov.hk/en-datasets/search/cross-boundary%20social%20welfare%20services
+recipeVersion: 1.1.0
+adapter: data-gov-resource-index
+status: live-verified
+documentationUrl: https://data.gov.hk/en-data/dataset/hk-swd-fcw-ciss
 limitations:
 - Technical access example only; review current provider terms, attribution, caching and redistribution
   requirements before use.
-- The bounded example is not a promise of availability, completeness or fitness for a particular purpose.
+- This recipe resolves official DATA.GOV.HK dataset metadata and current resource URLs; it does not download
+  the underlying resource files or API responses.
+- Availability, schema, licensing and permitted use of each linked resource must be checked against the
+  current provider documentation before use.
 authentication:
   type: none
   environmentVariables: []
   setup: null
-request: null
-response: null
-reason: The catalogue links to a DATA.GOV.HK search result rather than one source-specific stable machine
-  endpoint.
-nextAction: Open the linked result, select the exact official resource, and submit its documented URL
-  and response contract before enabling automated access.
+request:
+  method: GET
+  urlTemplate: https://data.gov.hk/en-data/api/3/action/package_show
+  allowedHosts:
+  - data.gov.hk
+  parameters:
+  - name: id
+    location: query
+    dataType: string
+    required: true
+    default: hk-swd-fcw-ciss
+    example: hk-swd-fcw-ciss
+    description: Reviewed DATA.GOV.HK dataset identifier for this catalogue source.
+    enum:
+    - hk-swd-fcw-ciss
+    minimum: null
+    maximum: null
+    pattern: ^[a-z0-9][a-z0-9._-]{2,199}$
+  headers:
+  - name: accept
+    value: application/json
+    environmentVariable: null
+  bodyTemplate: null
+  timeoutMs: 15000
+  maxResponseBytes: 5242880
+  maxPages: 1
+  retry:
+    attempts: 2
+    statusCodes:
+    - 408
+    - 429
+    - 500
+    - 502
+    - 503
+    - 504
+response:
+  mediaTypes:
+  - application/json
+  recordPath: /result
+  idPath: /id
+  timestampPath: null
+  pagination:
+    strategy: none
+    nextPath: null
+  normalization:
+    fields: {}
+    language: null
+    geometry: null
+    timestamp: null
+reason: null
+nextAction: null

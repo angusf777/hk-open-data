@@ -16,10 +16,16 @@ class SequenceTransport(httpx.BaseTransport):
         return httpx.Response(next(self.statuses), request=request)
 
 
-def record(url: str, *, checked_at: str = "2026-08-31") -> dict[str, object]:
+def record(
+    url: str,
+    *,
+    checked_at: str = "2026-08-31",
+    resource_id: str = "official:test",
+    resource_type: str = "official",
+) -> dict[str, object]:
     return {
-        "id": "official:test",
-        "type": "official",
+        "id": resource_id,
+        "type": resource_type,
         "urls": {"landing": url, "documentation": None, "terms": None},
         "verification": {"checkedAt": checked_at},
     }
@@ -69,3 +75,28 @@ def test_literal_private_target_is_rejected_before_request() -> None:
         attempts=1,
     )
     assert report.findings[0].status == "unsafe-target"
+
+
+def test_checker_includes_external_and_mcp_catalogue_records() -> None:
+    client = httpx.Client(transport=SequenceTransport([200, 200]))
+    report = check_urls(
+        [
+            record(
+                "https://external.example.test",
+                resource_id="external:test",
+                resource_type="external",
+            ),
+            record(
+                "https://github.example.test/project",
+                resource_id="mcp:test",
+                resource_type="mcp",
+            ),
+        ],
+        client=client,
+        attempts=1,
+    )
+
+    assert [item.resource_id for item in report.findings] == [
+        "external:test",
+        "mcp:test",
+    ]

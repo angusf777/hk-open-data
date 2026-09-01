@@ -1,0 +1,5269 @@
+{
+  "checkedAt": "2026-09-01T10:38:39.747084Z",
+  "datasets": {
+    "aahk-team1-flight-info": {
+      "elapsedMs": 290,
+      "errorCode": null,
+      "finalHost": "data.gov.hk",
+      "httpStatus": 200,
+      "mediaType": "application/json",
+      "outcome": "success",
+      "parsedRecordCount": 1,
+      "responseBytes": 2624,
+      "responseSha256": "4fdbf053482f308c06c0d2547e04e4682016e84e4bdd658ad04181fa311fb548",
+      "schemaFingerprint": "e806b64debb035728990db90e2f4c4b6ef9846d5980d8b05da7c1d2254677dc5",
+      "sourceReferences": [
+        "HKAPI-076"
+      ]
+    },
+    "amigo-tis_41-taxi-fleet-information-amigo": {
+      "elapsedMs": 317,
+      "errorCode": null,
+      "finalHost": "data.gov.hk",
+      "httpStatus": 200,
+      "mediaType": "application/json",
+      "outcome": "success",
+      "parsedRecordCount": 1,
+      "responseBytes": 2391,
+      "responseSha256": "c6f79f82d319a98cc9e8933b52af8034831936b54d0970d6452ec47a359a3448",
+      "schemaFingerprint": "e806b64debb035728990db90e2f4c4b6ef9846d5980d8b05da7c1d2254677dc5",
+      "sourceReferences": [
+        "HKAPI-071"
+      ]
+    },
+    "big-boss-taxi-tis_42-taxi-fleet-information-bbt": {
+      "elapsedMs": 288,
+      "errorCode": null,
+      "finalHost": "data.gov.hk",
+      "httpStatus": 200,
+      "mediaType": "application/json",
+      "outcome": "success",
+      "parsedRecordCount": 1,
+      "responseBytes": 2464,
+      "responseSha256": "afef7ee3e9bfb136017ae2b0a01caadba9a62df84989c75e1115dade497da8f2",
+      "schemaFingerprint": "e806b64debb035728990db90e2f4c4b6ef9846d5980d8b05da7c1d2254677dc5",
+      "sourceReferences": [
+        "HKAPI-072"
+      ]
+    },
+    "cfs-foodalert-foodalert": {
+      "elapsedMs": 205,
+      "errorCode": null,
+      "finalHost": "data.gov.hk",
+      "httpStatus": 200,
+      "mediaType": "application/json",
+      "outcome": "success",
+      "parsedRecordCount": 1,
+      "responseBytes": 4544,
+      "responseSha256": "b729a11260e8dc0c0c3042f12869e2d8fe4beb1b206ecad5be6fba4ce33a935f",
+      "schemaFingerprint": "48d4d8cccada5437f7a788c918c4db9967a29e8af0bc3f089847bf3f5b9d90d0",
+      "sourceReferences": [
+        "HKAPI-191"
+      ]
+    },
+    "cfs-foodcode-fcs": {
+      "elapsedMs": 232,
+      "errorCode": null,
+      "finalHost": "data.gov.hk",
+      "httpStatus": 200,
+      "mediaType": "application/json",
+      "outcome": "success",
+      "parsedRecordCount": 1,
+      "responseBytes": 2475,
+      "responseSha256": "a29959d6e3cd61420f1018c8b70a13fc9e502e085ddd2895b8dee77a00c121d3",
+      "schemaFingerprint": "4fa05256eab0d181085a666ccd6f1fdd7a6b05c83676e51025c4aaedc70d0048",
+      "sourceReferences": [
+        "HKAPI-193"
+      ]
+    },
+    "clp-team1-electric-vehicle-charging-stations": {
+      "elapsedMs": 185,
+      "errorCode": null,
+      "finalHost": "data.gov.hk",
+      "httpStatus": 200,
+      "mediaType": "application/json",
+      "outcome": "success",
+      "parsedRecordCount": 1,
+      "responseBytes": 2703,
+      "responseSha256": "7a370c1e42914436ac71bad5727d187297a08e09d652885d3dccc66d1017fa73",
+      "schemaFingerprint": "e6e55a65ad4f8364c54a847d8368ea7a35002a343b7ed365d921c5a4119acab2",
+      "sourceReferences": [
+        "HKAPI-056",
+        "HKAPI-162"
+      ]
+    },
+    "eac-eacpsi01-csdi-dc-boundaries-2023": {
+      "elapsedMs": 197,
+      "errorCode": null,
+      "finalHost": "data.gov.hk",
+      "httpStatus": 200,
+      "mediaType": "application/json",
+      "outcome": "success",
+      "parsedRecordCount": 1,
+      "responseBytes": 3850,
+      "responseSha256": "8fa7412934b9d39819277d5981279e7c238717285c1c08d327f29e3566e1c24c",
+      "schemaFingerprint": "9199057679d2b9d451e7b2c45d6ab4d773e1ea6de6694efb4f8ac3517b4f6cd3",
+      "sourceReferences": [
+        "HKAPI-175"
+      ]
+    },
+    "eac-eacpsi01-csdi-dcca-boundaries-1999": {
+      "elapsedMs": 199,
+      "errorCode": null,
+      "finalHost": "data.gov.hk",
+      "httpStatus": 200,
+      "mediaType": "application/json",
+      "outcome": "success",
+      "parsedRecordCount": 1,
+      "responseBytes": 3603,
+      "responseSha256": "480285d9418e8bdc3879b73ad48ee9d4b70fcf2302e71ced31626bc40ffe36ef",
+      "schemaFingerprint": "9199057679d2b9d451e7b2c45d6ab4d773e1ea6de6694efb4f8ac3517b4f6cd3",
+      "sourceReferences": [
+        "HKAPI-175"
+      ]
+    },
+    "eac-eacpsi01-csdi-dcca-boundaries-2003": {
+      "elapsedMs": 208,
+      "errorCode": null,
+      "finalHost": "data.gov.hk",
+      "httpStatus": 200,
+      "mediaType": "application/json",
+      "outcome": "success",
+      "parsedRecordCount": 1,
+      "responseBytes": 3604,
+      "responseSha256": "d8a2afda206fe9ca26154d2aa4f479ac4c72befa48a32ec9edf1b1b61f377b05",
+      "schemaFingerprint": "9199057679d2b9d451e7b2c45d6ab4d773e1ea6de6694efb4f8ac3517b4f6cd3",
+      "sourceReferences": [
+        "HKAPI-175"
+      ]
+    },
+    "eac-eacpsi01-csdi-dcca-boundaries-2007": {
+      "elapsedMs": 212,
+      "errorCode": null,
+      "finalHost": "data.gov.hk",
+      "httpStatus": 200,
+      "mediaType": "application/json",
+      "outcome": "success",
+      "parsedRecordCount": 1,
+      "responseBytes": 3604,
+      "responseSha256": "dbcd934ed2938205ed78fd497fdb34655fae4a89054d852f0bf21e512ca7710b",
+      "schemaFingerprint": "9199057679d2b9d451e7b2c45d6ab4d773e1ea6de6694efb4f8ac3517b4f6cd3",
+      "sourceReferences": [
+        "HKAPI-175"
+      ]
+    },
+    "eac-eacpsi01-csdi-dcca-boundaries-2011": {
+      "elapsedMs": 238,
+      "errorCode": null,
+      "finalHost": "data.gov.hk",
+      "httpStatus": 200,
+      "mediaType": "application/json",
+      "outcome": "success",
+      "parsedRecordCount": 1,
+      "responseBytes": 3602,
+      "responseSha256": "9a471342b9662e772f68be037741a8d971613d030b6378ebe9c4d38ab3f527e9",
+      "schemaFingerprint": "9199057679d2b9d451e7b2c45d6ab4d773e1ea6de6694efb4f8ac3517b4f6cd3",
+      "sourceReferences": [
+        "HKAPI-175"
+      ]
+    },
+    "eac-eacpsi01-csdi-dcca-boundaries-2015": {
+      "elapsedMs": 196,
+      "errorCode": null,
+      "finalHost": "data.gov.hk",
+      "httpStatus": 200,
+      "mediaType": "application/json",
+      "outcome": "success",
+      "parsedRecordCount": 1,
+      "responseBytes": 3604,
+      "responseSha256": "67a781f282bf2d7c07e42ebab31686becb1f55e7fe6b7845f8f9bcc0d125919b",
+      "schemaFingerprint": "9199057679d2b9d451e7b2c45d6ab4d773e1ea6de6694efb4f8ac3517b4f6cd3",
+      "sourceReferences": [
+        "HKAPI-175"
+      ]
+    },
+    "eac-eacpsi01-csdi-gc-boundaries-2016": {
+      "elapsedMs": 205,
+      "errorCode": null,
+      "finalHost": "data.gov.hk",
+      "httpStatus": 200,
+      "mediaType": "application/json",
+      "outcome": "success",
+      "parsedRecordCount": 1,
+      "responseBytes": 3716,
+      "responseSha256": "fa619d036fa815905d62b0ebf44c0278227553c0fcf4fb435c1db57a69a7f8d3",
+      "schemaFingerprint": "9199057679d2b9d451e7b2c45d6ab4d773e1ea6de6694efb4f8ac3517b4f6cd3",
+      "sourceReferences": [
+        "HKAPI-175"
+      ]
+    },
+    "eac-eacpsi01-csdi-gc-boundaries-2020": {
+      "elapsedMs": 198,
+      "errorCode": null,
+      "finalHost": "data.gov.hk",
+      "httpStatus": 200,
+      "mediaType": "application/json",
+      "outcome": "success",
+      "parsedRecordCount": 1,
+      "responseBytes": 3700,
+      "responseSha256": "6b9217fd50a6e3144a92624baa466bef2c1fc9a075447fed1a31c94f15c8fd19",
+      "schemaFingerprint": "9199057679d2b9d451e7b2c45d6ab4d773e1ea6de6694efb4f8ac3517b4f6cd3",
+      "sourceReferences": [
+        "HKAPI-175"
+      ]
+    },
+    "eac-eacpsi01-csdi-gc-boundaries-2021": {
+      "elapsedMs": 217,
+      "errorCode": null,
+      "finalHost": "data.gov.hk",
+      "httpStatus": 200,
+      "mediaType": "application/json",
+      "outcome": "success",
+      "parsedRecordCount": 1,
+      "responseBytes": 3716,
+      "responseSha256": "0d24f9c37175f2573244c5c8c405cd49747f40b9cc3a69a33de17b7a2e8bce7a",
+      "schemaFingerprint": "9199057679d2b9d451e7b2c45d6ab4d773e1ea6de6694efb4f8ac3517b4f6cd3",
+      "sourceReferences": [
+        "HKAPI-175"
+      ]
+    },
+    "eac-eacpsi01-csdi-gc-boundaries-2025": {
+      "elapsedMs": 193,
+      "errorCode": null,
+      "finalHost": "data.gov.hk",
+      "httpStatus": 200,
+      "mediaType": "application/json",
+      "outcome": "success",
+      "parsedRecordCount": 1,
+      "responseBytes": 3737,
+      "responseSha256": "1e140dd112e8be074c0eca042f5ae89f2c5915642263aae7e0d5b22586b55b9b",
+      "schemaFingerprint": "9199057679d2b9d451e7b2c45d6ab4d773e1ea6de6694efb4f8ac3517b4f6cd3",
+      "sourceReferences": [
+        "HKAPI-175"
+      ]
+    },
+    "eac-eacpsi01-dcca-boundaries-2019": {
+      "elapsedMs": 214,
+      "errorCode": null,
+      "finalHost": "data.gov.hk",
+      "httpStatus": 200,
+      "mediaType": "application/json",
+      "outcome": "success",
+      "parsedRecordCount": 1,
+      "responseBytes": 5696,
+      "responseSha256": "2283d64544d583b256ebc691b07e7c0cfeb9228ee4579a4873236cb851197675",
+      "schemaFingerprint": "95f87038bd60cd5f16951404ca275ea29a85f55582d779bfdf7ced8b09713321",
+      "sourceReferences": [
+        "HKAPI-175"
+      ]
+    },
+    "ff-fortune-schedule2": {
+      "elapsedMs": 216,
+      "errorCode": null,
+      "finalHost": "data.gov.hk",
+      "httpStatus": 200,
+      "mediaType": "application/json",
+      "outcome": "success",
+      "parsedRecordCount": 1,
+      "responseBytes": 2405,
+      "responseSha256": "2411681745d005853fd1cea414f9d6295ed321c7b05bb8b3d19284c9822117ba",
+      "schemaFingerprint": "9fc3a3c6d282f7e2754a73a43bd83631acfbed3b039152574f114e7be1220bfd",
+      "sourceReferences": [
+        "HKAPI-042"
+      ]
+    },
+    "ff-watertaxi-schedule2": {
+      "elapsedMs": 204,
+      "errorCode": null,
+      "finalHost": "data.gov.hk",
+      "httpStatus": 200,
+      "mediaType": "application/json",
+      "outcome": "success",
+      "parsedRecordCount": 1,
+      "responseBytes": 2438,
+      "responseSha256": "a7abdedc2a4694561c5a70e206aee53ad45fa47f1d7e0134c26a177d1854a604",
+      "schemaFingerprint": "9fc3a3c6d282f7e2754a73a43bd83631acfbed3b039152574f114e7be1220bfd",
+      "sourceReferences": [
+        "HKAPI-043"
+      ]
+    },
+    "hk-afcd-afcdlist-habitatmap": {
+      "elapsedMs": 200,
+      "errorCode": null,
+      "finalHost": "data.gov.hk",
+      "httpStatus": 200,
+      "mediaType": "application/json",
+      "outcome": "success",
+      "parsedRecordCount": 1,
+      "responseBytes": 2464,
+      "responseSha256": "4fd70b5e5b732516d518a377eb7158e08466fb7b113dd0bc30a140d5ac45a65e",
+      "schemaFingerprint": "6a30b7ca70ac0cb6d6b32794281ada9e2363695717a780db905efeb3ad86fc22",
+      "sourceReferences": [
+        "HKAPI-117"
+      ]
+    },
+    "hk-archsd-archsddata-acgca": {
+      "elapsedMs": 197,
+      "errorCode": null,
+      "finalHost": "data.gov.hk",
+      "httpStatus": 200,
+      "mediaType": "application/json",
+      "outcome": "success",
+      "parsedRecordCount": 1,
+      "responseBytes": 4727,
+      "responseSha256": "134d1eeb797b606769c323ea7a1d1840d9dacf76fc35fb0bc3d84a09b25e288d",
+      "schemaFingerprint": "a2d0cc92cd2c29942a8b2858955730281490cdc93855b2083f991f3037e993eb",
+      "sourceReferences": [
+        "HKAPI-179"
+      ]
+    },
+    "hk-archsd-archsddata-ca3m": {
+      "elapsedMs": 191,
+      "errorCode": null,
+      "finalHost": "data.gov.hk",
+      "httpStatus": 200,
+      "mediaType": "application/json",
+      "outcome": "success",
+      "parsedRecordCount": 1,
+      "responseBytes": 4782,
+      "responseSha256": "576c06ed20b88805e86c4e2dc0180f600cd461610a8552184bb99257a99d3b24",
+      "schemaFingerprint": "a2d0cc92cd2c29942a8b2858955730281490cdc93855b2083f991f3037e993eb",
+      "sourceReferences": [
+        "HKAPI-179"
+      ]
+    },
+    "hk-bd-opendata-building-information": {
+      "elapsedMs": 181,
+      "errorCode": null,
+      "finalHost": "data.gov.hk",
+      "httpStatus": 200,
+      "mediaType": "application/json",
+      "outcome": "success",
+      "parsedRecordCount": 1,
+      "responseBytes": 2772,
+      "responseSha256": "b3a8f8da03768b3a8789ac355e7a80ace91a551bf339800b8b32689539084649",
+      "schemaFingerprint": "07bc9ace9c2bc0324e4afe59ec80624ed3bb0ffc332b3e821bae87451db4de4b",
+      "sourceReferences": [
+        "HKAPI-219"
+      ]
+    },
+    "hk-bd-opendata-foundation-consent-commenced": {
+      "elapsedMs": 187,
+      "errorCode": null,
+      "finalHost": "data.gov.hk",
+      "httpStatus": 200,
+      "mediaType": "application/json",
+      "outcome": "success",
+      "parsedRecordCount": 1,
+      "responseBytes": 2673,
+      "responseSha256": "5d9259280475d96e00dbdd4b5e5c41d75f291d8dc1dff4aad94df9e711506c47",
+      "schemaFingerprint": "07bc9ace9c2bc0324e4afe59ec80624ed3bb0ffc332b3e821bae87451db4de4b",
+      "sourceReferences": [
+        "HKAPI-222"
+      ]
+    },
+    "hk-bd-opendata-ldb": {
+      "elapsedMs": 200,
+      "errorCode": null,
+      "finalHost": "data.gov.hk",
+      "httpStatus": 200,
+      "mediaType": "application/json",
+      "outcome": "success",
+      "parsedRecordCount": 1,
+      "responseBytes": 3002,
+      "responseSha256": "2f6b8a021d6ee2ae8f78f7995e298689704c418809f40ed23c50ae3d6f019faa",
+      "schemaFingerprint": "07bc9ace9c2bc0324e4afe59ec80624ed3bb0ffc332b3e821bae87451db4de4b",
+      "sourceReferences": [
+        "HKAPI-223"
+      ]
+    },
+    "hk-bd-opendata-monthly-digests": {
+      "elapsedMs": 185,
+      "errorCode": null,
+      "finalHost": "data.gov.hk",
+      "httpStatus": 200,
+      "mediaType": "application/json",
+      "outcome": "success",
+      "parsedRecordCount": 1,
+      "responseBytes": 21501,
+      "responseSha256": "f1614a49ce4d2af57d8c8ac8179cb38b5fb92cf12e834d68c8ab1f8543413a16",
+      "schemaFingerprint": "07bc9ace9c2bc0324e4afe59ec80624ed3bb0ffc332b3e821bae87451db4de4b",
+      "sourceReferences": [
+        "HKAPI-221"
+      ]
+    },
+    "hk-bd-opendata-registers-of-buildings-department": {
+      "elapsedMs": 195,
+      "errorCode": null,
+      "finalHost": "data.gov.hk",
+      "httpStatus": 200,
+      "mediaType": "application/json",
+      "outcome": "success",
+      "parsedRecordCount": 1,
+      "responseBytes": 2994,
+      "responseSha256": "44caef41a0a83bc20deddab896add8b8074986a33c5c0a515c880f7c5391962e",
+      "schemaFingerprint": "07bc9ace9c2bc0324e4afe59ec80624ed3bb0ffc332b3e821bae87451db4de4b",
+      "sourceReferences": [
+        "HKAPI-218"
+      ]
+    },
+    "hk-bd-opendata-s24-order-1": {
+      "elapsedMs": 169,
+      "errorCode": null,
+      "finalHost": "data.gov.hk",
+      "httpStatus": 200,
+      "mediaType": "application/json",
+      "outcome": "success",
+      "parsedRecordCount": 1,
+      "responseBytes": 3278,
+      "responseSha256": "98c36af70aad3f3c7bbce30ec3376aa572df6dc8c99d6fd7072db07792ea7408",
+      "schemaFingerprint": "07bc9ace9c2bc0324e4afe59ec80624ed3bb0ffc332b3e821bae87451db4de4b",
+      "sourceReferences": [
+        "HKAPI-220"
+      ]
+    },
+    "hk-bd-opendata-s24-order-2": {
+      "elapsedMs": 168,
+      "errorCode": null,
+      "finalHost": "data.gov.hk",
+      "httpStatus": 200,
+      "mediaType": "application/json",
+      "outcome": "success",
+      "parsedRecordCount": 1,
+      "responseBytes": 3420,
+      "responseSha256": "2fdffee34a73d62a136d16f082f7770653cf743bd88d87a273557241ef18fcbe",
+      "schemaFingerprint": "07bc9ace9c2bc0324e4afe59ec80624ed3bb0ffc332b3e821bae87451db4de4b",
+      "sourceReferences": [
+        "HKAPI-220"
+      ]
+    },
+    "hk-bd-opendata-s26-order-1": {
+      "elapsedMs": 183,
+      "errorCode": null,
+      "finalHost": "data.gov.hk",
+      "httpStatus": 200,
+      "mediaType": "application/json",
+      "outcome": "success",
+      "parsedRecordCount": 1,
+      "responseBytes": 3160,
+      "responseSha256": "fe07c540d4ba8ce2ca9d57c466b4afb0cc54cfeeb284e173d3f9d9bbc02566c1",
+      "schemaFingerprint": "07bc9ace9c2bc0324e4afe59ec80624ed3bb0ffc332b3e821bae87451db4de4b",
+      "sourceReferences": [
+        "HKAPI-220"
+      ]
+    },
+    "hk-bd-opendata-s26-order-2": {
+      "elapsedMs": 193,
+      "errorCode": null,
+      "finalHost": "data.gov.hk",
+      "httpStatus": 200,
+      "mediaType": "application/json",
+      "outcome": "success",
+      "parsedRecordCount": 1,
+      "responseBytes": 3306,
+      "responseSha256": "8573639ac4ced13d50411c7c6846136ee8b0cb8a5d6d6a81a69b190d75a983dc",
+      "schemaFingerprint": "07bc9ace9c2bc0324e4afe59ec80624ed3bb0ffc332b3e821bae87451db4de4b",
+      "sourceReferences": [
+        "HKAPI-220"
+      ]
+    },
+    "hk-bd-opendata-s26a-order-1": {
+      "elapsedMs": 174,
+      "errorCode": null,
+      "finalHost": "data.gov.hk",
+      "httpStatus": 200,
+      "mediaType": "application/json",
+      "outcome": "success",
+      "parsedRecordCount": 1,
+      "responseBytes": 3268,
+      "responseSha256": "8915b196bf55426db5ce68fa44a8d7e56170e0c5c9e37a92ab03cdb664904662",
+      "schemaFingerprint": "07bc9ace9c2bc0324e4afe59ec80624ed3bb0ffc332b3e821bae87451db4de4b",
+      "sourceReferences": [
+        "HKAPI-220"
+      ]
+    },
+    "hk-bd-opendata-s26a-order-2": {
+      "elapsedMs": 192,
+      "errorCode": null,
+      "finalHost": "data.gov.hk",
+      "httpStatus": 200,
+      "mediaType": "application/json",
+      "outcome": "success",
+      "parsedRecordCount": 1,
+      "responseBytes": 3085,
+      "responseSha256": "88498bf59f4c3cd86fe3cbf71b1c01c80d71d0c121b191979eea0aad0deadfbc",
+      "schemaFingerprint": "07bc9ace9c2bc0324e4afe59ec80624ed3bb0ffc332b3e821bae87451db4de4b",
+      "sourceReferences": [
+        "HKAPI-220"
+      ]
+    },
+    "hk-bd-opendata-s28-order-1": {
+      "elapsedMs": 180,
+      "errorCode": null,
+      "finalHost": "data.gov.hk",
+      "httpStatus": 200,
+      "mediaType": "application/json",
+      "outcome": "success",
+      "parsedRecordCount": 1,
+      "responseBytes": 3284,
+      "responseSha256": "9046f124b16409769cead0f0257cc83d2da387653ab0fd1f28d82b9f821b36fa",
+      "schemaFingerprint": "07bc9ace9c2bc0324e4afe59ec80624ed3bb0ffc332b3e821bae87451db4de4b",
+      "sourceReferences": [
+        "HKAPI-220"
+      ]
+    },
+    "hk-bd-opendata-s28-order-2": {
+      "elapsedMs": 184,
+      "errorCode": null,
+      "finalHost": "data.gov.hk",
+      "httpStatus": 200,
+      "mediaType": "application/json",
+      "outcome": "success",
+      "parsedRecordCount": 1,
+      "responseBytes": 3428,
+      "responseSha256": "7c3816e92f6195c800152ab0dfb5da49cd8db5b2fe9d51eb6c3427bf6bea955f",
+      "schemaFingerprint": "07bc9ace9c2bc0324e4afe59ec80624ed3bb0ffc332b3e821bae87451db4de4b",
+      "sourceReferences": [
+        "HKAPI-220"
+      ]
+    },
+    "hk-cedd-csu-cedd-incident": {
+      "elapsedMs": 186,
+      "errorCode": null,
+      "finalHost": "data.gov.hk",
+      "httpStatus": 200,
+      "mediaType": "application/json",
+      "outcome": "success",
+      "parsedRecordCount": 1,
+      "responseBytes": 2505,
+      "responseSha256": "ad773393609e798796e44fde27a02658e18710322f0db9d4abb31dff2662e8ea",
+      "schemaFingerprint": "0ddc931c2525b63b87100e2d8c9f2696208a8cee8491bb8291764314679990fd",
+      "sourceReferences": [
+        "HKAPI-234"
+      ]
+    },
+    "hk-cr-crdata-list-addr": {
+      "elapsedMs": 188,
+      "errorCode": null,
+      "finalHost": "data.gov.hk",
+      "httpStatus": 200,
+      "mediaType": "application/json",
+      "outcome": "success",
+      "parsedRecordCount": 1,
+      "responseBytes": 5856,
+      "responseSha256": "5404fadcbb3165858e596ace5765ebe545b3483c242279af174f71c9ecee7fc4",
+      "schemaFingerprint": "e806b64debb035728990db90e2f4c4b6ef9846d5980d8b05da7c1d2254677dc5",
+      "sourceReferences": [
+        "HKAPI-147"
+      ]
+    },
+    "hk-cr-crdata-list-ml-licensees": {
+      "elapsedMs": 212,
+      "errorCode": null,
+      "finalHost": "data.gov.hk",
+      "httpStatus": 200,
+      "mediaType": "application/json",
+      "outcome": "success",
+      "parsedRecordCount": 1,
+      "responseBytes": 7720,
+      "responseSha256": "11e2779fd638e0128cc7cac778a6907314245b2c40e4441e0dcb10902e9c701f",
+      "schemaFingerprint": "e806b64debb035728990db90e2f4c4b6ef9846d5980d8b05da7c1d2254677dc5",
+      "sourceReferences": [
+        "HKAPI-148"
+      ]
+    },
+    "hk-cr-crdata-list-newly-registered-companies-1718": {
+      "elapsedMs": 379,
+      "errorCode": null,
+      "finalHost": "data.gov.hk",
+      "httpStatus": 200,
+      "mediaType": "application/json",
+      "outcome": "success",
+      "parsedRecordCount": 1,
+      "responseBytes": 101710,
+      "responseSha256": "a119e56f6c71761cc9450996cd718b8979e1f4b595a97b1385927b5361013f98",
+      "schemaFingerprint": "e806b64debb035728990db90e2f4c4b6ef9846d5980d8b05da7c1d2254677dc5",
+      "sourceReferences": [
+        "HKAPI-149"
+      ]
+    },
+    "hk-cr-crdata-list-newly-registered-companies-1920": {
+      "elapsedMs": 620,
+      "errorCode": null,
+      "finalHost": "data.gov.hk",
+      "httpStatus": 200,
+      "mediaType": "application/json",
+      "outcome": "success",
+      "parsedRecordCount": 1,
+      "responseBytes": 166306,
+      "responseSha256": "0a0250a926e81afddb4c8abf05372d30a62e447bd1f73961166da161adad8306",
+      "schemaFingerprint": "e806b64debb035728990db90e2f4c4b6ef9846d5980d8b05da7c1d2254677dc5",
+      "sourceReferences": [
+        "HKAPI-149"
+      ]
+    },
+    "hk-cr-crdata-list-newly-registered-companies-2122": {
+      "elapsedMs": 777,
+      "errorCode": null,
+      "finalHost": "data.gov.hk",
+      "httpStatus": 200,
+      "mediaType": "application/json",
+      "outcome": "success",
+      "parsedRecordCount": 1,
+      "responseBytes": 311189,
+      "responseSha256": "6c6c4b7fc08b4c0b8d65bb18f430a6a4be5fdda90541486c150d9bd711bf2bb2",
+      "schemaFingerprint": "e806b64debb035728990db90e2f4c4b6ef9846d5980d8b05da7c1d2254677dc5",
+      "sourceReferences": [
+        "HKAPI-149"
+      ]
+    },
+    "hk-cr-crdata-list-newly-registered-companies-2324": {
+      "elapsedMs": 1322,
+      "errorCode": null,
+      "finalHost": "data.gov.hk",
+      "httpStatus": 200,
+      "mediaType": "application/json",
+      "outcome": "success",
+      "parsedRecordCount": 1,
+      "responseBytes": 412542,
+      "responseSha256": "647a17956f5439a671c99cef3ac82fb5ae55bcd5bad9bcf01261430b5453a97a",
+      "schemaFingerprint": "e806b64debb035728990db90e2f4c4b6ef9846d5980d8b05da7c1d2254677dc5",
+      "sourceReferences": [
+        "HKAPI-149"
+      ]
+    },
+    "hk-cr-crdata-list-newly-registered-companies-2526": {
+      "elapsedMs": 265,
+      "errorCode": null,
+      "finalHost": "data.gov.hk",
+      "httpStatus": 200,
+      "mediaType": "application/json",
+      "outcome": "success",
+      "parsedRecordCount": 1,
+      "responseBytes": 340939,
+      "responseSha256": "723207b3024d0991bbd7043edb527e5df82ab674fc7e3d44d78c758938f134e8",
+      "schemaFingerprint": "e806b64debb035728990db90e2f4c4b6ef9846d5980d8b05da7c1d2254677dc5",
+      "sourceReferences": [
+        "HKAPI-149"
+      ]
+    },
+    "hk-csb-csb-gov-vacancies": {
+      "elapsedMs": 193,
+      "errorCode": null,
+      "finalHost": "data.gov.hk",
+      "httpStatus": 200,
+      "mediaType": "application/json",
+      "outcome": "success",
+      "parsedRecordCount": 1,
+      "responseBytes": 4962,
+      "responseSha256": "d2fe5eb4db7398836eec15eec4879e2ca6c8fe146f8b1f8de5cb7cfc37f0ccd8",
+      "schemaFingerprint": "e806b64debb035728990db90e2f4c4b6ef9846d5980d8b05da7c1d2254677dc5",
+      "sourceReferences": [
+        "HKAPI-177"
+      ]
+    },
+    "hk-cstb-cstb_tc-tc-average-achieved-hotel-room-rate": {
+      "elapsedMs": 679,
+      "errorCode": null,
+      "finalHost": "data.gov.hk",
+      "httpStatus": 200,
+      "mediaType": "application/json",
+      "outcome": "success",
+      "parsedRecordCount": 1,
+      "responseBytes": 4164,
+      "responseSha256": "0782dc6d7974cc5be5107fec4152ebd0f8b5784957ac07bc0f1b51b252eaae45",
+      "schemaFingerprint": "e806b64debb035728990db90e2f4c4b6ef9846d5980d8b05da7c1d2254677dc5",
+      "sourceReferences": [
+        "HKAPI-210"
+      ]
+    },
+    "hk-cstb-cstb_tc-tc-average-achieved-hotel-room-rate-by-category": {
+      "elapsedMs": 206,
+      "errorCode": null,
+      "finalHost": "data.gov.hk",
+      "httpStatus": 200,
+      "mediaType": "application/json",
+      "outcome": "success",
+      "parsedRecordCount": 1,
+      "responseBytes": 4342,
+      "responseSha256": "da57ea4e8337fb1cab3337694c912df308f2983e5ed0a512fe538db604eb692a",
+      "schemaFingerprint": "e806b64debb035728990db90e2f4c4b6ef9846d5980d8b05da7c1d2254677dc5",
+      "sourceReferences": [
+        "HKAPI-210"
+      ]
+    },
+    "hk-cstb-cstb_tc-tc-hk-major-attractions-general-info": {
+      "elapsedMs": 381,
+      "errorCode": null,
+      "finalHost": "data.gov.hk",
+      "httpStatus": 200,
+      "mediaType": "application/json",
+      "outcome": "success",
+      "parsedRecordCount": 1,
+      "responseBytes": 4334,
+      "responseSha256": "f88cd661ac91bda850a6229a0406981b38a009eb66fa6b7fce004115e86e8ca8",
+      "schemaFingerprint": "e806b64debb035728990db90e2f4c4b6ef9846d5980d8b05da7c1d2254677dc5",
+      "sourceReferences": [
+        "HKAPI-209"
+      ]
+    },
+    "hk-cstb-cstb_tc-tc-hktb-events": {
+      "elapsedMs": 213,
+      "errorCode": null,
+      "finalHost": "data.gov.hk",
+      "httpStatus": 200,
+      "mediaType": "application/json",
+      "outcome": "success",
+      "parsedRecordCount": 1,
+      "responseBytes": 6480,
+      "responseSha256": "600274efee5b84d7f24fefc08ec20d8c878d164b5cc7e333cfdd596d6566df1e",
+      "schemaFingerprint": "e806b64debb035728990db90e2f4c4b6ef9846d5980d8b05da7c1d2254677dc5",
+      "sourceReferences": [
+        "HKAPI-208"
+      ]
+    },
+    "hk-cstb-cstb_tc-tc-hotel-room-occupancy-rate": {
+      "elapsedMs": 257,
+      "errorCode": null,
+      "finalHost": "data.gov.hk",
+      "httpStatus": 200,
+      "mediaType": "application/json",
+      "outcome": "success",
+      "parsedRecordCount": 1,
+      "responseBytes": 7323,
+      "responseSha256": "abfeecfd77e17c7145b5f0d97bd3c059e9255a99ac2be6abb5c28239e68dff60",
+      "schemaFingerprint": "e806b64debb035728990db90e2f4c4b6ef9846d5980d8b05da7c1d2254677dc5",
+      "sourceReferences": [
+        "HKAPI-210"
+      ]
+    },
+    "hk-cstb-cstb_tc-tc-hotel-room-occupancy-rate-by-category": {
+      "elapsedMs": 210,
+      "errorCode": null,
+      "finalHost": "data.gov.hk",
+      "httpStatus": 200,
+      "mediaType": "application/json",
+      "outcome": "success",
+      "parsedRecordCount": 1,
+      "responseBytes": 4239,
+      "responseSha256": "9246ac461374ce4b98549ad396a0f8a6fbcf29b23472cb454ecc49952f195223",
+      "schemaFingerprint": "e806b64debb035728990db90e2f4c4b6ef9846d5980d8b05da7c1d2254677dc5",
+      "sourceReferences": [
+        "HKAPI-210"
+      ]
+    },
+    "hk-cstb-cstb_tc-tc-hotel-room-occupancy-rate-by-district": {
+      "elapsedMs": 202,
+      "errorCode": null,
+      "finalHost": "data.gov.hk",
+      "httpStatus": 200,
+      "mediaType": "application/json",
+      "outcome": "success",
+      "parsedRecordCount": 1,
+      "responseBytes": 4319,
+      "responseSha256": "8a59ec04127e29722dba478b0abeed9f7a111ea39fe32e3758430232a5cd00f0",
+      "schemaFingerprint": "e806b64debb035728990db90e2f4c4b6ef9846d5980d8b05da7c1d2254677dc5",
+      "sourceReferences": [
+        "HKAPI-210"
+      ]
+    },
+    "hk-cstb-cstb_tc-tc-number-of-hotel-rooms": {
+      "elapsedMs": 201,
+      "errorCode": null,
+      "finalHost": "data.gov.hk",
+      "httpStatus": 200,
+      "mediaType": "application/json",
+      "outcome": "success",
+      "parsedRecordCount": 1,
+      "responseBytes": 4127,
+      "responseSha256": "f04e319ae82e97aff35e2faf5af68b71a7316e87af30a8f3d90850b041dbc16a",
+      "schemaFingerprint": "e806b64debb035728990db90e2f4c4b6ef9846d5980d8b05da7c1d2254677dc5",
+      "sourceReferences": [
+        "HKAPI-210"
+      ]
+    },
+    "hk-cstb-cstb_tc-tc-number-of-hotel-rooms-by-18-district-councils": {
+      "elapsedMs": 208,
+      "errorCode": null,
+      "finalHost": "data.gov.hk",
+      "httpStatus": 200,
+      "mediaType": "application/json",
+      "outcome": "success",
+      "parsedRecordCount": 1,
+      "responseBytes": 6644,
+      "responseSha256": "f19b6004c95bbe5add89e07a77b1557decb3d9f2bf0a90c80843cc2eefbe7743",
+      "schemaFingerprint": "e806b64debb035728990db90e2f4c4b6ef9846d5980d8b05da7c1d2254677dc5",
+      "sourceReferences": [
+        "HKAPI-210"
+      ]
+    },
+    "hk-cstb-cstb_tc-tc-number-of-hotel-rooms-by-category": {
+      "elapsedMs": 206,
+      "errorCode": null,
+      "finalHost": "data.gov.hk",
+      "httpStatus": 200,
+      "mediaType": "application/json",
+      "outcome": "success",
+      "parsedRecordCount": 1,
+      "responseBytes": 4302,
+      "responseSha256": "c045398d53c686896b8402390d34c1b864cc1e6bd83bc06457ff45527a1df6de",
+      "schemaFingerprint": "e806b64debb035728990db90e2f4c4b6ef9846d5980d8b05da7c1d2254677dc5",
+      "sourceReferences": [
+        "HKAPI-210"
+      ]
+    },
+    "hk-cstb-cstb_tc-tc-number-of-hotel-rooms-by-district": {
+      "elapsedMs": 211,
+      "errorCode": null,
+      "finalHost": "data.gov.hk",
+      "httpStatus": 200,
+      "mediaType": "application/json",
+      "outcome": "success",
+      "parsedRecordCount": 1,
+      "responseBytes": 4230,
+      "responseSha256": "49666ee634a49c9c589da11c9304a0684a2d10c6aa6aab8da84740126d3a5110",
+      "schemaFingerprint": "e806b64debb035728990db90e2f4c4b6ef9846d5980d8b05da7c1d2254677dc5",
+      "sourceReferences": [
+        "HKAPI-210"
+      ]
+    },
+    "hk-cstb-cstb_tc-tc-number-of-hotel-rooms-next-three-years": {
+      "elapsedMs": 206,
+      "errorCode": null,
+      "finalHost": "data.gov.hk",
+      "httpStatus": 200,
+      "mediaType": "application/json",
+      "outcome": "success",
+      "parsedRecordCount": 1,
+      "responseBytes": 4157,
+      "responseSha256": "1e34087177b99f704cb563f9de7a4f6a886b110e67c7527036860710203a35e3",
+      "schemaFingerprint": "e806b64debb035728990db90e2f4c4b6ef9846d5980d8b05da7c1d2254677dc5",
+      "sourceReferences": [
+        "HKAPI-210"
+      ]
+    },
+    "hk-cstb-cstb_tc-tc-number-of-hotel-rooms-next-three-years-by-18-district-councils": {
+      "elapsedMs": 195,
+      "errorCode": null,
+      "finalHost": "data.gov.hk",
+      "httpStatus": 200,
+      "mediaType": "application/json",
+      "outcome": "success",
+      "parsedRecordCount": 1,
+      "responseBytes": 7055,
+      "responseSha256": "d1b4faa71622e9fc710212c34d67261f717015a5718abe4b8e9e72bf98b7684f",
+      "schemaFingerprint": "e806b64debb035728990db90e2f4c4b6ef9846d5980d8b05da7c1d2254677dc5",
+      "sourceReferences": [
+        "HKAPI-210"
+      ]
+    },
+    "hk-customs-ced_stat-vehicle-clearance": {
+      "elapsedMs": 209,
+      "errorCode": null,
+      "finalHost": "data.gov.hk",
+      "httpStatus": 200,
+      "mediaType": "application/json",
+      "outcome": "success",
+      "parsedRecordCount": 1,
+      "responseBytes": 7878,
+      "responseSha256": "f2e11c634e97e8eff0c2d60955b4ab4ccfa88e058598225f8d830c71c9309dd3",
+      "schemaFingerprint": "e806b64debb035728990db90e2f4c4b6ef9846d5980d8b05da7c1d2254677dc5",
+      "sourceReferences": [
+        "HKAPI-080"
+      ]
+    },
+    "hk-dh-chpsebcdd-number-of-notifications-for-notifiable-infectious-diseases": {
+      "elapsedMs": 287,
+      "errorCode": null,
+      "finalHost": "data.gov.hk",
+      "httpStatus": 200,
+      "mediaType": "application/json",
+      "outcome": "success",
+      "parsedRecordCount": 1,
+      "responseBytes": 49204,
+      "responseSha256": "d6da0a15b231eb380b375060b3cb49ecd912343257d709dfb1101ed0da63aef2",
+      "schemaFingerprint": "6a30b7ca70ac0cb6d6b32794281ada9e2363695717a780db905efeb3ad86fc22",
+      "sourceReferences": [
+        "HKAPI-127"
+      ]
+    },
+    "hk-dh-chpsebcdde-aed-cdis-syndromic": {
+      "elapsedMs": 201,
+      "errorCode": null,
+      "finalHost": "data.gov.hk",
+      "httpStatus": 200,
+      "mediaType": "application/json",
+      "outcome": "success",
+      "parsedRecordCount": 1,
+      "responseBytes": 2527,
+      "responseSha256": "c12222ba8bca58a8597ccc12eecca572360e4925542331c2eb4fb366bb70a365",
+      "schemaFingerprint": "e806b64debb035728990db90e2f4c4b6ef9846d5980d8b05da7c1d2254677dc5",
+      "sourceReferences": [
+        "HKAPI-128"
+      ]
+    },
+    "hk-dh-chpsebcdde-ccckg-cdis-sentinel": {
+      "elapsedMs": 193,
+      "errorCode": null,
+      "finalHost": "data.gov.hk",
+      "httpStatus": 200,
+      "mediaType": "application/json",
+      "outcome": "success",
+      "parsedRecordCount": 1,
+      "responseBytes": 2642,
+      "responseSha256": "3af8dd06c404ec180b7afb6aa142a14dfcbb3b115b026843b96995658a6ed15f",
+      "schemaFingerprint": "e806b64debb035728990db90e2f4c4b6ef9846d5980d8b05da7c1d2254677dc5",
+      "sourceReferences": [
+        "HKAPI-129"
+      ]
+    },
+    "hk-dh-chpsebcdde-chikungunya-fever-cases": {
+      "elapsedMs": 257,
+      "errorCode": null,
+      "finalHost": "data.gov.hk",
+      "httpStatus": 200,
+      "mediaType": "application/json",
+      "outcome": "success",
+      "parsedRecordCount": 1,
+      "responseBytes": 31981,
+      "responseSha256": "1853465f383933c0394c5613f84646d2adc7df040d92b2eb36a9cf166741ea40",
+      "schemaFingerprint": "e806b64debb035728990db90e2f4c4b6ef9846d5980d8b05da7c1d2254677dc5",
+      "sourceReferences": [
+        "HKAPI-132"
+      ]
+    },
+    "hk-dh-chpsebcdde-cmp-cdis-sentinel": {
+      "elapsedMs": 266,
+      "errorCode": null,
+      "finalHost": "data.gov.hk",
+      "httpStatus": 200,
+      "mediaType": "application/json",
+      "outcome": "success",
+      "parsedRecordCount": 1,
+      "responseBytes": 2622,
+      "responseSha256": "c7f7d46cfee4bc77e741673078d9b23edbe28d3472f88cc39301c78d9223f32f",
+      "schemaFingerprint": "e806b64debb035728990db90e2f4c4b6ef9846d5980d8b05da7c1d2254677dc5",
+      "sourceReferences": [
+        "HKAPI-131"
+      ]
+    },
+    "hk-dh-chpsebcdde-dengue-fever-cases": {
+      "elapsedMs": 268,
+      "errorCode": null,
+      "finalHost": "data.gov.hk",
+      "httpStatus": 200,
+      "mediaType": "application/json",
+      "outcome": "success",
+      "parsedRecordCount": 1,
+      "responseBytes": 43275,
+      "responseSha256": "d3fff0f4ec333fee6ab0de20caae6a0eb942b7a6fecc454f456ca679f7d70ca0",
+      "schemaFingerprint": "e806b64debb035728990db90e2f4c4b6ef9846d5980d8b05da7c1d2254677dc5",
+      "sourceReferences": [
+        "HKAPI-132"
+      ]
+    },
+    "hk-dh-chpsebcdde-ev-scan": {
+      "elapsedMs": 191,
+      "errorCode": null,
+      "finalHost": "data.gov.hk",
+      "httpStatus": 200,
+      "mediaType": "application/json",
+      "outcome": "success",
+      "parsedRecordCount": 1,
+      "responseBytes": 2473,
+      "responseSha256": "9393901ef6e9c2915375829ce939bdcf3d00bdbbf009df9f53013cde101dac8f",
+      "schemaFingerprint": "e806b64debb035728990db90e2f4c4b6ef9846d5980d8b05da7c1d2254677dc5",
+      "sourceReferences": [
+        "HKAPI-132"
+      ]
+    },
+    "hk-dh-chpsebcdde-food-poisoning-causative-agents": {
+      "elapsedMs": 227,
+      "errorCode": null,
+      "finalHost": "data.gov.hk",
+      "httpStatus": 200,
+      "mediaType": "application/json",
+      "outcome": "success",
+      "parsedRecordCount": 1,
+      "responseBytes": 25766,
+      "responseSha256": "ad1a0034f93cf29e16599cf24c8df4bb7b0c509a3ea510591c0eec7e639faa6d",
+      "schemaFingerprint": "e806b64debb035728990db90e2f4c4b6ef9846d5980d8b05da7c1d2254677dc5",
+      "sourceReferences": [
+        "HKAPI-132"
+      ]
+    },
+    "hk-dh-chpsebcdde-food-poisoning-clenbuterol-pesticides": {
+      "elapsedMs": 371,
+      "errorCode": null,
+      "finalHost": "data.gov.hk",
+      "httpStatus": 200,
+      "mediaType": "application/json",
+      "outcome": "success",
+      "parsedRecordCount": 1,
+      "responseBytes": 25041,
+      "responseSha256": "e5e8ac69bccc33743c284fb09853222fe63af29c94716ba18db24710f0372713",
+      "schemaFingerprint": "e806b64debb035728990db90e2f4c4b6ef9846d5980d8b05da7c1d2254677dc5",
+      "sourceReferences": [
+        "HKAPI-132"
+      ]
+    },
+    "hk-dh-chpsebcdde-ha-hfm": {
+      "elapsedMs": 422,
+      "errorCode": null,
+      "finalHost": "data.gov.hk",
+      "httpStatus": 200,
+      "mediaType": "application/json",
+      "outcome": "success",
+      "parsedRecordCount": 1,
+      "responseBytes": 16907,
+      "responseSha256": "0d9e6fd9e6bb2a4f34ede83d27d42c59a920b33d938674e3b0828df7d3802c65",
+      "schemaFingerprint": "e806b64debb035728990db90e2f4c4b6ef9846d5980d8b05da7c1d2254677dc5",
+      "sourceReferences": [
+        "HKAPI-132"
+      ]
+    },
+    "hk-dh-chpsebcdde-pmp-gopc-acj-monthly-cdis-sentinel": {
+      "elapsedMs": 466,
+      "errorCode": null,
+      "finalHost": "data.gov.hk",
+      "httpStatus": 200,
+      "mediaType": "application/json",
+      "outcome": "success",
+      "parsedRecordCount": 1,
+      "responseBytes": 18299,
+      "responseSha256": "b18882ee0d8f48497ecfa8d0e3739053a73decc085fcbb29c4a6650272a2a506",
+      "schemaFingerprint": "e806b64debb035728990db90e2f4c4b6ef9846d5980d8b05da7c1d2254677dc5",
+      "sourceReferences": [
+        "HKAPI-132"
+      ]
+    },
+    "hk-dh-chpsebcdde-pmp-gopc-acj-weekly-cdis-sentinel": {
+      "elapsedMs": 216,
+      "errorCode": null,
+      "finalHost": "data.gov.hk",
+      "httpStatus": 200,
+      "mediaType": "application/json",
+      "outcome": "success",
+      "parsedRecordCount": 1,
+      "responseBytes": 18243,
+      "responseSha256": "9adc08116e77bdccdf25f55f674768bcbbdc370cc36a5d7fa82adecd5dd05b77",
+      "schemaFingerprint": "e806b64debb035728990db90e2f4c4b6ef9846d5980d8b05da7c1d2254677dc5",
+      "sourceReferences": [
+        "HKAPI-132"
+      ]
+    },
+    "hk-dh-chpsebcdde-pmp-gopc-add-monthly-cdis-sentinel": {
+      "elapsedMs": 243,
+      "errorCode": null,
+      "finalHost": "data.gov.hk",
+      "httpStatus": 200,
+      "mediaType": "application/json",
+      "outcome": "success",
+      "parsedRecordCount": 1,
+      "responseBytes": 18479,
+      "responseSha256": "d08094cedf6ddd0fb2c84c6b55419cf23c42e0d53c0a714e071945e5824bb1af",
+      "schemaFingerprint": "e806b64debb035728990db90e2f4c4b6ef9846d5980d8b05da7c1d2254677dc5",
+      "sourceReferences": [
+        "HKAPI-132"
+      ]
+    },
+    "hk-dh-chpsebcdde-pmp-gopc-add-weekly-cdis-sentinel": {
+      "elapsedMs": 253,
+      "errorCode": null,
+      "finalHost": "data.gov.hk",
+      "httpStatus": 200,
+      "mediaType": "application/json",
+      "outcome": "success",
+      "parsedRecordCount": 1,
+      "responseBytes": 18423,
+      "responseSha256": "d36f3a1a73041fae98a6173bf95b3e664a3a43b0e3359fd4b1ace775edfc7793",
+      "schemaFingerprint": "e806b64debb035728990db90e2f4c4b6ef9846d5980d8b05da7c1d2254677dc5",
+      "sourceReferences": [
+        "HKAPI-132"
+      ]
+    },
+    "hk-dh-chpsebcdde-pmp-gopc-hfmd-weekly-cdis-sentinel": {
+      "elapsedMs": 255,
+      "errorCode": null,
+      "finalHost": "data.gov.hk",
+      "httpStatus": 200,
+      "mediaType": "application/json",
+      "outcome": "success",
+      "parsedRecordCount": 1,
+      "responseBytes": 18532,
+      "responseSha256": "79b2d12ec28f82a2343789669c3a27ca69af0103587f44351ecb9e0242f7520e",
+      "schemaFingerprint": "e806b64debb035728990db90e2f4c4b6ef9846d5980d8b05da7c1d2254677dc5",
+      "sourceReferences": [
+        "HKAPI-132"
+      ]
+    },
+    "hk-dh-chpsebcdde-pmp-gopc-ili-monthly-cdis-sentinel": {
+      "elapsedMs": 234,
+      "errorCode": null,
+      "finalHost": "data.gov.hk",
+      "httpStatus": 200,
+      "mediaType": "application/json",
+      "outcome": "success",
+      "parsedRecordCount": 1,
+      "responseBytes": 18371,
+      "responseSha256": "880ff592f2d97572f01b31fa67607feff01e352575f4e43737668f6f7b718958",
+      "schemaFingerprint": "e806b64debb035728990db90e2f4c4b6ef9846d5980d8b05da7c1d2254677dc5",
+      "sourceReferences": [
+        "HKAPI-132"
+      ]
+    },
+    "hk-dh-chpsebcdde-pmp-gopc-ili-weekly-cdis-sentinel": {
+      "elapsedMs": 225,
+      "errorCode": null,
+      "finalHost": "data.gov.hk",
+      "httpStatus": 200,
+      "mediaType": "application/json",
+      "outcome": "success",
+      "parsedRecordCount": 1,
+      "responseBytes": 18315,
+      "responseSha256": "a324cf02549e620ab933370c4288011222b2eca9f126d8baf9442602508be36d",
+      "schemaFingerprint": "e806b64debb035728990db90e2f4c4b6ef9846d5980d8b05da7c1d2254677dc5",
+      "sourceReferences": [
+        "HKAPI-132"
+      ]
+    },
+    "hk-dh-chpsebcdde-rche-cdis-sentinel": {
+      "elapsedMs": 202,
+      "errorCode": null,
+      "finalHost": "data.gov.hk",
+      "httpStatus": 200,
+      "mediaType": "application/json",
+      "outcome": "success",
+      "parsedRecordCount": 1,
+      "responseBytes": 2663,
+      "responseSha256": "bcd4986381f554572f6a6a673726538cfa0f6cf9c5f628156418eda1f0b87996",
+      "schemaFingerprint": "e806b64debb035728990db90e2f4c4b6ef9846d5980d8b05da7c1d2254677dc5",
+      "sourceReferences": [
+        "HKAPI-130"
+      ]
+    },
+    "hk-dh-chpsebcddr-covid-express": {
+      "elapsedMs": 206,
+      "errorCode": null,
+      "finalHost": "data.gov.hk",
+      "httpStatus": 200,
+      "mediaType": "application/json",
+      "outcome": "success",
+      "parsedRecordCount": 1,
+      "responseBytes": 2516,
+      "responseSha256": "f600f5819aee5e99d4dc169511a0b50060d01af251a6b5deeb9e450ce2006206",
+      "schemaFingerprint": "e806b64debb035728990db90e2f4c4b6ef9846d5980d8b05da7c1d2254677dc5",
+      "sourceReferences": [
+        "HKAPI-136"
+      ]
+    },
+    "hk-dh-chpsebcddr-novel-infectious-agent": {
+      "elapsedMs": 297,
+      "errorCode": null,
+      "finalHost": "data.gov.hk",
+      "httpStatus": 200,
+      "mediaType": "application/json",
+      "outcome": "success",
+      "parsedRecordCount": 1,
+      "responseBytes": 38312,
+      "responseSha256": "bc013b4cc2166c52c16cad59c815850f2fd6d6ee3e90072b855dd2aac6db6e46",
+      "schemaFingerprint": "e806b64debb035728990db90e2f4c4b6ef9846d5980d8b05da7c1d2254677dc5",
+      "sourceReferences": [
+        "HKAPI-136"
+      ]
+    },
+    "hk-dh-chpsebcddv-ipd-monthly": {
+      "elapsedMs": 287,
+      "errorCode": null,
+      "finalHost": "data.gov.hk",
+      "httpStatus": 200,
+      "mediaType": "application/json",
+      "outcome": "success",
+      "parsedRecordCount": 1,
+      "responseBytes": 2509,
+      "responseSha256": "2d008efd6dfad5b1edbf90a3cd3d259f354d49d5a3bddfa8d49324dcd63ca563",
+      "schemaFingerprint": "e806b64debb035728990db90e2f4c4b6ef9846d5980d8b05da7c1d2254677dc5",
+      "sourceReferences": [
+        "HKAPI-132"
+      ]
+    },
+    "hk-dh-cmd-cmd-list-of-proprietary-chinese-medicine": {
+      "elapsedMs": 199,
+      "errorCode": null,
+      "finalHost": "data.gov.hk",
+      "httpStatus": 200,
+      "mediaType": "application/json",
+      "outcome": "success",
+      "parsedRecordCount": 1,
+      "responseBytes": 3609,
+      "responseSha256": "2de9239cbbb1cacc29948b251573ea218acd27b5e1fcaeb0baae923ad3966387",
+      "schemaFingerprint": "6a30b7ca70ac0cb6d6b32794281ada9e2363695717a780db905efeb3ad86fc22",
+      "sourceReferences": [
+        "HKAPI-135"
+      ]
+    },
+    "hk-dh-dh_do-hk-dh-do-licensed-drug-dealer": {
+      "elapsedMs": 203,
+      "errorCode": null,
+      "finalHost": "data.gov.hk",
+      "httpStatus": 200,
+      "mediaType": "application/json",
+      "outcome": "success",
+      "parsedRecordCount": 1,
+      "responseBytes": 2404,
+      "responseSha256": "e8e0bf39afc3b6b395560e2d3537b2290b3c6b9b4eee9ce105e56dfe777ba5a4",
+      "schemaFingerprint": "5e4dd799f50fa9e8c5e3dc1d8747fa9f47a4ae4fbb1f44b942a8112f826a0a79",
+      "sourceReferences": [
+        "HKAPI-134"
+      ]
+    },
+    "hk-dh-dh_do-hk-dh-do-licensed-pharmacy": {
+      "elapsedMs": 210,
+      "errorCode": null,
+      "finalHost": "data.gov.hk",
+      "httpStatus": 200,
+      "mediaType": "application/json",
+      "outcome": "success",
+      "parsedRecordCount": 1,
+      "responseBytes": 2383,
+      "responseSha256": "58cb62b24db027db3661b749c54142a2edb0d6702f5e7dbe63e24739f488f680",
+      "schemaFingerprint": "5e4dd799f50fa9e8c5e3dc1d8747fa9f47a4ae4fbb1f44b942a8112f826a0a79",
+      "sourceReferences": [
+        "HKAPI-134"
+      ]
+    },
+    "hk-dh-dh_do-hk-dh-do-pharmaceutical-product": {
+      "elapsedMs": 215,
+      "errorCode": null,
+      "finalHost": "data.gov.hk",
+      "httpStatus": 200,
+      "mediaType": "application/json",
+      "outcome": "success",
+      "parsedRecordCount": 1,
+      "responseBytes": 2521,
+      "responseSha256": "4b575d22333917309c44d541bc53b8e2fbe932a16c84efc71f6fcabea55acbbf",
+      "schemaFingerprint": "5e4dd799f50fa9e8c5e3dc1d8747fa9f47a4ae4fbb1f44b942a8112f826a0a79",
+      "sourceReferences": [
+        "HKAPI-133"
+      ]
+    },
+    "hk-dh-dh_hq-list-of-dh-clinics": {
+      "elapsedMs": 236,
+      "errorCode": null,
+      "finalHost": "data.gov.hk",
+      "httpStatus": 200,
+      "mediaType": "application/json",
+      "outcome": "success",
+      "parsedRecordCount": 1,
+      "responseBytes": 21915,
+      "responseSha256": "62df6183d80abd8757cb5a3ee9aaa0d1195dc15ea508a71c5807720db1a19279",
+      "schemaFingerprint": "6a30b7ca70ac0cb6d6b32794281ada9e2363695717a780db905efeb3ad86fc22",
+      "sourceReferences": [
+        "HKAPI-138"
+      ]
+    },
+    "hk-dh-dh_pmpdb-pmvd-covid": {
+      "elapsedMs": 213,
+      "errorCode": null,
+      "finalHost": "data.gov.hk",
+      "httpStatus": 200,
+      "mediaType": "application/json",
+      "outcome": "success",
+      "parsedRecordCount": 1,
+      "responseBytes": 2565,
+      "responseSha256": "6fa3bf3f3cfedc4725e4c592ef8fec0f59dae1d54e1cde13a212782d631ce44b",
+      "schemaFingerprint": "7bd3f7eb30ff3337a8b21cbc5d7e64adf24740df863150585b443d01fcace371",
+      "sourceReferences": [
+        "HKAPI-136"
+      ]
+    },
+    "hk-doj-hkel-legislation-current": {
+      "elapsedMs": 187,
+      "errorCode": null,
+      "finalHost": "data.gov.hk",
+      "httpStatus": 200,
+      "mediaType": "application/json",
+      "outcome": "success",
+      "parsedRecordCount": 1,
+      "responseBytes": 15470,
+      "responseSha256": "80a5ffe377239ad76583a497f4db78d404d5eac5beee1108bf9df699d5eef639",
+      "schemaFingerprint": "d14903910173290e748cf796ec9a6dec3105ef9a772f6f9ef2b98c495b0b7ac9",
+      "sourceReferences": [
+        "HKAPI-171"
+      ]
+    },
+    "hk-doj-hkel-legislation-past": {
+      "elapsedMs": 175,
+      "errorCode": null,
+      "finalHost": "data.gov.hk",
+      "httpStatus": 200,
+      "mediaType": "application/json",
+      "outcome": "success",
+      "parsedRecordCount": 1,
+      "responseBytes": 18850,
+      "responseSha256": "568ad821bcef272bf5772aae96bd367bf754f181f89a1dfd2c8362e1511b8e97",
+      "schemaFingerprint": "d14903910173290e748cf796ec9a6dec3105ef9a772f6f9ef2b98c495b0b7ac9",
+      "sourceReferences": [
+        "HKAPI-172"
+      ]
+    },
+    "hk-doj-hkel-list-of-legislation-current": {
+      "elapsedMs": 182,
+      "errorCode": null,
+      "finalHost": "data.gov.hk",
+      "httpStatus": 200,
+      "mediaType": "application/json",
+      "outcome": "success",
+      "parsedRecordCount": 1,
+      "responseBytes": 8177,
+      "responseSha256": "96d0b7aa536d0b87c82ead700e7f5b281533bd004e29b5715428d3ced055fd4e",
+      "schemaFingerprint": "14f2048274e3a9f512753d809c3ac1d6b39ff00cd6e9226296820e200e473ecb",
+      "sourceReferences": [
+        "HKAPI-170"
+      ]
+    },
+    "hk-dpo-datagovhk1-transport-bus-route-list-and-eta-spcific-bus-stop": {
+      "elapsedMs": 209,
+      "errorCode": null,
+      "finalHost": "data.gov.hk",
+      "httpStatus": 200,
+      "mediaType": "application/json",
+      "outcome": "success",
+      "parsedRecordCount": 1,
+      "responseBytes": 5028,
+      "responseSha256": "d919f75cee0f58cc2c3b527141eb28b4929941daa89a7dee61942c07a1b7da25",
+      "schemaFingerprint": "67bf7d53de9c5b8b88a79a591ef5627b2840edd185962d8c6e0e6001025c3113",
+      "sourceReferences": [
+        "HKAPI-031"
+      ]
+    },
+    "hk-dpo-smart_lmpt-smart-lamppost-compartment-data-resources": {
+      "elapsedMs": 203,
+      "errorCode": null,
+      "finalHost": "data.gov.hk",
+      "httpStatus": 200,
+      "mediaType": "application/json",
+      "outcome": "success",
+      "parsedRecordCount": 1,
+      "responseBytes": 4339,
+      "responseSha256": "461652dad62ef2caba4c7755270559e63896c08616f97a7fd1b986ba878ea1af",
+      "schemaFingerprint": "0ddc931c2525b63b87100e2d8c9f2696208a8cee8491bb8291764314679990fd",
+      "sourceReferences": [
+        "HKAPI-264",
+        "HKAPI-265"
+      ]
+    },
+    "hk-dpo-smart_lmpt-smart-lamppost-data-resources": {
+      "elapsedMs": 227,
+      "errorCode": null,
+      "finalHost": "data.gov.hk",
+      "httpStatus": 200,
+      "mediaType": "application/json",
+      "outcome": "success",
+      "parsedRecordCount": 1,
+      "responseBytes": 9230,
+      "responseSha256": "b9c5318df3d53540ca6308f9a19defb705cf86cde02892c8acb73aad1208d0e8",
+      "schemaFingerprint": "bbd47474197401977141cd77057f5a71171146f5193d2607e5a2ff396952d59b",
+      "sourceReferences": [
+        "HKAPI-264"
+      ]
+    },
+    "hk-dpo-smart_lmpt-smart-lamppost-lidar-snapshot-data-resources": {
+      "elapsedMs": 199,
+      "errorCode": null,
+      "finalHost": "data.gov.hk",
+      "httpStatus": 200,
+      "mediaType": "application/json",
+      "outcome": "success",
+      "parsedRecordCount": 1,
+      "responseBytes": 3647,
+      "responseSha256": "fc0e0403ae35fd832182a567099b47c920a8fcc061114319eff0c4652416f087",
+      "schemaFingerprint": "0ddc931c2525b63b87100e2d8c9f2696208a8cee8491bb8291764314679990fd",
+      "sourceReferences": [
+        "HKAPI-264"
+      ]
+    },
+    "hk-dsd-dsd_psi_1-sewage-flow-data": {
+      "elapsedMs": 185,
+      "errorCode": null,
+      "finalHost": "data.gov.hk",
+      "httpStatus": 200,
+      "mediaType": "application/json",
+      "outcome": "success",
+      "parsedRecordCount": 1,
+      "responseBytes": 12554,
+      "responseSha256": "b7aaa9a6ab2189607915687996e2f94e38370c51b18e1a40d89732c5a1ee8696",
+      "schemaFingerprint": "e806b64debb035728990db90e2f4c4b6ef9846d5980d8b05da7c1d2254677dc5",
+      "sourceReferences": [
+        "HKAPI-161"
+      ]
+    },
+    "hk-edb-crossbound-num-cbs-var-land": {
+      "elapsedMs": 209,
+      "errorCode": null,
+      "finalHost": "data.gov.hk",
+      "httpStatus": 200,
+      "mediaType": "application/json",
+      "outcome": "success",
+      "parsedRecordCount": 1,
+      "responseBytes": 7131,
+      "responseSha256": "e58da63ad6ea2abb9cb440b8838a49d7ab567f876d7bbd27cc313e6d7c01f64e",
+      "schemaFingerprint": "b132136385c0dfbe6b805119424a33b32785f026e831d95270d1a8b8e86cbe10",
+      "sourceReferences": [
+        "HKAPI-244"
+      ]
+    },
+    "hk-edb-crossbound-num-cross-bound-stu": {
+      "elapsedMs": 206,
+      "errorCode": null,
+      "finalHost": "data.gov.hk",
+      "httpStatus": 200,
+      "mediaType": "application/json",
+      "outcome": "success",
+      "parsedRecordCount": 1,
+      "responseBytes": 6539,
+      "responseSha256": "20f7dd75eb2dd22ab8d222526287ecd6dad7e59a8fe057fb846d4eeb94e41c80",
+      "schemaFingerprint": "b132136385c0dfbe6b805119424a33b32785f026e831d95270d1a8b8e86cbe10",
+      "sourceReferences": [
+        "HKAPI-244"
+      ]
+    },
+    "hk-edb-dss-dds-school-list": {
+      "elapsedMs": 187,
+      "errorCode": null,
+      "finalHost": "data.gov.hk",
+      "httpStatus": 200,
+      "mediaType": "application/json",
+      "outcome": "success",
+      "parsedRecordCount": 1,
+      "responseBytes": 15089,
+      "responseSha256": "9e7bf5def08881d40d54e27eb18f085e914d63cb57be89cd9b883b6ee58a6284",
+      "schemaFingerprint": "a2d0cc92cd2c29942a8b2858955730281490cdc93855b2083f991f3037e993eb",
+      "sourceReferences": [
+        "HKAPI-241"
+      ]
+    },
+    "hk-edb-figustat-acc-stu-kin-gra": {
+      "elapsedMs": 244,
+      "errorCode": null,
+      "finalHost": "data.gov.hk",
+      "httpStatus": 200,
+      "mediaType": "application/json",
+      "outcome": "success",
+      "parsedRecordCount": 1,
+      "responseBytes": 4804,
+      "responseSha256": "9eecbd4debd507252902276d7ade834d9018034efce1895f49830a24d50ec1e2",
+      "schemaFingerprint": "b132136385c0dfbe6b805119424a33b32785f026e831d95270d1a8b8e86cbe10",
+      "sourceReferences": [
+        "HKAPI-244"
+      ]
+    },
+    "hk-edb-figustat-day-sch-lev-sec": {
+      "elapsedMs": 206,
+      "errorCode": null,
+      "finalHost": "data.gov.hk",
+      "httpStatus": 200,
+      "mediaType": "application/json",
+      "outcome": "success",
+      "parsedRecordCount": 1,
+      "responseBytes": 4424,
+      "responseSha256": "4b9c3d3de3eba106681092fcf7f915164a8cfb811b6ee2d5a9f117abd9bea6ca",
+      "schemaFingerprint": "b132136385c0dfbe6b805119424a33b32785f026e831d95270d1a8b8e86cbe10",
+      "sourceReferences": [
+        "HKAPI-244"
+      ]
+    },
+    "hk-edb-figustat-fig-stat-education-and-training-institutions": {
+      "elapsedMs": 216,
+      "errorCode": null,
+      "finalHost": "data.gov.hk",
+      "httpStatus": 200,
+      "mediaType": "application/json",
+      "outcome": "success",
+      "parsedRecordCount": 1,
+      "responseBytes": 6875,
+      "responseSha256": "978238f1a9f85dffbe00adfeed06f5fdc4de8e5568a42bef57097d99f3053def",
+      "schemaFingerprint": "b132136385c0dfbe6b805119424a33b32785f026e831d95270d1a8b8e86cbe10",
+      "sourceReferences": [
+        "HKAPI-244"
+      ]
+    },
+    "hk-edb-figustat-fig-stat-government-expenditure": {
+      "elapsedMs": 208,
+      "errorCode": null,
+      "finalHost": "data.gov.hk",
+      "httpStatus": 200,
+      "mediaType": "application/json",
+      "outcome": "success",
+      "parsedRecordCount": 1,
+      "responseBytes": 6059,
+      "responseSha256": "8722ff7c4493da380e397127fbb7005b3336a0e1b52cdde4489c599aa64c4242",
+      "schemaFingerprint": "b132136385c0dfbe6b805119424a33b32785f026e831d95270d1a8b8e86cbe10",
+      "sourceReferences": [
+        "HKAPI-244"
+      ]
+    },
+    "hk-edb-figustat-fig-stat-population-aged-15": {
+      "elapsedMs": 212,
+      "errorCode": null,
+      "finalHost": "data.gov.hk",
+      "httpStatus": 200,
+      "mediaType": "application/json",
+      "outcome": "success",
+      "parsedRecordCount": 1,
+      "responseBytes": 6607,
+      "responseSha256": "a9eccd36c4f8e1aec16e7cf9190beb7873600fc4a9ed9cb622ddc4c8b0a38478",
+      "schemaFingerprint": "b132136385c0dfbe6b805119424a33b32785f026e831d95270d1a8b8e86cbe10",
+      "sourceReferences": [
+        "HKAPI-244"
+      ]
+    },
+    "hk-edb-figustat-fig-stat-student-enrolment": {
+      "elapsedMs": 208,
+      "errorCode": null,
+      "finalHost": "data.gov.hk",
+      "httpStatus": 200,
+      "mediaType": "application/json",
+      "outcome": "success",
+      "parsedRecordCount": 1,
+      "responseBytes": 6108,
+      "responseSha256": "980453b49a7c091f627fe4eae070711a4c5d17f044cdbfafab04a5a761ed6440",
+      "schemaFingerprint": "b132136385c0dfbe6b805119424a33b32785f026e831d95270d1a8b8e86cbe10",
+      "sourceReferences": [
+        "HKAPI-244"
+      ]
+    },
+    "hk-edb-figustat-key-stat-kindergarten-education": {
+      "elapsedMs": 208,
+      "errorCode": null,
+      "finalHost": "data.gov.hk",
+      "httpStatus": 200,
+      "mediaType": "application/json",
+      "outcome": "success",
+      "parsedRecordCount": 1,
+      "responseBytes": 6038,
+      "responseSha256": "4967f3d8f453b921be163d535d1b69398026e9920cb3a14271462aa7230866dc",
+      "schemaFingerprint": "b132136385c0dfbe6b805119424a33b32785f026e831d95270d1a8b8e86cbe10",
+      "sourceReferences": [
+        "HKAPI-244"
+      ]
+    },
+    "hk-edb-figustat-key-stat-primary-education": {
+      "elapsedMs": 191,
+      "errorCode": null,
+      "finalHost": "data.gov.hk",
+      "httpStatus": 200,
+      "mediaType": "application/json",
+      "outcome": "success",
+      "parsedRecordCount": 1,
+      "responseBytes": 5964,
+      "responseSha256": "21bf6be5af9f9c38a2cf745293aae0d65bd8f977e1be546236c6c81e829b8d35",
+      "schemaFingerprint": "b132136385c0dfbe6b805119424a33b32785f026e831d95270d1a8b8e86cbe10",
+      "sourceReferences": [
+        "HKAPI-244"
+      ]
+    },
+    "hk-edb-figustat-key-stat-secondary-education": {
+      "elapsedMs": 214,
+      "errorCode": null,
+      "finalHost": "data.gov.hk",
+      "httpStatus": 200,
+      "mediaType": "application/json",
+      "outcome": "success",
+      "parsedRecordCount": 1,
+      "responseBytes": 5996,
+      "responseSha256": "0b892255de22d6bd246dc4ee11e32be0f93afcbd8aa7d81bc265c1b6d703930a",
+      "schemaFingerprint": "b132136385c0dfbe6b805119424a33b32785f026e831d95270d1a8b8e86cbe10",
+      "sourceReferences": [
+        "HKAPI-244"
+      ]
+    },
+    "hk-edb-figustat-key-stat-special-education": {
+      "elapsedMs": 200,
+      "errorCode": null,
+      "finalHost": "data.gov.hk",
+      "httpStatus": 200,
+      "mediaType": "application/json",
+      "outcome": "success",
+      "parsedRecordCount": 1,
+      "responseBytes": 5988,
+      "responseSha256": "34b40131da5689971af813d759734427a307b816e353fb3a20c48e34ac17b7ed",
+      "schemaFingerprint": "b132136385c0dfbe6b805119424a33b32785f026e831d95270d1a8b8e86cbe10",
+      "sourceReferences": [
+        "HKAPI-244"
+      ]
+    },
+    "hk-edb-figustat-num-edu-tra-ins-fin": {
+      "elapsedMs": 216,
+      "errorCode": null,
+      "finalHost": "data.gov.hk",
+      "httpStatus": 200,
+      "mediaType": "application/json",
+      "outcome": "success",
+      "parsedRecordCount": 1,
+      "responseBytes": 6794,
+      "responseSha256": "3a0ffea2529a53a184ae40b6133f10467cd48ae948767f48ac6aca1cb2837df0",
+      "schemaFingerprint": "b132136385c0dfbe6b805119424a33b32785f026e831d95270d1a8b8e86cbe10",
+      "sourceReferences": [
+        "HKAPI-244"
+      ]
+    },
+    "hk-edb-figustat-num-tea-edu-ins-sex": {
+      "elapsedMs": 205,
+      "errorCode": null,
+      "finalHost": "data.gov.hk",
+      "httpStatus": 200,
+      "mediaType": "application/json",
+      "outcome": "success",
+      "parsedRecordCount": 1,
+      "responseBytes": 6444,
+      "responseSha256": "f90c8fddb2393fcde2aac2eaad1d172a09cc9c60c700bb5fd78dcf0f2c878a07",
+      "schemaFingerprint": "b132136385c0dfbe6b805119424a33b32785f026e831d95270d1a8b8e86cbe10",
+      "sourceReferences": [
+        "HKAPI-244"
+      ]
+    },
+    "hk-edb-figustat-ope-acc-stu-rep-pri-gra": {
+      "elapsedMs": 220,
+      "errorCode": null,
+      "finalHost": "data.gov.hk",
+      "httpStatus": 200,
+      "mediaType": "application/json",
+      "outcome": "success",
+      "parsedRecordCount": 1,
+      "responseBytes": 5162,
+      "responseSha256": "50a243242587a61cac342c8f7240057dcf115d8b486eb0680df01e1d339ead91",
+      "schemaFingerprint": "b132136385c0dfbe6b805119424a33b32785f026e831d95270d1a8b8e86cbe10",
+      "sourceReferences": [
+        "HKAPI-244"
+      ]
+    },
+    "hk-edb-figustat-ope-acc-stu-rep-pri-sec": {
+      "elapsedMs": 213,
+      "errorCode": null,
+      "finalHost": "data.gov.hk",
+      "httpStatus": 200,
+      "mediaType": "application/json",
+      "outcome": "success",
+      "parsedRecordCount": 1,
+      "responseBytes": 5173,
+      "responseSha256": "81aec91dbc9b3f810fdb6bd4ad07e98d2716597f76975ac65389bf606ed354a8",
+      "schemaFingerprint": "b132136385c0dfbe6b805119424a33b32785f026e831d95270d1a8b8e86cbe10",
+      "sourceReferences": [
+        "HKAPI-244"
+      ]
+    },
+    "hk-edb-figustat-ope-acc-stu-rep-sec-gra": {
+      "elapsedMs": 208,
+      "errorCode": null,
+      "finalHost": "data.gov.hk",
+      "httpStatus": 200,
+      "mediaType": "application/json",
+      "outcome": "success",
+      "parsedRecordCount": 1,
+      "responseBytes": 5228,
+      "responseSha256": "b484019b9e96974bd6d955c957bb0191984a76a1432fc51c2547696e87b31669",
+      "schemaFingerprint": "b132136385c0dfbe6b805119424a33b32785f026e831d95270d1a8b8e86cbe10",
+      "sourceReferences": [
+        "HKAPI-244"
+      ]
+    },
+    "hk-edb-figustat-ope-acc-stu-rep-sec-sec": {
+      "elapsedMs": 210,
+      "errorCode": null,
+      "finalHost": "data.gov.hk",
+      "httpStatus": 200,
+      "mediaType": "application/json",
+      "outcome": "success",
+      "parsedRecordCount": 1,
+      "responseBytes": 5239,
+      "responseSha256": "aca1e0f42e7f6c00a6ad88ddb7330adfc06a94fa4173f45321140f221327971d",
+      "schemaFingerprint": "b132136385c0dfbe6b805119424a33b32785f026e831d95270d1a8b8e86cbe10",
+      "sourceReferences": [
+        "HKAPI-244"
+      ]
+    },
+    "hk-edb-figustat-stu-day-sch-lev-sec": {
+      "elapsedMs": 3699,
+      "errorCode": null,
+      "finalHost": "data.gov.hk",
+      "httpStatus": 200,
+      "mediaType": "application/json",
+      "outcome": "success",
+      "parsedRecordCount": 1,
+      "responseBytes": 4659,
+      "responseSha256": "fa7bde57150b0429fd728df2e1bb9ad6e32ac78a939055b9da78d93969e25fb2",
+      "schemaFingerprint": "b132136385c0dfbe6b805119424a33b32785f026e831d95270d1a8b8e86cbe10",
+      "sourceReferences": [
+        "HKAPI-244"
+      ]
+    },
+    "hk-edb-figustat-stu-enr-lev-edu-sex": {
+      "elapsedMs": 211,
+      "errorCode": null,
+      "finalHost": "data.gov.hk",
+      "httpStatus": 200,
+      "mediaType": "application/json",
+      "outcome": "success",
+      "parsedRecordCount": 1,
+      "responseBytes": 6216,
+      "responseSha256": "726af0c1eae96507d883bf668f846b13b4a0416d4511a674242cc30d499072c8",
+      "schemaFingerprint": "b132136385c0dfbe6b805119424a33b32785f026e831d95270d1a8b8e86cbe10",
+      "sourceReferences": [
+        "HKAPI-244"
+      ]
+    },
+    "hk-edb-figustat-stu-loc-oth-sec-day-gra": {
+      "elapsedMs": 3554,
+      "errorCode": null,
+      "finalHost": "data.gov.hk",
+      "httpStatus": 200,
+      "mediaType": "application/json",
+      "outcome": "success",
+      "parsedRecordCount": 1,
+      "responseBytes": 4774,
+      "responseSha256": "3b3e4ecf16e616e978e512053a7126b48f487ac19051e1539882e130f15e3fbc",
+      "schemaFingerprint": "b132136385c0dfbe6b805119424a33b32785f026e831d95270d1a8b8e86cbe10",
+      "sourceReferences": [
+        "HKAPI-244"
+      ]
+    },
+    "hk-edb-figustat-stu-loc-pri-sec-eve-gra": {
+      "elapsedMs": 228,
+      "errorCode": null,
+      "finalHost": "data.gov.hk",
+      "httpStatus": 200,
+      "mediaType": "application/json",
+      "outcome": "success",
+      "parsedRecordCount": 1,
+      "responseBytes": 4760,
+      "responseSha256": "8a74aa43868018266e27ba6bd5fd8f661feaa1e3f497187cbf8da71abc7ce2fc",
+      "schemaFingerprint": "b132136385c0dfbe6b805119424a33b32785f026e831d95270d1a8b8e86cbe10",
+      "sourceReferences": [
+        "HKAPI-244"
+      ]
+    },
+    "hk-edb-figustat-stu-pri-dis-gra": {
+      "elapsedMs": 209,
+      "errorCode": null,
+      "finalHost": "data.gov.hk",
+      "httpStatus": 200,
+      "mediaType": "application/json",
+      "outcome": "success",
+      "parsedRecordCount": 1,
+      "responseBytes": 5492,
+      "responseSha256": "8102172713151952b397e0a3daf8c193bb6151b26929bf3f7a61b4985bad1ee2",
+      "schemaFingerprint": "b132136385c0dfbe6b805119424a33b32785f026e831d95270d1a8b8e86cbe10",
+      "sourceReferences": [
+        "HKAPI-244"
+      ]
+    },
+    "hk-edb-figustat-stu-sec-dis-gra": {
+      "elapsedMs": 3017,
+      "errorCode": null,
+      "finalHost": "data.gov.hk",
+      "httpStatus": 200,
+      "mediaType": "application/json",
+      "outcome": "success",
+      "parsedRecordCount": 1,
+      "responseBytes": 5570,
+      "responseSha256": "08236c7e1fcef0b14d83c730e28eea177e65a3bbd0b752cdc47e39114414daa4",
+      "schemaFingerprint": "b132136385c0dfbe6b805119424a33b32785f026e831d95270d1a8b8e86cbe10",
+      "sourceReferences": [
+        "HKAPI-244"
+      ]
+    },
+    "hk-edb-figustat-stu-spe-ord-lev": {
+      "elapsedMs": 196,
+      "errorCode": null,
+      "finalHost": "data.gov.hk",
+      "httpStatus": 200,
+      "mediaType": "application/json",
+      "outcome": "success",
+      "parsedRecordCount": 1,
+      "responseBytes": 5130,
+      "responseSha256": "6e2fd99467ce0144020e40bd0c3726a84acf6de5ed60b7a4eabffd17b76fb9d9",
+      "schemaFingerprint": "b132136385c0dfbe6b805119424a33b32785f026e831d95270d1a8b8e86cbe10",
+      "sourceReferences": [
+        "HKAPI-244"
+      ]
+    },
+    "hk-edb-hei-geo-referenced-data": {
+      "elapsedMs": 196,
+      "errorCode": null,
+      "finalHost": "data.gov.hk",
+      "httpStatus": 200,
+      "mediaType": "application/json",
+      "outcome": "success",
+      "parsedRecordCount": 1,
+      "responseBytes": 2273,
+      "responseSha256": "a226e810b9e0323655a43187781eca2be296bc6c32b68ff9b424c7eb35e967e1",
+      "schemaFingerprint": "6a30b7ca70ac0cb6d6b32794281ada9e2363695717a780db905efeb3ad86fc22",
+      "sourceReferences": [
+        "HKAPI-238"
+      ]
+    },
+    "hk-edb-itmospoa-poa-schoolnet-list": {
+      "elapsedMs": 183,
+      "errorCode": null,
+      "finalHost": "data.gov.hk",
+      "httpStatus": 200,
+      "mediaType": "application/json",
+      "outcome": "success",
+      "parsedRecordCount": 1,
+      "responseBytes": 4939,
+      "responseSha256": "d0a869ec9cdf5c67c6a2df8cd474b566791b12a6eccb697c7233a622884130ff",
+      "schemaFingerprint": "2fa564869dea80de1b91f8867b9a2fa164dd0c4b9adc529c5a5bbe1b034c12cf",
+      "sourceReferences": [
+        "HKAPI-239"
+      ]
+    },
+    "hk-edb-kgjoinkes-kg-join-kes": {
+      "elapsedMs": 250,
+      "errorCode": null,
+      "finalHost": "data.gov.hk",
+      "httpStatus": 200,
+      "mediaType": "application/json",
+      "outcome": "success",
+      "parsedRecordCount": 1,
+      "responseBytes": 25495,
+      "responseSha256": "25fa5fe504a3ab89c22a07e5169da691b70b5e86e647d16252f09b0c06b767ec",
+      "schemaFingerprint": "b132136385c0dfbe6b805119424a33b32785f026e831d95270d1a8b8e86cbe10",
+      "sourceReferences": [
+        "HKAPI-243"
+      ]
+    },
+    "hk-edb-schinfo-registration-info": {
+      "elapsedMs": 257,
+      "errorCode": null,
+      "finalHost": "data.gov.hk",
+      "httpStatus": 200,
+      "mediaType": "application/json",
+      "outcome": "success",
+      "parsedRecordCount": 1,
+      "responseBytes": 5523,
+      "responseSha256": "784a404ef8c9d945eca7cf821a0a599cd4e4bf6b06b8851e5d409e69dda29350",
+      "schemaFingerprint": "e806b64debb035728990db90e2f4c4b6ef9846d5980d8b05da7c1d2254677dc5",
+      "sourceReferences": [
+        "HKAPI-237"
+      ]
+    },
+    "hk-edb-schinfo-school-location-and-information": {
+      "elapsedMs": 225,
+      "errorCode": null,
+      "finalHost": "data.gov.hk",
+      "httpStatus": 200,
+      "mediaType": "application/json",
+      "outcome": "success",
+      "parsedRecordCount": 1,
+      "responseBytes": 18147,
+      "responseSha256": "87c177887323eb7bff4cda3024e0ff684fd477990798a5781297d5163051c67f",
+      "schemaFingerprint": "e806b64debb035728990db90e2f4c4b6ef9846d5980d8b05da7c1d2254677dc5",
+      "sourceReferences": [
+        "HKAPI-235"
+      ]
+    },
+    "hk-edb-sen-sen-list": {
+      "elapsedMs": 309,
+      "errorCode": null,
+      "finalHost": "data.gov.hk",
+      "httpStatus": 200,
+      "mediaType": "application/json",
+      "outcome": "success",
+      "parsedRecordCount": 1,
+      "responseBytes": 7797,
+      "responseSha256": "1cf176c10fec64ee078c4ba6995c64673b6fd411102308a5ec8d568d39ba98ef",
+      "schemaFingerprint": "e806b64debb035728990db90e2f4c4b6ef9846d5980d8b05da7c1d2254677dc5",
+      "sourceReferences": [
+        "HKAPI-244"
+      ]
+    },
+    "hk-edb-sspa-sspa-schservingnet": {
+      "elapsedMs": 170,
+      "errorCode": null,
+      "finalHost": "data.gov.hk",
+      "httpStatus": 200,
+      "mediaType": "application/json",
+      "outcome": "success",
+      "parsedRecordCount": 1,
+      "responseBytes": 8223,
+      "responseSha256": "9a44bcc2c5f6a8e8c997e604d67a456739dabb4ec04ecdc346a429fd22ec6a58",
+      "schemaFingerprint": "e806b64debb035728990db90e2f4c4b6ef9846d5980d8b05da7c1d2254677dc5",
+      "sourceReferences": [
+        "HKAPI-240"
+      ]
+    },
+    "hk-edb-tts2-through-train-school-list": {
+      "elapsedMs": 307,
+      "errorCode": null,
+      "finalHost": "data.gov.hk",
+      "httpStatus": 200,
+      "mediaType": "application/json",
+      "outcome": "success",
+      "parsedRecordCount": 1,
+      "responseBytes": 9450,
+      "responseSha256": "10277d8a05eea641651d33d228d1aa542b6e4bf885b771466c5258e34c498cef",
+      "schemaFingerprint": "a2d0cc92cd2c29942a8b2858955730281490cdc93855b2083f991f3037e993eb",
+      "sourceReferences": [
+        "HKAPI-242"
+      ]
+    },
+    "hk-emsd-emsd1-energy-end-use-data-2004": {
+      "elapsedMs": 252,
+      "errorCode": null,
+      "finalHost": "data.gov.hk",
+      "httpStatus": 200,
+      "mediaType": "application/json",
+      "outcome": "success",
+      "parsedRecordCount": 1,
+      "responseBytes": 22449,
+      "responseSha256": "fe9d7aeaa85b6716a614947503fb037530033f7dea6904a00ff56af8528f30f2",
+      "schemaFingerprint": "e806b64debb035728990db90e2f4c4b6ef9846d5980d8b05da7c1d2254677dc5",
+      "sourceReferences": [
+        "HKAPI-157"
+      ]
+    },
+    "hk-emsd-emsd1-energy-end-use-data-2005": {
+      "elapsedMs": 269,
+      "errorCode": null,
+      "finalHost": "data.gov.hk",
+      "httpStatus": 200,
+      "mediaType": "application/json",
+      "outcome": "success",
+      "parsedRecordCount": 1,
+      "responseBytes": 22449,
+      "responseSha256": "2b531ae0c4d1f019eb5483d7d63e75de30be15ea89f788aadf4939f4ac94bf12",
+      "schemaFingerprint": "e806b64debb035728990db90e2f4c4b6ef9846d5980d8b05da7c1d2254677dc5",
+      "sourceReferences": [
+        "HKAPI-157"
+      ]
+    },
+    "hk-emsd-emsd1-energy-end-use-data-2006": {
+      "elapsedMs": 238,
+      "errorCode": null,
+      "finalHost": "data.gov.hk",
+      "httpStatus": 200,
+      "mediaType": "application/json",
+      "outcome": "success",
+      "parsedRecordCount": 1,
+      "responseBytes": 25282,
+      "responseSha256": "d598296584b3d60422f2d6ecd19403092041a377e78fde5e7e619fb60e0f9267",
+      "schemaFingerprint": "e806b64debb035728990db90e2f4c4b6ef9846d5980d8b05da7c1d2254677dc5",
+      "sourceReferences": [
+        "HKAPI-157"
+      ]
+    },
+    "hk-emsd-emsd1-energy-end-use-data-2007": {
+      "elapsedMs": 257,
+      "errorCode": null,
+      "finalHost": "data.gov.hk",
+      "httpStatus": 200,
+      "mediaType": "application/json",
+      "outcome": "success",
+      "parsedRecordCount": 1,
+      "responseBytes": 27120,
+      "responseSha256": "113faba32e562f3dcfbab6a0b61836d9e9278c8967e9b0fd298c6fd020a7b13a",
+      "schemaFingerprint": "e806b64debb035728990db90e2f4c4b6ef9846d5980d8b05da7c1d2254677dc5",
+      "sourceReferences": [
+        "HKAPI-157"
+      ]
+    },
+    "hk-emsd-emsd1-energy-end-use-data-2008": {
+      "elapsedMs": 391,
+      "errorCode": null,
+      "finalHost": "data.gov.hk",
+      "httpStatus": 200,
+      "mediaType": "application/json",
+      "outcome": "success",
+      "parsedRecordCount": 1,
+      "responseBytes": 27993,
+      "responseSha256": "0bee19728e3f4104c41c1a378d8944250bef420d9d4d6bfeb3b90fcf2e54ed1b",
+      "schemaFingerprint": "e806b64debb035728990db90e2f4c4b6ef9846d5980d8b05da7c1d2254677dc5",
+      "sourceReferences": [
+        "HKAPI-157"
+      ]
+    },
+    "hk-emsd-emsd1-energy-end-use-data-2009": {
+      "elapsedMs": 309,
+      "errorCode": null,
+      "finalHost": "data.gov.hk",
+      "httpStatus": 200,
+      "mediaType": "application/json",
+      "outcome": "success",
+      "parsedRecordCount": 1,
+      "responseBytes": 30692,
+      "responseSha256": "d0843c259ea2902971d650a23b0f9e97a7dc53491d85f0b9d212f6182a1765d8",
+      "schemaFingerprint": "e806b64debb035728990db90e2f4c4b6ef9846d5980d8b05da7c1d2254677dc5",
+      "sourceReferences": [
+        "HKAPI-157"
+      ]
+    },
+    "hk-emsd-emsd1-energy-end-use-data-2010": {
+      "elapsedMs": 475,
+      "errorCode": null,
+      "finalHost": "data.gov.hk",
+      "httpStatus": 200,
+      "mediaType": "application/json",
+      "outcome": "success",
+      "parsedRecordCount": 1,
+      "responseBytes": 32552,
+      "responseSha256": "b9655ba94651107e2e64f0fb1dfd62a687712d872b41a4ba3752b31a4e8d9af8",
+      "schemaFingerprint": "e806b64debb035728990db90e2f4c4b6ef9846d5980d8b05da7c1d2254677dc5",
+      "sourceReferences": [
+        "HKAPI-157"
+      ]
+    },
+    "hk-emsd-emsd1-energy-end-use-data-2011": {
+      "elapsedMs": 373,
+      "errorCode": null,
+      "finalHost": "data.gov.hk",
+      "httpStatus": 200,
+      "mediaType": "application/json",
+      "outcome": "success",
+      "parsedRecordCount": 1,
+      "responseBytes": 32824,
+      "responseSha256": "f88de9b414e1c4d45aed58c1a004e636b7262a7eb7fe247a34894f937b73066c",
+      "schemaFingerprint": "e806b64debb035728990db90e2f4c4b6ef9846d5980d8b05da7c1d2254677dc5",
+      "sourceReferences": [
+        "HKAPI-157"
+      ]
+    },
+    "hk-emsd-emsd1-energy-end-use-data-2012": {
+      "elapsedMs": 256,
+      "errorCode": null,
+      "finalHost": "data.gov.hk",
+      "httpStatus": 200,
+      "mediaType": "application/json",
+      "outcome": "success",
+      "parsedRecordCount": 1,
+      "responseBytes": 32824,
+      "responseSha256": "554371ba0f3d2eeb705d39c5d46aaf3f5ed153680c86069c08ef313dffa143af",
+      "schemaFingerprint": "e806b64debb035728990db90e2f4c4b6ef9846d5980d8b05da7c1d2254677dc5",
+      "sourceReferences": [
+        "HKAPI-157"
+      ]
+    },
+    "hk-emsd-emsd1-energy-end-use-data-2013": {
+      "elapsedMs": 274,
+      "errorCode": null,
+      "finalHost": "data.gov.hk",
+      "httpStatus": 200,
+      "mediaType": "application/json",
+      "outcome": "success",
+      "parsedRecordCount": 1,
+      "responseBytes": 32824,
+      "responseSha256": "ec7c79a40e5adee1727ef21d9eebfd643540c2d77618428aa0f862671dd898cc",
+      "schemaFingerprint": "e806b64debb035728990db90e2f4c4b6ef9846d5980d8b05da7c1d2254677dc5",
+      "sourceReferences": [
+        "HKAPI-157"
+      ]
+    },
+    "hk-emsd-emsd1-energy-end-use-data-2014": {
+      "elapsedMs": 288,
+      "errorCode": null,
+      "finalHost": "data.gov.hk",
+      "httpStatus": 200,
+      "mediaType": "application/json",
+      "outcome": "success",
+      "parsedRecordCount": 1,
+      "responseBytes": 55140,
+      "responseSha256": "4cccdf07e96bda6aad350870054aba5f00c885a3351913adb81d2169952e0086",
+      "schemaFingerprint": "e806b64debb035728990db90e2f4c4b6ef9846d5980d8b05da7c1d2254677dc5",
+      "sourceReferences": [
+        "HKAPI-157"
+      ]
+    },
+    "hk-emsd-emsd1-energy-end-use-data-2015": {
+      "elapsedMs": 298,
+      "errorCode": null,
+      "finalHost": "data.gov.hk",
+      "httpStatus": 200,
+      "mediaType": "application/json",
+      "outcome": "success",
+      "parsedRecordCount": 1,
+      "responseBytes": 54205,
+      "responseSha256": "ab9d47541a9d13789252dcf0b6302fa08d644d0b7f362433109d8928a17a2b7c",
+      "schemaFingerprint": "e806b64debb035728990db90e2f4c4b6ef9846d5980d8b05da7c1d2254677dc5",
+      "sourceReferences": [
+        "HKAPI-157"
+      ]
+    },
+    "hk-emsd-emsd1-energy-end-use-data-2016": {
+      "elapsedMs": 297,
+      "errorCode": null,
+      "finalHost": "data.gov.hk",
+      "httpStatus": 200,
+      "mediaType": "application/json",
+      "outcome": "success",
+      "parsedRecordCount": 1,
+      "responseBytes": 55839,
+      "responseSha256": "0b2687b5bfed8d1189ee7d906e1d57ce7e400d1b9561b31dd3688c6560c0c4f3",
+      "schemaFingerprint": "e806b64debb035728990db90e2f4c4b6ef9846d5980d8b05da7c1d2254677dc5",
+      "sourceReferences": [
+        "HKAPI-157"
+      ]
+    },
+    "hk-emsd-emsd1-energy-end-use-data-2017": {
+      "elapsedMs": 284,
+      "errorCode": null,
+      "finalHost": "data.gov.hk",
+      "httpStatus": 200,
+      "mediaType": "application/json",
+      "outcome": "success",
+      "parsedRecordCount": 1,
+      "responseBytes": 58636,
+      "responseSha256": "a02a2124c01678b4e6fcb5e58e423e3b9ec0c5f0c7279eddc0fc2dae1df695b5",
+      "schemaFingerprint": "e806b64debb035728990db90e2f4c4b6ef9846d5980d8b05da7c1d2254677dc5",
+      "sourceReferences": [
+        "HKAPI-157"
+      ]
+    },
+    "hk-emsd-emsd1-energy-end-use-data-2018": {
+      "elapsedMs": 337,
+      "errorCode": null,
+      "finalHost": "data.gov.hk",
+      "httpStatus": 200,
+      "mediaType": "application/json",
+      "outcome": "success",
+      "parsedRecordCount": 1,
+      "responseBytes": 57796,
+      "responseSha256": "b472a9fb0054d737a8411bb1ec2d8159553ab0676949fbadb7b7383b6a1fe5d8",
+      "schemaFingerprint": "e806b64debb035728990db90e2f4c4b6ef9846d5980d8b05da7c1d2254677dc5",
+      "sourceReferences": [
+        "HKAPI-157"
+      ]
+    },
+    "hk-emsd-emsd1-energy-end-use-data-2019": {
+      "elapsedMs": 276,
+      "errorCode": null,
+      "finalHost": "data.gov.hk",
+      "httpStatus": 200,
+      "mediaType": "application/json",
+      "outcome": "success",
+      "parsedRecordCount": 1,
+      "responseBytes": 55440,
+      "responseSha256": "ef46a0f7eec1ebe13886446d840e31c3c99a3e6e3f237b2be69c9ddca8039215",
+      "schemaFingerprint": "e806b64debb035728990db90e2f4c4b6ef9846d5980d8b05da7c1d2254677dc5",
+      "sourceReferences": [
+        "HKAPI-157"
+      ]
+    },
+    "hk-emsd-emsd1-energy-end-use-data-2020": {
+      "elapsedMs": 346,
+      "errorCode": null,
+      "finalHost": "data.gov.hk",
+      "httpStatus": 200,
+      "mediaType": "application/json",
+      "outcome": "success",
+      "parsedRecordCount": 1,
+      "responseBytes": 57364,
+      "responseSha256": "b33a07605d661fe3d20c0cc0cc6ac5454f71d264c4a1ed3abc8b48fd19bf867e",
+      "schemaFingerprint": "e806b64debb035728990db90e2f4c4b6ef9846d5980d8b05da7c1d2254677dc5",
+      "sourceReferences": [
+        "HKAPI-157"
+      ]
+    },
+    "hk-emsd-emsd1-energy-end-use-data-2021": {
+      "elapsedMs": 368,
+      "errorCode": null,
+      "finalHost": "data.gov.hk",
+      "httpStatus": 200,
+      "mediaType": "application/json",
+      "outcome": "success",
+      "parsedRecordCount": 1,
+      "responseBytes": 57364,
+      "responseSha256": "a2aa5cace25ab0c88f7c464f8284654cdbe7006fddf1cb88d709160511036e93",
+      "schemaFingerprint": "e806b64debb035728990db90e2f4c4b6ef9846d5980d8b05da7c1d2254677dc5",
+      "sourceReferences": [
+        "HKAPI-157"
+      ]
+    },
+    "hk-emsd-emsd1-energy-end-use-data-2022": {
+      "elapsedMs": 352,
+      "errorCode": null,
+      "finalHost": "data.gov.hk",
+      "httpStatus": 200,
+      "mediaType": "application/json",
+      "outcome": "success",
+      "parsedRecordCount": 1,
+      "responseBytes": 57364,
+      "responseSha256": "c32d2f1fa286adf183b33c5389cdfce7503f0e8d8d5c0167c61d24ffe9a07d5f",
+      "schemaFingerprint": "e806b64debb035728990db90e2f4c4b6ef9846d5980d8b05da7c1d2254677dc5",
+      "sourceReferences": [
+        "HKAPI-157"
+      ]
+    },
+    "hk-emsd-emsd1-energy-end-use-data-2023": {
+      "elapsedMs": 281,
+      "errorCode": null,
+      "finalHost": "data.gov.hk",
+      "httpStatus": 200,
+      "mediaType": "application/json",
+      "outcome": "success",
+      "parsedRecordCount": 1,
+      "responseBytes": 57364,
+      "responseSha256": "8ea58898d01a653c0c4d89fb7c23d302d071f57ad57bd30b599da43b1892a125",
+      "schemaFingerprint": "e806b64debb035728990db90e2f4c4b6ef9846d5980d8b05da7c1d2254677dc5",
+      "sourceReferences": [
+        "HKAPI-157"
+      ]
+    },
+    "hk-emsd-emsd1-energy-end-use-data-2024": {
+      "elapsedMs": 295,
+      "errorCode": null,
+      "finalHost": "data.gov.hk",
+      "httpStatus": 200,
+      "mediaType": "application/json",
+      "outcome": "success",
+      "parsedRecordCount": 1,
+      "responseBytes": 57364,
+      "responseSha256": "32325c8ffd9a07aad26a173a4ea7e8ace5846e37d58238c680677cb40fe79547",
+      "schemaFingerprint": "e806b64debb035728990db90e2f4c4b6ef9846d5980d8b05da7c1d2254677dc5",
+      "sourceReferences": [
+        "HKAPI-157"
+      ]
+    },
+    "hk-emsd-emsd1-energy-end-use-data-2025": {
+      "elapsedMs": 314,
+      "errorCode": null,
+      "finalHost": "data.gov.hk",
+      "httpStatus": 200,
+      "mediaType": "application/json",
+      "outcome": "success",
+      "parsedRecordCount": 1,
+      "responseBytes": 57364,
+      "responseSha256": "7bfe4d16ca806912bdd5e12c096209fcc1dd4b07776bcc822e1d6f94e57c046a",
+      "schemaFingerprint": "e806b64debb035728990db90e2f4c4b6ef9846d5980d8b05da7c1d2254677dc5",
+      "sourceReferences": [
+        "HKAPI-157"
+      ]
+    },
+    "hk-epd-airteam-current-air-quality-health-index-range-and-forecast": {
+      "elapsedMs": 202,
+      "errorCode": null,
+      "finalHost": "data.gov.hk",
+      "httpStatus": 200,
+      "mediaType": "application/json",
+      "outcome": "success",
+      "parsedRecordCount": 1,
+      "responseBytes": 6513,
+      "responseSha256": "1347475ffb6920e61cfa6797af46d5f6bb28c26f8b754d045b3c0a14316912c8",
+      "schemaFingerprint": "e806b64debb035728990db90e2f4c4b6ef9846d5980d8b05da7c1d2254677dc5",
+      "sourceReferences": [
+        "HKAPI-102"
+      ]
+    },
+    "hk-epd-airteam-current-aqhi-of-individual-air-quality-monitoring-stations": {
+      "elapsedMs": 319,
+      "errorCode": null,
+      "finalHost": "data.gov.hk",
+      "httpStatus": 200,
+      "mediaType": "application/json",
+      "outcome": "success",
+      "parsedRecordCount": 1,
+      "responseBytes": 6616,
+      "responseSha256": "fb8f6d96a53b8c63824b6dfe9222062dcdcad16b3bbfb260f29c49787de90f57",
+      "schemaFingerprint": "e806b64debb035728990db90e2f4c4b6ef9846d5980d8b05da7c1d2254677dc5",
+      "sourceReferences": [
+        "HKAPI-101"
+      ]
+    },
+    "hk-epd-airteam-past24hr-aqhi-of-individual-air-quality-monitoring-stations": {
+      "elapsedMs": 214,
+      "errorCode": null,
+      "finalHost": "data.gov.hk",
+      "httpStatus": 200,
+      "mediaType": "application/json",
+      "outcome": "success",
+      "parsedRecordCount": 1,
+      "responseBytes": 6674,
+      "responseSha256": "105cfa49b454140aa9f075e7634985786e9838ca304459ff0cc3fe2a7af9438a",
+      "schemaFingerprint": "e806b64debb035728990db90e2f4c4b6ef9846d5980d8b05da7c1d2254677dc5",
+      "sourceReferences": [
+        "HKAPI-104"
+      ]
+    },
+    "hk-epd-airteam-past24hr-pc-of-individual-air-quality-monitoring-stations": {
+      "elapsedMs": 191,
+      "errorCode": null,
+      "finalHost": "data.gov.hk",
+      "httpStatus": 200,
+      "mediaType": "application/json",
+      "outcome": "success",
+      "parsedRecordCount": 1,
+      "responseBytes": 4378,
+      "responseSha256": "f757b079c822da1619d2b8bb3b6d747bcad3d63ab1fa9506161e195f00299c48",
+      "schemaFingerprint": "e806b64debb035728990db90e2f4c4b6ef9846d5980d8b05da7c1d2254677dc5",
+      "sourceReferences": [
+        "HKAPI-103"
+      ]
+    },
+    "hk-epd-angteam-2020-l10": {
+      "elapsedMs": 250,
+      "errorCode": null,
+      "finalHost": "data.gov.hk",
+      "httpStatus": 200,
+      "mediaType": "application/json",
+      "outcome": "success",
+      "parsedRecordCount": 1,
+      "responseBytes": 2369,
+      "responseSha256": "61ef0e2c774c80e44c1cca18251a82b5cbbddd834bb37a8c10e4477c1fc17b20",
+      "schemaFingerprint": "6a30b7ca70ac0cb6d6b32794281ada9e2363695717a780db905efeb3ad86fc22",
+      "sourceReferences": [
+        "HKAPI-113"
+      ]
+    },
+    "hk-epd-aqmnteam-air-quality-monitoring-network-of-hong-kong": {
+      "elapsedMs": 511,
+      "errorCode": null,
+      "finalHost": "data.gov.hk",
+      "httpStatus": 200,
+      "mediaType": "application/json",
+      "outcome": "success",
+      "parsedRecordCount": 1,
+      "responseBytes": 2374,
+      "responseSha256": "1cfb02c4589af62f41c334629d5c9978e6307e7b3654b2a0a0ccbf7e9e12f477",
+      "schemaFingerprint": "6a30b7ca70ac0cb6d6b32794281ada9e2363695717a780db905efeb3ad86fc22",
+      "sourceReferences": [
+        "HKAPI-105"
+      ]
+    },
+    "hk-epd-asmteam-epd-path": {
+      "elapsedMs": 502,
+      "errorCode": null,
+      "finalHost": "data.gov.hk",
+      "httpStatus": 200,
+      "mediaType": "application/json",
+      "outcome": "success",
+      "parsedRecordCount": 1,
+      "responseBytes": 2569,
+      "responseSha256": "638c7e951484be95151b73b40a4d6ac5e2977dd7cfc1f9c92aa3c068753bf095",
+      "schemaFingerprint": "6b715e728ad6e2d19a8a1742264cac613d58bca2fb979d0f2bab2cea3669c2af",
+      "sourceReferences": [
+        "HKAPI-106"
+      ]
+    },
+    "hk-epd-beachteam-beach-historical-data-en": {
+      "elapsedMs": 534,
+      "errorCode": null,
+      "finalHost": "data.gov.hk",
+      "httpStatus": 200,
+      "mediaType": "application/json",
+      "outcome": "success",
+      "parsedRecordCount": 1,
+      "responseBytes": 41107,
+      "responseSha256": "ae1a9101ccd7e4f2c69953aca6032733e48cf68f451e3829c44ed4ab5c50e771",
+      "schemaFingerprint": "03860b81f0865162ad223214e3ffecf261c39d9a9d87b6122d4812ba59a24e80",
+      "sourceReferences": [
+        "HKAPI-108"
+      ]
+    },
+    "hk-epd-beachteam-beach-water-quality-grading": {
+      "elapsedMs": 610,
+      "errorCode": null,
+      "finalHost": "data.gov.hk",
+      "httpStatus": 200,
+      "mediaType": "application/json",
+      "outcome": "success",
+      "parsedRecordCount": 1,
+      "responseBytes": 9623,
+      "responseSha256": "59f9e3cbce04fa84ca83b02f0cd2a06a4fa3f27db3fd3f9e1ffa1984d8d5e8cb",
+      "schemaFingerprint": "03860b81f0865162ad223214e3ffecf261c39d9a9d87b6122d4812ba59a24e80",
+      "sourceReferences": [
+        "HKAPI-107"
+      ]
+    },
+    "hk-epd-climatechg-greenhouse-gas-emissions-and-carbon-intensity": {
+      "elapsedMs": 599,
+      "errorCode": null,
+      "finalHost": "data.gov.hk",
+      "httpStatus": 200,
+      "mediaType": "application/json",
+      "outcome": "success",
+      "parsedRecordCount": 1,
+      "responseBytes": 2698,
+      "responseSha256": "80ecf10baf78d5ccae6d9d787e194b79d546e8a0c25a11cdea77bd2e30d8953c",
+      "schemaFingerprint": "e806b64debb035728990db90e2f4c4b6ef9846d5980d8b05da7c1d2254677dc5",
+      "sourceReferences": [
+        "HKAPI-114"
+      ]
+    },
+    "hk-epd-climatechg-greenhouse-gas-emissions-by-sector": {
+      "elapsedMs": 737,
+      "errorCode": null,
+      "finalHost": "data.gov.hk",
+      "httpStatus": 200,
+      "mediaType": "application/json",
+      "outcome": "success",
+      "parsedRecordCount": 1,
+      "responseBytes": 2618,
+      "responseSha256": "eb7e71f67fa2fd1f261045e56f5cedad9b73cd82d18df3567fdda01ca71cad0a",
+      "schemaFingerprint": "e806b64debb035728990db90e2f4c4b6ef9846d5980d8b05da7c1d2254677dc5",
+      "sourceReferences": [
+        "HKAPI-114"
+      ]
+    },
+    "hk-epd-evcpateam-evc-1": {
+      "elapsedMs": 1126,
+      "errorCode": null,
+      "finalHost": "data.gov.hk",
+      "httpStatus": 200,
+      "mediaType": "application/json",
+      "outcome": "success",
+      "parsedRecordCount": 1,
+      "responseBytes": 2776,
+      "responseSha256": "f77a8eeabf3c7b7408c2b80877130cf4d4c6d64796a7e92597ab9155b96e4a36",
+      "schemaFingerprint": "18c83d2d3cf062d47be3672b852b1a502a6be7ae09af6d1b3014856a257d188e",
+      "sourceReferences": [
+        "HKAPI-055"
+      ]
+    },
+    "hk-epd-marineteam-marine-water-quality-historical-data-en": {
+      "elapsedMs": 612,
+      "errorCode": null,
+      "finalHost": "data.gov.hk",
+      "httpStatus": 200,
+      "mediaType": "application/json",
+      "outcome": "success",
+      "parsedRecordCount": 1,
+      "responseBytes": 44969,
+      "responseSha256": "c6e70f61839cef5b3a2f0345f7c3c181bffc384c85759f412ff6618f5d9ad545",
+      "schemaFingerprint": "e806b64debb035728990db90e2f4c4b6ef9846d5980d8b05da7c1d2254677dc5",
+      "sourceReferences": [
+        "HKAPI-110"
+      ]
+    },
+    "hk-epd-marineteam-marine-water-quality-recent-data": {
+      "elapsedMs": 335,
+      "errorCode": null,
+      "finalHost": "data.gov.hk",
+      "httpStatus": 200,
+      "mediaType": "application/json",
+      "outcome": "success",
+      "parsedRecordCount": 1,
+      "responseBytes": 7766,
+      "responseSha256": "e65063c27c59171cfd91c9ebd005364698e5bd3e3cc32f3fa6e236bab149448c",
+      "schemaFingerprint": "e806b64debb035728990db90e2f4c4b6ef9846d5980d8b05da7c1d2254677dc5",
+      "sourceReferences": [
+        "HKAPI-109"
+      ]
+    },
+    "hk-epd-riverteam-river-water-quality-historical-data-en": {
+      "elapsedMs": 629,
+      "errorCode": null,
+      "finalHost": "data.gov.hk",
+      "httpStatus": 200,
+      "mediaType": "application/json",
+      "outcome": "success",
+      "parsedRecordCount": 1,
+      "responseBytes": 43878,
+      "responseSha256": "288023fcf6d9a7ded7c914e68f214ccc12a1528633e00b5e02c61812800b422a",
+      "schemaFingerprint": "e806b64debb035728990db90e2f4c4b6ef9846d5980d8b05da7c1d2254677dc5",
+      "sourceReferences": [
+        "HKAPI-112"
+      ]
+    },
+    "hk-epd-riverteam-river-water-quality-recent-data": {
+      "elapsedMs": 366,
+      "errorCode": null,
+      "finalHost": "data.gov.hk",
+      "httpStatus": 200,
+      "mediaType": "application/json",
+      "outcome": "success",
+      "parsedRecordCount": 1,
+      "responseBytes": 7684,
+      "responseSha256": "be4b95be2e730c82790ab2e42878fc19a1011a3b447557e1d3cf75409fe0c341",
+      "schemaFingerprint": "e806b64debb035728990db90e2f4c4b6ef9846d5980d8b05da7c1d2254677dc5",
+      "sourceReferences": [
+        "HKAPI-111"
+      ]
+    },
+    "hk-epd-rngteam-chemical-waste-collectors-list": {
+      "elapsedMs": 324,
+      "errorCode": null,
+      "finalHost": "data.gov.hk",
+      "httpStatus": 200,
+      "mediaType": "application/json",
+      "outcome": "success",
+      "parsedRecordCount": 1,
+      "responseBytes": 2411,
+      "responseSha256": "f3c4a20072bfde335e0d16c5b82e5a5fce20d69878ad7e178d7cd6fe04ef1130",
+      "schemaFingerprint": "6a30b7ca70ac0cb6d6b32794281ada9e2363695717a780db905efeb3ad86fc22",
+      "sourceReferences": [
+        "HKAPI-116"
+      ]
+    },
+    "hk-epd-rngteam-clinical-waste-collectors-list": {
+      "elapsedMs": 324,
+      "errorCode": null,
+      "finalHost": "data.gov.hk",
+      "httpStatus": 200,
+      "mediaType": "application/json",
+      "outcome": "success",
+      "parsedRecordCount": 1,
+      "responseBytes": 2406,
+      "responseSha256": "6f68ad490092fe6876c17c8f08f6530e7c88bf36836107ea7ec24fc121930031",
+      "schemaFingerprint": "6a30b7ca70ac0cb6d6b32794281ada9e2363695717a780db905efeb3ad86fc22",
+      "sourceReferences": [
+        "HKAPI-116"
+      ]
+    },
+    "hk-epd-rngteam-issued-construction-noise-permit": {
+      "elapsedMs": 207,
+      "errorCode": null,
+      "finalHost": "data.gov.hk",
+      "httpStatus": 200,
+      "mediaType": "application/json",
+      "outcome": "success",
+      "parsedRecordCount": 1,
+      "responseBytes": 2386,
+      "responseSha256": "ce3f5587531c581b6583af31fa07ab002fd06c9fcbe47fd8146063d607a9cea3",
+      "schemaFingerprint": "6a30b7ca70ac0cb6d6b32794281ada9e2363695717a780db905efeb3ad86fc22",
+      "sourceReferences": [
+        "HKAPI-116"
+      ]
+    },
+    "hk-epd-rsteam-specified-process-licence": {
+      "elapsedMs": 219,
+      "errorCode": null,
+      "finalHost": "data.gov.hk",
+      "httpStatus": 200,
+      "mediaType": "application/json",
+      "outcome": "success",
+      "parsedRecordCount": 1,
+      "responseBytes": 2294,
+      "responseSha256": "c117f615885eeeb61d2d465202cb812c3b318444224ca5e33f240e452ce75053",
+      "schemaFingerprint": "6a30b7ca70ac0cb6d6b32794281ada9e2363695717a780db905efeb3ad86fc22",
+      "sourceReferences": [
+        "HKAPI-116"
+      ]
+    },
+    "hk-epd-tnteameiao-dir": {
+      "elapsedMs": 199,
+      "errorCode": null,
+      "finalHost": "data.gov.hk",
+      "httpStatus": 200,
+      "mediaType": "application/json",
+      "outcome": "success",
+      "parsedRecordCount": 1,
+      "responseBytes": 2586,
+      "responseSha256": "4c1f2c3b82b4e10bf2fef71dbbd771d29d43901170badf8fbfdfc0d045bbd1e0",
+      "schemaFingerprint": "6a30b7ca70ac0cb6d6b32794281ada9e2363695717a780db905efeb3ad86fc22",
+      "sourceReferences": [
+        "HKAPI-115"
+      ]
+    },
+    "hk-epd-tnteameiao-eia": {
+      "elapsedMs": 225,
+      "errorCode": null,
+      "finalHost": "data.gov.hk",
+      "httpStatus": 200,
+      "mediaType": "application/json",
+      "outcome": "success",
+      "parsedRecordCount": 1,
+      "responseBytes": 2574,
+      "responseSha256": "9ebfc2afa2c85ac4915f373d2b772a9bd85e3ca0433c8f59f048b18065e9d9ba",
+      "schemaFingerprint": "6a30b7ca70ac0cb6d6b32794281ada9e2363695717a780db905efeb3ad86fc22",
+      "sourceReferences": [
+        "HKAPI-115"
+      ]
+    },
+    "hk-epd-tnteamhfer-habitat-from-eia-reports": {
+      "elapsedMs": 181,
+      "errorCode": null,
+      "finalHost": "data.gov.hk",
+      "httpStatus": 200,
+      "mediaType": "application/json",
+      "outcome": "success",
+      "parsedRecordCount": 1,
+      "responseBytes": 2321,
+      "responseSha256": "5855375b9dee42bacdc9d32f295f653cbd4b12ecf20127bc4fb3c6506b2b8de4",
+      "schemaFingerprint": "6a30b7ca70ac0cb6d6b32794281ada9e2363695717a780db905efeb3ad86fc22",
+      "sourceReferences": [
+        "HKAPI-117"
+      ]
+    },
+    "hk-fehd-fehddengue-fehd-dengue-surveillance": {
+      "elapsedMs": 204,
+      "errorCode": null,
+      "finalHost": "data.gov.hk",
+      "httpStatus": 200,
+      "mediaType": "application/json",
+      "outcome": "success",
+      "parsedRecordCount": 1,
+      "responseBytes": 2646,
+      "responseSha256": "f8a013616c7b47829a316b9d593835242dbf82133f2fbeee6bf9efba643d753b",
+      "schemaFingerprint": "b132136385c0dfbe6b805119424a33b32785f026e831d95270d1a8b8e86cbe10",
+      "sourceReferences": [
+        "HKAPI-192"
+      ]
+    },
+    "hk-fehd-fehdftp-fehdftp": {
+      "elapsedMs": 195,
+      "errorCode": null,
+      "finalHost": "data.gov.hk",
+      "httpStatus": 200,
+      "mediaType": "application/json",
+      "outcome": "success",
+      "parsedRecordCount": 1,
+      "responseBytes": 2568,
+      "responseSha256": "4f00e3c7ab810fc47a61793ff3280582d235b90265f33c36616a4c4ab23b7a1d",
+      "schemaFingerprint": "b132136385c0dfbe6b805119424a33b32785f026e831d95270d1a8b8e86cbe10",
+      "sourceReferences": [
+        "HKAPI-194"
+      ]
+    },
+    "hk-fehd-fehdlmis-food-licences": {
+      "elapsedMs": 187,
+      "errorCode": null,
+      "finalHost": "data.gov.hk",
+      "httpStatus": 200,
+      "mediaType": "application/json",
+      "outcome": "success",
+      "parsedRecordCount": 1,
+      "responseBytes": 5804,
+      "responseSha256": "1597c868eb796e01dc077b79b3b00e6d36d787976ab1dac77b157b16da40b28c",
+      "schemaFingerprint": "eb88bd1346ca13575f1f13332d3ffd6e04a2defc1c46d520de4ca4e11d780e03",
+      "sourceReferences": [
+        "HKAPI-185"
+      ]
+    },
+    "hk-fehd-fehdlmis-restaurant-licences": {
+      "elapsedMs": 197,
+      "errorCode": null,
+      "finalHost": "data.gov.hk",
+      "httpStatus": 200,
+      "mediaType": "application/json",
+      "outcome": "success",
+      "parsedRecordCount": 1,
+      "responseBytes": 5340,
+      "responseSha256": "45a4c6070f0c6dad74854b23c0c7380b7f87cb8c327e174862ce09f0b13df247",
+      "schemaFingerprint": "eb88bd1346ca13575f1f13332d3ffd6e04a2defc1c46d520de4ca4e11d780e03",
+      "sourceReferences": [
+        "HKAPI-184"
+      ]
+    },
+    "hk-fehd-fehdlmis-sale-of-restricted-food-permits": {
+      "elapsedMs": 188,
+      "errorCode": null,
+      "finalHost": "data.gov.hk",
+      "httpStatus": 200,
+      "mediaType": "application/json",
+      "outcome": "success",
+      "parsedRecordCount": 1,
+      "responseBytes": 5316,
+      "responseSha256": "9d6df79c2cc25c782bdf645eda3d37858d96de1affaa685a2f5066b33af22016",
+      "schemaFingerprint": "eb88bd1346ca13575f1f13332d3ffd6e04a2defc1c46d520de4ca4e11d780e03",
+      "sourceReferences": [
+        "HKAPI-186"
+      ]
+    },
+    "hk-fehd-fehdlmis-trade-licences": {
+      "elapsedMs": 416,
+      "errorCode": null,
+      "finalHost": "data.gov.hk",
+      "httpStatus": 200,
+      "mediaType": "application/json",
+      "outcome": "success",
+      "parsedRecordCount": 1,
+      "responseBytes": 6023,
+      "responseSha256": "dc3ef8fa068080a9b24dd147dd07aeb80009157a6afaecd197033ea88f4b2208",
+      "schemaFingerprint": "eb88bd1346ca13575f1f13332d3ffd6e04a2defc1c46d520de4ca4e11d780e03",
+      "sourceReferences": [
+        "HKAPI-187"
+      ]
+    },
+    "hk-fehd-fehdlocatn-fehd-facility-and-service-locations": {
+      "elapsedMs": 441,
+      "errorCode": null,
+      "finalHost": "data.gov.hk",
+      "httpStatus": 200,
+      "mediaType": "application/json",
+      "outcome": "success",
+      "parsedRecordCount": 1,
+      "responseBytes": 6419,
+      "responseSha256": "6457af2094b706a2344ef23f2f6986ed5d4f2e6e91d6835a966eb877193a0b7b",
+      "schemaFingerprint": "fe3e280aeeb270b3b6ec1fa5bfb8ccc5c1f1b39cd7f900020175d828f4230bbe",
+      "sourceReferences": [
+        "HKAPI-189"
+      ]
+    },
+    "hk-fehd-fehdmsms-market-information": {
+      "elapsedMs": 463,
+      "errorCode": null,
+      "finalHost": "data.gov.hk",
+      "httpStatus": 200,
+      "mediaType": "application/json",
+      "outcome": "success",
+      "parsedRecordCount": 1,
+      "responseBytes": 3606,
+      "responseSha256": "d5a682834aab13e03ed2eb7c47c13dafafa302656325819bfc9912ba26417924",
+      "schemaFingerprint": "b132136385c0dfbe6b805119424a33b32785f026e831d95270d1a8b8e86cbe10",
+      "sourceReferences": [
+        "HKAPI-190"
+      ]
+    },
+    "hk-fsd-fsd1-fsdaedapi": {
+      "elapsedMs": 185,
+      "errorCode": null,
+      "finalHost": "data.gov.hk",
+      "httpStatus": 200,
+      "mediaType": "application/json",
+      "outcome": "success",
+      "parsedRecordCount": 1,
+      "responseBytes": 3963,
+      "responseSha256": "65672149bd699988660577db8855482d7d7c07c0fc87b0336a94fa571b57c8ee",
+      "schemaFingerprint": "65b67fa4b9cf6e2ad0bd20c45223e3702c0d4d7c49f68d6fb846b6754ad3f4ce",
+      "sourceReferences": [
+        "HKAPI-137"
+      ]
+    },
+    "hk-gld-gldetb-gldetb-tendernotice": {
+      "elapsedMs": 216,
+      "errorCode": null,
+      "finalHost": "data.gov.hk",
+      "httpStatus": 200,
+      "mediaType": "application/json",
+      "outcome": "success",
+      "parsedRecordCount": 1,
+      "responseBytes": 2769,
+      "responseSha256": "ed3255c6ca0c012c0379dda3c606e1876fb1626d93e5d527073431f588179476",
+      "schemaFingerprint": "eb88bd1346ca13575f1f13332d3ffd6e04a2defc1c46d520de4ca4e11d780e03",
+      "sourceReferences": [
+        "HKAPI-178"
+      ]
+    },
+    "hk-gld-procure4-contracts-awarded": {
+      "elapsedMs": 184,
+      "errorCode": null,
+      "finalHost": "data.gov.hk",
+      "httpStatus": 200,
+      "mediaType": "application/json",
+      "outcome": "success",
+      "parsedRecordCount": 1,
+      "responseBytes": 3726,
+      "responseSha256": "653c6e79e2a1dd788dd21d06bbce01e00810ced81c37d5258673243256e93308",
+      "schemaFingerprint": "b132136385c0dfbe6b805119424a33b32785f026e831d95270d1a8b8e86cbe10",
+      "sourceReferences": [
+        "HKAPI-179"
+      ]
+    },
+    "hk-had-json1-db-of-private-buildings-in-hong-kong": {
+      "elapsedMs": 278,
+      "errorCode": null,
+      "finalHost": "data.gov.hk",
+      "httpStatus": 200,
+      "mediaType": "application/json",
+      "outcome": "success",
+      "parsedRecordCount": 1,
+      "responseBytes": 2397,
+      "responseSha256": "acb0a54b685bd4bf994d11a75f5457d877b3f9b8a52d7c2fc99f8e4f02161673",
+      "schemaFingerprint": "6a30b7ca70ac0cb6d6b32794281ada9e2363695717a780db905efeb3ad86fc22",
+      "sourceReferences": [
+        "HKAPI-233"
+      ]
+    },
+    "hk-had-json1-licensed-club-houses": {
+      "elapsedMs": 374,
+      "errorCode": null,
+      "finalHost": "data.gov.hk",
+      "httpStatus": 200,
+      "mediaType": "application/json",
+      "outcome": "success",
+      "parsedRecordCount": 1,
+      "responseBytes": 3361,
+      "responseSha256": "d446d04b188bedcf04e661e04a795a2982f3902ca19a1ffa50300cbe5781b1fd",
+      "schemaFingerprint": "e806b64debb035728990db90e2f4c4b6ef9846d5980d8b05da7c1d2254677dc5",
+      "sourceReferences": [
+        "HKAPI-197"
+      ]
+    },
+    "hk-had-json1-licensed-hotels-and-guesthouses": {
+      "elapsedMs": 318,
+      "errorCode": null,
+      "finalHost": "data.gov.hk",
+      "httpStatus": 200,
+      "mediaType": "application/json",
+      "outcome": "success",
+      "parsedRecordCount": 1,
+      "responseBytes": 3418,
+      "responseSha256": "b8d581d9b359a2986819c033d7e46f345764faceba073ee661b6a66566579a26",
+      "schemaFingerprint": "e806b64debb035728990db90e2f4c4b6ef9846d5980d8b05da7c1d2254677dc5",
+      "sourceReferences": [
+        "HKAPI-195"
+      ]
+    },
+    "hk-had-json1-licensed-karaoke-establishments": {
+      "elapsedMs": 338,
+      "errorCode": null,
+      "finalHost": "data.gov.hk",
+      "httpStatus": 200,
+      "mediaType": "application/json",
+      "outcome": "success",
+      "parsedRecordCount": 1,
+      "responseBytes": 3915,
+      "responseSha256": "1adeae65cccc5e923beca80925a9a8d85500f737cfdcfb605c6ce7f7dd25a1a7",
+      "schemaFingerprint": "e806b64debb035728990db90e2f4c4b6ef9846d5980d8b05da7c1d2254677dc5",
+      "sourceReferences": [
+        "HKAPI-196"
+      ]
+    },
+    "hk-housing-emms-emms-housing-stock": {
+      "elapsedMs": 260,
+      "errorCode": null,
+      "finalHost": "data.gov.hk",
+      "httpStatus": 200,
+      "mediaType": "application/json",
+      "outcome": "success",
+      "parsedRecordCount": 1,
+      "responseBytes": 21231,
+      "responseSha256": "524fd62959397461930932b08434809c5eb262b90bd0a2e787d4ba0aca058da8",
+      "schemaFingerprint": "2fa564869dea80de1b91f8867b9a2fa164dd0c4b9adc529c5a5bbe1b034c12cf",
+      "sourceReferences": [
+        "HKAPI-213"
+      ]
+    },
+    "hk-housing-eslocator-eslocator": {
+      "elapsedMs": 183,
+      "errorCode": null,
+      "finalHost": "data.gov.hk",
+      "httpStatus": 200,
+      "mediaType": "application/json",
+      "outcome": "success",
+      "parsedRecordCount": 1,
+      "responseBytes": 11319,
+      "responseSha256": "2ead01963d910558ca194560160f23327edc65e3e3aa5349b91892879e848b43",
+      "schemaFingerprint": "2fa564869dea80de1b91f8867b9a2fa164dd0c4b9adc529c5a5bbe1b034c12cf",
+      "sourceReferences": [
+        "HKAPI-212"
+      ]
+    },
+    "hk-housing-hcp-hcp-ha": {
+      "elapsedMs": 209,
+      "errorCode": null,
+      "finalHost": "data.gov.hk",
+      "httpStatus": 200,
+      "mediaType": "application/json",
+      "outcome": "success",
+      "parsedRecordCount": 1,
+      "responseBytes": 2469,
+      "responseSha256": "56c614f6585ffccc56a84a62499d53da0a1e1911bc32982a8b57fcbe168149c6",
+      "schemaFingerprint": "6a30b7ca70ac0cb6d6b32794281ada9e2363695717a780db905efeb3ad86fc22",
+      "sourceReferences": [
+        "HKAPI-214"
+      ]
+    },
+    "hk-housing-los-los": {
+      "elapsedMs": 193,
+      "errorCode": null,
+      "finalHost": "data.gov.hk",
+      "httpStatus": 200,
+      "mediaType": "application/json",
+      "outcome": "success",
+      "parsedRecordCount": 1,
+      "responseBytes": 2840,
+      "responseSha256": "81a08e907defa7e804262473d06642bc7aa66d129f4be97ad3a6c5ffc1b6563e",
+      "schemaFingerprint": "6a30b7ca70ac0cb6d6b32794281ada9e2363695717a780db905efeb3ad86fc22",
+      "sourceReferences": [
+        "HKAPI-215"
+      ]
+    },
+    "hk-housing-os-os": {
+      "elapsedMs": 215,
+      "errorCode": null,
+      "finalHost": "data.gov.hk",
+      "httpStatus": 200,
+      "mediaType": "application/json",
+      "outcome": "success",
+      "parsedRecordCount": 1,
+      "responseBytes": 2608,
+      "responseSha256": "512d4b7509d3517861472131a4833f14dec96236e2005ae7d1d26d02582378c4",
+      "schemaFingerprint": "6a30b7ca70ac0cb6d6b32794281ada9e2363695717a780db905efeb3ad86fc22",
+      "sourceReferences": [
+        "HKAPI-215"
+      ]
+    },
+    "hk-immd-set28-land-boundary-control-points-waiting-time": {
+      "elapsedMs": 186,
+      "errorCode": null,
+      "finalHost": "data.gov.hk",
+      "httpStatus": 200,
+      "mediaType": "application/json",
+      "outcome": "success",
+      "parsedRecordCount": 1,
+      "responseBytes": 3530,
+      "responseSha256": "8c6754b1ab8f6d89aab554dd56f555554a8ded6c947034f5a5417d195a26df13",
+      "schemaFingerprint": "e806b64debb035728990db90e2f4c4b6ef9846d5980d8b05da7c1d2254677dc5",
+      "sourceReferences": [
+        "HKAPI-077"
+      ]
+    },
+    "hk-immd-set5-statistics-daily-passenger-traffic": {
+      "elapsedMs": 187,
+      "errorCode": null,
+      "finalHost": "data.gov.hk",
+      "httpStatus": 200,
+      "mediaType": "application/json",
+      "outcome": "success",
+      "parsedRecordCount": 1,
+      "responseBytes": 5454,
+      "responseSha256": "8ced0b93122a7db76978498279120193b0de50309367f70068cd7ed3c9355153",
+      "schemaFingerprint": "892aec2dda864267a49d46cfd1a651324b740e2c60d12f02384519c1fd40bdbd",
+      "sourceReferences": [
+        "HKAPI-078"
+      ]
+    },
+    "hk-immd-set9-immdcp": {
+      "elapsedMs": 183,
+      "errorCode": null,
+      "finalHost": "data.gov.hk",
+      "httpStatus": 200,
+      "mediaType": "application/json",
+      "outcome": "success",
+      "parsedRecordCount": 1,
+      "responseBytes": 2310,
+      "responseSha256": "4f976622948f5cffa2219d9f78b33152f26320628d0f1cde45ab0c1d7aa6d5a0",
+      "schemaFingerprint": "6a30b7ca70ac0cb6d6b32794281ada9e2363695717a780db905efeb3ad86fc22",
+      "sourceReferences": [
+        "HKAPI-079"
+      ]
+    },
+    "hk-ipd-ipstat-tenders-awarded": {
+      "elapsedMs": 197,
+      "errorCode": null,
+      "finalHost": "data.gov.hk",
+      "httpStatus": 200,
+      "mediaType": "application/json",
+      "outcome": "success",
+      "parsedRecordCount": 1,
+      "responseBytes": 3506,
+      "responseSha256": "9edca92a2c47a909367bbe0b4377d46c0cda0a35413bfed75242adb7642f8bac",
+      "schemaFingerprint": "e806b64debb035728990db90e2f4c4b6ef9846d5980d8b05da7c1d2254677dc5",
+      "sourceReferences": [
+        "HKAPI-179"
+      ]
+    },
+    "hk-isd-gnmis-gnmis": {
+      "elapsedMs": 182,
+      "errorCode": null,
+      "finalHost": "data.gov.hk",
+      "httpStatus": 200,
+      "mediaType": "application/json",
+      "outcome": "success",
+      "parsedRecordCount": 1,
+      "responseBytes": 4707,
+      "responseSha256": "8558c4b85ba78b7aa56b1030d9d17c3e266c90712ad068f1b0136da467b72bef",
+      "schemaFingerprint": "5e4dd799f50fa9e8c5e3dc1d8747fa9f47a4ae4fbb1f44b942a8112f826a0a79",
+      "sourceReferences": [
+        "HKAPI-176"
+      ]
+    },
+    "hk-landsd-openmap-landsd-building-licence": {
+      "elapsedMs": 187,
+      "errorCode": null,
+      "finalHost": "data.gov.hk",
+      "httpStatus": 200,
+      "mediaType": "application/json",
+      "outcome": "success",
+      "parsedRecordCount": 1,
+      "responseBytes": 3211,
+      "responseSha256": "a47f2567c7a069660e0aaffe40659b910f5f4c6251250acae40b2160e0b4a30a",
+      "schemaFingerprint": "8129cd2368de82d7b4dbe6429b842baff934b3bca9cd0df035f1e0b07269d4be",
+      "sourceReferences": [
+        "HKAPI-230"
+      ]
+    },
+    "hk-landsd-openmap-landsd-government-land-allocation": {
+      "elapsedMs": 199,
+      "errorCode": null,
+      "finalHost": "data.gov.hk",
+      "httpStatus": 200,
+      "mediaType": "application/json",
+      "outcome": "success",
+      "parsedRecordCount": 1,
+      "responseBytes": 3063,
+      "responseSha256": "0ab07bef0548d37ac322355bd187198a0d009d3515fa22c37dfec195d41f3a32",
+      "schemaFingerprint": "8129cd2368de82d7b4dbe6429b842baff934b3bca9cd0df035f1e0b07269d4be",
+      "sourceReferences": [
+        "HKAPI-228"
+      ]
+    },
+    "hk-landsd-openmap-landsd-lot": {
+      "elapsedMs": 202,
+      "errorCode": null,
+      "finalHost": "data.gov.hk",
+      "httpStatus": 200,
+      "mediaType": "application/json",
+      "outcome": "success",
+      "parsedRecordCount": 1,
+      "responseBytes": 2800,
+      "responseSha256": "f81686f17b6e389f820278543f26ed432164ef531ed0c8de59b526373ff39d3f",
+      "schemaFingerprint": "8129cd2368de82d7b4dbe6429b842baff934b3bca9cd0df035f1e0b07269d4be",
+      "sourceReferences": [
+        "HKAPI-227"
+      ]
+    },
+    "hk-landsd-openmap-landsd-slope-maintenance-responsibility-boundaries": {
+      "elapsedMs": 195,
+      "errorCode": null,
+      "finalHost": "data.gov.hk",
+      "httpStatus": 200,
+      "mediaType": "application/json",
+      "outcome": "success",
+      "parsedRecordCount": 1,
+      "responseBytes": 2880,
+      "responseSha256": "471ef04625cbf1dd7d6079f82b652f8d6816f737487280a2f8579e0ebfdae4e5",
+      "schemaFingerprint": "8129cd2368de82d7b4dbe6429b842baff934b3bca9cd0df035f1e0b07269d4be",
+      "sourceReferences": [
+        "HKAPI-231"
+      ]
+    },
+    "hk-landsd-openmap-short-term-tenancy": {
+      "elapsedMs": 194,
+      "errorCode": null,
+      "finalHost": "data.gov.hk",
+      "httpStatus": 200,
+      "mediaType": "application/json",
+      "outcome": "success",
+      "parsedRecordCount": 1,
+      "responseBytes": 2310,
+      "responseSha256": "60daa01dcbf3dfdcb55180b2e3764d12ce6f6b44072c23e56fd668e0fe243b24",
+      "schemaFingerprint": "6a30b7ca70ac0cb6d6b32794281ada9e2363695717a780db905efeb3ad86fc22",
+      "sourceReferences": [
+        "HKAPI-229"
+      ]
+    },
+    "hk-lcsd-csdi-barbecue-areas": {
+      "elapsedMs": 203,
+      "errorCode": null,
+      "finalHost": "data.gov.hk",
+      "httpStatus": 200,
+      "mediaType": "application/json",
+      "outcome": "success",
+      "parsedRecordCount": 1,
+      "responseBytes": 2507,
+      "responseSha256": "f94810dc22bd655bdf81f540bb29c543c0343009ebeef95746c9216963ca7a12",
+      "schemaFingerprint": "6a30b7ca70ac0cb6d6b32794281ada9e2363695717a780db905efeb3ad86fc22",
+      "sourceReferences": [
+        "HKAPI-205"
+      ]
+    },
+    "hk-lcsd-csdi-libraries": {
+      "elapsedMs": 200,
+      "errorCode": null,
+      "finalHost": "data.gov.hk",
+      "httpStatus": 200,
+      "mediaType": "application/json",
+      "outcome": "success",
+      "parsedRecordCount": 1,
+      "responseBytes": 2468,
+      "responseSha256": "3d398699cf84d4dca796e67181d3c4d6b82380a54f6a5bc03cc0ecea501ab928",
+      "schemaFingerprint": "6a30b7ca70ac0cb6d6b32794281ada9e2363695717a780db905efeb3ad86fc22",
+      "sourceReferences": [
+        "HKAPI-202"
+      ]
+    },
+    "hk-lcsd-csdi-parks-zoos-gardens": {
+      "elapsedMs": 205,
+      "errorCode": null,
+      "finalHost": "data.gov.hk",
+      "httpStatus": 200,
+      "mediaType": "application/json",
+      "outcome": "success",
+      "parsedRecordCount": 1,
+      "responseBytes": 2533,
+      "responseSha256": "1376e5baea480df81a058b7803f0b27a83c09c57f8f7172384771bded151c409",
+      "schemaFingerprint": "6a30b7ca70ac0cb6d6b32794281ada9e2363695717a780db905efeb3ad86fc22",
+      "sourceReferences": [
+        "HKAPI-205"
+      ]
+    },
+    "hk-lcsd-csdi-sports-centres": {
+      "elapsedMs": 339,
+      "errorCode": null,
+      "finalHost": "data.gov.hk",
+      "httpStatus": 200,
+      "mediaType": "application/json",
+      "outcome": "success",
+      "parsedRecordCount": 1,
+      "responseBytes": 2493,
+      "responseSha256": "e7b31b8041429a893e7c7e45334e4acf9c75bf07fb19ba5ba0fa3c6c2cc6d9ff",
+      "schemaFingerprint": "6a30b7ca70ac0cb6d6b32794281ada9e2363695717a780db905efeb3ad86fc22",
+      "sourceReferences": [
+        "HKAPI-204"
+      ]
+    },
+    "hk-lcsd-csdi-sports-grounds": {
+      "elapsedMs": 354,
+      "errorCode": null,
+      "finalHost": "data.gov.hk",
+      "httpStatus": 200,
+      "mediaType": "application/json",
+      "outcome": "success",
+      "parsedRecordCount": 1,
+      "responseBytes": 2493,
+      "responseSha256": "f0f5bc09c138ec53de8839e67b91af46e6223d72783620cdc9a6b2f91a75ffc9",
+      "schemaFingerprint": "6a30b7ca70ac0cb6d6b32794281ada9e2363695717a780db905efeb3ad86fc22",
+      "sourceReferences": [
+        "HKAPI-204"
+      ]
+    },
+    "hk-lcsd-csdi-swimming-pools": {
+      "elapsedMs": 275,
+      "errorCode": null,
+      "finalHost": "data.gov.hk",
+      "httpStatus": 200,
+      "mediaType": "application/json",
+      "outcome": "success",
+      "parsedRecordCount": 1,
+      "responseBytes": 2493,
+      "responseSha256": "e85c24774ceeb11a78163e8c24565af2437097fb1f2fa6194f69c4a108725c1e",
+      "schemaFingerprint": "6a30b7ca70ac0cb6d6b32794281ada9e2363695717a780db905efeb3ad86fc22",
+      "sourceReferences": [
+        "HKAPI-203"
+      ]
+    },
+    "hk-lcsd-csdi-swimming-pools-attendance": {
+      "elapsedMs": 205,
+      "errorCode": null,
+      "finalHost": "data.gov.hk",
+      "httpStatus": 200,
+      "mediaType": "application/json",
+      "outcome": "success",
+      "parsedRecordCount": 1,
+      "responseBytes": 2550,
+      "responseSha256": "e5fc825fe3c70532c16d310c52efe3aa6dd464548f736562b5832c9aee4303a4",
+      "schemaFingerprint": "6a30b7ca70ac0cb6d6b32794281ada9e2363695717a780db905efeb3ad86fc22",
+      "sourceReferences": [
+        "HKAPI-207"
+      ]
+    },
+    "hk-lcsd-event-event-leisure": {
+      "elapsedMs": 201,
+      "errorCode": null,
+      "finalHost": "data.gov.hk",
+      "httpStatus": 200,
+      "mediaType": "application/json",
+      "outcome": "success",
+      "parsedRecordCount": 1,
+      "responseBytes": 2866,
+      "responseSha256": "a8448c8dfad9e9d21155d02c14660ae768f60d25f6eeaaa7e875068c093e1f5c",
+      "schemaFingerprint": "097730c6c18e43db48a9ea15c75cab5915a1da5520a9fe9d7a3c73430134d107",
+      "sourceReferences": [
+        "HKAPI-199"
+      ]
+    },
+    "hk-lcsd-facility-facility-bkbcvenue": {
+      "elapsedMs": 201,
+      "errorCode": null,
+      "finalHost": "data.gov.hk",
+      "httpStatus": 200,
+      "mediaType": "application/json",
+      "outcome": "success",
+      "parsedRecordCount": 1,
+      "responseBytes": 2549,
+      "responseSha256": "1996b65b2d9501186b3b8447d35b30703c522eff0702f45964062d5edaf03aa7",
+      "schemaFingerprint": "e806b64debb035728990db90e2f4c4b6ef9846d5980d8b05da7c1d2254677dc5",
+      "sourceReferences": [
+        "HKAPI-198"
+      ]
+    },
+    "hk-lcsd-facility-facility-bmtcvenue": {
+      "elapsedMs": 196,
+      "errorCode": null,
+      "finalHost": "data.gov.hk",
+      "httpStatus": 200,
+      "mediaType": "application/json",
+      "outcome": "success",
+      "parsedRecordCount": 1,
+      "responseBytes": 2544,
+      "responseSha256": "bc2da7bd168a2a06d250f97ad6faf6a553833e1037cc99db91946a01b1bbc567",
+      "schemaFingerprint": "e806b64debb035728990db90e2f4c4b6ef9846d5980d8b05da7c1d2254677dc5",
+      "sourceReferences": [
+        "HKAPI-198"
+      ]
+    },
+    "hk-lcsd-facility-facility-ipfp": {
+      "elapsedMs": 204,
+      "errorCode": null,
+      "finalHost": "data.gov.hk",
+      "httpStatus": 200,
+      "mediaType": "application/json",
+      "outcome": "success",
+      "parsedRecordCount": 1,
+      "responseBytes": 3292,
+      "responseSha256": "ee81ab67969ab03d6d2275c568799193ee98aed0eeab4ba4c5a82d9b9512d97d",
+      "schemaFingerprint": "e806b64debb035728990db90e2f4c4b6ef9846d5980d8b05da7c1d2254677dc5",
+      "sourceReferences": [
+        "HKAPI-205"
+      ]
+    },
+    "hk-lcsd-facility-facility-mbp": {
+      "elapsedMs": 219,
+      "errorCode": null,
+      "finalHost": "data.gov.hk",
+      "httpStatus": 200,
+      "mediaType": "application/json",
+      "outcome": "success",
+      "parsedRecordCount": 1,
+      "responseBytes": 3236,
+      "responseSha256": "1e39c299ed68d8f545b38f2c9be63d4a80d9936815c107652cfcbbf0eee5d59e",
+      "schemaFingerprint": "e806b64debb035728990db90e2f4c4b6ef9846d5980d8b05da7c1d2254677dc5",
+      "sourceReferences": [
+        "HKAPI-206"
+      ]
+    },
+    "hk-lcsd-facility-facility-tcvenue": {
+      "elapsedMs": 190,
+      "errorCode": null,
+      "finalHost": "data.gov.hk",
+      "httpStatus": 200,
+      "mediaType": "application/json",
+      "outcome": "success",
+      "parsedRecordCount": 1,
+      "responseBytes": 2525,
+      "responseSha256": "6b6f66b8ed4789370353309d818661da6134d59a5d0b45e246de3ec48d1c15ad",
+      "schemaFingerprint": "e806b64debb035728990db90e2f4c4b6ef9846d5980d8b05da7c1d2254677dc5",
+      "sourceReferences": [
+        "HKAPI-198"
+      ]
+    },
+    "hk-lcsd-facility-facility-tsp": {
+      "elapsedMs": 201,
+      "errorCode": null,
+      "finalHost": "data.gov.hk",
+      "httpStatus": 200,
+      "mediaType": "application/json",
+      "outcome": "success",
+      "parsedRecordCount": 1,
+      "responseBytes": 2544,
+      "responseSha256": "14ef2f69981426fd3169494cf8807218bd7abceba0bd012dc967b2976edc4eea",
+      "schemaFingerprint": "e806b64debb035728990db90e2f4c4b6ef9846d5980d8b05da7c1d2254677dc5",
+      "sourceReferences": [
+        "HKAPI-198"
+      ]
+    },
+    "hk-lcsd-facility-facility-vbcvenue": {
+      "elapsedMs": 190,
+      "errorCode": null,
+      "finalHost": "data.gov.hk",
+      "httpStatus": 200,
+      "mediaType": "application/json",
+      "outcome": "success",
+      "parsedRecordCount": 1,
+      "responseBytes": 2547,
+      "responseSha256": "a91a2e783626138879768c254543ad368c6b3e0a1bc44d5ab595938be7ac7629",
+      "schemaFingerprint": "e806b64debb035728990db90e2f4c4b6ef9846d5980d8b05da7c1d2254677dc5",
+      "sourceReferences": [
+        "HKAPI-198"
+      ]
+    },
+    "hk-lcsd-facility-usage-facilities": {
+      "elapsedMs": 259,
+      "errorCode": null,
+      "finalHost": "data.gov.hk",
+      "httpStatus": 200,
+      "mediaType": "application/json",
+      "outcome": "success",
+      "parsedRecordCount": 1,
+      "responseBytes": 15946,
+      "responseSha256": "c442573d287fc2f16bb4de093b005f34b6ef287527825e0ca9cb5f453921d76b",
+      "schemaFingerprint": "e806b64debb035728990db90e2f4c4b6ef9846d5980d8b05da7c1d2254677dc5",
+      "sourceReferences": [
+        "HKAPI-207"
+      ]
+    },
+    "hk-lcsd-facwd-fac-wd-list": {
+      "elapsedMs": 219,
+      "errorCode": null,
+      "finalHost": "data.gov.hk",
+      "httpStatus": 200,
+      "mediaType": "application/json",
+      "outcome": "success",
+      "parsedRecordCount": 1,
+      "responseBytes": 4848,
+      "responseSha256": "1e7f91b75178d8b3b1c2bf1fb84f7d8c74395368966b2187cb0af80961f12b25",
+      "schemaFingerprint": "e806b64debb035728990db90e2f4c4b6ef9846d5980d8b05da7c1d2254677dc5",
+      "sourceReferences": [
+        "HKAPI-206"
+      ]
+    },
+    "hk-lcsd-lib-lib-computers": {
+      "elapsedMs": 206,
+      "errorCode": null,
+      "finalHost": "data.gov.hk",
+      "httpStatus": 200,
+      "mediaType": "application/json",
+      "outcome": "success",
+      "parsedRecordCount": 1,
+      "responseBytes": 4389,
+      "responseSha256": "cfc79d47829cb12be09bca88c838954deaef3acb24b66c140a4ad246a3b261ef",
+      "schemaFingerprint": "e806b64debb035728990db90e2f4c4b6ef9846d5980d8b05da7c1d2254677dc5",
+      "sourceReferences": [
+        "HKAPI-200"
+      ]
+    },
+    "hk-lcsd-lib-lib-newadd": {
+      "elapsedMs": 248,
+      "errorCode": null,
+      "finalHost": "data.gov.hk",
+      "httpStatus": 200,
+      "mediaType": "application/json",
+      "outcome": "success",
+      "parsedRecordCount": 1,
+      "responseBytes": 25680,
+      "responseSha256": "9192297600b5b8fafc70762fdfbb4aa0a73101ec8c92169a7f7798e21dba175a",
+      "schemaFingerprint": "e806b64debb035728990db90e2f4c4b6ef9846d5980d8b05da7c1d2254677dc5",
+      "sourceReferences": [
+        "HKAPI-201"
+      ]
+    },
+    "hk-lcsd-pa-pa-perf-attd-office": {
+      "elapsedMs": 248,
+      "errorCode": null,
+      "finalHost": "data.gov.hk",
+      "httpStatus": 200,
+      "mediaType": "application/json",
+      "outcome": "success",
+      "parsedRecordCount": 1,
+      "responseBytes": 2582,
+      "responseSha256": "e94db2338b3acbefbce7e78c4856c2609abf18f9f3f38dfd85692aad36340773",
+      "schemaFingerprint": "e806b64debb035728990db90e2f4c4b6ef9846d5980d8b05da7c1d2254677dc5",
+      "sourceReferences": [
+        "HKAPI-207"
+      ]
+    },
+    "hk-lcsd-pa-pa-perf-attd-venue": {
+      "elapsedMs": 191,
+      "errorCode": null,
+      "finalHost": "data.gov.hk",
+      "httpStatus": 200,
+      "mediaType": "application/json",
+      "outcome": "success",
+      "parsedRecordCount": 1,
+      "responseBytes": 2577,
+      "responseSha256": "98b0bcbe93b0558da2a0695880e062319a8e0d5cc8de51c61dd5adb2439a3c75",
+      "schemaFingerprint": "e806b64debb035728990db90e2f4c4b6ef9846d5980d8b05da7c1d2254677dc5",
+      "sourceReferences": [
+        "HKAPI-207"
+      ]
+    },
+    "hk-lcsd-pa-pa-presn-attd-cpo": {
+      "elapsedMs": 212,
+      "errorCode": null,
+      "finalHost": "data.gov.hk",
+      "httpStatus": 200,
+      "mediaType": "application/json",
+      "outcome": "success",
+      "parsedRecordCount": 1,
+      "responseBytes": 2629,
+      "responseSha256": "7155580b9961c61ca5926c16f5df134dffe3da1acf53e68b4001aeac730d2185",
+      "schemaFingerprint": "e806b64debb035728990db90e2f4c4b6ef9846d5980d8b05da7c1d2254677dc5",
+      "sourceReferences": [
+        "HKAPI-207"
+      ]
+    },
+    "hk-lcsd-pa-pa-presn-attd-type": {
+      "elapsedMs": 209,
+      "errorCode": null,
+      "finalHost": "data.gov.hk",
+      "httpStatus": 200,
+      "mediaType": "application/json",
+      "outcome": "success",
+      "parsedRecordCount": 1,
+      "responseBytes": 2609,
+      "responseSha256": "98d0bf743f6b028c2b48f0e699104b8aaedf06f1d67117a7a90eb4e1ad9c390a",
+      "schemaFingerprint": "e806b64debb035728990db90e2f4c4b6ef9846d5980d8b05da7c1d2254677dc5",
+      "sourceReferences": [
+        "HKAPI-207"
+      ]
+    },
+    "hk-lcsd-stats-beaches-attd": {
+      "elapsedMs": 220,
+      "errorCode": null,
+      "finalHost": "data.gov.hk",
+      "httpStatus": 200,
+      "mediaType": "application/json",
+      "outcome": "success",
+      "parsedRecordCount": 1,
+      "responseBytes": 2421,
+      "responseSha256": "4b6169072b7fdbdfeb6672ec7dd4bd5943064112539afe8d692c1eed657b5a90",
+      "schemaFingerprint": "e806b64debb035728990db90e2f4c4b6ef9846d5980d8b05da7c1d2254677dc5",
+      "sourceReferences": [
+        "HKAPI-207"
+      ]
+    },
+    "hk-lcsd-stats-lib-stats": {
+      "elapsedMs": 216,
+      "errorCode": null,
+      "finalHost": "data.gov.hk",
+      "httpStatus": 200,
+      "mediaType": "application/json",
+      "outcome": "success",
+      "parsedRecordCount": 1,
+      "responseBytes": 2563,
+      "responseSha256": "4dd5f7d521752124857904b7e1de9007133c220fe3261d7628b38cc9cff5fef1",
+      "schemaFingerprint": "e806b64debb035728990db90e2f4c4b6ef9846d5980d8b05da7c1d2254677dc5",
+      "sourceReferences": [
+        "HKAPI-207"
+      ]
+    },
+    "hk-lcsd-stats-museum-stats": {
+      "elapsedMs": 213,
+      "errorCode": null,
+      "finalHost": "data.gov.hk",
+      "httpStatus": 200,
+      "mediaType": "application/json",
+      "outcome": "success",
+      "parsedRecordCount": 1,
+      "responseBytes": 2476,
+      "responseSha256": "03d872c0c2c53572dfa456e956d66c8c3511b540466f17cbb4cbcf3a7f551eb3",
+      "schemaFingerprint": "e806b64debb035728990db90e2f4c4b6ef9846d5980d8b05da7c1d2254677dc5",
+      "sourceReferences": [
+        "HKAPI-207"
+      ]
+    },
+    "hk-lcsd-stats-swimming-pool-attd": {
+      "elapsedMs": 220,
+      "errorCode": null,
+      "finalHost": "data.gov.hk",
+      "httpStatus": 200,
+      "mediaType": "application/json",
+      "outcome": "success",
+      "parsedRecordCount": 1,
+      "responseBytes": 2459,
+      "responseSha256": "16ff5274bcb4a9347c0db836e7ff7ab5272f2f2a136fd69115368a108534a6ea",
+      "schemaFingerprint": "e806b64debb035728990db90e2f4c4b6ef9846d5980d8b05da7c1d2254677dc5",
+      "sourceReferences": [
+        "HKAPI-207"
+      ]
+    },
+    "hk-lr-data9-landreg": {
+      "elapsedMs": 239,
+      "errorCode": null,
+      "finalHost": "data.gov.hk",
+      "httpStatus": 200,
+      "mediaType": "application/json",
+      "outcome": "success",
+      "parsedRecordCount": 1,
+      "responseBytes": 9699,
+      "responseSha256": "9060ad19ec05c48d925030c5b43d5a1cbd4b3c05ea4b9998ec96724cf3a1ddb9",
+      "schemaFingerprint": "e806b64debb035728990db90e2f4c4b6ef9846d5980d8b05da7c1d2254677dc5",
+      "sourceReferences": [
+        "HKAPI-232"
+      ]
+    },
+    "hk-md-mardep-crossboundaryferryservices-arrive": {
+      "elapsedMs": 215,
+      "errorCode": null,
+      "finalHost": "data.gov.hk",
+      "httpStatus": 200,
+      "mediaType": "application/json",
+      "outcome": "success",
+      "parsedRecordCount": 1,
+      "responseBytes": 4318,
+      "responseSha256": "dbd27864db438f4b3659c785d5b69c27ba076c316fd94027bdfa1180d4a70eb9",
+      "schemaFingerprint": "e806b64debb035728990db90e2f4c4b6ef9846d5980d8b05da7c1d2254677dc5",
+      "sourceReferences": [
+        "HKAPI-085"
+      ]
+    },
+    "hk-md-mardep-non-convention-vessel-arrivals-and-departures": {
+      "elapsedMs": 248,
+      "errorCode": null,
+      "finalHost": "data.gov.hk",
+      "httpStatus": 200,
+      "mediaType": "application/json",
+      "outcome": "success",
+      "parsedRecordCount": 1,
+      "responseBytes": 6754,
+      "responseSha256": "25527d16b79bb15b40b285939f87863e255b4bf576a021ccf653364471bd7239",
+      "schemaFingerprint": "e806b64debb035728990db90e2f4c4b6ef9846d5980d8b05da7c1d2254677dc5",
+      "sourceReferences": [
+        "HKAPI-082"
+      ]
+    },
+    "hk-md-mardep-pcwa-berth-vacancy": {
+      "elapsedMs": 216,
+      "errorCode": null,
+      "finalHost": "data.gov.hk",
+      "httpStatus": 200,
+      "mediaType": "application/json",
+      "outcome": "success",
+      "parsedRecordCount": 1,
+      "responseBytes": 5252,
+      "responseSha256": "c8f86fb712743fc18fd04170c251ff6dec29a29bafe9a516d51f928d1d11168a",
+      "schemaFingerprint": "fe2d9353842618538c7a8ab5b1fadb39a2c9ba36419438ff6415746beca1a54c",
+      "sourceReferences": [
+        "HKAPI-084"
+      ]
+    },
+    "hk-md-mardep-vessel-arrivals-and-departures": {
+      "elapsedMs": 234,
+      "errorCode": null,
+      "finalHost": "data.gov.hk",
+      "httpStatus": 200,
+      "mediaType": "application/json",
+      "outcome": "success",
+      "parsedRecordCount": 1,
+      "responseBytes": 5312,
+      "responseSha256": "d69dda1d36de25f210a81d0506f3b503c22d7ecc1066f62dfbbfc678ce2d314e",
+      "schemaFingerprint": "e806b64debb035728990db90e2f4c4b6ef9846d5980d8b05da7c1d2254677dc5",
+      "sourceReferences": [
+        "HKAPI-081"
+      ]
+    },
+    "hk-md-mardep-vessel-traffic-management-system-report": {
+      "elapsedMs": 265,
+      "errorCode": null,
+      "finalHost": "data.gov.hk",
+      "httpStatus": 200,
+      "mediaType": "application/json",
+      "outcome": "success",
+      "parsedRecordCount": 1,
+      "responseBytes": 7999,
+      "responseSha256": "7201131b4a996b023311336bd46ef236f9256c8aaa1ea5a3f82fe856f467ec7c",
+      "schemaFingerprint": "e806b64debb035728990db90e2f4c4b6ef9846d5980d8b05da7c1d2254677dc5",
+      "sourceReferences": [
+        "HKAPI-083"
+      ]
+    },
+    "hk-ofca-ofca-ofca-dataset-12": {
+      "elapsedMs": 206,
+      "errorCode": null,
+      "finalHost": "data.gov.hk",
+      "httpStatus": 200,
+      "mediaType": "application/json",
+      "outcome": "success",
+      "parsedRecordCount": 1,
+      "responseBytes": 4211,
+      "responseSha256": "842b2de47fa47213663f8fb57f3aee6673d4c2bb9aa7f8ed1a8cf1699697420d",
+      "schemaFingerprint": "9fc3a3c6d282f7e2754a73a43bd83631acfbed3b039152574f114e7be1220bfd",
+      "sourceReferences": [
+        "HKAPI-263"
+      ]
+    },
+    "hk-ofca-ofca-ofca-dataset-13": {
+      "elapsedMs": 195,
+      "errorCode": null,
+      "finalHost": "data.gov.hk",
+      "httpStatus": 200,
+      "mediaType": "application/json",
+      "outcome": "success",
+      "parsedRecordCount": 1,
+      "responseBytes": 4372,
+      "responseSha256": "acf023f615e4567490972f8d5a15e1d29fe3fa9beadade09e8b395014fe99707",
+      "schemaFingerprint": "0ddc931c2525b63b87100e2d8c9f2696208a8cee8491bb8291764314679990fd",
+      "sourceReferences": [
+        "HKAPI-263"
+      ]
+    },
+    "hk-ofca-ofca-ofca-dataset-14": {
+      "elapsedMs": 204,
+      "errorCode": null,
+      "finalHost": "data.gov.hk",
+      "httpStatus": 200,
+      "mediaType": "application/json",
+      "outcome": "success",
+      "parsedRecordCount": 1,
+      "responseBytes": 4010,
+      "responseSha256": "dc6cde1c9023140aca1074651def4906823daa5f8d0fb32e41b075d2e0a6d2ef",
+      "schemaFingerprint": "e806b64debb035728990db90e2f4c4b6ef9846d5980d8b05da7c1d2254677dc5",
+      "sourceReferences": [
+        "HKAPI-263"
+      ]
+    },
+    "hk-ofca-ofca-ofca-dataset-15": {
+      "elapsedMs": 216,
+      "errorCode": null,
+      "finalHost": "data.gov.hk",
+      "httpStatus": 200,
+      "mediaType": "application/json",
+      "outcome": "success",
+      "parsedRecordCount": 1,
+      "responseBytes": 5067,
+      "responseSha256": "6b6aa7dea6fb24636dd09a091541994ef86b7b71d1971ed6ec4e5826fb4e3b85",
+      "schemaFingerprint": "e806b64debb035728990db90e2f4c4b6ef9846d5980d8b05da7c1d2254677dc5",
+      "sourceReferences": [
+        "HKAPI-262"
+      ]
+    },
+    "hk-ofca-ofca-ofca-dataset-16": {
+      "elapsedMs": 227,
+      "errorCode": null,
+      "finalHost": "data.gov.hk",
+      "httpStatus": 200,
+      "mediaType": "application/json",
+      "outcome": "success",
+      "parsedRecordCount": 1,
+      "responseBytes": 2878,
+      "responseSha256": "c3458bc94e2bccbf67b887a7a3d1140a28cdc56afdc323dc9db8eaad3b575e28",
+      "schemaFingerprint": "bbd47474197401977141cd77057f5a71171146f5193d2607e5a2ff396952d59b",
+      "sourceReferences": [
+        "HKAPI-255"
+      ]
+    },
+    "hk-ofca-ofca-ofca-dataset-17": {
+      "elapsedMs": 237,
+      "errorCode": null,
+      "finalHost": "data.gov.hk",
+      "httpStatus": 200,
+      "mediaType": "application/json",
+      "outcome": "success",
+      "parsedRecordCount": 1,
+      "responseBytes": 15546,
+      "responseSha256": "41c940db296cd57bf36708e2187a6f5a6e8a731a32020c7da7e31bd31af3c17c",
+      "schemaFingerprint": "9fc3a3c6d282f7e2754a73a43bd83631acfbed3b039152574f114e7be1220bfd",
+      "sourceReferences": [
+        "HKAPI-257"
+      ]
+    },
+    "hk-ofca-ofca-ofca-dataset-22": {
+      "elapsedMs": 204,
+      "errorCode": null,
+      "finalHost": "data.gov.hk",
+      "httpStatus": 200,
+      "mediaType": "application/json",
+      "outcome": "success",
+      "parsedRecordCount": 1,
+      "responseBytes": 2801,
+      "responseSha256": "95f707f63434b0351d772bfd4702fbe073e6393ebc59a4a1f4c669fe7454810d",
+      "schemaFingerprint": "bbd47474197401977141cd77057f5a71171146f5193d2607e5a2ff396952d59b",
+      "sourceReferences": [
+        "HKAPI-256"
+      ]
+    },
+    "hk-ofca-ofca-ofca-dataset-25": {
+      "elapsedMs": 201,
+      "errorCode": null,
+      "finalHost": "data.gov.hk",
+      "httpStatus": 200,
+      "mediaType": "application/json",
+      "outcome": "success",
+      "parsedRecordCount": 1,
+      "responseBytes": 2601,
+      "responseSha256": "e1595bb6f38179d4d34b95ef2af6c9c4fd0f23f553bcd662c6450ec5dcc76aaf",
+      "schemaFingerprint": "9fc3a3c6d282f7e2754a73a43bd83631acfbed3b039152574f114e7be1220bfd",
+      "sourceReferences": [
+        "HKAPI-259"
+      ]
+    },
+    "hk-ofca-ofca-ofca-dataset-26": {
+      "elapsedMs": 190,
+      "errorCode": null,
+      "finalHost": "data.gov.hk",
+      "httpStatus": 200,
+      "mediaType": "application/json",
+      "outcome": "success",
+      "parsedRecordCount": 1,
+      "responseBytes": 2629,
+      "responseSha256": "83e37df941d17a665cc7e986998138c67a27688c8ff3af71f95fb25b5e48542e",
+      "schemaFingerprint": "9fc3a3c6d282f7e2754a73a43bd83631acfbed3b039152574f114e7be1220bfd",
+      "sourceReferences": [
+        "HKAPI-260"
+      ]
+    },
+    "hk-ofca-ofca-ofca-dataset-34": {
+      "elapsedMs": 212,
+      "errorCode": null,
+      "finalHost": "data.gov.hk",
+      "httpStatus": 200,
+      "mediaType": "application/json",
+      "outcome": "success",
+      "parsedRecordCount": 1,
+      "responseBytes": 4553,
+      "responseSha256": "ec606b4f28db6a6c75e6d928a28df552f9415cfc6415996eef06d2e38a36946e",
+      "schemaFingerprint": "e806b64debb035728990db90e2f4c4b6ef9846d5980d8b05da7c1d2254677dc5",
+      "sourceReferences": [
+        "HKAPI-263"
+      ]
+    },
+    "hk-ofca-ofca-ofca-dataset-40": {
+      "elapsedMs": 211,
+      "errorCode": null,
+      "finalHost": "data.gov.hk",
+      "httpStatus": 200,
+      "mediaType": "application/json",
+      "outcome": "success",
+      "parsedRecordCount": 1,
+      "responseBytes": 2826,
+      "responseSha256": "8893039b3867723aac1412b1dbd0af2d723d92018577943b80ef6f16048c5dc4",
+      "schemaFingerprint": "6a30b7ca70ac0cb6d6b32794281ada9e2363695717a780db905efeb3ad86fc22",
+      "sourceReferences": [
+        "HKAPI-261"
+      ]
+    },
+    "hk-ofca-ofca-ofca-dataset-5": {
+      "elapsedMs": 201,
+      "errorCode": null,
+      "finalHost": "data.gov.hk",
+      "httpStatus": 200,
+      "mediaType": "application/json",
+      "outcome": "success",
+      "parsedRecordCount": 1,
+      "responseBytes": 3836,
+      "responseSha256": "4f14c9c2939c24afae605316bb064bedbd26bd76384bffb8097c869e53f25128",
+      "schemaFingerprint": "bbd47474197401977141cd77057f5a71171146f5193d2607e5a2ff396952d59b",
+      "sourceReferences": [
+        "HKAPI-258"
+      ]
+    },
+    "hk-pland-pland1-2021-based-tpedm": {
+      "elapsedMs": 197,
+      "errorCode": null,
+      "finalHost": "data.gov.hk",
+      "httpStatus": 200,
+      "mediaType": "application/json",
+      "outcome": "success",
+      "parsedRecordCount": 1,
+      "responseBytes": 12408,
+      "responseSha256": "f594edcee4030665ce7a6bb0399934e017ef82019aaea16e9eb8a357c9a89a98",
+      "schemaFingerprint": "61a980d33cc7badc84f2e3d46a3a1ba9e73cf3cfc3a4d660ea2f544ad5eabe17",
+      "sourceReferences": [
+        "HKAPI-226"
+      ]
+    },
+    "hk-pland-pland1-boundaries-of-tpu-sb-vc": {
+      "elapsedMs": 207,
+      "errorCode": null,
+      "finalHost": "data.gov.hk",
+      "httpStatus": 200,
+      "mediaType": "application/json",
+      "outcome": "success",
+      "parsedRecordCount": 1,
+      "responseBytes": 16072,
+      "responseSha256": "6284f6f270d564f54036fb125602d64f01ff8deb4b55de73bdcc02e5f81b8143",
+      "schemaFingerprint": "6a30b7ca70ac0cb6d6b32794281ada9e2363695717a780db905efeb3ad86fc22",
+      "sourceReferences": [
+        "HKAPI-225"
+      ]
+    },
+    "hk-reo-reopsi01-election-result-ce-2017ce": {
+      "elapsedMs": 200,
+      "errorCode": null,
+      "finalHost": "data.gov.hk",
+      "httpStatus": 200,
+      "mediaType": "application/json",
+      "outcome": "success",
+      "parsedRecordCount": 1,
+      "responseBytes": 3402,
+      "responseSha256": "2c2ac569af86198a273db91f853ac11f568b996fed7a3c7df03854788761d7c3",
+      "schemaFingerprint": "283bf963d6b354a26c3be3a1af89b76030e080e3ad0f47f7c318584a4bb14a0f",
+      "sourceReferences": [
+        "HKAPI-174"
+      ]
+    },
+    "hk-reo-reopsi01-election-result-ce-2022ce": {
+      "elapsedMs": 650,
+      "errorCode": null,
+      "finalHost": "data.gov.hk",
+      "httpStatus": 200,
+      "mediaType": "application/json",
+      "outcome": "success",
+      "parsedRecordCount": 1,
+      "responseBytes": 3402,
+      "responseSha256": "0d1e7fde8072ff6fa19efd2e4797415a21cac9fe215d43885a1bd239da657d3a",
+      "schemaFingerprint": "283bf963d6b354a26c3be3a1af89b76030e080e3ad0f47f7c318584a4bb14a0f",
+      "sourceReferences": [
+        "HKAPI-174"
+      ]
+    },
+    "hk-reo-reopsi01-election-result-dc-2015dce": {
+      "elapsedMs": 426,
+      "errorCode": null,
+      "finalHost": "data.gov.hk",
+      "httpStatus": 200,
+      "mediaType": "application/json",
+      "outcome": "success",
+      "parsedRecordCount": 1,
+      "responseBytes": 38421,
+      "responseSha256": "92e5d7138abe23b509556a63640997a8c85102925cad9598a3639beb0086b123",
+      "schemaFingerprint": "283bf963d6b354a26c3be3a1af89b76030e080e3ad0f47f7c318584a4bb14a0f",
+      "sourceReferences": [
+        "HKAPI-174"
+      ]
+    },
+    "hk-reo-reopsi01-election-result-dc-2015tpd-sf": {
+      "elapsedMs": 265,
+      "errorCode": null,
+      "finalHost": "data.gov.hk",
+      "httpStatus": 200,
+      "mediaType": "application/json",
+      "outcome": "success",
+      "parsedRecordCount": 1,
+      "responseBytes": 4560,
+      "responseSha256": "1c833704637d141e1ca0b1dd78c7d09ed26ba506f68b08f8360c7296f08b9b2c",
+      "schemaFingerprint": "283bf963d6b354a26c3be3a1af89b76030e080e3ad0f47f7c318584a4bb14a0f",
+      "sourceReferences": [
+        "HKAPI-174"
+      ]
+    },
+    "hk-reo-reopsi01-election-result-dc-2017cwd": {
+      "elapsedMs": 303,
+      "errorCode": null,
+      "finalHost": "data.gov.hk",
+      "httpStatus": 200,
+      "mediaType": "application/json",
+      "outcome": "success",
+      "parsedRecordCount": 1,
+      "responseBytes": 4537,
+      "responseSha256": "f94b4076f187b52fb32c8b142f751f41944cbc758cc83da18cfa343cb491ef69",
+      "schemaFingerprint": "283bf963d6b354a26c3be3a1af89b76030e080e3ad0f47f7c318584a4bb14a0f",
+      "sourceReferences": [
+        "HKAPI-174"
+      ]
+    },
+    "hk-reo-reopsi01-election-result-dc-2018ed-kh": {
+      "elapsedMs": 242,
+      "errorCode": null,
+      "finalHost": "data.gov.hk",
+      "httpStatus": 200,
+      "mediaType": "application/json",
+      "outcome": "success",
+      "parsedRecordCount": 1,
+      "responseBytes": 4637,
+      "responseSha256": "c6fd41fdaa80a2fb3b84e7e2b7386a5267aecff5188363eabba7f595c0bd691f",
+      "schemaFingerprint": "283bf963d6b354a26c3be3a1af89b76030e080e3ad0f47f7c318584a4bb14a0f",
+      "sourceReferences": [
+        "HKAPI-174"
+      ]
+    },
+    "hk-reo-reopsi01-election-result-dc-2019dce": {
+      "elapsedMs": 218,
+      "errorCode": null,
+      "finalHost": "data.gov.hk",
+      "httpStatus": 200,
+      "mediaType": "application/json",
+      "outcome": "success",
+      "parsedRecordCount": 1,
+      "responseBytes": 20393,
+      "responseSha256": "eb0915e09905e1506a46f4fec720038f6a0e70e43275213b6f9d941294d10f2f",
+      "schemaFingerprint": "283bf963d6b354a26c3be3a1af89b76030e080e3ad0f47f7c318584a4bb14a0f",
+      "sourceReferences": [
+        "HKAPI-174"
+      ]
+    },
+    "hk-reo-reopsi01-election-result-dc-2019yld": {
+      "elapsedMs": 209,
+      "errorCode": null,
+      "finalHost": "data.gov.hk",
+      "httpStatus": 200,
+      "mediaType": "application/json",
+      "outcome": "success",
+      "parsedRecordCount": 1,
+      "responseBytes": 3515,
+      "responseSha256": "59bc630aa7277492e5f7b852929619348cdba51fd7907251f5f33194da8f84cb",
+      "schemaFingerprint": "283bf963d6b354a26c3be3a1af89b76030e080e3ad0f47f7c318584a4bb14a0f",
+      "sourceReferences": [
+        "HKAPI-174"
+      ]
+    },
+    "hk-reo-reopsi01-election-result-dc-2019ytmd-tn": {
+      "elapsedMs": 209,
+      "errorCode": null,
+      "finalHost": "data.gov.hk",
+      "httpStatus": 200,
+      "mediaType": "application/json",
+      "outcome": "success",
+      "parsedRecordCount": 1,
+      "responseBytes": 3712,
+      "responseSha256": "a6c6ceff2841860a93e6955348ca22402cf5d76193632ed7274240547457f404",
+      "schemaFingerprint": "283bf963d6b354a26c3be3a1af89b76030e080e3ad0f47f7c318584a4bb14a0f",
+      "sourceReferences": [
+        "HKAPI-174"
+      ]
+    },
+    "hk-reo-reopsi01-election-result-dc-2023dcoe": {
+      "elapsedMs": 274,
+      "errorCode": null,
+      "finalHost": "data.gov.hk",
+      "httpStatus": 200,
+      "mediaType": "application/json",
+      "outcome": "success",
+      "parsedRecordCount": 1,
+      "responseBytes": 46708,
+      "responseSha256": "c428103f3df831eeda3788caef1cc398ba12b3f3082689431f04c40f384eb476",
+      "schemaFingerprint": "283bf963d6b354a26c3be3a1af89b76030e080e3ad0f47f7c318584a4bb14a0f",
+      "sourceReferences": [
+        "HKAPI-174"
+      ]
+    },
+    "hk-reo-reopsi01-election-result-dcc-2023": {
+      "elapsedMs": 211,
+      "errorCode": null,
+      "finalHost": "data.gov.hk",
+      "httpStatus": 200,
+      "mediaType": "application/json",
+      "outcome": "success",
+      "parsedRecordCount": 1,
+      "responseBytes": 2781,
+      "responseSha256": "e2faea13904a6a6912e895dd27ae626ed383fca777edcab05d1704910eafb83e",
+      "schemaFingerprint": "283bf963d6b354a26c3be3a1af89b76030e080e3ad0f47f7c318584a4bb14a0f",
+      "sourceReferences": [
+        "HKAPI-174"
+      ]
+    },
+    "hk-reo-reopsi01-election-result-ec-2016ecse": {
+      "elapsedMs": 211,
+      "errorCode": null,
+      "finalHost": "data.gov.hk",
+      "httpStatus": 200,
+      "mediaType": "application/json",
+      "outcome": "success",
+      "parsedRecordCount": 1,
+      "responseBytes": 3516,
+      "responseSha256": "7fcd36703c896984d04b3233b83334163bade9c43d2e292ce5715bda4c0d29ff",
+      "schemaFingerprint": "283bf963d6b354a26c3be3a1af89b76030e080e3ad0f47f7c318584a4bb14a0f",
+      "sourceReferences": [
+        "HKAPI-174"
+      ]
+    },
+    "hk-reo-reopsi01-election-result-ec-2021ecse": {
+      "elapsedMs": 209,
+      "errorCode": null,
+      "finalHost": "data.gov.hk",
+      "httpStatus": 200,
+      "mediaType": "application/json",
+      "outcome": "success",
+      "parsedRecordCount": 1,
+      "responseBytes": 2599,
+      "responseSha256": "f6f7e557ac12995fab916b35ff78e57794b1089d5c8ebe252e6e044f1f26520c",
+      "schemaFingerprint": "283bf963d6b354a26c3be3a1af89b76030e080e3ad0f47f7c318584a4bb14a0f",
+      "sourceReferences": [
+        "HKAPI-174"
+      ]
+    },
+    "hk-reo-reopsi01-election-result-ec-2025ecse": {
+      "elapsedMs": 205,
+      "errorCode": null,
+      "finalHost": "data.gov.hk",
+      "httpStatus": 200,
+      "mediaType": "application/json",
+      "outcome": "success",
+      "parsedRecordCount": 1,
+      "responseBytes": 2630,
+      "responseSha256": "d24bf8e7d83cd0b0e93eb0955a5457a4555cb7c80e9570e21f9149ea535f491a",
+      "schemaFingerprint": "283bf963d6b354a26c3be3a1af89b76030e080e3ad0f47f7c318584a4bb14a0f",
+      "sourceReferences": [
+        "HKAPI-174"
+      ]
+    },
+    "hk-reo-reopsi01-election-result-lc-2016lcbe-nte": {
+      "elapsedMs": 232,
+      "errorCode": null,
+      "finalHost": "data.gov.hk",
+      "httpStatus": 200,
+      "mediaType": "application/json",
+      "outcome": "success",
+      "parsedRecordCount": 1,
+      "responseBytes": 5933,
+      "responseSha256": "00bf76a60e953795e7df53f4489d85efb4a5595fb1ad11c39d76679b8cf2b808",
+      "schemaFingerprint": "283bf963d6b354a26c3be3a1af89b76030e080e3ad0f47f7c318584a4bb14a0f",
+      "sourceReferences": [
+        "HKAPI-174"
+      ]
+    },
+    "hk-reo-reopsi01-election-result-lc-2016lce": {
+      "elapsedMs": 246,
+      "errorCode": null,
+      "finalHost": "data.gov.hk",
+      "httpStatus": 200,
+      "mediaType": "application/json",
+      "outcome": "success",
+      "parsedRecordCount": 1,
+      "responseBytes": 29074,
+      "responseSha256": "c04ac4018a9568825e5463989f05b85b3600d39954578989a5b11b07c2991aac",
+      "schemaFingerprint": "283bf963d6b354a26c3be3a1af89b76030e080e3ad0f47f7c318584a4bb14a0f",
+      "sourceReferences": [
+        "HKAPI-174"
+      ]
+    },
+    "hk-reo-reopsi01-election-result-lc-2018lcbe": {
+      "elapsedMs": 271,
+      "errorCode": null,
+      "finalHost": "data.gov.hk",
+      "httpStatus": 200,
+      "mediaType": "application/json",
+      "outcome": "success",
+      "parsedRecordCount": 1,
+      "responseBytes": 13896,
+      "responseSha256": "76726a39511beea9afbc9f8df748c35dbbbb199a2ad6afe513b5a9a410f820fe",
+      "schemaFingerprint": "283bf963d6b354a26c3be3a1af89b76030e080e3ad0f47f7c318584a4bb14a0f",
+      "sourceReferences": [
+        "HKAPI-174"
+      ]
+    },
+    "hk-reo-reopsi01-election-result-lc-2018lcbe-kw": {
+      "elapsedMs": 200,
+      "errorCode": null,
+      "finalHost": "data.gov.hk",
+      "httpStatus": 200,
+      "mediaType": "application/json",
+      "outcome": "success",
+      "parsedRecordCount": 1,
+      "responseBytes": 4827,
+      "responseSha256": "a0737723875b22cce875c3333d87a11ac760ffdaedccb51e139a1425d5f2beeb",
+      "schemaFingerprint": "283bf963d6b354a26c3be3a1af89b76030e080e3ad0f47f7c318584a4bb14a0f",
+      "sourceReferences": [
+        "HKAPI-174"
+      ]
+    },
+    "hk-reo-reopsi01-election-result-lc-2021lcge": {
+      "elapsedMs": 226,
+      "errorCode": null,
+      "finalHost": "data.gov.hk",
+      "httpStatus": 200,
+      "mediaType": "application/json",
+      "outcome": "success",
+      "parsedRecordCount": 1,
+      "responseBytes": 13466,
+      "responseSha256": "a90262dda80041fdf8a1889ad89d6bfd098071df071b767cb6eb0fbafb933e1d",
+      "schemaFingerprint": "283bf963d6b354a26c3be3a1af89b76030e080e3ad0f47f7c318584a4bb14a0f",
+      "sourceReferences": [
+        "HKAPI-174"
+      ]
+    },
+    "hk-reo-reopsi01-election-result-lc-2022lcecc": {
+      "elapsedMs": 184,
+      "errorCode": null,
+      "finalHost": "data.gov.hk",
+      "httpStatus": 200,
+      "mediaType": "application/json",
+      "outcome": "success",
+      "parsedRecordCount": 1,
+      "responseBytes": 2699,
+      "responseSha256": "6aa8ffdd72d5ec9c552b52942a039a9b5d9b0d5fab436653c78571685215404c",
+      "schemaFingerprint": "283bf963d6b354a26c3be3a1af89b76030e080e3ad0f47f7c318584a4bb14a0f",
+      "sourceReferences": [
+        "HKAPI-174"
+      ]
+    },
+    "hk-reo-reopsi01-election-result-lc-2025lcge": {
+      "elapsedMs": 208,
+      "errorCode": null,
+      "finalHost": "data.gov.hk",
+      "httpStatus": 200,
+      "mediaType": "application/json",
+      "outcome": "success",
+      "parsedRecordCount": 1,
+      "responseBytes": 13471,
+      "responseSha256": "3e46ca7ffab41822959b0659ffd9d1cda8f04155602d648f670531aa5cf01366",
+      "schemaFingerprint": "283bf963d6b354a26c3be3a1af89b76030e080e3ad0f47f7c318584a4bb14a0f",
+      "sourceReferences": [
+        "HKAPI-174"
+      ]
+    },
+    "hk-reo-reopsi01-voter-registration-statistics": {
+      "elapsedMs": 379,
+      "errorCode": null,
+      "finalHost": "data.gov.hk",
+      "httpStatus": 200,
+      "mediaType": "application/json",
+      "outcome": "success",
+      "parsedRecordCount": 1,
+      "responseBytes": 75417,
+      "responseSha256": "30e19075ad811926219838d3b1d324d7b25182b82ad020f4283aeec593206c02",
+      "schemaFingerprint": "283bf963d6b354a26c3be3a1af89b76030e080e3ad0f47f7c318584a4bb14a0f",
+      "sourceReferences": [
+        "HKAPI-175"
+      ]
+    },
+    "hk-rvd-tsinfo_rvd-property-market-statistics": {
+      "elapsedMs": 417,
+      "errorCode": null,
+      "finalHost": "data.gov.hk",
+      "httpStatus": 200,
+      "mediaType": "application/json",
+      "outcome": "success",
+      "parsedRecordCount": 1,
+      "responseBytes": 159670,
+      "responseSha256": "6727ea3fd09bb2a502f5dfae042798d2162808ab29b1fef09d6c0bab391d2ae5",
+      "schemaFingerprint": "2fa564869dea80de1b91f8867b9a2fa164dd0c4b9adc529c5a5bbe1b034c12cf",
+      "sourceReferences": [
+        "HKAPI-150"
+      ]
+    },
+    "hk-rvd-tsinfo_rvd-statistical-tables-on-valuation-list-and-government-rent-roll": {
+      "elapsedMs": 288,
+      "errorCode": null,
+      "finalHost": "data.gov.hk",
+      "httpStatus": 200,
+      "mediaType": "application/json",
+      "outcome": "success",
+      "parsedRecordCount": 1,
+      "responseBytes": 32248,
+      "responseSha256": "b1d01d87407cc136e9637cf457073b7655135be9e8b9333ccdeaf459fd47c30d",
+      "schemaFingerprint": "2fa564869dea80de1b91f8867b9a2fa164dd0c4b9adc529c5a5bbe1b034c12cf",
+      "sourceReferences": [
+        "HKAPI-151"
+      ]
+    },
+    "hk-rvd-tsinfo_rvd-summary-of-newly-built-properties-assessed-to-rates-and-or-gov-rent": {
+      "elapsedMs": 183,
+      "errorCode": null,
+      "finalHost": "data.gov.hk",
+      "httpStatus": 200,
+      "mediaType": "application/json",
+      "outcome": "success",
+      "parsedRecordCount": 1,
+      "responseBytes": 3479,
+      "responseSha256": "f05643ed9e94426fd008d927ac14fe190cbf05a50bffcc13c0b5971c737f2095",
+      "schemaFingerprint": "2fa564869dea80de1b91f8867b9a2fa164dd0c4b9adc529c5a5bbe1b034c12cf",
+      "sourceReferences": [
+        "HKAPI-152"
+      ]
+    },
+    "hk-swd-elderly-list-of-enhanced-home-and-community-care-services-teams": {
+      "elapsedMs": 222,
+      "errorCode": null,
+      "finalHost": "data.gov.hk",
+      "httpStatus": 200,
+      "mediaType": "application/json",
+      "outcome": "success",
+      "parsedRecordCount": 1,
+      "responseBytes": 5059,
+      "responseSha256": "715b2f61b0e4e58f7618e605ce8911daa916dde5f1eb846086e7a8eeb8b0cda3",
+      "schemaFingerprint": "e806b64debb035728990db90e2f4c4b6ef9846d5980d8b05da7c1d2254677dc5",
+      "sourceReferences": [
+        "HKAPI-246"
+      ]
+    },
+    "hk-swd-elderly-list-of-integrated-home-care-services-teams": {
+      "elapsedMs": 197,
+      "errorCode": null,
+      "finalHost": "data.gov.hk",
+      "httpStatus": 200,
+      "mediaType": "application/json",
+      "outcome": "success",
+      "parsedRecordCount": 1,
+      "responseBytes": 5059,
+      "responseSha256": "599c54b6c2fb9a11374fd5366d1283ce62a5782f515bd93874be3a2a171289b8",
+      "schemaFingerprint": "e806b64debb035728990db90e2f4c4b6ef9846d5980d8b05da7c1d2254677dc5",
+      "sourceReferences": [
+        "HKAPI-246"
+      ]
+    },
+    "hk-swd-elderly-list-of-residential-care-homes-for-the-elderly": {
+      "elapsedMs": 200,
+      "errorCode": null,
+      "finalHost": "data.gov.hk",
+      "httpStatus": 200,
+      "mediaType": "application/json",
+      "outcome": "success",
+      "parsedRecordCount": 1,
+      "responseBytes": 2715,
+      "responseSha256": "e9e709c1e196bc94d72e795c3f026f677eed73da7ae94a43217ce3add219db61",
+      "schemaFingerprint": "8ee86d3de382896df9c33851f1cad132072b04ced989bf95f3df93fdbbc6fc42",
+      "sourceReferences": [
+        "HKAPI-245"
+      ]
+    },
+    "hk-swd-elderly-statistics-on-turn-for-offer": {
+      "elapsedMs": 300,
+      "errorCode": null,
+      "finalHost": "data.gov.hk",
+      "httpStatus": 200,
+      "mediaType": "application/json",
+      "outcome": "success",
+      "parsedRecordCount": 1,
+      "responseBytes": 2672,
+      "responseSha256": "729eb4539945aac316bc5584e704ea949c5cfc75b721df9c645c53fcae17baa8",
+      "schemaFingerprint": "e806b64debb035728990db90e2f4c4b6ef9846d5980d8b05da7c1d2254677dc5",
+      "sourceReferences": [
+        "HKAPI-254"
+      ]
+    },
+    "hk-swd-fcw-ciss": {
+      "elapsedMs": 311,
+      "errorCode": null,
+      "finalHost": "data.gov.hk",
+      "httpStatus": 200,
+      "mediaType": "application/json",
+      "outcome": "success",
+      "parsedRecordCount": 1,
+      "responseBytes": 2893,
+      "responseSha256": "7cf400468809d30830703cd132f1a043be3f7912e548611da158f025e452bacb",
+      "schemaFingerprint": "eb67e36ac00ee37c0bda7c70dfe99482faa676bfd82606612738b3ca39cdcce8",
+      "sourceReferences": [
+        "HKAPI-251"
+      ]
+    },
+    "hk-swd-fcw-list-ccc": {
+      "elapsedMs": 353,
+      "errorCode": null,
+      "finalHost": "data.gov.hk",
+      "httpStatus": 200,
+      "mediaType": "application/json",
+      "outcome": "success",
+      "parsedRecordCount": 1,
+      "responseBytes": 3709,
+      "responseSha256": "50e6607c42651538707a64b679b83eb10279d80c097f3dabda09775d2721e33c",
+      "schemaFingerprint": "bbd47474197401977141cd77057f5a71171146f5193d2607e5a2ff396952d59b",
+      "sourceReferences": [
+        "HKAPI-248"
+      ]
+    },
+    "hk-swd-fcw-list-ccc-kg": {
+      "elapsedMs": 213,
+      "errorCode": null,
+      "finalHost": "data.gov.hk",
+      "httpStatus": 200,
+      "mediaType": "application/json",
+      "outcome": "success",
+      "parsedRecordCount": 1,
+      "responseBytes": 3962,
+      "responseSha256": "1580993f1f40572ea87c5c40742dc6886b11f9cfaad24692a3c24658cd4c4e69",
+      "schemaFingerprint": "bbd47474197401977141cd77057f5a71171146f5193d2607e5a2ff396952d59b",
+      "sourceReferences": [
+        "HKAPI-248"
+      ]
+    },
+    "hk-swd-fcw-list-ccc-standalone": {
+      "elapsedMs": 212,
+      "errorCode": null,
+      "finalHost": "data.gov.hk",
+      "httpStatus": 200,
+      "mediaType": "application/json",
+      "outcome": "success",
+      "parsedRecordCount": 1,
+      "responseBytes": 2584,
+      "responseSha256": "da039c7da7740ace35d92db4fcf9e7fb2634405a04e18df9b3d64487c866b5a7",
+      "schemaFingerprint": "6a30b7ca70ac0cb6d6b32794281ada9e2363695717a780db905efeb3ad86fc22",
+      "sourceReferences": [
+        "HKAPI-248"
+      ]
+    },
+    "hk-swd-fcw-list-fcpsu": {
+      "elapsedMs": 203,
+      "errorCode": null,
+      "finalHost": "data.gov.hk",
+      "httpStatus": 200,
+      "mediaType": "application/json",
+      "outcome": "success",
+      "parsedRecordCount": 1,
+      "responseBytes": 4093,
+      "responseSha256": "50d5ca22c781172040b082a68f4083e49de1288300b151f78ac016a001677d93",
+      "schemaFingerprint": "bbd47474197401977141cd77057f5a71171146f5193d2607e5a2ff396952d59b",
+      "sourceReferences": [
+        "HKAPI-248"
+      ]
+    },
+    "hk-swd-fcw-list-fleus": {
+      "elapsedMs": 199,
+      "errorCode": null,
+      "finalHost": "data.gov.hk",
+      "httpStatus": 200,
+      "mediaType": "application/json",
+      "outcome": "success",
+      "parsedRecordCount": 1,
+      "responseBytes": 2574,
+      "responseSha256": "34880c73f37a6e3c1c9ef8a8101584ce853176803c28c7f612d356dc77251f88",
+      "schemaFingerprint": "e806b64debb035728990db90e2f4c4b6ef9846d5980d8b05da7c1d2254677dc5",
+      "sourceReferences": [
+        "HKAPI-248"
+      ]
+    },
+    "hk-swd-fcw-list-ifsc": {
+      "elapsedMs": 181,
+      "errorCode": null,
+      "finalHost": "data.gov.hk",
+      "httpStatus": 200,
+      "mediaType": "application/json",
+      "outcome": "success",
+      "parsedRecordCount": 1,
+      "responseBytes": 3327,
+      "responseSha256": "140cc7a71d2d3266700d7ef8bb45b56e05fa99f3c9134883a6f6329ef7bfc201",
+      "schemaFingerprint": "6a30b7ca70ac0cb6d6b32794281ada9e2363695717a780db905efeb3ad86fc22",
+      "sourceReferences": [
+        "HKAPI-248"
+      ]
+    },
+    "hk-swd-fcw-list-ifsc-boundary": {
+      "elapsedMs": 197,
+      "errorCode": null,
+      "finalHost": "data.gov.hk",
+      "httpStatus": 200,
+      "mediaType": "application/json",
+      "outcome": "success",
+      "parsedRecordCount": 1,
+      "responseBytes": 2672,
+      "responseSha256": "7ff4bc9d6a3dd54697f86c30db8ac294819b0b19fcb295fe4ff8b1b8b652aa4f",
+      "schemaFingerprint": "6a30b7ca70ac0cb6d6b32794281ada9e2363695717a780db905efeb3ad86fc22",
+      "sourceReferences": [
+        "HKAPI-248"
+      ]
+    },
+    "hk-swd-fcw-list-ists": {
+      "elapsedMs": 209,
+      "errorCode": null,
+      "finalHost": "data.gov.hk",
+      "httpStatus": 200,
+      "mediaType": "application/json",
+      "outcome": "success",
+      "parsedRecordCount": 1,
+      "responseBytes": 2621,
+      "responseSha256": "528ddc36122d4028beff9582940091b28d4b71c9515d274c5e412a5b270041a3",
+      "schemaFingerprint": "e806b64debb035728990db90e2f4c4b6ef9846d5980d8b05da7c1d2254677dc5",
+      "sourceReferences": [
+        "HKAPI-250"
+      ]
+    },
+    "hk-swd-fcw-list-mcisc": {
+      "elapsedMs": 194,
+      "errorCode": null,
+      "finalHost": "data.gov.hk",
+      "httpStatus": 200,
+      "mediaType": "application/json",
+      "outcome": "success",
+      "parsedRecordCount": 1,
+      "responseBytes": 3134,
+      "responseSha256": "bdb4f9282e96d94c12effbfa9257d9a57c7a27608c8e24aa81e06c3178cd29be",
+      "schemaFingerprint": "94cf56f7dd68ab65e0270b21936c228b21c4a3e873a0c57fe0df1e41362b7cc6",
+      "sourceReferences": [
+        "HKAPI-248"
+      ]
+    },
+    "hk-swd-fcw-list-occs": {
+      "elapsedMs": 201,
+      "errorCode": null,
+      "finalHost": "data.gov.hk",
+      "httpStatus": 200,
+      "mediaType": "application/json",
+      "outcome": "success",
+      "parsedRecordCount": 1,
+      "responseBytes": 2605,
+      "responseSha256": "8288afb5be1f7b87bb1b200f34176fdb7ea8aaa5bf41054f01903f4b190df787",
+      "schemaFingerprint": "6a30b7ca70ac0cb6d6b32794281ada9e2363695717a780db905efeb3ad86fc22",
+      "sourceReferences": [
+        "HKAPI-248"
+      ]
+    },
+    "hk-swd-fcw-list-otem": {
+      "elapsedMs": 203,
+      "errorCode": null,
+      "finalHost": "data.gov.hk",
+      "httpStatus": 200,
+      "mediaType": "application/json",
+      "outcome": "success",
+      "parsedRecordCount": 1,
+      "responseBytes": 3639,
+      "responseSha256": "0ae62ddf0b27f9f1731772e572c9ed481f3924781092689d57ffc690b1483cf9",
+      "schemaFingerprint": "0ddc931c2525b63b87100e2d8c9f2696208a8cee8491bb8291764314679990fd",
+      "sourceReferences": [
+        "HKAPI-248"
+      ]
+    },
+    "hk-swd-fcw-list-rccc-ch-b-gh-h": {
+      "elapsedMs": 202,
+      "errorCode": null,
+      "finalHost": "data.gov.hk",
+      "httpStatus": 200,
+      "mediaType": "application/json",
+      "outcome": "success",
+      "parsedRecordCount": 1,
+      "responseBytes": 5493,
+      "responseSha256": "2bda62a0a21eb8f9a61b80ca286ed23aacff01612bd425bb3a1d9fa4460734e9",
+      "schemaFingerprint": "9fc3a3c6d282f7e2754a73a43bd83631acfbed3b039152574f114e7be1220bfd",
+      "sourceReferences": [
+        "HKAPI-248"
+      ]
+    },
+    "hk-swd-fcw-list-refuge-centre": {
+      "elapsedMs": 231,
+      "errorCode": null,
+      "finalHost": "data.gov.hk",
+      "httpStatus": 200,
+      "mediaType": "application/json",
+      "outcome": "success",
+      "parsedRecordCount": 1,
+      "responseBytes": 2593,
+      "responseSha256": "2ea5ff4adfc1fe19ef260576fc0d472ea9394643147fe126afcd05c39c02a250",
+      "schemaFingerprint": "9fc3a3c6d282f7e2754a73a43bd83631acfbed3b039152574f114e7be1220bfd",
+      "sourceReferences": [
+        "HKAPI-248"
+      ]
+    },
+    "hk-swd-fcw-list-scsc": {
+      "elapsedMs": 221,
+      "errorCode": null,
+      "finalHost": "data.gov.hk",
+      "httpStatus": 200,
+      "mediaType": "application/json",
+      "outcome": "success",
+      "parsedRecordCount": 1,
+      "responseBytes": 2725,
+      "responseSha256": "e79c4d6d8607511e22ba7c56160d1784ef3cc500bb41b6c2b4f7876f7609ee1e",
+      "schemaFingerprint": "9fc3a3c6d282f7e2754a73a43bd83631acfbed3b039152574f114e7be1220bfd",
+      "sourceReferences": [
+        "HKAPI-248"
+      ]
+    },
+    "hk-swd-fcw-list-sgh": {
+      "elapsedMs": 201,
+      "errorCode": null,
+      "finalHost": "data.gov.hk",
+      "httpStatus": 200,
+      "mediaType": "application/json",
+      "outcome": "success",
+      "parsedRecordCount": 1,
+      "responseBytes": 2618,
+      "responseSha256": "af4bb2d1d1962cd76b2eae231a335678dcb2c69c1d1ef91d16d69a8d6ace8818",
+      "schemaFingerprint": "9fc3a3c6d282f7e2754a73a43bd83631acfbed3b039152574f114e7be1220bfd",
+      "sourceReferences": [
+        "HKAPI-248",
+        "HKAPI-249"
+      ]
+    },
+    "hk-swd-fcw-list-spear": {
+      "elapsedMs": 199,
+      "errorCode": null,
+      "finalHost": "data.gov.hk",
+      "httpStatus": 200,
+      "mediaType": "application/json",
+      "outcome": "success",
+      "parsedRecordCount": 1,
+      "responseBytes": 2805,
+      "responseSha256": "d743c39f2a6cfd575f50119e30483da440fbe1f6ef1f3fb6414962c1ad8632bb",
+      "schemaFingerprint": "9fc3a3c6d282f7e2754a73a43bd83631acfbed3b039152574f114e7be1220bfd",
+      "sourceReferences": [
+        "HKAPI-248"
+      ]
+    },
+    "hk-swd-fcw-list-swsppi": {
+      "elapsedMs": 216,
+      "errorCode": null,
+      "finalHost": "data.gov.hk",
+      "httpStatus": 200,
+      "mediaType": "application/json",
+      "outcome": "success",
+      "parsedRecordCount": 1,
+      "responseBytes": 2944,
+      "responseSha256": "84ed05e73ddbe0b8772bb4141869305668ccf8485cf9ff04f16f2580c1446989",
+      "schemaFingerprint": "734de5cd295f10879a69a74a406f079ea61df86b30ff12bcf972a8351ae9e14f",
+      "sourceReferences": [
+        "HKAPI-248",
+        "HKAPI-252"
+      ]
+    },
+    "hk-swd-fcw-list-vsp": {
+      "elapsedMs": 197,
+      "errorCode": null,
+      "finalHost": "data.gov.hk",
+      "httpStatus": 200,
+      "mediaType": "application/json",
+      "outcome": "success",
+      "parsedRecordCount": 1,
+      "responseBytes": 2706,
+      "responseSha256": "828973ec471261ccbbfe6f2e553a9b11682867ddcba8e521db00182899a2b3d6",
+      "schemaFingerprint": "6a30b7ca70ac0cb6d6b32794281ada9e2363695717a780db905efeb3ad86fc22",
+      "sourceReferences": [
+        "HKAPI-248"
+      ]
+    },
+    "hk-swd-rm-list-of-iss": {
+      "elapsedMs": 196,
+      "errorCode": null,
+      "finalHost": "data.gov.hk",
+      "httpStatus": 200,
+      "mediaType": "application/json",
+      "outcome": "success",
+      "parsedRecordCount": 1,
+      "responseBytes": 2868,
+      "responseSha256": "7a7d2f4a1ce76846f1873aa24653a229246ef0a66252175c66a4f88653b16589",
+      "schemaFingerprint": "6a30b7ca70ac0cb6d6b32794281ada9e2363695717a780db905efeb3ad86fc22",
+      "sourceReferences": [
+        "HKAPI-253"
+      ]
+    },
+    "hk-swd-ssb-ssfu": {
+      "elapsedMs": 197,
+      "errorCode": null,
+      "finalHost": "data.gov.hk",
+      "httpStatus": 200,
+      "mediaType": "application/json",
+      "outcome": "success",
+      "parsedRecordCount": 1,
+      "responseBytes": 2572,
+      "responseSha256": "c20aa270adcd895b78db197d3d0b5f87bf7af9c9fea932ffbdcc9f5caae94b7c",
+      "schemaFingerprint": "6a30b7ca70ac0cb6d6b32794281ada9e2363695717a780db905efeb3ad86fc22",
+      "sourceReferences": [
+        "HKAPI-247"
+      ]
+    },
+    "hk-td-msd_1-metered-parking-spaces-data": {
+      "elapsedMs": 226,
+      "errorCode": null,
+      "finalHost": "data.gov.hk",
+      "httpStatus": 200,
+      "mediaType": "application/json",
+      "outcome": "success",
+      "parsedRecordCount": 1,
+      "responseBytes": 4709,
+      "responseSha256": "2511dcf0982f8afbc26396fb5940940a92f5582ff1ff7c9d1ff783915ea242bb",
+      "schemaFingerprint": "e806b64debb035728990db90e2f4c4b6ef9846d5980d8b05da7c1d2254677dc5",
+      "sourceReferences": [
+        "HKAPI-052"
+      ]
+    },
+    "hk-td-msd_2-non-metered-parking-spaces-data": {
+      "elapsedMs": 191,
+      "errorCode": null,
+      "finalHost": "data.gov.hk",
+      "httpStatus": 200,
+      "mediaType": "application/json",
+      "outcome": "success",
+      "parsedRecordCount": 1,
+      "responseBytes": 4721,
+      "responseSha256": "45738f22eda92ba649b19dea36323cd4ed1ba8fc00944ee7b9bc1e0a5ef9adef",
+      "schemaFingerprint": "e806b64debb035728990db90e2f4c4b6ef9846d5980d8b05da7c1d2254677dc5",
+      "sourceReferences": [
+        "HKAPI-053"
+      ]
+    },
+    "hk-td-sm_1-traffic-speed-map": {
+      "elapsedMs": 340,
+      "errorCode": null,
+      "finalHost": "data.gov.hk",
+      "httpStatus": 200,
+      "mediaType": "application/json",
+      "outcome": "success",
+      "parsedRecordCount": 1,
+      "responseBytes": 2675,
+      "responseSha256": "67a60a3db5ab68f84831203a3307921f06c16cfc65f4e5e771d958c6905f968b",
+      "schemaFingerprint": "0ddc931c2525b63b87100e2d8c9f2696208a8cee8491bb8291764314679990fd",
+      "sourceReferences": [
+        "HKAPI-066"
+      ]
+    },
+    "hk-td-sm_4-traffic-data-strategic-major-roads": {
+      "elapsedMs": 319,
+      "errorCode": null,
+      "finalHost": "data.gov.hk",
+      "httpStatus": 200,
+      "mediaType": "application/json",
+      "outcome": "success",
+      "parsedRecordCount": 1,
+      "responseBytes": 6281,
+      "responseSha256": "7a9c0260e35c133228898504ff9775a5871738e9a20e6d9ce3b69345ec0fe80b",
+      "schemaFingerprint": "729591af1d84950eedb20e421b5d4db2600c68876414317628c299508935cee0",
+      "sourceReferences": [
+        "HKAPI-063"
+      ]
+    },
+    "hk-td-sm_8-journey-time-indicators-v2": {
+      "elapsedMs": 185,
+      "errorCode": null,
+      "finalHost": "data.gov.hk",
+      "httpStatus": 200,
+      "mediaType": "application/json",
+      "outcome": "success",
+      "parsedRecordCount": 1,
+      "responseBytes": 3718,
+      "responseSha256": "d3aae8d6ba80f30b15dd2a2e1ca0db107cc17121682f23e5f637d37af5b69354",
+      "schemaFingerprint": "fc6aab9ca8c72993db3330bedec893c24caffadd42cd9f0dd0f55e168fb2ce0c",
+      "sourceReferences": [
+        "HKAPI-065"
+      ]
+    },
+    "hk-td-tis_11-pt-headway-en": {
+      "elapsedMs": 260,
+      "errorCode": null,
+      "finalHost": "data.gov.hk",
+      "httpStatus": 200,
+      "mediaType": "application/json",
+      "outcome": "success",
+      "parsedRecordCount": 1,
+      "responseBytes": 29940,
+      "responseSha256": "fdb897a6622c1e3699587b394c469dcd00a0f7a5f0c4fa1bd48b503fc5565269",
+      "schemaFingerprint": "214e940fbba224285f7ae2a4a5283d1d9b71d34e937755a749fa100b0aa2c56e",
+      "sourceReferences": [
+        "HKAPI-037"
+      ]
+    },
+    "hk-td-tis_15-road-network-v2": {
+      "elapsedMs": 374,
+      "errorCode": null,
+      "finalHost": "data.gov.hk",
+      "httpStatus": 200,
+      "mediaType": "application/json",
+      "outcome": "success",
+      "parsedRecordCount": 1,
+      "responseBytes": 48213,
+      "responseSha256": "9a7f6bb1ac095f90fe263b0b9e2a5a7d118563f512d98bafa753c3402bd8a365",
+      "schemaFingerprint": "e806b64debb035728990db90e2f4c4b6ef9846d5980d8b05da7c1d2254677dc5",
+      "sourceReferences": [
+        "HKAPI-040"
+      ]
+    },
+    "hk-td-tis_18-roadworks-location": {
+      "elapsedMs": 393,
+      "errorCode": null,
+      "finalHost": "data.gov.hk",
+      "httpStatus": 200,
+      "mediaType": "application/json",
+      "outcome": "success",
+      "parsedRecordCount": 1,
+      "responseBytes": 4857,
+      "responseSha256": "f89bda9d4cf268389020e258713c03abeaefd3cd7bd95cd1d5df8df9c75dee44",
+      "schemaFingerprint": "e6e55a65ad4f8364c54a847d8368ea7a35002a343b7ed365d921c5a4119acab2",
+      "sourceReferences": [
+        "HKAPI-059"
+      ]
+    },
+    "hk-td-tis_19-special-traffic-news-v2": {
+      "elapsedMs": 632,
+      "errorCode": null,
+      "finalHost": "data.gov.hk",
+      "httpStatus": 200,
+      "mediaType": "application/json",
+      "outcome": "success",
+      "parsedRecordCount": 1,
+      "responseBytes": 4712,
+      "responseSha256": "1327d53f3cf3f322864c7d8f1130ce59e88239e5c2fa86ce23893a910ffbcebb",
+      "schemaFingerprint": "097730c6c18e43db48a9ea15c75cab5915a1da5520a9fe9d7a3c73430134d107",
+      "sourceReferences": [
+        "HKAPI-057"
+      ]
+    },
+    "hk-td-tis_2-traffic-snapshot-images": {
+      "elapsedMs": 3235,
+      "errorCode": null,
+      "finalHost": "data.gov.hk",
+      "httpStatus": 200,
+      "mediaType": "application/json",
+      "outcome": "success",
+      "parsedRecordCount": 1,
+      "responseBytes": 824840,
+      "responseSha256": "60a761806596aa628f2de9200c2e5e729d41cc83c0c72e3ad22f37a267ec83eb",
+      "schemaFingerprint": "e6e55a65ad4f8364c54a847d8368ea7a35002a343b7ed365d921c5a4119acab2",
+      "sourceReferences": [
+        "HKAPI-060",
+        "HKAPI-061"
+      ]
+    },
+    "hk-td-tis_22-traffic-notices": {
+      "elapsedMs": 377,
+      "errorCode": null,
+      "finalHost": "data.gov.hk",
+      "httpStatus": 200,
+      "mediaType": "application/json",
+      "outcome": "success",
+      "parsedRecordCount": 1,
+      "responseBytes": 7876,
+      "responseSha256": "42745dfd350a202dc1fa485b16d6bdaee5d69ab1b73c22d66b276d370f939772",
+      "schemaFingerprint": "e806b64debb035728990db90e2f4c4b6ef9846d5980d8b05da7c1d2254677dc5",
+      "sourceReferences": [
+        "HKAPI-058"
+      ]
+    },
+    "hk-td-tis_23-routes-fares-geojson": {
+      "elapsedMs": 2321,
+      "errorCode": null,
+      "finalHost": "data.gov.hk",
+      "httpStatus": 200,
+      "mediaType": "application/json",
+      "outcome": "success",
+      "parsedRecordCount": 1,
+      "responseBytes": 11648,
+      "responseSha256": "f19f4722c905d3183d1df3599cd6903f433fd10af02896b7196f6b6386b204f0",
+      "schemaFingerprint": "0ddc931c2525b63b87100e2d8c9f2696208a8cee8491bb8291764314679990fd",
+      "sourceReferences": [
+        "HKAPI-039"
+      ]
+    },
+    "hk-td-tis_25-junctions-with-rlc": {
+      "elapsedMs": 2236,
+      "errorCode": null,
+      "finalHost": "data.gov.hk",
+      "httpStatus": 200,
+      "mediaType": "application/json",
+      "outcome": "success",
+      "parsedRecordCount": 1,
+      "responseBytes": 4998,
+      "responseSha256": "e6234e59b6c6f40405245f64dd68f3268f63f46225a7ea2015e9641b230df08c",
+      "schemaFingerprint": "e806b64debb035728990db90e2f4c4b6ef9846d5980d8b05da7c1d2254677dc5",
+      "sourceReferences": [
+        "HKAPI-069"
+      ]
+    },
+    "hk-td-tis_26-locations-of-sec": {
+      "elapsedMs": 667,
+      "errorCode": null,
+      "finalHost": "data.gov.hk",
+      "httpStatus": 200,
+      "mediaType": "application/json",
+      "outcome": "success",
+      "parsedRecordCount": 1,
+      "responseBytes": 4949,
+      "responseSha256": "e3763356e8921af76177468bda2eb9eaaefbc200d058264b4fd90186de444250",
+      "schemaFingerprint": "e806b64debb035728990db90e2f4c4b6ef9846d5980d8b05da7c1d2254677dc5",
+      "sourceReferences": [
+        "HKAPI-069"
+      ]
+    },
+    "hk-td-tis_28-traffic-data-tdas": {
+      "elapsedMs": 740,
+      "errorCode": null,
+      "finalHost": "data.gov.hk",
+      "httpStatus": 200,
+      "mediaType": "application/json",
+      "outcome": "success",
+      "parsedRecordCount": 1,
+      "responseBytes": 2610,
+      "responseSha256": "02477287bd9c4422e63e6299b5575824041cdc19df37311a375ce54f9d1bf2ab",
+      "schemaFingerprint": "e806b64debb035728990db90e2f4c4b6ef9846d5980d8b05da7c1d2254677dc5",
+      "sourceReferences": [
+        "HKAPI-062"
+      ]
+    },
+    "hk-td-tis_3-routes-and-fares-of-public-transport": {
+      "elapsedMs": 1069,
+      "errorCode": null,
+      "finalHost": "data.gov.hk",
+      "httpStatus": 200,
+      "mediaType": "application/json",
+      "outcome": "success",
+      "parsedRecordCount": 1,
+      "responseBytes": 36554,
+      "responseSha256": "d130e8b690e71259bb70ba6d7e53dd0e203f4e6237214f4437576d263aac5863",
+      "schemaFingerprint": "e6e55a65ad4f8364c54a847d8368ea7a35002a343b7ed365d921c5a4119acab2",
+      "sourceReferences": [
+        "HKAPI-038"
+      ]
+    },
+    "hk-td-tis_32-traffic-data-aivas": {
+      "elapsedMs": 1317,
+      "errorCode": null,
+      "finalHost": "data.gov.hk",
+      "httpStatus": 200,
+      "mediaType": "application/json",
+      "outcome": "success",
+      "parsedRecordCount": 1,
+      "responseBytes": 2804,
+      "responseSha256": "3d617c8ec597a9d2d061a8a3036115855277d7ec1411663499089f8b886f35dd",
+      "schemaFingerprint": "e6e55a65ad4f8364c54a847d8368ea7a35002a343b7ed365d921c5a4119acab2",
+      "sourceReferences": [
+        "HKAPI-070"
+      ]
+    },
+    "hk-td-tis_33-traffic-data-traffic-detectors-installed-at-smart-lampposts": {
+      "elapsedMs": 1188,
+      "errorCode": null,
+      "finalHost": "data.gov.hk",
+      "httpStatus": 200,
+      "mediaType": "application/json",
+      "outcome": "success",
+      "parsedRecordCount": 1,
+      "responseBytes": 4413,
+      "responseSha256": "28bceb1a13eee48968a1a069777b656a4ce6a12384b68541edb56f751b9abe1d",
+      "schemaFingerprint": "729591af1d84950eedb20e421b5d4db2600c68876414317628c299508935cee0",
+      "sourceReferences": [
+        "HKAPI-064"
+      ]
+    },
+    "hk-td-tis_38-taxi-pick-up-drop-off-points": {
+      "elapsedMs": 1466,
+      "errorCode": null,
+      "finalHost": "data.gov.hk",
+      "httpStatus": 200,
+      "mediaType": "application/json",
+      "outcome": "success",
+      "parsedRecordCount": 1,
+      "responseBytes": 2336,
+      "responseSha256": "5bebe51336e6af832a878dff2ae4404e401aca2de76133419af1ab062673ed60",
+      "schemaFingerprint": "6a30b7ca70ac0cb6d6b32794281ada9e2363695717a780db905efeb3ad86fc22",
+      "sourceReferences": [
+        "HKAPI-075"
+      ]
+    },
+    "hk-td-tis_39-fleet-taxi-stopping-places": {
+      "elapsedMs": 1370,
+      "errorCode": null,
+      "finalHost": "data.gov.hk",
+      "httpStatus": 200,
+      "mediaType": "application/json",
+      "outcome": "success",
+      "parsedRecordCount": 1,
+      "responseBytes": 2338,
+      "responseSha256": "95195abe7cb906894823ec51c63b7ad2677e8a1f328680200198ce0fa5fe1e2e",
+      "schemaFingerprint": "6a30b7ca70ac0cb6d6b32794281ada9e2363695717a780db905efeb3ad86fc22",
+      "sourceReferences": [
+        "HKAPI-074"
+      ]
+    },
+    "hk-td-tis_7-traffic-flow-census": {
+      "elapsedMs": 1337,
+      "errorCode": null,
+      "finalHost": "data.gov.hk",
+      "httpStatus": 200,
+      "mediaType": "application/json",
+      "outcome": "success",
+      "parsedRecordCount": 1,
+      "responseBytes": 16847,
+      "responseSha256": "d37b2295a40f0ec858ff1c804ead6bda7284b6e6270c18e99404f859443297bc",
+      "schemaFingerprint": "0ddc931c2525b63b87100e2d8c9f2696208a8cee8491bb8291764314679990fd",
+      "sourceReferences": [
+        "HKAPI-067",
+        "HKAPI-068"
+      ]
+    },
+    "hk-td-wcms_8-ferry-services-tt-ft": {
+      "elapsedMs": 1511,
+      "errorCode": null,
+      "finalHost": "data.gov.hk",
+      "httpStatus": 200,
+      "mediaType": "application/json",
+      "outcome": "success",
+      "parsedRecordCount": 1,
+      "responseBytes": 245905,
+      "responseSha256": "3fd7f2748e9eaa6e4422fa33c253d1442a556cd11d8a4da49c6722747468bc32",
+      "schemaFingerprint": "e6e55a65ad4f8364c54a847d8368ea7a35002a343b7ed365d921c5a4119acab2",
+      "sourceReferences": [
+        "HKAPI-046"
+      ]
+    },
+    "hk-wsd-wsd2-storage-position-reservoir-weekly": {
+      "elapsedMs": 982,
+      "errorCode": null,
+      "finalHost": "data.gov.hk",
+      "httpStatus": 200,
+      "mediaType": "application/json",
+      "outcome": "success",
+      "parsedRecordCount": 1,
+      "responseBytes": 3338,
+      "responseSha256": "17bd6838505b54478216a7d6822fb1517b13ef01ebcf92a645ca121bf6969cc6",
+      "schemaFingerprint": "e806b64debb035728990db90e2f4c4b6ef9846d5980d8b05da7c1d2254677dc5",
+      "sourceReferences": [
+        "HKAPI-158"
+      ]
+    },
+    "hk-wsd-wsd2-water-resources": {
+      "elapsedMs": 976,
+      "errorCode": null,
+      "finalHost": "data.gov.hk",
+      "httpStatus": 200,
+      "mediaType": "application/json",
+      "outcome": "success",
+      "parsedRecordCount": 1,
+      "responseBytes": 4967,
+      "responseSha256": "977d1a2b9d06183ab4d54f287f3b2b2f8e5b0a5b64fb7cfab4250ec26429c559",
+      "schemaFingerprint": "e806b64debb035728990db90e2f4c4b6ef9846d5980d8b05da7c1d2254677dc5",
+      "sourceReferences": [
+        "HKAPI-159"
+      ]
+    },
+    "hk-wsd-wsd9-temporary-water-suspension-notices": {
+      "elapsedMs": 921,
+      "errorCode": null,
+      "finalHost": "data.gov.hk",
+      "httpStatus": 200,
+      "mediaType": "application/json",
+      "outcome": "success",
+      "parsedRecordCount": 1,
+      "responseBytes": 3576,
+      "responseSha256": "16cf427c3c0dbb4a5003be4e3fafcd5418b9fee5716b3f888b74869b1010dfbd",
+      "schemaFingerprint": "e806b64debb035728990db90e2f4c4b6ef9846d5980d8b05da7c1d2254677dc5",
+      "sourceReferences": [
+        "HKAPI-160"
+      ]
+    },
+    "hkelectric-cs_cbd-renewable-energy-generation-by-districts": {
+      "elapsedMs": 921,
+      "errorCode": null,
+      "finalHost": "data.gov.hk",
+      "httpStatus": 200,
+      "mediaType": "application/json",
+      "outcome": "success",
+      "parsedRecordCount": 1,
+      "responseBytes": 2819,
+      "responseSha256": "5b84e8d91df07c2ab53ca6ea5db73731445dcc339d0b71628806f9d273958c70",
+      "schemaFingerprint": "b132136385c0dfbe6b805119424a33b32785f026e831d95270d1a8b8e86cbe10",
+      "sourceReferences": [
+        "HKAPI-156"
+      ]
+    },
+    "hkelectric-cs_cbd-renewable-energy-generation-by-premises-type": {
+      "elapsedMs": 836,
+      "errorCode": null,
+      "finalHost": "data.gov.hk",
+      "httpStatus": 200,
+      "mediaType": "application/json",
+      "outcome": "success",
+      "parsedRecordCount": 1,
+      "responseBytes": 2815,
+      "responseSha256": "adcbc8bd2db2747dbe0989d59f9ba10d39ced7d0aa2851f2163bfc927c62b609",
+      "schemaFingerprint": "b132136385c0dfbe6b805119424a33b32785f026e831d95270d1a8b8e86cbe10",
+      "sourceReferences": [
+        "HKAPI-156"
+      ]
+    },
+    "hkelectric-cs_cbd-renewable-energy-generation-by-renewable-energy-type": {
+      "elapsedMs": 1043,
+      "errorCode": null,
+      "finalHost": "data.gov.hk",
+      "httpStatus": 200,
+      "mediaType": "application/json",
+      "outcome": "success",
+      "parsedRecordCount": 1,
+      "responseBytes": 2823,
+      "responseSha256": "146a7181c11b8b828f21d7d8ae5e30769f4058090bb4325be4c63096d21193a8",
+      "schemaFingerprint": "b132136385c0dfbe6b805119424a33b32785f026e831d95270d1a8b8e86cbe10",
+      "sourceReferences": [
+        "HKAPI-156"
+      ]
+    },
+    "hkelectric-cs_cs-consumption-data-by-districts": {
+      "elapsedMs": 921,
+      "errorCode": null,
+      "finalHost": "data.gov.hk",
+      "httpStatus": 200,
+      "mediaType": "application/json",
+      "outcome": "success",
+      "parsedRecordCount": 1,
+      "responseBytes": 2777,
+      "responseSha256": "c0393272be9b9e5fe299a65287ae924f083d0049c49c22a8325f2561e62ab809",
+      "schemaFingerprint": "b132136385c0dfbe6b805119424a33b32785f026e831d95270d1a8b8e86cbe10",
+      "sourceReferences": [
+        "HKAPI-155"
+      ]
+    },
+    "hkelectric-cs_cs-fuel-mix-generation-data": {
+      "elapsedMs": 999,
+      "errorCode": null,
+      "finalHost": "data.gov.hk",
+      "httpStatus": 200,
+      "mediaType": "application/json",
+      "outcome": "success",
+      "parsedRecordCount": 1,
+      "responseBytes": 2528,
+      "responseSha256": "ed56461417d1906cbd892a79f3af5f76622d0eadb2b156f4733655f03941fae7",
+      "schemaFingerprint": "b132136385c0dfbe6b805119424a33b32785f026e831d95270d1a8b8e86cbe10",
+      "sourceReferences": [
+        "HKAPI-154"
+      ]
+    },
+    "hkhs-hkhs-hkhs-commercial-leasing": {
+      "elapsedMs": 511,
+      "errorCode": null,
+      "finalHost": "data.gov.hk",
+      "httpStatus": 200,
+      "mediaType": "application/json",
+      "outcome": "success",
+      "parsedRecordCount": 1,
+      "responseBytes": 2713,
+      "responseSha256": "b1bc16c9346e9adae0a8ffdcaf5d33d633796e908f8a3c42aef4b08429d5cc2a",
+      "schemaFingerprint": "e59903c6eede1cb61b154abd4c63104a232287f0f57e217587a7b8fa2cf47514",
+      "sourceReferences": [
+        "HKAPI-216"
+      ]
+    },
+    "hkhs-hkhs-hkhs-estates-and-projects": {
+      "elapsedMs": 480,
+      "errorCode": null,
+      "finalHost": "data.gov.hk",
+      "httpStatus": 200,
+      "mediaType": "application/json",
+      "outcome": "success",
+      "parsedRecordCount": 1,
+      "responseBytes": 10947,
+      "responseSha256": "b79abfc22817f482303591acd12084131ab9956aea94885c9de542f8fce6eb20",
+      "schemaFingerprint": "e59903c6eede1cb61b154abd4c63104a232287f0f57e217587a7b8fa2cf47514",
+      "sourceReferences": [
+        "HKAPI-217"
+      ]
+    },
+    "hkkf-hkkfdata-hkkf-eta-data": {
+      "elapsedMs": 409,
+      "errorCode": null,
+      "finalHost": "data.gov.hk",
+      "httpStatus": 200,
+      "mediaType": "application/json",
+      "outcome": "success",
+      "parsedRecordCount": 1,
+      "responseBytes": 6960,
+      "responseSha256": "cb926dfda6c6b234267a91edded73e6d9980b7390bd006db3674ced5f8376166",
+      "schemaFingerprint": "dd73bf501bac8a039bcd2fa6a816e5a6000325dd25cd3a6c660e28c447931fc1",
+      "sourceReferences": [
+        "HKAPI-041"
+      ]
+    },
+    "hkstp-hkstp-hkstp-carpark-vacancy": {
+      "elapsedMs": 475,
+      "errorCode": null,
+      "finalHost": "data.gov.hk",
+      "httpStatus": 200,
+      "mediaType": "application/json",
+      "outcome": "success",
+      "parsedRecordCount": 1,
+      "responseBytes": 2438,
+      "responseSha256": "b2a267d7810467ba1c7fabb2cf325dd423e11dea1696d81a69329a78df459811",
+      "schemaFingerprint": "e806b64debb035728990db90e2f4c4b6ef9846d5980d8b05da7c1d2254677dc5",
+      "sourceReferences": [
+        "HKAPI-054"
+      ]
+    },
+    "hktramways-hktramways-tram-stops": {
+      "elapsedMs": 445,
+      "errorCode": null,
+      "finalHost": "data.gov.hk",
+      "httpStatus": 200,
+      "mediaType": "application/json",
+      "outcome": "success",
+      "parsedRecordCount": 1,
+      "responseBytes": 3987,
+      "responseSha256": "213d3924f6a99d1ee49b5d133f202f33274e603ec537d08468594604f0cc5466",
+      "schemaFingerprint": "499117790c4a17cf01ab69b2f0d812f12743047ee2d467d9bbf39afde5c61f37",
+      "sourceReferences": [
+        "HKAPI-036"
+      ]
+    },
+    "hospital-hadata-ae-waiting-time": {
+      "elapsedMs": 412,
+      "errorCode": null,
+      "finalHost": "data.gov.hk",
+      "httpStatus": 200,
+      "mediaType": "application/json",
+      "outcome": "success",
+      "parsedRecordCount": 1,
+      "responseBytes": 7413,
+      "responseSha256": "8afe426f16ee73ebf2e1909901a97f6fc8a85871fd21a033fa20a8422585679d",
+      "schemaFingerprint": "214e940fbba224285f7ae2a4a5283d1d9b71d34e937755a749fa100b0aa2c56e",
+      "sourceReferences": [
+        "HKAPI-119"
+      ]
+    },
+    "hospital-hadata-fmc-quota": {
+      "elapsedMs": 321,
+      "errorCode": null,
+      "finalHost": "data.gov.hk",
+      "httpStatus": 200,
+      "mediaType": "application/json",
+      "outcome": "success",
+      "parsedRecordCount": 1,
+      "responseBytes": 7863,
+      "responseSha256": "3b65affe956467cb10d9bcd547ccccaf403bb357209a3083a431f11dfb3454ee",
+      "schemaFingerprint": "e806b64debb035728990db90e2f4c4b6ef9846d5980d8b05da7c1d2254677dc5",
+      "sourceReferences": [
+        "HKAPI-122"
+      ]
+    },
+    "hospital-hadata-health-care-facilities": {
+      "elapsedMs": 301,
+      "errorCode": null,
+      "finalHost": "data.gov.hk",
+      "httpStatus": 200,
+      "mediaType": "application/json",
+      "outcome": "success",
+      "parsedRecordCount": 1,
+      "responseBytes": 9018,
+      "responseSha256": "a18f9ef111e77cabdcd79484c80d0c80be27c508eff01551f158aea36ddbb382",
+      "schemaFingerprint": "e806b64debb035728990db90e2f4c4b6ef9846d5980d8b05da7c1d2254677dc5",
+      "sourceReferences": [
+        "HKAPI-120"
+      ]
+    },
+    "hospital-hadata-key-financial-info": {
+      "elapsedMs": 375,
+      "errorCode": null,
+      "finalHost": "data.gov.hk",
+      "httpStatus": 200,
+      "mediaType": "application/json",
+      "outcome": "success",
+      "parsedRecordCount": 1,
+      "responseBytes": 6557,
+      "responseSha256": "ab015766903cfbc98a6408baf9bbb11044fff6c796eeb58b4fb4a4c58b9c52a6",
+      "schemaFingerprint": "e806b64debb035728990db90e2f4c4b6ef9846d5980d8b05da7c1d2254677dc5",
+      "sourceReferences": [
+        "HKAPI-126"
+      ]
+    },
+    "hospital-hadata-key-statistics-during-surge": {
+      "elapsedMs": 333,
+      "errorCode": null,
+      "finalHost": "data.gov.hk",
+      "httpStatus": 200,
+      "mediaType": "application/json",
+      "outcome": "success",
+      "parsedRecordCount": 1,
+      "responseBytes": 7253,
+      "responseSha256": "08b2fe8b72b1337ae971697803801ab9a1287422486d04a739acf239061ef4ba",
+      "schemaFingerprint": "e806b64debb035728990db90e2f4c4b6ef9846d5980d8b05da7c1d2254677dc5",
+      "sourceReferences": [
+        "HKAPI-123"
+      ]
+    },
+    "hospital-hadata-service-ambulatory-community": {
+      "elapsedMs": 472,
+      "errorCode": null,
+      "finalHost": "data.gov.hk",
+      "httpStatus": 200,
+      "mediaType": "application/json",
+      "outcome": "success",
+      "parsedRecordCount": 1,
+      "responseBytes": 77694,
+      "responseSha256": "f20c89ca6e4833e5f0514a34880232026fc6564e48f6ae189335d4d7c0bf0eef",
+      "schemaFingerprint": "e806b64debb035728990db90e2f4c4b6ef9846d5980d8b05da7c1d2254677dc5",
+      "sourceReferences": [
+        "HKAPI-124"
+      ]
+    },
+    "hospital-hadata-service-ipdp": {
+      "elapsedMs": 353,
+      "errorCode": null,
+      "finalHost": "data.gov.hk",
+      "httpStatus": 200,
+      "mediaType": "application/json",
+      "outcome": "success",
+      "parsedRecordCount": 1,
+      "responseBytes": 45496,
+      "responseSha256": "b7eed24c67c1d20e2d29476a7a80ce9430edcc522a89740ce2d4b7d1e58d4cb8",
+      "schemaFingerprint": "e806b64debb035728990db90e2f4c4b6ef9846d5980d8b05da7c1d2254677dc5",
+      "sourceReferences": [
+        "HKAPI-125"
+      ]
+    },
+    "hospital-hadata-sop-waiting-time": {
+      "elapsedMs": 236,
+      "errorCode": null,
+      "finalHost": "data.gov.hk",
+      "httpStatus": 200,
+      "mediaType": "application/json",
+      "outcome": "success",
+      "parsedRecordCount": 1,
+      "responseBytes": 7041,
+      "responseSha256": "dfd360092b89237271eace9918825ff66d29705a4fedaf9cf68b9b64e414de35",
+      "schemaFingerprint": "e806b64debb035728990db90e2f4c4b6ef9846d5980d8b05da7c1d2254677dc5",
+      "sourceReferences": [
+        "HKAPI-121"
+      ]
+    },
+    "joie-tis_43-taxi-fleet-information-joie": {
+      "elapsedMs": 212,
+      "errorCode": null,
+      "finalHost": "data.gov.hk",
+      "httpStatus": 200,
+      "mediaType": "application/json",
+      "outcome": "success",
+      "parsedRecordCount": 1,
+      "responseBytes": 2369,
+      "responseSha256": "bcb7dcd88ccf751720e15d75a913ae5de4558f16cb1386ccfcac84904bbfc905",
+      "schemaFingerprint": "e806b64debb035728990db90e2f4c4b6ef9846d5980d8b05da7c1d2254677dc5",
+      "sourceReferences": [
+        "HKAPI-073"
+      ]
+    },
+    "llb-llbllp-liquor-licences": {
+      "elapsedMs": 211,
+      "errorCode": null,
+      "finalHost": "data.gov.hk",
+      "httpStatus": 200,
+      "mediaType": "application/json",
+      "outcome": "success",
+      "parsedRecordCount": 1,
+      "responseBytes": 4732,
+      "responseSha256": "12523c12efb40c15edb57dc3e44ab0c9c854bc6913135c586c9143cfc9c757bb",
+      "schemaFingerprint": "8ee86d3de382896df9c33851f1cad132072b04ced989bf95f3df93fdbbc6fc42",
+      "sourceReferences": [
+        "HKAPI-188"
+      ]
+    },
+    "nlb-bus-nlb-bus-service-v2": {
+      "elapsedMs": 191,
+      "errorCode": null,
+      "finalHost": "data.gov.hk",
+      "httpStatus": 200,
+      "mediaType": "application/json",
+      "outcome": "success",
+      "parsedRecordCount": 1,
+      "responseBytes": 4754,
+      "responseSha256": "cad3a556b09b4606914eab485cc9e5418c4a0bd8ef9ddd211c5a5206a11d0adf",
+      "schemaFingerprint": "d4aed0d0c51c176b464d6da30a934e35b23a788d1124c37c00465523c4513d67",
+      "sourceReferences": [
+        "HKAPI-030"
+      ]
+    },
+    "rehabsociety-access-accessibile-facilities": {
+      "elapsedMs": 266,
+      "errorCode": null,
+      "finalHost": "data.gov.hk",
+      "httpStatus": 200,
+      "mediaType": "application/json",
+      "outcome": "success",
+      "parsedRecordCount": 1,
+      "responseBytes": 4786,
+      "responseSha256": "01d2cc1f04ab17ecb6810b2e84492934d1613138d11def24a7551f2094062064",
+      "schemaFingerprint": "b132136385c0dfbe6b805119424a33b32785f026e831d95270d1a8b8e86cbe10",
+      "sourceReferences": [
+        "HKAPI-211"
+      ]
+    },
+    "starferry-starferry-ferry-service-timetables-and-fare-tables-of-star-ferry": {
+      "elapsedMs": 223,
+      "errorCode": null,
+      "finalHost": "data.gov.hk",
+      "httpStatus": 200,
+      "mediaType": "application/json",
+      "outcome": "success",
+      "parsedRecordCount": 1,
+      "responseBytes": 21255,
+      "responseSha256": "30bb30b9c777ed63ef5b85585e025b78cf22073166628860553770dfd48b86ac",
+      "schemaFingerprint": "499117790c4a17cf01ab69b2f0d812f12743047ee2d467d9bbf39afde5c61f37",
+      "sourceReferences": [
+        "HKAPI-045"
+      ]
+    },
+    "sunferry-eta-eta": {
+      "elapsedMs": 263,
+      "errorCode": null,
+      "finalHost": "data.gov.hk",
+      "httpStatus": 200,
+      "mediaType": "application/json",
+      "outcome": "success",
+      "parsedRecordCount": 1,
+      "responseBytes": 2538,
+      "responseSha256": "a5a179704c7a06a85b489be6fa95d815d7c7b703672a5c79037e059307c35846",
+      "schemaFingerprint": "e806b64debb035728990db90e2f4c4b6ef9846d5980d8b05da7c1d2254677dc5",
+      "sourceReferences": [
+        "HKAPI-044"
+      ]
+    },
+    "towngas-towngas-environment": {
+      "elapsedMs": 197,
+      "errorCode": null,
+      "finalHost": "data.gov.hk",
+      "httpStatus": 200,
+      "mediaType": "application/json",
+      "outcome": "success",
+      "parsedRecordCount": 1,
+      "responseBytes": 4025,
+      "responseSha256": "b08e63dc463bae48d2106f2011cdf2b161ed53e719db8f5fb4d0bc06cb8184e6",
+      "schemaFingerprint": "18c83d2d3cf062d47be3672b852b1a502a6be7ae09af6d1b3014856a257d188e",
+      "sourceReferences": [
+        "HKAPI-153"
+      ]
+    },
+    "tpd-tpb1-digital-planning-data-of-statutory-plans": {
+      "elapsedMs": 205,
+      "errorCode": null,
+      "finalHost": "data.gov.hk",
+      "httpStatus": 200,
+      "mediaType": "application/json",
+      "outcome": "success",
+      "parsedRecordCount": 1,
+      "responseBytes": 3487,
+      "responseSha256": "86a91208f12e60771557a6bb59daeecee763ce7297c78f22b795502af81599cb",
+      "schemaFingerprint": "8129cd2368de82d7b4dbe6429b842baff934b3bca9cd0df035f1e0b07269d4be",
+      "sourceReferences": [
+        "HKAPI-224"
+      ]
+    }
+  },
+  "failures": 0,
+  "provenance": "live-metadata-only",
+  "schemaVersion": 1,
+  "sourceCount": 190,
+  "sourceDatasetMappings": 356,
+  "sourceDirectory": "https://resource.data.one.gov.hk/opendata/open-data-list/open-data-dataset-list-en.json",
+  "successes": 350,
+  "uniqueDatasetIds": 350
+}

@@ -1,0 +1,15 @@
+{
+  "help": "synthetic fixture",
+  "success": true,
+  "result": {
+    "id": "dataset-one",
+    "title": "Dataset one",
+    "resources": [
+      {
+        "format": "JSON",
+        "name": "Current data",
+        "url": "https://example.gov.hk/data.json"
+      }
+    ]
+  }
+}

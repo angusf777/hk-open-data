@@ -66,6 +66,8 @@ def _status_document(index: dict[str, object]) -> str:
         raise RecipeGenerationError("generated access coverage lacks status counts")
 
     outcomes = {"success": 0, "failure": 0}
+    executable = 0
+    resource_indexes = 0
     rows: list[str] = []
     for value in public_recipes:
         if not isinstance(value, dict):
@@ -83,6 +85,10 @@ def _status_document(index: dict[str, object]) -> str:
         documentation = value.get("documentationUrl")
         if not all(isinstance(item, str) for item in (reference, status, adapter, documentation)):
             raise RecipeGenerationError("generated access recipe lacks public status fields")
+        if value.get("request") is not None:
+            executable += 1
+        if adapter == "data-gov-resource-index":
+            resource_indexes += 1
         rows.append(
             f"| {reference} | {status} | {adapter} | {outcome} | "
             f"[Official source]({documentation}) |"
@@ -100,6 +106,9 @@ def _status_document(index: dict[str, object]) -> str:
         ),
         "",
         f'- Total official sources: {coverage.get("totalOfficial", 0)}',
+        f"- Executable recipes: {executable}",
+        f"- DATA.GOV.HK resource-index recipes: {resource_indexes}",
+        f"- Direct-response executable recipes: {executable - resource_indexes}",
         f"- Live verification attempts recorded: {attempts}",
         f'- Successful live verification records: {outcomes["success"]}',
         f'- Failed live verification records: {outcomes["failure"]}',

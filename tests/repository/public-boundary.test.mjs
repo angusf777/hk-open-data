@@ -55,7 +55,7 @@ test("published source verification files contain approved metadata only", async
     "validUntil",
   ]);
   const files = (await readdir(root)).filter((name) => name.endsWith(".json"));
-  assert.equal(files.length, 37);
+  assert.equal(files.length, 227);
   for (const file of files) {
     const value = JSON.parse(await readFile(path.join(root, file), "utf8"));
     assert.deepEqual(

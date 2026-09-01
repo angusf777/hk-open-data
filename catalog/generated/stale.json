@@ -1,4 +1,14 @@
 {
-  "resources": [],
+  "resources": [
+    "external:ext-075",
+    "external:ext-084",
+    "external:ext-087",
+    "external:ext-099",
+    "external:ext-144",
+    "mcp:mcp-007",
+    "mcp:mcp-045",
+    "mcp:mcp-054",
+    "mcp:mcp-073"
+  ],
   "schemaVersion": 1
 }

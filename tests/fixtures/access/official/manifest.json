@@ -169,6 +169,26 @@
     "responseSha256": "79237e3ce318d66c2c7e07a0b03377c3b02f4b5509111935509d06008237b170",
     "sourceReference": "HKAPI-029"
   },
+  "HKAPI-030": {
+    "documentationUrl": "https://data.gov.hk/en-data/dataset/nlb-bus-nlb-bus-service-v2",
+    "mediaType": "application/json",
+    "provenance": "synthetic-authored",
+    "recipeSha256": "906df50fab8167b95d818ab0176f5060d3b6b9146ba13b834e5620bbb8342bec",
+    "requestFixture": "hkapi-030/request.json",
+    "responseFixture": "hkapi-030/response.json",
+    "responseSha256": "c7ab2dae9bc76e759d0db4ff5ae900da3101110ab9a41f60ac6a5a53f08c9d86",
+    "sourceReference": "HKAPI-030"
+  },
+  "HKAPI-031": {
+    "documentationUrl": "https://data.gov.hk/en-data/dataset/hk-dpo-datagovhk1-transport-bus-route-list-and-eta-spcific-bus-stop",
+    "mediaType": "application/json",
+    "provenance": "synthetic-authored",
+    "recipeSha256": "5c752743706c22ecd2b4c643049c97afc3f7798e104c4f80880172225f47325c",
+    "requestFixture": "hkapi-031/request.json",
+    "responseFixture": "hkapi-031/response.json",
+    "responseSha256": "c7ab2dae9bc76e759d0db4ff5ae900da3101110ab9a41f60ac6a5a53f08c9d86",
+    "sourceReference": "HKAPI-031"
+  },
   "HKAPI-032": {
     "documentationUrl": "https://data.gov.hk/en-data/dataset/mtr-data2-nexttrain-data/resource/103472ed-01be-4dda-92c6-30530dee022f",
     "mediaType": "application/json",
@@ -199,6 +219,116 @@
     "responseSha256": "43345749e12137a558e21dd06fe750968428837a36851032488b955440caa2e6",
     "sourceReference": "HKAPI-034"
   },
+  "HKAPI-036": {
+    "documentationUrl": "https://data.gov.hk/en-data/dataset/hktramways-hktramways-tram-stops",
+    "mediaType": "application/json",
+    "provenance": "synthetic-authored",
+    "recipeSha256": "b60adc85bc014dab1628ccc7dd2ae6e6860930cf96a170edc049242248a1cfa7",
+    "requestFixture": "hkapi-036/request.json",
+    "responseFixture": "hkapi-036/response.json",
+    "responseSha256": "c7ab2dae9bc76e759d0db4ff5ae900da3101110ab9a41f60ac6a5a53f08c9d86",
+    "sourceReference": "HKAPI-036"
+  },
+  "HKAPI-037": {
+    "documentationUrl": "https://data.gov.hk/en-data/dataset/hk-td-tis_11-pt-headway-en",
+    "mediaType": "application/json",
+    "provenance": "synthetic-authored",
+    "recipeSha256": "56c99647610346aeabca71d2c9980c8d5c0299720b96a87357124e151537cba0",
+    "requestFixture": "hkapi-037/request.json",
+    "responseFixture": "hkapi-037/response.json",
+    "responseSha256": "c7ab2dae9bc76e759d0db4ff5ae900da3101110ab9a41f60ac6a5a53f08c9d86",
+    "sourceReference": "HKAPI-037"
+  },
+  "HKAPI-038": {
+    "documentationUrl": "https://data.gov.hk/en-data/dataset/hk-td-tis_3-routes-and-fares-of-public-transport",
+    "mediaType": "application/json",
+    "provenance": "synthetic-authored",
+    "recipeSha256": "94596ab66efbd646977b3542eecd6b196b7cde735a137303c90b4434d5c1b270",
+    "requestFixture": "hkapi-038/request.json",
+    "responseFixture": "hkapi-038/response.json",
+    "responseSha256": "c7ab2dae9bc76e759d0db4ff5ae900da3101110ab9a41f60ac6a5a53f08c9d86",
+    "sourceReference": "HKAPI-038"
+  },
+  "HKAPI-039": {
+    "documentationUrl": "https://data.gov.hk/en-data/dataset/hk-td-tis_23-routes-fares-geojson",
+    "mediaType": "application/json",
+    "provenance": "synthetic-authored",
+    "recipeSha256": "40151db52a62af536480d1fca928b1233d4202f8779a82b21bfcf8eb682bf295",
+    "requestFixture": "hkapi-039/request.json",
+    "responseFixture": "hkapi-039/response.json",
+    "responseSha256": "c7ab2dae9bc76e759d0db4ff5ae900da3101110ab9a41f60ac6a5a53f08c9d86",
+    "sourceReference": "HKAPI-039"
+  },
+  "HKAPI-040": {
+    "documentationUrl": "https://data.gov.hk/en-data/dataset/hk-td-tis_15-road-network-v2",
+    "mediaType": "application/json",
+    "provenance": "synthetic-authored",
+    "recipeSha256": "52eb0f93703713aa6b099fcffb0686eac4aa38c8744ea50ff63a6c9afae0466f",
+    "requestFixture": "hkapi-040/request.json",
+    "responseFixture": "hkapi-040/response.json",
+    "responseSha256": "c7ab2dae9bc76e759d0db4ff5ae900da3101110ab9a41f60ac6a5a53f08c9d86",
+    "sourceReference": "HKAPI-040"
+  },
+  "HKAPI-041": {
+    "documentationUrl": "https://data.gov.hk/en-data/dataset/hkkf-hkkfdata-hkkf-eta-data",
+    "mediaType": "application/json",
+    "provenance": "synthetic-authored",
+    "recipeSha256": "b5d99eac03e3e2d86652457505a18379f826404d627fc296c01fb4ab0bfa4114",
+    "requestFixture": "hkapi-041/request.json",
+    "responseFixture": "hkapi-041/response.json",
+    "responseSha256": "c7ab2dae9bc76e759d0db4ff5ae900da3101110ab9a41f60ac6a5a53f08c9d86",
+    "sourceReference": "HKAPI-041"
+  },
+  "HKAPI-042": {
+    "documentationUrl": "https://data.gov.hk/en-data/dataset/ff-fortune-schedule2",
+    "mediaType": "application/json",
+    "provenance": "synthetic-authored",
+    "recipeSha256": "3b9561e884f76e6cfeb8644e275cc51302551210c7e9cec0293a2e92265616c8",
+    "requestFixture": "hkapi-042/request.json",
+    "responseFixture": "hkapi-042/response.json",
+    "responseSha256": "c7ab2dae9bc76e759d0db4ff5ae900da3101110ab9a41f60ac6a5a53f08c9d86",
+    "sourceReference": "HKAPI-042"
+  },
+  "HKAPI-043": {
+    "documentationUrl": "https://data.gov.hk/en-data/dataset/ff-watertaxi-schedule2",
+    "mediaType": "application/json",
+    "provenance": "synthetic-authored",
+    "recipeSha256": "e37a8f545f5de3ce791b4c80904a75d2b1ceddf22f16f5503ce78d4a467dde17",
+    "requestFixture": "hkapi-043/request.json",
+    "responseFixture": "hkapi-043/response.json",
+    "responseSha256": "c7ab2dae9bc76e759d0db4ff5ae900da3101110ab9a41f60ac6a5a53f08c9d86",
+    "sourceReference": "HKAPI-043"
+  },
+  "HKAPI-044": {
+    "documentationUrl": "https://data.gov.hk/en-data/dataset/sunferry-eta-eta",
+    "mediaType": "application/json",
+    "provenance": "synthetic-authored",
+    "recipeSha256": "d485880f2466e66c306632ae7de58c1dc93fd9a502d4d926987a3aed47276831",
+    "requestFixture": "hkapi-044/request.json",
+    "responseFixture": "hkapi-044/response.json",
+    "responseSha256": "c7ab2dae9bc76e759d0db4ff5ae900da3101110ab9a41f60ac6a5a53f08c9d86",
+    "sourceReference": "HKAPI-044"
+  },
+  "HKAPI-045": {
+    "documentationUrl": "https://data.gov.hk/en-data/dataset/starferry-starferry-ferry-service-timetables-and-fare-tables-of-star-ferry",
+    "mediaType": "application/json",
+    "provenance": "synthetic-authored",
+    "recipeSha256": "dd072f22550becd7cd50c3ad8c6d22f57ae6c9fd130163ff2cca01756279932c",
+    "requestFixture": "hkapi-045/request.json",
+    "responseFixture": "hkapi-045/response.json",
+    "responseSha256": "c7ab2dae9bc76e759d0db4ff5ae900da3101110ab9a41f60ac6a5a53f08c9d86",
+    "sourceReference": "HKAPI-045"
+  },
+  "HKAPI-046": {
+    "documentationUrl": "https://data.gov.hk/en-data/dataset/hk-td-wcms_8-ferry-services-tt-ft",
+    "mediaType": "application/json",
+    "provenance": "synthetic-authored",
+    "recipeSha256": "c38a473ebdf7af7283daf498169af6d136618a6f4c3fccc5b5683e1d5c7b6f83",
+    "requestFixture": "hkapi-046/request.json",
+    "responseFixture": "hkapi-046/response.json",
+    "responseSha256": "c7ab2dae9bc76e759d0db4ff5ae900da3101110ab9a41f60ac6a5a53f08c9d86",
+    "sourceReference": "HKAPI-046"
+  },
   "HKAPI-047": {
     "documentationUrl": "https://data.gov.hk/en-data/dataset/hk-dpo-datagovhk1-carpark-info-vacancy/resource/01752c62-a6b6-4ddc-bf2d-25efccadc143",
     "mediaType": "application/json",
@@ -228,6 +358,346 @@
     "responseFixture": "hkapi-049/response.json",
     "responseSha256": "b59c43edd20c8deb71a01d5ae6a3f9546445d6762662e1e50ee0f16d44f473ff",
     "sourceReference": "HKAPI-049"
+  },
+  "HKAPI-052": {
+    "documentationUrl": "https://data.gov.hk/en-data/dataset/hk-td-msd_1-metered-parking-spaces-data",
+    "mediaType": "application/json",
+    "provenance": "synthetic-authored",
+    "recipeSha256": "a20f29f08526475c05fabdf499c990f32e72a5ba575a061aa279436ea2562350",
+    "requestFixture": "hkapi-052/request.json",
+    "responseFixture": "hkapi-052/response.json",
+    "responseSha256": "c7ab2dae9bc76e759d0db4ff5ae900da3101110ab9a41f60ac6a5a53f08c9d86",
+    "sourceReference": "HKAPI-052"
+  },
+  "HKAPI-053": {
+    "documentationUrl": "https://data.gov.hk/en-data/dataset/hk-td-msd_2-non-metered-parking-spaces-data",
+    "mediaType": "application/json",
+    "provenance": "synthetic-authored",
+    "recipeSha256": "310b482b976c04a5c53ce7605694f179739d1593458f841cfffffc7f8c06bc17",
+    "requestFixture": "hkapi-053/request.json",
+    "responseFixture": "hkapi-053/response.json",
+    "responseSha256": "c7ab2dae9bc76e759d0db4ff5ae900da3101110ab9a41f60ac6a5a53f08c9d86",
+    "sourceReference": "HKAPI-053"
+  },
+  "HKAPI-054": {
+    "documentationUrl": "https://data.gov.hk/en-data/dataset/hkstp-hkstp-hkstp-carpark-vacancy",
+    "mediaType": "application/json",
+    "provenance": "synthetic-authored",
+    "recipeSha256": "fba8afe9cbcb386af32431d4ad84fcacfdc6f7587ff748fc4965a2c55cc8ae47",
+    "requestFixture": "hkapi-054/request.json",
+    "responseFixture": "hkapi-054/response.json",
+    "responseSha256": "c7ab2dae9bc76e759d0db4ff5ae900da3101110ab9a41f60ac6a5a53f08c9d86",
+    "sourceReference": "HKAPI-054"
+  },
+  "HKAPI-055": {
+    "documentationUrl": "https://data.gov.hk/en-data/dataset/hk-epd-evcpateam-evc-1",
+    "mediaType": "application/json",
+    "provenance": "synthetic-authored",
+    "recipeSha256": "3074e9e300434b625ce6ee2d83322ece6b7acfe3fedd626d193c0bfae8ed3cdf",
+    "requestFixture": "hkapi-055/request.json",
+    "responseFixture": "hkapi-055/response.json",
+    "responseSha256": "c7ab2dae9bc76e759d0db4ff5ae900da3101110ab9a41f60ac6a5a53f08c9d86",
+    "sourceReference": "HKAPI-055"
+  },
+  "HKAPI-056": {
+    "documentationUrl": "https://data.gov.hk/en-data/dataset/clp-team1-electric-vehicle-charging-stations",
+    "mediaType": "application/json",
+    "provenance": "synthetic-authored",
+    "recipeSha256": "fd32bfc813fa291c8bae900d5ec6f265959e8f5dd8bfe0af1bdfe33d471a349b",
+    "requestFixture": "hkapi-056/request.json",
+    "responseFixture": "hkapi-056/response.json",
+    "responseSha256": "c7ab2dae9bc76e759d0db4ff5ae900da3101110ab9a41f60ac6a5a53f08c9d86",
+    "sourceReference": "HKAPI-056"
+  },
+  "HKAPI-057": {
+    "documentationUrl": "https://data.gov.hk/en-data/dataset/hk-td-tis_19-special-traffic-news-v2",
+    "mediaType": "application/json",
+    "provenance": "synthetic-authored",
+    "recipeSha256": "94ecad00450a7819fd24d4ae3a6233663a4782f153ad1710072338d0f4bb5110",
+    "requestFixture": "hkapi-057/request.json",
+    "responseFixture": "hkapi-057/response.json",
+    "responseSha256": "c7ab2dae9bc76e759d0db4ff5ae900da3101110ab9a41f60ac6a5a53f08c9d86",
+    "sourceReference": "HKAPI-057"
+  },
+  "HKAPI-058": {
+    "documentationUrl": "https://data.gov.hk/en-data/dataset/hk-td-tis_22-traffic-notices",
+    "mediaType": "application/json",
+    "provenance": "synthetic-authored",
+    "recipeSha256": "7fc5be3583f0d773e02c450ba6d92db225e27be68772599e5eecc23b14c2c1b0",
+    "requestFixture": "hkapi-058/request.json",
+    "responseFixture": "hkapi-058/response.json",
+    "responseSha256": "c7ab2dae9bc76e759d0db4ff5ae900da3101110ab9a41f60ac6a5a53f08c9d86",
+    "sourceReference": "HKAPI-058"
+  },
+  "HKAPI-059": {
+    "documentationUrl": "https://data.gov.hk/en-data/dataset/hk-td-tis_18-roadworks-location",
+    "mediaType": "application/json",
+    "provenance": "synthetic-authored",
+    "recipeSha256": "88ac4b136e85dd7cc38a62f95cfcf98819629a341cd985193df09244b499b376",
+    "requestFixture": "hkapi-059/request.json",
+    "responseFixture": "hkapi-059/response.json",
+    "responseSha256": "c7ab2dae9bc76e759d0db4ff5ae900da3101110ab9a41f60ac6a5a53f08c9d86",
+    "sourceReference": "HKAPI-059"
+  },
+  "HKAPI-060": {
+    "documentationUrl": "https://data.gov.hk/en-data/dataset/hk-td-tis_2-traffic-snapshot-images",
+    "mediaType": "application/json",
+    "provenance": "synthetic-authored",
+    "recipeSha256": "51d14afe1e0ef115c93abe23b0020aa3547c14ba796464e38441c2e6446b4430",
+    "requestFixture": "hkapi-060/request.json",
+    "responseFixture": "hkapi-060/response.json",
+    "responseSha256": "c7ab2dae9bc76e759d0db4ff5ae900da3101110ab9a41f60ac6a5a53f08c9d86",
+    "sourceReference": "HKAPI-060"
+  },
+  "HKAPI-061": {
+    "documentationUrl": "https://data.gov.hk/en-data/dataset/hk-td-tis_2-traffic-snapshot-images",
+    "mediaType": "application/json",
+    "provenance": "synthetic-authored",
+    "recipeSha256": "1e7a32576b19e0182f487824bf8dcecfa3927d055b0497cdea7cd0eff1cdfac5",
+    "requestFixture": "hkapi-061/request.json",
+    "responseFixture": "hkapi-061/response.json",
+    "responseSha256": "c7ab2dae9bc76e759d0db4ff5ae900da3101110ab9a41f60ac6a5a53f08c9d86",
+    "sourceReference": "HKAPI-061"
+  },
+  "HKAPI-062": {
+    "documentationUrl": "https://data.gov.hk/en-data/dataset/hk-td-tis_28-traffic-data-tdas",
+    "mediaType": "application/json",
+    "provenance": "synthetic-authored",
+    "recipeSha256": "f3728a18d7bf61c063dcc007eca05e9bb25283d245e80f03c2283162bfab7279",
+    "requestFixture": "hkapi-062/request.json",
+    "responseFixture": "hkapi-062/response.json",
+    "responseSha256": "c7ab2dae9bc76e759d0db4ff5ae900da3101110ab9a41f60ac6a5a53f08c9d86",
+    "sourceReference": "HKAPI-062"
+  },
+  "HKAPI-063": {
+    "documentationUrl": "https://data.gov.hk/en-data/dataset/hk-td-sm_4-traffic-data-strategic-major-roads",
+    "mediaType": "application/json",
+    "provenance": "synthetic-authored",
+    "recipeSha256": "67d68cf90953f6765ad0154f894e988f28dc78f677b842a89cb1b654879c6ffc",
+    "requestFixture": "hkapi-063/request.json",
+    "responseFixture": "hkapi-063/response.json",
+    "responseSha256": "c7ab2dae9bc76e759d0db4ff5ae900da3101110ab9a41f60ac6a5a53f08c9d86",
+    "sourceReference": "HKAPI-063"
+  },
+  "HKAPI-064": {
+    "documentationUrl": "https://data.gov.hk/en-data/dataset/hk-td-tis_33-traffic-data-traffic-detectors-installed-at-smart-lampposts",
+    "mediaType": "application/json",
+    "provenance": "synthetic-authored",
+    "recipeSha256": "642a4d9682fae3761f4dcfac5bf610d5d3fbd56aee4caed732b336fec01460cf",
+    "requestFixture": "hkapi-064/request.json",
+    "responseFixture": "hkapi-064/response.json",
+    "responseSha256": "c7ab2dae9bc76e759d0db4ff5ae900da3101110ab9a41f60ac6a5a53f08c9d86",
+    "sourceReference": "HKAPI-064"
+  },
+  "HKAPI-065": {
+    "documentationUrl": "https://data.gov.hk/en-data/dataset/hk-td-sm_8-journey-time-indicators-v2",
+    "mediaType": "application/json",
+    "provenance": "synthetic-authored",
+    "recipeSha256": "10e75bb37fbfdf22eee43ec136a2afd67647b30af8f2d5c9e498686339c48a88",
+    "requestFixture": "hkapi-065/request.json",
+    "responseFixture": "hkapi-065/response.json",
+    "responseSha256": "c7ab2dae9bc76e759d0db4ff5ae900da3101110ab9a41f60ac6a5a53f08c9d86",
+    "sourceReference": "HKAPI-065"
+  },
+  "HKAPI-066": {
+    "documentationUrl": "https://data.gov.hk/en-data/dataset/hk-td-sm_1-traffic-speed-map",
+    "mediaType": "application/json",
+    "provenance": "synthetic-authored",
+    "recipeSha256": "e0d0289373d6bb280b8028caa6268f32a7422266c8cfb73d70c1581d35d63d5a",
+    "requestFixture": "hkapi-066/request.json",
+    "responseFixture": "hkapi-066/response.json",
+    "responseSha256": "c7ab2dae9bc76e759d0db4ff5ae900da3101110ab9a41f60ac6a5a53f08c9d86",
+    "sourceReference": "HKAPI-066"
+  },
+  "HKAPI-067": {
+    "documentationUrl": "https://data.gov.hk/en-data/dataset/hk-td-tis_7-traffic-flow-census",
+    "mediaType": "application/json",
+    "provenance": "synthetic-authored",
+    "recipeSha256": "2c9e5c21f4b1b27f59248f4ff703652d1f890f30f74d5f5c369275a1da58d3dd",
+    "requestFixture": "hkapi-067/request.json",
+    "responseFixture": "hkapi-067/response.json",
+    "responseSha256": "c7ab2dae9bc76e759d0db4ff5ae900da3101110ab9a41f60ac6a5a53f08c9d86",
+    "sourceReference": "HKAPI-067"
+  },
+  "HKAPI-068": {
+    "documentationUrl": "https://data.gov.hk/en-data/dataset/hk-td-tis_7-traffic-flow-census",
+    "mediaType": "application/json",
+    "provenance": "synthetic-authored",
+    "recipeSha256": "7a91cd61a895c9b0816d580750fca9d4e9f0c3b5a5f1e917b53a6c2d633ea8cb",
+    "requestFixture": "hkapi-068/request.json",
+    "responseFixture": "hkapi-068/response.json",
+    "responseSha256": "c7ab2dae9bc76e759d0db4ff5ae900da3101110ab9a41f60ac6a5a53f08c9d86",
+    "sourceReference": "HKAPI-068"
+  },
+  "HKAPI-069": {
+    "documentationUrl": "https://data.gov.hk/en-data/dataset/hk-td-tis_25-junctions-with-rlc",
+    "mediaType": "application/json",
+    "provenance": "synthetic-authored",
+    "recipeSha256": "1f4629296b557d47b43fbb2f808851f77fe2017153886e9a9d3cc49a16432070",
+    "requestFixture": "hkapi-069/request.json",
+    "responseFixture": "hkapi-069/response.json",
+    "responseSha256": "c7ab2dae9bc76e759d0db4ff5ae900da3101110ab9a41f60ac6a5a53f08c9d86",
+    "sourceReference": "HKAPI-069"
+  },
+  "HKAPI-070": {
+    "documentationUrl": "https://data.gov.hk/en-data/dataset/hk-td-tis_32-traffic-data-aivas",
+    "mediaType": "application/json",
+    "provenance": "synthetic-authored",
+    "recipeSha256": "0bb886ec611cc287acccc14035841d6b4f2661980007d7121c529cc9dd5a5d54",
+    "requestFixture": "hkapi-070/request.json",
+    "responseFixture": "hkapi-070/response.json",
+    "responseSha256": "c7ab2dae9bc76e759d0db4ff5ae900da3101110ab9a41f60ac6a5a53f08c9d86",
+    "sourceReference": "HKAPI-070"
+  },
+  "HKAPI-071": {
+    "documentationUrl": "https://data.gov.hk/en-data/dataset/amigo-tis_41-taxi-fleet-information-amigo",
+    "mediaType": "application/json",
+    "provenance": "synthetic-authored",
+    "recipeSha256": "48dfa9c2e6cd10002e0411e7289f38812af984f09602d14f1579ab6ce0a62548",
+    "requestFixture": "hkapi-071/request.json",
+    "responseFixture": "hkapi-071/response.json",
+    "responseSha256": "c7ab2dae9bc76e759d0db4ff5ae900da3101110ab9a41f60ac6a5a53f08c9d86",
+    "sourceReference": "HKAPI-071"
+  },
+  "HKAPI-072": {
+    "documentationUrl": "https://data.gov.hk/en-data/dataset/big-boss-taxi-tis_42-taxi-fleet-information-bbt",
+    "mediaType": "application/json",
+    "provenance": "synthetic-authored",
+    "recipeSha256": "745df18030465bdefd8e462cfabec63186e2e74fb84591db75d989860dd6318e",
+    "requestFixture": "hkapi-072/request.json",
+    "responseFixture": "hkapi-072/response.json",
+    "responseSha256": "c7ab2dae9bc76e759d0db4ff5ae900da3101110ab9a41f60ac6a5a53f08c9d86",
+    "sourceReference": "HKAPI-072"
+  },
+  "HKAPI-073": {
+    "documentationUrl": "https://data.gov.hk/en-data/dataset/joie-tis_43-taxi-fleet-information-joie",
+    "mediaType": "application/json",
+    "provenance": "synthetic-authored",
+    "recipeSha256": "0633c2f86a0e3b42cbc4cf34a59ba8107d6f70bc8ea48bd8f4f2d8a3066d75b0",
+    "requestFixture": "hkapi-073/request.json",
+    "responseFixture": "hkapi-073/response.json",
+    "responseSha256": "c7ab2dae9bc76e759d0db4ff5ae900da3101110ab9a41f60ac6a5a53f08c9d86",
+    "sourceReference": "HKAPI-073"
+  },
+  "HKAPI-074": {
+    "documentationUrl": "https://data.gov.hk/en-data/dataset/hk-td-tis_39-fleet-taxi-stopping-places",
+    "mediaType": "application/json",
+    "provenance": "synthetic-authored",
+    "recipeSha256": "42940e795142082fb589b90abe24c674965b1ead8fbeb8c80206c76b7fb69dca",
+    "requestFixture": "hkapi-074/request.json",
+    "responseFixture": "hkapi-074/response.json",
+    "responseSha256": "c7ab2dae9bc76e759d0db4ff5ae900da3101110ab9a41f60ac6a5a53f08c9d86",
+    "sourceReference": "HKAPI-074"
+  },
+  "HKAPI-075": {
+    "documentationUrl": "https://data.gov.hk/en-data/dataset/hk-td-tis_38-taxi-pick-up-drop-off-points",
+    "mediaType": "application/json",
+    "provenance": "synthetic-authored",
+    "recipeSha256": "5b4e967a24b9215cd1f686917d21610e2d5bd18e50a3aa1deb0896359ffe330b",
+    "requestFixture": "hkapi-075/request.json",
+    "responseFixture": "hkapi-075/response.json",
+    "responseSha256": "c7ab2dae9bc76e759d0db4ff5ae900da3101110ab9a41f60ac6a5a53f08c9d86",
+    "sourceReference": "HKAPI-075"
+  },
+  "HKAPI-076": {
+    "documentationUrl": "https://data.gov.hk/en-data/dataset/aahk-team1-flight-info",
+    "mediaType": "application/json",
+    "provenance": "synthetic-authored",
+    "recipeSha256": "1a0206883028eae7e32f593beb7743948aa50e1219f94351af3b09f3f906d088",
+    "requestFixture": "hkapi-076/request.json",
+    "responseFixture": "hkapi-076/response.json",
+    "responseSha256": "c7ab2dae9bc76e759d0db4ff5ae900da3101110ab9a41f60ac6a5a53f08c9d86",
+    "sourceReference": "HKAPI-076"
+  },
+  "HKAPI-077": {
+    "documentationUrl": "https://data.gov.hk/en-data/dataset/hk-immd-set28-land-boundary-control-points-waiting-time",
+    "mediaType": "application/json",
+    "provenance": "synthetic-authored",
+    "recipeSha256": "6fc6b536ad6ec36c06620a5b5b29999a0e1a489320662d727d3fcdb91c217a56",
+    "requestFixture": "hkapi-077/request.json",
+    "responseFixture": "hkapi-077/response.json",
+    "responseSha256": "c7ab2dae9bc76e759d0db4ff5ae900da3101110ab9a41f60ac6a5a53f08c9d86",
+    "sourceReference": "HKAPI-077"
+  },
+  "HKAPI-078": {
+    "documentationUrl": "https://data.gov.hk/en-data/dataset/hk-immd-set5-statistics-daily-passenger-traffic",
+    "mediaType": "application/json",
+    "provenance": "synthetic-authored",
+    "recipeSha256": "3a5629351f982b271ccce58cf2f31421936ac3f5acd16bcfb69babefe585b204",
+    "requestFixture": "hkapi-078/request.json",
+    "responseFixture": "hkapi-078/response.json",
+    "responseSha256": "c7ab2dae9bc76e759d0db4ff5ae900da3101110ab9a41f60ac6a5a53f08c9d86",
+    "sourceReference": "HKAPI-078"
+  },
+  "HKAPI-079": {
+    "documentationUrl": "https://data.gov.hk/en-data/dataset/hk-immd-set9-immdcp",
+    "mediaType": "application/json",
+    "provenance": "synthetic-authored",
+    "recipeSha256": "6c47f72e21ea900f61ca570fb7b24501bec0802dde51fbd13ef8041457d5f8d1",
+    "requestFixture": "hkapi-079/request.json",
+    "responseFixture": "hkapi-079/response.json",
+    "responseSha256": "c7ab2dae9bc76e759d0db4ff5ae900da3101110ab9a41f60ac6a5a53f08c9d86",
+    "sourceReference": "HKAPI-079"
+  },
+  "HKAPI-080": {
+    "documentationUrl": "https://data.gov.hk/en-data/dataset/hk-customs-ced_stat-vehicle-clearance",
+    "mediaType": "application/json",
+    "provenance": "synthetic-authored",
+    "recipeSha256": "09f1984a85b79c919f5ab99d9ded889eaa0bf964e79aa302f03232df882f1e94",
+    "requestFixture": "hkapi-080/request.json",
+    "responseFixture": "hkapi-080/response.json",
+    "responseSha256": "c7ab2dae9bc76e759d0db4ff5ae900da3101110ab9a41f60ac6a5a53f08c9d86",
+    "sourceReference": "HKAPI-080"
+  },
+  "HKAPI-081": {
+    "documentationUrl": "https://data.gov.hk/en-data/dataset/hk-md-mardep-vessel-arrivals-and-departures",
+    "mediaType": "application/json",
+    "provenance": "synthetic-authored",
+    "recipeSha256": "5d36b1a916daba26b4fb78ae03c5d09cc4859d983472f7b5ba01d57ec1325f77",
+    "requestFixture": "hkapi-081/request.json",
+    "responseFixture": "hkapi-081/response.json",
+    "responseSha256": "c7ab2dae9bc76e759d0db4ff5ae900da3101110ab9a41f60ac6a5a53f08c9d86",
+    "sourceReference": "HKAPI-081"
+  },
+  "HKAPI-082": {
+    "documentationUrl": "https://data.gov.hk/en-data/dataset/hk-md-mardep-non-convention-vessel-arrivals-and-departures",
+    "mediaType": "application/json",
+    "provenance": "synthetic-authored",
+    "recipeSha256": "f5c7c2b5098728fe9c13eac68a7314ef39783ce443b21a9365b0e9625a10ceda",
+    "requestFixture": "hkapi-082/request.json",
+    "responseFixture": "hkapi-082/response.json",
+    "responseSha256": "c7ab2dae9bc76e759d0db4ff5ae900da3101110ab9a41f60ac6a5a53f08c9d86",
+    "sourceReference": "HKAPI-082"
+  },
+  "HKAPI-083": {
+    "documentationUrl": "https://data.gov.hk/en-data/dataset/hk-md-mardep-vessel-traffic-management-system-report",
+    "mediaType": "application/json",
+    "provenance": "synthetic-authored",
+    "recipeSha256": "e8f306ba44a22b143970e41ec9788dcdd57f1ea2d73a029a2288398cbe316fcf",
+    "requestFixture": "hkapi-083/request.json",
+    "responseFixture": "hkapi-083/response.json",
+    "responseSha256": "c7ab2dae9bc76e759d0db4ff5ae900da3101110ab9a41f60ac6a5a53f08c9d86",
+    "sourceReference": "HKAPI-083"
+  },
+  "HKAPI-084": {
+    "documentationUrl": "https://data.gov.hk/en-data/dataset/hk-md-mardep-pcwa-berth-vacancy",
+    "mediaType": "application/json",
+    "provenance": "synthetic-authored",
+    "recipeSha256": "66e8c1a6fade2f74a22453d799e8e543d537a4b16ca860188c7433bd7d2a8cf8",
+    "requestFixture": "hkapi-084/request.json",
+    "responseFixture": "hkapi-084/response.json",
+    "responseSha256": "c7ab2dae9bc76e759d0db4ff5ae900da3101110ab9a41f60ac6a5a53f08c9d86",
+    "sourceReference": "HKAPI-084"
+  },
+  "HKAPI-085": {
+    "documentationUrl": "https://data.gov.hk/en-data/dataset/hk-md-mardep-crossboundaryferryservices-arrive",
+    "mediaType": "application/json",
+    "provenance": "synthetic-authored",
+    "recipeSha256": "201620af3d574bb8efb88dacf765bf3164c6fa2e3b9727259cac78c70e4f426c",
+    "requestFixture": "hkapi-085/request.json",
+    "responseFixture": "hkapi-085/response.json",
+    "responseSha256": "c7ab2dae9bc76e759d0db4ff5ae900da3101110ab9a41f60ac6a5a53f08c9d86",
+    "sourceReference": "HKAPI-085"
   },
   "HKAPI-086": {
     "documentationUrl": "https://data.weather.gov.hk/weatherAPI/doc/HKO_Open_Data_API_Documentation.pdf",
@@ -299,6 +769,536 @@
     "responseSha256": "5a9aca96a81fe5fd1d7440208390f064717354c18286f3e8487cca885ccc4467",
     "sourceReference": "HKAPI-092"
   },
+  "HKAPI-101": {
+    "documentationUrl": "https://data.gov.hk/en-data/dataset/hk-epd-airteam-current-aqhi-of-individual-air-quality-monitoring-stations",
+    "mediaType": "application/json",
+    "provenance": "synthetic-authored",
+    "recipeSha256": "64d0979b4a7fd71433fe4035ca70a84fe6a82203e047db5dfe5ace9ae0f75883",
+    "requestFixture": "hkapi-101/request.json",
+    "responseFixture": "hkapi-101/response.json",
+    "responseSha256": "c7ab2dae9bc76e759d0db4ff5ae900da3101110ab9a41f60ac6a5a53f08c9d86",
+    "sourceReference": "HKAPI-101"
+  },
+  "HKAPI-102": {
+    "documentationUrl": "https://data.gov.hk/en-data/dataset/hk-epd-airteam-current-air-quality-health-index-range-and-forecast",
+    "mediaType": "application/json",
+    "provenance": "synthetic-authored",
+    "recipeSha256": "f3742ef40fd0f3c48a5b56f0d94b7ea9a99f2b4fa3879c5d8bc3661f9588c84e",
+    "requestFixture": "hkapi-102/request.json",
+    "responseFixture": "hkapi-102/response.json",
+    "responseSha256": "c7ab2dae9bc76e759d0db4ff5ae900da3101110ab9a41f60ac6a5a53f08c9d86",
+    "sourceReference": "HKAPI-102"
+  },
+  "HKAPI-103": {
+    "documentationUrl": "https://data.gov.hk/en-data/dataset/hk-epd-airteam-past24hr-pc-of-individual-air-quality-monitoring-stations",
+    "mediaType": "application/json",
+    "provenance": "synthetic-authored",
+    "recipeSha256": "1ba8b7e76fbcebf14ab2b4d91d7664af73bf276bcad942935b52041783b37721",
+    "requestFixture": "hkapi-103/request.json",
+    "responseFixture": "hkapi-103/response.json",
+    "responseSha256": "c7ab2dae9bc76e759d0db4ff5ae900da3101110ab9a41f60ac6a5a53f08c9d86",
+    "sourceReference": "HKAPI-103"
+  },
+  "HKAPI-104": {
+    "documentationUrl": "https://data.gov.hk/en-data/dataset/hk-epd-airteam-past24hr-aqhi-of-individual-air-quality-monitoring-stations",
+    "mediaType": "application/json",
+    "provenance": "synthetic-authored",
+    "recipeSha256": "9df835e9684099d9f39f57f697dd9db2c83d9b72482e06a7d1244e650783b8c3",
+    "requestFixture": "hkapi-104/request.json",
+    "responseFixture": "hkapi-104/response.json",
+    "responseSha256": "c7ab2dae9bc76e759d0db4ff5ae900da3101110ab9a41f60ac6a5a53f08c9d86",
+    "sourceReference": "HKAPI-104"
+  },
+  "HKAPI-105": {
+    "documentationUrl": "https://data.gov.hk/en-data/dataset/hk-epd-aqmnteam-air-quality-monitoring-network-of-hong-kong",
+    "mediaType": "application/json",
+    "provenance": "synthetic-authored",
+    "recipeSha256": "f31ddee5010dfe5a92122e0a58247c2a963d8d2e9e0155fd783d143b2c64fc6d",
+    "requestFixture": "hkapi-105/request.json",
+    "responseFixture": "hkapi-105/response.json",
+    "responseSha256": "c7ab2dae9bc76e759d0db4ff5ae900da3101110ab9a41f60ac6a5a53f08c9d86",
+    "sourceReference": "HKAPI-105"
+  },
+  "HKAPI-106": {
+    "documentationUrl": "https://data.gov.hk/en-data/dataset/hk-epd-asmteam-epd-path",
+    "mediaType": "application/json",
+    "provenance": "synthetic-authored",
+    "recipeSha256": "4c8f931a4d7e614524c9f96167c48919b702470937d62fd723861d85e28d6dca",
+    "requestFixture": "hkapi-106/request.json",
+    "responseFixture": "hkapi-106/response.json",
+    "responseSha256": "c7ab2dae9bc76e759d0db4ff5ae900da3101110ab9a41f60ac6a5a53f08c9d86",
+    "sourceReference": "HKAPI-106"
+  },
+  "HKAPI-107": {
+    "documentationUrl": "https://data.gov.hk/en-data/dataset/hk-epd-beachteam-beach-water-quality-grading",
+    "mediaType": "application/json",
+    "provenance": "synthetic-authored",
+    "recipeSha256": "b6d6438ea14d0d8efcfeab2f47010bfd22dea8da4bf911d20c908ec6ab0ef493",
+    "requestFixture": "hkapi-107/request.json",
+    "responseFixture": "hkapi-107/response.json",
+    "responseSha256": "c7ab2dae9bc76e759d0db4ff5ae900da3101110ab9a41f60ac6a5a53f08c9d86",
+    "sourceReference": "HKAPI-107"
+  },
+  "HKAPI-108": {
+    "documentationUrl": "https://data.gov.hk/en-data/dataset/hk-epd-beachteam-beach-historical-data-en",
+    "mediaType": "application/json",
+    "provenance": "synthetic-authored",
+    "recipeSha256": "4df9daee22dd87c4372190a7a614564ea77898ebc35da816bffc394777e4e07c",
+    "requestFixture": "hkapi-108/request.json",
+    "responseFixture": "hkapi-108/response.json",
+    "responseSha256": "c7ab2dae9bc76e759d0db4ff5ae900da3101110ab9a41f60ac6a5a53f08c9d86",
+    "sourceReference": "HKAPI-108"
+  },
+  "HKAPI-109": {
+    "documentationUrl": "https://data.gov.hk/en-data/dataset/hk-epd-marineteam-marine-water-quality-recent-data",
+    "mediaType": "application/json",
+    "provenance": "synthetic-authored",
+    "recipeSha256": "94a14ecf7b3fd9e135d4d6f8fc596ae843019a98cd362cfbdf9d5ec8f8fb46e5",
+    "requestFixture": "hkapi-109/request.json",
+    "responseFixture": "hkapi-109/response.json",
+    "responseSha256": "c7ab2dae9bc76e759d0db4ff5ae900da3101110ab9a41f60ac6a5a53f08c9d86",
+    "sourceReference": "HKAPI-109"
+  },
+  "HKAPI-110": {
+    "documentationUrl": "https://data.gov.hk/en-data/dataset/hk-epd-marineteam-marine-water-quality-historical-data-en",
+    "mediaType": "application/json",
+    "provenance": "synthetic-authored",
+    "recipeSha256": "a7ef01b8481c711a55a56e75b04a59b5f752dcf3571094a0a3b6c731ba709446",
+    "requestFixture": "hkapi-110/request.json",
+    "responseFixture": "hkapi-110/response.json",
+    "responseSha256": "c7ab2dae9bc76e759d0db4ff5ae900da3101110ab9a41f60ac6a5a53f08c9d86",
+    "sourceReference": "HKAPI-110"
+  },
+  "HKAPI-111": {
+    "documentationUrl": "https://data.gov.hk/en-data/dataset/hk-epd-riverteam-river-water-quality-recent-data",
+    "mediaType": "application/json",
+    "provenance": "synthetic-authored",
+    "recipeSha256": "d5c167f7e0756458701c33f8f89228d65b5a665f7c154d0d3ee2fdf773030a1c",
+    "requestFixture": "hkapi-111/request.json",
+    "responseFixture": "hkapi-111/response.json",
+    "responseSha256": "c7ab2dae9bc76e759d0db4ff5ae900da3101110ab9a41f60ac6a5a53f08c9d86",
+    "sourceReference": "HKAPI-111"
+  },
+  "HKAPI-112": {
+    "documentationUrl": "https://data.gov.hk/en-data/dataset/hk-epd-riverteam-river-water-quality-historical-data-en",
+    "mediaType": "application/json",
+    "provenance": "synthetic-authored",
+    "recipeSha256": "553747b26ad8b8ada9be10ceb338098e3fd368916351fd63838bec83f6bbad28",
+    "requestFixture": "hkapi-112/request.json",
+    "responseFixture": "hkapi-112/response.json",
+    "responseSha256": "c7ab2dae9bc76e759d0db4ff5ae900da3101110ab9a41f60ac6a5a53f08c9d86",
+    "sourceReference": "HKAPI-112"
+  },
+  "HKAPI-113": {
+    "documentationUrl": "https://data.gov.hk/en-data/dataset/hk-epd-angteam-2020-l10",
+    "mediaType": "application/json",
+    "provenance": "synthetic-authored",
+    "recipeSha256": "1703f3beaee7bba8e8626f59af6b81932943e3218f480f481bd6a7d47598874d",
+    "requestFixture": "hkapi-113/request.json",
+    "responseFixture": "hkapi-113/response.json",
+    "responseSha256": "c7ab2dae9bc76e759d0db4ff5ae900da3101110ab9a41f60ac6a5a53f08c9d86",
+    "sourceReference": "HKAPI-113"
+  },
+  "HKAPI-114": {
+    "documentationUrl": "https://data.gov.hk/en-data/dataset/hk-epd-climatechg-greenhouse-gas-emissions-and-carbon-intensity",
+    "mediaType": "application/json",
+    "provenance": "synthetic-authored",
+    "recipeSha256": "d73907e755e0b77b8c24f76e08318781dd695ec0f413799f56e5bbe6cd79da91",
+    "requestFixture": "hkapi-114/request.json",
+    "responseFixture": "hkapi-114/response.json",
+    "responseSha256": "c7ab2dae9bc76e759d0db4ff5ae900da3101110ab9a41f60ac6a5a53f08c9d86",
+    "sourceReference": "HKAPI-114"
+  },
+  "HKAPI-115": {
+    "documentationUrl": "https://data.gov.hk/en-data/dataset/hk-epd-tnteameiao-dir",
+    "mediaType": "application/json",
+    "provenance": "synthetic-authored",
+    "recipeSha256": "4f3487fc28db6e201ccf819b1d27d2bb795ffa150319a2085fc582131eb30643",
+    "requestFixture": "hkapi-115/request.json",
+    "responseFixture": "hkapi-115/response.json",
+    "responseSha256": "c7ab2dae9bc76e759d0db4ff5ae900da3101110ab9a41f60ac6a5a53f08c9d86",
+    "sourceReference": "HKAPI-115"
+  },
+  "HKAPI-116": {
+    "documentationUrl": "https://data.gov.hk/en-data/dataset/hk-epd-rngteam-chemical-waste-collectors-list",
+    "mediaType": "application/json",
+    "provenance": "synthetic-authored",
+    "recipeSha256": "05aabc19c27b4d502d1baedf6d1474c29dd89dd98a99f25abfc7bcb766c7ae3f",
+    "requestFixture": "hkapi-116/request.json",
+    "responseFixture": "hkapi-116/response.json",
+    "responseSha256": "c7ab2dae9bc76e759d0db4ff5ae900da3101110ab9a41f60ac6a5a53f08c9d86",
+    "sourceReference": "HKAPI-116"
+  },
+  "HKAPI-117": {
+    "documentationUrl": "https://data.gov.hk/en-data/dataset/hk-afcd-afcdlist-habitatmap",
+    "mediaType": "application/json",
+    "provenance": "synthetic-authored",
+    "recipeSha256": "8c0de630d8d151d6b1462e00e949a25450a165cc771c545cf383a1c628975c6e",
+    "requestFixture": "hkapi-117/request.json",
+    "responseFixture": "hkapi-117/response.json",
+    "responseSha256": "c7ab2dae9bc76e759d0db4ff5ae900da3101110ab9a41f60ac6a5a53f08c9d86",
+    "sourceReference": "HKAPI-117"
+  },
+  "HKAPI-119": {
+    "documentationUrl": "https://data.gov.hk/en-data/dataset/hospital-hadata-ae-waiting-time",
+    "mediaType": "application/json",
+    "provenance": "synthetic-authored",
+    "recipeSha256": "5bd3525a991f880f352a299b0247e9374e09ca58274435b3d9a81b1264fe51c3",
+    "requestFixture": "hkapi-119/request.json",
+    "responseFixture": "hkapi-119/response.json",
+    "responseSha256": "c7ab2dae9bc76e759d0db4ff5ae900da3101110ab9a41f60ac6a5a53f08c9d86",
+    "sourceReference": "HKAPI-119"
+  },
+  "HKAPI-120": {
+    "documentationUrl": "https://data.gov.hk/en-data/dataset/hospital-hadata-health-care-facilities",
+    "mediaType": "application/json",
+    "provenance": "synthetic-authored",
+    "recipeSha256": "382e886910a4cd1e4041757bef4b1e91e0c5ea5cb0a722724cd8ee00c2fbf7bc",
+    "requestFixture": "hkapi-120/request.json",
+    "responseFixture": "hkapi-120/response.json",
+    "responseSha256": "c7ab2dae9bc76e759d0db4ff5ae900da3101110ab9a41f60ac6a5a53f08c9d86",
+    "sourceReference": "HKAPI-120"
+  },
+  "HKAPI-121": {
+    "documentationUrl": "https://data.gov.hk/en-data/dataset/hospital-hadata-sop-waiting-time",
+    "mediaType": "application/json",
+    "provenance": "synthetic-authored",
+    "recipeSha256": "a1d268925b20d05666edd4ccebcb7fa90cec5497f3283bedd1cbd9f6bf2ac173",
+    "requestFixture": "hkapi-121/request.json",
+    "responseFixture": "hkapi-121/response.json",
+    "responseSha256": "c7ab2dae9bc76e759d0db4ff5ae900da3101110ab9a41f60ac6a5a53f08c9d86",
+    "sourceReference": "HKAPI-121"
+  },
+  "HKAPI-122": {
+    "documentationUrl": "https://data.gov.hk/en-data/dataset/hospital-hadata-fmc-quota",
+    "mediaType": "application/json",
+    "provenance": "synthetic-authored",
+    "recipeSha256": "a305acf224983038625167e1e300c0dbaa6d039d29a717fd10d47851d8ca2a08",
+    "requestFixture": "hkapi-122/request.json",
+    "responseFixture": "hkapi-122/response.json",
+    "responseSha256": "c7ab2dae9bc76e759d0db4ff5ae900da3101110ab9a41f60ac6a5a53f08c9d86",
+    "sourceReference": "HKAPI-122"
+  },
+  "HKAPI-123": {
+    "documentationUrl": "https://data.gov.hk/en-data/dataset/hospital-hadata-key-statistics-during-surge",
+    "mediaType": "application/json",
+    "provenance": "synthetic-authored",
+    "recipeSha256": "ed636281fa98d642899929e386c425e5bc00322907c5ba20c2f17278c5525a65",
+    "requestFixture": "hkapi-123/request.json",
+    "responseFixture": "hkapi-123/response.json",
+    "responseSha256": "c7ab2dae9bc76e759d0db4ff5ae900da3101110ab9a41f60ac6a5a53f08c9d86",
+    "sourceReference": "HKAPI-123"
+  },
+  "HKAPI-124": {
+    "documentationUrl": "https://data.gov.hk/en-data/dataset/hospital-hadata-service-ambulatory-community",
+    "mediaType": "application/json",
+    "provenance": "synthetic-authored",
+    "recipeSha256": "4137166b7d3e41384c6f6e5955dd0aaf589112fc05d32737e3b409da3b6275d4",
+    "requestFixture": "hkapi-124/request.json",
+    "responseFixture": "hkapi-124/response.json",
+    "responseSha256": "c7ab2dae9bc76e759d0db4ff5ae900da3101110ab9a41f60ac6a5a53f08c9d86",
+    "sourceReference": "HKAPI-124"
+  },
+  "HKAPI-125": {
+    "documentationUrl": "https://data.gov.hk/en-data/dataset/hospital-hadata-service-ipdp",
+    "mediaType": "application/json",
+    "provenance": "synthetic-authored",
+    "recipeSha256": "8901c3b7736abef99656280a10a58acfdad809da8d35722e7cbb210661795d38",
+    "requestFixture": "hkapi-125/request.json",
+    "responseFixture": "hkapi-125/response.json",
+    "responseSha256": "c7ab2dae9bc76e759d0db4ff5ae900da3101110ab9a41f60ac6a5a53f08c9d86",
+    "sourceReference": "HKAPI-125"
+  },
+  "HKAPI-126": {
+    "documentationUrl": "https://data.gov.hk/en-data/dataset/hospital-hadata-key-financial-info",
+    "mediaType": "application/json",
+    "provenance": "synthetic-authored",
+    "recipeSha256": "7c84e9cddf54d20e5324e9248c32ea35404d37d42ef27d74d0156e805e0fb6a2",
+    "requestFixture": "hkapi-126/request.json",
+    "responseFixture": "hkapi-126/response.json",
+    "responseSha256": "c7ab2dae9bc76e759d0db4ff5ae900da3101110ab9a41f60ac6a5a53f08c9d86",
+    "sourceReference": "HKAPI-126"
+  },
+  "HKAPI-127": {
+    "documentationUrl": "https://data.gov.hk/en-data/dataset/hk-dh-chpsebcdd-number-of-notifications-for-notifiable-infectious-diseases",
+    "mediaType": "application/json",
+    "provenance": "synthetic-authored",
+    "recipeSha256": "d1b24db71053b804ffb1cad1cf9f57beb729dec18f2489ae386493752e2044f3",
+    "requestFixture": "hkapi-127/request.json",
+    "responseFixture": "hkapi-127/response.json",
+    "responseSha256": "c7ab2dae9bc76e759d0db4ff5ae900da3101110ab9a41f60ac6a5a53f08c9d86",
+    "sourceReference": "HKAPI-127"
+  },
+  "HKAPI-128": {
+    "documentationUrl": "https://data.gov.hk/en-data/dataset/hk-dh-chpsebcdde-aed-cdis-syndromic",
+    "mediaType": "application/json",
+    "provenance": "synthetic-authored",
+    "recipeSha256": "74a90912fe53e091c310a05fbca4d9364537b9c5014974c0aea0d1719d33d505",
+    "requestFixture": "hkapi-128/request.json",
+    "responseFixture": "hkapi-128/response.json",
+    "responseSha256": "c7ab2dae9bc76e759d0db4ff5ae900da3101110ab9a41f60ac6a5a53f08c9d86",
+    "sourceReference": "HKAPI-128"
+  },
+  "HKAPI-129": {
+    "documentationUrl": "https://data.gov.hk/en-data/dataset/hk-dh-chpsebcdde-ccckg-cdis-sentinel",
+    "mediaType": "application/json",
+    "provenance": "synthetic-authored",
+    "recipeSha256": "5149305d74b86ea3e752c2ab400cd70ee7de37ec09dd84ac3a94ae7abc25ac77",
+    "requestFixture": "hkapi-129/request.json",
+    "responseFixture": "hkapi-129/response.json",
+    "responseSha256": "c7ab2dae9bc76e759d0db4ff5ae900da3101110ab9a41f60ac6a5a53f08c9d86",
+    "sourceReference": "HKAPI-129"
+  },
+  "HKAPI-130": {
+    "documentationUrl": "https://data.gov.hk/en-data/dataset/hk-dh-chpsebcdde-rche-cdis-sentinel",
+    "mediaType": "application/json",
+    "provenance": "synthetic-authored",
+    "recipeSha256": "570f7d064a46fd888f24122caced9762502cb7f89f9424188f3f55f47feca67b",
+    "requestFixture": "hkapi-130/request.json",
+    "responseFixture": "hkapi-130/response.json",
+    "responseSha256": "c7ab2dae9bc76e759d0db4ff5ae900da3101110ab9a41f60ac6a5a53f08c9d86",
+    "sourceReference": "HKAPI-130"
+  },
+  "HKAPI-131": {
+    "documentationUrl": "https://data.gov.hk/en-data/dataset/hk-dh-chpsebcdde-cmp-cdis-sentinel",
+    "mediaType": "application/json",
+    "provenance": "synthetic-authored",
+    "recipeSha256": "a110b1e48013b443855b33264c57595f8025552b0b2721bde2c6fe00d6d8adaa",
+    "requestFixture": "hkapi-131/request.json",
+    "responseFixture": "hkapi-131/response.json",
+    "responseSha256": "c7ab2dae9bc76e759d0db4ff5ae900da3101110ab9a41f60ac6a5a53f08c9d86",
+    "sourceReference": "HKAPI-131"
+  },
+  "HKAPI-132": {
+    "documentationUrl": "https://data.gov.hk/en-data/dataset/hk-dh-chpsebcdde-chikungunya-fever-cases",
+    "mediaType": "application/json",
+    "provenance": "synthetic-authored",
+    "recipeSha256": "0db1f4f3b597075612a45271e559ceec41fdc0cb8cb8d665abbc20eaf1f35de5",
+    "requestFixture": "hkapi-132/request.json",
+    "responseFixture": "hkapi-132/response.json",
+    "responseSha256": "c7ab2dae9bc76e759d0db4ff5ae900da3101110ab9a41f60ac6a5a53f08c9d86",
+    "sourceReference": "HKAPI-132"
+  },
+  "HKAPI-133": {
+    "documentationUrl": "https://data.gov.hk/en-data/dataset/hk-dh-dh_do-hk-dh-do-pharmaceutical-product",
+    "mediaType": "application/json",
+    "provenance": "synthetic-authored",
+    "recipeSha256": "e9dc2353cdc8f86c313b82310ee665d4625383ca63afe27fba665e300b7d6e00",
+    "requestFixture": "hkapi-133/request.json",
+    "responseFixture": "hkapi-133/response.json",
+    "responseSha256": "c7ab2dae9bc76e759d0db4ff5ae900da3101110ab9a41f60ac6a5a53f08c9d86",
+    "sourceReference": "HKAPI-133"
+  },
+  "HKAPI-134": {
+    "documentationUrl": "https://data.gov.hk/en-data/dataset/hk-dh-dh_do-hk-dh-do-licensed-drug-dealer",
+    "mediaType": "application/json",
+    "provenance": "synthetic-authored",
+    "recipeSha256": "238e00665701519dc5b42bc70f53d7d77a1b7a6583de4d160e0d45929986ce82",
+    "requestFixture": "hkapi-134/request.json",
+    "responseFixture": "hkapi-134/response.json",
+    "responseSha256": "c7ab2dae9bc76e759d0db4ff5ae900da3101110ab9a41f60ac6a5a53f08c9d86",
+    "sourceReference": "HKAPI-134"
+  },
+  "HKAPI-135": {
+    "documentationUrl": "https://data.gov.hk/en-data/dataset/hk-dh-cmd-cmd-list-of-proprietary-chinese-medicine",
+    "mediaType": "application/json",
+    "provenance": "synthetic-authored",
+    "recipeSha256": "5f7dbe39302857b977dfbbcef2495b44931b63a27aca127c601e595597f4e00b",
+    "requestFixture": "hkapi-135/request.json",
+    "responseFixture": "hkapi-135/response.json",
+    "responseSha256": "c7ab2dae9bc76e759d0db4ff5ae900da3101110ab9a41f60ac6a5a53f08c9d86",
+    "sourceReference": "HKAPI-135"
+  },
+  "HKAPI-136": {
+    "documentationUrl": "https://data.gov.hk/en-data/dataset/hk-dh-chpsebcddr-covid-express",
+    "mediaType": "application/json",
+    "provenance": "synthetic-authored",
+    "recipeSha256": "831ffd8761eadfb416e7bdb0778c6ba637469494cc94768cfab2e1fad02b21e2",
+    "requestFixture": "hkapi-136/request.json",
+    "responseFixture": "hkapi-136/response.json",
+    "responseSha256": "c7ab2dae9bc76e759d0db4ff5ae900da3101110ab9a41f60ac6a5a53f08c9d86",
+    "sourceReference": "HKAPI-136"
+  },
+  "HKAPI-137": {
+    "documentationUrl": "https://data.gov.hk/en-data/dataset/hk-fsd-fsd1-fsdaedapi",
+    "mediaType": "application/json",
+    "provenance": "synthetic-authored",
+    "recipeSha256": "23544412d60b9eab2df6da90579ba6f361e3fc2a07cde3a3f60235c95a7448e3",
+    "requestFixture": "hkapi-137/request.json",
+    "responseFixture": "hkapi-137/response.json",
+    "responseSha256": "c7ab2dae9bc76e759d0db4ff5ae900da3101110ab9a41f60ac6a5a53f08c9d86",
+    "sourceReference": "HKAPI-137"
+  },
+  "HKAPI-138": {
+    "documentationUrl": "https://data.gov.hk/en-data/dataset/hk-dh-dh_hq-list-of-dh-clinics",
+    "mediaType": "application/json",
+    "provenance": "synthetic-authored",
+    "recipeSha256": "e746c022e0fc8a23014ae81586ff9a56bb0c2d274574cd0235efafeb22e8edd0",
+    "requestFixture": "hkapi-138/request.json",
+    "responseFixture": "hkapi-138/response.json",
+    "responseSha256": "c7ab2dae9bc76e759d0db4ff5ae900da3101110ab9a41f60ac6a5a53f08c9d86",
+    "sourceReference": "HKAPI-138"
+  },
+  "HKAPI-147": {
+    "documentationUrl": "https://data.gov.hk/en-data/dataset/hk-cr-crdata-list-addr",
+    "mediaType": "application/json",
+    "provenance": "synthetic-authored",
+    "recipeSha256": "c58595d123298fc573d5a76564a915879066545b65aeeadf09acc74d97463bd0",
+    "requestFixture": "hkapi-147/request.json",
+    "responseFixture": "hkapi-147/response.json",
+    "responseSha256": "c7ab2dae9bc76e759d0db4ff5ae900da3101110ab9a41f60ac6a5a53f08c9d86",
+    "sourceReference": "HKAPI-147"
+  },
+  "HKAPI-148": {
+    "documentationUrl": "https://data.gov.hk/en-data/dataset/hk-cr-crdata-list-ml-licensees",
+    "mediaType": "application/json",
+    "provenance": "synthetic-authored",
+    "recipeSha256": "37a375aaf88c6c7d039ac4d46a135d9e51df5b47cf9b35251fb3d1525f751765",
+    "requestFixture": "hkapi-148/request.json",
+    "responseFixture": "hkapi-148/response.json",
+    "responseSha256": "c7ab2dae9bc76e759d0db4ff5ae900da3101110ab9a41f60ac6a5a53f08c9d86",
+    "sourceReference": "HKAPI-148"
+  },
+  "HKAPI-149": {
+    "documentationUrl": "https://data.gov.hk/en-data/dataset/hk-cr-crdata-list-newly-registered-companies-1718",
+    "mediaType": "application/json",
+    "provenance": "synthetic-authored",
+    "recipeSha256": "e4a21432396cba3e1d467d1d61399e08524df3890d20d0891d494a0e2249f604",
+    "requestFixture": "hkapi-149/request.json",
+    "responseFixture": "hkapi-149/response.json",
+    "responseSha256": "c7ab2dae9bc76e759d0db4ff5ae900da3101110ab9a41f60ac6a5a53f08c9d86",
+    "sourceReference": "HKAPI-149"
+  },
+  "HKAPI-150": {
+    "documentationUrl": "https://data.gov.hk/en-data/dataset/hk-rvd-tsinfo_rvd-property-market-statistics",
+    "mediaType": "application/json",
+    "provenance": "synthetic-authored",
+    "recipeSha256": "520a2ead5b51bfb48fe31d8ebde8ea69bde21b231dfc5be1e2f35c8bdcccc34f",
+    "requestFixture": "hkapi-150/request.json",
+    "responseFixture": "hkapi-150/response.json",
+    "responseSha256": "c7ab2dae9bc76e759d0db4ff5ae900da3101110ab9a41f60ac6a5a53f08c9d86",
+    "sourceReference": "HKAPI-150"
+  },
+  "HKAPI-151": {
+    "documentationUrl": "https://data.gov.hk/en-data/dataset/hk-rvd-tsinfo_rvd-statistical-tables-on-valuation-list-and-government-rent-roll",
+    "mediaType": "application/json",
+    "provenance": "synthetic-authored",
+    "recipeSha256": "2d47c67bccab058fbd40e1b581116a5a2242b2225775e01ad6d1476a6d80c0de",
+    "requestFixture": "hkapi-151/request.json",
+    "responseFixture": "hkapi-151/response.json",
+    "responseSha256": "c7ab2dae9bc76e759d0db4ff5ae900da3101110ab9a41f60ac6a5a53f08c9d86",
+    "sourceReference": "HKAPI-151"
+  },
+  "HKAPI-152": {
+    "documentationUrl": "https://data.gov.hk/en-data/dataset/hk-rvd-tsinfo_rvd-summary-of-newly-built-properties-assessed-to-rates-and-or-gov-rent",
+    "mediaType": "application/json",
+    "provenance": "synthetic-authored",
+    "recipeSha256": "d8c3d835a60214cce9be0d0dd6b492a8df22d7dd1eec6bd855bf7a05e8c9e081",
+    "requestFixture": "hkapi-152/request.json",
+    "responseFixture": "hkapi-152/response.json",
+    "responseSha256": "c7ab2dae9bc76e759d0db4ff5ae900da3101110ab9a41f60ac6a5a53f08c9d86",
+    "sourceReference": "HKAPI-152"
+  },
+  "HKAPI-153": {
+    "documentationUrl": "https://data.gov.hk/en-data/dataset/towngas-towngas-environment",
+    "mediaType": "application/json",
+    "provenance": "synthetic-authored",
+    "recipeSha256": "b72e1a35610125b2345a68b99e2bf5035a52afea3a903009fb532ad6ceff79e2",
+    "requestFixture": "hkapi-153/request.json",
+    "responseFixture": "hkapi-153/response.json",
+    "responseSha256": "c7ab2dae9bc76e759d0db4ff5ae900da3101110ab9a41f60ac6a5a53f08c9d86",
+    "sourceReference": "HKAPI-153"
+  },
+  "HKAPI-154": {
+    "documentationUrl": "https://data.gov.hk/en-data/dataset/hkelectric-cs_cs-fuel-mix-generation-data",
+    "mediaType": "application/json",
+    "provenance": "synthetic-authored",
+    "recipeSha256": "e22ee7376e8f23bc5ae045b1f5d00321e5e275e352b8f2b255b0ddca4f2506eb",
+    "requestFixture": "hkapi-154/request.json",
+    "responseFixture": "hkapi-154/response.json",
+    "responseSha256": "c7ab2dae9bc76e759d0db4ff5ae900da3101110ab9a41f60ac6a5a53f08c9d86",
+    "sourceReference": "HKAPI-154"
+  },
+  "HKAPI-155": {
+    "documentationUrl": "https://data.gov.hk/en-data/dataset/hkelectric-cs_cs-consumption-data-by-districts",
+    "mediaType": "application/json",
+    "provenance": "synthetic-authored",
+    "recipeSha256": "48615384203c6c6e43e9b87413ad08481290117e4c47aad77fcbaca42baa6363",
+    "requestFixture": "hkapi-155/request.json",
+    "responseFixture": "hkapi-155/response.json",
+    "responseSha256": "c7ab2dae9bc76e759d0db4ff5ae900da3101110ab9a41f60ac6a5a53f08c9d86",
+    "sourceReference": "HKAPI-155"
+  },
+  "HKAPI-156": {
+    "documentationUrl": "https://data.gov.hk/en-data/dataset/hkelectric-cs_cbd-renewable-energy-generation-by-districts",
+    "mediaType": "application/json",
+    "provenance": "synthetic-authored",
+    "recipeSha256": "9efbdfa88687774857de1d1b25b7ff8d4c5e16f2125c741e708ff0f505812746",
+    "requestFixture": "hkapi-156/request.json",
+    "responseFixture": "hkapi-156/response.json",
+    "responseSha256": "c7ab2dae9bc76e759d0db4ff5ae900da3101110ab9a41f60ac6a5a53f08c9d86",
+    "sourceReference": "HKAPI-156"
+  },
+  "HKAPI-157": {
+    "documentationUrl": "https://data.gov.hk/en-data/dataset/hk-emsd-emsd1-energy-end-use-data-2004",
+    "mediaType": "application/json",
+    "provenance": "synthetic-authored",
+    "recipeSha256": "b1a2bfafddaaed82d65f3b9d3e663dee6c03db9819f90a98fb688e64a94b39c5",
+    "requestFixture": "hkapi-157/request.json",
+    "responseFixture": "hkapi-157/response.json",
+    "responseSha256": "c7ab2dae9bc76e759d0db4ff5ae900da3101110ab9a41f60ac6a5a53f08c9d86",
+    "sourceReference": "HKAPI-157"
+  },
+  "HKAPI-158": {
+    "documentationUrl": "https://data.gov.hk/en-data/dataset/hk-wsd-wsd2-storage-position-reservoir-weekly",
+    "mediaType": "application/json",
+    "provenance": "synthetic-authored",
+    "recipeSha256": "ed13848db452acc7b02eb1bf1825ecf8578d188e9625ea7335e21304c5471247",
+    "requestFixture": "hkapi-158/request.json",
+    "responseFixture": "hkapi-158/response.json",
+    "responseSha256": "c7ab2dae9bc76e759d0db4ff5ae900da3101110ab9a41f60ac6a5a53f08c9d86",
+    "sourceReference": "HKAPI-158"
+  },
+  "HKAPI-159": {
+    "documentationUrl": "https://data.gov.hk/en-data/dataset/hk-wsd-wsd2-water-resources",
+    "mediaType": "application/json",
+    "provenance": "synthetic-authored",
+    "recipeSha256": "f78c78445ff22e8305123fb648fd17753241f43a14769e1fd1c398b2b707d281",
+    "requestFixture": "hkapi-159/request.json",
+    "responseFixture": "hkapi-159/response.json",
+    "responseSha256": "c7ab2dae9bc76e759d0db4ff5ae900da3101110ab9a41f60ac6a5a53f08c9d86",
+    "sourceReference": "HKAPI-159"
+  },
+  "HKAPI-160": {
+    "documentationUrl": "https://data.gov.hk/en-data/dataset/hk-wsd-wsd9-temporary-water-suspension-notices",
+    "mediaType": "application/json",
+    "provenance": "synthetic-authored",
+    "recipeSha256": "ef533071989e41375d47c1c3af702cf31b7ecf0a2b65c3b97137fae38f143af8",
+    "requestFixture": "hkapi-160/request.json",
+    "responseFixture": "hkapi-160/response.json",
+    "responseSha256": "c7ab2dae9bc76e759d0db4ff5ae900da3101110ab9a41f60ac6a5a53f08c9d86",
+    "sourceReference": "HKAPI-160"
+  },
+  "HKAPI-161": {
+    "documentationUrl": "https://data.gov.hk/en-data/dataset/hk-dsd-dsd_psi_1-sewage-flow-data",
+    "mediaType": "application/json",
+    "provenance": "synthetic-authored",
+    "recipeSha256": "1d994b812803c7377f68a49d3a20cedc96ae1e4d375f3746cf7440655b52b81c",
+    "requestFixture": "hkapi-161/request.json",
+    "responseFixture": "hkapi-161/response.json",
+    "responseSha256": "c7ab2dae9bc76e759d0db4ff5ae900da3101110ab9a41f60ac6a5a53f08c9d86",
+    "sourceReference": "HKAPI-161"
+  },
+  "HKAPI-162": {
+    "documentationUrl": "https://data.gov.hk/en-data/dataset/clp-team1-electric-vehicle-charging-stations",
+    "mediaType": "application/json",
+    "provenance": "synthetic-authored",
+    "recipeSha256": "3a6fecc74dd3a10fb78e6790d668ee0af79ef4e06f31c55afc23a9219c560fe5",
+    "requestFixture": "hkapi-162/request.json",
+    "responseFixture": "hkapi-162/response.json",
+    "responseSha256": "c7ab2dae9bc76e759d0db4ff5ae900da3101110ab9a41f60ac6a5a53f08c9d86",
+    "sourceReference": "HKAPI-162"
+  },
   "HKAPI-163": {
     "documentationUrl": "https://www.legco.gov.hk/en/open-legco/open-data/webcast-api.html",
     "mediaType": "application/json",
@@ -359,6 +1359,616 @@
     "responseSha256": "ab570ed8ec6deceaf337774977aef0419915f551b5a74c9a1e39266400562ef4",
     "sourceReference": "HKAPI-169"
   },
+  "HKAPI-170": {
+    "documentationUrl": "https://data.gov.hk/en-data/dataset/hk-doj-hkel-list-of-legislation-current",
+    "mediaType": "application/json",
+    "provenance": "synthetic-authored",
+    "recipeSha256": "1b1f508bfd7d915a0a16ca2469baf9bd33e1e6f715724b5cc6869185da787d68",
+    "requestFixture": "hkapi-170/request.json",
+    "responseFixture": "hkapi-170/response.json",
+    "responseSha256": "c7ab2dae9bc76e759d0db4ff5ae900da3101110ab9a41f60ac6a5a53f08c9d86",
+    "sourceReference": "HKAPI-170"
+  },
+  "HKAPI-171": {
+    "documentationUrl": "https://data.gov.hk/en-data/dataset/hk-doj-hkel-legislation-current",
+    "mediaType": "application/json",
+    "provenance": "synthetic-authored",
+    "recipeSha256": "19bec47047012c9ea75643a4a1842dec72ebbce2b429cb30c456560495d5fe59",
+    "requestFixture": "hkapi-171/request.json",
+    "responseFixture": "hkapi-171/response.json",
+    "responseSha256": "c7ab2dae9bc76e759d0db4ff5ae900da3101110ab9a41f60ac6a5a53f08c9d86",
+    "sourceReference": "HKAPI-171"
+  },
+  "HKAPI-172": {
+    "documentationUrl": "https://data.gov.hk/en-data/dataset/hk-doj-hkel-legislation-past",
+    "mediaType": "application/json",
+    "provenance": "synthetic-authored",
+    "recipeSha256": "7745e5338ffc01c6d6e8cb959c96dcfe54092b3832bba70681686b46cd78a3ba",
+    "requestFixture": "hkapi-172/request.json",
+    "responseFixture": "hkapi-172/response.json",
+    "responseSha256": "c7ab2dae9bc76e759d0db4ff5ae900da3101110ab9a41f60ac6a5a53f08c9d86",
+    "sourceReference": "HKAPI-172"
+  },
+  "HKAPI-174": {
+    "documentationUrl": "https://data.gov.hk/en-data/dataset/hk-reo-reopsi01-election-result-ce-2017ce",
+    "mediaType": "application/json",
+    "provenance": "synthetic-authored",
+    "recipeSha256": "c2176a5d7193d984c9b4a6e3516df3ac1c66f55d5473729eeda0e5456e168231",
+    "requestFixture": "hkapi-174/request.json",
+    "responseFixture": "hkapi-174/response.json",
+    "responseSha256": "c7ab2dae9bc76e759d0db4ff5ae900da3101110ab9a41f60ac6a5a53f08c9d86",
+    "sourceReference": "HKAPI-174"
+  },
+  "HKAPI-175": {
+    "documentationUrl": "https://data.gov.hk/en-data/dataset/hk-reo-reopsi01-voter-registration-statistics",
+    "mediaType": "application/json",
+    "provenance": "synthetic-authored",
+    "recipeSha256": "eb7f94334870364c80c3fb5ef7b19b7601a14af9e1bee5728c944aae5ba1d8c8",
+    "requestFixture": "hkapi-175/request.json",
+    "responseFixture": "hkapi-175/response.json",
+    "responseSha256": "c7ab2dae9bc76e759d0db4ff5ae900da3101110ab9a41f60ac6a5a53f08c9d86",
+    "sourceReference": "HKAPI-175"
+  },
+  "HKAPI-176": {
+    "documentationUrl": "https://data.gov.hk/en-data/dataset/hk-isd-gnmis-gnmis",
+    "mediaType": "application/json",
+    "provenance": "synthetic-authored",
+    "recipeSha256": "4ba7eae7cf59ea0ea94c406178335ced0a9ccceeed7a015711bb25576b490315",
+    "requestFixture": "hkapi-176/request.json",
+    "responseFixture": "hkapi-176/response.json",
+    "responseSha256": "c7ab2dae9bc76e759d0db4ff5ae900da3101110ab9a41f60ac6a5a53f08c9d86",
+    "sourceReference": "HKAPI-176"
+  },
+  "HKAPI-177": {
+    "documentationUrl": "https://data.gov.hk/en-data/dataset/hk-csb-csb-gov-vacancies",
+    "mediaType": "application/json",
+    "provenance": "synthetic-authored",
+    "recipeSha256": "45bcee2978ff9a768b1a832c346e0ef8e319bba9331d55d035ef8a4c4c70ff4d",
+    "requestFixture": "hkapi-177/request.json",
+    "responseFixture": "hkapi-177/response.json",
+    "responseSha256": "c7ab2dae9bc76e759d0db4ff5ae900da3101110ab9a41f60ac6a5a53f08c9d86",
+    "sourceReference": "HKAPI-177"
+  },
+  "HKAPI-178": {
+    "documentationUrl": "https://data.gov.hk/en-data/dataset/hk-gld-gldetb-gldetb-tendernotice",
+    "mediaType": "application/json",
+    "provenance": "synthetic-authored",
+    "recipeSha256": "412bef991bd05c52505fd23bb523cae03f5ae97d824f46612c6cc338cc38fc3a",
+    "requestFixture": "hkapi-178/request.json",
+    "responseFixture": "hkapi-178/response.json",
+    "responseSha256": "c7ab2dae9bc76e759d0db4ff5ae900da3101110ab9a41f60ac6a5a53f08c9d86",
+    "sourceReference": "HKAPI-178"
+  },
+  "HKAPI-179": {
+    "documentationUrl": "https://data.gov.hk/en-data/dataset/hk-archsd-archsddata-acgca",
+    "mediaType": "application/json",
+    "provenance": "synthetic-authored",
+    "recipeSha256": "56f847f1f2aad373d7d931a495648ced5e1ed28c210d07e23a9d25e9ed14c469",
+    "requestFixture": "hkapi-179/request.json",
+    "responseFixture": "hkapi-179/response.json",
+    "responseSha256": "c7ab2dae9bc76e759d0db4ff5ae900da3101110ab9a41f60ac6a5a53f08c9d86",
+    "sourceReference": "HKAPI-179"
+  },
+  "HKAPI-184": {
+    "documentationUrl": "https://data.gov.hk/en-data/dataset/hk-fehd-fehdlmis-restaurant-licences",
+    "mediaType": "application/json",
+    "provenance": "synthetic-authored",
+    "recipeSha256": "2d910bfc60b96c40ceaef9c0a1897fc4ff4482734472f0e4d4bc2f4d237c322d",
+    "requestFixture": "hkapi-184/request.json",
+    "responseFixture": "hkapi-184/response.json",
+    "responseSha256": "c7ab2dae9bc76e759d0db4ff5ae900da3101110ab9a41f60ac6a5a53f08c9d86",
+    "sourceReference": "HKAPI-184"
+  },
+  "HKAPI-185": {
+    "documentationUrl": "https://data.gov.hk/en-data/dataset/hk-fehd-fehdlmis-food-licences",
+    "mediaType": "application/json",
+    "provenance": "synthetic-authored",
+    "recipeSha256": "f3d09c7eed3761e20a6e6348de946fb17aca4c828ab483b507086b1271862faa",
+    "requestFixture": "hkapi-185/request.json",
+    "responseFixture": "hkapi-185/response.json",
+    "responseSha256": "c7ab2dae9bc76e759d0db4ff5ae900da3101110ab9a41f60ac6a5a53f08c9d86",
+    "sourceReference": "HKAPI-185"
+  },
+  "HKAPI-186": {
+    "documentationUrl": "https://data.gov.hk/en-data/dataset/hk-fehd-fehdlmis-sale-of-restricted-food-permits",
+    "mediaType": "application/json",
+    "provenance": "synthetic-authored",
+    "recipeSha256": "7bdf9557d4554c519e0f1e59dfdc5ffa1bd92053fb678fcdb1be63049a512e05",
+    "requestFixture": "hkapi-186/request.json",
+    "responseFixture": "hkapi-186/response.json",
+    "responseSha256": "c7ab2dae9bc76e759d0db4ff5ae900da3101110ab9a41f60ac6a5a53f08c9d86",
+    "sourceReference": "HKAPI-186"
+  },
+  "HKAPI-187": {
+    "documentationUrl": "https://data.gov.hk/en-data/dataset/hk-fehd-fehdlmis-trade-licences",
+    "mediaType": "application/json",
+    "provenance": "synthetic-authored",
+    "recipeSha256": "302637c0497f9e25115e6917d2c393ecefa6fbe5523744234dc0dadccdba7126",
+    "requestFixture": "hkapi-187/request.json",
+    "responseFixture": "hkapi-187/response.json",
+    "responseSha256": "c7ab2dae9bc76e759d0db4ff5ae900da3101110ab9a41f60ac6a5a53f08c9d86",
+    "sourceReference": "HKAPI-187"
+  },
+  "HKAPI-188": {
+    "documentationUrl": "https://data.gov.hk/en-data/dataset/llb-llbllp-liquor-licences",
+    "mediaType": "application/json",
+    "provenance": "synthetic-authored",
+    "recipeSha256": "71c8feab770fa704cccc9c721a777eb7925aaf9ebacca7d73c181ad4d6a025a1",
+    "requestFixture": "hkapi-188/request.json",
+    "responseFixture": "hkapi-188/response.json",
+    "responseSha256": "c7ab2dae9bc76e759d0db4ff5ae900da3101110ab9a41f60ac6a5a53f08c9d86",
+    "sourceReference": "HKAPI-188"
+  },
+  "HKAPI-189": {
+    "documentationUrl": "https://data.gov.hk/en-data/dataset/hk-fehd-fehdlocatn-fehd-facility-and-service-locations",
+    "mediaType": "application/json",
+    "provenance": "synthetic-authored",
+    "recipeSha256": "87ed51f392a1d47c15bb03a72fe8dddcd865bc217b6ebd2f3d015c1d61637727",
+    "requestFixture": "hkapi-189/request.json",
+    "responseFixture": "hkapi-189/response.json",
+    "responseSha256": "c7ab2dae9bc76e759d0db4ff5ae900da3101110ab9a41f60ac6a5a53f08c9d86",
+    "sourceReference": "HKAPI-189"
+  },
+  "HKAPI-190": {
+    "documentationUrl": "https://data.gov.hk/en-data/dataset/hk-fehd-fehdmsms-market-information",
+    "mediaType": "application/json",
+    "provenance": "synthetic-authored",
+    "recipeSha256": "2b32c8a55f0e413723ce7fbd1be9920227761d6782651b09b014893650fef3f9",
+    "requestFixture": "hkapi-190/request.json",
+    "responseFixture": "hkapi-190/response.json",
+    "responseSha256": "c7ab2dae9bc76e759d0db4ff5ae900da3101110ab9a41f60ac6a5a53f08c9d86",
+    "sourceReference": "HKAPI-190"
+  },
+  "HKAPI-191": {
+    "documentationUrl": "https://data.gov.hk/en-data/dataset/cfs-foodalert-foodalert",
+    "mediaType": "application/json",
+    "provenance": "synthetic-authored",
+    "recipeSha256": "d289da228cbba99559cf36b9db37e07aee464d3e4b9b79dfdbe262ecf33819f9",
+    "requestFixture": "hkapi-191/request.json",
+    "responseFixture": "hkapi-191/response.json",
+    "responseSha256": "c7ab2dae9bc76e759d0db4ff5ae900da3101110ab9a41f60ac6a5a53f08c9d86",
+    "sourceReference": "HKAPI-191"
+  },
+  "HKAPI-192": {
+    "documentationUrl": "https://data.gov.hk/en-data/dataset/hk-fehd-fehddengue-fehd-dengue-surveillance",
+    "mediaType": "application/json",
+    "provenance": "synthetic-authored",
+    "recipeSha256": "d8363072287e59c642b7113d9c0143da1659e3f6216b2ff0a95eff602c31cb19",
+    "requestFixture": "hkapi-192/request.json",
+    "responseFixture": "hkapi-192/response.json",
+    "responseSha256": "c7ab2dae9bc76e759d0db4ff5ae900da3101110ab9a41f60ac6a5a53f08c9d86",
+    "sourceReference": "HKAPI-192"
+  },
+  "HKAPI-193": {
+    "documentationUrl": "https://data.gov.hk/en-data/dataset/cfs-foodcode-fcs",
+    "mediaType": "application/json",
+    "provenance": "synthetic-authored",
+    "recipeSha256": "f73ba5e6511e2059d911db116568bf3c1a48584e398eb33174da04246633e3e1",
+    "requestFixture": "hkapi-193/request.json",
+    "responseFixture": "hkapi-193/response.json",
+    "responseSha256": "c7ab2dae9bc76e759d0db4ff5ae900da3101110ab9a41f60ac6a5a53f08c9d86",
+    "sourceReference": "HKAPI-193"
+  },
+  "HKAPI-194": {
+    "documentationUrl": "https://data.gov.hk/en-data/dataset/hk-fehd-fehdftp-fehdftp",
+    "mediaType": "application/json",
+    "provenance": "synthetic-authored",
+    "recipeSha256": "201f0a678ce3da28d5c4749c76ecbf8ed1e1a14dc81dd620bfca597e9cffdf2c",
+    "requestFixture": "hkapi-194/request.json",
+    "responseFixture": "hkapi-194/response.json",
+    "responseSha256": "c7ab2dae9bc76e759d0db4ff5ae900da3101110ab9a41f60ac6a5a53f08c9d86",
+    "sourceReference": "HKAPI-194"
+  },
+  "HKAPI-195": {
+    "documentationUrl": "https://data.gov.hk/en-data/dataset/hk-had-json1-licensed-hotels-and-guesthouses",
+    "mediaType": "application/json",
+    "provenance": "synthetic-authored",
+    "recipeSha256": "455df2af11834e58c3c9e676a3e6ef83a3b623d5cd68fe88f53bdd35a8c0148d",
+    "requestFixture": "hkapi-195/request.json",
+    "responseFixture": "hkapi-195/response.json",
+    "responseSha256": "c7ab2dae9bc76e759d0db4ff5ae900da3101110ab9a41f60ac6a5a53f08c9d86",
+    "sourceReference": "HKAPI-195"
+  },
+  "HKAPI-196": {
+    "documentationUrl": "https://data.gov.hk/en-data/dataset/hk-had-json1-licensed-karaoke-establishments",
+    "mediaType": "application/json",
+    "provenance": "synthetic-authored",
+    "recipeSha256": "34d4d730fc8dd1b9c926eb4a6e5705c10270dbb8630fc540fd67d60311e9d8f2",
+    "requestFixture": "hkapi-196/request.json",
+    "responseFixture": "hkapi-196/response.json",
+    "responseSha256": "c7ab2dae9bc76e759d0db4ff5ae900da3101110ab9a41f60ac6a5a53f08c9d86",
+    "sourceReference": "HKAPI-196"
+  },
+  "HKAPI-197": {
+    "documentationUrl": "https://data.gov.hk/en-data/dataset/hk-had-json1-licensed-club-houses",
+    "mediaType": "application/json",
+    "provenance": "synthetic-authored",
+    "recipeSha256": "c88f9dcbf92956d5d4ee626b2a3d1c61ce982447355cbb19565185788ae43e29",
+    "requestFixture": "hkapi-197/request.json",
+    "responseFixture": "hkapi-197/response.json",
+    "responseSha256": "c7ab2dae9bc76e759d0db4ff5ae900da3101110ab9a41f60ac6a5a53f08c9d86",
+    "sourceReference": "HKAPI-197"
+  },
+  "HKAPI-198": {
+    "documentationUrl": "https://data.gov.hk/en-data/dataset/hk-lcsd-facility-facility-bkbcvenue",
+    "mediaType": "application/json",
+    "provenance": "synthetic-authored",
+    "recipeSha256": "b3dca5469c4254031b5c5a1d8c9e398d3c7161bb4502aa3c85bc4cfcf16b1aa6",
+    "requestFixture": "hkapi-198/request.json",
+    "responseFixture": "hkapi-198/response.json",
+    "responseSha256": "c7ab2dae9bc76e759d0db4ff5ae900da3101110ab9a41f60ac6a5a53f08c9d86",
+    "sourceReference": "HKAPI-198"
+  },
+  "HKAPI-199": {
+    "documentationUrl": "https://data.gov.hk/en-data/dataset/hk-lcsd-event-event-leisure",
+    "mediaType": "application/json",
+    "provenance": "synthetic-authored",
+    "recipeSha256": "09a6e96c3e3afeda05bad37d6cf521fb6b432e64250a5b6a6fae27f927def319",
+    "requestFixture": "hkapi-199/request.json",
+    "responseFixture": "hkapi-199/response.json",
+    "responseSha256": "c7ab2dae9bc76e759d0db4ff5ae900da3101110ab9a41f60ac6a5a53f08c9d86",
+    "sourceReference": "HKAPI-199"
+  },
+  "HKAPI-200": {
+    "documentationUrl": "https://data.gov.hk/en-data/dataset/hk-lcsd-lib-lib-computers",
+    "mediaType": "application/json",
+    "provenance": "synthetic-authored",
+    "recipeSha256": "8eb6ce1512285d2cd9dff06532c1a593c6cfcafba498fa6cf59dbfcc6c6b54a6",
+    "requestFixture": "hkapi-200/request.json",
+    "responseFixture": "hkapi-200/response.json",
+    "responseSha256": "c7ab2dae9bc76e759d0db4ff5ae900da3101110ab9a41f60ac6a5a53f08c9d86",
+    "sourceReference": "HKAPI-200"
+  },
+  "HKAPI-201": {
+    "documentationUrl": "https://data.gov.hk/en-data/dataset/hk-lcsd-lib-lib-newadd",
+    "mediaType": "application/json",
+    "provenance": "synthetic-authored",
+    "recipeSha256": "5ebef96e36a7fae724d947b95c1beb9984f49312bf32104185fb4351ac03e196",
+    "requestFixture": "hkapi-201/request.json",
+    "responseFixture": "hkapi-201/response.json",
+    "responseSha256": "c7ab2dae9bc76e759d0db4ff5ae900da3101110ab9a41f60ac6a5a53f08c9d86",
+    "sourceReference": "HKAPI-201"
+  },
+  "HKAPI-202": {
+    "documentationUrl": "https://data.gov.hk/en-data/dataset/hk-lcsd-csdi-libraries",
+    "mediaType": "application/json",
+    "provenance": "synthetic-authored",
+    "recipeSha256": "0808e9fe764beb49544d4d74a40eb26e126250149ac4e7f4d6d69cd2d6ea3c62",
+    "requestFixture": "hkapi-202/request.json",
+    "responseFixture": "hkapi-202/response.json",
+    "responseSha256": "c7ab2dae9bc76e759d0db4ff5ae900da3101110ab9a41f60ac6a5a53f08c9d86",
+    "sourceReference": "HKAPI-202"
+  },
+  "HKAPI-203": {
+    "documentationUrl": "https://data.gov.hk/en-data/dataset/hk-lcsd-csdi-swimming-pools",
+    "mediaType": "application/json",
+    "provenance": "synthetic-authored",
+    "recipeSha256": "d83abee4cf0dc7a391256e1369a634fc79cab580337b66a73654449e3d7883bd",
+    "requestFixture": "hkapi-203/request.json",
+    "responseFixture": "hkapi-203/response.json",
+    "responseSha256": "c7ab2dae9bc76e759d0db4ff5ae900da3101110ab9a41f60ac6a5a53f08c9d86",
+    "sourceReference": "HKAPI-203"
+  },
+  "HKAPI-204": {
+    "documentationUrl": "https://data.gov.hk/en-data/dataset/hk-lcsd-csdi-sports-centres",
+    "mediaType": "application/json",
+    "provenance": "synthetic-authored",
+    "recipeSha256": "699dd9bc4d6b96bdd7357adbedf5bbc05a1f3eeae4f7af8e4655849b46ef8763",
+    "requestFixture": "hkapi-204/request.json",
+    "responseFixture": "hkapi-204/response.json",
+    "responseSha256": "c7ab2dae9bc76e759d0db4ff5ae900da3101110ab9a41f60ac6a5a53f08c9d86",
+    "sourceReference": "HKAPI-204"
+  },
+  "HKAPI-205": {
+    "documentationUrl": "https://data.gov.hk/en-data/dataset/hk-lcsd-csdi-barbecue-areas",
+    "mediaType": "application/json",
+    "provenance": "synthetic-authored",
+    "recipeSha256": "7e66ca839b63bfc56e1f5f38ec582722bc3c4d014f6d79b8342b093145260f5c",
+    "requestFixture": "hkapi-205/request.json",
+    "responseFixture": "hkapi-205/response.json",
+    "responseSha256": "c7ab2dae9bc76e759d0db4ff5ae900da3101110ab9a41f60ac6a5a53f08c9d86",
+    "sourceReference": "HKAPI-205"
+  },
+  "HKAPI-206": {
+    "documentationUrl": "https://data.gov.hk/en-data/dataset/hk-lcsd-facility-facility-mbp",
+    "mediaType": "application/json",
+    "provenance": "synthetic-authored",
+    "recipeSha256": "1297721196fb273602555ceb3af714d7b43dfa8708f6b1ae18dae22bd06c6809",
+    "requestFixture": "hkapi-206/request.json",
+    "responseFixture": "hkapi-206/response.json",
+    "responseSha256": "c7ab2dae9bc76e759d0db4ff5ae900da3101110ab9a41f60ac6a5a53f08c9d86",
+    "sourceReference": "HKAPI-206"
+  },
+  "HKAPI-207": {
+    "documentationUrl": "https://data.gov.hk/en-data/dataset/hk-lcsd-csdi-swimming-pools-attendance",
+    "mediaType": "application/json",
+    "provenance": "synthetic-authored",
+    "recipeSha256": "bb1fccdee58f3bf72dc8f144c9e8b45640d42b30330e3b1c80f4b81dd76fac7c",
+    "requestFixture": "hkapi-207/request.json",
+    "responseFixture": "hkapi-207/response.json",
+    "responseSha256": "c7ab2dae9bc76e759d0db4ff5ae900da3101110ab9a41f60ac6a5a53f08c9d86",
+    "sourceReference": "HKAPI-207"
+  },
+  "HKAPI-208": {
+    "documentationUrl": "https://data.gov.hk/en-data/dataset/hk-cstb-cstb_tc-tc-hktb-events",
+    "mediaType": "application/json",
+    "provenance": "synthetic-authored",
+    "recipeSha256": "8a7988cefc190ada0bcc52afe5ea3f23b659d7a4f1d0c60938a55ab76d6dd62c",
+    "requestFixture": "hkapi-208/request.json",
+    "responseFixture": "hkapi-208/response.json",
+    "responseSha256": "c7ab2dae9bc76e759d0db4ff5ae900da3101110ab9a41f60ac6a5a53f08c9d86",
+    "sourceReference": "HKAPI-208"
+  },
+  "HKAPI-209": {
+    "documentationUrl": "https://data.gov.hk/en-data/dataset/hk-cstb-cstb_tc-tc-hk-major-attractions-general-info",
+    "mediaType": "application/json",
+    "provenance": "synthetic-authored",
+    "recipeSha256": "0981bdef7e9de5bae5fa9f797fce3195684f42744fa71f167e4bab4fc48ff6ee",
+    "requestFixture": "hkapi-209/request.json",
+    "responseFixture": "hkapi-209/response.json",
+    "responseSha256": "c7ab2dae9bc76e759d0db4ff5ae900da3101110ab9a41f60ac6a5a53f08c9d86",
+    "sourceReference": "HKAPI-209"
+  },
+  "HKAPI-210": {
+    "documentationUrl": "https://data.gov.hk/en-data/dataset/hk-cstb-cstb_tc-tc-average-achieved-hotel-room-rate",
+    "mediaType": "application/json",
+    "provenance": "synthetic-authored",
+    "recipeSha256": "a78ce85d33bbe2932b968db1031aa22072722cf177f728e793e735e0c16aa7f7",
+    "requestFixture": "hkapi-210/request.json",
+    "responseFixture": "hkapi-210/response.json",
+    "responseSha256": "c7ab2dae9bc76e759d0db4ff5ae900da3101110ab9a41f60ac6a5a53f08c9d86",
+    "sourceReference": "HKAPI-210"
+  },
+  "HKAPI-211": {
+    "documentationUrl": "https://data.gov.hk/en-data/dataset/rehabsociety-access-accessibile-facilities",
+    "mediaType": "application/json",
+    "provenance": "synthetic-authored",
+    "recipeSha256": "0a49ed53b3e18ac3674d6add4083e9ed2bafd2991193a1b9d8b459bfb195b7e8",
+    "requestFixture": "hkapi-211/request.json",
+    "responseFixture": "hkapi-211/response.json",
+    "responseSha256": "c7ab2dae9bc76e759d0db4ff5ae900da3101110ab9a41f60ac6a5a53f08c9d86",
+    "sourceReference": "HKAPI-211"
+  },
+  "HKAPI-212": {
+    "documentationUrl": "https://data.gov.hk/en-data/dataset/hk-housing-eslocator-eslocator",
+    "mediaType": "application/json",
+    "provenance": "synthetic-authored",
+    "recipeSha256": "a78da92d173e60b69120e708eeb46a3995d5971bdcff12584c8d9cb79355e44c",
+    "requestFixture": "hkapi-212/request.json",
+    "responseFixture": "hkapi-212/response.json",
+    "responseSha256": "c7ab2dae9bc76e759d0db4ff5ae900da3101110ab9a41f60ac6a5a53f08c9d86",
+    "sourceReference": "HKAPI-212"
+  },
+  "HKAPI-213": {
+    "documentationUrl": "https://data.gov.hk/en-data/dataset/hk-housing-emms-emms-housing-stock",
+    "mediaType": "application/json",
+    "provenance": "synthetic-authored",
+    "recipeSha256": "0fa867aad72659ae9f56e2792c87d5cdd32046634179dfc922ea7940616a16df",
+    "requestFixture": "hkapi-213/request.json",
+    "responseFixture": "hkapi-213/response.json",
+    "responseSha256": "c7ab2dae9bc76e759d0db4ff5ae900da3101110ab9a41f60ac6a5a53f08c9d86",
+    "sourceReference": "HKAPI-213"
+  },
+  "HKAPI-214": {
+    "documentationUrl": "https://data.gov.hk/en-data/dataset/hk-housing-hcp-hcp-ha",
+    "mediaType": "application/json",
+    "provenance": "synthetic-authored",
+    "recipeSha256": "ac13cbd05b00cd599ad036b60ce76ea3f411f8d4c75f06f125389140d08ba841",
+    "requestFixture": "hkapi-214/request.json",
+    "responseFixture": "hkapi-214/response.json",
+    "responseSha256": "c7ab2dae9bc76e759d0db4ff5ae900da3101110ab9a41f60ac6a5a53f08c9d86",
+    "sourceReference": "HKAPI-214"
+  },
+  "HKAPI-215": {
+    "documentationUrl": "https://data.gov.hk/en-data/dataset/hk-housing-los-los",
+    "mediaType": "application/json",
+    "provenance": "synthetic-authored",
+    "recipeSha256": "aa429050086cef0ac3aed227fce3e8fbe94b8581195e916af3f227e77258561d",
+    "requestFixture": "hkapi-215/request.json",
+    "responseFixture": "hkapi-215/response.json",
+    "responseSha256": "c7ab2dae9bc76e759d0db4ff5ae900da3101110ab9a41f60ac6a5a53f08c9d86",
+    "sourceReference": "HKAPI-215"
+  },
+  "HKAPI-216": {
+    "documentationUrl": "https://data.gov.hk/en-data/dataset/hkhs-hkhs-hkhs-commercial-leasing",
+    "mediaType": "application/json",
+    "provenance": "synthetic-authored",
+    "recipeSha256": "48a4199910f18955ef2c5737b46252d35bdb8634e55dcce164b1318db13ed731",
+    "requestFixture": "hkapi-216/request.json",
+    "responseFixture": "hkapi-216/response.json",
+    "responseSha256": "c7ab2dae9bc76e759d0db4ff5ae900da3101110ab9a41f60ac6a5a53f08c9d86",
+    "sourceReference": "HKAPI-216"
+  },
+  "HKAPI-217": {
+    "documentationUrl": "https://data.gov.hk/en-data/dataset/hkhs-hkhs-hkhs-estates-and-projects",
+    "mediaType": "application/json",
+    "provenance": "synthetic-authored",
+    "recipeSha256": "32945d8ed66af4fc079d92f937d2a521f656034ad00cddb77a3be41d28b42b05",
+    "requestFixture": "hkapi-217/request.json",
+    "responseFixture": "hkapi-217/response.json",
+    "responseSha256": "c7ab2dae9bc76e759d0db4ff5ae900da3101110ab9a41f60ac6a5a53f08c9d86",
+    "sourceReference": "HKAPI-217"
+  },
+  "HKAPI-218": {
+    "documentationUrl": "https://data.gov.hk/en-data/dataset/hk-bd-opendata-registers-of-buildings-department",
+    "mediaType": "application/json",
+    "provenance": "synthetic-authored",
+    "recipeSha256": "eb384445d65a43ee551719d030f8471ffd6deee646bc567e1cf93cf2234aa1d0",
+    "requestFixture": "hkapi-218/request.json",
+    "responseFixture": "hkapi-218/response.json",
+    "responseSha256": "c7ab2dae9bc76e759d0db4ff5ae900da3101110ab9a41f60ac6a5a53f08c9d86",
+    "sourceReference": "HKAPI-218"
+  },
+  "HKAPI-219": {
+    "documentationUrl": "https://data.gov.hk/en-data/dataset/hk-bd-opendata-building-information",
+    "mediaType": "application/json",
+    "provenance": "synthetic-authored",
+    "recipeSha256": "f8734cbf291ba36cc32bead4fcaeb2db6ff730e5cbeb3c9442958743bcf4c308",
+    "requestFixture": "hkapi-219/request.json",
+    "responseFixture": "hkapi-219/response.json",
+    "responseSha256": "c7ab2dae9bc76e759d0db4ff5ae900da3101110ab9a41f60ac6a5a53f08c9d86",
+    "sourceReference": "HKAPI-219"
+  },
+  "HKAPI-220": {
+    "documentationUrl": "https://data.gov.hk/en-data/dataset/hk-bd-opendata-s24-order-1",
+    "mediaType": "application/json",
+    "provenance": "synthetic-authored",
+    "recipeSha256": "6437a2ef16f73592db2cf4d64a2de8c3b383467341649e8a6aef562b689f8625",
+    "requestFixture": "hkapi-220/request.json",
+    "responseFixture": "hkapi-220/response.json",
+    "responseSha256": "c7ab2dae9bc76e759d0db4ff5ae900da3101110ab9a41f60ac6a5a53f08c9d86",
+    "sourceReference": "HKAPI-220"
+  },
+  "HKAPI-221": {
+    "documentationUrl": "https://data.gov.hk/en-data/dataset/hk-bd-opendata-monthly-digests",
+    "mediaType": "application/json",
+    "provenance": "synthetic-authored",
+    "recipeSha256": "3a2d8c5c10153b7e7a9d3bbf479947c458f1b142bd083748fb9aa7b7ffad4810",
+    "requestFixture": "hkapi-221/request.json",
+    "responseFixture": "hkapi-221/response.json",
+    "responseSha256": "c7ab2dae9bc76e759d0db4ff5ae900da3101110ab9a41f60ac6a5a53f08c9d86",
+    "sourceReference": "HKAPI-221"
+  },
+  "HKAPI-222": {
+    "documentationUrl": "https://data.gov.hk/en-data/dataset/hk-bd-opendata-foundation-consent-commenced",
+    "mediaType": "application/json",
+    "provenance": "synthetic-authored",
+    "recipeSha256": "f8c017f013a8e5d4acf5c4180fbb7ea23892dedab906ac7217c045b7697c4aa9",
+    "requestFixture": "hkapi-222/request.json",
+    "responseFixture": "hkapi-222/response.json",
+    "responseSha256": "c7ab2dae9bc76e759d0db4ff5ae900da3101110ab9a41f60ac6a5a53f08c9d86",
+    "sourceReference": "HKAPI-222"
+  },
+  "HKAPI-223": {
+    "documentationUrl": "https://data.gov.hk/en-data/dataset/hk-bd-opendata-ldb",
+    "mediaType": "application/json",
+    "provenance": "synthetic-authored",
+    "recipeSha256": "9dadd8b7aff8d8979f46d9d0baeed439fd589be5b0b63ec8b5d5a0c04055a2ab",
+    "requestFixture": "hkapi-223/request.json",
+    "responseFixture": "hkapi-223/response.json",
+    "responseSha256": "c7ab2dae9bc76e759d0db4ff5ae900da3101110ab9a41f60ac6a5a53f08c9d86",
+    "sourceReference": "HKAPI-223"
+  },
+  "HKAPI-224": {
+    "documentationUrl": "https://data.gov.hk/en-data/dataset/tpd-tpb1-digital-planning-data-of-statutory-plans",
+    "mediaType": "application/json",
+    "provenance": "synthetic-authored",
+    "recipeSha256": "76722574a765778670b4a86a1750beff062f8b364ef55670a48fff2eac283737",
+    "requestFixture": "hkapi-224/request.json",
+    "responseFixture": "hkapi-224/response.json",
+    "responseSha256": "c7ab2dae9bc76e759d0db4ff5ae900da3101110ab9a41f60ac6a5a53f08c9d86",
+    "sourceReference": "HKAPI-224"
+  },
+  "HKAPI-225": {
+    "documentationUrl": "https://data.gov.hk/en-data/dataset/hk-pland-pland1-boundaries-of-tpu-sb-vc",
+    "mediaType": "application/json",
+    "provenance": "synthetic-authored",
+    "recipeSha256": "ad5b039875415b197c92a006f1efe2e20090a72898ef1585498c1381c30b573b",
+    "requestFixture": "hkapi-225/request.json",
+    "responseFixture": "hkapi-225/response.json",
+    "responseSha256": "c7ab2dae9bc76e759d0db4ff5ae900da3101110ab9a41f60ac6a5a53f08c9d86",
+    "sourceReference": "HKAPI-225"
+  },
+  "HKAPI-226": {
+    "documentationUrl": "https://data.gov.hk/en-data/dataset/hk-pland-pland1-2021-based-tpedm",
+    "mediaType": "application/json",
+    "provenance": "synthetic-authored",
+    "recipeSha256": "63da82b1e0decba94922ddb89f472993b3e06d94ae84e69c74ac64acb86b2c23",
+    "requestFixture": "hkapi-226/request.json",
+    "responseFixture": "hkapi-226/response.json",
+    "responseSha256": "c7ab2dae9bc76e759d0db4ff5ae900da3101110ab9a41f60ac6a5a53f08c9d86",
+    "sourceReference": "HKAPI-226"
+  },
+  "HKAPI-227": {
+    "documentationUrl": "https://data.gov.hk/en-data/dataset/hk-landsd-openmap-landsd-lot",
+    "mediaType": "application/json",
+    "provenance": "synthetic-authored",
+    "recipeSha256": "b8bc5bf5a05ef53e8367a6116c8793b4b6447165abf513c2b42721dd425f7503",
+    "requestFixture": "hkapi-227/request.json",
+    "responseFixture": "hkapi-227/response.json",
+    "responseSha256": "c7ab2dae9bc76e759d0db4ff5ae900da3101110ab9a41f60ac6a5a53f08c9d86",
+    "sourceReference": "HKAPI-227"
+  },
+  "HKAPI-228": {
+    "documentationUrl": "https://data.gov.hk/en-data/dataset/hk-landsd-openmap-landsd-government-land-allocation",
+    "mediaType": "application/json",
+    "provenance": "synthetic-authored",
+    "recipeSha256": "5bc947db0dc4ea6646f4efc894fbb507098701b508e7baa6cce3345faebe1962",
+    "requestFixture": "hkapi-228/request.json",
+    "responseFixture": "hkapi-228/response.json",
+    "responseSha256": "c7ab2dae9bc76e759d0db4ff5ae900da3101110ab9a41f60ac6a5a53f08c9d86",
+    "sourceReference": "HKAPI-228"
+  },
+  "HKAPI-229": {
+    "documentationUrl": "https://data.gov.hk/en-data/dataset/hk-landsd-openmap-short-term-tenancy",
+    "mediaType": "application/json",
+    "provenance": "synthetic-authored",
+    "recipeSha256": "4c262bdd0cbec5433ae962bc16d484c4a57b02f237aa4ede55757dfb1d1f4fa4",
+    "requestFixture": "hkapi-229/request.json",
+    "responseFixture": "hkapi-229/response.json",
+    "responseSha256": "c7ab2dae9bc76e759d0db4ff5ae900da3101110ab9a41f60ac6a5a53f08c9d86",
+    "sourceReference": "HKAPI-229"
+  },
+  "HKAPI-230": {
+    "documentationUrl": "https://data.gov.hk/en-data/dataset/hk-landsd-openmap-landsd-building-licence",
+    "mediaType": "application/json",
+    "provenance": "synthetic-authored",
+    "recipeSha256": "c0d0c37a70cd2f5eca9a145b8ed232aa457eb8266ec81cd36406ebc4f89ac373",
+    "requestFixture": "hkapi-230/request.json",
+    "responseFixture": "hkapi-230/response.json",
+    "responseSha256": "c7ab2dae9bc76e759d0db4ff5ae900da3101110ab9a41f60ac6a5a53f08c9d86",
+    "sourceReference": "HKAPI-230"
+  },
+  "HKAPI-231": {
+    "documentationUrl": "https://data.gov.hk/en-data/dataset/hk-landsd-openmap-landsd-slope-maintenance-responsibility-boundaries",
+    "mediaType": "application/json",
+    "provenance": "synthetic-authored",
+    "recipeSha256": "19a592fd9cb58d34a8b98a75dc8262bd1372c04b0a9e2ca7235ed0f94adba8b1",
+    "requestFixture": "hkapi-231/request.json",
+    "responseFixture": "hkapi-231/response.json",
+    "responseSha256": "c7ab2dae9bc76e759d0db4ff5ae900da3101110ab9a41f60ac6a5a53f08c9d86",
+    "sourceReference": "HKAPI-231"
+  },
+  "HKAPI-232": {
+    "documentationUrl": "https://data.gov.hk/en-data/dataset/hk-lr-data9-landreg",
+    "mediaType": "application/json",
+    "provenance": "synthetic-authored",
+    "recipeSha256": "9629a1097d98ae3189637b0f3d9c864004e1b3b48a2a25676dc890e6be6511f5",
+    "requestFixture": "hkapi-232/request.json",
+    "responseFixture": "hkapi-232/response.json",
+    "responseSha256": "c7ab2dae9bc76e759d0db4ff5ae900da3101110ab9a41f60ac6a5a53f08c9d86",
+    "sourceReference": "HKAPI-232"
+  },
+  "HKAPI-233": {
+    "documentationUrl": "https://data.gov.hk/en-data/dataset/hk-had-json1-db-of-private-buildings-in-hong-kong",
+    "mediaType": "application/json",
+    "provenance": "synthetic-authored",
+    "recipeSha256": "3a74f0bcbc6ecb55d863c8a18c5c3c9ac781e28f2505968b79b29515349de3b1",
+    "requestFixture": "hkapi-233/request.json",
+    "responseFixture": "hkapi-233/response.json",
+    "responseSha256": "c7ab2dae9bc76e759d0db4ff5ae900da3101110ab9a41f60ac6a5a53f08c9d86",
+    "sourceReference": "HKAPI-233"
+  },
+  "HKAPI-234": {
+    "documentationUrl": "https://data.gov.hk/en-data/dataset/hk-cedd-csu-cedd-incident",
+    "mediaType": "application/json",
+    "provenance": "synthetic-authored",
+    "recipeSha256": "a2c2e06dd6df5e09a2a96fab708ce44341e5c1e62bac0cff2ac83cefaaddf95b",
+    "requestFixture": "hkapi-234/request.json",
+    "responseFixture": "hkapi-234/response.json",
+    "responseSha256": "c7ab2dae9bc76e759d0db4ff5ae900da3101110ab9a41f60ac6a5a53f08c9d86",
+    "sourceReference": "HKAPI-234"
+  },
+  "HKAPI-235": {
+    "documentationUrl": "https://data.gov.hk/en-data/dataset/hk-edb-schinfo-school-location-and-information",
+    "mediaType": "application/json",
+    "provenance": "synthetic-authored",
+    "recipeSha256": "065419f0cc26f61c4edb2a1f7328dd5ad985d0d6192002e247aa6008fd1070aa",
+    "requestFixture": "hkapi-235/request.json",
+    "responseFixture": "hkapi-235/response.json",
+    "responseSha256": "c7ab2dae9bc76e759d0db4ff5ae900da3101110ab9a41f60ac6a5a53f08c9d86",
+    "sourceReference": "HKAPI-235"
+  },
   "HKAPI-236": {
     "documentationUrl": "https://data.gov.hk/en/help/api-spec",
     "mediaType": "application/json",
@@ -368,5 +1978,295 @@
     "responseFixture": "hkapi-236/response.json",
     "responseSha256": "ab8e56d5065bd5ce5fae899679a6c80ac04485d509760a9ad02cc5f4f2deb6a6",
     "sourceReference": "HKAPI-236"
+  },
+  "HKAPI-237": {
+    "documentationUrl": "https://data.gov.hk/en-data/dataset/hk-edb-schinfo-registration-info",
+    "mediaType": "application/json",
+    "provenance": "synthetic-authored",
+    "recipeSha256": "c7668063bc9693641aa769987f1f4503a8dce77081c1b7fbfa237a0f1de5e791",
+    "requestFixture": "hkapi-237/request.json",
+    "responseFixture": "hkapi-237/response.json",
+    "responseSha256": "c7ab2dae9bc76e759d0db4ff5ae900da3101110ab9a41f60ac6a5a53f08c9d86",
+    "sourceReference": "HKAPI-237"
+  },
+  "HKAPI-238": {
+    "documentationUrl": "https://data.gov.hk/en-data/dataset/hk-edb-hei-geo-referenced-data",
+    "mediaType": "application/json",
+    "provenance": "synthetic-authored",
+    "recipeSha256": "a5e0b80c50a9cbc1736a7423e00de03f8f3e8a0936d98e379559e8f3ed31ee23",
+    "requestFixture": "hkapi-238/request.json",
+    "responseFixture": "hkapi-238/response.json",
+    "responseSha256": "c7ab2dae9bc76e759d0db4ff5ae900da3101110ab9a41f60ac6a5a53f08c9d86",
+    "sourceReference": "HKAPI-238"
+  },
+  "HKAPI-239": {
+    "documentationUrl": "https://data.gov.hk/en-data/dataset/hk-edb-itmospoa-poa-schoolnet-list",
+    "mediaType": "application/json",
+    "provenance": "synthetic-authored",
+    "recipeSha256": "316662f6e3730d5188b5c6dd772ff5437147a9c79a9cc916b51695d5aae8a22e",
+    "requestFixture": "hkapi-239/request.json",
+    "responseFixture": "hkapi-239/response.json",
+    "responseSha256": "c7ab2dae9bc76e759d0db4ff5ae900da3101110ab9a41f60ac6a5a53f08c9d86",
+    "sourceReference": "HKAPI-239"
+  },
+  "HKAPI-240": {
+    "documentationUrl": "https://data.gov.hk/en-data/dataset/hk-edb-sspa-sspa-schservingnet",
+    "mediaType": "application/json",
+    "provenance": "synthetic-authored",
+    "recipeSha256": "9fdad77ba007264cf72090da2297d0955348b25855d18e6a6365d7776591d894",
+    "requestFixture": "hkapi-240/request.json",
+    "responseFixture": "hkapi-240/response.json",
+    "responseSha256": "c7ab2dae9bc76e759d0db4ff5ae900da3101110ab9a41f60ac6a5a53f08c9d86",
+    "sourceReference": "HKAPI-240"
+  },
+  "HKAPI-241": {
+    "documentationUrl": "https://data.gov.hk/en-data/dataset/hk-edb-dss-dds-school-list",
+    "mediaType": "application/json",
+    "provenance": "synthetic-authored",
+    "recipeSha256": "ad7a955aacfb7f40761c499cae48d5e266501911b83ceee7e3f81077dd62479f",
+    "requestFixture": "hkapi-241/request.json",
+    "responseFixture": "hkapi-241/response.json",
+    "responseSha256": "c7ab2dae9bc76e759d0db4ff5ae900da3101110ab9a41f60ac6a5a53f08c9d86",
+    "sourceReference": "HKAPI-241"
+  },
+  "HKAPI-242": {
+    "documentationUrl": "https://data.gov.hk/en-data/dataset/hk-edb-tts2-through-train-school-list",
+    "mediaType": "application/json",
+    "provenance": "synthetic-authored",
+    "recipeSha256": "98190b47ef6718bfc4dd14142c710029846160bf22c37a6d47b9084f4b38d04e",
+    "requestFixture": "hkapi-242/request.json",
+    "responseFixture": "hkapi-242/response.json",
+    "responseSha256": "c7ab2dae9bc76e759d0db4ff5ae900da3101110ab9a41f60ac6a5a53f08c9d86",
+    "sourceReference": "HKAPI-242"
+  },
+  "HKAPI-243": {
+    "documentationUrl": "https://data.gov.hk/en-data/dataset/hk-edb-kgjoinkes-kg-join-kes",
+    "mediaType": "application/json",
+    "provenance": "synthetic-authored",
+    "recipeSha256": "bb5c521da40b762ad242beaf21168a074855771cbf7f62eae14e5a7fc0fea517",
+    "requestFixture": "hkapi-243/request.json",
+    "responseFixture": "hkapi-243/response.json",
+    "responseSha256": "c7ab2dae9bc76e759d0db4ff5ae900da3101110ab9a41f60ac6a5a53f08c9d86",
+    "sourceReference": "HKAPI-243"
+  },
+  "HKAPI-244": {
+    "documentationUrl": "https://data.gov.hk/en-data/dataset/hk-edb-crossbound-num-cbs-var-land",
+    "mediaType": "application/json",
+    "provenance": "synthetic-authored",
+    "recipeSha256": "6ed39a02b9fed2c51c1b5115ff7bb4f3527e2b0b42a234d191299e253ee0e6d6",
+    "requestFixture": "hkapi-244/request.json",
+    "responseFixture": "hkapi-244/response.json",
+    "responseSha256": "c7ab2dae9bc76e759d0db4ff5ae900da3101110ab9a41f60ac6a5a53f08c9d86",
+    "sourceReference": "HKAPI-244"
+  },
+  "HKAPI-245": {
+    "documentationUrl": "https://data.gov.hk/en-data/dataset/hk-swd-elderly-list-of-residential-care-homes-for-the-elderly",
+    "mediaType": "application/json",
+    "provenance": "synthetic-authored",
+    "recipeSha256": "fd697cd9cdb4a77c083af622f18b1ac80a33832cc9e5019eafeaced0c7b92d43",
+    "requestFixture": "hkapi-245/request.json",
+    "responseFixture": "hkapi-245/response.json",
+    "responseSha256": "c7ab2dae9bc76e759d0db4ff5ae900da3101110ab9a41f60ac6a5a53f08c9d86",
+    "sourceReference": "HKAPI-245"
+  },
+  "HKAPI-246": {
+    "documentationUrl": "https://data.gov.hk/en-data/dataset/hk-swd-elderly-list-of-enhanced-home-and-community-care-services-teams",
+    "mediaType": "application/json",
+    "provenance": "synthetic-authored",
+    "recipeSha256": "f9d97ef27d58c592581345f874143dd3cc9b7a800e1bf84f7cecf71eeaa54e35",
+    "requestFixture": "hkapi-246/request.json",
+    "responseFixture": "hkapi-246/response.json",
+    "responseSha256": "c7ab2dae9bc76e759d0db4ff5ae900da3101110ab9a41f60ac6a5a53f08c9d86",
+    "sourceReference": "HKAPI-246"
+  },
+  "HKAPI-247": {
+    "documentationUrl": "https://data.gov.hk/en-data/dataset/hk-swd-ssb-ssfu",
+    "mediaType": "application/json",
+    "provenance": "synthetic-authored",
+    "recipeSha256": "902a33cf7961c25cee10ea1e48219c17ec6b856d5ac6805f3bca75c9fbd95d5f",
+    "requestFixture": "hkapi-247/request.json",
+    "responseFixture": "hkapi-247/response.json",
+    "responseSha256": "c7ab2dae9bc76e759d0db4ff5ae900da3101110ab9a41f60ac6a5a53f08c9d86",
+    "sourceReference": "HKAPI-247"
+  },
+  "HKAPI-248": {
+    "documentationUrl": "https://data.gov.hk/en-data/dataset/hk-swd-fcw-list-ccc",
+    "mediaType": "application/json",
+    "provenance": "synthetic-authored",
+    "recipeSha256": "ebaff6c67465738ad3cbf6c1e42c80f04158241b4f564849417e94ce8e883ccc",
+    "requestFixture": "hkapi-248/request.json",
+    "responseFixture": "hkapi-248/response.json",
+    "responseSha256": "c7ab2dae9bc76e759d0db4ff5ae900da3101110ab9a41f60ac6a5a53f08c9d86",
+    "sourceReference": "HKAPI-248"
+  },
+  "HKAPI-249": {
+    "documentationUrl": "https://data.gov.hk/en-data/dataset/hk-swd-fcw-list-sgh",
+    "mediaType": "application/json",
+    "provenance": "synthetic-authored",
+    "recipeSha256": "d1cac4ab3df959c5b11fd997ef7859691ea6d0dbe1ab07ac28fad1b8035dc08c",
+    "requestFixture": "hkapi-249/request.json",
+    "responseFixture": "hkapi-249/response.json",
+    "responseSha256": "c7ab2dae9bc76e759d0db4ff5ae900da3101110ab9a41f60ac6a5a53f08c9d86",
+    "sourceReference": "HKAPI-249"
+  },
+  "HKAPI-250": {
+    "documentationUrl": "https://data.gov.hk/en-data/dataset/hk-swd-fcw-list-ists",
+    "mediaType": "application/json",
+    "provenance": "synthetic-authored",
+    "recipeSha256": "2193f3e911266c11bb80c8f8b10dd97477686e076883c7723bc68f618c50b72f",
+    "requestFixture": "hkapi-250/request.json",
+    "responseFixture": "hkapi-250/response.json",
+    "responseSha256": "c7ab2dae9bc76e759d0db4ff5ae900da3101110ab9a41f60ac6a5a53f08c9d86",
+    "sourceReference": "HKAPI-250"
+  },
+  "HKAPI-251": {
+    "documentationUrl": "https://data.gov.hk/en-data/dataset/hk-swd-fcw-ciss",
+    "mediaType": "application/json",
+    "provenance": "synthetic-authored",
+    "recipeSha256": "aec2a16ca4cb388105b16c45796b3b067288329c8ab355748681ffa0c1aaf36e",
+    "requestFixture": "hkapi-251/request.json",
+    "responseFixture": "hkapi-251/response.json",
+    "responseSha256": "c7ab2dae9bc76e759d0db4ff5ae900da3101110ab9a41f60ac6a5a53f08c9d86",
+    "sourceReference": "HKAPI-251"
+  },
+  "HKAPI-252": {
+    "documentationUrl": "https://data.gov.hk/en-data/dataset/hk-swd-fcw-list-swsppi",
+    "mediaType": "application/json",
+    "provenance": "synthetic-authored",
+    "recipeSha256": "b956f1a48d438d050b3108b6c4a57b7b465a2f6610d9284bf3d3422c20952efe",
+    "requestFixture": "hkapi-252/request.json",
+    "responseFixture": "hkapi-252/response.json",
+    "responseSha256": "c7ab2dae9bc76e759d0db4ff5ae900da3101110ab9a41f60ac6a5a53f08c9d86",
+    "sourceReference": "HKAPI-252"
+  },
+  "HKAPI-253": {
+    "documentationUrl": "https://data.gov.hk/en-data/dataset/hk-swd-rm-list-of-iss",
+    "mediaType": "application/json",
+    "provenance": "synthetic-authored",
+    "recipeSha256": "cd7ed2d28268a0eb14afb771b6129101a3d04cd1ad44bbf0e4cada450de56b87",
+    "requestFixture": "hkapi-253/request.json",
+    "responseFixture": "hkapi-253/response.json",
+    "responseSha256": "c7ab2dae9bc76e759d0db4ff5ae900da3101110ab9a41f60ac6a5a53f08c9d86",
+    "sourceReference": "HKAPI-253"
+  },
+  "HKAPI-254": {
+    "documentationUrl": "https://data.gov.hk/en-data/dataset/hk-swd-elderly-statistics-on-turn-for-offer",
+    "mediaType": "application/json",
+    "provenance": "synthetic-authored",
+    "recipeSha256": "445750f83e4b5e96b855612697e04bf535ce4fe95213421ce5e2dd12f2aacfc9",
+    "requestFixture": "hkapi-254/request.json",
+    "responseFixture": "hkapi-254/response.json",
+    "responseSha256": "c7ab2dae9bc76e759d0db4ff5ae900da3101110ab9a41f60ac6a5a53f08c9d86",
+    "sourceReference": "HKAPI-254"
+  },
+  "HKAPI-255": {
+    "documentationUrl": "https://data.gov.hk/en-data/dataset/hk-ofca-ofca-ofca-dataset-16",
+    "mediaType": "application/json",
+    "provenance": "synthetic-authored",
+    "recipeSha256": "11aec4e2cbbc5709577adf90f71e06e3d48944daf969d946588c0c152f612ba2",
+    "requestFixture": "hkapi-255/request.json",
+    "responseFixture": "hkapi-255/response.json",
+    "responseSha256": "c7ab2dae9bc76e759d0db4ff5ae900da3101110ab9a41f60ac6a5a53f08c9d86",
+    "sourceReference": "HKAPI-255"
+  },
+  "HKAPI-256": {
+    "documentationUrl": "https://data.gov.hk/en-data/dataset/hk-ofca-ofca-ofca-dataset-22",
+    "mediaType": "application/json",
+    "provenance": "synthetic-authored",
+    "recipeSha256": "bd98ec890bb1226e1dd17ab80a4d8746fd79b8b8bbb71ee3a400381158d77997",
+    "requestFixture": "hkapi-256/request.json",
+    "responseFixture": "hkapi-256/response.json",
+    "responseSha256": "c7ab2dae9bc76e759d0db4ff5ae900da3101110ab9a41f60ac6a5a53f08c9d86",
+    "sourceReference": "HKAPI-256"
+  },
+  "HKAPI-257": {
+    "documentationUrl": "https://data.gov.hk/en-data/dataset/hk-ofca-ofca-ofca-dataset-17",
+    "mediaType": "application/json",
+    "provenance": "synthetic-authored",
+    "recipeSha256": "43bf3b2044425f682b518cc612e846f9960ad5f1dc9c8bcbda90a92f0c99c015",
+    "requestFixture": "hkapi-257/request.json",
+    "responseFixture": "hkapi-257/response.json",
+    "responseSha256": "c7ab2dae9bc76e759d0db4ff5ae900da3101110ab9a41f60ac6a5a53f08c9d86",
+    "sourceReference": "HKAPI-257"
+  },
+  "HKAPI-258": {
+    "documentationUrl": "https://data.gov.hk/en-data/dataset/hk-ofca-ofca-ofca-dataset-5",
+    "mediaType": "application/json",
+    "provenance": "synthetic-authored",
+    "recipeSha256": "299b488ee64d6499153f5c4fc3e0541289332a2ba514ad8d98153d4db1b9d36e",
+    "requestFixture": "hkapi-258/request.json",
+    "responseFixture": "hkapi-258/response.json",
+    "responseSha256": "c7ab2dae9bc76e759d0db4ff5ae900da3101110ab9a41f60ac6a5a53f08c9d86",
+    "sourceReference": "HKAPI-258"
+  },
+  "HKAPI-259": {
+    "documentationUrl": "https://data.gov.hk/en-data/dataset/hk-ofca-ofca-ofca-dataset-25",
+    "mediaType": "application/json",
+    "provenance": "synthetic-authored",
+    "recipeSha256": "14d157671c68508b17280702b704173bffa0f17bfe3f6907c9458aa5b0a9ca62",
+    "requestFixture": "hkapi-259/request.json",
+    "responseFixture": "hkapi-259/response.json",
+    "responseSha256": "c7ab2dae9bc76e759d0db4ff5ae900da3101110ab9a41f60ac6a5a53f08c9d86",
+    "sourceReference": "HKAPI-259"
+  },
+  "HKAPI-260": {
+    "documentationUrl": "https://data.gov.hk/en-data/dataset/hk-ofca-ofca-ofca-dataset-26",
+    "mediaType": "application/json",
+    "provenance": "synthetic-authored",
+    "recipeSha256": "39738332b6fcf542ce3c0dd3f7a882767c43ded43c9efd2a3349e03ae0546329",
+    "requestFixture": "hkapi-260/request.json",
+    "responseFixture": "hkapi-260/response.json",
+    "responseSha256": "c7ab2dae9bc76e759d0db4ff5ae900da3101110ab9a41f60ac6a5a53f08c9d86",
+    "sourceReference": "HKAPI-260"
+  },
+  "HKAPI-261": {
+    "documentationUrl": "https://data.gov.hk/en-data/dataset/hk-ofca-ofca-ofca-dataset-40",
+    "mediaType": "application/json",
+    "provenance": "synthetic-authored",
+    "recipeSha256": "1aff103f0e00e40683ace971ec0caf36bb6d115ae1b68ebc9b4ca8022ccae2d0",
+    "requestFixture": "hkapi-261/request.json",
+    "responseFixture": "hkapi-261/response.json",
+    "responseSha256": "c7ab2dae9bc76e759d0db4ff5ae900da3101110ab9a41f60ac6a5a53f08c9d86",
+    "sourceReference": "HKAPI-261"
+  },
+  "HKAPI-262": {
+    "documentationUrl": "https://data.gov.hk/en-data/dataset/hk-ofca-ofca-ofca-dataset-15",
+    "mediaType": "application/json",
+    "provenance": "synthetic-authored",
+    "recipeSha256": "3184fb76594ba3895e2b923c245d297168e4d5d710c36cff8ebca584b1ede4e2",
+    "requestFixture": "hkapi-262/request.json",
+    "responseFixture": "hkapi-262/response.json",
+    "responseSha256": "c7ab2dae9bc76e759d0db4ff5ae900da3101110ab9a41f60ac6a5a53f08c9d86",
+    "sourceReference": "HKAPI-262"
+  },
+  "HKAPI-263": {
+    "documentationUrl": "https://data.gov.hk/en-data/dataset/hk-ofca-ofca-ofca-dataset-12",
+    "mediaType": "application/json",
+    "provenance": "synthetic-authored",
+    "recipeSha256": "e23b8d255cd5bb2a224ce5b02fcf32e10acf5e6f440f2da9a623ec352deb577f",
+    "requestFixture": "hkapi-263/request.json",
+    "responseFixture": "hkapi-263/response.json",
+    "responseSha256": "c7ab2dae9bc76e759d0db4ff5ae900da3101110ab9a41f60ac6a5a53f08c9d86",
+    "sourceReference": "HKAPI-263"
+  },
+  "HKAPI-264": {
+    "documentationUrl": "https://data.gov.hk/en-data/dataset/hk-dpo-smart_lmpt-smart-lamppost-compartment-data-resources",
+    "mediaType": "application/json",
+    "provenance": "synthetic-authored",
+    "recipeSha256": "ef0ae58e535d8fb140f8bd78da19910e0f880869bd498ff792e2c6188cd67286",
+    "requestFixture": "hkapi-264/request.json",
+    "responseFixture": "hkapi-264/response.json",
+    "responseSha256": "c7ab2dae9bc76e759d0db4ff5ae900da3101110ab9a41f60ac6a5a53f08c9d86",
+    "sourceReference": "HKAPI-264"
+  },
+  "HKAPI-265": {
+    "documentationUrl": "https://data.gov.hk/en-data/dataset/hk-dpo-smart_lmpt-smart-lamppost-compartment-data-resources",
+    "mediaType": "application/json",
+    "provenance": "synthetic-authored",
+    "recipeSha256": "ea50ee09ffb5cc873e571ca86d2596269f090b2e4e5280e04e2b42b0902e9c15",
+    "requestFixture": "hkapi-265/request.json",
+    "responseFixture": "hkapi-265/response.json",
+    "responseSha256": "c7ab2dae9bc76e759d0db4ff5ae900da3101110ab9a41f60ac6a5a53f08c9d86",
+    "sourceReference": "HKAPI-265"
   }
 }

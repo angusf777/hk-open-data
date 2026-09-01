@@ -87,12 +87,25 @@ The repository now includes a practical access recipe for all **265 official sou
 turns source documentation into a versioned request contract or explains the exact manual step
 still needed:
 
-- **37 executable recipes** have bounded parameters, curl/Python/TypeScript examples, and hashed
+- **227 executable recipes** have bounded parameters, curl/Python/TypeScript examples, and hashed
   synthetic fixtures.
-- **29 of those 37** recorded successful live verification in a bounded run on 1 September 2026;
-  this evidence expires and does not promise later availability.
-- **228 manual guides** identify the official documentation, explain why an executable request is
-  not yet safe to publish, and state the next step.
+- **190 DATA.GOV.HK resource-index recipes** contain 356 reviewed source-to-dataset mappings across
+  350 unique dataset identifiers and resolve them to the
+  provider's current resource URLs. Their package lookups passed on 1 September 2026; they return
+  official metadata and links, not the underlying resource payloads. All 350 identifiers passed
+  the bounded package-metadata check on 1 September 2026.
+- **37 direct-response recipes** contact a documented data endpoint. Twenty-nine passed the same
+  bounded live run; eight retain fixture evidence and a recorded live failure.
+- **38 manual guides** identify a concrete documentation, account, interactive-workflow, or
+  unresolved endpoint boundary. In total, 219 recipes currently have matching live evidence;
+  evidence expires and does not promise later availability.
+
+The **145 external resources** and **111 community MCP projects** are discovery entries, not bundled
+connectors. A 1 September 2026 link check reached or followed a valid redirect for 128 external
+entries and 107 MCP repositories; it recorded findings for the rest. Those checks did not log in to
+external APIs or install and execute third-party MCP code. The repository's own 13-tool read-only
+MCP server is separately covered by contract and integration tests. See the
+[coverage and evidence matrix](docs/access/coverage.md).
 
 Inspect a recipe and generate working code without making a network request:
 

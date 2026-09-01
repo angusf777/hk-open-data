@@ -5,6 +5,7 @@ import ipaddress
 import json
 import socket
 from collections.abc import Callable, Iterable
+from concurrent.futures import ThreadPoolExecutor
 from dataclasses import asdict, dataclass, field
 from datetime import UTC, datetime
 from pathlib import Path
@@ -142,7 +143,7 @@ def _links(records: Iterable[dict[str, object]]) -> list[tuple[str, str, str, st
     result: list[tuple[str, str, str, str | None]] = []
     seen: set[tuple[str, str]] = set()
     for record in records:
-        if record.get("type") != "official":
+        if record.get("type") not in {"official", "external", "mcp"}:
             continue
         resource_id = str(record.get("id", "unknown"))
         urls = record.get("urls")
@@ -175,9 +176,12 @@ def check_urls(
     now: datetime | None = None,
     stale_after_days: int = 180,
     resolver: Resolver | None = None,
+    concurrency: int = 1,
 ) -> LinkReport:
     if attempts < 1 or attempts > 3:
         raise ValueError("attempts must be between 1 and 3")
+    if concurrency < 1 or concurrency > 3:
+        raise ValueError("concurrency must be between 1 and 3")
     clock = now or datetime.now(UTC)
     owned_client = client is None
     active_client = client or httpx.Client(
@@ -188,42 +192,59 @@ def check_urls(
     active_resolver = resolver
     if active_resolver is None and owned_client:
         active_resolver = socket.getaddrinfo
-    findings: list[LinkFinding] = []
-    try:
-        for resource_id, field, value, checked_at in _links(records):
-            if checked_at is not None:
-                try:
-                    age = (clock.date() - datetime.fromisoformat(checked_at).date()).days
-                except ValueError:
-                    age = stale_after_days + 1
-                if age > stale_after_days:
-                    findings.append(
-                        LinkFinding(
-                            resource_id,
-                            field,
-                            value,
-                            "stale-verification",
-                            0,
-                            detail=f"verification evidence is {age} days old",
-                        )
+    links = _links(records)
+
+    def check_one(
+        link: tuple[str, str, str, str | None],
+    ) -> tuple[LinkFinding, ...]:
+        resource_id, field, value, checked_at = link
+        findings: list[LinkFinding] = []
+        if checked_at is not None:
+            try:
+                age = (clock.date() - datetime.fromisoformat(checked_at).date()).days
+            except ValueError:
+                age = stale_after_days + 1
+            if age > stale_after_days:
+                findings.append(
+                    LinkFinding(
+                        resource_id,
+                        field,
+                        value,
+                        "stale-verification",
+                        0,
+                        detail=f"verification evidence is {age} days old",
                     )
-            status = "invalid"
-            http_status: int | None = None
-            detail: str | None = None
-            used = 0
-            for attempt_number in range(1, attempts + 1):
-                used = attempt_number
-                status, http_status, detail = _request_once(
-                    active_client,
-                    value,
-                    resolver=active_resolver,
-                    max_redirects=max_redirects,
                 )
-                if status in {"ok", "redirected", "unsafe-target", "invalid"}:
-                    break
-            findings.append(
-                LinkFinding(resource_id, field, value, status, used, http_status, detail)
+        status = "invalid"
+        http_status: int | None = None
+        detail: str | None = None
+        used = 0
+        for attempt_number in range(1, attempts + 1):
+            used = attempt_number
+            status, http_status, detail = _request_once(
+                active_client,
+                value,
+                resolver=active_resolver,
+                max_redirects=max_redirects,
             )
+            if status in {"ok", "redirected", "unsafe-target", "invalid"}:
+                break
+        findings.append(
+            LinkFinding(resource_id, field, value, status, used, http_status, detail)
+        )
+        return tuple(findings)
+
+    try:
+        if concurrency == 1:
+            checked = map(check_one, links)
+            findings = [finding for item in checked for finding in item]
+        else:
+            with ThreadPoolExecutor(max_workers=concurrency) as executor:
+                findings = [
+                    finding
+                    for item in executor.map(check_one, links)
+                    for finding in item
+                ]
     finally:
         if owned_client:
             active_client.close()
@@ -238,9 +259,10 @@ def main() -> None:
     parser.add_argument(
         "--output", type=Path, default=ROOT / "catalog/generated/link-health.json"
     )
+    parser.add_argument("--concurrency", type=int, choices=(1, 2, 3), default=3)
     args = parser.parse_args()
     value = json.loads(args.catalogue.read_text(encoding="utf-8"))
-    report = check_urls(value["resources"])
+    report = check_urls(value["resources"], concurrency=args.concurrency)
     args.output.parent.mkdir(parents=True, exist_ok=True)
     args.output.write_text(report.to_json(), encoding="utf-8")
     print(

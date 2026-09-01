@@ -19,6 +19,11 @@ The catalogue records metadata and review state. Inclusion does not mean that th
 endorses, secures or guarantees a provider, API, dataset or MCP server. It does not copy provider
 data, grant access, or confirm that an endpoint is currently available.
 
+The scheduled link-health check covers official, external and MCP records. A successful result
+means only that the recorded public URL responded or redirected safely during that run. External
+APIs are not authenticated, and community MCP repositories are not installed or executed by that
+check. See the [coverage and evidence matrix](../docs/access/coverage.md).
+
 `termsEvidence` is a structured research aid, not legal advice or permission. It does not determine
 whether commercial use, caching, redistribution, attribution, personal-data processing or any other
 activity is lawful. Check the provider's current terms, policies, licences and applicable law before
