@@ -95,3 +95,48 @@ def test_unknown_parameter_is_rejected() -> None:
         plan_request(_recipe(), {"redirect": "https://evil.example"}, environ={})
 
     assert caught.value.code == "INVALID_PARAMETER"
+
+
+@pytest.mark.parametrize("value", [0, 101])
+def test_numeric_parameter_outside_declared_bounds_is_rejected(value: int) -> None:
+    recipe = _recipe()
+    raw = recipe.model_dump(mode="json", by_alias=True)
+    parameters = [
+        {
+            **parameter,
+            **({"minimum": 1, "maximum": 100} if parameter["name"] == "limit" else {}),
+        }
+        for parameter in raw["request"]["parameters"]
+    ]
+    bounded = recipe.model_validate(
+        {**raw, "request": {**raw["request"], "parameters": parameters}}
+    )
+
+    with pytest.raises(AccessFailure) as caught:
+        plan_request(bounded, {"limit": value}, environ={})
+
+    assert caught.value.code == "INVALID_PARAMETER"
+
+
+def test_string_parameter_must_match_declared_pattern() -> None:
+    recipe = _recipe(
+        urlTemplate="https://data.gov.hk/items/{code}",
+        parameters=[
+            {
+                "name": "code",
+                "location": "path",
+                "dataType": "string",
+                "required": True,
+                "default": "ABC",
+                "example": "ABC",
+                "description": "Three-letter source code.",
+                "enum": [],
+                "pattern": "^[A-Z]{3}$",
+            }
+        ],
+    )
+
+    with pytest.raises(AccessFailure) as caught:
+        plan_request(recipe, {"code": "../../admin"}, environ={})
+
+    assert caught.value.code == "INVALID_PARAMETER"

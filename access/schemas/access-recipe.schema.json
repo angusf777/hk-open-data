@@ -189,7 +189,10 @@
           "type": "array",
           "items": { "$ref": "#/$defs/scalar" },
           "uniqueItems": true
-        }
+        },
+        "minimum": { "type": ["number", "null"] },
+        "maximum": { "type": ["number", "null"] },
+        "pattern": { "type": ["string", "null"] }
       }
     },
     "header": {

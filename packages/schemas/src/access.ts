@@ -48,8 +48,33 @@ const parameterSchema = z
     example: scalarSchema.nullable(),
     description: z.string().min(1),
     enum: z.array(scalarSchema),
+    minimum: z.number().nullable().optional(),
+    maximum: z.number().nullable().optional(),
+    pattern: z.string().min(1).nullable().optional(),
   })
-  .strict();
+  .strict()
+  .superRefine((parameter, context) => {
+    if (
+      (parameter.minimum !== undefined && parameter.minimum !== null) ||
+      (parameter.maximum !== undefined && parameter.maximum !== null)
+    ) {
+      if (!['integer', 'number'].includes(parameter.dataType)) {
+        context.addIssue({ code: 'custom', message: 'numeric bounds require a numeric parameter' });
+      }
+    }
+    if (
+      parameter.minimum !== undefined &&
+      parameter.minimum !== null &&
+      parameter.maximum !== undefined &&
+      parameter.maximum !== null &&
+      parameter.minimum > parameter.maximum
+    ) {
+      context.addIssue({ code: 'custom', message: 'parameter minimum cannot exceed maximum' });
+    }
+    if (parameter.pattern !== undefined && parameter.pattern !== null && parameter.dataType !== 'string') {
+      context.addIssue({ code: 'custom', message: 'pattern requires a string parameter' });
+    }
+  });
 
 const headerSchema = z
   .object({

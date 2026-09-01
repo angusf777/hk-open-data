@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import json
 import math
+import re
 from collections.abc import Mapping
 from datetime import date, datetime
 from urllib.parse import quote, urlencode, urlsplit
@@ -100,6 +101,27 @@ def coerce_parameters(
                 "INVALID_PARAMETER",
                 f"Unsupported value for {spec.name}.",
             )
+        if spec.minimum is not None and isinstance(parsed, int | float):
+            if parsed < spec.minimum:
+                raise _failure(
+                    recipe,
+                    "INVALID_PARAMETER",
+                    f"Value for {spec.name} is below the permitted minimum.",
+                )
+        if spec.maximum is not None and isinstance(parsed, int | float):
+            if parsed > spec.maximum:
+                raise _failure(
+                    recipe,
+                    "INVALID_PARAMETER",
+                    f"Value for {spec.name} exceeds the permitted maximum.",
+                )
+        if spec.pattern is not None and isinstance(parsed, str):
+            if re.fullmatch(spec.pattern, parsed) is None:
+                raise _failure(
+                    recipe,
+                    "INVALID_PARAMETER",
+                    f"Value for {spec.name} does not match the permitted format.",
+                )
         result[spec.name] = parsed
     return result
 

@@ -77,6 +77,26 @@ class ParameterSpec(AccessContractModel):
     example: JsonScalar | None = None
     description: Annotated[str, Field(min_length=1)]
     enum: tuple[JsonScalar, ...] = ()
+    minimum: float | None = None
+    maximum: float | None = None
+    pattern: str | None = None
+
+    @model_validator(mode="after")
+    def require_compatible_bounds(self) -> ParameterSpec:
+        if (self.minimum is not None or self.maximum is not None) and self.data_type not in {
+            "integer",
+            "number",
+        }:
+            raise ValueError("numeric bounds require an integer or number parameter")
+        if (
+            self.minimum is not None
+            and self.maximum is not None
+            and self.minimum > self.maximum
+        ):
+            raise ValueError("parameter minimum cannot exceed maximum")
+        if self.pattern is not None and self.data_type != "string":
+            raise ValueError("pattern requires a string parameter")
+        return self
 
 
 class HeaderSpec(AccessContractModel):

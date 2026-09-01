@@ -5,7 +5,7 @@
     "fixtureSha256": "7f1bf1ca0d13e03c8f5267a66f227f042be7b352b08b34ad441107767aa0bc6b",
     "mediaType": "application/json",
     "provenance": "synthetic-authored",
-    "recipeSha256": "c6fb11862c9e7fbe201eb4b7f566860bbe802f5b795a626b54099e8fb135e0c4"
+    "recipeSha256": "262926f87411a4fcc102ef3f671fb29d71ca7eb9751d433d2d8adb94d97f52e3"
   },
   "HKAPI-002": {
     "documentationUrl": "https://data.gov.hk/en/help/ckan-api-development-guide",
@@ -13,7 +13,7 @@
     "fixtureSha256": "2d21d5434ac7e9f43bb47a95fb62689057acdfbc29efe1c6912c29a18105d338",
     "mediaType": "application/json",
     "provenance": "synthetic-authored",
-    "recipeSha256": "4719fb60de469a61bd508abb80a1d3abb021d64e414def54562c25cba06d44d9"
+    "recipeSha256": "3027b824c3834ae1b8b6760fe052fab66d3a77b6f7ae1bd5d98f4685a3696d4d"
   },
   "HKAPI-003": {
     "documentationUrl": "https://data.gov.hk/en/help/ckan-api-development-guide",
@@ -29,7 +29,7 @@
     "fixtureSha256": "2d21d5434ac7e9f43bb47a95fb62689057acdfbc29efe1c6912c29a18105d338",
     "mediaType": "application/json",
     "provenance": "synthetic-authored",
-    "recipeSha256": "7dccc7283520ca94f30a750594aa0b1c57698b7c88f8fe735ffac48188af6a53"
+    "recipeSha256": "5644f3eeea4eb7a4ea4fdd64896e4040926d9d133bfe6e509accf720decc9592"
   },
   "HKAPI-005": {
     "documentationUrl": "https://data.gov.hk/en/help/api-spec",
@@ -37,7 +37,7 @@
     "fixtureSha256": "0b6ce04040d86a02efdbcee7b48567dba0748f60e6e0b0d5f13f0e8af661b60c",
     "mediaType": "application/json",
     "provenance": "synthetic-authored",
-    "recipeSha256": "f287d0ad0c980fa96ec6cbc7ce01e7305eb91ce033424c54499bcf6c51a171f9"
+    "recipeSha256": "ff26915f02ecd197fa07936cfc925b676597550748e8bcb4eac773b8493401d0"
   },
   "HKAPI-006": null,
   "HKAPI-007": null,
@@ -75,7 +75,7 @@
     "fixtureSha256": "387f1a76d4e5f7568f9181e151e20cd4f4f99e05862e3490bf3e8deebcd9067f",
     "mediaType": "application/json",
     "provenance": "synthetic-authored",
-    "recipeSha256": "2ebdbbe573bc6c8ca8d70f063ed0bf225e8603a0f9debd978dfc26961531ae85"
+    "recipeSha256": "052c195c54681aba308cf000bbce3dc2c390a6d3986fb92b04e4e49123718672"
   },
   "HKAPI-017": null,
   "HKAPI-018": {
@@ -84,7 +84,7 @@
     "fixtureSha256": "13875a1d14427e3167334313489a71ad5616ac960fbbb11f74d334d2a36eb29b",
     "mediaType": "application/json",
     "provenance": "synthetic-authored",
-    "recipeSha256": "afc1a3bd00e1655b21070927e82dc0cd6b14c3f380dad271b7171bbdc9541b12"
+    "recipeSha256": "ba46b1ab46db750f2edeeb4b90a76dc187e4afddda64fa99288a9977ddb5db92"
   },
   "HKAPI-019": null,
   "HKAPI-020": {
@@ -93,7 +93,7 @@
     "fixtureSha256": "96859b285189c45045284807428596fab8585d45a5352ab21ec0792e8c591f94",
     "mediaType": "application/json",
     "provenance": "synthetic-authored",
-    "recipeSha256": "6d2c0cfe555d4386191bbeb774107a00bba8aabb0f7b07df05a78c1d5abf2ae4"
+    "recipeSha256": "3e64f6638e220cabb161c32a44699004a2705fe0cb8717fa8fb604254d99b246"
   },
   "HKAPI-021": {
     "documentationUrl": "https://www.als.gov.hk/docs/Data_Dictionary_for_ALS_EN.pdf",
@@ -101,7 +101,7 @@
     "fixtureSha256": "4e53ef4ec0e9b7f5054813cb9f5aef720d27afda40d800a304596815352fe60b",
     "mediaType": "application/json",
     "provenance": "synthetic-authored",
-    "recipeSha256": "2a4b8e705db972a352a8a44eebfe8395b5681bc17c7119fc6c70bca433b94eb0"
+    "recipeSha256": "c625edbf6d49cf6d7cf578678f288fa907d75f8dc1f6e2aa02a75d58bec22d05"
   },
   "HKAPI-023": {
     "documentationUrl": "https://portal.csdi.gov.hk/csdi-webpage/apidoc/TopographicMapAPI",
