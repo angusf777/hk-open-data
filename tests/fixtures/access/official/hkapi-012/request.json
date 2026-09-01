@@ -5,7 +5,8 @@
         "data.gov.hk"
       ],
       "allowed_media_types": [
-        "application/rss+xml"
+      "application/rss+xml",
+      "text/xml"
       ],
       "body": null,
       "headers": {

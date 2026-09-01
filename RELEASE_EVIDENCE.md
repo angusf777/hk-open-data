@@ -117,3 +117,34 @@ This entry records actual GitHub publication and observed live Pages behaviour. 
 provider permission, legal clearance, current source accuracy, production operation of the
 optional API/MCP runtime, service availability, or independent certification. The static catalogue
 remains an independent community project; original sources and current terms remain controlling.
+
+## 2026-09-01 — source-access compatibility evidence
+
+- **Tested base commit:** `0eb05aad8609e1a607fa5b62fea0c247410aed5b`
+- **Branch:** `codex/source-access-toolkit-implementation`
+- **Environment:** macOS arm64; Node.js `v22.22.3`; pnpm `10.0.0`; uv `0.11.16`;
+  uv-managed Python `3.12.11`
+- **Official access registry:** 265 classified; 37 executable and synthetic-fixture-tested;
+  228 manual guidance entries; zero unclassified
+- **Bounded live run:** 37 anonymous recipes attempted sequentially; 29 succeeded and were
+  re-verified against their promoted recipe hashes; 8 retained as fixture-tested with safe failure
+  evidence
+- **Effective status after generation:** 29 live-verified; 8 fixture-tested; 228 manual-only;
+  zero credential-required, blocked or unavailable
+
+| Command or review | Observed result |
+| --- | --- |
+| `uv run pytest tests/access/test_live_smoke.py -q` | Skipped by default; no provider request without explicit opt-in |
+| `RUN_LIVE_ACCESS_TESTS=1 uv run pytest tests/access/test_live_smoke.py -q -s` | Passed and wrote metadata-only evidence for all 37 anonymous executable recipes |
+| Per-source hash refresh for 29 successful recipes | Each promoted recipe was re-verified successfully after its status change altered the canonical recipe SHA-256 |
+| `uv run pytest tests/access -q` | 75 passed and 1 expected live-only skip |
+| Ruff and strict mypy for the access script, live helper, CLI and access tests | Passed |
+| `node scripts/check-secrets.mjs` and evidence key/content review | Passed; 37 evidence files contained only approved metadata fields, with no response body or credential material |
+| `uv run python scripts/access.py check` and `uv run python scripts/catalog.py check` | Passed; generated access and catalogue projections matched the current recipes and evidence |
+
+The eight retained failures are HKAPI-018 (`MEDIA_TYPE_MISMATCH`) and HKAPI-020, HKAPI-163,
+HKAPI-164, HKAPI-165, HKAPI-166, HKAPI-167 and HKAPI-169 (`SOURCE_UNAVAILABLE` from the verifying
+Python TLS trust path). TLS verification was not weakened. These results describe one bounded run
+from this host; evidence expires at each record's `validUntil` timestamp and does not guarantee
+future availability, provider approval, data quality, licensing, or permission for commercial use,
+caching, scraping or redistribution.

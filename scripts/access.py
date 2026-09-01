@@ -56,6 +56,75 @@ def _tree_bytes(root: Path) -> dict[str, bytes]:
     }
 
 
+def _status_document(index: dict[str, object]) -> str:
+    coverage = index.get("coverage")
+    public_recipes = index.get("recipes")
+    if not isinstance(coverage, dict) or not isinstance(public_recipes, list):
+        raise RecipeGenerationError("generated access index lacks coverage or recipes")
+    by_status = coverage.get("byStatus")
+    if not isinstance(by_status, dict):
+        raise RecipeGenerationError("generated access coverage lacks status counts")
+
+    outcomes = {"success": 0, "failure": 0}
+    rows: list[str] = []
+    for value in public_recipes:
+        if not isinstance(value, dict):
+            raise RecipeGenerationError("generated access recipe must be an object")
+        verification = value.get("verification")
+        outcome = "not-run"
+        if isinstance(verification, dict):
+            recorded = verification.get("outcome")
+            if recorded in outcomes:
+                outcome = recorded
+                outcomes[recorded] += 1
+        reference = value.get("sourceReference")
+        status = value.get("effectiveStatus")
+        adapter = value.get("adapter")
+        documentation = value.get("documentationUrl")
+        if not all(isinstance(item, str) for item in (reference, status, adapter, documentation)):
+            raise RecipeGenerationError("generated access recipe lacks public status fields")
+        rows.append(
+            f"| {reference} | {status} | {adapter} | {outcome} | "
+            f"[Official source]({documentation}) |"
+        )
+
+    attempts = outcomes["success"] + outcomes["failure"]
+    lines = [
+        "# Official source access status",
+        "",
+        (
+            "This generated review index records what the toolkit can execute safely today. "
+            "A manual-only entry is an explicit boundary, not a claim that the underlying "
+            "public data is unavailable. Live evidence is a time-limited technical check, not "
+            "a guarantee of future availability, data quality, licensing or permitted use."
+        ),
+        "",
+        f'- Total official sources: {coverage.get("totalOfficial", 0)}',
+        f"- Live verification attempts recorded: {attempts}",
+        f'- Successful live verification records: {outcomes["success"]}',
+        f'- Failed live verification records: {outcomes["failure"]}',
+        f'- Live-verified recipes: {by_status.get("live-verified", 0)}',
+        f'- Fixture-tested recipes: {by_status.get("fixture-tested", 0)}',
+        f'- Manual-only recipes: {by_status.get("manual-only", 0)}',
+        f'- Credential-required recipes: {by_status.get("credential-required", 0)}',
+        f'- Blocked recipes: {by_status.get("blocked", 0)}',
+        f'- Unavailable recipes: {by_status.get("unavailable", 0)}',
+        f'- Unclassified official sources: {coverage.get("unclassified", 0)}',
+        "",
+        "| Source | Effective status | Adapter | Latest verification | Official documentation |",
+        "| --- | --- | --- | --- | --- |",
+        *rows,
+        "",
+    ]
+    return "\n".join(lines)
+
+
+def _write_status_document(repository_root: Path, index: dict[str, object]) -> None:
+    destination = repository_root / "docs" / "access" / "source-status.md"
+    destination.parent.mkdir(parents=True, exist_ok=True)
+    destination.write_text(_status_document(index), encoding="utf-8")
+
+
 def _inputs(
     repository_root: Path,
 ) -> tuple[tuple[str, ...], tuple[AccessRecipe, ...], tuple[VerificationEvidence, ...]]:
@@ -86,12 +155,13 @@ def main(argv: list[str] | None = None, *, repository_root: Path = REPOSITORY_RO
 
         output = repository_root / "access" / "generated"
         if args.command == "generate":
-            generate_access_artifacts(
+            index = generate_access_artifacts(
                 catalogue_references=references,
                 recipes=recipes,
                 evidence=evidence,
                 output=output,
             )
+            _write_status_document(repository_root, index)
             print(f"generated {len(recipes)} official access recipes")
             return 0
 
@@ -100,7 +170,7 @@ def main(argv: list[str] | None = None, *, repository_root: Path = REPOSITORY_RO
             prefix="hk-open-data-access-check-", dir=output.parent
         ) as directory:
             expected = Path(directory)
-            generate_access_artifacts(
+            index = generate_access_artifacts(
                 catalogue_references=references,
                 recipes=recipes,
                 evidence=evidence,
@@ -108,6 +178,12 @@ def main(argv: list[str] | None = None, *, repository_root: Path = REPOSITORY_RO
             )
             if _tree_bytes(expected) != _tree_bytes(output):
                 print("generated access artifacts have drifted", file=sys.stderr)
+                return 1
+            status_path = repository_root / "docs" / "access" / "source-status.md"
+            if not status_path.exists() or status_path.read_text(
+                encoding="utf-8"
+            ) != _status_document(index):
+                print("generated access status document has drifted", file=sys.stderr)
                 return 1
         print(f"generated access artifacts are current ({len(recipes)} recipes)")
         return 0

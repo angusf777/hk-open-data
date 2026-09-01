@@ -1,0 +1,23 @@
+{
+  "checkedAt": "2026-09-01T09:05:56.395221Z",
+  "elapsedMs": 651,
+  "errorCode": null,
+  "finalHost": "portal.csdi.gov.hk",
+  "httpStatus": 200,
+  "limitations": [
+    "Technical access example only; review current provider terms, attribution, caching and redistribution requirements before use.",
+    "The bounded example is not a promise of availability, completeness or fitness for a particular purpose."
+  ],
+  "mediaType": "application/xml",
+  "outcome": "success",
+  "parsedRecordCount": 1,
+  "recipeSha256": "7860a1da69d5596b394e72ca480689a7fbe1c709f078cac2362fd0d36591e932",
+  "recipeVersion": "1.0.0",
+  "responseBytes": 10866,
+  "responseSha256": "194526f826f7553cecdcf645be9e9559cc5e4e1999fafe02b2cdff120105cb27",
+  "schemaFingerprint": "51931fb57c04baf13a60e9d656b081ff095aea0be56831eac1d00e6d7f8974fe",
+  "schemaVersion": 1,
+  "sourceReference": "HKAPI-014",
+  "toolVersion": "0.1.0",
+  "validUntil": "2026-09-08T09:05:56.395221Z"
+}

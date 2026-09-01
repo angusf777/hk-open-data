@@ -3,8 +3,8 @@
     "byStatus": {
       "blocked": 0,
       "credential-required": 0,
-      "fixture-tested": 37,
-      "live-verified": 0,
+      "fixture-tested": 8,
+      "live-verified": 29,
       "manual-only": 228,
       "unavailable": 0
     },
@@ -21,7 +21,7 @@
         "type": "none"
       },
       "documentationUrl": "https://data.gov.hk/en/help/ckan-api-development-guide",
-      "effectiveStatus": "fixture-tested",
+      "effectiveStatus": "live-verified",
       "examples": {
         "curl": "curl \\\n  --fail-with-body \\\n  --silent \\\n  --show-error \\\n  --max-time \\\n  15 \\\n  --request \\\n  GET \\\n  --header \\\n  'accept: application/json' \\\n  'https://data.gov.hk/en-data/api/3/action/package_list?limit=10&offset=0'\n",
         "python": "import httpx\n\nurl = 'https://data.gov.hk/en-data/api/3/action/package_list?limit=10&offset=0'\nheaders = {\n    'accept': 'application/json',\n}\n\nwith httpx.Client(timeout=15.0, follow_redirects=False) as client:\n    response = client.request('GET', url, headers=headers)\n    response.raise_for_status()\n    print(response.text)\n",
@@ -33,7 +33,7 @@
       ],
       "nextAction": null,
       "reason": null,
-      "recipeSha256": "914dfdca7a3d58aa6ef3980fe7274f3b8077c3b785f3d7353b409ef0a0053d6f",
+      "recipeSha256": "d55a501b6aa37f9f7d735f6e31f28dd2371f9633be065a242dcbadc9492f4780",
       "recipeVersion": "1.0.0",
       "request": {
         "allowedHosts": [
@@ -112,8 +112,27 @@
       },
       "schemaVersion": 1,
       "sourceReference": "HKAPI-001",
-      "status": "fixture-tested",
-      "verification": null
+      "status": "live-verified",
+      "verification": {
+        "checkedAt": "2026-09-01T09:05:36.555509Z",
+        "elapsedMs": 217,
+        "errorCode": null,
+        "finalHost": "data.gov.hk",
+        "httpStatus": 200,
+        "limitations": [
+          "Technical access example only; review current provider terms, attribution, caching and redistribution requirements before use.",
+          "The bounded example is not a promise of availability, completeness or fitness for a particular purpose."
+        ],
+        "mediaType": "application/json",
+        "outcome": "success",
+        "parsedRecordCount": 10,
+        "recipeSha256": "d55a501b6aa37f9f7d735f6e31f28dd2371f9633be065a242dcbadc9492f4780",
+        "responseBytes": 459,
+        "responseSha256": "1ffa0e7fb38c42c5686a555c7b81c32919bd5c1699e362709939c341ab16bc0c",
+        "schemaFingerprint": "0a4932c7e03fe084254f4da99354167763dad5181be2278e1d0a024a2135ef86",
+        "toolVersion": "0.1.0",
+        "validUntil": "2026-09-08T09:05:36.555509Z"
+      }
     },
     {
       "adapter": "ckan-action",
@@ -123,7 +142,7 @@
         "type": "none"
       },
       "documentationUrl": "https://data.gov.hk/en/help/ckan-api-development-guide",
-      "effectiveStatus": "fixture-tested",
+      "effectiveStatus": "live-verified",
       "examples": {
         "curl": "curl \\\n  --fail-with-body \\\n  --silent \\\n  --show-error \\\n  --max-time \\\n  15 \\\n  --request \\\n  GET \\\n  --header \\\n  'accept: application/json' \\\n  'https://data.gov.hk/en-data/api/3/action/package_show?id=hk-td-tis_2-traffic-snapshot-images'\n",
         "python": "import httpx\n\nurl = 'https://data.gov.hk/en-data/api/3/action/package_show?id=hk-td-tis_2-traffic-snapshot-images'\nheaders = {\n    'accept': 'application/json',\n}\n\nwith httpx.Client(timeout=15.0, follow_redirects=False) as client:\n    response = client.request('GET', url, headers=headers)\n    response.raise_for_status()\n    print(response.text)\n",
@@ -135,7 +154,7 @@
       ],
       "nextAction": null,
       "reason": null,
-      "recipeSha256": "a6eaffa2e63c7a5ce070cc0844962d721f6744dd258c53575d2d45091375822d",
+      "recipeSha256": "7865ccf53f39c4f926e225c358c055690f72570b3d0473cb64fdb7dc94e001f3",
       "recipeVersion": "1.0.0",
       "request": {
         "allowedHosts": [
@@ -201,8 +220,27 @@
       },
       "schemaVersion": 1,
       "sourceReference": "HKAPI-002",
-      "status": "fixture-tested",
-      "verification": null
+      "status": "live-verified",
+      "verification": {
+        "checkedAt": "2026-09-01T09:05:37.571764Z",
+        "elapsedMs": 2346,
+        "errorCode": null,
+        "finalHost": "data.gov.hk",
+        "httpStatus": 200,
+        "limitations": [
+          "Technical access example only; review current provider terms, attribution, caching and redistribution requirements before use.",
+          "The bounded example is not a promise of availability, completeness or fitness for a particular purpose."
+        ],
+        "mediaType": "application/json",
+        "outcome": "success",
+        "parsedRecordCount": 1,
+        "recipeSha256": "7865ccf53f39c4f926e225c358c055690f72570b3d0473cb64fdb7dc94e001f3",
+        "responseBytes": 824840,
+        "responseSha256": "60a761806596aa628f2de9200c2e5e729d41cc83c0c72e3ad22f37a267ec83eb",
+        "schemaFingerprint": "e6e55a65ad4f8364c54a847d8368ea7a35002a343b7ed365d921c5a4119acab2",
+        "toolVersion": "0.1.0",
+        "validUntil": "2026-09-08T09:05:37.571764Z"
+      }
     },
     {
       "adapter": "ckan-action",
@@ -212,7 +250,7 @@
         "type": "none"
       },
       "documentationUrl": "https://data.gov.hk/en/help/ckan-api-development-guide",
-      "effectiveStatus": "fixture-tested",
+      "effectiveStatus": "live-verified",
       "examples": {
         "curl": "curl \\\n  --fail-with-body \\\n  --silent \\\n  --show-error \\\n  --max-time \\\n  15 \\\n  --request \\\n  GET \\\n  --header \\\n  'accept: application/json' \\\n  https://data.gov.hk/en-data/api/3/action/group_list\n",
         "python": "import httpx\n\nurl = 'https://data.gov.hk/en-data/api/3/action/group_list'\nheaders = {\n    'accept': 'application/json',\n}\n\nwith httpx.Client(timeout=15.0, follow_redirects=False) as client:\n    response = client.request('GET', url, headers=headers)\n    response.raise_for_status()\n    print(response.text)\n",
@@ -224,7 +262,7 @@
       ],
       "nextAction": null,
       "reason": null,
-      "recipeSha256": "13f37b348f006018a1483f980753486063b2624b62c93fb54e2f7b2fff974121",
+      "recipeSha256": "138c4ff75996b9a421acce4896fe6bc69b6c14c2d330e252aa3ffab4d247a9ea",
       "recipeVersion": "1.0.0",
       "request": {
         "allowedHosts": [
@@ -276,8 +314,27 @@
       },
       "schemaVersion": 1,
       "sourceReference": "HKAPI-003",
-      "status": "fixture-tested",
-      "verification": null
+      "status": "live-verified",
+      "verification": {
+        "checkedAt": "2026-09-01T09:05:40.684259Z",
+        "elapsedMs": 289,
+        "errorCode": null,
+        "finalHost": "data.gov.hk",
+        "httpStatus": 200,
+        "limitations": [
+          "Technical access example only; review current provider terms, attribution, caching and redistribution requirements before use.",
+          "The bounded example is not a promise of availability, completeness or fitness for a particular purpose."
+        ],
+        "mediaType": "application/json",
+        "outcome": "success",
+        "parsedRecordCount": 20,
+        "recipeSha256": "138c4ff75996b9a421acce4896fe6bc69b6c14c2d330e252aa3ffab4d247a9ea",
+        "responseBytes": 459,
+        "responseSha256": "2e7554f73d8a262a34ee330cd11d5bb63b165100c5ac53b7ec8973ab533477cb",
+        "schemaFingerprint": "0a4932c7e03fe084254f4da99354167763dad5181be2278e1d0a024a2135ef86",
+        "toolVersion": "0.1.0",
+        "validUntil": "2026-09-08T09:05:40.684259Z"
+      }
     },
     {
       "adapter": "ckan-action",
@@ -287,7 +344,7 @@
         "type": "none"
       },
       "documentationUrl": "https://data.gov.hk/en/help/ckan-api-development-guide",
-      "effectiveStatus": "fixture-tested",
+      "effectiveStatus": "live-verified",
       "examples": {
         "curl": "curl \\\n  --fail-with-body \\\n  --silent \\\n  --show-error \\\n  --max-time \\\n  15 \\\n  --request \\\n  GET \\\n  --header \\\n  'accept: application/json' \\\n  'https://data.gov.hk/en-data/api/3/action/group_show?id=environment'\n",
         "python": "import httpx\n\nurl = 'https://data.gov.hk/en-data/api/3/action/group_show?id=environment'\nheaders = {\n    'accept': 'application/json',\n}\n\nwith httpx.Client(timeout=15.0, follow_redirects=False) as client:\n    response = client.request('GET', url, headers=headers)\n    response.raise_for_status()\n    print(response.text)\n",
@@ -299,7 +356,7 @@
       ],
       "nextAction": null,
       "reason": null,
-      "recipeSha256": "7f374c9ad966611c045202d5730870f5c85d8e6523023a93d71a43aee79070b7",
+      "recipeSha256": "04f2c8a0e67398753f89d55ccb2fc61516575341c70710c0160efb7977bd4ef3",
       "recipeVersion": "1.0.0",
       "request": {
         "allowedHosts": [
@@ -365,8 +422,27 @@
       },
       "schemaVersion": 1,
       "sourceReference": "HKAPI-004",
-      "status": "fixture-tested",
-      "verification": null
+      "status": "live-verified",
+      "verification": {
+        "checkedAt": "2026-09-01T09:05:41.724635Z",
+        "elapsedMs": 234,
+        "errorCode": null,
+        "finalHost": "data.gov.hk",
+        "httpStatus": 200,
+        "limitations": [
+          "Technical access example only; review current provider terms, attribution, caching and redistribution requirements before use.",
+          "The bounded example is not a promise of availability, completeness or fitness for a particular purpose."
+        ],
+        "mediaType": "application/json",
+        "outcome": "success",
+        "parsedRecordCount": 1,
+        "recipeSha256": "04f2c8a0e67398753f89d55ccb2fc61516575341c70710c0160efb7977bd4ef3",
+        "responseBytes": 920,
+        "responseSha256": "596c990bd4558bae838b9abdaa7c24ff10bde5d17b541d5b374f83a4cad3a502",
+        "schemaFingerprint": "9536eade907dfaf56c619a9f04a8d64ad0f9d0ef340d9282688f9fff524f1235",
+        "toolVersion": "0.1.0",
+        "validUntil": "2026-09-08T09:05:41.724635Z"
+      }
     },
     {
       "adapter": "rest-json",
@@ -376,7 +452,7 @@
         "type": "none"
       },
       "documentationUrl": "https://data.gov.hk/en/help/api-spec",
-      "effectiveStatus": "fixture-tested",
+      "effectiveStatus": "live-verified",
       "examples": {
         "curl": "curl \\\n  --fail-with-body \\\n  --silent \\\n  --show-error \\\n  --max-time \\\n  30 \\\n  --request \\\n  GET \\\n  --header \\\n  'accept: application/json' \\\n  'https://app.data.gov.hk/v1/historical-archive/list-files?start=20260829&end=20260830&max=10&skip=0'\n",
         "python": "import httpx\n\nurl = 'https://app.data.gov.hk/v1/historical-archive/list-files?start=20260829&end=20260830&max=10&skip=0'\nheaders = {\n    'accept': 'application/json',\n}\n\nwith httpx.Client(timeout=30.0, follow_redirects=False) as client:\n    response = client.request('GET', url, headers=headers)\n    response.raise_for_status()\n    print(response.text)\n",
@@ -388,7 +464,7 @@
       ],
       "nextAction": null,
       "reason": null,
-      "recipeSha256": "b55cd4102db816425a6e866f9cf329c6a26a1fbdad340c797ad0bb62d3c73814",
+      "recipeSha256": "9120e04c3372ceef1db12cfa7339521e50d5cf04347d959f739389eafa0480b8",
       "recipeVersion": "1.0.0",
       "request": {
         "allowedHosts": [
@@ -493,8 +569,27 @@
       },
       "schemaVersion": 1,
       "sourceReference": "HKAPI-005",
-      "status": "fixture-tested",
-      "verification": null
+      "status": "live-verified",
+      "verification": {
+        "checkedAt": "2026-09-01T09:05:42.696022Z",
+        "elapsedMs": 7639,
+        "errorCode": null,
+        "finalHost": "app.data.gov.hk",
+        "httpStatus": 200,
+        "limitations": [
+          "Technical access example only; review current provider terms, attribution, caching and redistribution requirements before use.",
+          "The bounded example is not a promise of availability, completeness or fitness for a particular purpose."
+        ],
+        "mediaType": "application/json",
+        "outcome": "success",
+        "parsedRecordCount": 10,
+        "recipeSha256": "9120e04c3372ceef1db12cfa7339521e50d5cf04347d959f739389eafa0480b8",
+        "responseBytes": 9602,
+        "responseSha256": "2b277412fb856d6cf1c6412e455b9e6f5e0a432f1a8b2b51a58e82d94e3a48b3",
+        "schemaFingerprint": "d0ededd7d952c9711f45c57903465bf6ba56d0595b8816a2765b3a5118529fe4",
+        "toolVersion": "0.1.0",
+        "validUntil": "2026-09-08T09:05:42.696022Z"
+      }
     },
     {
       "adapter": "none",
@@ -649,7 +744,7 @@
         "type": "none"
       },
       "documentationUrl": "https://data.gov.hk/en/help/api-spec",
-      "effectiveStatus": "fixture-tested",
+      "effectiveStatus": "live-verified",
       "examples": {
         "curl": "curl \\\n  --fail-with-body \\\n  --silent \\\n  --show-error \\\n  --max-time \\\n  15 \\\n  --request \\\n  GET \\\n  --header \\\n  'accept: application/json' \\\n  'https://api.data.gov.hk/v1/nearest-schools?lat=22.2812&long=114.1659&max=5'\n",
         "python": "import httpx\n\nurl = 'https://api.data.gov.hk/v1/nearest-schools?lat=22.2812&long=114.1659&max=5'\nheaders = {\n    'accept': 'application/json',\n}\n\nwith httpx.Client(timeout=15.0, follow_redirects=False) as client:\n    response = client.request('GET', url, headers=headers)\n    response.raise_for_status()\n    print(response.text)\n",
@@ -661,7 +756,7 @@
       ],
       "nextAction": null,
       "reason": null,
-      "recipeSha256": "1ff3852ff96655bd3d2391475f11bc0a6f09c80ae4a9b62443110681df36f6e1",
+      "recipeSha256": "9105450d9586424f77a83433dab19e804b00f2db1e74ec86e502ebe349d63989",
       "recipeVersion": "1.0.0",
       "request": {
         "allowedHosts": [
@@ -753,8 +848,27 @@
       },
       "schemaVersion": 1,
       "sourceReference": "HKAPI-011",
-      "status": "fixture-tested",
-      "verification": null
+      "status": "live-verified",
+      "verification": {
+        "checkedAt": "2026-09-01T09:05:51.075373Z",
+        "elapsedMs": 1728,
+        "errorCode": null,
+        "finalHost": "api.data.gov.hk",
+        "httpStatus": 200,
+        "limitations": [
+          "Technical access example only; review current provider terms, attribution, caching and redistribution requirements before use.",
+          "The bounded example is not a promise of availability, completeness or fitness for a particular purpose."
+        ],
+        "mediaType": "application/json",
+        "outcome": "success",
+        "parsedRecordCount": 5,
+        "recipeSha256": "9105450d9586424f77a83433dab19e804b00f2db1e74ec86e502ebe349d63989",
+        "responseBytes": 5025,
+        "responseSha256": "179bfd0c559326c3c7478d8994b8ba64f673a1cd9f602cfbbf8d0fab98520dd0",
+        "schemaFingerprint": "042e466954b3c0ecf3bf3eb7f5612327811077a8b1310204cf0938a841b3c910",
+        "toolVersion": "0.1.0",
+        "validUntil": "2026-09-08T09:05:51.075373Z"
+      }
     },
     {
       "adapter": "rss",
@@ -764,7 +878,7 @@
         "type": "none"
       },
       "documentationUrl": "https://data.gov.hk/en/dev-center",
-      "effectiveStatus": "fixture-tested",
+      "effectiveStatus": "live-verified",
       "examples": {
         "curl": "curl \\\n  --fail-with-body \\\n  --silent \\\n  --show-error \\\n  --max-time \\\n  15 \\\n  --request \\\n  GET \\\n  --header \\\n  'accept: application/rss+xml' \\\n  https://data.gov.hk/filestore/feeds/data_rss_en.xml\n",
         "python": "import httpx\n\nurl = 'https://data.gov.hk/filestore/feeds/data_rss_en.xml'\nheaders = {\n    'accept': 'application/rss+xml',\n}\n\nwith httpx.Client(timeout=15.0, follow_redirects=False) as client:\n    response = client.request('GET', url, headers=headers)\n    response.raise_for_status()\n    print(response.text)\n",
@@ -776,7 +890,7 @@
       ],
       "nextAction": null,
       "reason": null,
-      "recipeSha256": "6627d21f46cedd018b34c108951604795458c65e91fb36cac94c71e44ce1b174",
+      "recipeSha256": "b57b180a406e1c4897d7ba942d15e35bb2647339dd37d3388cd51965753f2353",
       "recipeVersion": "1.0.0",
       "request": {
         "allowedHosts": [
@@ -811,7 +925,8 @@
       "response": {
         "idPath": "/guid/text",
         "mediaTypes": [
-          "application/rss+xml"
+          "application/rss+xml",
+          "text/xml"
         ],
         "normalization": {
           "fields": {},
@@ -828,8 +943,27 @@
       },
       "schemaVersion": 1,
       "sourceReference": "HKAPI-012",
-      "status": "fixture-tested",
-      "verification": null
+      "status": "live-verified",
+      "verification": {
+        "checkedAt": "2026-09-01T09:05:53.562906Z",
+        "elapsedMs": 952,
+        "errorCode": null,
+        "finalHost": "data.gov.hk",
+        "httpStatus": 200,
+        "limitations": [
+          "Technical access example only; review current provider terms, attribution, caching and redistribution requirements before use.",
+          "The bounded example is not a promise of availability, completeness or fitness for a particular purpose."
+        ],
+        "mediaType": "text/xml",
+        "outcome": "success",
+        "parsedRecordCount": 149,
+        "recipeSha256": "b57b180a406e1c4897d7ba942d15e35bb2647339dd37d3388cd51965753f2353",
+        "responseBytes": 84034,
+        "responseSha256": "8a28afd6477410fe89f984e3943d2f9277398fe4dddf9d481bcd31b668d89e9a",
+        "schemaFingerprint": "bda7b9972154aca47de570b68e17dedf42695b582e76f5eafe92df660cf12868",
+        "toolVersion": "0.1.0",
+        "validUntil": "2026-09-08T09:05:53.562906Z"
+      }
     },
     {
       "adapter": "ogc-wfs",
@@ -839,7 +973,7 @@
         "type": "none"
       },
       "documentationUrl": "https://portal.csdi.gov.hk/csdi-webpage/doc/GeoSpatialServices",
-      "effectiveStatus": "fixture-tested",
+      "effectiveStatus": "live-verified",
       "examples": {
         "curl": "curl \\\n  --fail-with-body \\\n  --silent \\\n  --show-error \\\n  --max-time \\\n  30 \\\n  --request \\\n  GET \\\n  --header \\\n  'accept: application/xml' \\\n  'https://portal.csdi.gov.hk/server/services/common/landsd_rcd_1648571595120_89752/MapServer/WFSServer?service=WFS&version=2.0.0&request=GetCapabilities'\n",
         "python": "import httpx\n\nurl = 'https://portal.csdi.gov.hk/server/services/common/landsd_rcd_1648571595120_89752/MapServer/WFSServer?service=WFS&version=2.0.0&request=GetCapabilities'\nheaders = {\n    'accept': 'application/xml',\n}\n\nwith httpx.Client(timeout=30.0, follow_redirects=False) as client:\n    response = client.request('GET', url, headers=headers)\n    response.raise_for_status()\n    print(response.text)\n",
@@ -851,7 +985,7 @@
       ],
       "nextAction": null,
       "reason": null,
-      "recipeSha256": "577c19b61df5c9f15cd5015c5dc72569dc38e0adda137173e418ae85897294fd",
+      "recipeSha256": "9d8e3bbfce39584d2fea89ec05d734ee17de75dba67947bd3718d240b4ad1ff1",
       "recipeVersion": "1.0.0",
       "request": {
         "allowedHosts": [
@@ -886,7 +1020,8 @@
       "response": {
         "idPath": null,
         "mediaTypes": [
-          "application/xml"
+          "application/xml",
+          "text/xml"
         ],
         "normalization": {
           "fields": {},
@@ -903,8 +1038,27 @@
       },
       "schemaVersion": 1,
       "sourceReference": "HKAPI-013",
-      "status": "fixture-tested",
-      "verification": null
+      "status": "live-verified",
+      "verification": {
+        "checkedAt": "2026-09-01T09:05:55.275776Z",
+        "elapsedMs": 374,
+        "errorCode": null,
+        "finalHost": "portal.csdi.gov.hk",
+        "httpStatus": 200,
+        "limitations": [
+          "Technical access example only; review current provider terms, attribution, caching and redistribution requirements before use.",
+          "The bounded example is not a promise of availability, completeness or fitness for a particular purpose."
+        ],
+        "mediaType": "text/xml",
+        "outcome": "success",
+        "parsedRecordCount": 1,
+        "recipeSha256": "9d8e3bbfce39584d2fea89ec05d734ee17de75dba67947bd3718d240b4ad1ff1",
+        "responseBytes": 13949,
+        "responseSha256": "d1daa6600b72fa1589860d11d2a5568934e2e3d9a81e7cb7299bf5f28c5cdcd1",
+        "schemaFingerprint": "df27d1c9f62d7d2311d9ca3dccc4e1688937546ec56bcfc00cfe4968565813a5",
+        "toolVersion": "0.1.0",
+        "validUntil": "2026-09-08T09:05:55.275776Z"
+      }
     },
     {
       "adapter": "xml",
@@ -914,7 +1068,7 @@
         "type": "none"
       },
       "documentationUrl": "https://portal.csdi.gov.hk/csdi-webpage/doc/GeoSpatialServices",
-      "effectiveStatus": "fixture-tested",
+      "effectiveStatus": "live-verified",
       "examples": {
         "curl": "curl \\\n  --fail-with-body \\\n  --silent \\\n  --show-error \\\n  --max-time \\\n  30 \\\n  --request \\\n  GET \\\n  --header \\\n  'accept: application/xml' \\\n  'https://portal.csdi.gov.hk/geoportal/csw?service=CSW&request=GetCapabilities&version=2.0.2'\n",
         "python": "import httpx\n\nurl = 'https://portal.csdi.gov.hk/geoportal/csw?service=CSW&request=GetCapabilities&version=2.0.2'\nheaders = {\n    'accept': 'application/xml',\n}\n\nwith httpx.Client(timeout=30.0, follow_redirects=False) as client:\n    response = client.request('GET', url, headers=headers)\n    response.raise_for_status()\n    print(response.text)\n",
@@ -926,7 +1080,7 @@
       ],
       "nextAction": null,
       "reason": null,
-      "recipeSha256": "2a8d433b8a331bf8254428f6e23c01015815a95f1bc0e90a552ff4e9b1ce9f2b",
+      "recipeSha256": "7860a1da69d5596b394e72ca480689a7fbe1c709f078cac2362fd0d36591e932",
       "recipeVersion": "1.0.0",
       "request": {
         "allowedHosts": [
@@ -978,8 +1132,27 @@
       },
       "schemaVersion": 1,
       "sourceReference": "HKAPI-014",
-      "status": "fixture-tested",
-      "verification": null
+      "status": "live-verified",
+      "verification": {
+        "checkedAt": "2026-09-01T09:05:56.395221Z",
+        "elapsedMs": 651,
+        "errorCode": null,
+        "finalHost": "portal.csdi.gov.hk",
+        "httpStatus": 200,
+        "limitations": [
+          "Technical access example only; review current provider terms, attribution, caching and redistribution requirements before use.",
+          "The bounded example is not a promise of availability, completeness or fitness for a particular purpose."
+        ],
+        "mediaType": "application/xml",
+        "outcome": "success",
+        "parsedRecordCount": 1,
+        "recipeSha256": "7860a1da69d5596b394e72ca480689a7fbe1c709f078cac2362fd0d36591e932",
+        "responseBytes": 10866,
+        "responseSha256": "194526f826f7553cecdcf645be9e9559cc5e4e1999fafe02b2cdff120105cb27",
+        "schemaFingerprint": "51931fb57c04baf13a60e9d656b081ff095aea0be56831eac1d00e6d7f8974fe",
+        "toolVersion": "0.1.0",
+        "validUntil": "2026-09-08T09:05:56.395221Z"
+      }
     },
     {
       "adapter": "none",
@@ -1018,7 +1191,7 @@
         "type": "none"
       },
       "documentationUrl": "https://data.weather.gov.hk/weatherAPI/doc/HKO_Open_Data_API_Documentation.pdf",
-      "effectiveStatus": "fixture-tested",
+      "effectiveStatus": "live-verified",
       "examples": {
         "curl": "curl \\\n  --fail-with-body \\\n  --silent \\\n  --show-error \\\n  --max-time \\\n  15 \\\n  --request \\\n  GET \\\n  --header \\\n  'accept: application/json' \\\n  'https://data.weather.gov.hk/weatherAPI/opendata/weather.php?dataType=flw&lang=en'\n",
         "python": "import httpx\n\nurl = 'https://data.weather.gov.hk/weatherAPI/opendata/weather.php?dataType=flw&lang=en'\nheaders = {\n    'accept': 'application/json',\n}\n\nwith httpx.Client(timeout=15.0, follow_redirects=False) as client:\n    response = client.request('GET', url, headers=headers)\n    response.raise_for_status()\n    print(response.text)\n",
@@ -1030,7 +1203,7 @@
       ],
       "nextAction": null,
       "reason": null,
-      "recipeSha256": "052c195c54681aba308cf000bbce3dc2c390a6d3986fb92b04e4e49123718672",
+      "recipeSha256": "b4622acb5d8fa0493937ec708cdecbffc727f2a970624daf3afb33f96210b9de",
       "recipeVersion": "1.0.0",
       "request": {
         "allowedHosts": [
@@ -1120,8 +1293,27 @@
       },
       "schemaVersion": 1,
       "sourceReference": "HKAPI-016",
-      "status": "fixture-tested",
-      "verification": null
+      "status": "live-verified",
+      "verification": {
+        "checkedAt": "2026-09-01T09:05:57.811882Z",
+        "elapsedMs": 219,
+        "errorCode": null,
+        "finalHost": "data.weather.gov.hk",
+        "httpStatus": 200,
+        "limitations": [
+          "Technical access example only; review current provider terms, attribution, caching and redistribution requirements before use.",
+          "The bounded example is not a promise of availability, completeness or fitness for a particular purpose."
+        ],
+        "mediaType": "application/json",
+        "outcome": "success",
+        "parsedRecordCount": 1,
+        "recipeSha256": "b4622acb5d8fa0493937ec708cdecbffc727f2a970624daf3afb33f96210b9de",
+        "responseBytes": 486,
+        "responseSha256": "9d7078164ecf76b7b1c7e3b801e363cc39a8252d3e90bcbb8e5b31235614d21b",
+        "schemaFingerprint": "3f9958446d446313fab148ba7c58056b231f686828807756a0799d5d3401db37",
+        "toolVersion": "0.1.0",
+        "validUntil": "2026-09-08T09:05:57.811882Z"
+      }
     },
     {
       "adapter": "none",
@@ -1252,7 +1444,27 @@
       "schemaVersion": 1,
       "sourceReference": "HKAPI-018",
       "status": "fixture-tested",
-      "verification": null
+      "verification": {
+        "checkedAt": "2026-09-01T09:00:15.081079Z",
+        "elapsedMs": 0,
+        "errorCode": "MEDIA_TYPE_MISMATCH",
+        "finalHost": "api.hkma.gov.hk",
+        "httpStatus": null,
+        "limitations": [
+          "Technical access example only; review current provider terms, attribution, caching and redistribution requirements before use.",
+          "The bounded example is not a promise of availability, completeness or fitness for a particular purpose.",
+          "Verification failed; no provider response content is retained in this evidence."
+        ],
+        "mediaType": null,
+        "outcome": "failure",
+        "parsedRecordCount": 0,
+        "recipeSha256": "5ce9e6e2d9b81f607a0abfae8627440aa9d99cee2a2567a00e4f09d7189399e3",
+        "responseBytes": 0,
+        "responseSha256": null,
+        "schemaFingerprint": null,
+        "toolVersion": "0.1.0",
+        "validUntil": "2026-09-08T09:00:15.081079Z"
+      }
     },
     {
       "adapter": "none",
@@ -1383,7 +1595,27 @@
       "schemaVersion": 1,
       "sourceReference": "HKAPI-020",
       "status": "fixture-tested",
-      "verification": null
+      "verification": {
+        "checkedAt": "2026-09-01T09:00:15.081079Z",
+        "elapsedMs": 0,
+        "errorCode": "SOURCE_UNAVAILABLE",
+        "finalHost": "app.legco.gov.hk",
+        "httpStatus": null,
+        "limitations": [
+          "Technical access example only; review current provider terms, attribution, caching and redistribution requirements before use.",
+          "The bounded example is not a promise of availability, completeness or fitness for a particular purpose.",
+          "Verification failed; no provider response content is retained in this evidence."
+        ],
+        "mediaType": null,
+        "outcome": "failure",
+        "parsedRecordCount": 0,
+        "recipeSha256": "062700e7b12720c8c9360181a9c9a6fbbaf28f874ac0e299238194fdf4631e57",
+        "responseBytes": 0,
+        "responseSha256": null,
+        "schemaFingerprint": null,
+        "toolVersion": "0.1.0",
+        "validUntil": "2026-09-08T09:00:15.081079Z"
+      }
     },
     {
       "adapter": "rest-json",
@@ -1393,7 +1625,7 @@
         "type": "none"
       },
       "documentationUrl": "https://www.als.gov.hk/docs/Data_Dictionary_for_ALS_EN.pdf",
-      "effectiveStatus": "fixture-tested",
+      "effectiveStatus": "live-verified",
       "examples": {
         "curl": "curl \\\n  --fail-with-body \\\n  --silent \\\n  --show-error \\\n  --max-time \\\n  15 \\\n  --request \\\n  GET \\\n  --header \\\n  'accept: application/json' \\\n  --header \\\n  'accept-language: en, zh-Hant' \\\n  'https://www.als.gov.hk/lookup?q=10+Queensway&n=10'\n",
         "python": "import httpx\n\nurl = 'https://www.als.gov.hk/lookup?q=10+Queensway&n=10'\nheaders = {\n    'accept': 'application/json',\n    'accept-language': 'en, zh-Hant',\n}\n\nwith httpx.Client(timeout=15.0, follow_redirects=False) as client:\n    response = client.request('GET', url, headers=headers)\n    response.raise_for_status()\n    print(response.text)\n",
@@ -1405,7 +1637,7 @@
       ],
       "nextAction": null,
       "reason": null,
-      "recipeSha256": "005ad671d718a3c3ba77d28dccd43bf88328092de033c176baa0034acf5a072f",
+      "recipeSha256": "976d991813a990410a57d08ca854eff744cbd905c08be3af6761f59f4297b29d",
       "recipeVersion": "1.0.0",
       "request": {
         "allowedHosts": [
@@ -1489,8 +1721,27 @@
       },
       "schemaVersion": 1,
       "sourceReference": "HKAPI-021",
-      "status": "fixture-tested",
-      "verification": null
+      "status": "live-verified",
+      "verification": {
+        "checkedAt": "2026-09-01T09:05:58.779632Z",
+        "elapsedMs": 418,
+        "errorCode": null,
+        "finalHost": "www.als.gov.hk",
+        "httpStatus": 200,
+        "limitations": [
+          "Technical access example only; review current provider terms, attribution, caching and redistribution requirements before use.",
+          "The bounded example is not a promise of availability, completeness or fitness for a particular purpose."
+        ],
+        "mediaType": "application/json",
+        "outcome": "success",
+        "parsedRecordCount": 10,
+        "recipeSha256": "976d991813a990410a57d08ca854eff744cbd905c08be3af6761f59f4297b29d",
+        "responseBytes": 6523,
+        "responseSha256": "fbb5dfd096706c8994834e861bf31c44a75c8995cc766328fc288e7f4b136952",
+        "schemaFingerprint": "91e0e5c21757e9f11ff7a894e45050b49e0bb127827e94d3f132e0c5869b0269",
+        "toolVersion": "0.1.0",
+        "validUntil": "2026-09-08T09:05:58.779632Z"
+      }
     },
     {
       "adapter": "none",
@@ -1529,7 +1780,7 @@
         "type": "none"
       },
       "documentationUrl": "https://portal.csdi.gov.hk/csdi-webpage/apidoc/TopographicMapAPI",
-      "effectiveStatus": "fixture-tested",
+      "effectiveStatus": "live-verified",
       "examples": {
         "curl": "curl \\\n  --fail-with-body \\\n  --silent \\\n  --show-error \\\n  --max-time \\\n  15 \\\n  --request \\\n  GET \\\n  --header \\\n  'accept: image/png' \\\n  https://mapapi.geodata.gov.hk/gs/api/v1.0.0/xyz/basemap/HK80/11/287/385.png\n",
         "python": "import httpx\n\nurl = 'https://mapapi.geodata.gov.hk/gs/api/v1.0.0/xyz/basemap/HK80/11/287/385.png'\nheaders = {\n    'accept': 'image/png',\n}\n\nwith httpx.Client(timeout=15.0, follow_redirects=False) as client:\n    response = client.request('GET', url, headers=headers)\n    response.raise_for_status()\n    print(response.text)\n",
@@ -1541,7 +1792,7 @@
       ],
       "nextAction": null,
       "reason": null,
-      "recipeSha256": "50b77056b939d263887d928ea17c3ee30b629a871ae297d2ba0c237f89abc4dd",
+      "recipeSha256": "2087794fbf9288c46bf1a678cdd296b686ebe07f321a7fc3f3aa9e8d0dca877a",
       "recipeVersion": "1.0.0",
       "request": {
         "allowedHosts": [
@@ -1593,8 +1844,27 @@
       },
       "schemaVersion": 1,
       "sourceReference": "HKAPI-023",
-      "status": "fixture-tested",
-      "verification": null
+      "status": "live-verified",
+      "verification": {
+        "checkedAt": "2026-09-01T09:05:59.954166Z",
+        "elapsedMs": 402,
+        "errorCode": null,
+        "finalHost": "mapapi.geodata.gov.hk",
+        "httpStatus": 200,
+        "limitations": [
+          "Technical access example only; review current provider terms, attribution, caching and redistribution requirements before use.",
+          "The bounded example is not a promise of availability, completeness or fitness for a particular purpose."
+        ],
+        "mediaType": "image/png",
+        "outcome": "success",
+        "parsedRecordCount": 1,
+        "recipeSha256": "2087794fbf9288c46bf1a678cdd296b686ebe07f321a7fc3f3aa9e8d0dca877a",
+        "responseBytes": 62796,
+        "responseSha256": "48eb13d9573c08ea88a02129997de69b05d47e51c4ea3f4fefab2c647e60cf7d",
+        "schemaFingerprint": "34c7be104094b1826b29583f581f9c4870ee646c429827fa9ce5e847f7063c01",
+        "toolVersion": "0.1.0",
+        "validUntil": "2026-09-08T09:05:59.954166Z"
+      }
     },
     {
       "adapter": "none",
@@ -1691,7 +1961,7 @@
         "type": "none"
       },
       "documentationUrl": "https://data.gov.hk/en-data/dataset/ctb-eta-transport-realtime-eta",
-      "effectiveStatus": "fixture-tested",
+      "effectiveStatus": "live-verified",
       "examples": {
         "curl": "curl \\\n  --fail-with-body \\\n  --silent \\\n  --show-error \\\n  --max-time \\\n  15 \\\n  --request \\\n  GET \\\n  --header \\\n  'accept: application/json' \\\n  https://rt.data.gov.hk/v1/transport/citybus-nwfb/route/ctb\n",
         "python": "import httpx\n\nurl = 'https://rt.data.gov.hk/v1/transport/citybus-nwfb/route/ctb'\nheaders = {\n    'accept': 'application/json',\n}\n\nwith httpx.Client(timeout=15.0, follow_redirects=False) as client:\n    response = client.request('GET', url, headers=headers)\n    response.raise_for_status()\n    print(response.text)\n",
@@ -1703,7 +1973,7 @@
       ],
       "nextAction": null,
       "reason": null,
-      "recipeSha256": "fae21fe68cc5b27e06a9455fe48aaf026f339aacff532f0172d79292d2eb7979",
+      "recipeSha256": "b21ba0fedb4ec6f6007173328081830c5bb35366e4ae0f4233857b9d980697c4",
       "recipeVersion": "1.0.0",
       "request": {
         "allowedHosts": [
@@ -1755,8 +2025,27 @@
       },
       "schemaVersion": 1,
       "sourceReference": "HKAPI-027",
-      "status": "fixture-tested",
-      "verification": null
+      "status": "live-verified",
+      "verification": {
+        "checkedAt": "2026-09-01T09:06:01.114198Z",
+        "elapsedMs": 14333,
+        "errorCode": null,
+        "finalHost": "rt.data.gov.hk",
+        "httpStatus": 200,
+        "limitations": [
+          "Technical access example only; review current provider terms, attribution, caching and redistribution requirements before use.",
+          "The bounded example is not a promise of availability, completeness or fitness for a particular purpose."
+        ],
+        "mediaType": "application/json",
+        "outcome": "success",
+        "parsedRecordCount": 406,
+        "recipeSha256": "b21ba0fedb4ec6f6007173328081830c5bb35366e4ae0f4233857b9d980697c4",
+        "responseBytes": 111826,
+        "responseSha256": "81ffe8b6ef5d306e94d9f72284fb3e7637bc45ed0b8043d1e1ad34b4b016c659",
+        "schemaFingerprint": "f8e1907e3774914bf32e6cf0e69c47422d8fa817319ced83954227afac3a2d38",
+        "toolVersion": "0.1.0",
+        "validUntil": "2026-09-08T09:06:01.114198Z"
+      }
     },
     {
       "adapter": "rest-json",
@@ -1766,7 +2055,7 @@
         "type": "none"
       },
       "documentationUrl": "https://data.gov.hk/en-data/dataset/hk-td-tis_21-etakmb/resource/fcac14ed-23e4-433b-afd0-3c37d5c8e428",
-      "effectiveStatus": "fixture-tested",
+      "effectiveStatus": "live-verified",
       "examples": {
         "curl": "curl \\\n  --fail-with-body \\\n  --silent \\\n  --show-error \\\n  --max-time \\\n  15 \\\n  --request \\\n  GET \\\n  --header \\\n  'accept: application/json' \\\n  https://data.etabus.gov.hk/v1/transport/kmb/route/\n",
         "python": "import httpx\n\nurl = 'https://data.etabus.gov.hk/v1/transport/kmb/route/'\nheaders = {\n    'accept': 'application/json',\n}\n\nwith httpx.Client(timeout=15.0, follow_redirects=False) as client:\n    response = client.request('GET', url, headers=headers)\n    response.raise_for_status()\n    print(response.text)\n",
@@ -1778,7 +2067,7 @@
       ],
       "nextAction": null,
       "reason": null,
-      "recipeSha256": "939b58817b18ce26ac14f808c058caa7e0c1b0e107762ad25e5a856fa51e269c",
+      "recipeSha256": "9f42c91fc9c528476de00e3807f37f8a551a8c00cc0664043e78e81ca821c455",
       "recipeVersion": "1.0.0",
       "request": {
         "allowedHosts": [
@@ -1830,8 +2119,27 @@
       },
       "schemaVersion": 1,
       "sourceReference": "HKAPI-028",
-      "status": "fixture-tested",
-      "verification": null
+      "status": "live-verified",
+      "verification": {
+        "checkedAt": "2026-09-01T09:06:16.205702Z",
+        "elapsedMs": 726,
+        "errorCode": null,
+        "finalHost": "data.etabus.gov.hk",
+        "httpStatus": 200,
+        "limitations": [
+          "Technical access example only; review current provider terms, attribution, caching and redistribution requirements before use.",
+          "The bounded example is not a promise of availability, completeness or fitness for a particular purpose."
+        ],
+        "mediaType": "application/json",
+        "outcome": "success",
+        "parsedRecordCount": 1601,
+        "recipeSha256": "9f42c91fc9c528476de00e3807f37f8a551a8c00cc0664043e78e81ca821c455",
+        "responseBytes": 349723,
+        "responseSha256": "8c59472502ad42f29243cf89a66224cb7afaad690881a0e716b991b36946d008",
+        "schemaFingerprint": "d8b9264f3f5d981d737da07cd0d402869ff179b63b4a9db681845b47c1a35a5b",
+        "toolVersion": "0.1.0",
+        "validUntil": "2026-09-08T09:06:16.205702Z"
+      }
     },
     {
       "adapter": "rest-json",
@@ -1841,7 +2149,7 @@
         "type": "none"
       },
       "documentationUrl": "https://data.gov.hk/en-data/dataset/hk-td-sm_7-real-time-arrival-data-of-gmb/resource/02913a6d-e520-4232-bdd5-eef86a906631",
-      "effectiveStatus": "fixture-tested",
+      "effectiveStatus": "live-verified",
       "examples": {
         "curl": "curl \\\n  --fail-with-body \\\n  --silent \\\n  --show-error \\\n  --max-time \\\n  15 \\\n  --request \\\n  GET \\\n  --header \\\n  'accept: application/json' \\\n  https://data.etagmb.gov.hk/route/HKI\n",
         "python": "import httpx\n\nurl = 'https://data.etagmb.gov.hk/route/HKI'\nheaders = {\n    'accept': 'application/json',\n}\n\nwith httpx.Client(timeout=15.0, follow_redirects=False) as client:\n    response = client.request('GET', url, headers=headers)\n    response.raise_for_status()\n    print(response.text)\n",
@@ -1853,7 +2161,7 @@
       ],
       "nextAction": null,
       "reason": null,
-      "recipeSha256": "e470beafc420d44ce014649de911fbd77fe62850598c9487942d5b406c0b0a13",
+      "recipeSha256": "9190a75016969079400dbc7794bf3e9309c40a49b5f03caeb7c55cb852f44d14",
       "recipeVersion": "1.0.0",
       "request": {
         "allowedHosts": [
@@ -1923,8 +2231,27 @@
       },
       "schemaVersion": 1,
       "sourceReference": "HKAPI-029",
-      "status": "fixture-tested",
-      "verification": null
+      "status": "live-verified",
+      "verification": {
+        "checkedAt": "2026-09-01T09:06:17.686625Z",
+        "elapsedMs": 459,
+        "errorCode": null,
+        "finalHost": "data.etagmb.gov.hk",
+        "httpStatus": 200,
+        "limitations": [
+          "Technical access example only; review current provider terms, attribution, caching and redistribution requirements before use.",
+          "The bounded example is not a promise of availability, completeness or fitness for a particular purpose."
+        ],
+        "mediaType": "application/json",
+        "outcome": "success",
+        "parsedRecordCount": 108,
+        "recipeSha256": "9190a75016969079400dbc7794bf3e9309c40a49b5f03caeb7c55cb852f44d14",
+        "responseBytes": 761,
+        "responseSha256": "97fb30b42730884ea93670002532dc92be3e459546741ed8f6a2b796ff87eef1",
+        "schemaFingerprint": "6db71c67421344ad7e1667518dca25adee93a0588df504b9a168e6c73511aefc",
+        "toolVersion": "0.1.0",
+        "validUntil": "2026-09-08T09:06:17.686625Z"
+      }
     },
     {
       "adapter": "none",
@@ -1992,7 +2319,7 @@
         "type": "none"
       },
       "documentationUrl": "https://data.gov.hk/en-data/dataset/mtr-data2-nexttrain-data/resource/103472ed-01be-4dda-92c6-30530dee022f",
-      "effectiveStatus": "fixture-tested",
+      "effectiveStatus": "live-verified",
       "examples": {
         "curl": "curl \\\n  --fail-with-body \\\n  --silent \\\n  --show-error \\\n  --max-time \\\n  15 \\\n  --request \\\n  GET \\\n  --header \\\n  'accept: application/json' \\\n  'https://rt.data.gov.hk/v1/transport/mtr/getSchedule.php?line=TKL&sta=TKO&lang=EN'\n",
         "python": "import httpx\n\nurl = 'https://rt.data.gov.hk/v1/transport/mtr/getSchedule.php?line=TKL&sta=TKO&lang=EN'\nheaders = {\n    'accept': 'application/json',\n}\n\nwith httpx.Client(timeout=15.0, follow_redirects=False) as client:\n    response = client.request('GET', url, headers=headers)\n    response.raise_for_status()\n    print(response.text)\n",
@@ -2004,7 +2331,7 @@
       ],
       "nextAction": null,
       "reason": null,
-      "recipeSha256": "1f54df536928137dae2f5e8229f0e61db439450a0b2da6c3d2cb0e73b798df26",
+      "recipeSha256": "7140c0499ccc0f38f7a64fe52a0d7dbb29c0d13ea2c9efaef7a3c4dc6a825173",
       "recipeVersion": "1.0.0",
       "request": {
         "allowedHosts": [
@@ -2110,8 +2437,27 @@
       },
       "schemaVersion": 1,
       "sourceReference": "HKAPI-032",
-      "status": "fixture-tested",
-      "verification": null
+      "status": "live-verified",
+      "verification": {
+        "checkedAt": "2026-09-01T09:06:18.900506Z",
+        "elapsedMs": 201,
+        "errorCode": null,
+        "finalHost": "rt.data.gov.hk",
+        "httpStatus": 200,
+        "limitations": [
+          "Technical access example only; review current provider terms, attribution, caching and redistribution requirements before use.",
+          "The bounded example is not a promise of availability, completeness or fitness for a particular purpose."
+        ],
+        "mediaType": "application/json",
+        "outcome": "success",
+        "parsedRecordCount": 1,
+        "recipeSha256": "7140c0499ccc0f38f7a64fe52a0d7dbb29c0d13ea2c9efaef7a3c4dc6a825173",
+        "responseBytes": 1028,
+        "responseSha256": "e77c3a0f108a1196617fcdbc5f5bc2426d81a63869e06cf29bef6451be7f846a",
+        "schemaFingerprint": "63f5ff8c53c36acc750ddc85ba9ffe220df9dc1ede426c304c3c5495049144f2",
+        "toolVersion": "0.1.0",
+        "validUntil": "2026-09-08T09:06:18.900506Z"
+      }
     },
     {
       "adapter": "rest-json",
@@ -2121,7 +2467,7 @@
         "type": "none"
       },
       "documentationUrl": "https://data.gov.hk/en-data/dataset/mtr-lrnt_data-light-rail-nexttrain-data",
-      "effectiveStatus": "fixture-tested",
+      "effectiveStatus": "live-verified",
       "examples": {
         "curl": "curl \\\n  --fail-with-body \\\n  --silent \\\n  --show-error \\\n  --max-time \\\n  15 \\\n  --request \\\n  GET \\\n  --header \\\n  'accept: application/json' \\\n  'https://rt.data.gov.hk/v1/transport/mtr/lrt/getSchedule?station_id=001'\n",
         "python": "import httpx\n\nurl = 'https://rt.data.gov.hk/v1/transport/mtr/lrt/getSchedule?station_id=001'\nheaders = {\n    'accept': 'application/json',\n}\n\nwith httpx.Client(timeout=15.0, follow_redirects=False) as client:\n    response = client.request('GET', url, headers=headers)\n    response.raise_for_status()\n    print(response.text)\n",
@@ -2133,7 +2479,7 @@
       ],
       "nextAction": null,
       "reason": null,
-      "recipeSha256": "d04500c3deec5caf90d6833e7f85178bb5c03c7f22bcb10b8f438899af1f8f64",
+      "recipeSha256": "17eb710d23961b846e8d9da517c00a237d4e9a6b27f0a6422d209bc1f8bf2596",
       "recipeVersion": "1.0.0",
       "request": {
         "allowedHosts": [
@@ -2199,8 +2545,27 @@
       },
       "schemaVersion": 1,
       "sourceReference": "HKAPI-033",
-      "status": "fixture-tested",
-      "verification": null
+      "status": "live-verified",
+      "verification": {
+        "checkedAt": "2026-09-01T09:06:19.836955Z",
+        "elapsedMs": 515,
+        "errorCode": null,
+        "finalHost": "rt.data.gov.hk",
+        "httpStatus": 200,
+        "limitations": [
+          "Technical access example only; review current provider terms, attribution, caching and redistribution requirements before use.",
+          "The bounded example is not a promise of availability, completeness or fitness for a particular purpose."
+        ],
+        "mediaType": "application/json",
+        "outcome": "success",
+        "parsedRecordCount": 5,
+        "recipeSha256": "17eb710d23961b846e8d9da517c00a237d4e9a6b27f0a6422d209bc1f8bf2596",
+        "responseBytes": 4027,
+        "responseSha256": "6aefbaa9f5b1b61114937caf52725c196a9b0f776483bfcc80d66faa8836dc07",
+        "schemaFingerprint": "b5ba29e25c7bfa0b69c01c894691b172cbe98040ba281dff6013c3238412de23",
+        "toolVersion": "0.1.0",
+        "validUntil": "2026-09-08T09:06:19.836955Z"
+      }
     },
     {
       "adapter": "rest-json",
@@ -2210,7 +2575,7 @@
         "type": "none"
       },
       "documentationUrl": "https://opendata.mtr.com.hk/doc/MTR_BUS_API_Spec_v1.7.pdf",
-      "effectiveStatus": "fixture-tested",
+      "effectiveStatus": "live-verified",
       "examples": {
         "curl": "curl \\\n  --fail-with-body \\\n  --silent \\\n  --show-error \\\n  --max-time \\\n  15 \\\n  --request \\\n  POST \\\n  --header \\\n  'accept: application/json' \\\n  --header \\\n  'content-type: application/json' \\\n  --data \\\n  '{\"language\": \"en\", \"routeName\": \"K12\"}' \\\n  https://rt.data.gov.hk/v1/transport/mtr/bus/getSchedule\n",
         "python": "import httpx\n\nurl = 'https://rt.data.gov.hk/v1/transport/mtr/bus/getSchedule'\nheaders = {\n    'accept': 'application/json',\n    'content-type': 'application/json',\n}\n\nwith httpx.Client(timeout=15.0, follow_redirects=False) as client:\n    response = client.request('POST', url, headers=headers, json={'language': 'en', 'routeName': 'K12'})\n    response.raise_for_status()\n    print(response.text)\n",
@@ -2222,7 +2587,7 @@
       ],
       "nextAction": null,
       "reason": null,
-      "recipeSha256": "4d1d78266127d4d457664d25efc706062440ad8937557c55b502aa55e2f53c96",
+      "recipeSha256": "32f35a10d0c988667cf09345d8fc17330593b3fe56914b962ed822f7eb21bf44",
       "recipeVersion": "1.0.0",
       "request": {
         "allowedHosts": [
@@ -2282,8 +2647,27 @@
       },
       "schemaVersion": 1,
       "sourceReference": "HKAPI-034",
-      "status": "fixture-tested",
-      "verification": null
+      "status": "live-verified",
+      "verification": {
+        "checkedAt": "2026-09-01T09:06:21.115403Z",
+        "elapsedMs": 245,
+        "errorCode": null,
+        "finalHost": "rt.data.gov.hk",
+        "httpStatus": 200,
+        "limitations": [
+          "Technical access example only; review current provider terms, attribution, caching and redistribution requirements before use.",
+          "The bounded example is not a promise of availability, completeness or fitness for a particular purpose."
+        ],
+        "mediaType": "application/json",
+        "outcome": "success",
+        "parsedRecordCount": 7,
+        "recipeSha256": "32f35a10d0c988667cf09345d8fc17330593b3fe56914b962ed822f7eb21bf44",
+        "responseBytes": 15579,
+        "responseSha256": "50cbddceaa5d41cbdc3914d0dcc650fe32dca2e8949e16371dd362468ed610e2",
+        "schemaFingerprint": "e6e45c8c30293c1c604a3103f8e02f89cde1870eb45a6ad538e0198e091f4925",
+        "toolVersion": "0.1.0",
+        "validUntil": "2026-09-08T09:06:21.115403Z"
+      }
     },
     {
       "adapter": "none",
@@ -2641,7 +3025,7 @@
         "type": "none"
       },
       "documentationUrl": "https://data.gov.hk/en-data/dataset/hk-dpo-datagovhk1-carpark-info-vacancy/resource/01752c62-a6b6-4ddc-bf2d-25efccadc143",
-      "effectiveStatus": "fixture-tested",
+      "effectiveStatus": "live-verified",
       "examples": {
         "curl": "curl \\\n  --fail-with-body \\\n  --silent \\\n  --show-error \\\n  --max-time \\\n  15 \\\n  --request \\\n  GET \\\n  --header \\\n  'accept: application/json' \\\n  'https://api.data.gov.hk/v1/carpark-info-vacancy?data=vacancy&vehicleTypes=privateCar&lang=en_US'\n",
         "python": "import httpx\n\nurl = 'https://api.data.gov.hk/v1/carpark-info-vacancy?data=vacancy&vehicleTypes=privateCar&lang=en_US'\nheaders = {\n    'accept': 'application/json',\n}\n\nwith httpx.Client(timeout=15.0, follow_redirects=False) as client:\n    response = client.request('GET', url, headers=headers)\n    response.raise_for_status()\n    print(response.text)\n",
@@ -2653,7 +3037,7 @@
       ],
       "nextAction": null,
       "reason": null,
-      "recipeSha256": "31e954fe9f3b55ec2f9ce9a2af4f307cbd59ce3d83b194681b15beddb515496a",
+      "recipeSha256": "4930354ff8c0b7971bb86dc47dce6fe9df6865dac0e452fa7be3a2c08195dd16",
       "recipeVersion": "1.0.0",
       "request": {
         "allowedHosts": [
@@ -2759,8 +3143,27 @@
       },
       "schemaVersion": 1,
       "sourceReference": "HKAPI-047",
-      "status": "fixture-tested",
-      "verification": null
+      "status": "live-verified",
+      "verification": {
+        "checkedAt": "2026-09-01T09:06:22.099190Z",
+        "elapsedMs": 790,
+        "errorCode": null,
+        "finalHost": "api.data.gov.hk",
+        "httpStatus": 200,
+        "limitations": [
+          "Technical access example only; review current provider terms, attribution, caching and redistribution requirements before use.",
+          "The bounded example is not a promise of availability, completeness or fitness for a particular purpose."
+        ],
+        "mediaType": "application/json",
+        "outcome": "success",
+        "parsedRecordCount": 565,
+        "recipeSha256": "4930354ff8c0b7971bb86dc47dce6fe9df6865dac0e452fa7be3a2c08195dd16",
+        "responseBytes": 95351,
+        "responseSha256": "27bb3fae3f8c94e374f7e6a87782a07d87bfbca75ee38b1311a0a54341262345",
+        "schemaFingerprint": "6a6976cca0ea2fb14e5f79c1dd2addcabbd435702f7fef81a95a49666a6ca4ba",
+        "toolVersion": "0.1.0",
+        "validUntil": "2026-09-08T09:06:22.099190Z"
+      }
     },
     {
       "adapter": "rest-json",
@@ -2770,7 +3173,7 @@
         "type": "none"
       },
       "documentationUrl": "https://data.gov.hk/en-data/dataset/hk-td-tis_5-real-time-parking-vacancy-data/resource/66360a56-1754-4188-9bc4-f77a070747a8",
-      "effectiveStatus": "fixture-tested",
+      "effectiveStatus": "live-verified",
       "examples": {
         "curl": "curl \\\n  --fail-with-body \\\n  --silent \\\n  --show-error \\\n  --max-time \\\n  15 \\\n  --request \\\n  GET \\\n  --header \\\n  'accept: application/json' \\\n  https://resource.data.one.gov.hk/td/carpark/vacancy_all.json\n",
         "python": "import httpx\n\nurl = 'https://resource.data.one.gov.hk/td/carpark/vacancy_all.json'\nheaders = {\n    'accept': 'application/json',\n}\n\nwith httpx.Client(timeout=15.0, follow_redirects=False) as client:\n    response = client.request('GET', url, headers=headers)\n    response.raise_for_status()\n    print(response.text)\n",
@@ -2782,7 +3185,7 @@
       ],
       "nextAction": null,
       "reason": null,
-      "recipeSha256": "9a38527db6bc7b31ce91aa82fc292e2eb4b32050a143601ab6e85326a7530dfc",
+      "recipeSha256": "3800ebf168ea2abb1b9b54b70f5701f20f5ef199996903118153370f54b0e658",
       "recipeVersion": "1.0.0",
       "request": {
         "allowedHosts": [
@@ -2834,8 +3237,27 @@
       },
       "schemaVersion": 1,
       "sourceReference": "HKAPI-048",
-      "status": "fixture-tested",
-      "verification": null
+      "status": "live-verified",
+      "verification": {
+        "checkedAt": "2026-09-01T09:06:23.641143Z",
+        "elapsedMs": 334,
+        "errorCode": null,
+        "finalHost": "resource.data.one.gov.hk",
+        "httpStatus": 200,
+        "limitations": [
+          "Technical access example only; review current provider terms, attribution, caching and redistribution requirements before use.",
+          "The bounded example is not a promise of availability, completeness or fitness for a particular purpose."
+        ],
+        "mediaType": "application/json",
+        "outcome": "success",
+        "parsedRecordCount": 549,
+        "recipeSha256": "3800ebf168ea2abb1b9b54b70f5701f20f5ef199996903118153370f54b0e658",
+        "responseBytes": 118751,
+        "responseSha256": "48752076931c469042d8d1abf2c7883dc9c9d77f1a34780bdaa0c4448e4d84a1",
+        "schemaFingerprint": "1fd31c3c5705f8ab5e839bd195373df3998b33579296f51884596691bb8426c9",
+        "toolVersion": "0.1.0",
+        "validUntil": "2026-09-08T09:06:23.641143Z"
+      }
     },
     {
       "adapter": "rest-json",
@@ -2845,7 +3267,7 @@
         "type": "none"
       },
       "documentationUrl": "https://data.gov.hk/en-data/dataset/hk-td-tis_5-real-time-parking-vacancy-data/resource/98a9ecfa-907d-48bf-93f4-91912459d404",
-      "effectiveStatus": "fixture-tested",
+      "effectiveStatus": "live-verified",
       "examples": {
         "curl": "curl \\\n  --fail-with-body \\\n  --silent \\\n  --show-error \\\n  --max-time \\\n  15 \\\n  --request \\\n  GET \\\n  --header \\\n  'accept: application/json' \\\n  https://resource.data.one.gov.hk/td/carpark/basic_info_all.json\n",
         "python": "import httpx\n\nurl = 'https://resource.data.one.gov.hk/td/carpark/basic_info_all.json'\nheaders = {\n    'accept': 'application/json',\n}\n\nwith httpx.Client(timeout=15.0, follow_redirects=False) as client:\n    response = client.request('GET', url, headers=headers)\n    response.raise_for_status()\n    print(response.text)\n",
@@ -2857,7 +3279,7 @@
       ],
       "nextAction": null,
       "reason": null,
-      "recipeSha256": "0512db03058f73b7efec34ed73c7d1d36fce2538f092b2be94cd0971eac76022",
+      "recipeSha256": "8025aba8d07cb1077de577f662f78fde498ff1d590f7f3ed941b7b83e5832efb",
       "recipeVersion": "1.0.0",
       "request": {
         "allowedHosts": [
@@ -2909,8 +3331,27 @@
       },
       "schemaVersion": 1,
       "sourceReference": "HKAPI-049",
-      "status": "fixture-tested",
-      "verification": null
+      "status": "live-verified",
+      "verification": {
+        "checkedAt": "2026-09-01T09:06:24.731021Z",
+        "elapsedMs": 365,
+        "errorCode": null,
+        "finalHost": "resource.data.one.gov.hk",
+        "httpStatus": 200,
+        "limitations": [
+          "Technical access example only; review current provider terms, attribution, caching and redistribution requirements before use.",
+          "The bounded example is not a promise of availability, completeness or fitness for a particular purpose."
+        ],
+        "mediaType": "application/json",
+        "outcome": "success",
+        "parsedRecordCount": 549,
+        "recipeSha256": "8025aba8d07cb1077de577f662f78fde498ff1d590f7f3ed941b7b83e5832efb",
+        "responseBytes": 670745,
+        "responseSha256": "1a99efd504d499bf96639887066fd24df96575511f9869f50accf3ff588382fd",
+        "schemaFingerprint": "0d2059f693b04b991d95c6d702c3b27940557618ca8e758dde416be248654779",
+        "toolVersion": "0.1.0",
+        "validUntil": "2026-09-08T09:06:24.731021Z"
+      }
     },
     {
       "adapter": "none",
@@ -3964,7 +4405,7 @@
         "type": "none"
       },
       "documentationUrl": "https://data.weather.gov.hk/weatherAPI/doc/HKO_Open_Data_API_Documentation.pdf",
-      "effectiveStatus": "fixture-tested",
+      "effectiveStatus": "live-verified",
       "examples": {
         "curl": "curl \\\n  --fail-with-body \\\n  --silent \\\n  --show-error \\\n  --max-time \\\n  15 \\\n  --request \\\n  GET \\\n  --header \\\n  'accept: application/json' \\\n  'https://data.weather.gov.hk/weatherAPI/opendata/weather.php?dataType=rhrread&lang=en'\n",
         "python": "import httpx\n\nurl = 'https://data.weather.gov.hk/weatherAPI/opendata/weather.php?dataType=rhrread&lang=en'\nheaders = {\n    'accept': 'application/json',\n}\n\nwith httpx.Client(timeout=15.0, follow_redirects=False) as client:\n    response = client.request('GET', url, headers=headers)\n    response.raise_for_status()\n    print(response.text)\n",
@@ -3976,7 +4417,7 @@
       ],
       "nextAction": null,
       "reason": null,
-      "recipeSha256": "ac999bc8738bf73a46ff2159d83e165aa10eb354e3eade8b2fcd0f489ae09353",
+      "recipeSha256": "aa232d5396ec3704999e0274746772c669387245a44639d028368871696349aa",
       "recipeVersion": "1.0.0",
       "request": {
         "allowedHosts": [
@@ -4061,8 +4502,27 @@
       },
       "schemaVersion": 1,
       "sourceReference": "HKAPI-086",
-      "status": "fixture-tested",
-      "verification": null
+      "status": "live-verified",
+      "verification": {
+        "checkedAt": "2026-09-01T09:06:25.873243Z",
+        "elapsedMs": 238,
+        "errorCode": null,
+        "finalHost": "data.weather.gov.hk",
+        "httpStatus": 200,
+        "limitations": [
+          "Technical access example only; review current provider terms, attribution, caching and redistribution requirements before use.",
+          "The bounded example is not a promise of availability, completeness or fitness for a particular purpose."
+        ],
+        "mediaType": "application/json",
+        "outcome": "success",
+        "parsedRecordCount": 1,
+        "recipeSha256": "aa232d5396ec3704999e0274746772c669387245a44639d028368871696349aa",
+        "responseBytes": 3201,
+        "responseSha256": "298f614682489919e6014fb682f0ebb267b237b47053492454b628e589d174cf",
+        "schemaFingerprint": "ae5401b0f9f801bbd636a75b94cba0234fa317765d12d6093cd5c68a7387c86b",
+        "toolVersion": "0.1.0",
+        "validUntil": "2026-09-08T09:06:25.873243Z"
+      }
     },
     {
       "adapter": "rest-json",
@@ -4072,7 +4532,7 @@
         "type": "none"
       },
       "documentationUrl": "https://data.weather.gov.hk/weatherAPI/doc/HKO_Open_Data_API_Documentation.pdf",
-      "effectiveStatus": "fixture-tested",
+      "effectiveStatus": "live-verified",
       "examples": {
         "curl": "curl \\\n  --fail-with-body \\\n  --silent \\\n  --show-error \\\n  --max-time \\\n  15 \\\n  --request \\\n  GET \\\n  --header \\\n  'accept: application/json' \\\n  'https://data.weather.gov.hk/weatherAPI/opendata/weather.php?dataType=flw&lang=en'\n",
         "python": "import httpx\n\nurl = 'https://data.weather.gov.hk/weatherAPI/opendata/weather.php?dataType=flw&lang=en'\nheaders = {\n    'accept': 'application/json',\n}\n\nwith httpx.Client(timeout=15.0, follow_redirects=False) as client:\n    response = client.request('GET', url, headers=headers)\n    response.raise_for_status()\n    print(response.text)\n",
@@ -4084,7 +4544,7 @@
       ],
       "nextAction": null,
       "reason": null,
-      "recipeSha256": "eb97343a9a205e60d249172a787df56478324ffea524fbe2ace1ba9e7787dc4a",
+      "recipeSha256": "c2a8a4cbe01e68d4ac4aa386f99388db9495426fe11cc162829436f33f1ea490",
       "recipeVersion": "1.0.0",
       "request": {
         "allowedHosts": [
@@ -4169,8 +4629,27 @@
       },
       "schemaVersion": 1,
       "sourceReference": "HKAPI-087",
-      "status": "fixture-tested",
-      "verification": null
+      "status": "live-verified",
+      "verification": {
+        "checkedAt": "2026-09-01T09:06:26.904187Z",
+        "elapsedMs": 198,
+        "errorCode": null,
+        "finalHost": "data.weather.gov.hk",
+        "httpStatus": 200,
+        "limitations": [
+          "Technical access example only; review current provider terms, attribution, caching and redistribution requirements before use.",
+          "The bounded example is not a promise of availability, completeness or fitness for a particular purpose."
+        ],
+        "mediaType": "application/json",
+        "outcome": "success",
+        "parsedRecordCount": 1,
+        "recipeSha256": "c2a8a4cbe01e68d4ac4aa386f99388db9495426fe11cc162829436f33f1ea490",
+        "responseBytes": 486,
+        "responseSha256": "9d7078164ecf76b7b1c7e3b801e363cc39a8252d3e90bcbb8e5b31235614d21b",
+        "schemaFingerprint": "3f9958446d446313fab148ba7c58056b231f686828807756a0799d5d3401db37",
+        "toolVersion": "0.1.0",
+        "validUntil": "2026-09-08T09:06:26.904187Z"
+      }
     },
     {
       "adapter": "rest-json",
@@ -4180,7 +4659,7 @@
         "type": "none"
       },
       "documentationUrl": "https://data.weather.gov.hk/weatherAPI/doc/HKO_Open_Data_API_Documentation.pdf",
-      "effectiveStatus": "fixture-tested",
+      "effectiveStatus": "live-verified",
       "examples": {
         "curl": "curl \\\n  --fail-with-body \\\n  --silent \\\n  --show-error \\\n  --max-time \\\n  15 \\\n  --request \\\n  GET \\\n  --header \\\n  'accept: application/json' \\\n  'https://data.weather.gov.hk/weatherAPI/opendata/weather.php?dataType=fnd&lang=en'\n",
         "python": "import httpx\n\nurl = 'https://data.weather.gov.hk/weatherAPI/opendata/weather.php?dataType=fnd&lang=en'\nheaders = {\n    'accept': 'application/json',\n}\n\nwith httpx.Client(timeout=15.0, follow_redirects=False) as client:\n    response = client.request('GET', url, headers=headers)\n    response.raise_for_status()\n    print(response.text)\n",
@@ -4192,7 +4671,7 @@
       ],
       "nextAction": null,
       "reason": null,
-      "recipeSha256": "3924224820c7f733b1d5fbe324586453a0007d56e88d21ee89d29bb09c2122a7",
+      "recipeSha256": "3f19d4a439f88db72167700c6b9ef4f651f96b3c2c6f6ba1b7807c8ee7d7c379",
       "recipeVersion": "1.0.0",
       "request": {
         "allowedHosts": [
@@ -4277,8 +4756,27 @@
       },
       "schemaVersion": 1,
       "sourceReference": "HKAPI-088",
-      "status": "fixture-tested",
-      "verification": null
+      "status": "live-verified",
+      "verification": {
+        "checkedAt": "2026-09-01T09:06:27.829548Z",
+        "elapsedMs": 198,
+        "errorCode": null,
+        "finalHost": "data.weather.gov.hk",
+        "httpStatus": 200,
+        "limitations": [
+          "Technical access example only; review current provider terms, attribution, caching and redistribution requirements before use.",
+          "The bounded example is not a promise of availability, completeness or fitness for a particular purpose."
+        ],
+        "mediaType": "application/json",
+        "outcome": "success",
+        "parsedRecordCount": 1,
+        "recipeSha256": "3f19d4a439f88db72167700c6b9ef4f651f96b3c2c6f6ba1b7807c8ee7d7c379",
+        "responseBytes": 4686,
+        "responseSha256": "f2aa629e487386d1cb360273d19b837a1452ed3780bd41801a53cfbc2833706d",
+        "schemaFingerprint": "4b2627b3aface48abaf7b70cbdc70970fbb58c3333987d4de0ff5c59507ab4a8",
+        "toolVersion": "0.1.0",
+        "validUntil": "2026-09-08T09:06:27.829548Z"
+      }
     },
     {
       "adapter": "rest-json",
@@ -4288,7 +4786,7 @@
         "type": "none"
       },
       "documentationUrl": "https://data.weather.gov.hk/weatherAPI/doc/HKO_Open_Data_API_Documentation.pdf",
-      "effectiveStatus": "fixture-tested",
+      "effectiveStatus": "live-verified",
       "examples": {
         "curl": "curl \\\n  --fail-with-body \\\n  --silent \\\n  --show-error \\\n  --max-time \\\n  15 \\\n  --request \\\n  GET \\\n  --header \\\n  'accept: application/json' \\\n  'https://data.weather.gov.hk/weatherAPI/opendata/weather.php?dataType=warnsum&lang=en'\n",
         "python": "import httpx\n\nurl = 'https://data.weather.gov.hk/weatherAPI/opendata/weather.php?dataType=warnsum&lang=en'\nheaders = {\n    'accept': 'application/json',\n}\n\nwith httpx.Client(timeout=15.0, follow_redirects=False) as client:\n    response = client.request('GET', url, headers=headers)\n    response.raise_for_status()\n    print(response.text)\n",
@@ -4300,7 +4798,7 @@
       ],
       "nextAction": null,
       "reason": null,
-      "recipeSha256": "8b3480a70b07896279ce7dc7f4094d8b984f5b6787e6272f2265992a6261249c",
+      "recipeSha256": "929b288eb2df11364b4d25104a5fa013ff83817da21a13f4139d8bed911a58d3",
       "recipeVersion": "1.0.0",
       "request": {
         "allowedHosts": [
@@ -4385,8 +4883,27 @@
       },
       "schemaVersion": 1,
       "sourceReference": "HKAPI-089",
-      "status": "fixture-tested",
-      "verification": null
+      "status": "live-verified",
+      "verification": {
+        "checkedAt": "2026-09-01T09:06:28.782479Z",
+        "elapsedMs": 268,
+        "errorCode": null,
+        "finalHost": "data.weather.gov.hk",
+        "httpStatus": 200,
+        "limitations": [
+          "Technical access example only; review current provider terms, attribution, caching and redistribution requirements before use.",
+          "The bounded example is not a promise of availability, completeness or fitness for a particular purpose."
+        ],
+        "mediaType": "application/json",
+        "outcome": "success",
+        "parsedRecordCount": 1,
+        "recipeSha256": "929b288eb2df11364b4d25104a5fa013ff83817da21a13f4139d8bed911a58d3",
+        "responseBytes": 199,
+        "responseSha256": "a0eff01dc6225c64f002322ddf5bb5817d9d929b5a57d1905a2c0b97b5f65cbf",
+        "schemaFingerprint": "595cd502c22420c13d5f2718fc2d51f88fa7aab19813682503bfee3b6584be19",
+        "toolVersion": "0.1.0",
+        "validUntil": "2026-09-08T09:06:28.782479Z"
+      }
     },
     {
       "adapter": "rest-json",
@@ -4396,7 +4913,7 @@
         "type": "none"
       },
       "documentationUrl": "https://data.weather.gov.hk/weatherAPI/doc/HKO_Open_Data_API_Documentation.pdf",
-      "effectiveStatus": "fixture-tested",
+      "effectiveStatus": "live-verified",
       "examples": {
         "curl": "curl \\\n  --fail-with-body \\\n  --silent \\\n  --show-error \\\n  --max-time \\\n  15 \\\n  --request \\\n  GET \\\n  --header \\\n  'accept: application/json' \\\n  'https://data.weather.gov.hk/weatherAPI/opendata/weather.php?dataType=warningInfo&lang=en'\n",
         "python": "import httpx\n\nurl = 'https://data.weather.gov.hk/weatherAPI/opendata/weather.php?dataType=warningInfo&lang=en'\nheaders = {\n    'accept': 'application/json',\n}\n\nwith httpx.Client(timeout=15.0, follow_redirects=False) as client:\n    response = client.request('GET', url, headers=headers)\n    response.raise_for_status()\n    print(response.text)\n",
@@ -4408,7 +4925,7 @@
       ],
       "nextAction": null,
       "reason": null,
-      "recipeSha256": "90283e79486fb72746699285051ee2d340f1859a9cb73cfecbc02f297dd0e07a",
+      "recipeSha256": "970e2c6127d670a757313dbf1f03d6cfb95dc9b5d508e35218dfbbc398a832cc",
       "recipeVersion": "1.0.0",
       "request": {
         "allowedHosts": [
@@ -4493,8 +5010,27 @@
       },
       "schemaVersion": 1,
       "sourceReference": "HKAPI-090",
-      "status": "fixture-tested",
-      "verification": null
+      "status": "live-verified",
+      "verification": {
+        "checkedAt": "2026-09-01T09:06:29.804638Z",
+        "elapsedMs": 242,
+        "errorCode": null,
+        "finalHost": "data.weather.gov.hk",
+        "httpStatus": 200,
+        "limitations": [
+          "Technical access example only; review current provider terms, attribution, caching and redistribution requirements before use.",
+          "The bounded example is not a promise of availability, completeness or fitness for a particular purpose."
+        ],
+        "mediaType": "application/json",
+        "outcome": "success",
+        "parsedRecordCount": 1,
+        "recipeSha256": "970e2c6127d670a757313dbf1f03d6cfb95dc9b5d508e35218dfbbc398a832cc",
+        "responseBytes": 2730,
+        "responseSha256": "030e3e4ec8c5399006a3186a275135709a7a3ed5dcfc43713641c0076e71cd9e",
+        "schemaFingerprint": "6fe78fb0f867d68bee59294edee520931abd08a1e36006ed12d8957d96f0d40e",
+        "toolVersion": "0.1.0",
+        "validUntil": "2026-09-08T09:06:29.804638Z"
+      }
     },
     {
       "adapter": "rest-json",
@@ -4504,7 +5040,7 @@
         "type": "none"
       },
       "documentationUrl": "https://data.weather.gov.hk/weatherAPI/doc/HKO_Open_Data_API_Documentation.pdf",
-      "effectiveStatus": "fixture-tested",
+      "effectiveStatus": "live-verified",
       "examples": {
         "curl": "curl \\\n  --fail-with-body \\\n  --silent \\\n  --show-error \\\n  --max-time \\\n  15 \\\n  --request \\\n  GET \\\n  --header \\\n  'accept: application/json' \\\n  'https://data.weather.gov.hk/weatherAPI/opendata/weather.php?dataType=swt&lang=en'\n",
         "python": "import httpx\n\nurl = 'https://data.weather.gov.hk/weatherAPI/opendata/weather.php?dataType=swt&lang=en'\nheaders = {\n    'accept': 'application/json',\n}\n\nwith httpx.Client(timeout=15.0, follow_redirects=False) as client:\n    response = client.request('GET', url, headers=headers)\n    response.raise_for_status()\n    print(response.text)\n",
@@ -4516,7 +5052,7 @@
       ],
       "nextAction": null,
       "reason": null,
-      "recipeSha256": "251b5e1fc5ec32c8c7176277bd9cf0009c4e64ad77ef558e6324e92d4ca8f2f5",
+      "recipeSha256": "c419f2ec362aee259b7b1b3373044f3409736ed6f864f609202cf51f99b2ecf2",
       "recipeVersion": "1.0.0",
       "request": {
         "allowedHosts": [
@@ -4601,8 +5137,27 @@
       },
       "schemaVersion": 1,
       "sourceReference": "HKAPI-091",
-      "status": "fixture-tested",
-      "verification": null
+      "status": "live-verified",
+      "verification": {
+        "checkedAt": "2026-09-01T09:06:30.808338Z",
+        "elapsedMs": 268,
+        "errorCode": null,
+        "finalHost": "data.weather.gov.hk",
+        "httpStatus": 200,
+        "limitations": [
+          "Technical access example only; review current provider terms, attribution, caching and redistribution requirements before use.",
+          "The bounded example is not a promise of availability, completeness or fitness for a particular purpose."
+        ],
+        "mediaType": "application/json",
+        "outcome": "success",
+        "parsedRecordCount": 1,
+        "recipeSha256": "c419f2ec362aee259b7b1b3373044f3409736ed6f864f609202cf51f99b2ecf2",
+        "responseBytes": 10,
+        "responseSha256": "cb0f6fc10f8448b2e38bd5227e96377a0d34c0faea4c886ed52fc581235e38f0",
+        "schemaFingerprint": "8ba32b403ed9786d5ce08773f973b6c95e333a842d5daced70fa889e203c2286",
+        "toolVersion": "0.1.0",
+        "validUntil": "2026-09-08T09:06:30.808338Z"
+      }
     },
     {
       "adapter": "rest-json",
@@ -4612,7 +5167,7 @@
         "type": "none"
       },
       "documentationUrl": "https://data.weather.gov.hk/weatherAPI/doc/HKO_Open_Data_API_Documentation.pdf",
-      "effectiveStatus": "fixture-tested",
+      "effectiveStatus": "live-verified",
       "examples": {
         "curl": "curl \\\n  --fail-with-body \\\n  --silent \\\n  --show-error \\\n  --max-time \\\n  15 \\\n  --request \\\n  GET \\\n  --header \\\n  'accept: application/json' \\\n  'https://data.weather.gov.hk/weatherAPI/opendata/earthquake.php?dataType=qem&lang=en'\n",
         "python": "import httpx\n\nurl = 'https://data.weather.gov.hk/weatherAPI/opendata/earthquake.php?dataType=qem&lang=en'\nheaders = {\n    'accept': 'application/json',\n}\n\nwith httpx.Client(timeout=15.0, follow_redirects=False) as client:\n    response = client.request('GET', url, headers=headers)\n    response.raise_for_status()\n    print(response.text)\n",
@@ -4624,7 +5179,7 @@
       ],
       "nextAction": null,
       "reason": null,
-      "recipeSha256": "3de75818bc9ea0cc49c6139eaf3944db6a2fd55eaa542f2c91dc074852b19f61",
+      "recipeSha256": "9d3b4ed77053489eef99aaf4554c277f41cba8c263c9e00e70dc4376b1543a07",
       "recipeVersion": "1.0.0",
       "request": {
         "allowedHosts": [
@@ -4710,8 +5265,27 @@
       },
       "schemaVersion": 1,
       "sourceReference": "HKAPI-092",
-      "status": "fixture-tested",
-      "verification": null
+      "status": "live-verified",
+      "verification": {
+        "checkedAt": "2026-09-01T09:06:31.834847Z",
+        "elapsedMs": 272,
+        "errorCode": null,
+        "finalHost": "data.weather.gov.hk",
+        "httpStatus": 200,
+        "limitations": [
+          "Technical access example only; review current provider terms, attribution, caching and redistribution requirements before use.",
+          "The bounded example is not a promise of availability, completeness or fitness for a particular purpose."
+        ],
+        "mediaType": "application/json",
+        "outcome": "success",
+        "parsedRecordCount": 1,
+        "recipeSha256": "9d3b4ed77053489eef99aaf4554c277f41cba8c263c9e00e70dc4376b1543a07",
+        "responseBytes": 145,
+        "responseSha256": "f3abe0e24a1aad9d80c3573d5497bf0a9eea11852972f4b4ce3c2a68f949b65a",
+        "schemaFingerprint": "eacedc26e27745a1358c7dfbbe36a8882b57cbc5309dd2f85263e39633446f9b",
+        "toolVersion": "0.1.0",
+        "validUntil": "2026-09-08T09:06:31.834847Z"
+      }
     },
     {
       "adapter": "none",
@@ -6843,7 +7417,27 @@
       "schemaVersion": 1,
       "sourceReference": "HKAPI-163",
       "status": "fixture-tested",
-      "verification": null
+      "verification": {
+        "checkedAt": "2026-09-01T09:00:15.081079Z",
+        "elapsedMs": 0,
+        "errorCode": "SOURCE_UNAVAILABLE",
+        "finalHost": "app.legco.gov.hk",
+        "httpStatus": null,
+        "limitations": [
+          "Technical access example only; review current provider terms, attribution, caching and redistribution requirements before use.",
+          "The bounded example is not a promise of availability, completeness or fitness for a particular purpose.",
+          "Verification failed; no provider response content is retained in this evidence."
+        ],
+        "mediaType": null,
+        "outcome": "failure",
+        "parsedRecordCount": 0,
+        "recipeSha256": "01e509de56ec08807591532907fbade742b48ef4bea4603b458b5cc2145e160c",
+        "responseBytes": 0,
+        "responseSha256": null,
+        "schemaFingerprint": null,
+        "toolVersion": "0.1.0",
+        "validUntil": "2026-09-08T09:00:15.081079Z"
+      }
     },
     {
       "adapter": "odata",
@@ -6945,7 +7539,27 @@
       "schemaVersion": 1,
       "sourceReference": "HKAPI-164",
       "status": "fixture-tested",
-      "verification": null
+      "verification": {
+        "checkedAt": "2026-09-01T09:00:15.081079Z",
+        "elapsedMs": 0,
+        "errorCode": "SOURCE_UNAVAILABLE",
+        "finalHost": "app.legco.gov.hk",
+        "httpStatus": null,
+        "limitations": [
+          "Technical access example only; review current provider terms, attribution, caching and redistribution requirements before use.",
+          "The bounded example is not a promise of availability, completeness or fitness for a particular purpose.",
+          "Verification failed; no provider response content is retained in this evidence."
+        ],
+        "mediaType": null,
+        "outcome": "failure",
+        "parsedRecordCount": 0,
+        "recipeSha256": "bd6ae4f2bcd23809e0642fc4299127d9f48ab5af378db6caa6d62c173cb801fd",
+        "responseBytes": 0,
+        "responseSha256": null,
+        "schemaFingerprint": null,
+        "toolVersion": "0.1.0",
+        "validUntil": "2026-09-08T09:00:15.081079Z"
+      }
     },
     {
       "adapter": "odata",
@@ -7047,7 +7661,27 @@
       "schemaVersion": 1,
       "sourceReference": "HKAPI-165",
       "status": "fixture-tested",
-      "verification": null
+      "verification": {
+        "checkedAt": "2026-09-01T09:00:15.081079Z",
+        "elapsedMs": 0,
+        "errorCode": "SOURCE_UNAVAILABLE",
+        "finalHost": "app.legco.gov.hk",
+        "httpStatus": null,
+        "limitations": [
+          "Technical access example only; review current provider terms, attribution, caching and redistribution requirements before use.",
+          "The bounded example is not a promise of availability, completeness or fitness for a particular purpose.",
+          "Verification failed; no provider response content is retained in this evidence."
+        ],
+        "mediaType": null,
+        "outcome": "failure",
+        "parsedRecordCount": 0,
+        "recipeSha256": "9c90eb71fdcb8955e77fc165b6d509a224662cf900ccd0730958e2da0b1af75c",
+        "responseBytes": 0,
+        "responseSha256": null,
+        "schemaFingerprint": null,
+        "toolVersion": "0.1.0",
+        "validUntil": "2026-09-08T09:00:15.081079Z"
+      }
     },
     {
       "adapter": "odata",
@@ -7149,7 +7783,27 @@
       "schemaVersion": 1,
       "sourceReference": "HKAPI-166",
       "status": "fixture-tested",
-      "verification": null
+      "verification": {
+        "checkedAt": "2026-09-01T09:00:15.081079Z",
+        "elapsedMs": 0,
+        "errorCode": "SOURCE_UNAVAILABLE",
+        "finalHost": "app.legco.gov.hk",
+        "httpStatus": null,
+        "limitations": [
+          "Technical access example only; review current provider terms, attribution, caching and redistribution requirements before use.",
+          "The bounded example is not a promise of availability, completeness or fitness for a particular purpose.",
+          "Verification failed; no provider response content is retained in this evidence."
+        ],
+        "mediaType": null,
+        "outcome": "failure",
+        "parsedRecordCount": 0,
+        "recipeSha256": "28e0f26dba7ce4930d2353aaf06ffc4c90774e78150292ee06e75455c46e5639",
+        "responseBytes": 0,
+        "responseSha256": null,
+        "schemaFingerprint": null,
+        "toolVersion": "0.1.0",
+        "validUntil": "2026-09-08T09:00:15.081079Z"
+      }
     },
     {
       "adapter": "odata",
@@ -7251,7 +7905,27 @@
       "schemaVersion": 1,
       "sourceReference": "HKAPI-167",
       "status": "fixture-tested",
-      "verification": null
+      "verification": {
+        "checkedAt": "2026-09-01T09:00:15.081079Z",
+        "elapsedMs": 0,
+        "errorCode": "SOURCE_UNAVAILABLE",
+        "finalHost": "app.legco.gov.hk",
+        "httpStatus": null,
+        "limitations": [
+          "Technical access example only; review current provider terms, attribution, caching and redistribution requirements before use.",
+          "The bounded example is not a promise of availability, completeness or fitness for a particular purpose.",
+          "Verification failed; no provider response content is retained in this evidence."
+        ],
+        "mediaType": null,
+        "outcome": "failure",
+        "parsedRecordCount": 0,
+        "recipeSha256": "dd289485692f5497d0702855ad5305dd7556575d9b2f1796659df8142c18e96c",
+        "responseBytes": 0,
+        "responseSha256": null,
+        "schemaFingerprint": null,
+        "toolVersion": "0.1.0",
+        "validUntil": "2026-09-08T09:00:15.081079Z"
+      }
     },
     {
       "adapter": "none",
@@ -7382,7 +8056,27 @@
       "schemaVersion": 1,
       "sourceReference": "HKAPI-169",
       "status": "fixture-tested",
-      "verification": null
+      "verification": {
+        "checkedAt": "2026-09-01T09:00:15.081079Z",
+        "elapsedMs": 0,
+        "errorCode": "SOURCE_UNAVAILABLE",
+        "finalHost": "app.legco.gov.hk",
+        "httpStatus": null,
+        "limitations": [
+          "Technical access example only; review current provider terms, attribution, caching and redistribution requirements before use.",
+          "The bounded example is not a promise of availability, completeness or fitness for a particular purpose.",
+          "Verification failed; no provider response content is retained in this evidence."
+        ],
+        "mediaType": null,
+        "outcome": "failure",
+        "parsedRecordCount": 0,
+        "recipeSha256": "ec76e8ced33d71e85367d3e430ce2681aef7ae1090c8961784b33cdc901a6309",
+        "responseBytes": 0,
+        "responseSha256": null,
+        "schemaFingerprint": null,
+        "toolVersion": "0.1.0",
+        "validUntil": "2026-09-08T09:00:15.081079Z"
+      }
     },
     {
       "adapter": "none",
@@ -9306,7 +10000,7 @@
         "type": "none"
       },
       "documentationUrl": "https://data.gov.hk/en/help/api-spec",
-      "effectiveStatus": "fixture-tested",
+      "effectiveStatus": "live-verified",
       "examples": {
         "curl": "curl \\\n  --fail-with-body \\\n  --silent \\\n  --show-error \\\n  --max-time \\\n  15 \\\n  --request \\\n  GET \\\n  --header \\\n  'accept: application/json' \\\n  'https://api.data.gov.hk/v1/nearest-schools?lat=22.2812&long=114.1659&max=5'\n",
         "python": "import httpx\n\nurl = 'https://api.data.gov.hk/v1/nearest-schools?lat=22.2812&long=114.1659&max=5'\nheaders = {\n    'accept': 'application/json',\n}\n\nwith httpx.Client(timeout=15.0, follow_redirects=False) as client:\n    response = client.request('GET', url, headers=headers)\n    response.raise_for_status()\n    print(response.text)\n",
@@ -9318,7 +10012,7 @@
       ],
       "nextAction": null,
       "reason": null,
-      "recipeSha256": "c3a20a15901b40b1287c32d917c66f2c853c9349f017e78c5acbb4e0b6089a33",
+      "recipeSha256": "d279064ec6f507426d1d3822df1f3c49b7ddd42ccb5b71392144ff5a8c47e72c",
       "recipeVersion": "1.0.0",
       "request": {
         "allowedHosts": [
@@ -9410,8 +10104,27 @@
       },
       "schemaVersion": 1,
       "sourceReference": "HKAPI-236",
-      "status": "fixture-tested",
-      "verification": null
+      "status": "live-verified",
+      "verification": {
+        "checkedAt": "2026-09-01T09:06:32.845931Z",
+        "elapsedMs": 1455,
+        "errorCode": null,
+        "finalHost": "api.data.gov.hk",
+        "httpStatus": 200,
+        "limitations": [
+          "Technical access example only; review current provider terms, attribution, caching and redistribution requirements before use.",
+          "The bounded example is not a promise of availability, completeness or fitness for a particular purpose."
+        ],
+        "mediaType": "application/json",
+        "outcome": "success",
+        "parsedRecordCount": 5,
+        "recipeSha256": "d279064ec6f507426d1d3822df1f3c49b7ddd42ccb5b71392144ff5a8c47e72c",
+        "responseBytes": 5025,
+        "responseSha256": "179bfd0c559326c3c7478d8994b8ba64f673a1cd9f602cfbbf8d0fab98520dd0",
+        "schemaFingerprint": "042e466954b3c0ecf3bf3eb7f5612327811077a8b1310204cf0938a841b3c910",
+        "toolVersion": "0.1.0",
+        "validUntil": "2026-09-08T09:06:32.845931Z"
+      }
     },
     {
       "adapter": "none",

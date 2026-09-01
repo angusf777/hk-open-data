@@ -17,6 +17,7 @@ from hk_data_worker.access.execution import (
     execute_recipe,
     verify_recipe,
 )
+from hk_data_worker.access.live import verify_all_anonymous
 from hk_data_worker.access.models import AccessRecipe
 from hk_data_worker.access.registry import load_recipes
 from hk_data_worker.fetch import SafeFetcher
@@ -168,6 +169,30 @@ def main(
         if not 1 <= args.concurrency <= 3:
             raise AccessFailure("INVALID_PARAMETER", "verify concurrency must be between 1 and 3.")
         parameters = _parameters(args.param)
+        if args.all_anonymous:
+            if parameters:
+                raise AccessFailure(
+                    "INVALID_PARAMETER",
+                    "--param cannot be combined with --all-anonymous.",
+                )
+            results = verify_all_anonymous(
+                _recipes(root),
+                output=root / "access" / "verification",
+                fetcher=active_fetcher,
+                concurrency=args.concurrency,
+            )
+            failure_codes: list[int] = []
+            for evidence in results:
+                if evidence.outcome == "success":
+                    print(f"verified {evidence.source_reference}", file=sys.stderr)
+                else:
+                    assert evidence.error_code is not None
+                    print(
+                        f"{evidence.source_reference}: {evidence.error_code}",
+                        file=sys.stderr,
+                    )
+                    failure_codes.append(EXIT_BY_CODE.get(evidence.error_code, 6))
+            return max(failure_codes, default=0)
         targets = _verify_targets(root, args.source_reference, args.all_anonymous)
         for recipe in targets:
             evidence = verify_recipe(

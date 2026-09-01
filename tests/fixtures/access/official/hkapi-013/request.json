@@ -5,7 +5,8 @@
         "portal.csdi.gov.hk"
       ],
       "allowed_media_types": [
-        "application/xml"
+      "application/xml",
+      "text/xml"
       ],
       "body": null,
       "headers": {

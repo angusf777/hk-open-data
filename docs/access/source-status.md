@@ -1,276 +1,283 @@
 # Official source access status
 
-This generated review index records what the toolkit can execute safely today. A manual-only entry is an explicit boundary, not a claim that the underlying public data is unavailable.
+This generated review index records what the toolkit can execute safely today. A manual-only entry is an explicit boundary, not a claim that the underlying public data is unavailable. Live evidence is a time-limited technical check, not a guarantee of future availability, data quality, licensing or permitted use.
 
 - Total official sources: 265
-- Fixture-tested recipes: 37
+- Live verification attempts recorded: 37
+- Successful live verification records: 29
+- Failed live verification records: 8
+- Live-verified recipes: 29
+- Fixture-tested recipes: 8
 - Manual-only recipes: 228
-- Live-verified recipes: 0 (live evidence is recorded separately and expires)
+- Credential-required recipes: 0
+- Blocked recipes: 0
+- Unavailable recipes: 0
+- Unclassified official sources: 0
 
-| Source | Status | Adapter | Official documentation |
-| --- | --- | --- | --- |
-| HKAPI-001 | fixture-tested | ckan-action | [Official source](https://data.gov.hk/en/help/ckan-api-development-guide) |
-| HKAPI-002 | fixture-tested | ckan-action | [Official source](https://data.gov.hk/en/help/ckan-api-development-guide) |
-| HKAPI-003 | fixture-tested | ckan-action | [Official source](https://data.gov.hk/en/help/ckan-api-development-guide) |
-| HKAPI-004 | fixture-tested | ckan-action | [Official source](https://data.gov.hk/en/help/ckan-api-development-guide) |
-| HKAPI-005 | fixture-tested | rest-json | [Official source](https://data.gov.hk/en/help/api-spec) |
-| HKAPI-006 | manual-only | none | [Official source](https://data.gov.hk/en/help/api-spec) |
-| HKAPI-007 | manual-only | none | [Official source](https://data.gov.hk/en/help/api-spec) |
-| HKAPI-008 | manual-only | none | [Official source](https://data.gov.hk/en/help/api-spec) |
-| HKAPI-009 | manual-only | none | [Official source](https://data.gov.hk/en/help/api-spec) |
-| HKAPI-010 | manual-only | none | [Official source](https://data.gov.hk/en/help/api-spec) |
-| HKAPI-011 | fixture-tested | rest-json | [Official source](https://data.gov.hk/en/help/api-spec) |
-| HKAPI-012 | fixture-tested | rss | [Official source](https://data.gov.hk/en/dev-center) |
-| HKAPI-013 | fixture-tested | ogc-wfs | [Official source](https://portal.csdi.gov.hk/csdi-webpage/doc/GeoSpatialServices) |
-| HKAPI-014 | fixture-tested | xml | [Official source](https://portal.csdi.gov.hk/csdi-webpage/doc/GeoSpatialServices) |
-| HKAPI-015 | manual-only | none | [Official source](https://portal.csdi.gov.hk/csdi-webpage/apilist) |
-| HKAPI-016 | fixture-tested | rest-json | [Official source](https://data.weather.gov.hk/weatherAPI/doc/HKO_Open_Data_API_Documentation.pdf) |
-| HKAPI-017 | manual-only | none | [Official source](https://www.censtatd.gov.hk/datagovhk/WT_data_dict_en.pdf) |
-| HKAPI-018 | fixture-tested | rest-json | [Official source](https://apidocs.hkma.gov.hk/documentation/market-data-and-statistics/monthly-statistical-bulletin/er-ir/er-eeri-daily/) |
-| HKAPI-019 | manual-only | none | [Official source](https://data.gov.hk/en-datasets/provider/hk-cr) |
-| HKAPI-020 | fixture-tested | odata | [Official source](https://www.legco.gov.hk/en/open-legco/open-data/questions-at-council-meetings.html) |
-| HKAPI-021 | fixture-tested | rest-json | [Official source](https://www.als.gov.hk/docs/Data_Dictionary_for_ALS_EN.pdf) |
-| HKAPI-022 | manual-only | none | [Official source](https://www.geodetic.gov.hk/en/satref/satref.htm) |
-| HKAPI-023 | fixture-tested | file-download | [Official source](https://portal.csdi.gov.hk/csdi-webpage/apidoc/TopographicMapAPI) |
-| HKAPI-024 | manual-only | none | [Official source](https://portal.csdi.gov.hk/csdi-webpage/apidoc/LotIndexAPI) |
-| HKAPI-025 | manual-only | none | [Official source](https://portal.csdi.gov.hk/csdi-webpage/apidoc/LPPUNSearchAPI) |
-| HKAPI-026 | manual-only | none | [Official source](https://portal.csdi.gov.hk/csdi-webpage/) |
-| HKAPI-027 | fixture-tested | rest-json | [Official source](https://data.gov.hk/en-data/dataset/ctb-eta-transport-realtime-eta) |
-| HKAPI-028 | fixture-tested | rest-json | [Official source](https://data.gov.hk/en-data/dataset/hk-td-tis_21-etakmb/resource/fcac14ed-23e4-433b-afd0-3c37d5c8e428) |
-| HKAPI-029 | fixture-tested | rest-json | [Official source](https://data.gov.hk/en-data/dataset/hk-td-sm_7-real-time-arrival-data-of-gmb/resource/02913a6d-e520-4232-bdd5-eef86a906631) |
-| HKAPI-030 | manual-only | none | [Official source](https://data.gov.hk/en-datasets/search/New%20Lantao%20Bus%20v2) |
-| HKAPI-031 | manual-only | none | [Official source](https://data.gov.hk/en-datasets/search/one-stop%20Citybus%20NLB) |
-| HKAPI-032 | fixture-tested | rest-json | [Official source](https://data.gov.hk/en-data/dataset/mtr-data2-nexttrain-data/resource/103472ed-01be-4dda-92c6-30530dee022f) |
-| HKAPI-033 | fixture-tested | rest-json | [Official source](https://data.gov.hk/en-data/dataset/mtr-lrnt_data-light-rail-nexttrain-data) |
-| HKAPI-034 | fixture-tested | rest-json | [Official source](https://opendata.mtr.com.hk/doc/MTR_BUS_API_Spec_v1.7.pdf) |
-| HKAPI-035 | manual-only | none | [Official source](https://data.gov.hk/en-data/dataset/mtr-data-routes-fares-barrier-free-facilities) |
-| HKAPI-036 | manual-only | none | [Official source](https://data.gov.hk/en-datasets/search/Hong%20Kong%20Tramways%20stops) |
-| HKAPI-037 | manual-only | none | [Official source](https://data.gov.hk/en-datasets/search/public%20transport%20headway%20GTFS) |
-| HKAPI-038 | manual-only | none | [Official source](https://data.gov.hk/en-datasets/search/routes%20and%20fares%20of%20public%20transport) |
-| HKAPI-039 | manual-only | none | [Official source](https://data.gov.hk/en-datasets/search/bus%20stop%20coordinates) |
-| HKAPI-040 | manual-only | none | [Official source](https://data.gov.hk/en-datasets/search/Road%20Network%20Data%20Version%202) |
-| HKAPI-041 | manual-only | none | [Official source](https://data.gov.hk/en-datasets/search/Hong%20Kong%20Kowloon%20Ferry%20ETA) |
-| HKAPI-042 | manual-only | none | [Official source](https://data.gov.hk/en-datasets/search/Fortune%20Ferry%20ETA) |
-| HKAPI-043 | manual-only | none | [Official source](https://data.gov.hk/en-datasets/search/Water%20Taxi%20ETA) |
-| HKAPI-044 | manual-only | none | [Official source](https://data.gov.hk/en-datasets/search/Sun%20Ferry%20ETA) |
-| HKAPI-045 | manual-only | none | [Official source](https://data.gov.hk/en-datasets/search/Star%20Ferry%20timetables%20fares) |
-| HKAPI-046 | manual-only | none | [Official source](https://data.gov.hk/en-datasets/search/licensed%20ferry%20timetables%20fares) |
-| HKAPI-047 | fixture-tested | rest-json | [Official source](https://data.gov.hk/en-data/dataset/hk-dpo-datagovhk1-carpark-info-vacancy/resource/01752c62-a6b6-4ddc-bf2d-25efccadc143) |
-| HKAPI-048 | fixture-tested | rest-json | [Official source](https://data.gov.hk/en-data/dataset/hk-td-tis_5-real-time-parking-vacancy-data/resource/66360a56-1754-4188-9bc4-f77a070747a8) |
-| HKAPI-049 | fixture-tested | rest-json | [Official source](https://data.gov.hk/en-data/dataset/hk-td-tis_5-real-time-parking-vacancy-data/resource/98a9ecfa-907d-48bf-93f4-91912459d404) |
-| HKAPI-050 | manual-only | none | [Official source](https://data.gov.hk/en-data/dataset/hk-devb-sps-sps) |
-| HKAPI-051 | manual-only | none | [Official source](https://data.gov.hk/en-data/dataset/hk-td-msd_1-metered-parking-spaces-data) |
-| HKAPI-052 | manual-only | none | [Official source](https://data.gov.hk/en-datasets/search/radar%20parking%20meter%20occupancy) |
-| HKAPI-053 | manual-only | none | [Official source](https://data.gov.hk/en-datasets/search/non-metered%20on-street%20parking%20occupancy) |
-| HKAPI-054 | manual-only | none | [Official source](https://data.gov.hk/en-datasets/search/HKSTP%20car%20park%20vacancy) |
-| HKAPI-055 | manual-only | none | [Official source](https://data.gov.hk/en-datasets/search/electric%20vehicle%20charger%20public%20access) |
-| HKAPI-056 | manual-only | none | [Official source](https://data.gov.hk/en-datasets/search/CLP%20charging%20stations) |
-| HKAPI-057 | manual-only | none | [Official source](https://data.gov.hk/en-datasets/search/Special%20Traffic%20News%20v2) |
-| HKAPI-058 | manual-only | none | [Official source](https://data.gov.hk/en-datasets/search/traffic%20notices%20XML) |
-| HKAPI-059 | manual-only | none | [Official source](https://data.gov.hk/en-datasets/search/roadworks%2012%20hours) |
-| HKAPI-060 | manual-only | none | [Official source](https://data.gov.hk/en-datasets/search/traffic%20snapshot%20images) |
-| HKAPI-061 | manual-only | none | [Official source](https://data.gov.hk/en-datasets/search/traffic%20camera%20locations) |
-| HKAPI-062 | manual-only | none | [Official source](https://data.gov.hk/en-datasets/search/Traffic%20Data%20Analytics%20System) |
-| HKAPI-063 | manual-only | none | [Official source](https://data.gov.hk/en-datasets/search/strategic%20major%20road%20detector%20data) |
-| HKAPI-064 | manual-only | none | [Official source](https://data.gov.hk/en-datasets/search/smart%20lamppost%20traffic%20volume%20speed%20occupancy) |
-| HKAPI-065 | manual-only | none | [Official source](https://data.gov.hk/en-datasets/search/Journey%20Time%20Indicators%20v2) |
-| HKAPI-066 | manual-only | none | [Official source](https://data.gov.hk/en-datasets/search/traffic%20speed%20map) |
-| HKAPI-067 | manual-only | none | [Official source](https://data.gov.hk/en-datasets/search/Annual%20Traffic%20Census%20daily%20detector) |
-| HKAPI-068 | manual-only | none | [Official source](https://data.gov.hk/en-datasets/search/Traffic%20Flow%20Census) |
-| HKAPI-069 | manual-only | none | [Official source](https://data.gov.hk/en-datasets/search/red%20light%20speed%20camera%20locations) |
-| HKAPI-070 | manual-only | none | [Official source](https://data.gov.hk/en-datasets/search/AI%20video%20analytics%20traffic%20volume%20speed) |
-| HKAPI-071 | manual-only | none | [Official source](https://data.gov.hk/en-datasets/search/Amigo%20taxi%20operating%20status) |
-| HKAPI-072 | manual-only | none | [Official source](https://data.gov.hk/en-datasets/search/Big%20Boss%20taxi%20operating%20status) |
-| HKAPI-073 | manual-only | none | [Official source](https://data.gov.hk/en-datasets/search/Joie%20taxi%20operating%20status) |
-| HKAPI-074 | manual-only | none | [Official source](https://data.gov.hk/en-datasets/search/fleet%20taxi%20stopping%20places) |
-| HKAPI-075 | manual-only | none | [Official source](https://data.gov.hk/en-datasets/search/taxi%20pick-up%20drop-off) |
-| HKAPI-076 | manual-only | none | [Official source](https://data.gov.hk/en-datasets/search/Airport%20Authority%20flight%20information) |
-| HKAPI-077 | manual-only | none | [Official source](https://data.gov.hk/en-datasets/search/boundary%20control%20point%20waiting%20time) |
-| HKAPI-078 | manual-only | none | [Official source](https://data.gov.hk/en-datasets/search/daily%20passenger%20traffic%20control%20points) |
-| HKAPI-079 | manual-only | none | [Official source](https://data.gov.hk/en-datasets/search/Immigration%20control%20points%20CSDI) |
-| HKAPI-080 | manual-only | none | [Official source](https://data.gov.hk/en-datasets/search/land%20boundary%20vehicle%20throughput) |
-| HKAPI-081 | manual-only | none | [Official source](https://data.gov.hk/en-datasets/search/ocean-going%20vessel%20arrivals%20departures) |
-| HKAPI-082 | manual-only | none | [Official source](https://data.gov.hk/en-datasets/search/non-convention%20vessel%20arrivals%20departures) |
-| HKAPI-083 | manual-only | none | [Official source](https://data.gov.hk/en-datasets/search/Vessel%20Traffic%20Management%20System%20report) |
-| HKAPI-084 | manual-only | none | [Official source](https://data.gov.hk/en-datasets/search/berth%20vacancies%20public%20cargo%20working%20areas) |
-| HKAPI-085 | manual-only | none | [Official source](https://data.gov.hk/en-datasets/search/cross-boundary%20ferry%20arrival) |
-| HKAPI-086 | fixture-tested | rest-json | [Official source](https://data.weather.gov.hk/weatherAPI/doc/HKO_Open_Data_API_Documentation.pdf) |
-| HKAPI-087 | fixture-tested | rest-json | [Official source](https://data.weather.gov.hk/weatherAPI/doc/HKO_Open_Data_API_Documentation.pdf) |
-| HKAPI-088 | fixture-tested | rest-json | [Official source](https://data.weather.gov.hk/weatherAPI/doc/HKO_Open_Data_API_Documentation.pdf) |
-| HKAPI-089 | fixture-tested | rest-json | [Official source](https://data.weather.gov.hk/weatherAPI/doc/HKO_Open_Data_API_Documentation.pdf) |
-| HKAPI-090 | fixture-tested | rest-json | [Official source](https://data.weather.gov.hk/weatherAPI/doc/HKO_Open_Data_API_Documentation.pdf) |
-| HKAPI-091 | fixture-tested | rest-json | [Official source](https://data.weather.gov.hk/weatherAPI/doc/HKO_Open_Data_API_Documentation.pdf) |
-| HKAPI-092 | fixture-tested | rest-json | [Official source](https://data.weather.gov.hk/weatherAPI/doc/HKO_Open_Data_API_Documentation.pdf) |
-| HKAPI-093 | manual-only | none | [Official source](https://data.weather.gov.hk/weatherAPI/doc/HKO_Open_Data_API_Documentation.pdf) |
-| HKAPI-094 | manual-only | none | [Official source](https://www.hko.gov.hk/en/abouthko/opendata_intro.htm) |
-| HKAPI-095 | manual-only | none | [Official source](https://www.hko.gov.hk/en/abouthko/opendata_intro.htm) |
-| HKAPI-096 | manual-only | none | [Official source](https://www.hko.gov.hk/en/abouthko/opendata_intro.htm) |
-| HKAPI-097 | manual-only | none | [Official source](https://www.hko.gov.hk/en/abouthko/opendata_intro.htm) |
-| HKAPI-098 | manual-only | none | [Official source](https://www.hko.gov.hk/en/abouthko/opendata_intro.htm) |
-| HKAPI-099 | manual-only | none | [Official source](https://www.hko.gov.hk/en/nts/ntime.htm) |
-| HKAPI-100 | manual-only | none | [Official source](https://www.hko.gov.hk/en/abouthko/opendata_intro.htm) |
-| HKAPI-101 | manual-only | none | [Official source](https://data.gov.hk/en-datasets/search/current%20AQHI%20station%20RSS) |
-| HKAPI-102 | manual-only | none | [Official source](https://data.gov.hk/en-datasets/search/AQHI%20forecast%20RSS) |
-| HKAPI-103 | manual-only | none | [Official source](https://data.gov.hk/en-datasets/search/past%2024%20hours%20pollutant%20concentrations) |
-| HKAPI-104 | manual-only | none | [Official source](https://data.gov.hk/en-datasets/search/past%2024%20hour%20AQHI) |
-| HKAPI-105 | manual-only | none | [Official source](https://data.gov.hk/en-datasets/search/air%20quality%20monitoring%20stations%20CSDI) |
-| HKAPI-106 | manual-only | none | [Official source](https://data.gov.hk/en-datasets/search/PATH%20pollutant%20model) |
-| HKAPI-107 | manual-only | none | [Official source](https://data.gov.hk/en-datasets/search/beach%20water%20grading%20RSS) |
-| HKAPI-108 | manual-only | none | [Official source](https://data.gov.hk/en-datasets/search/historical%20beach%20water%20quality) |
-| HKAPI-109 | manual-only | none | [Official source](https://data.gov.hk/en-datasets/search/recent%20marine%20water%20quality) |
-| HKAPI-110 | manual-only | none | [Official source](https://data.gov.hk/en-datasets/search/historical%20marine%20water%20quality) |
-| HKAPI-111 | manual-only | none | [Official source](https://data.gov.hk/en-datasets/search/recent%20river%20water%20quality) |
-| HKAPI-112 | manual-only | none | [Official source](https://data.gov.hk/en-datasets/search/historical%20river%20water%20quality) |
-| HKAPI-113 | manual-only | none | [Official source](https://data.gov.hk/en-datasets/search/noise%20map%20L10) |
-| HKAPI-114 | manual-only | none | [Official source](https://data.gov.hk/en-datasets/search/greenhouse%20gas%20emissions%20JSON) |
-| HKAPI-115 | manual-only | none | [Official source](https://data.gov.hk/en-datasets/search/EIA%20projects%20CSDI) |
-| HKAPI-116 | manual-only | none | [Official source](https://data.gov.hk/en-datasets/search/EPD%20licence%20facility%20CSDI) |
-| HKAPI-117 | manual-only | none | [Official source](https://data.gov.hk/en-datasets/search/habitat%20map%20CSDI) |
-| HKAPI-118 | manual-only | none | [Official source](https://data.gov.hk/en-data/dataset/hk-epd-lamppost-air-quality-lamppost) |
-| HKAPI-119 | manual-only | none | [Official source](https://data.gov.hk/en-datasets/search/Accident%20Emergency%20waiting%20time) |
-| HKAPI-120 | manual-only | none | [Official source](https://data.gov.hk/en-datasets/search/HA%20hospitals%20institutions%20SOPC%20FMC) |
-| HKAPI-121 | manual-only | none | [Official source](https://data.gov.hk/en-datasets/search/specialist%20outpatient%20new%20case%20waiting%20time) |
-| HKAPI-122 | manual-only | none | [Official source](https://data.gov.hk/en-datasets/search/family%20medicine%20quota%20district) |
-| HKAPI-123 | manual-only | none | [Official source](https://data.gov.hk/en-datasets/search/HA%20service%20demand%20surge%20key%20statistics) |
-| HKAPI-124 | manual-only | none | [Official source](https://data.gov.hk/en-datasets/search/ambulatory%20community%20service%20throughput) |
-| HKAPI-125 | manual-only | none | [Official source](https://data.gov.hk/en-datasets/search/inpatient%20day%20inpatient%20beds%20occupancy) |
-| HKAPI-126 | manual-only | none | [Official source](https://data.gov.hk/en-datasets/search/Hospital%20Authority%20key%20financial%20data) |
-| HKAPI-127 | manual-only | none | [Official source](https://data.gov.hk/en-datasets/search/notifiable%20infectious%20diseases) |
-| HKAPI-128 | manual-only | none | [Official source](https://data.gov.hk/en-datasets/search/A%26E%20syndromic%20surveillance) |
-| HKAPI-129 | manual-only | none | [Official source](https://data.gov.hk/en-datasets/search/child%20care%20kindergarten%20sentinel%20surveillance) |
-| HKAPI-130 | manual-only | none | [Official source](https://data.gov.hk/en-datasets/search/residential%20care%20home%20sentinel%20surveillance) |
-| HKAPI-131 | manual-only | none | [Official source](https://data.gov.hk/en-datasets/search/Chinese%20medicine%20practitioner%20sentinel%20surveillance) |
-| HKAPI-132 | manual-only | none | [Official source](https://data.gov.hk/en-datasets/search/disease%20surveillance%20CHP) |
-| HKAPI-133 | manual-only | none | [Official source](https://data.gov.hk/en-datasets/search/registered%20pharmaceutical%20products) |
-| HKAPI-134 | manual-only | none | [Official source](https://data.gov.hk/en-datasets/search/licensed%20drug%20dealers%20pharmacies) |
-| HKAPI-135 | manual-only | none | [Official source](https://data.gov.hk/en-datasets/search/proprietary%20Chinese%20medicine%20registration) |
-| HKAPI-136 | manual-only | none | [Official source](https://data.gov.hk/en-datasets/search/COVID-19%20Hong%20Kong%20open%20data) |
-| HKAPI-137 | manual-only | none | [Official source](https://data.gov.hk/en-datasets/search/AED%20locations%20Fire%20Services) |
-| HKAPI-138 | manual-only | none | [Official source](https://data.gov.hk/en-datasets/search/Department%20of%20Health%20clinics%20health%20centres) |
-| HKAPI-139 | manual-only | none | [Official source](https://apidocs.hkma.gov.hk/) |
-| HKAPI-140 | manual-only | none | [Official source](https://apidocs.hkma.gov.hk/) |
-| HKAPI-141 | manual-only | none | [Official source](https://apidocs.hkma.gov.hk/) |
-| HKAPI-142 | manual-only | none | [Official source](https://apidocs.hkma.gov.hk/) |
-| HKAPI-143 | manual-only | none | [Official source](https://www.hkma.gov.hk/eng/key-functions/international-financial-centre/fintech/open-application-programming-interface-api-for-the-banking-sector/) |
-| HKAPI-144 | manual-only | none | [Official source](https://www.hkma.gov.hk/eng/key-functions/international-financial-centre/fintech/open-application-programming-interface-api-for-the-banking-sector/) |
-| HKAPI-145 | manual-only | none | [Official source](https://www.censtatd.gov.hk/en/web_table.html) |
-| HKAPI-146 | manual-only | none | [Official source](https://data.gov.hk/en-datasets/provider/hk-censtatd) |
-| HKAPI-147 | manual-only | none | [Official source](https://data.gov.hk/en-datasets/search/registered%20office%20principal%20place%20business) |
-| HKAPI-148 | manual-only | none | [Official source](https://data.gov.hk/en-datasets/search/licensed%20money%20lenders) |
-| HKAPI-149 | manual-only | none | [Official source](https://data.gov.hk/en-datasets/search/new%20company%20name%20change) |
-| HKAPI-150 | manual-only | none | [Official source](https://data.gov.hk/en-datasets/search/RVD%20property%20market%20statistics) |
-| HKAPI-151 | manual-only | none | [Official source](https://data.gov.hk/en-datasets/search/Valuation%20List%20Government%20Rent%20Roll) |
-| HKAPI-152 | manual-only | none | [Official source](https://data.gov.hk/en-datasets/search/newly%20built%20properties%20RVD) |
-| HKAPI-153 | manual-only | none | [Official source](https://data.gov.hk/en-datasets/search/Towngas%20environmental%20performance) |
-| HKAPI-154 | manual-only | none | [Official source](https://data.gov.hk/en-datasets/search/HK%20Electric%20fuel%20mix%20generation) |
-| HKAPI-155 | manual-only | none | [Official source](https://data.gov.hk/en-datasets/search/HK%20Electric%20consumption%20district) |
-| HKAPI-156 | manual-only | none | [Official source](https://data.gov.hk/en-datasets/search/HK%20Electric%20renewable%20generation) |
-| HKAPI-157 | manual-only | none | [Official source](https://data.gov.hk/en-datasets/search/Energy%20End-use%20Data) |
-| HKAPI-158 | manual-only | none | [Official source](https://data.gov.hk/en-datasets/search/reservoir%20storage%20WSD) |
-| HKAPI-159 | manual-only | none | [Official source](https://data.gov.hk/en-datasets/search/water%20resources%20WSD) |
-| HKAPI-160 | manual-only | none | [Official source](https://data.gov.hk/en-datasets/search/temporary%20water%20suspension%20notices) |
-| HKAPI-161 | manual-only | none | [Official source](https://data.gov.hk/en-datasets/search/sewage%20flow%20DSD) |
-| HKAPI-162 | manual-only | none | [Official source](https://data.gov.hk/en-datasets/search/CLP%20EV%20charging%20station) |
-| HKAPI-163 | fixture-tested | odata | [Official source](https://www.legco.gov.hk/en/open-legco/open-data/webcast-api.html) |
-| HKAPI-164 | fixture-tested | odata | [Official source](https://www.legco.gov.hk/en/open-legco/open-data/bills-database.html) |
-| HKAPI-165 | fixture-tested | odata | [Official source](https://www.legco.gov.hk/en/open-legco/open-data/meeting-schedule.html) |
-| HKAPI-166 | fixture-tested | odata | [Official source](https://www.legco.gov.hk/en/open-legco/open-data/questions-at-council-meetings.html) |
-| HKAPI-167 | fixture-tested | odata | [Official source](https://www.legco.gov.hk/en/open-legco/open-data/voting-result-database.html) |
-| HKAPI-168 | manual-only | none | [Official source](https://www.legco.gov.hk/general/english/open-legco/open-data.html) |
-| HKAPI-169 | fixture-tested | odata | [Official source](https://www.legco.gov.hk/en/open-legco/open-data/hansard-database.html) |
-| HKAPI-170 | manual-only | none | [Official source](https://data.gov.hk/en-datasets/search/current%20legislation%20list) |
-| HKAPI-171 | manual-only | none | [Official source](https://data.gov.hk/en-datasets/search/current%20full%20legislation%20XML) |
-| HKAPI-172 | manual-only | none | [Official source](https://data.gov.hk/en-datasets/search/past%20legislation%20XML) |
-| HKAPI-173 | manual-only | none | [Official source](https://data.gov.hk/en-datasets/search/legal%20glossary%20XML) |
-| HKAPI-174 | manual-only | none | [Official source](https://data.gov.hk/en-datasets/search/election%20results) |
-| HKAPI-175 | manual-only | none | [Official source](https://data.gov.hk/en-datasets/search/voter%20registration%20constituency%20CSDI) |
-| HKAPI-176 | manual-only | none | [Official source](https://data.gov.hk/en-datasets/search/government%20press%20release%20RSS) |
-| HKAPI-177 | manual-only | none | [Official source](https://data.gov.hk/en-datasets/search/government%20recruitment%20advertisements%20JSON) |
-| HKAPI-178 | manual-only | none | [Official source](https://data.gov.hk/en-datasets/search/GLD%20open%20tenders) |
-| HKAPI-179 | manual-only | none | [Official source](https://data.gov.hk/en-datasets/search/awarded%20tenders) |
-| HKAPI-180 | manual-only | none | [Official source](https://data.gov.hk/en-data/dataset/hk-dpo-mobileapps-eventhk-information) |
-| HKAPI-181 | manual-only | none | [Official source](https://data.gov.hk/en-datasets/provider/hk-police) |
-| HKAPI-182 | manual-only | none | [Official source](https://www.police.gov.hk/ppp_en/09_statistics/) |
-| HKAPI-183 | manual-only | none | [Official source](https://data.gov.hk/en-datasets/provider/hk-fsd) |
-| HKAPI-184 | manual-only | none | [Official source](https://data.gov.hk/en-datasets/search/restaurant%20licences%20FEHD) |
-| HKAPI-185 | manual-only | none | [Official source](https://data.gov.hk/en-datasets/search/other%20food%20licences%20FEHD) |
-| HKAPI-186 | manual-only | none | [Official source](https://data.gov.hk/en-datasets/search/restricted%20food%20permits) |
-| HKAPI-187 | manual-only | none | [Official source](https://data.gov.hk/en-datasets/search/FEHD%20trade%20licences) |
-| HKAPI-188 | manual-only | none | [Official source](https://data.gov.hk/en-datasets/search/liquor%20licences) |
-| HKAPI-189 | manual-only | none | [Official source](https://data.gov.hk/en-datasets/search/FEHD%20facility%20service%20locations) |
-| HKAPI-190 | manual-only | none | [Official source](https://data.gov.hk/en-datasets/search/public%20market%20information%20FEHD) |
-| HKAPI-191 | manual-only | none | [Official source](https://data.gov.hk/en-datasets/search/food%20alert%20allergy%20RSS) |
-| HKAPI-192 | manual-only | none | [Official source](https://data.gov.hk/en-datasets/search/dengue%20vector%20survey%20areas) |
-| HKAPI-193 | manual-only | none | [Official source](https://data.gov.hk/en-datasets/search/CFS%20food%20codes%20JSON) |
-| HKAPI-194 | manual-only | none | [Official source](https://data.gov.hk/en-datasets/search/registered%20food%20importers%20distributors) |
-| HKAPI-195 | manual-only | none | [Official source](https://data.gov.hk/en-datasets/search/licensed%20hotels%20guesthouses) |
-| HKAPI-196 | manual-only | none | [Official source](https://data.gov.hk/en-datasets/search/licensed%20karaoke%20establishments) |
-| HKAPI-197 | manual-only | none | [Official source](https://data.gov.hk/en-datasets/search/licensed%20clubhouses) |
-| HKAPI-198 | manual-only | none | [Official source](https://data.gov.hk/en-datasets/search/SmartPLAY%20facility%20session%20availability) |
-| HKAPI-199 | manual-only | none | [Official source](https://data.gov.hk/en-datasets/search/community%20recreation%20sports%20programmes) |
-| HKAPI-200 | manual-only | none | [Official source](https://data.gov.hk/en-datasets/search/library%20computer%20availability) |
-| HKAPI-201 | manual-only | none | [Official source](https://data.gov.hk/en-datasets/search/new%20library%20additions) |
-| HKAPI-202 | manual-only | none | [Official source](https://data.gov.hk/en-datasets/search/public%20libraries%20CSDI) |
-| HKAPI-203 | manual-only | none | [Official source](https://data.gov.hk/en-datasets/search/swimming%20pools%20CSDI) |
-| HKAPI-204 | manual-only | none | [Official source](https://data.gov.hk/en-datasets/search/sports%20centres%20CSDI) |
-| HKAPI-205 | manual-only | none | [Official source](https://data.gov.hk/en-datasets/search/BBQ%20parks%20pet%20facilities%20LCSD) |
-| HKAPI-206 | manual-only | none | [Official source](https://data.gov.hk/en-datasets/search/model%20boat%20pool%20water%20dispenser%20LCSD) |
-| HKAPI-207 | manual-only | none | [Official source](https://data.gov.hk/en-datasets/search/LCSD%20attendance%20usage) |
-| HKAPI-208 | manual-only | none | [Official source](https://data.gov.hk/en-datasets/search/HKTB%20events) |
-| HKAPI-209 | manual-only | none | [Official source](https://data.gov.hk/en-datasets/search/major%20visitor%20attractions) |
-| HKAPI-210 | manual-only | none | [Official source](https://data.gov.hk/en-datasets/search/hotel%20rooms%20rates%20occupancy%20HKTB) |
-| HKAPI-211 | manual-only | none | [Official source](https://data.gov.hk/en-datasets/search/accessible%20facilities%20tourism) |
-| HKAPI-212 | manual-only | none | [Official source](https://data.gov.hk/en-datasets/search/public%20housing%20estate%20profiles%20JSON) |
-| HKAPI-213 | manual-only | none | [Official source](https://data.gov.hk/en-datasets/search/public%20rental%20housing%20stock) |
-| HKAPI-214 | manual-only | none | [Official source](https://data.gov.hk/en-datasets/search/housing%20construction%20programme) |
-| HKAPI-215 | manual-only | none | [Official source](https://data.gov.hk/en-datasets/search/open%20spaces%20public%20housing%20estates) |
-| HKAPI-216 | manual-only | none | [Official source](https://data.gov.hk/en-datasets/search/Housing%20Society%20commercial%20leasing) |
-| HKAPI-217 | manual-only | none | [Official source](https://data.gov.hk/en-datasets/search/Housing%20Society%20estates%20projects) |
-| HKAPI-218 | manual-only | none | [Official source](https://data.gov.hk/en-datasets/search/Buildings%20Department%20registers) |
-| HKAPI-219 | manual-only | none | [Official source](https://data.gov.hk/en-datasets/search/building%20information%20age) |
-| HKAPI-220 | manual-only | none | [Official source](https://data.gov.hk/en-datasets/search/statutory%20building%20orders) |
-| HKAPI-221 | manual-only | none | [Official source](https://data.gov.hk/en-datasets/search/Buildings%20Department%20monthly%20digest) |
-| HKAPI-222 | manual-only | none | [Official source](https://data.gov.hk/en-datasets/search/foundation%20work%20consents) |
-| HKAPI-223 | manual-only | none | [Official source](https://data.gov.hk/en-datasets/search/demolished%20buildings) |
-| HKAPI-224 | manual-only | none | [Official source](https://data.gov.hk/en-datasets/search/statutory%20plan%20digital%20GIS) |
-| HKAPI-225 | manual-only | none | [Official source](https://data.gov.hk/en-datasets/search/TPU%20street%20block%20village%20boundary) |
-| HKAPI-226 | manual-only | none | [Official source](https://data.gov.hk/en-datasets/search/territorial%20population%20employment%20spatial) |
-| HKAPI-227 | manual-only | none | [Official source](https://data.gov.hk/en-datasets/search/land%20lot%20CSDI) |
-| HKAPI-228 | manual-only | none | [Official source](https://data.gov.hk/en-datasets/search/government%20land%20allocations) |
-| HKAPI-229 | manual-only | none | [Official source](https://data.gov.hk/en-datasets/search/short-term%20tenancies) |
-| HKAPI-230 | manual-only | none | [Official source](https://data.gov.hk/en-datasets/search/building%20licences%20Lands) |
-| HKAPI-231 | manual-only | none | [Official source](https://data.gov.hk/en-datasets/search/slope%20responsibility%20boundary) |
-| HKAPI-232 | manual-only | none | [Official source](https://data.gov.hk/en-datasets/search/index%20owners%20corporations) |
-| HKAPI-233 | manual-only | none | [Official source](https://data.gov.hk/en-datasets/search/private%20building%20database) |
-| HKAPI-234 | manual-only | none | [Official source](https://data.gov.hk/en-datasets/search/landslide%20incident%20locations) |
-| HKAPI-235 | manual-only | none | [Official source](https://data.gov.hk/en-datasets/search/School%20Location%20and%20Information) |
-| HKAPI-236 | fixture-tested | rest-json | [Official source](https://data.gov.hk/en/help/api-spec) |
-| HKAPI-237 | manual-only | none | [Official source](https://data.gov.hk/en-datasets/search/school%20registration%20information) |
-| HKAPI-238 | manual-only | none | [Official source](https://data.gov.hk/en-datasets/search/higher%20education%20institutions%20CSDI) |
-| HKAPI-239 | manual-only | none | [Official source](https://data.gov.hk/en-datasets/search/Primary%20One%20school%20net%20boundary) |
-| HKAPI-240 | manual-only | none | [Official source](https://data.gov.hk/en-datasets/search/secondary%20school%20allocation%20net) |
-| HKAPI-241 | manual-only | none | [Official source](https://data.gov.hk/en-datasets/search/DSS%20school%20fees) |
-| HKAPI-242 | manual-only | none | [Official source](https://data.gov.hk/en-datasets/search/through-train%20schools) |
-| HKAPI-243 | manual-only | none | [Official source](https://data.gov.hk/en-datasets/search/kindergarten%20education%20scheme) |
-| HKAPI-244 | manual-only | none | [Official source](https://data.gov.hk/en-datasets/search/education%20statistics%20enrolment%20classes) |
-| HKAPI-245 | manual-only | none | [Official source](https://data.gov.hk/en-datasets/search/residential%20care%20homes%20elderly%20SWD) |
-| HKAPI-246 | manual-only | none | [Official source](https://data.gov.hk/en-datasets/search/home%20care%20community%20care%20teams%20SWD) |
-| HKAPI-247 | manual-only | none | [Official source](https://data.gov.hk/en-datasets/search/Social%20Security%20Field%20Units) |
-| HKAPI-248 | manual-only | none | [Official source](https://data.gov.hk/en-datasets/search/family%20child%20welfare%20service%20units) |
-| HKAPI-249 | manual-only | none | [Official source](https://data.gov.hk/en-datasets/search/small%20group%20homes) |
-| HKAPI-250 | manual-only | none | [Official source](https://data.gov.hk/en-datasets/search/street%20sleeper%20outreach%20teams) |
-| HKAPI-251 | manual-only | none | [Official source](https://data.gov.hk/en-datasets/search/cross-boundary%20social%20welfare%20services) |
-| HKAPI-252 | manual-only | none | [Official source](https://data.gov.hk/en-datasets/search/pre-primary%20social%20work%20services) |
-| HKAPI-253 | manual-only | none | [Official source](https://data.gov.hk/en-datasets/search/severe%20disability%20support%20services) |
-| HKAPI-254 | manual-only | none | [Official source](https://data.gov.hk/en-datasets/search/elderly%20placement%20application%20waiting%20status) |
-| HKAPI-255 | manual-only | none | [Official source](https://data.gov.hk/en-datasets/search/OFCA%20wireless%20statistics) |
-| HKAPI-256 | manual-only | none | [Official source](https://data.gov.hk/en-datasets/search/telecommunications%20indicators%20OFCA) |
-| HKAPI-257 | manual-only | none | [Official source](https://data.gov.hk/en-datasets/search/Hong%20Kong%20numbering%20plan) |
-| HKAPI-258 | manual-only | none | [Official source](https://data.gov.hk/en-datasets/search/internet%20subscription%20statistics) |
-| HKAPI-259 | manual-only | none | [Official source](https://data.gov.hk/en-datasets/search/wireline%20statistics%20OFCA) |
-| HKAPI-260 | manual-only | none | [Official source](https://data.gov.hk/en-datasets/search/public%20Wi-Fi%20statistics) |
-| HKAPI-261 | manual-only | none | [Official source](https://data.gov.hk/en-datasets/search/Wi-Fi%20access%20point%20locations) |
-| HKAPI-262 | manual-only | none | [Official source](https://data.gov.hk/en-datasets/search/digital%20terrestrial%20television%20coverage) |
-| HKAPI-263 | manual-only | none | [Official source](https://data.gov.hk/en-datasets/search/ISP%20SBO%20CLOTS%20licensees) |
-| HKAPI-264 | manual-only | none | [Official source](https://data.gov.hk/en-datasets/search/smart%20lamppost) |
-| HKAPI-265 | manual-only | none | [Official source](https://data.gov.hk/en-datasets/search/smart%20lamppost%20compartment%20sensor) |
+| Source | Effective status | Adapter | Latest verification | Official documentation |
+| --- | --- | --- | --- | --- |
+| HKAPI-001 | live-verified | ckan-action | success | [Official source](https://data.gov.hk/en/help/ckan-api-development-guide) |
+| HKAPI-002 | live-verified | ckan-action | success | [Official source](https://data.gov.hk/en/help/ckan-api-development-guide) |
+| HKAPI-003 | live-verified | ckan-action | success | [Official source](https://data.gov.hk/en/help/ckan-api-development-guide) |
+| HKAPI-004 | live-verified | ckan-action | success | [Official source](https://data.gov.hk/en/help/ckan-api-development-guide) |
+| HKAPI-005 | live-verified | rest-json | success | [Official source](https://data.gov.hk/en/help/api-spec) |
+| HKAPI-006 | manual-only | none | not-run | [Official source](https://data.gov.hk/en/help/api-spec) |
+| HKAPI-007 | manual-only | none | not-run | [Official source](https://data.gov.hk/en/help/api-spec) |
+| HKAPI-008 | manual-only | none | not-run | [Official source](https://data.gov.hk/en/help/api-spec) |
+| HKAPI-009 | manual-only | none | not-run | [Official source](https://data.gov.hk/en/help/api-spec) |
+| HKAPI-010 | manual-only | none | not-run | [Official source](https://data.gov.hk/en/help/api-spec) |
+| HKAPI-011 | live-verified | rest-json | success | [Official source](https://data.gov.hk/en/help/api-spec) |
+| HKAPI-012 | live-verified | rss | success | [Official source](https://data.gov.hk/en/dev-center) |
+| HKAPI-013 | live-verified | ogc-wfs | success | [Official source](https://portal.csdi.gov.hk/csdi-webpage/doc/GeoSpatialServices) |
+| HKAPI-014 | live-verified | xml | success | [Official source](https://portal.csdi.gov.hk/csdi-webpage/doc/GeoSpatialServices) |
+| HKAPI-015 | manual-only | none | not-run | [Official source](https://portal.csdi.gov.hk/csdi-webpage/apilist) |
+| HKAPI-016 | live-verified | rest-json | success | [Official source](https://data.weather.gov.hk/weatherAPI/doc/HKO_Open_Data_API_Documentation.pdf) |
+| HKAPI-017 | manual-only | none | not-run | [Official source](https://www.censtatd.gov.hk/datagovhk/WT_data_dict_en.pdf) |
+| HKAPI-018 | fixture-tested | rest-json | failure | [Official source](https://apidocs.hkma.gov.hk/documentation/market-data-and-statistics/monthly-statistical-bulletin/er-ir/er-eeri-daily/) |
+| HKAPI-019 | manual-only | none | not-run | [Official source](https://data.gov.hk/en-datasets/provider/hk-cr) |
+| HKAPI-020 | fixture-tested | odata | failure | [Official source](https://www.legco.gov.hk/en/open-legco/open-data/questions-at-council-meetings.html) |
+| HKAPI-021 | live-verified | rest-json | success | [Official source](https://www.als.gov.hk/docs/Data_Dictionary_for_ALS_EN.pdf) |
+| HKAPI-022 | manual-only | none | not-run | [Official source](https://www.geodetic.gov.hk/en/satref/satref.htm) |
+| HKAPI-023 | live-verified | file-download | success | [Official source](https://portal.csdi.gov.hk/csdi-webpage/apidoc/TopographicMapAPI) |
+| HKAPI-024 | manual-only | none | not-run | [Official source](https://portal.csdi.gov.hk/csdi-webpage/apidoc/LotIndexAPI) |
+| HKAPI-025 | manual-only | none | not-run | [Official source](https://portal.csdi.gov.hk/csdi-webpage/apidoc/LPPUNSearchAPI) |
+| HKAPI-026 | manual-only | none | not-run | [Official source](https://portal.csdi.gov.hk/csdi-webpage/) |
+| HKAPI-027 | live-verified | rest-json | success | [Official source](https://data.gov.hk/en-data/dataset/ctb-eta-transport-realtime-eta) |
+| HKAPI-028 | live-verified | rest-json | success | [Official source](https://data.gov.hk/en-data/dataset/hk-td-tis_21-etakmb/resource/fcac14ed-23e4-433b-afd0-3c37d5c8e428) |
+| HKAPI-029 | live-verified | rest-json | success | [Official source](https://data.gov.hk/en-data/dataset/hk-td-sm_7-real-time-arrival-data-of-gmb/resource/02913a6d-e520-4232-bdd5-eef86a906631) |
+| HKAPI-030 | manual-only | none | not-run | [Official source](https://data.gov.hk/en-datasets/search/New%20Lantao%20Bus%20v2) |
+| HKAPI-031 | manual-only | none | not-run | [Official source](https://data.gov.hk/en-datasets/search/one-stop%20Citybus%20NLB) |
+| HKAPI-032 | live-verified | rest-json | success | [Official source](https://data.gov.hk/en-data/dataset/mtr-data2-nexttrain-data/resource/103472ed-01be-4dda-92c6-30530dee022f) |
+| HKAPI-033 | live-verified | rest-json | success | [Official source](https://data.gov.hk/en-data/dataset/mtr-lrnt_data-light-rail-nexttrain-data) |
+| HKAPI-034 | live-verified | rest-json | success | [Official source](https://opendata.mtr.com.hk/doc/MTR_BUS_API_Spec_v1.7.pdf) |
+| HKAPI-035 | manual-only | none | not-run | [Official source](https://data.gov.hk/en-data/dataset/mtr-data-routes-fares-barrier-free-facilities) |
+| HKAPI-036 | manual-only | none | not-run | [Official source](https://data.gov.hk/en-datasets/search/Hong%20Kong%20Tramways%20stops) |
+| HKAPI-037 | manual-only | none | not-run | [Official source](https://data.gov.hk/en-datasets/search/public%20transport%20headway%20GTFS) |
+| HKAPI-038 | manual-only | none | not-run | [Official source](https://data.gov.hk/en-datasets/search/routes%20and%20fares%20of%20public%20transport) |
+| HKAPI-039 | manual-only | none | not-run | [Official source](https://data.gov.hk/en-datasets/search/bus%20stop%20coordinates) |
+| HKAPI-040 | manual-only | none | not-run | [Official source](https://data.gov.hk/en-datasets/search/Road%20Network%20Data%20Version%202) |
+| HKAPI-041 | manual-only | none | not-run | [Official source](https://data.gov.hk/en-datasets/search/Hong%20Kong%20Kowloon%20Ferry%20ETA) |
+| HKAPI-042 | manual-only | none | not-run | [Official source](https://data.gov.hk/en-datasets/search/Fortune%20Ferry%20ETA) |
+| HKAPI-043 | manual-only | none | not-run | [Official source](https://data.gov.hk/en-datasets/search/Water%20Taxi%20ETA) |
+| HKAPI-044 | manual-only | none | not-run | [Official source](https://data.gov.hk/en-datasets/search/Sun%20Ferry%20ETA) |
+| HKAPI-045 | manual-only | none | not-run | [Official source](https://data.gov.hk/en-datasets/search/Star%20Ferry%20timetables%20fares) |
+| HKAPI-046 | manual-only | none | not-run | [Official source](https://data.gov.hk/en-datasets/search/licensed%20ferry%20timetables%20fares) |
+| HKAPI-047 | live-verified | rest-json | success | [Official source](https://data.gov.hk/en-data/dataset/hk-dpo-datagovhk1-carpark-info-vacancy/resource/01752c62-a6b6-4ddc-bf2d-25efccadc143) |
+| HKAPI-048 | live-verified | rest-json | success | [Official source](https://data.gov.hk/en-data/dataset/hk-td-tis_5-real-time-parking-vacancy-data/resource/66360a56-1754-4188-9bc4-f77a070747a8) |
+| HKAPI-049 | live-verified | rest-json | success | [Official source](https://data.gov.hk/en-data/dataset/hk-td-tis_5-real-time-parking-vacancy-data/resource/98a9ecfa-907d-48bf-93f4-91912459d404) |
+| HKAPI-050 | manual-only | none | not-run | [Official source](https://data.gov.hk/en-data/dataset/hk-devb-sps-sps) |
+| HKAPI-051 | manual-only | none | not-run | [Official source](https://data.gov.hk/en-data/dataset/hk-td-msd_1-metered-parking-spaces-data) |
+| HKAPI-052 | manual-only | none | not-run | [Official source](https://data.gov.hk/en-datasets/search/radar%20parking%20meter%20occupancy) |
+| HKAPI-053 | manual-only | none | not-run | [Official source](https://data.gov.hk/en-datasets/search/non-metered%20on-street%20parking%20occupancy) |
+| HKAPI-054 | manual-only | none | not-run | [Official source](https://data.gov.hk/en-datasets/search/HKSTP%20car%20park%20vacancy) |
+| HKAPI-055 | manual-only | none | not-run | [Official source](https://data.gov.hk/en-datasets/search/electric%20vehicle%20charger%20public%20access) |
+| HKAPI-056 | manual-only | none | not-run | [Official source](https://data.gov.hk/en-datasets/search/CLP%20charging%20stations) |
+| HKAPI-057 | manual-only | none | not-run | [Official source](https://data.gov.hk/en-datasets/search/Special%20Traffic%20News%20v2) |
+| HKAPI-058 | manual-only | none | not-run | [Official source](https://data.gov.hk/en-datasets/search/traffic%20notices%20XML) |
+| HKAPI-059 | manual-only | none | not-run | [Official source](https://data.gov.hk/en-datasets/search/roadworks%2012%20hours) |
+| HKAPI-060 | manual-only | none | not-run | [Official source](https://data.gov.hk/en-datasets/search/traffic%20snapshot%20images) |
+| HKAPI-061 | manual-only | none | not-run | [Official source](https://data.gov.hk/en-datasets/search/traffic%20camera%20locations) |
+| HKAPI-062 | manual-only | none | not-run | [Official source](https://data.gov.hk/en-datasets/search/Traffic%20Data%20Analytics%20System) |
+| HKAPI-063 | manual-only | none | not-run | [Official source](https://data.gov.hk/en-datasets/search/strategic%20major%20road%20detector%20data) |
+| HKAPI-064 | manual-only | none | not-run | [Official source](https://data.gov.hk/en-datasets/search/smart%20lamppost%20traffic%20volume%20speed%20occupancy) |
+| HKAPI-065 | manual-only | none | not-run | [Official source](https://data.gov.hk/en-datasets/search/Journey%20Time%20Indicators%20v2) |
+| HKAPI-066 | manual-only | none | not-run | [Official source](https://data.gov.hk/en-datasets/search/traffic%20speed%20map) |
+| HKAPI-067 | manual-only | none | not-run | [Official source](https://data.gov.hk/en-datasets/search/Annual%20Traffic%20Census%20daily%20detector) |
+| HKAPI-068 | manual-only | none | not-run | [Official source](https://data.gov.hk/en-datasets/search/Traffic%20Flow%20Census) |
+| HKAPI-069 | manual-only | none | not-run | [Official source](https://data.gov.hk/en-datasets/search/red%20light%20speed%20camera%20locations) |
+| HKAPI-070 | manual-only | none | not-run | [Official source](https://data.gov.hk/en-datasets/search/AI%20video%20analytics%20traffic%20volume%20speed) |
+| HKAPI-071 | manual-only | none | not-run | [Official source](https://data.gov.hk/en-datasets/search/Amigo%20taxi%20operating%20status) |
+| HKAPI-072 | manual-only | none | not-run | [Official source](https://data.gov.hk/en-datasets/search/Big%20Boss%20taxi%20operating%20status) |
+| HKAPI-073 | manual-only | none | not-run | [Official source](https://data.gov.hk/en-datasets/search/Joie%20taxi%20operating%20status) |
+| HKAPI-074 | manual-only | none | not-run | [Official source](https://data.gov.hk/en-datasets/search/fleet%20taxi%20stopping%20places) |
+| HKAPI-075 | manual-only | none | not-run | [Official source](https://data.gov.hk/en-datasets/search/taxi%20pick-up%20drop-off) |
+| HKAPI-076 | manual-only | none | not-run | [Official source](https://data.gov.hk/en-datasets/search/Airport%20Authority%20flight%20information) |
+| HKAPI-077 | manual-only | none | not-run | [Official source](https://data.gov.hk/en-datasets/search/boundary%20control%20point%20waiting%20time) |
+| HKAPI-078 | manual-only | none | not-run | [Official source](https://data.gov.hk/en-datasets/search/daily%20passenger%20traffic%20control%20points) |
+| HKAPI-079 | manual-only | none | not-run | [Official source](https://data.gov.hk/en-datasets/search/Immigration%20control%20points%20CSDI) |
+| HKAPI-080 | manual-only | none | not-run | [Official source](https://data.gov.hk/en-datasets/search/land%20boundary%20vehicle%20throughput) |
+| HKAPI-081 | manual-only | none | not-run | [Official source](https://data.gov.hk/en-datasets/search/ocean-going%20vessel%20arrivals%20departures) |
+| HKAPI-082 | manual-only | none | not-run | [Official source](https://data.gov.hk/en-datasets/search/non-convention%20vessel%20arrivals%20departures) |
+| HKAPI-083 | manual-only | none | not-run | [Official source](https://data.gov.hk/en-datasets/search/Vessel%20Traffic%20Management%20System%20report) |
+| HKAPI-084 | manual-only | none | not-run | [Official source](https://data.gov.hk/en-datasets/search/berth%20vacancies%20public%20cargo%20working%20areas) |
+| HKAPI-085 | manual-only | none | not-run | [Official source](https://data.gov.hk/en-datasets/search/cross-boundary%20ferry%20arrival) |
+| HKAPI-086 | live-verified | rest-json | success | [Official source](https://data.weather.gov.hk/weatherAPI/doc/HKO_Open_Data_API_Documentation.pdf) |
+| HKAPI-087 | live-verified | rest-json | success | [Official source](https://data.weather.gov.hk/weatherAPI/doc/HKO_Open_Data_API_Documentation.pdf) |
+| HKAPI-088 | live-verified | rest-json | success | [Official source](https://data.weather.gov.hk/weatherAPI/doc/HKO_Open_Data_API_Documentation.pdf) |
+| HKAPI-089 | live-verified | rest-json | success | [Official source](https://data.weather.gov.hk/weatherAPI/doc/HKO_Open_Data_API_Documentation.pdf) |
+| HKAPI-090 | live-verified | rest-json | success | [Official source](https://data.weather.gov.hk/weatherAPI/doc/HKO_Open_Data_API_Documentation.pdf) |
+| HKAPI-091 | live-verified | rest-json | success | [Official source](https://data.weather.gov.hk/weatherAPI/doc/HKO_Open_Data_API_Documentation.pdf) |
+| HKAPI-092 | live-verified | rest-json | success | [Official source](https://data.weather.gov.hk/weatherAPI/doc/HKO_Open_Data_API_Documentation.pdf) |
+| HKAPI-093 | manual-only | none | not-run | [Official source](https://data.weather.gov.hk/weatherAPI/doc/HKO_Open_Data_API_Documentation.pdf) |
+| HKAPI-094 | manual-only | none | not-run | [Official source](https://www.hko.gov.hk/en/abouthko/opendata_intro.htm) |
+| HKAPI-095 | manual-only | none | not-run | [Official source](https://www.hko.gov.hk/en/abouthko/opendata_intro.htm) |
+| HKAPI-096 | manual-only | none | not-run | [Official source](https://www.hko.gov.hk/en/abouthko/opendata_intro.htm) |
+| HKAPI-097 | manual-only | none | not-run | [Official source](https://www.hko.gov.hk/en/abouthko/opendata_intro.htm) |
+| HKAPI-098 | manual-only | none | not-run | [Official source](https://www.hko.gov.hk/en/abouthko/opendata_intro.htm) |
+| HKAPI-099 | manual-only | none | not-run | [Official source](https://www.hko.gov.hk/en/nts/ntime.htm) |
+| HKAPI-100 | manual-only | none | not-run | [Official source](https://www.hko.gov.hk/en/abouthko/opendata_intro.htm) |
+| HKAPI-101 | manual-only | none | not-run | [Official source](https://data.gov.hk/en-datasets/search/current%20AQHI%20station%20RSS) |
+| HKAPI-102 | manual-only | none | not-run | [Official source](https://data.gov.hk/en-datasets/search/AQHI%20forecast%20RSS) |
+| HKAPI-103 | manual-only | none | not-run | [Official source](https://data.gov.hk/en-datasets/search/past%2024%20hours%20pollutant%20concentrations) |
+| HKAPI-104 | manual-only | none | not-run | [Official source](https://data.gov.hk/en-datasets/search/past%2024%20hour%20AQHI) |
+| HKAPI-105 | manual-only | none | not-run | [Official source](https://data.gov.hk/en-datasets/search/air%20quality%20monitoring%20stations%20CSDI) |
+| HKAPI-106 | manual-only | none | not-run | [Official source](https://data.gov.hk/en-datasets/search/PATH%20pollutant%20model) |
+| HKAPI-107 | manual-only | none | not-run | [Official source](https://data.gov.hk/en-datasets/search/beach%20water%20grading%20RSS) |
+| HKAPI-108 | manual-only | none | not-run | [Official source](https://data.gov.hk/en-datasets/search/historical%20beach%20water%20quality) |
+| HKAPI-109 | manual-only | none | not-run | [Official source](https://data.gov.hk/en-datasets/search/recent%20marine%20water%20quality) |
+| HKAPI-110 | manual-only | none | not-run | [Official source](https://data.gov.hk/en-datasets/search/historical%20marine%20water%20quality) |
+| HKAPI-111 | manual-only | none | not-run | [Official source](https://data.gov.hk/en-datasets/search/recent%20river%20water%20quality) |
+| HKAPI-112 | manual-only | none | not-run | [Official source](https://data.gov.hk/en-datasets/search/historical%20river%20water%20quality) |
+| HKAPI-113 | manual-only | none | not-run | [Official source](https://data.gov.hk/en-datasets/search/noise%20map%20L10) |
+| HKAPI-114 | manual-only | none | not-run | [Official source](https://data.gov.hk/en-datasets/search/greenhouse%20gas%20emissions%20JSON) |
+| HKAPI-115 | manual-only | none | not-run | [Official source](https://data.gov.hk/en-datasets/search/EIA%20projects%20CSDI) |
+| HKAPI-116 | manual-only | none | not-run | [Official source](https://data.gov.hk/en-datasets/search/EPD%20licence%20facility%20CSDI) |
+| HKAPI-117 | manual-only | none | not-run | [Official source](https://data.gov.hk/en-datasets/search/habitat%20map%20CSDI) |
+| HKAPI-118 | manual-only | none | not-run | [Official source](https://data.gov.hk/en-data/dataset/hk-epd-lamppost-air-quality-lamppost) |
+| HKAPI-119 | manual-only | none | not-run | [Official source](https://data.gov.hk/en-datasets/search/Accident%20Emergency%20waiting%20time) |
+| HKAPI-120 | manual-only | none | not-run | [Official source](https://data.gov.hk/en-datasets/search/HA%20hospitals%20institutions%20SOPC%20FMC) |
+| HKAPI-121 | manual-only | none | not-run | [Official source](https://data.gov.hk/en-datasets/search/specialist%20outpatient%20new%20case%20waiting%20time) |
+| HKAPI-122 | manual-only | none | not-run | [Official source](https://data.gov.hk/en-datasets/search/family%20medicine%20quota%20district) |
+| HKAPI-123 | manual-only | none | not-run | [Official source](https://data.gov.hk/en-datasets/search/HA%20service%20demand%20surge%20key%20statistics) |
+| HKAPI-124 | manual-only | none | not-run | [Official source](https://data.gov.hk/en-datasets/search/ambulatory%20community%20service%20throughput) |
+| HKAPI-125 | manual-only | none | not-run | [Official source](https://data.gov.hk/en-datasets/search/inpatient%20day%20inpatient%20beds%20occupancy) |
+| HKAPI-126 | manual-only | none | not-run | [Official source](https://data.gov.hk/en-datasets/search/Hospital%20Authority%20key%20financial%20data) |
+| HKAPI-127 | manual-only | none | not-run | [Official source](https://data.gov.hk/en-datasets/search/notifiable%20infectious%20diseases) |
+| HKAPI-128 | manual-only | none | not-run | [Official source](https://data.gov.hk/en-datasets/search/A%26E%20syndromic%20surveillance) |
+| HKAPI-129 | manual-only | none | not-run | [Official source](https://data.gov.hk/en-datasets/search/child%20care%20kindergarten%20sentinel%20surveillance) |
+| HKAPI-130 | manual-only | none | not-run | [Official source](https://data.gov.hk/en-datasets/search/residential%20care%20home%20sentinel%20surveillance) |
+| HKAPI-131 | manual-only | none | not-run | [Official source](https://data.gov.hk/en-datasets/search/Chinese%20medicine%20practitioner%20sentinel%20surveillance) |
+| HKAPI-132 | manual-only | none | not-run | [Official source](https://data.gov.hk/en-datasets/search/disease%20surveillance%20CHP) |
+| HKAPI-133 | manual-only | none | not-run | [Official source](https://data.gov.hk/en-datasets/search/registered%20pharmaceutical%20products) |
+| HKAPI-134 | manual-only | none | not-run | [Official source](https://data.gov.hk/en-datasets/search/licensed%20drug%20dealers%20pharmacies) |
+| HKAPI-135 | manual-only | none | not-run | [Official source](https://data.gov.hk/en-datasets/search/proprietary%20Chinese%20medicine%20registration) |
+| HKAPI-136 | manual-only | none | not-run | [Official source](https://data.gov.hk/en-datasets/search/COVID-19%20Hong%20Kong%20open%20data) |
+| HKAPI-137 | manual-only | none | not-run | [Official source](https://data.gov.hk/en-datasets/search/AED%20locations%20Fire%20Services) |
+| HKAPI-138 | manual-only | none | not-run | [Official source](https://data.gov.hk/en-datasets/search/Department%20of%20Health%20clinics%20health%20centres) |
+| HKAPI-139 | manual-only | none | not-run | [Official source](https://apidocs.hkma.gov.hk/) |
+| HKAPI-140 | manual-only | none | not-run | [Official source](https://apidocs.hkma.gov.hk/) |
+| HKAPI-141 | manual-only | none | not-run | [Official source](https://apidocs.hkma.gov.hk/) |
+| HKAPI-142 | manual-only | none | not-run | [Official source](https://apidocs.hkma.gov.hk/) |
+| HKAPI-143 | manual-only | none | not-run | [Official source](https://www.hkma.gov.hk/eng/key-functions/international-financial-centre/fintech/open-application-programming-interface-api-for-the-banking-sector/) |
+| HKAPI-144 | manual-only | none | not-run | [Official source](https://www.hkma.gov.hk/eng/key-functions/international-financial-centre/fintech/open-application-programming-interface-api-for-the-banking-sector/) |
+| HKAPI-145 | manual-only | none | not-run | [Official source](https://www.censtatd.gov.hk/en/web_table.html) |
+| HKAPI-146 | manual-only | none | not-run | [Official source](https://data.gov.hk/en-datasets/provider/hk-censtatd) |
+| HKAPI-147 | manual-only | none | not-run | [Official source](https://data.gov.hk/en-datasets/search/registered%20office%20principal%20place%20business) |
+| HKAPI-148 | manual-only | none | not-run | [Official source](https://data.gov.hk/en-datasets/search/licensed%20money%20lenders) |
+| HKAPI-149 | manual-only | none | not-run | [Official source](https://data.gov.hk/en-datasets/search/new%20company%20name%20change) |
+| HKAPI-150 | manual-only | none | not-run | [Official source](https://data.gov.hk/en-datasets/search/RVD%20property%20market%20statistics) |
+| HKAPI-151 | manual-only | none | not-run | [Official source](https://data.gov.hk/en-datasets/search/Valuation%20List%20Government%20Rent%20Roll) |
+| HKAPI-152 | manual-only | none | not-run | [Official source](https://data.gov.hk/en-datasets/search/newly%20built%20properties%20RVD) |
+| HKAPI-153 | manual-only | none | not-run | [Official source](https://data.gov.hk/en-datasets/search/Towngas%20environmental%20performance) |
+| HKAPI-154 | manual-only | none | not-run | [Official source](https://data.gov.hk/en-datasets/search/HK%20Electric%20fuel%20mix%20generation) |
+| HKAPI-155 | manual-only | none | not-run | [Official source](https://data.gov.hk/en-datasets/search/HK%20Electric%20consumption%20district) |
+| HKAPI-156 | manual-only | none | not-run | [Official source](https://data.gov.hk/en-datasets/search/HK%20Electric%20renewable%20generation) |
+| HKAPI-157 | manual-only | none | not-run | [Official source](https://data.gov.hk/en-datasets/search/Energy%20End-use%20Data) |
+| HKAPI-158 | manual-only | none | not-run | [Official source](https://data.gov.hk/en-datasets/search/reservoir%20storage%20WSD) |
+| HKAPI-159 | manual-only | none | not-run | [Official source](https://data.gov.hk/en-datasets/search/water%20resources%20WSD) |
+| HKAPI-160 | manual-only | none | not-run | [Official source](https://data.gov.hk/en-datasets/search/temporary%20water%20suspension%20notices) |
+| HKAPI-161 | manual-only | none | not-run | [Official source](https://data.gov.hk/en-datasets/search/sewage%20flow%20DSD) |
+| HKAPI-162 | manual-only | none | not-run | [Official source](https://data.gov.hk/en-datasets/search/CLP%20EV%20charging%20station) |
+| HKAPI-163 | fixture-tested | odata | failure | [Official source](https://www.legco.gov.hk/en/open-legco/open-data/webcast-api.html) |
+| HKAPI-164 | fixture-tested | odata | failure | [Official source](https://www.legco.gov.hk/en/open-legco/open-data/bills-database.html) |
+| HKAPI-165 | fixture-tested | odata | failure | [Official source](https://www.legco.gov.hk/en/open-legco/open-data/meeting-schedule.html) |
+| HKAPI-166 | fixture-tested | odata | failure | [Official source](https://www.legco.gov.hk/en/open-legco/open-data/questions-at-council-meetings.html) |
+| HKAPI-167 | fixture-tested | odata | failure | [Official source](https://www.legco.gov.hk/en/open-legco/open-data/voting-result-database.html) |
+| HKAPI-168 | manual-only | none | not-run | [Official source](https://www.legco.gov.hk/general/english/open-legco/open-data.html) |
+| HKAPI-169 | fixture-tested | odata | failure | [Official source](https://www.legco.gov.hk/en/open-legco/open-data/hansard-database.html) |
+| HKAPI-170 | manual-only | none | not-run | [Official source](https://data.gov.hk/en-datasets/search/current%20legislation%20list) |
+| HKAPI-171 | manual-only | none | not-run | [Official source](https://data.gov.hk/en-datasets/search/current%20full%20legislation%20XML) |
+| HKAPI-172 | manual-only | none | not-run | [Official source](https://data.gov.hk/en-datasets/search/past%20legislation%20XML) |
+| HKAPI-173 | manual-only | none | not-run | [Official source](https://data.gov.hk/en-datasets/search/legal%20glossary%20XML) |
+| HKAPI-174 | manual-only | none | not-run | [Official source](https://data.gov.hk/en-datasets/search/election%20results) |
+| HKAPI-175 | manual-only | none | not-run | [Official source](https://data.gov.hk/en-datasets/search/voter%20registration%20constituency%20CSDI) |
+| HKAPI-176 | manual-only | none | not-run | [Official source](https://data.gov.hk/en-datasets/search/government%20press%20release%20RSS) |
+| HKAPI-177 | manual-only | none | not-run | [Official source](https://data.gov.hk/en-datasets/search/government%20recruitment%20advertisements%20JSON) |
+| HKAPI-178 | manual-only | none | not-run | [Official source](https://data.gov.hk/en-datasets/search/GLD%20open%20tenders) |
+| HKAPI-179 | manual-only | none | not-run | [Official source](https://data.gov.hk/en-datasets/search/awarded%20tenders) |
+| HKAPI-180 | manual-only | none | not-run | [Official source](https://data.gov.hk/en-data/dataset/hk-dpo-mobileapps-eventhk-information) |
+| HKAPI-181 | manual-only | none | not-run | [Official source](https://data.gov.hk/en-datasets/provider/hk-police) |
+| HKAPI-182 | manual-only | none | not-run | [Official source](https://www.police.gov.hk/ppp_en/09_statistics/) |
+| HKAPI-183 | manual-only | none | not-run | [Official source](https://data.gov.hk/en-datasets/provider/hk-fsd) |
+| HKAPI-184 | manual-only | none | not-run | [Official source](https://data.gov.hk/en-datasets/search/restaurant%20licences%20FEHD) |
+| HKAPI-185 | manual-only | none | not-run | [Official source](https://data.gov.hk/en-datasets/search/other%20food%20licences%20FEHD) |
+| HKAPI-186 | manual-only | none | not-run | [Official source](https://data.gov.hk/en-datasets/search/restricted%20food%20permits) |
+| HKAPI-187 | manual-only | none | not-run | [Official source](https://data.gov.hk/en-datasets/search/FEHD%20trade%20licences) |
+| HKAPI-188 | manual-only | none | not-run | [Official source](https://data.gov.hk/en-datasets/search/liquor%20licences) |
+| HKAPI-189 | manual-only | none | not-run | [Official source](https://data.gov.hk/en-datasets/search/FEHD%20facility%20service%20locations) |
+| HKAPI-190 | manual-only | none | not-run | [Official source](https://data.gov.hk/en-datasets/search/public%20market%20information%20FEHD) |
+| HKAPI-191 | manual-only | none | not-run | [Official source](https://data.gov.hk/en-datasets/search/food%20alert%20allergy%20RSS) |
+| HKAPI-192 | manual-only | none | not-run | [Official source](https://data.gov.hk/en-datasets/search/dengue%20vector%20survey%20areas) |
+| HKAPI-193 | manual-only | none | not-run | [Official source](https://data.gov.hk/en-datasets/search/CFS%20food%20codes%20JSON) |
+| HKAPI-194 | manual-only | none | not-run | [Official source](https://data.gov.hk/en-datasets/search/registered%20food%20importers%20distributors) |
+| HKAPI-195 | manual-only | none | not-run | [Official source](https://data.gov.hk/en-datasets/search/licensed%20hotels%20guesthouses) |
+| HKAPI-196 | manual-only | none | not-run | [Official source](https://data.gov.hk/en-datasets/search/licensed%20karaoke%20establishments) |
+| HKAPI-197 | manual-only | none | not-run | [Official source](https://data.gov.hk/en-datasets/search/licensed%20clubhouses) |
+| HKAPI-198 | manual-only | none | not-run | [Official source](https://data.gov.hk/en-datasets/search/SmartPLAY%20facility%20session%20availability) |
+| HKAPI-199 | manual-only | none | not-run | [Official source](https://data.gov.hk/en-datasets/search/community%20recreation%20sports%20programmes) |
+| HKAPI-200 | manual-only | none | not-run | [Official source](https://data.gov.hk/en-datasets/search/library%20computer%20availability) |
+| HKAPI-201 | manual-only | none | not-run | [Official source](https://data.gov.hk/en-datasets/search/new%20library%20additions) |
+| HKAPI-202 | manual-only | none | not-run | [Official source](https://data.gov.hk/en-datasets/search/public%20libraries%20CSDI) |
+| HKAPI-203 | manual-only | none | not-run | [Official source](https://data.gov.hk/en-datasets/search/swimming%20pools%20CSDI) |
+| HKAPI-204 | manual-only | none | not-run | [Official source](https://data.gov.hk/en-datasets/search/sports%20centres%20CSDI) |
+| HKAPI-205 | manual-only | none | not-run | [Official source](https://data.gov.hk/en-datasets/search/BBQ%20parks%20pet%20facilities%20LCSD) |
+| HKAPI-206 | manual-only | none | not-run | [Official source](https://data.gov.hk/en-datasets/search/model%20boat%20pool%20water%20dispenser%20LCSD) |
+| HKAPI-207 | manual-only | none | not-run | [Official source](https://data.gov.hk/en-datasets/search/LCSD%20attendance%20usage) |
+| HKAPI-208 | manual-only | none | not-run | [Official source](https://data.gov.hk/en-datasets/search/HKTB%20events) |
+| HKAPI-209 | manual-only | none | not-run | [Official source](https://data.gov.hk/en-datasets/search/major%20visitor%20attractions) |
+| HKAPI-210 | manual-only | none | not-run | [Official source](https://data.gov.hk/en-datasets/search/hotel%20rooms%20rates%20occupancy%20HKTB) |
+| HKAPI-211 | manual-only | none | not-run | [Official source](https://data.gov.hk/en-datasets/search/accessible%20facilities%20tourism) |
+| HKAPI-212 | manual-only | none | not-run | [Official source](https://data.gov.hk/en-datasets/search/public%20housing%20estate%20profiles%20JSON) |
+| HKAPI-213 | manual-only | none | not-run | [Official source](https://data.gov.hk/en-datasets/search/public%20rental%20housing%20stock) |
+| HKAPI-214 | manual-only | none | not-run | [Official source](https://data.gov.hk/en-datasets/search/housing%20construction%20programme) |
+| HKAPI-215 | manual-only | none | not-run | [Official source](https://data.gov.hk/en-datasets/search/open%20spaces%20public%20housing%20estates) |
+| HKAPI-216 | manual-only | none | not-run | [Official source](https://data.gov.hk/en-datasets/search/Housing%20Society%20commercial%20leasing) |
+| HKAPI-217 | manual-only | none | not-run | [Official source](https://data.gov.hk/en-datasets/search/Housing%20Society%20estates%20projects) |
+| HKAPI-218 | manual-only | none | not-run | [Official source](https://data.gov.hk/en-datasets/search/Buildings%20Department%20registers) |
+| HKAPI-219 | manual-only | none | not-run | [Official source](https://data.gov.hk/en-datasets/search/building%20information%20age) |
+| HKAPI-220 | manual-only | none | not-run | [Official source](https://data.gov.hk/en-datasets/search/statutory%20building%20orders) |
+| HKAPI-221 | manual-only | none | not-run | [Official source](https://data.gov.hk/en-datasets/search/Buildings%20Department%20monthly%20digest) |
+| HKAPI-222 | manual-only | none | not-run | [Official source](https://data.gov.hk/en-datasets/search/foundation%20work%20consents) |
+| HKAPI-223 | manual-only | none | not-run | [Official source](https://data.gov.hk/en-datasets/search/demolished%20buildings) |
+| HKAPI-224 | manual-only | none | not-run | [Official source](https://data.gov.hk/en-datasets/search/statutory%20plan%20digital%20GIS) |
+| HKAPI-225 | manual-only | none | not-run | [Official source](https://data.gov.hk/en-datasets/search/TPU%20street%20block%20village%20boundary) |
+| HKAPI-226 | manual-only | none | not-run | [Official source](https://data.gov.hk/en-datasets/search/territorial%20population%20employment%20spatial) |
+| HKAPI-227 | manual-only | none | not-run | [Official source](https://data.gov.hk/en-datasets/search/land%20lot%20CSDI) |
+| HKAPI-228 | manual-only | none | not-run | [Official source](https://data.gov.hk/en-datasets/search/government%20land%20allocations) |
+| HKAPI-229 | manual-only | none | not-run | [Official source](https://data.gov.hk/en-datasets/search/short-term%20tenancies) |
+| HKAPI-230 | manual-only | none | not-run | [Official source](https://data.gov.hk/en-datasets/search/building%20licences%20Lands) |
+| HKAPI-231 | manual-only | none | not-run | [Official source](https://data.gov.hk/en-datasets/search/slope%20responsibility%20boundary) |
+| HKAPI-232 | manual-only | none | not-run | [Official source](https://data.gov.hk/en-datasets/search/index%20owners%20corporations) |
+| HKAPI-233 | manual-only | none | not-run | [Official source](https://data.gov.hk/en-datasets/search/private%20building%20database) |
+| HKAPI-234 | manual-only | none | not-run | [Official source](https://data.gov.hk/en-datasets/search/landslide%20incident%20locations) |
+| HKAPI-235 | manual-only | none | not-run | [Official source](https://data.gov.hk/en-datasets/search/School%20Location%20and%20Information) |
+| HKAPI-236 | live-verified | rest-json | success | [Official source](https://data.gov.hk/en/help/api-spec) |
+| HKAPI-237 | manual-only | none | not-run | [Official source](https://data.gov.hk/en-datasets/search/school%20registration%20information) |
+| HKAPI-238 | manual-only | none | not-run | [Official source](https://data.gov.hk/en-datasets/search/higher%20education%20institutions%20CSDI) |
+| HKAPI-239 | manual-only | none | not-run | [Official source](https://data.gov.hk/en-datasets/search/Primary%20One%20school%20net%20boundary) |
+| HKAPI-240 | manual-only | none | not-run | [Official source](https://data.gov.hk/en-datasets/search/secondary%20school%20allocation%20net) |
+| HKAPI-241 | manual-only | none | not-run | [Official source](https://data.gov.hk/en-datasets/search/DSS%20school%20fees) |
+| HKAPI-242 | manual-only | none | not-run | [Official source](https://data.gov.hk/en-datasets/search/through-train%20schools) |
+| HKAPI-243 | manual-only | none | not-run | [Official source](https://data.gov.hk/en-datasets/search/kindergarten%20education%20scheme) |
+| HKAPI-244 | manual-only | none | not-run | [Official source](https://data.gov.hk/en-datasets/search/education%20statistics%20enrolment%20classes) |
+| HKAPI-245 | manual-only | none | not-run | [Official source](https://data.gov.hk/en-datasets/search/residential%20care%20homes%20elderly%20SWD) |
+| HKAPI-246 | manual-only | none | not-run | [Official source](https://data.gov.hk/en-datasets/search/home%20care%20community%20care%20teams%20SWD) |
+| HKAPI-247 | manual-only | none | not-run | [Official source](https://data.gov.hk/en-datasets/search/Social%20Security%20Field%20Units) |
+| HKAPI-248 | manual-only | none | not-run | [Official source](https://data.gov.hk/en-datasets/search/family%20child%20welfare%20service%20units) |
+| HKAPI-249 | manual-only | none | not-run | [Official source](https://data.gov.hk/en-datasets/search/small%20group%20homes) |
+| HKAPI-250 | manual-only | none | not-run | [Official source](https://data.gov.hk/en-datasets/search/street%20sleeper%20outreach%20teams) |
+| HKAPI-251 | manual-only | none | not-run | [Official source](https://data.gov.hk/en-datasets/search/cross-boundary%20social%20welfare%20services) |
+| HKAPI-252 | manual-only | none | not-run | [Official source](https://data.gov.hk/en-datasets/search/pre-primary%20social%20work%20services) |
+| HKAPI-253 | manual-only | none | not-run | [Official source](https://data.gov.hk/en-datasets/search/severe%20disability%20support%20services) |
+| HKAPI-254 | manual-only | none | not-run | [Official source](https://data.gov.hk/en-datasets/search/elderly%20placement%20application%20waiting%20status) |
+| HKAPI-255 | manual-only | none | not-run | [Official source](https://data.gov.hk/en-datasets/search/OFCA%20wireless%20statistics) |
+| HKAPI-256 | manual-only | none | not-run | [Official source](https://data.gov.hk/en-datasets/search/telecommunications%20indicators%20OFCA) |
+| HKAPI-257 | manual-only | none | not-run | [Official source](https://data.gov.hk/en-datasets/search/Hong%20Kong%20numbering%20plan) |
+| HKAPI-258 | manual-only | none | not-run | [Official source](https://data.gov.hk/en-datasets/search/internet%20subscription%20statistics) |
+| HKAPI-259 | manual-only | none | not-run | [Official source](https://data.gov.hk/en-datasets/search/wireline%20statistics%20OFCA) |
+| HKAPI-260 | manual-only | none | not-run | [Official source](https://data.gov.hk/en-datasets/search/public%20Wi-Fi%20statistics) |
+| HKAPI-261 | manual-only | none | not-run | [Official source](https://data.gov.hk/en-datasets/search/Wi-Fi%20access%20point%20locations) |
+| HKAPI-262 | manual-only | none | not-run | [Official source](https://data.gov.hk/en-datasets/search/digital%20terrestrial%20television%20coverage) |
+| HKAPI-263 | manual-only | none | not-run | [Official source](https://data.gov.hk/en-datasets/search/ISP%20SBO%20CLOTS%20licensees) |
+| HKAPI-264 | manual-only | none | not-run | [Official source](https://data.gov.hk/en-datasets/search/smart%20lamppost) |
+| HKAPI-265 | manual-only | none | not-run | [Official source](https://data.gov.hk/en-datasets/search/smart%20lamppost%20compartment%20sensor) |

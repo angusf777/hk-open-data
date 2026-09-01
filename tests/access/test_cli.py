@@ -6,7 +6,7 @@ from pathlib import Path
 
 import pytest
 from hk_data_sdk.cli import main
-from hk_data_worker.fetch import SafeFetcher
+from hk_data_worker.fetch import RetryExhausted, SafeFetcher
 from hk_data_worker.models import ApprovedRequest, FetchResult
 
 FIXTURES = Path(__file__).parent / "fixtures"
@@ -28,6 +28,12 @@ class FixtureFetcher:
             final_url=request.url,
             elapsed_ms=12,
         )
+
+
+class UnavailableFetcher:
+    def fetch(self, request: ApprovedRequest) -> FetchResult:
+        del request
+        raise RetryExhausted("provider details are not public evidence")
 
 
 def test_recipe_command_is_offline(
@@ -103,3 +109,21 @@ def test_verify_writes_metadata_only_evidence(
     assert evidence.exists()
     assert '"outcome": "success"' in evidence.read_text(encoding="utf-8")
     assert "verified HKAPI-001" in capsys.readouterr().err
+
+
+def test_verify_all_records_failure_evidence_and_returns_a_stable_exit_code(
+    tmp_path: Path, capsys: pytest.CaptureFixture[str]
+) -> None:
+    root = _repository(tmp_path)
+
+    code = main(
+        ["verify", "--all-anonymous"],
+        repository_root=root,
+        fetcher=UnavailableFetcher(),
+    )
+
+    evidence = root / "access" / "verification" / "hkapi-001.json"
+    assert code == 4
+    assert '"outcome": "failure"' in evidence.read_text(encoding="utf-8")
+    assert "provider details" not in evidence.read_text(encoding="utf-8")
+    assert "SOURCE_UNAVAILABLE" in capsys.readouterr().err

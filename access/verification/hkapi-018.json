@@ -1,0 +1,24 @@
+{
+  "checkedAt": "2026-09-01T09:00:15.081079Z",
+  "elapsedMs": 0,
+  "errorCode": "MEDIA_TYPE_MISMATCH",
+  "finalHost": "api.hkma.gov.hk",
+  "httpStatus": null,
+  "limitations": [
+    "Technical access example only; review current provider terms, attribution, caching and redistribution requirements before use.",
+    "The bounded example is not a promise of availability, completeness or fitness for a particular purpose.",
+    "Verification failed; no provider response content is retained in this evidence."
+  ],
+  "mediaType": null,
+  "outcome": "failure",
+  "parsedRecordCount": 0,
+  "recipeSha256": "5ce9e6e2d9b81f607a0abfae8627440aa9d99cee2a2567a00e4f09d7189399e3",
+  "recipeVersion": "1.0.0",
+  "responseBytes": 0,
+  "responseSha256": null,
+  "schemaFingerprint": null,
+  "schemaVersion": 1,
+  "sourceReference": "HKAPI-018",
+  "toolVersion": "0.1.0",
+  "validUntil": "2026-09-08T09:00:15.081079Z"
+}

@@ -1,0 +1,23 @@
+{
+  "checkedAt": "2026-09-01T09:05:36.555509Z",
+  "elapsedMs": 217,
+  "errorCode": null,
+  "finalHost": "data.gov.hk",
+  "httpStatus": 200,
+  "limitations": [
+    "Technical access example only; review current provider terms, attribution, caching and redistribution requirements before use.",
+    "The bounded example is not a promise of availability, completeness or fitness for a particular purpose."
+  ],
+  "mediaType": "application/json",
+  "outcome": "success",
+  "parsedRecordCount": 10,
+  "recipeSha256": "d55a501b6aa37f9f7d735f6e31f28dd2371f9633be065a242dcbadc9492f4780",
+  "recipeVersion": "1.0.0",
+  "responseBytes": 459,
+  "responseSha256": "1ffa0e7fb38c42c5686a555c7b81c32919bd5c1699e362709939c341ab16bc0c",
+  "schemaFingerprint": "0a4932c7e03fe084254f4da99354167763dad5181be2278e1d0a024a2135ef86",
+  "schemaVersion": 1,
+  "sourceReference": "HKAPI-001",
+  "toolVersion": "0.1.0",
+  "validUntil": "2026-09-08T09:05:36.555509Z"
+}

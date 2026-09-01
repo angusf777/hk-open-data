@@ -2,7 +2,7 @@ schemaVersion: 1
 sourceReference: HKAPI-088
 recipeVersion: 1.0.0
 adapter: rest-json
-status: fixture-tested
+status: live-verified
 documentationUrl: https://data.weather.gov.hk/weatherAPI/doc/HKO_Open_Data_API_Documentation.pdf
 limitations:
 - Technical access example only; review current provider terms, attribution, caching and redistribution

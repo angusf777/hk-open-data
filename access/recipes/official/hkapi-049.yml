@@ -2,7 +2,7 @@ schemaVersion: 1
 sourceReference: HKAPI-049
 recipeVersion: 1.0.0
 adapter: rest-json
-status: fixture-tested
+status: live-verified
 documentationUrl: https://data.gov.hk/en-data/dataset/hk-td-tis_5-real-time-parking-vacancy-data/resource/98a9ecfa-907d-48bf-93f4-91912459d404
 limitations:
 - Technical access example only; review current provider terms, attribution, caching and redistribution

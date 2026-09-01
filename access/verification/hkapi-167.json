@@ -1,0 +1,24 @@
+{
+  "checkedAt": "2026-09-01T09:00:15.081079Z",
+  "elapsedMs": 0,
+  "errorCode": "SOURCE_UNAVAILABLE",
+  "finalHost": "app.legco.gov.hk",
+  "httpStatus": null,
+  "limitations": [
+    "Technical access example only; review current provider terms, attribution, caching and redistribution requirements before use.",
+    "The bounded example is not a promise of availability, completeness or fitness for a particular purpose.",
+    "Verification failed; no provider response content is retained in this evidence."
+  ],
+  "mediaType": null,
+  "outcome": "failure",
+  "parsedRecordCount": 0,
+  "recipeSha256": "dd289485692f5497d0702855ad5305dd7556575d9b2f1796659df8142c18e96c",
+  "recipeVersion": "1.0.0",
+  "responseBytes": 0,
+  "responseSha256": null,
+  "schemaFingerprint": null,
+  "schemaVersion": 1,
+  "sourceReference": "HKAPI-167",
+  "toolVersion": "0.1.0",
+  "validUntil": "2026-09-08T09:00:15.081079Z"
+}

@@ -1,0 +1,23 @@
+{
+  "checkedAt": "2026-09-01T09:06:23.641143Z",
+  "elapsedMs": 334,
+  "errorCode": null,
+  "finalHost": "resource.data.one.gov.hk",
+  "httpStatus": 200,
+  "limitations": [
+    "Technical access example only; review current provider terms, attribution, caching and redistribution requirements before use.",
+    "The bounded example is not a promise of availability, completeness or fitness for a particular purpose."
+  ],
+  "mediaType": "application/json",
+  "outcome": "success",
+  "parsedRecordCount": 549,
+  "recipeSha256": "3800ebf168ea2abb1b9b54b70f5701f20f5ef199996903118153370f54b0e658",
+  "recipeVersion": "1.0.0",
+  "responseBytes": 118751,
+  "responseSha256": "48752076931c469042d8d1abf2c7883dc9c9d77f1a34780bdaa0c4448e4d84a1",
+  "schemaFingerprint": "1fd31c3c5705f8ab5e839bd195373df3998b33579296f51884596691bb8426c9",
+  "schemaVersion": 1,
+  "sourceReference": "HKAPI-048",
+  "toolVersion": "0.1.0",
+  "validUntil": "2026-09-08T09:06:23.641143Z"
+}

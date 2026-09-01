@@ -5,9 +5,12 @@ import stat
 from datetime import UTC, datetime
 from pathlib import Path
 
+import pytest
 from hk_data_worker.access.evidence import write_evidence_atomic
 from hk_data_worker.access.execution import verify_recipe
+from hk_data_worker.access.live import verify_all_anonymous
 from hk_data_worker.access.registry import load_recipes
+from hk_data_worker.fetch import RetryExhausted
 from hk_data_worker.models import ApprovedRequest, FetchResult
 
 FIXTURES = Path(__file__).parent / "fixtures"
@@ -60,3 +63,32 @@ def test_schema_fingerprint_is_stable_across_values() -> None:
     )
 
     assert first.schema_fingerprint == second.schema_fingerprint
+
+
+class UnavailableFetcher:
+    def fetch(self, request: ApprovedRequest) -> FetchResult:
+        del request
+        raise RetryExhausted("private provider detail must not be persisted")
+
+
+def test_batch_verification_records_safe_failure_evidence_and_continues(tmp_path: Path) -> None:
+    recipe = load_recipes(FIXTURES / "valid")[0]
+
+    results = verify_all_anonymous(
+        (recipe,),
+        output=tmp_path,
+        fetcher=UnavailableFetcher(),
+        concurrency=1,
+        now=NOW,
+    )
+
+    assert len(results) == 1
+    assert results[0].outcome == "failure"
+    assert results[0].error_code == "SOURCE_UNAVAILABLE"
+    text = (tmp_path / "hkapi-001.json").read_text(encoding="utf-8")
+    assert "private provider detail" not in text
+
+
+def test_batch_verification_rejects_more_than_three_workers(tmp_path: Path) -> None:
+    with pytest.raises(ValueError, match="between 1 and 3"):
+        verify_all_anonymous((), output=tmp_path, fetcher=UnavailableFetcher(), concurrency=4)

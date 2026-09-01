@@ -1,8 +1,9 @@
 {
   "accessExecutable": 37,
-  "accessLiveVerified": 0,
+  "accessLiveVerified": 29,
   "byAccessStatus": {
-    "fixture-tested": 37,
+    "fixture-tested": 8,
+    "live-verified": 29,
     "manual-only": 228
   },
   "byTermsEvidenceState": {

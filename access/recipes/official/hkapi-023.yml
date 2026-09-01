@@ -2,7 +2,7 @@ schemaVersion: 1
 sourceReference: HKAPI-023
 recipeVersion: 1.0.0
 adapter: file-download
-status: fixture-tested
+status: live-verified
 documentationUrl: https://portal.csdi.gov.hk/csdi-webpage/apidoc/TopographicMapAPI
 limitations:
 - Technical access example only; review current provider terms, attribution, caching and redistribution

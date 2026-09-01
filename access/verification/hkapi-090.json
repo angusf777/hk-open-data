@@ -1,0 +1,23 @@
+{
+  "checkedAt": "2026-09-01T09:06:29.804638Z",
+  "elapsedMs": 242,
+  "errorCode": null,
+  "finalHost": "data.weather.gov.hk",
+  "httpStatus": 200,
+  "limitations": [
+    "Technical access example only; review current provider terms, attribution, caching and redistribution requirements before use.",
+    "The bounded example is not a promise of availability, completeness or fitness for a particular purpose."
+  ],
+  "mediaType": "application/json",
+  "outcome": "success",
+  "parsedRecordCount": 1,
+  "recipeSha256": "970e2c6127d670a757313dbf1f03d6cfb95dc9b5d508e35218dfbbc398a832cc",
+  "recipeVersion": "1.0.0",
+  "responseBytes": 2730,
+  "responseSha256": "030e3e4ec8c5399006a3186a275135709a7a3ed5dcfc43713641c0076e71cd9e",
+  "schemaFingerprint": "6fe78fb0f867d68bee59294edee520931abd08a1e36006ed12d8957d96f0d40e",
+  "schemaVersion": 1,
+  "sourceReference": "HKAPI-090",
+  "toolVersion": "0.1.0",
+  "validUntil": "2026-09-08T09:06:29.804638Z"
+}
