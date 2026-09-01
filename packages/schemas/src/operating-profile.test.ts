@@ -3,7 +3,7 @@ import { describe, expect, it } from "vitest";
 import { parseOperatingProfile } from "./operating-profile.js";
 
 describe("operating profile contract", () => {
-  it("defaults to the fail-closed catalogue profile", () => {
+  it("defaults to catalogue-only mode with external connections off", () => {
     expect(parseOperatingProfile()).toBe("catalogue");
   });
 

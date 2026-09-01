@@ -74,9 +74,9 @@ export function TargetsPage() {
     <div className="standard-page">
       <header className="page-header">
         <div>
-          <p className="eyebrow">P14 OBSERVATORY</p>
-          <h1>Monitor targets</h1>
-          <p>Cadence, activation evidence, current outcome and the latest accepted observation.</p>
+          <p className="eyebrow">API HEALTH MONITOR</p>
+          <h1>Health checks</h1>
+          <p>Schedule, setup record, current result, and latest accepted check.</p>
         </div>
       </header>
       {targets.isPending ? (
@@ -122,9 +122,9 @@ export function TargetsPage() {
             reject incomplete or unapproved targets.
           </p>
           <ul>
-            <li>Effective P14 quality-monitoring source approval</li>
-            <li>One accountable local operator and immutable rule version</li>
-            <li>Evidence observation and final visibility decision</li>
+            <li>A current source review that covers API health checks</li>
+            <li>A named local administrator and fixed rule version</li>
+            <li>A reference observation and final visibility choice</li>
           </ul>
         </div>
         <form onSubmit={submit}>
@@ -147,7 +147,7 @@ export function TargetsPage() {
             </p>
           ) : null}
           <label>
-            Operator identity
+            Administrator identity
             <input
               value={operatorIdentity}
               onChange={(event) => setOperatorIdentity(event.target.value)}

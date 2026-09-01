@@ -1,9 +1,9 @@
 # Runtime contracts
 
-These project-authored contracts pin the optional P01/P14 runtime interfaces. The source-group and
-monitor registries are specifications only: every row starts in
-`specified_pending_approval` and does not authorize a provider request, collection, caching,
-retention, redistribution, or production use.
+These project-authored contracts define the optional data access and API health interfaces. The
+source-group and monitor registries are specifications only: every row starts in
+`specified_pending_approval`, which means no external request or data collection is enabled. It also
+does not grant permission for caching, retention, redistribution, or production use.
 
 - `p01-source-groups.csv`: ten normalized source groups.
 - `p14-monitor-targets.csv`: fifty bounded monitor definitions.
@@ -12,5 +12,7 @@ retention, redistribution, or production use.
 - `*.schema.json`: runtime event, observation, incident, connector, and allowlist schemas.
 - `contract-manifest.json`: SHA-256 integrity map regenerated from this directory.
 
-Runtime references must resolve inside this repository. Current upstream terms, source-specific
-approvals, and operator configuration still control execution.
+Runtime references must resolve inside this repository. Current provider terms, per-source settings,
+and the user's configuration still control execution. The `P01` and `P14` prefixes in stable file,
+record, and API identifiers are retained for compatibility; public documentation uses descriptive
+product names instead.

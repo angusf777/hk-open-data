@@ -10,11 +10,16 @@ Routine corrections and focused improvements are decided through issues and pull
 
 ## Protected changes
 
-The maintainer merges external contributions after required automated checks pass. Changes to workflows, deployment, source activation, provider egress, secrets, authentication, security controls and releases receive explicit maintainer review. No generated check may grant source approval or alter terms evidence automatically.
+The maintainer merges external contributions after required automated checks pass. Changes to
+workflows, deployment, source activation, outbound provider connections, secrets, authentication,
+security controls, and releases receive explicit maintainer review. Automated checks never decide
+whether a source may be used or change a terms-review record by themselves.
 
 ## Releases
 
-Releases come from a clean, verified commit. Release notes distinguish repository verification from upstream authorization, live availability and production qualification. Published tags are not moved.
+Releases come from a clean, verified commit. Release notes distinguish checks performed on this
+repository from permission to use an external source, current source availability, and proof that a
+deployment is ready for production. Published tags are not moved.
 
 ## Future maintainers
 

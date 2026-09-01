@@ -68,7 +68,7 @@ export function buildSeedData(
   for (const group of sourceGroups) {
     for (const sourceId of group.sourceIds) {
       if (groupBySource.has(sourceId)) {
-        throw new Error(`Source ${sourceId} appears in more than one P01 group`);
+        throw new Error(`Source ${sourceId} appears in more than one data-access group`);
       }
       groupBySource.set(sourceId, group);
     }

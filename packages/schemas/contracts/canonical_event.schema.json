@@ -1,7 +1,7 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "urn:hk-public-data:schema:canonical-event:1",
-  "title": "P01 Canonical Event",
+  "title": "HK Open Data canonical event",
   "type": "object",
   "required": ["event_id", "event_type", "status", "severity", "title", "summary", "source_records", "observed_at", "quality_flags", "schema_version"],
   "properties": {

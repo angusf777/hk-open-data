@@ -12,8 +12,8 @@ All notable project changes are documented here. The format follows
 - Searchable static catalogue containing 521 evidence-labelled resources: 265 official, 145
   external, and 111 read-only MCP candidates.
 - English and Traditional Chinese catalogue experience with deterministic resource permalinks.
-- Optional fail-closed P01/P14 runtime profiles for catalogue-only, digest-only observation, and
-  separately approved raw evidence.
+- Optional self-hosted modes for catalogue-only use, API health checks that store fingerprints and
+  summaries, and data access with full-response storage. Every external connection starts disabled.
 - REST and TypeScript/Python SDK surfaces plus 11 read-only MCP tools.
 - Synthetic connector fixtures, source-rights safeguards, corrections, security policy, CI,
   scheduled health evidence, Pages deployment, and metadata-only release packaging.

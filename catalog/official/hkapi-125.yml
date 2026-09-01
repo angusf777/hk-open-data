@@ -8,7 +8,7 @@ name:
   zh-Hant: Inpatient and day-inpatient statistics
 summary:
   en: Beds, discharges, patient days and occupancy.
-  zh-Hant: 由 Hospital Authority 提供的「Inpatient and day-inpatient statistics」資源。請參閱官方文件及最新上游條款。
+  zh-Hant: 由 Hospital Authority 提供的「Inpatient and day-inpatient statistics」資源。請參閱官方文件及來源的最新條款。
 translationStatus: seeded
 provider:
   name:

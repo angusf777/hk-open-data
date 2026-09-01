@@ -16,4 +16,4 @@ The maintainer will acknowledge and assess reports as capacity permits. This sol
 
 ## Safe-harbour intent
 
-Good-faith research that avoids privacy violations, service disruption, data destruction and unauthorized access will be handled constructively. This statement does not authorize testing against upstream providers; their policies and applicable law remain controlling.
+Good-faith research that avoids privacy violations, service disruption, data destruction and unauthorized access will be handled constructively. This statement does not authorize testing against listed data providers; their policies and applicable law remain controlling.

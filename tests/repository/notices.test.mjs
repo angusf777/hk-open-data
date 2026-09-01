@@ -11,7 +11,7 @@ const required = {
   ],
   "CONTRIBUTING.md": [
     "catalogue metadata",
-    "terms evidence",
+    "source terms review",
     "credentials",
     "Apache License 2.0",
   ],

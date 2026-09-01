@@ -25,7 +25,7 @@ into publication claims.
 | Muted | `#66625b` | supporting metadata |
 | Signal red | `#c81e3a` | active state, primary action and route-line motif |
 | Border | `#d8d5ce` | ledger rules and control boundaries |
-| Warning | `#fff7df` | terms-evidence notice only |
+| Warning | `#fff7df` | terms-review notice only |
 
 Use an editorial sans-serif stack with strong, compact headings and deliberately sized control
 text. The system uses thin rules, low corner radii, almost no shadow and open bands or ledger rows
@@ -38,8 +38,8 @@ instead of nested cards. Red route lines and small circular nodes are the only d
 - A search-led hero followed by category links; no eyebrow, badge or invented proof element.
 - A desktop filter rail that becomes one disclosure control below 760px.
 - Resource ledger rows with consistent labels for provider, type, protocol, authentication, terms
-  evidence and checked date.
-- One warning-surface terms-evidence panel on a detail page.
+  review and checked date.
+- One warning-surface terms-review panel on a detail page.
 - An open toolkit band and a rule-separated legal footer.
 - Line icons use a consistent 1.75px stroke, rounded caps, `currentColor`, 18–22px optical size and no
   decorative container except the toolkit terminal mark.
@@ -55,7 +55,7 @@ data:
 
 - `HK OPEN DATA`
 - `Catalogue`, `Toolkit`, `About`, `繁中` or `English`
-- `Independent community project. Upstream terms always control.`
+- `Independent community project. Check each source's current terms before use.`
 - `Hong Kong public data, mapped and runnable.`
 - The generated official, external and MCP counts
 - `Search names, providers, topics…`
@@ -75,6 +75,6 @@ The notice must precede catalogue results in every viewport and locale.
 ## Content and safety boundaries
 
 The site contains local, generated catalogue metadata only. It never fetches provider URLs. External
-links are explicit user actions and visually identified. Evidence states are not legal conclusions,
+links are explicit user actions and visually identified. Terms-review states are not legal conclusions,
 security endorsements, uptime guarantees or permission for commercial use, caching or
 redistribution.

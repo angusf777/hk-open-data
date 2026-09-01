@@ -13,7 +13,7 @@ Each resource has a stable namespaced ID and its original source reference. Engl
 Traditional Chinese fields are required for published records. A `seeded` translation status means
 that project maintainers have not yet recorded a human language review.
 
-## Evidence, not endorsement
+## Research, not endorsement
 
 The catalogue records metadata and review state. Inclusion does not mean that this project operates,
 endorses, secures or guarantees a provider, API, dataset or MCP server. It does not copy provider
@@ -22,7 +22,8 @@ data, grant access, or confirm that an endpoint is currently available.
 `termsEvidence` is a structured research aid, not legal advice or permission. It does not determine
 whether commercial use, caching, redistribution, attribution, personal-data processing or any other
 activity is lawful. Check the provider's current terms, policies, licences and applicable law before
-use. Upstream wording and law control if this catalogue is incomplete, outdated or wrong.
+use. The provider's current wording and applicable law control if this catalogue is incomplete,
+outdated, or wrong.
 
 ## Rebuild and verify
 
@@ -47,5 +48,5 @@ uv run python scripts/import_catalogue.py \
   --output catalog
 ```
 
-Report inaccurate metadata, rights evidence or unsafe links through the correction process described
+Report inaccurate metadata, source terms information, or unsafe links through the correction process described
 in [`docs/governance/CORRECTIONS_AND_TAKEDOWNS.md`](../docs/governance/CORRECTIONS_AND_TAKEDOWNS.md).

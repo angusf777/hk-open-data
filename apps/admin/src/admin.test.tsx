@@ -26,7 +26,7 @@ function api(): AdminApi {
   };
 }
 
-describe("operator application", () => {
+describe("admin application", () => {
   it("renders the operational overview with source and incident evidence", async () => {
     render(<AdminApp api={api()} initialEntries={["/"]} />);
     expect(await screen.findByRole("heading", { name: "Operations overview" })).toBeVisible();
@@ -39,7 +39,7 @@ describe("operator application", () => {
     const user = userEvent.setup();
     render(<AdminApp api={api()} initialEntries={["/sources"]} />);
     expect(await screen.findByRole("heading", { name: "Sources" })).toBeVisible();
-    await user.selectOptions(screen.getByLabelText("Approval status"), "pending");
+    await user.selectOptions(screen.getByLabelText("Review status"), "pending");
     expect(screen.queryByText("DATA.GOV.HK CKAN")).not.toBeInTheDocument();
     expect(screen.getByText("CSDI WFS")).toBeVisible();
   });
@@ -49,8 +49,8 @@ describe("operator application", () => {
     const user = userEvent.setup();
     render(<AdminApp api={mock} operatingProfile="observe" initialEntries={["/sources/HKAPI-003"]} />);
     await screen.findByRole("heading", { name: /Review source/ });
-    expect(screen.getByText(/self-hosted observe profile/i)).toBeVisible();
-    expect(screen.getByText(/terms evidence/i)).toBeVisible();
+    expect(screen.getByText(/self-hosted API health checks/i)).toBeVisible();
+    expect(screen.getByText(/terms review/i)).toBeVisible();
     expect(screen.getByText("ambiguity-identified")).toBeVisible();
     expect(screen.getByText(/runtime activation/i)).toBeVisible();
     await user.type(screen.getByLabelText("Decision reason"), "Terms and retention reviewed");
@@ -98,7 +98,7 @@ describe("operator application", () => {
     expect(activate).toBeDisabled();
     await screen.findByRole("option", { name: /P14-M001/ });
     await user.selectOptions(screen.getByLabelText("Monitor target"), "P14-M001");
-    await user.type(screen.getByLabelText("Operator identity"), "local-operator");
+    await user.type(screen.getByLabelText("Administrator identity"), "local-operator");
     await user.type(screen.getByLabelText("Rule version"), "rules@1.0.0");
     await user.type(screen.getByLabelText("Evidence observation ID"), "OBS-BASE-0001");
     await user.type(screen.getByLabelText("Activation reason"), "Local evidence reviewed");

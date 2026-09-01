@@ -8,7 +8,7 @@ name:
   zh-Hant: CSDI OGC Catalogue Service
 summary:
   en: Machine-readable discovery of CSDI metadata.
-  zh-Hant: 由 Lands Department 提供的「CSDI OGC Catalogue Service」資源。請參閱官方文件及最新上游條款。
+  zh-Hant: 由 Lands Department 提供的「CSDI OGC Catalogue Service」資源。請參閱官方文件及來源的最新條款。
 translationStatus: seeded
 provider:
   name:
@@ -39,14 +39,14 @@ termsEvidence:
   state: restriction-identified
   checkedAt: '2026-08-27'
   note:
-    en: Available source notes identify an upstream condition or restriction; consult the provider's current terms.
-    zh-Hant: 現有來源註記識別了上游條件或限制；請查閱供應者的現行條款。
+    en: Available source notes identify a condition or restriction; check the provider's current terms.
+    zh-Hant: 現有來源註記提及一項條件或限制；請查閱提供者的現行條款。
   attribution:
     en: Source notes indicate an attribution condition; verify the provider's current wording.
     zh-Hant: 來源註記顯示有署名條件；請核實供應者的現行文字。
   restrictions:
-  - en: An upstream condition or restriction was identified; its current source wording controls.
-    zh-Hant: 已識別上游條件或限制；應以上游來源的現行文字為準。
+  - en: A condition or restriction was identified; check the provider's current wording.
+    zh-Hant: 已識別一項條件或限制；請查閱來源的現行文字。
 integrations:
   connector: none
   sdk: none

@@ -8,7 +8,7 @@ name:
   zh-Hant: DATA.GOV.HK CKAN package list
 summary:
   en: Enumerate dataset IDs before calling package_show.
-  zh-Hant: 由 Digital Policy Office 提供的「DATA.GOV.HK CKAN package list」資源。請參閱官方文件及最新上游條款。
+  zh-Hant: 由 Digital Policy Office 提供的「DATA.GOV.HK CKAN package list」資源。請參閱官方文件及來源的最新條款。
 translationStatus: seeded
 provider:
   name:

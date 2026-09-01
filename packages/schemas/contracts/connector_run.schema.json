@@ -1,7 +1,7 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "urn:hk-public-data:schema:connector-run:1",
-  "title": "P01 Connector Run",
+  "title": "HK Open Data connector run",
   "type": "object",
   "required": ["run_id", "connector_id", "connector_version", "source_group_id", "source_ids", "environment", "attempt", "started_at", "finished_at", "outcome", "request_count", "response_count", "record_count", "raw_object_ids", "error_codes"],
   "properties": {

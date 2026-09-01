@@ -23,7 +23,7 @@ describe("catalogue application", () => {
     await user.click(screen.getByRole("button", { name: "繁中" }));
     expect(screen.getByRole("heading", { name: "香港天文台開放數據 API" })).toBeVisible();
     await user.click(screen.getByRole("link", { name: /查看資源/ }));
-    expect(screen.getByText(/上游條款永遠優先/)).toBeVisible();
+    expect(screen.getByText(/請先核對來源的現行條款/)).toBeVisible();
     expect(screen.getByRole("link", { name: /開啟供應者文件/ })).toHaveAttribute(
       "href",
       "https://www.hko.gov.hk/en/abouthko/opendata_intro.htm",

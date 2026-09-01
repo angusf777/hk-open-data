@@ -1,4 +1,4 @@
-# Raw-evidence revocation
+# Stop full-response collection
 
 Use when a source's raw-retention approval no longer applies. This is relevant only to `fabric`.
 

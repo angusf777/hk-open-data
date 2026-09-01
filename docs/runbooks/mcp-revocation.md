@@ -4,7 +4,7 @@ Use when a local MCP client or gateway token must lose access to the self-hosted
 
 ## Preconditions
 
-- Identify the operator-controlled client and token reference without logging bearer material.
+- Identify the client and token reference managed by your deployment without logging bearer material.
 - Confirm the MCP server remains read-only; token revocation does not replace tool-surface review.
 
 ## Procedure

@@ -50,13 +50,13 @@
         },
         "checkedAt": "2026-08-31",
         "note": {
-          "en": "Available source notes identify an upstream condition or restriction; consult the provider's current terms.",
-          "zh-Hant": "現有來源註記識別了上游條件或限制；請查閱供應者的現行條款。"
+          "en": "Available source notes identify a condition or restriction; check the provider's current terms.",
+          "zh-Hant": "現有來源註記提及一項條件或限制；請查閱提供者的現行條款。"
         },
         "restrictions": [
           {
-            "en": "An upstream condition or restriction was identified; its current source wording controls.",
-            "zh-Hant": "已識別上游條件或限制；應以上游來源的現行文字為準。"
+            "en": "A condition or restriction was identified; check the provider's current wording.",
+            "zh-Hant": "已識別一項條件或限制；請查閱來源的現行文字。"
           }
         ],
         "state": "restriction-identified"
@@ -123,13 +123,13 @@
         },
         "checkedAt": "2026-08-31",
         "note": {
-          "en": "Available source notes identify an upstream condition or restriction; consult the provider's current terms.",
-          "zh-Hant": "現有來源註記識別了上游條件或限制；請查閱供應者的現行條款。"
+          "en": "Available source notes identify a condition or restriction; check the provider's current terms.",
+          "zh-Hant": "現有來源註記提及一項條件或限制；請查閱提供者的現行條款。"
         },
         "restrictions": [
           {
-            "en": "An upstream condition or restriction was identified; its current source wording controls.",
-            "zh-Hant": "已識別上游條件或限制；應以上游來源的現行文字為準。"
+            "en": "A condition or restriction was identified; check the provider's current wording.",
+            "zh-Hant": "已識別一項條件或限制；請查閱來源的現行文字。"
           }
         ],
         "state": "restriction-identified"
@@ -193,13 +193,13 @@
         "attribution": null,
         "checkedAt": "2026-08-31",
         "note": {
-          "en": "Available source notes identify an upstream condition or restriction; consult the provider's current terms.",
-          "zh-Hant": "現有來源註記識別了上游條件或限制；請查閱供應者的現行條款。"
+          "en": "Available source notes identify a condition or restriction; check the provider's current terms.",
+          "zh-Hant": "現有來源註記提及一項條件或限制；請查閱提供者的現行條款。"
         },
         "restrictions": [
           {
-            "en": "An upstream condition or restriction was identified; its current source wording controls.",
-            "zh-Hant": "已識別上游條件或限制；應以上游來源的現行文字為準。"
+            "en": "A condition or restriction was identified; check the provider's current wording.",
+            "zh-Hant": "已識別一項條件或限制；請查閱來源的現行文字。"
           }
         ],
         "state": "restriction-identified"
@@ -263,13 +263,13 @@
         "attribution": null,
         "checkedAt": "2026-08-31",
         "note": {
-          "en": "Available source notes identify an upstream condition or restriction; consult the provider's current terms.",
-          "zh-Hant": "現有來源註記識別了上游條件或限制；請查閱供應者的現行條款。"
+          "en": "Available source notes identify a condition or restriction; check the provider's current terms.",
+          "zh-Hant": "現有來源註記提及一項條件或限制；請查閱提供者的現行條款。"
         },
         "restrictions": [
           {
-            "en": "An upstream condition or restriction was identified; its current source wording controls.",
-            "zh-Hant": "已識別上游條件或限制；應以上游來源的現行文字為準。"
+            "en": "A condition or restriction was identified; check the provider's current wording.",
+            "zh-Hant": "已識別一項條件或限制；請查閱來源的現行文字。"
           }
         ],
         "state": "restriction-identified"
@@ -528,13 +528,13 @@
         "attribution": null,
         "checkedAt": "2026-08-31",
         "note": {
-          "en": "Available source notes identify an upstream condition or restriction; consult the provider's current terms.",
-          "zh-Hant": "現有來源註記識別了上游條件或限制；請查閱供應者的現行條款。"
+          "en": "Available source notes identify a condition or restriction; check the provider's current terms.",
+          "zh-Hant": "現有來源註記提及一項條件或限制；請查閱提供者的現行條款。"
         },
         "restrictions": [
           {
-            "en": "An upstream condition or restriction was identified; its current source wording controls.",
-            "zh-Hant": "已識別上游條件或限制；應以上游來源的現行文字為準。"
+            "en": "A condition or restriction was identified; check the provider's current wording.",
+            "zh-Hant": "已識別一項條件或限制；請查閱來源的現行文字。"
           }
         ],
         "state": "restriction-identified"
@@ -598,13 +598,13 @@
         "attribution": null,
         "checkedAt": "2026-08-31",
         "note": {
-          "en": "Available source notes identify an upstream condition or restriction; consult the provider's current terms.",
-          "zh-Hant": "現有來源註記識別了上游條件或限制；請查閱供應者的現行條款。"
+          "en": "Available source notes identify a condition or restriction; check the provider's current terms.",
+          "zh-Hant": "現有來源註記提及一項條件或限制；請查閱提供者的現行條款。"
         },
         "restrictions": [
           {
-            "en": "An upstream condition or restriction was identified; its current source wording controls.",
-            "zh-Hant": "已識別上游條件或限制；應以上游來源的現行文字為準。"
+            "en": "A condition or restriction was identified; check the provider's current wording.",
+            "zh-Hant": "已識別一項條件或限制；請查閱來源的現行文字。"
           }
         ],
         "state": "restriction-identified"
@@ -668,13 +668,13 @@
         "attribution": null,
         "checkedAt": "2026-08-31",
         "note": {
-          "en": "Available source notes identify an upstream condition or restriction; consult the provider's current terms.",
-          "zh-Hant": "現有來源註記識別了上游條件或限制；請查閱供應者的現行條款。"
+          "en": "Available source notes identify a condition or restriction; check the provider's current terms.",
+          "zh-Hant": "現有來源註記提及一項條件或限制；請查閱提供者的現行條款。"
         },
         "restrictions": [
           {
-            "en": "An upstream condition or restriction was identified; its current source wording controls.",
-            "zh-Hant": "已識別上游條件或限制；應以上游來源的現行文字為準。"
+            "en": "A condition or restriction was identified; check the provider's current wording.",
+            "zh-Hant": "已識別一項條件或限制；請查閱來源的現行文字。"
           }
         ],
         "state": "restriction-identified"
@@ -741,13 +741,13 @@
         },
         "checkedAt": "2026-08-31",
         "note": {
-          "en": "Available source notes identify an upstream condition or restriction; consult the provider's current terms.",
-          "zh-Hant": "現有來源註記識別了上游條件或限制；請查閱供應者的現行條款。"
+          "en": "Available source notes identify a condition or restriction; check the provider's current terms.",
+          "zh-Hant": "現有來源註記提及一項條件或限制；請查閱提供者的現行條款。"
         },
         "restrictions": [
           {
-            "en": "An upstream condition or restriction was identified; its current source wording controls.",
-            "zh-Hant": "已識別上游條件或限制；應以上游來源的現行文字為準。"
+            "en": "A condition or restriction was identified; check the provider's current wording.",
+            "zh-Hant": "已識別一項條件或限制；請查閱來源的現行文字。"
           }
         ],
         "state": "restriction-identified"
@@ -1074,13 +1074,13 @@
         },
         "checkedAt": "2026-08-31",
         "note": {
-          "en": "Available source notes identify an upstream condition or restriction; consult the provider's current terms.",
-          "zh-Hant": "現有來源註記識別了上游條件或限制；請查閱供應者的現行條款。"
+          "en": "Available source notes identify a condition or restriction; check the provider's current terms.",
+          "zh-Hant": "現有來源註記提及一項條件或限制；請查閱提供者的現行條款。"
         },
         "restrictions": [
           {
-            "en": "An upstream condition or restriction was identified; its current source wording controls.",
-            "zh-Hant": "已識別上游條件或限制；應以上游來源的現行文字為準。"
+            "en": "A condition or restriction was identified; check the provider's current wording.",
+            "zh-Hant": "已識別一項條件或限制；請查閱來源的現行文字。"
           }
         ],
         "state": "restriction-identified"
@@ -1212,13 +1212,13 @@
         },
         "checkedAt": "2026-08-31",
         "note": {
-          "en": "Available source notes identify an upstream condition or restriction; consult the provider's current terms.",
-          "zh-Hant": "現有來源註記識別了上游條件或限制；請查閱供應者的現行條款。"
+          "en": "Available source notes identify a condition or restriction; check the provider's current terms.",
+          "zh-Hant": "現有來源註記提及一項條件或限制；請查閱提供者的現行條款。"
         },
         "restrictions": [
           {
-            "en": "An upstream condition or restriction was identified; its current source wording controls.",
-            "zh-Hant": "已識別上游條件或限制；應以上游來源的現行文字為準。"
+            "en": "A condition or restriction was identified; check the provider's current wording.",
+            "zh-Hant": "已識別一項條件或限制；請查閱來源的現行文字。"
           }
         ],
         "state": "restriction-identified"
@@ -1282,13 +1282,13 @@
         "attribution": null,
         "checkedAt": "2026-08-31",
         "note": {
-          "en": "Available source notes identify an upstream condition or restriction; consult the provider's current terms.",
-          "zh-Hant": "現有來源註記識別了上游條件或限制；請查閱供應者的現行條款。"
+          "en": "Available source notes identify a condition or restriction; check the provider's current terms.",
+          "zh-Hant": "現有來源註記提及一項條件或限制；請查閱提供者的現行條款。"
         },
         "restrictions": [
           {
-            "en": "An upstream condition or restriction was identified; its current source wording controls.",
-            "zh-Hant": "已識別上游條件或限制；應以上游來源的現行文字為準。"
+            "en": "A condition or restriction was identified; check the provider's current wording.",
+            "zh-Hant": "已識別一項條件或限制；請查閱來源的現行文字。"
           }
         ],
         "state": "restriction-identified"
@@ -1352,13 +1352,13 @@
         "attribution": null,
         "checkedAt": "2026-08-31",
         "note": {
-          "en": "Available source notes identify an upstream condition or restriction; consult the provider's current terms.",
-          "zh-Hant": "現有來源註記識別了上游條件或限制；請查閱供應者的現行條款。"
+          "en": "Available source notes identify a condition or restriction; check the provider's current terms.",
+          "zh-Hant": "現有來源註記提及一項條件或限制；請查閱提供者的現行條款。"
         },
         "restrictions": [
           {
-            "en": "An upstream condition or restriction was identified; its current source wording controls.",
-            "zh-Hant": "已識別上游條件或限制；應以上游來源的現行文字為準。"
+            "en": "A condition or restriction was identified; check the provider's current wording.",
+            "zh-Hant": "已識別一項條件或限制；請查閱來源的現行文字。"
           }
         ],
         "state": "restriction-identified"
@@ -1422,13 +1422,13 @@
         "attribution": null,
         "checkedAt": "2026-08-31",
         "note": {
-          "en": "Available source notes identify an upstream condition or restriction; consult the provider's current terms.",
-          "zh-Hant": "現有來源註記識別了上游條件或限制；請查閱供應者的現行條款。"
+          "en": "Available source notes identify a condition or restriction; check the provider's current terms.",
+          "zh-Hant": "現有來源註記提及一項條件或限制；請查閱提供者的現行條款。"
         },
         "restrictions": [
           {
-            "en": "An upstream condition or restriction was identified; its current source wording controls.",
-            "zh-Hant": "已識別上游條件或限制；應以上游來源的現行文字為準。"
+            "en": "A condition or restriction was identified; check the provider's current wording.",
+            "zh-Hant": "已識別一項條件或限制；請查閱來源的現行文字。"
           }
         ],
         "state": "restriction-identified"
@@ -1557,13 +1557,13 @@
         "attribution": null,
         "checkedAt": "2026-08-31",
         "note": {
-          "en": "Available source notes identify an upstream condition or restriction; consult the provider's current terms.",
-          "zh-Hant": "現有來源註記識別了上游條件或限制；請查閱供應者的現行條款。"
+          "en": "Available source notes identify a condition or restriction; check the provider's current terms.",
+          "zh-Hant": "現有來源註記提及一項條件或限制；請查閱提供者的現行條款。"
         },
         "restrictions": [
           {
-            "en": "An upstream condition or restriction was identified; its current source wording controls.",
-            "zh-Hant": "已識別上游條件或限制；應以上游來源的現行文字為準。"
+            "en": "A condition or restriction was identified; check the provider's current wording.",
+            "zh-Hant": "已識別一項條件或限制；請查閱來源的現行文字。"
           }
         ],
         "state": "restriction-identified"
@@ -1627,13 +1627,13 @@
         "attribution": null,
         "checkedAt": "2026-08-31",
         "note": {
-          "en": "Available source notes identify an upstream condition or restriction; consult the provider's current terms.",
-          "zh-Hant": "現有來源註記識別了上游條件或限制；請查閱供應者的現行條款。"
+          "en": "Available source notes identify a condition or restriction; check the provider's current terms.",
+          "zh-Hant": "現有來源註記提及一項條件或限制；請查閱提供者的現行條款。"
         },
         "restrictions": [
           {
-            "en": "An upstream condition or restriction was identified; its current source wording controls.",
-            "zh-Hant": "已識別上游條件或限制；應以上游來源的現行文字為準。"
+            "en": "A condition or restriction was identified; check the provider's current wording.",
+            "zh-Hant": "已識別一項條件或限制；請查閱來源的現行文字。"
           }
         ],
         "state": "restriction-identified"
@@ -2090,13 +2090,13 @@
         },
         "checkedAt": "2026-08-31",
         "note": {
-          "en": "Available source notes identify an upstream condition or restriction; consult the provider's current terms.",
-          "zh-Hant": "現有來源註記識別了上游條件或限制；請查閱供應者的現行條款。"
+          "en": "Available source notes identify a condition or restriction; check the provider's current terms.",
+          "zh-Hant": "現有來源註記提及一項條件或限制；請查閱提供者的現行條款。"
         },
         "restrictions": [
           {
-            "en": "An upstream condition or restriction was identified; its current source wording controls.",
-            "zh-Hant": "已識別上游條件或限制；應以上游來源的現行文字為準。"
+            "en": "A condition or restriction was identified; check the provider's current wording.",
+            "zh-Hant": "已識別一項條件或限制；請查閱來源的現行文字。"
           }
         ],
         "state": "restriction-identified"
@@ -2163,13 +2163,13 @@
         },
         "checkedAt": "2026-08-31",
         "note": {
-          "en": "Available source notes identify an upstream condition or restriction; consult the provider's current terms.",
-          "zh-Hant": "現有來源註記識別了上游條件或限制；請查閱供應者的現行條款。"
+          "en": "Available source notes identify a condition or restriction; check the provider's current terms.",
+          "zh-Hant": "現有來源註記提及一項條件或限制；請查閱提供者的現行條款。"
         },
         "restrictions": [
           {
-            "en": "An upstream condition or restriction was identified; its current source wording controls.",
-            "zh-Hant": "已識別上游條件或限制；應以上游來源的現行文字為準。"
+            "en": "A condition or restriction was identified; check the provider's current wording.",
+            "zh-Hant": "已識別一項條件或限制；請查閱來源的現行文字。"
           }
         ],
         "state": "restriction-identified"
@@ -2301,13 +2301,13 @@
         },
         "checkedAt": "2026-08-31",
         "note": {
-          "en": "Available source notes identify an upstream condition or restriction; consult the provider's current terms.",
-          "zh-Hant": "現有來源註記識別了上游條件或限制；請查閱供應者的現行條款。"
+          "en": "Available source notes identify a condition or restriction; check the provider's current terms.",
+          "zh-Hant": "現有來源註記提及一項條件或限制；請查閱提供者的現行條款。"
         },
         "restrictions": [
           {
-            "en": "An upstream condition or restriction was identified; its current source wording controls.",
-            "zh-Hant": "已識別上游條件或限制；應以上游來源的現行文字為準。"
+            "en": "A condition or restriction was identified; check the provider's current wording.",
+            "zh-Hant": "已識別一項條件或限制；請查閱來源的現行文字。"
           }
         ],
         "state": "restriction-identified"
@@ -2371,13 +2371,13 @@
         "attribution": null,
         "checkedAt": "2026-08-31",
         "note": {
-          "en": "Available source notes identify an upstream condition or restriction; consult the provider's current terms.",
-          "zh-Hant": "現有來源註記識別了上游條件或限制；請查閱供應者的現行條款。"
+          "en": "Available source notes identify a condition or restriction; check the provider's current terms.",
+          "zh-Hant": "現有來源註記提及一項條件或限制；請查閱提供者的現行條款。"
         },
         "restrictions": [
           {
-            "en": "An upstream condition or restriction was identified; its current source wording controls.",
-            "zh-Hant": "已識別上游條件或限制；應以上游來源的現行文字為準。"
+            "en": "A condition or restriction was identified; check the provider's current wording.",
+            "zh-Hant": "已識別一項條件或限制；請查閱來源的現行文字。"
           }
         ],
         "state": "restriction-identified"
@@ -2444,13 +2444,13 @@
         },
         "checkedAt": "2026-08-31",
         "note": {
-          "en": "Available source notes identify an upstream condition or restriction; consult the provider's current terms.",
-          "zh-Hant": "現有來源註記識別了上游條件或限制；請查閱供應者的現行條款。"
+          "en": "Available source notes identify a condition or restriction; check the provider's current terms.",
+          "zh-Hant": "現有來源註記提及一項條件或限制；請查閱提供者的現行條款。"
         },
         "restrictions": [
           {
-            "en": "An upstream condition or restriction was identified; its current source wording controls.",
-            "zh-Hant": "已識別上游條件或限制；應以上游來源的現行文字為準。"
+            "en": "A condition or restriction was identified; check the provider's current wording.",
+            "zh-Hant": "已識別一項條件或限制；請查閱來源的現行文字。"
           }
         ],
         "state": "restriction-identified"
@@ -2709,13 +2709,13 @@
         "attribution": null,
         "checkedAt": "2026-08-31",
         "note": {
-          "en": "Available source notes identify an upstream condition or restriction; consult the provider's current terms.",
-          "zh-Hant": "現有來源註記識別了上游條件或限制；請查閱供應者的現行條款。"
+          "en": "Available source notes identify a condition or restriction; check the provider's current terms.",
+          "zh-Hant": "現有來源註記提及一項條件或限制；請查閱提供者的現行條款。"
         },
         "restrictions": [
           {
-            "en": "An upstream condition or restriction was identified; its current source wording controls.",
-            "zh-Hant": "已識別上游條件或限制；應以上游來源的現行文字為準。"
+            "en": "A condition or restriction was identified; check the provider's current wording.",
+            "zh-Hant": "已識別一項條件或限制；請查閱來源的現行文字。"
           }
         ],
         "state": "restriction-identified"
@@ -2779,13 +2779,13 @@
         "attribution": null,
         "checkedAt": "2026-08-31",
         "note": {
-          "en": "Available source notes identify an upstream condition or restriction; consult the provider's current terms.",
-          "zh-Hant": "現有來源註記識別了上游條件或限制；請查閱供應者的現行條款。"
+          "en": "Available source notes identify a condition or restriction; check the provider's current terms.",
+          "zh-Hant": "現有來源註記提及一項條件或限制；請查閱提供者的現行條款。"
         },
         "restrictions": [
           {
-            "en": "An upstream condition or restriction was identified; its current source wording controls.",
-            "zh-Hant": "已識別上游條件或限制；應以上游來源的現行文字為準。"
+            "en": "A condition or restriction was identified; check the provider's current wording.",
+            "zh-Hant": "已識別一項條件或限制；請查閱來源的現行文字。"
           }
         ],
         "state": "restriction-identified"
@@ -2914,13 +2914,13 @@
         "attribution": null,
         "checkedAt": "2026-08-31",
         "note": {
-          "en": "Available source notes identify an upstream condition or restriction; consult the provider's current terms.",
-          "zh-Hant": "現有來源註記識別了上游條件或限制；請查閱供應者的現行條款。"
+          "en": "Available source notes identify a condition or restriction; check the provider's current terms.",
+          "zh-Hant": "現有來源註記提及一項條件或限制；請查閱提供者的現行條款。"
         },
         "restrictions": [
           {
-            "en": "An upstream condition or restriction was identified; its current source wording controls.",
-            "zh-Hant": "已識別上游條件或限制；應以上游來源的現行文字為準。"
+            "en": "A condition or restriction was identified; check the provider's current wording.",
+            "zh-Hant": "已識別一項條件或限制；請查閱來源的現行文字。"
           }
         ],
         "state": "restriction-identified"
@@ -2984,13 +2984,13 @@
         "attribution": null,
         "checkedAt": "2026-08-31",
         "note": {
-          "en": "Available source notes identify an upstream condition or restriction; consult the provider's current terms.",
-          "zh-Hant": "現有來源註記識別了上游條件或限制；請查閱供應者的現行條款。"
+          "en": "Available source notes identify a condition or restriction; check the provider's current terms.",
+          "zh-Hant": "現有來源註記提及一項條件或限制；請查閱提供者的現行條款。"
         },
         "restrictions": [
           {
-            "en": "An upstream condition or restriction was identified; its current source wording controls.",
-            "zh-Hant": "已識別上游條件或限制；應以上游來源的現行文字為準。"
+            "en": "A condition or restriction was identified; check the provider's current wording.",
+            "zh-Hant": "已識別一項條件或限制；請查閱來源的現行文字。"
           }
         ],
         "state": "restriction-identified"
@@ -3574,13 +3574,13 @@
         "attribution": null,
         "checkedAt": "2026-08-31",
         "note": {
-          "en": "Available source notes identify an upstream condition or restriction; consult the provider's current terms.",
-          "zh-Hant": "現有來源註記識別了上游條件或限制；請查閱供應者的現行條款。"
+          "en": "Available source notes identify a condition or restriction; check the provider's current terms.",
+          "zh-Hant": "現有來源註記提及一項條件或限制；請查閱提供者的現行條款。"
         },
         "restrictions": [
           {
-            "en": "An upstream condition or restriction was identified; its current source wording controls.",
-            "zh-Hant": "已識別上游條件或限制；應以上游來源的現行文字為準。"
+            "en": "A condition or restriction was identified; check the provider's current wording.",
+            "zh-Hant": "已識別一項條件或限制；請查閱來源的現行文字。"
           }
         ],
         "state": "restriction-identified"
@@ -4554,13 +4554,13 @@
         "attribution": null,
         "checkedAt": "2026-08-31",
         "note": {
-          "en": "Available source notes identify an upstream condition or restriction; consult the provider's current terms.",
-          "zh-Hant": "現有來源註記識別了上游條件或限制；請查閱供應者的現行條款。"
+          "en": "Available source notes identify a condition or restriction; check the provider's current terms.",
+          "zh-Hant": "現有來源註記提及一項條件或限制；請查閱提供者的現行條款。"
         },
         "restrictions": [
           {
-            "en": "An upstream condition or restriction was identified; its current source wording controls.",
-            "zh-Hant": "已識別上游條件或限制；應以上游來源的現行文字為準。"
+            "en": "A condition or restriction was identified; check the provider's current wording.",
+            "zh-Hant": "已識別一項條件或限制；請查閱來源的現行文字。"
           }
         ],
         "state": "restriction-identified"
@@ -4884,13 +4884,13 @@
         "attribution": null,
         "checkedAt": "2026-08-31",
         "note": {
-          "en": "Available source notes identify an upstream condition or restriction; consult the provider's current terms.",
-          "zh-Hant": "現有來源註記識別了上游條件或限制；請查閱供應者的現行條款。"
+          "en": "Available source notes identify a condition or restriction; check the provider's current terms.",
+          "zh-Hant": "現有來源註記提及一項條件或限制；請查閱提供者的現行條款。"
         },
         "restrictions": [
           {
-            "en": "An upstream condition or restriction was identified; its current source wording controls.",
-            "zh-Hant": "已識別上游條件或限制；應以上游來源的現行文字為準。"
+            "en": "A condition or restriction was identified; check the provider's current wording.",
+            "zh-Hant": "已識別一項條件或限制；請查閱來源的現行文字。"
           }
         ],
         "state": "restriction-identified"
@@ -5214,13 +5214,13 @@
         "attribution": null,
         "checkedAt": "2026-08-31",
         "note": {
-          "en": "Available source notes identify an upstream condition or restriction; consult the provider's current terms.",
-          "zh-Hant": "現有來源註記識別了上游條件或限制；請查閱供應者的現行條款。"
+          "en": "Available source notes identify a condition or restriction; check the provider's current terms.",
+          "zh-Hant": "現有來源註記提及一項條件或限制；請查閱提供者的現行條款。"
         },
         "restrictions": [
           {
-            "en": "An upstream condition or restriction was identified; its current source wording controls.",
-            "zh-Hant": "已識別上游條件或限制；應以上游來源的現行文字為準。"
+            "en": "A condition or restriction was identified; check the provider's current wording.",
+            "zh-Hant": "已識別一項條件或限制；請查閱來源的現行文字。"
           }
         ],
         "state": "restriction-identified"
@@ -5287,13 +5287,13 @@
         },
         "checkedAt": "2026-08-31",
         "note": {
-          "en": "Available source notes identify an upstream condition or restriction; consult the provider's current terms.",
-          "zh-Hant": "現有來源註記識別了上游條件或限制；請查閱供應者的現行條款。"
+          "en": "Available source notes identify a condition or restriction; check the provider's current terms.",
+          "zh-Hant": "現有來源註記提及一項條件或限制；請查閱提供者的現行條款。"
         },
         "restrictions": [
           {
-            "en": "An upstream condition or restriction was identified; its current source wording controls.",
-            "zh-Hant": "已識別上游條件或限制；應以上游來源的現行文字為準。"
+            "en": "A condition or restriction was identified; check the provider's current wording.",
+            "zh-Hant": "已識別一項條件或限制；請查閱來源的現行文字。"
           }
         ],
         "state": "restriction-identified"
@@ -5422,13 +5422,13 @@
         "attribution": null,
         "checkedAt": "2026-08-31",
         "note": {
-          "en": "Available source notes identify an upstream condition or restriction; consult the provider's current terms.",
-          "zh-Hant": "現有來源註記識別了上游條件或限制；請查閱供應者的現行條款。"
+          "en": "Available source notes identify a condition or restriction; check the provider's current terms.",
+          "zh-Hant": "現有來源註記提及一項條件或限制；請查閱提供者的現行條款。"
         },
         "restrictions": [
           {
-            "en": "An upstream condition or restriction was identified; its current source wording controls.",
-            "zh-Hant": "已識別上游條件或限制；應以上游來源的現行文字為準。"
+            "en": "A condition or restriction was identified; check the provider's current wording.",
+            "zh-Hant": "已識別一項條件或限制；請查閱來源的現行文字。"
           }
         ],
         "state": "restriction-identified"
@@ -5752,13 +5752,13 @@
         "attribution": null,
         "checkedAt": "2026-08-31",
         "note": {
-          "en": "Available source notes identify an upstream condition or restriction; consult the provider's current terms.",
-          "zh-Hant": "現有來源註記識別了上游條件或限制；請查閱供應者的現行條款。"
+          "en": "Available source notes identify a condition or restriction; check the provider's current terms.",
+          "zh-Hant": "現有來源註記提及一項條件或限制；請查閱提供者的現行條款。"
         },
         "restrictions": [
           {
-            "en": "An upstream condition or restriction was identified; its current source wording controls.",
-            "zh-Hant": "已識別上游條件或限制；應以上游來源的現行文字為準。"
+            "en": "A condition or restriction was identified; check the provider's current wording.",
+            "zh-Hant": "已識別一項條件或限制；請查閱來源的現行文字。"
           }
         ],
         "state": "restriction-identified"
@@ -5822,13 +5822,13 @@
         "attribution": null,
         "checkedAt": "2026-08-31",
         "note": {
-          "en": "Available source notes identify an upstream condition or restriction; consult the provider's current terms.",
-          "zh-Hant": "現有來源註記識別了上游條件或限制；請查閱供應者的現行條款。"
+          "en": "Available source notes identify a condition or restriction; check the provider's current terms.",
+          "zh-Hant": "現有來源註記提及一項條件或限制；請查閱提供者的現行條款。"
         },
         "restrictions": [
           {
-            "en": "An upstream condition or restriction was identified; its current source wording controls.",
-            "zh-Hant": "已識別上游條件或限制；應以上游來源的現行文字為準。"
+            "en": "A condition or restriction was identified; check the provider's current wording.",
+            "zh-Hant": "已識別一項條件或限制；請查閱來源的現行文字。"
           }
         ],
         "state": "restriction-identified"
@@ -5957,13 +5957,13 @@
         "attribution": null,
         "checkedAt": "2026-08-31",
         "note": {
-          "en": "Available source notes identify an upstream condition or restriction; consult the provider's current terms.",
-          "zh-Hant": "現有來源註記識別了上游條件或限制；請查閱供應者的現行條款。"
+          "en": "Available source notes identify a condition or restriction; check the provider's current terms.",
+          "zh-Hant": "現有來源註記提及一項條件或限制；請查閱提供者的現行條款。"
         },
         "restrictions": [
           {
-            "en": "An upstream condition or restriction was identified; its current source wording controls.",
-            "zh-Hant": "已識別上游條件或限制；應以上游來源的現行文字為準。"
+            "en": "A condition or restriction was identified; check the provider's current wording.",
+            "zh-Hant": "已識別一項條件或限制；請查閱來源的現行文字。"
           }
         ],
         "state": "restriction-identified"
@@ -6027,13 +6027,13 @@
         "attribution": null,
         "checkedAt": "2026-08-31",
         "note": {
-          "en": "Available source notes identify an upstream condition or restriction; consult the provider's current terms.",
-          "zh-Hant": "現有來源註記識別了上游條件或限制；請查閱供應者的現行條款。"
+          "en": "Available source notes identify a condition or restriction; check the provider's current terms.",
+          "zh-Hant": "現有來源註記提及一項條件或限制；請查閱提供者的現行條款。"
         },
         "restrictions": [
           {
-            "en": "An upstream condition or restriction was identified; its current source wording controls.",
-            "zh-Hant": "已識別上游條件或限制；應以上游來源的現行文字為準。"
+            "en": "A condition or restriction was identified; check the provider's current wording.",
+            "zh-Hant": "已識別一項條件或限制；請查閱來源的現行文字。"
           }
         ],
         "state": "restriction-identified"
@@ -6227,13 +6227,13 @@
         "attribution": null,
         "checkedAt": "2026-08-31",
         "note": {
-          "en": "Available source notes identify an upstream condition or restriction; consult the provider's current terms.",
-          "zh-Hant": "現有來源註記識別了上游條件或限制；請查閱供應者的現行條款。"
+          "en": "Available source notes identify a condition or restriction; check the provider's current terms.",
+          "zh-Hant": "現有來源註記提及一項條件或限制；請查閱提供者的現行條款。"
         },
         "restrictions": [
           {
-            "en": "An upstream condition or restriction was identified; its current source wording controls.",
-            "zh-Hant": "已識別上游條件或限制；應以上游來源的現行文字為準。"
+            "en": "A condition or restriction was identified; check the provider's current wording.",
+            "zh-Hant": "已識別一項條件或限制；請查閱來源的現行文字。"
           }
         ],
         "state": "restriction-identified"
@@ -6557,13 +6557,13 @@
         "attribution": null,
         "checkedAt": "2026-08-31",
         "note": {
-          "en": "Available source notes identify an upstream condition or restriction; consult the provider's current terms.",
-          "zh-Hant": "現有來源註記識別了上游條件或限制；請查閱供應者的現行條款。"
+          "en": "Available source notes identify a condition or restriction; check the provider's current terms.",
+          "zh-Hant": "現有來源註記提及一項條件或限制；請查閱提供者的現行條款。"
         },
         "restrictions": [
           {
-            "en": "An upstream condition or restriction was identified; its current source wording controls.",
-            "zh-Hant": "已識別上游條件或限制；應以上游來源的現行文字為準。"
+            "en": "A condition or restriction was identified; check the provider's current wording.",
+            "zh-Hant": "已識別一項條件或限制；請查閱來源的現行文字。"
           }
         ],
         "state": "restriction-identified"
@@ -6627,13 +6627,13 @@
         "attribution": null,
         "checkedAt": "2026-08-31",
         "note": {
-          "en": "Available source notes identify an upstream condition or restriction; consult the provider's current terms.",
-          "zh-Hant": "現有來源註記識別了上游條件或限制；請查閱供應者的現行條款。"
+          "en": "Available source notes identify a condition or restriction; check the provider's current terms.",
+          "zh-Hant": "現有來源註記提及一項條件或限制；請查閱提供者的現行條款。"
         },
         "restrictions": [
           {
-            "en": "An upstream condition or restriction was identified; its current source wording controls.",
-            "zh-Hant": "已識別上游條件或限制；應以上游來源的現行文字為準。"
+            "en": "A condition or restriction was identified; check the provider's current wording.",
+            "zh-Hant": "已識別一項條件或限制；請查閱來源的現行文字。"
           }
         ],
         "state": "restriction-identified"
@@ -6697,13 +6697,13 @@
         "attribution": null,
         "checkedAt": "2026-08-31",
         "note": {
-          "en": "Available source notes identify an upstream condition or restriction; consult the provider's current terms.",
-          "zh-Hant": "現有來源註記識別了上游條件或限制；請查閱供應者的現行條款。"
+          "en": "Available source notes identify a condition or restriction; check the provider's current terms.",
+          "zh-Hant": "現有來源註記提及一項條件或限制；請查閱提供者的現行條款。"
         },
         "restrictions": [
           {
-            "en": "An upstream condition or restriction was identified; its current source wording controls.",
-            "zh-Hant": "已識別上游條件或限制；應以上游來源的現行文字為準。"
+            "en": "A condition or restriction was identified; check the provider's current wording.",
+            "zh-Hant": "已識別一項條件或限制；請查閱來源的現行文字。"
           }
         ],
         "state": "restriction-identified"
@@ -6767,13 +6767,13 @@
         "attribution": null,
         "checkedAt": "2026-08-31",
         "note": {
-          "en": "Available source notes identify an upstream condition or restriction; consult the provider's current terms.",
-          "zh-Hant": "現有來源註記識別了上游條件或限制；請查閱供應者的現行條款。"
+          "en": "Available source notes identify a condition or restriction; check the provider's current terms.",
+          "zh-Hant": "現有來源註記提及一項條件或限制；請查閱提供者的現行條款。"
         },
         "restrictions": [
           {
-            "en": "An upstream condition or restriction was identified; its current source wording controls.",
-            "zh-Hant": "已識別上游條件或限制；應以上游來源的現行文字為準。"
+            "en": "A condition or restriction was identified; check the provider's current wording.",
+            "zh-Hant": "已識別一項條件或限制；請查閱來源的現行文字。"
           }
         ],
         "state": "restriction-identified"
@@ -7035,13 +7035,13 @@
         },
         "checkedAt": "2026-08-31",
         "note": {
-          "en": "Available source notes identify an upstream condition or restriction; consult the provider's current terms.",
-          "zh-Hant": "現有來源註記識別了上游條件或限制；請查閱供應者的現行條款。"
+          "en": "Available source notes identify a condition or restriction; check the provider's current terms.",
+          "zh-Hant": "現有來源註記提及一項條件或限制；請查閱提供者的現行條款。"
         },
         "restrictions": [
           {
-            "en": "An upstream condition or restriction was identified; its current source wording controls.",
-            "zh-Hant": "已識別上游條件或限制；應以上游來源的現行文字為準。"
+            "en": "A condition or restriction was identified; check the provider's current wording.",
+            "zh-Hant": "已識別一項條件或限制；請查閱來源的現行文字。"
           }
         ],
         "state": "restriction-identified"
@@ -7625,13 +7625,13 @@
         "attribution": null,
         "checkedAt": "2026-08-31",
         "note": {
-          "en": "Available source notes identify an upstream condition or restriction; consult the provider's current terms.",
-          "zh-Hant": "現有來源註記識別了上游條件或限制；請查閱供應者的現行條款。"
+          "en": "Available source notes identify a condition or restriction; check the provider's current terms.",
+          "zh-Hant": "現有來源註記提及一項條件或限制；請查閱提供者的現行條款。"
         },
         "restrictions": [
           {
-            "en": "An upstream condition or restriction was identified; its current source wording controls.",
-            "zh-Hant": "已識別上游條件或限制；應以上游來源的現行文字為準。"
+            "en": "A condition or restriction was identified; check the provider's current wording.",
+            "zh-Hant": "已識別一項條件或限制；請查閱來源的現行文字。"
           }
         ],
         "state": "restriction-identified"
@@ -7695,13 +7695,13 @@
         "attribution": null,
         "checkedAt": "2026-08-31",
         "note": {
-          "en": "Available source notes identify an upstream condition or restriction; consult the provider's current terms.",
-          "zh-Hant": "現有來源註記識別了上游條件或限制；請查閱供應者的現行條款。"
+          "en": "Available source notes identify a condition or restriction; check the provider's current terms.",
+          "zh-Hant": "現有來源註記提及一項條件或限制；請查閱提供者的現行條款。"
         },
         "restrictions": [
           {
-            "en": "An upstream condition or restriction was identified; its current source wording controls.",
-            "zh-Hant": "已識別上游條件或限制；應以上游來源的現行文字為準。"
+            "en": "A condition or restriction was identified; check the provider's current wording.",
+            "zh-Hant": "已識別一項條件或限制；請查閱來源的現行文字。"
           }
         ],
         "state": "restriction-identified"
@@ -7960,13 +7960,13 @@
         "attribution": null,
         "checkedAt": "2026-08-31",
         "note": {
-          "en": "Available source notes identify an upstream condition or restriction; consult the provider's current terms.",
-          "zh-Hant": "現有來源註記識別了上游條件或限制；請查閱供應者的現行條款。"
+          "en": "Available source notes identify a condition or restriction; check the provider's current terms.",
+          "zh-Hant": "現有來源註記提及一項條件或限制；請查閱提供者的現行條款。"
         },
         "restrictions": [
           {
-            "en": "An upstream condition or restriction was identified; its current source wording controls.",
-            "zh-Hant": "已識別上游條件或限制；應以上游來源的現行文字為準。"
+            "en": "A condition or restriction was identified; check the provider's current wording.",
+            "zh-Hant": "已識別一項條件或限制；請查閱來源的現行文字。"
           }
         ],
         "state": "restriction-identified"
@@ -8160,13 +8160,13 @@
         "attribution": null,
         "checkedAt": "2026-08-31",
         "note": {
-          "en": "Available source notes identify an upstream condition or restriction; consult the provider's current terms.",
-          "zh-Hant": "現有來源註記識別了上游條件或限制；請查閱供應者的現行條款。"
+          "en": "Available source notes identify a condition or restriction; check the provider's current terms.",
+          "zh-Hant": "現有來源註記提及一項條件或限制；請查閱提供者的現行條款。"
         },
         "restrictions": [
           {
-            "en": "An upstream condition or restriction was identified; its current source wording controls.",
-            "zh-Hant": "已識別上游條件或限制；應以上游來源的現行文字為準。"
+            "en": "A condition or restriction was identified; check the provider's current wording.",
+            "zh-Hant": "已識別一項條件或限制；請查閱來源的現行文字。"
           }
         ],
         "state": "restriction-identified"
@@ -8425,13 +8425,13 @@
         "attribution": null,
         "checkedAt": "2026-08-31",
         "note": {
-          "en": "Available source notes identify an upstream condition or restriction; consult the provider's current terms.",
-          "zh-Hant": "現有來源註記識別了上游條件或限制；請查閱供應者的現行條款。"
+          "en": "Available source notes identify a condition or restriction; check the provider's current terms.",
+          "zh-Hant": "現有來源註記提及一項條件或限制；請查閱提供者的現行條款。"
         },
         "restrictions": [
           {
-            "en": "An upstream condition or restriction was identified; its current source wording controls.",
-            "zh-Hant": "已識別上游條件或限制；應以上游來源的現行文字為準。"
+            "en": "A condition or restriction was identified; check the provider's current wording.",
+            "zh-Hant": "已識別一項條件或限制；請查閱來源的現行文字。"
           }
         ],
         "state": "restriction-identified"
@@ -9213,13 +9213,13 @@
         },
         "checkedAt": "2026-08-31",
         "note": {
-          "en": "Available source notes identify an upstream condition or restriction; consult the provider's current terms.",
-          "zh-Hant": "現有來源註記識別了上游條件或限制；請查閱供應者的現行條款。"
+          "en": "Available source notes identify a condition or restriction; check the provider's current terms.",
+          "zh-Hant": "現有來源註記提及一項條件或限制；請查閱提供者的現行條款。"
         },
         "restrictions": [
           {
-            "en": "An upstream condition or restriction was identified; its current source wording controls.",
-            "zh-Hant": "已識別上游條件或限制；應以上游來源的現行文字為準。"
+            "en": "A condition or restriction was identified; check the provider's current wording.",
+            "zh-Hant": "已識別一項條件或限制；請查閱來源的現行文字。"
           }
         ],
         "state": "restriction-identified"
@@ -9286,13 +9286,13 @@
         },
         "checkedAt": "2026-08-31",
         "note": {
-          "en": "Available source notes identify an upstream condition or restriction; consult the provider's current terms.",
-          "zh-Hant": "現有來源註記識別了上游條件或限制；請查閱供應者的現行條款。"
+          "en": "Available source notes identify a condition or restriction; check the provider's current terms.",
+          "zh-Hant": "現有來源註記提及一項條件或限制；請查閱提供者的現行條款。"
         },
         "restrictions": [
           {
-            "en": "An upstream condition or restriction was identified; its current source wording controls.",
-            "zh-Hant": "已識別上游條件或限制；應以上游來源的現行文字為準。"
+            "en": "A condition or restriction was identified; check the provider's current wording.",
+            "zh-Hant": "已識別一項條件或限制；請查閱來源的現行文字。"
           }
         ],
         "state": "restriction-identified"
@@ -9421,13 +9421,13 @@
         "attribution": null,
         "checkedAt": "2026-08-31",
         "note": {
-          "en": "Available source notes identify an upstream condition or restriction; consult the provider's current terms.",
-          "zh-Hant": "現有來源註記識別了上游條件或限制；請查閱供應者的現行條款。"
+          "en": "Available source notes identify a condition or restriction; check the provider's current terms.",
+          "zh-Hant": "現有來源註記提及一項條件或限制；請查閱提供者的現行條款。"
         },
         "restrictions": [
           {
-            "en": "An upstream condition or restriction was identified; its current source wording controls.",
-            "zh-Hant": "已識別上游條件或限制；應以上游來源的現行文字為準。"
+            "en": "A condition or restriction was identified; check the provider's current wording.",
+            "zh-Hant": "已識別一項條件或限制；請查閱來源的現行文字。"
           }
         ],
         "state": "restriction-identified"
@@ -9689,13 +9689,13 @@
         },
         "checkedAt": "2026-08-31",
         "note": {
-          "en": "Available source notes identify an upstream condition or restriction; consult the provider's current terms.",
-          "zh-Hant": "現有來源註記識別了上游條件或限制；請查閱供應者的現行條款。"
+          "en": "Available source notes identify a condition or restriction; check the provider's current terms.",
+          "zh-Hant": "現有來源註記提及一項條件或限制；請查閱提供者的現行條款。"
         },
         "restrictions": [
           {
-            "en": "An upstream condition or restriction was identified; its current source wording controls.",
-            "zh-Hant": "已識別上游條件或限制；應以上游來源的現行文字為準。"
+            "en": "A condition or restriction was identified; check the provider's current wording.",
+            "zh-Hant": "已識別一項條件或限制；請查閱來源的現行文字。"
           }
         ],
         "state": "restriction-identified"

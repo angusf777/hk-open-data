@@ -6,7 +6,7 @@ body:
   - type: markdown
     attributes:
       value: >-
-        Share factual provenance only. A listing or evidence link is not a legal-permission decision.
+        Share factual source links only. A listing or source link does not grant permission to use a resource.
   - type: input
     id: name
     attributes:
@@ -60,7 +60,7 @@ body:
   - type: input
     id: checked
     attributes:
-      label: Evidence checked date
+      label: Source checked date
       placeholder: YYYY-MM-DD
     validations:
       required: true

@@ -8,7 +8,7 @@ test("resource requests collect provenance without legal conclusions", async () 
   const text = await readFile(".github/ISSUE_TEMPLATE/resource-request.yml", "utf8");
   assert.match(text, /Official landing URL/);
   assert.match(text, /Terms or licence URL/);
-  assert.match(text, /Evidence checked date/);
+  assert.match(text, /Source checked date/);
   assert.doesNotMatch(text, /Is commercial use allowed/);
   assert.match(text, /no credentials or restricted data/i);
 });
@@ -16,7 +16,7 @@ test("resource requests collect provenance without legal conclusions", async () 
 test("pull request template keeps contribution flow low friction", async () => {
   const text = await readFile(".github/PULL_REQUEST_TEMPLATE.md", "utf8");
   assert.match(text, /bilingual/i);
-  assert.match(text, /terms evidence/i);
+  assert.match(text, /source terms review/i);
   assert.match(text, /no provider payloads/i);
   assert.doesNotMatch(text, /CLA|second approver|CODEOWNERS/i);
 });

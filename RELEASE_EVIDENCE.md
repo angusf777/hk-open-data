@@ -27,7 +27,7 @@ external review are recorded separately rather than inferred from local results.
 
 This evidence qualifies the local catalogue and documentation worktree only. It does not record a
 GitHub push, Pages deployment, release publication, provider approval, production deployment,
-legal clearance, or independent acceptance. The optional P01/P14 runtime was not in scope for this
+legal clearance, or independent acceptance. The optional data access and API health runtime was not in scope for this
 entry and remains unqualified here.
 
 ## 2026-08-31 — v0.1.0 local publication candidate
@@ -38,12 +38,12 @@ entry and remains unqualified here.
   uv-managed Python `3.12.11`; Docker `29.7.2`; Compose `5.5.0`; Terraform `1.16.0`;
   Trivy `0.74.0`; GitHub CLI `2.92.0`; actionlint `1.7.12`
 - **Catalogue:** 521 total; 265 official; 145 external; 111 MCP candidates
-- **Rights evidence:** 330 ambiguity identified; 111 not reviewed; 80 restrictions identified
+- **Terms reviews:** 330 ambiguity identified; 111 not reviewed; 80 restrictions identified
 
 | Command or gate | Observed result |
 | --- | --- |
 | `make verify-all` | Passed: 18 catalogue tests; deterministic JSON and README counts; 5 catalogue unit tests; 521 static detail pages; 4 catalogue browser/accessibility/no-provider-traffic scenarios; all workspace tests, type checks and builds; Ruff and strict mypy; full Python suite with 2 expected Docker-only skips; secret and public-boundary scans; 18 repository policy tests |
-| `pnpm exec playwright test` | 14/14 passed across catalogue, portal, admin, accessibility, mobile and desktop layouts; catalogue request assertions observed no provider traffic |
+| `pnpm exec playwright test` | 14/14 passed across catalogue, portal, admin, accessibility, mobile and desktop layouts; catalogue request assertions observed no automatic requests to listed providers |
 | `make verify-integrated` | 9/9 Docker integration tests passed, including API/PostgreSQL and worker execution paths |
 | `sh scripts/restore-drill.sh --local-compose` | Passed against an isolated `network none` target: migrations, row counts and raw hashes matched; zero raw objects; 10 source groups, 22 source definitions and 50 monitor targets restored; RPO 0.367 minutes; RTO 0.367 minutes; restore duration 22 seconds |
 | Terraform format/init/validate | Passed; default deployment contract creates no cloud resource and leaves runtime and raw evidence disabled |
@@ -114,6 +114,6 @@ blocked until protected-branch CI and hosted CodeQL succeed on the published can
 | Repository security APIs | Zero open code-scanning alerts and zero open secret-scanning alerts |
 
 This entry records actual GitHub publication and observed live Pages behaviour. It does not imply
-provider permission, legal clearance, current upstream accuracy, production operation of the
+provider permission, legal clearance, current source accuracy, production operation of the
 optional API/MCP runtime, service availability, or independent certification. The static catalogue
-remains an independent community project; upstream sources and current terms remain controlling.
+remains an independent community project; original sources and current terms remain controlling.

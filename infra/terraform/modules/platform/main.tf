@@ -24,7 +24,7 @@ resource "terraform_data" "deployment_contract" {
         var.object_store.versioning_enabled &&
         var.object_store.object_lock_enabled
       )
-      error_message = "Raw evidence storage requires versioning and object lock."
+      error_message = "Full-response storage requires versioning and object lock."
     }
     precondition {
       condition     = !var.enable_runtime || var.database.tls_required

@@ -38,7 +38,7 @@ describe("REST-backed MCP parity", () => {
     expect(result.evidence.source_record_ids).toEqual(["SR-00000001"]);
     expect(result.evidence.retrieved_at).toBe(restObject.retrieved_at);
     expect(result.evidence.limitations).toContain(
-      "Terms evidence is informational, not permission for commercial use, caching, or redistribution.",
+      "The terms review is informational and does not grant permission for commercial use, caching, or redistribution.",
     );
     expect(fetcher.mock.calls[0]?.[1]?.headers).toMatchObject({
       authorization: "Bearer caller-token",

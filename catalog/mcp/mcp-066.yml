@@ -18,10 +18,10 @@ provider:
 categories:
 - location-services
 tags:
-- P01
-- P07
-- P09
-- P13
+- data-access
+- property-planning
+- accessibility
+- family-services
 protocols:
 - mcp
 formats:
@@ -42,8 +42,8 @@ termsEvidence:
   state: not-reviewed
   checkedAt: '2026-08-31'
   note:
-    en: No current project review of upstream terms is recorded.
-    zh-Hant: 本項目尚未記錄對上游條款的當前審查。
+    en: No current terms review is recorded.
+    zh-Hant: 本項目尚未記錄現行條款的查核結果。
   attribution: null
   restrictions: []
 integrations:

@@ -25,4 +25,5 @@ Do not submit credentials, personal data, confidential correspondence or restric
 4. **Correction or takedown:** accepted changes are made through a reviewable commit and regenerated catalogue.
 5. **Release record:** material corrections are described in the changelog or release evidence without exposing sensitive details.
 
-Removal from this catalogue does not remove material controlled by an upstream provider. Disputed legal questions may require professional advice.
+Removal from this catalogue does not remove material controlled by its provider. Disputed legal
+questions may require professional advice.
