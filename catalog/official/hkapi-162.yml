@@ -8,7 +8,7 @@ name:
   zh-Hant: CLP EV charging-station reference data
 summary:
   en: Charger locations and attributes.
-  zh-Hant: 由 CLP Power Hong Kong 提供的「CLP EV charging-station reference data」資源。請參閱官方文件及最新上游條款。
+  zh-Hant: 由 CLP Power Hong Kong 提供的「CLP EV charging-station reference data」資源。請參閱官方文件及來源的最新條款。
 translationStatus: seeded
 provider:
   name:

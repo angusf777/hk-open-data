@@ -1,7 +1,7 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "urn:hk-public-data:schema:incident:1",
-  "title": "P14 Quality Incident",
+  "title": "HK Open Data API health incident",
   "type": "object",
   "required": ["incident_id", "source_id", "status", "severity", "category", "monitor_ids", "observation_ids", "opened_at", "last_observed_at", "public_state", "audit_version"],
   "properties": {

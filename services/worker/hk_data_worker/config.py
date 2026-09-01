@@ -51,7 +51,9 @@ def load_configuration(
 
     if profile == "catalogue":
         if provider_opt_in or raw_opt_in:
-            raise ValueError("catalogue profile rejects provider access and raw evidence")
+            raise ValueError(
+                "catalogue-only mode does not allow external requests or response storage"
+            )
         provider_access = False
         evidence_mode: EvidenceMode = "none"
     elif profile == "observe":

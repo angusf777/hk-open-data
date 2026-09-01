@@ -37,7 +37,7 @@ def validate_runtime_contracts(configuration: RuntimeConfiguration) -> tuple[int
         if target.source_group_id != "P14-ONLY-01" and target.source_id not in source_ids
     ]
     if invalid_targets:
-        raise ValueError(f"monitor targets reference unknown P01 sources: {invalid_targets}")
+        raise ValueError(f"health checks reference unknown data sources: {invalid_targets}")
     return len(groups), len(targets)
 
 

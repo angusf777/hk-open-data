@@ -1,11 +1,11 @@
 {
   "contract_version": "2026-08-28.v1",
   "files": {
-    "source_record.schema.json": "ae4bba24af2b20eb3a98c22a45075ef15d1f1a735f1d77be124033ed9010701b",
-    "canonical_event.schema.json": "a79e0c689074ccb9ad60cb89b44f575dd5f1879740f205d90fc0ce85f8968f73",
-    "connector_run.schema.json": "1b25b50f2fbd61d9e222d7645bb3bf6bfcf2f28829fade207e36578d7c838599",
-    "monitor_observation.schema.json": "a941c5aa8779c67d9feb3ac2a594a408e73bcb2f385071b593197d78fb228b1d",
-    "incident.schema.json": "0dfb5e6e93ee53077aef09f65f1c43b3132bd4e6538cf9221b02e8fefd3b92e6",
+    "source_record.schema.json": "e7658cd7f9562d833ac258d92c45030ad5642d1a5c5fb7b7316d682f9a164ffb",
+    "canonical_event.schema.json": "8c8b526d0a203f23b81ce0ba72a71c8bbf2a1187b87617751069045af3d25b6b",
+    "connector_run.schema.json": "91beb3d1c351f5601677fef057c15b3f230da222f44a54c2bb32f0f6b5d973d2",
+    "monitor_observation.schema.json": "2a2e682c7fe77f22cf380c6e75b52037d5c678d5c334fba8c196175d9db8b869",
+    "incident.schema.json": "f9be6232da10c7c7676d25bfbaa29d7d4126919da5ecec59c0fc6353f70dd542",
     "mcp_allowlist.schema.json": "a75c28d10b63ff506a6e60ccc554c9be5d22e67a4abf60237afedbe94d437f85",
     "operating-profile.schema.json": "bc2c76d835258e79773e8427b83cdf0684617a1834b926a91dc6eb7695799ed6",
     "openapi.json": "db19098e0bea67f47aa06a464795502d4539f970159d54c8bc9506bc9e6a6eea"

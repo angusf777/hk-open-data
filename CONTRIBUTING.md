@@ -8,17 +8,30 @@ Thank you for improving this independent Hong Kong open-data catalogue and self-
 - Improve English or Traditional Chinese catalogue metadata.
 - Add one validated YAML resource record.
 - Improve documentation, accessibility, tests, SDKs or read-only MCP tools.
-- Add a connector using synthetic fixtures and the fail-closed activation model.
+- Add a connector using synthetic test data, with the connection off until a user enables it.
 
 ## Catalogue metadata
 
-Prefer one resource per pull request when practical. Use factual, source-attributed language. Every published record needs a stable ID, bilingual name and summary, provider, category, access facts, authoritative links, verification date and terms evidence state.
+Prefer one resource per pull request when practical. Use factual, source-attributed language. Every
+published record needs a stable ID, bilingual name and summary, provider, category, access facts,
+authoritative links, verification date, and terms-review state.
 
 Do not copy complete datasets, substantial provider documentation, government or provider logos, credentials, access tokens, personal data, production logs or restricted samples into an issue or pull request.
 
-## Terms evidence
+## Source terms review
 
-Terms evidence records what an authoritative page stated on a particular date. It is not a project determination of permission. Link the provider's current terms where possible, identify explicit restrictions or ambiguity neutrally, and keep dataset-specific terms separate from platform-wide terms.
+The `termsEvidence` field records what an authoritative page stated on a particular date. Its public
+label is **Terms review** because it is research, not permission. Link the provider's current terms
+where possible, identify explicit restrictions or unanswered questions neutrally, and keep
+dataset-specific terms separate from platform-wide terms.
+
+## Public language
+
+Write for someone encountering the project for the first time. Use **data access toolkit** and
+**API health monitor** instead of internal portfolio codes. Introduce a technical setting such as
+`observe` or `fabric` by explaining what it does. Prefer direct phrases such as “connections are off
+until you enable them” over internal governance shorthand. Stable API fields, runtime IDs, and file
+names remain unchanged for compatibility.
 
 Run:
 

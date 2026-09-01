@@ -1,6 +1,6 @@
 import { expect, test } from "@playwright/test";
 
-test("search, locale and resource permalink work without provider traffic", async ({ page }) => {
+test("search, locale and resource permalink work without automatic external requests", async ({ page }) => {
   const outsideRequests: string[] = [];
   page.on("request", (request) => {
     const hostname = new URL(request.url()).hostname;
@@ -8,14 +8,14 @@ test("search, locale and resource permalink work without provider traffic", asyn
   });
 
   await page.goto("./");
-  await expect(page.getByText("Independent community project. Upstream terms always control.")).toBeVisible();
+  await expect(page.getByText("Independent community project. Check each source's current terms before use.")).toBeVisible();
   await page.getByRole("searchbox").fill("DATA.GOV.HK CKAN package list");
   await expect(page.getByRole("article")).toHaveCount(1);
   await page.getByRole("button", { name: "繁中" }).click();
-  await expect(page.getByText("獨立社群項目。上游條款永遠優先。")).toBeVisible();
+  await expect(page.getByText("獨立社群項目。使用每項資源前，請先核對來源的現行條款。")).toBeVisible();
   await page.getByRole("link", { name: "查看資源" }).click();
   await expect(page).toHaveURL(/resources\/official%3Ahkapi-001\/$/i);
-  await expect(page.getByText(/本項目記錄證據，而非授予許可/)).toBeVisible();
+  await expect(page.getByText(/這項日期化查核不會授予使用權/)).toBeVisible();
   expect(outsideRequests).toEqual([]);
 });
 

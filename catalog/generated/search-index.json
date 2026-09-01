@@ -5391,7 +5391,7 @@
     },
     "summary": {
       "en": "Enumerate dataset IDs before calling package_show.",
-      "zh-Hant": "由 Digital Policy Office 提供的「DATA.GOV.HK CKAN package list」資源。請參閱官方文件及最新上游條款。"
+      "zh-Hant": "由 Digital Policy Office 提供的「DATA.GOV.HK CKAN package list」資源。請參閱官方文件及來源的最新條款。"
     },
     "termsEvidenceState": "ambiguity-identified",
     "type": "official"
@@ -5412,7 +5412,7 @@
     },
     "summary": {
       "en": "Retrieve dataset metadata and resource URLs for a known ID.",
-      "zh-Hant": "由 Digital Policy Office 提供的「DATA.GOV.HK CKAN package details」資源。請參閱官方文件及最新上游條款。"
+      "zh-Hant": "由 Digital Policy Office 提供的「DATA.GOV.HK CKAN package details」資源。請參閱官方文件及來源的最新條款。"
     },
     "termsEvidenceState": "ambiguity-identified",
     "type": "official"
@@ -5433,7 +5433,7 @@
     },
     "summary": {
       "en": "List portal groups/categories.",
-      "zh-Hant": "由 Digital Policy Office 提供的「DATA.GOV.HK CKAN category list」資源。請參閱官方文件及最新上游條款。"
+      "zh-Hant": "由 Digital Policy Office 提供的「DATA.GOV.HK CKAN category list」資源。請參閱官方文件及來源的最新條款。"
     },
     "termsEvidenceState": "ambiguity-identified",
     "type": "official"
@@ -5454,7 +5454,7 @@
     },
     "summary": {
       "en": "Retrieve metadata and member datasets for a category.",
-      "zh-Hant": "由 Digital Policy Office 提供的「DATA.GOV.HK CKAN category details」資源。請參閱官方文件及最新上游條款。"
+      "zh-Hant": "由 Digital Policy Office 提供的「DATA.GOV.HK CKAN category details」資源。請參閱官方文件及來源的最新條款。"
     },
     "termsEvidenceState": "ambiguity-identified",
     "type": "official"
@@ -5475,7 +5475,7 @@
     },
     "summary": {
       "en": "Discover historical resources by date/provider/category/format.",
-      "zh-Hant": "由 Digital Policy Office 提供的「Historical Archive: list files」資源。請參閱官方文件及最新上游條款。"
+      "zh-Hant": "由 Digital Policy Office 提供的「Historical Archive: list files」資源。請參閱官方文件及來源的最新條款。"
     },
     "termsEvidenceState": "ambiguity-identified",
     "type": "official"
@@ -5496,7 +5496,7 @@
     },
     "summary": {
       "en": "List archived versions of a resource.",
-      "zh-Hant": "由 Digital Policy Office 提供的「Historical Archive: list file versions」資源。請參閱官方文件及最新上游條款。"
+      "zh-Hant": "由 Digital Policy Office 提供的「Historical Archive: list file versions」資源。請參閱官方文件及來源的最新條款。"
     },
     "termsEvidenceState": "ambiguity-identified",
     "type": "official"
@@ -5517,7 +5517,7 @@
     },
     "summary": {
       "en": "Download a selected historical resource version.",
-      "zh-Hant": "由 Digital Policy Office 提供的「Historical Archive: retrieve file」資源。請參閱官方文件及最新上游條款。"
+      "zh-Hant": "由 Digital Policy Office 提供的「Historical Archive: retrieve file」資源。請參閱官方文件及來源的最新條款。"
     },
     "termsEvidenceState": "ambiguity-identified",
     "type": "official"
@@ -5538,7 +5538,7 @@
     },
     "summary": {
       "en": "Retrieve a historical resource schema.",
-      "zh-Hant": "由 Digital Policy Office 提供的「Historical Archive: retrieve schema」資源。請參閱官方文件及最新上游條款。"
+      "zh-Hant": "由 Digital Policy Office 提供的「Historical Archive: retrieve schema」資源。請參閱官方文件及來源的最新條款。"
     },
     "termsEvidenceState": "ambiguity-identified",
     "type": "official"
@@ -5559,7 +5559,7 @@
     },
     "summary": {
       "en": "Retrieve an archived data dictionary.",
-      "zh-Hant": "由 Digital Policy Office 提供的「Historical Archive: retrieve data dictionary」資源。請參閱官方文件及最新上游條款。"
+      "zh-Hant": "由 Digital Policy Office 提供的「Historical Archive: retrieve data dictionary」資源。請參閱官方文件及來源的最新條款。"
     },
     "termsEvidenceState": "ambiguity-identified",
     "type": "official"
@@ -5580,7 +5580,7 @@
     },
     "summary": {
       "en": "Filter, sort and reformat supported portal files without hosting ETL.",
-      "zh-Hant": "由 Digital Policy Office 提供的「DATA.GOV.HK Data Filtering API v2」資源。請參閱官方文件及最新上游條款。"
+      "zh-Hant": "由 Digital Policy Office 提供的「DATA.GOV.HK Data Filtering API v2」資源。請參閱官方文件及來源的最新條款。"
     },
     "termsEvidenceState": "ambiguity-identified",
     "type": "official"
@@ -5601,7 +5601,7 @@
     },
     "summary": {
       "en": "Find nearby schools from coordinates and filters.",
-      "zh-Hant": "由 Digital Policy Office / Education Bureau 提供的「Nearest schools API」資源。請參閱官方文件及最新上游條款。"
+      "zh-Hant": "由 Digital Policy Office / Education Bureau 提供的「Nearest schools API」資源。請參閱官方文件及來源的最新條款。"
     },
     "termsEvidenceState": "ambiguity-identified",
     "type": "official"
@@ -5622,7 +5622,7 @@
     },
     "summary": {
       "en": "Monitor newly available files and changed paths from the previous 14 days.",
-      "zh-Hant": "由 Digital Policy Office 提供的「DATA.GOV.HK changed-resource RSS」資源。請參閱官方文件及最新上游條款。"
+      "zh-Hant": "由 Digital Policy Office 提供的「DATA.GOV.HK changed-resource RSS」資源。請參閱官方文件及來源的最新條款。"
     },
     "termsEvidenceState": "ambiguity-identified",
     "type": "official"
@@ -5643,7 +5643,7 @@
     },
     "summary": {
       "en": "Programmatic access to 1,100+ government spatial datasets.",
-      "zh-Hant": "由 Lands Department / data providers 提供的「CSDI Dataset APIs」資源。請參閱官方文件及最新上游條款。"
+      "zh-Hant": "由 Lands Department / data providers 提供的「CSDI Dataset APIs」資源。請參閱官方文件及來源的最新條款。"
     },
     "termsEvidenceState": "restriction-identified",
     "type": "official"
@@ -5664,7 +5664,7 @@
     },
     "summary": {
       "en": "Machine-readable discovery of CSDI metadata.",
-      "zh-Hant": "由 Lands Department 提供的「CSDI OGC Catalogue Service」資源。請參閱官方文件及最新上游條款。"
+      "zh-Hant": "由 Lands Department 提供的「CSDI OGC Catalogue Service」資源。請參閱官方文件及來源的最新條款。"
     },
     "termsEvidenceState": "restriction-identified",
     "type": "official"
@@ -5685,7 +5685,7 @@
     },
     "summary": {
       "en": "Basemaps, search, nearby, identify, 3D maps and pedestrian routing.",
-      "zh-Hant": "由 Lands Department 提供的「CSDI Map API collection」資源。請參閱官方文件及最新上游條款。"
+      "zh-Hant": "由 Lands Department 提供的「CSDI Map API collection」資源。請參閱官方文件及來源的最新條款。"
     },
     "termsEvidenceState": "restriction-identified",
     "type": "official"
@@ -5706,7 +5706,7 @@
     },
     "summary": {
       "en": "Observations, forecasts, warnings, earthquakes, tides and climate data.",
-      "zh-Hant": "由 Hong Kong Observatory 提供的「HKO Open Data APIs」資源。請參閱官方文件及最新上游條款。"
+      "zh-Hant": "由 Hong Kong Observatory 提供的「HKO Open Data APIs」資源。請參閱官方文件及來源的最新條款。"
     },
     "termsEvidenceState": "ambiguity-identified",
     "type": "official"
@@ -5727,7 +5727,7 @@
     },
     "summary": {
       "en": "Query official statistical tables by table ID, period and dimensions.",
-      "zh-Hant": "由 Census and Statistics Department 提供的「C&SD Web Table API」資源。請參閱官方文件及最新上游條款。"
+      "zh-Hant": "由 Census and Statistics Department 提供的「C&SD Web Table API」資源。請參閱官方文件及來源的最新條款。"
     },
     "termsEvidenceState": "ambiguity-identified",
     "type": "official"
@@ -5748,7 +5748,7 @@
     },
     "summary": {
       "en": "Monetary, banking, market, infrastructure, publications and tenders.",
-      "zh-Hant": "由 Hong Kong Monetary Authority 提供的「HKMA Open API directory」資源。請參閱官方文件及最新上游條款。"
+      "zh-Hant": "由 Hong Kong Monetary Authority 提供的「HKMA Open API directory」資源。請參閱官方文件及來源的最新條款。"
     },
     "termsEvidenceState": "ambiguity-identified",
     "type": "official"
@@ -5769,7 +5769,7 @@
     },
     "summary": {
       "en": "Registered-office data, formations/name changes and selected licensing registers.",
-      "zh-Hant": "由 Companies Registry 提供的「Companies Registry open-data catalogue」資源。請參閱官方文件及最新上游條款。"
+      "zh-Hant": "由 Companies Registry 提供的「Companies Registry open-data catalogue」資源。請參閱官方文件及來源的最新條款。"
     },
     "termsEvidenceState": "ambiguity-identified",
     "type": "official"
@@ -5790,7 +5790,7 @@
     },
     "summary": {
       "en": "Questions, votes, bills, meetings, attendance, Hansard and webcast metadata.",
-      "zh-Hant": "由 Legislative Council Secretariat 提供的「LegCo open-data collection」資源。請參閱官方文件及最新上游條款。"
+      "zh-Hant": "由 Legislative Council Secretariat 提供的「LegCo open-data collection」資源。請參閱官方文件及來源的最新條款。"
     },
     "termsEvidenceState": "ambiguity-identified",
     "type": "official"
@@ -5811,7 +5811,7 @@
     },
     "summary": {
       "en": "Structured Hong Kong address lookup and matching.",
-      "zh-Hant": "由 Lands Department / Digital Policy Office 提供的「Address Lookup Service」資源。請參閱官方文件及最新上游條款。"
+      "zh-Hant": "由 Lands Department / Digital Policy Office 提供的「Address Lookup Service」資源。請參閱官方文件及來源的最新條款。"
     },
     "termsEvidenceState": "ambiguity-identified",
     "type": "official"
@@ -5832,7 +5832,7 @@
     },
     "summary": {
       "en": "Survey-grade GNSS corrections.",
-      "zh-Hant": "由 Lands Department 提供的「SatRef GNSS correction streams」資源。請參閱官方文件及最新上游條款。"
+      "zh-Hant": "由 Lands Department 提供的「SatRef GNSS correction streams」資源。請參閱官方文件及來源的最新條款。"
     },
     "termsEvidenceState": "ambiguity-identified",
     "type": "official"
@@ -5853,7 +5853,7 @@
     },
     "summary": {
       "en": "Official topographic basemap for web/mobile mapping.",
-      "zh-Hant": "由 Lands Department 提供的「LandsD Topographic Map API」資源。請參閱官方文件及最新上游條款。"
+      "zh-Hant": "由 Lands Department 提供的「LandsD Topographic Map API」資源。請參閱官方文件及來源的最新條款。"
     },
     "termsEvidenceState": "restriction-identified",
     "type": "official"
@@ -5874,7 +5874,7 @@
     },
     "summary": {
       "en": "Locate land lots and index information.",
-      "zh-Hant": "由 Lands Department 提供的「Lot Index API」資源。請參閱官方文件及最新上游條款。"
+      "zh-Hant": "由 Lands Department 提供的「Lot Index API」資源。請參閱官方文件及來源的最新條款。"
     },
     "termsEvidenceState": "restriction-identified",
     "type": "official"
@@ -5895,7 +5895,7 @@
     },
     "summary": {
       "en": "Search parcels and public-utility identifiers.",
-      "zh-Hant": "由 Lands Department 提供的「Land Parcel and Public Utility Number Search」資源。請參閱官方文件及最新上游條款。"
+      "zh-Hant": "由 Lands Department 提供的「Land Parcel and Public Utility Number Search」資源。請參閱官方文件及來源的最新條款。"
     },
     "termsEvidenceState": "restriction-identified",
     "type": "official"
@@ -5916,7 +5916,7 @@
     },
     "summary": {
       "en": "3D city visualisation, analysis and digital-twin use cases.",
-      "zh-Hant": "由 Lands Department 提供的「Open3Dhk and full-territory 3D digital map」資源。請參閱官方文件及最新上游條款。"
+      "zh-Hant": "由 Lands Department 提供的「Open3Dhk and full-territory 3D digital map」資源。請參閱官方文件及來源的最新條款。"
     },
     "termsEvidenceState": "ambiguity-identified",
     "type": "official"
@@ -5937,7 +5937,7 @@
     },
     "summary": {
       "en": "Company, routes, stops, route-stop relations and ETA.",
-      "zh-Hant": "由 Citybus Limited 提供的「Citybus real-time Next Bus APIs」資源。請參閱官方文件及最新上游條款。"
+      "zh-Hant": "由 Citybus Limited 提供的「Citybus real-time Next Bus APIs」資源。請參閱官方文件及來源的最新條款。"
     },
     "termsEvidenceState": "ambiguity-identified",
     "type": "official"
@@ -5958,7 +5958,7 @@
     },
     "summary": {
       "en": "Nine resources for routes, stops, relations, route ETA and stop ETA.",
-      "zh-Hant": "由 Transport Department / KMB / LWB 提供的「KMB and Long Win Bus real-time APIs」資源。請參閱官方文件及最新上游條款。"
+      "zh-Hant": "由 Transport Department / KMB / LWB 提供的「KMB and Long Win Bus real-time APIs」資源。請參閱官方文件及來源的最新條款。"
     },
     "termsEvidenceState": "ambiguity-identified",
     "type": "official"
@@ -5979,7 +5979,7 @@
     },
     "summary": {
       "en": "Routes, stops, route-stop relations, ETA by route-stop/stop and last-update time.",
-      "zh-Hant": "由 Transport Department 提供的「Green Minibus real-time arrival APIs」資源。請參閱官方文件及最新上游條款。"
+      "zh-Hant": "由 Transport Department 提供的「Green Minibus real-time arrival APIs」資源。請參閱官方文件及來源的最新條款。"
     },
     "termsEvidenceState": "ambiguity-identified",
     "type": "official"
@@ -6000,7 +6000,7 @@
     },
     "summary": {
       "en": "Routes, stops by route and ETA.",
-      "zh-Hant": "由 Transport Department / New Lantao Bus 提供的「New Lantao Bus v2 APIs」資源。請參閱官方文件及最新上游條款。"
+      "zh-Hant": "由 Transport Department / New Lantao Bus 提供的「New Lantao Bus v2 APIs」資源。請參閱官方文件及來源的最新條款。"
     },
     "termsEvidenceState": "ambiguity-identified",
     "type": "official"
@@ -6021,7 +6021,7 @@
     },
     "summary": {
       "en": "Batch stop ETA across Citybus and New Lantao Bus.",
-      "zh-Hant": "由 Transport Department 提供的「One-stop Citybus and NLB batch ETA」資源。請參閱官方文件及最新上游條款。"
+      "zh-Hant": "由 Transport Department 提供的「One-stop Citybus and NLB batch ETA」資源。請參閱官方文件及來源的最新條款。"
     },
     "termsEvidenceState": "ambiguity-identified",
     "type": "official"
@@ -6042,7 +6042,7 @@
     },
     "summary": {
       "en": "Up to the next four trains on ten MTR lines.",
-      "zh-Hant": "由 MTR Corporation 提供的「Real-time MTR next-train API」資源。請參閱官方文件及最新上游條款。"
+      "zh-Hant": "由 MTR Corporation 提供的「Real-time MTR next-train API」資源。請參閱官方文件及來源的最新條款。"
     },
     "termsEvidenceState": "ambiguity-identified",
     "type": "official"
@@ -6063,7 +6063,7 @@
     },
     "summary": {
       "en": "Arrival information for Light Rail.",
-      "zh-Hant": "由 MTR Corporation 提供的「Real-time Light Rail information」資源。請參閱官方文件及最新上游條款。"
+      "zh-Hant": "由 MTR Corporation 提供的「Real-time Light Rail information」資源。請參閱官方文件及來源的最新條款。"
     },
     "termsEvidenceState": "ambiguity-identified",
     "type": "official"
@@ -6084,7 +6084,7 @@
     },
     "summary": {
       "en": "Real-time schedule for MTR Bus and Feeder Bus.",
-      "zh-Hant": "由 MTR Corporation 提供的「Real-time MTR Bus and Feeder Bus schedule」資源。請參閱官方文件及最新上游條款。"
+      "zh-Hant": "由 MTR Corporation 提供的「Real-time MTR Bus and Feeder Bus schedule」資源。請參閱官方文件及來源的最新條款。"
     },
     "termsEvidenceState": "ambiguity-identified",
     "type": "official"
@@ -6105,7 +6105,7 @@
     },
     "summary": {
       "en": "Lines, stations, fares, bus routes and accessibility facilities.",
-      "zh-Hant": "由 MTR Corporation 提供的「MTR routes, fares and barrier-free facilities」資源。請參閱官方文件及最新上游條款。"
+      "zh-Hant": "由 MTR Corporation 提供的「MTR routes, fares and barrier-free facilities」資源。請參閱官方文件及來源的最新條款。"
     },
     "termsEvidenceState": "ambiguity-identified",
     "type": "official"
@@ -6126,7 +6126,7 @@
     },
     "summary": {
       "en": "Tram stop locations and reference information.",
-      "zh-Hant": "由 Hong Kong Tramways 提供的「Hong Kong Tramways stop data」資源。請參閱官方文件及最新上游條款。"
+      "zh-Hant": "由 Hong Kong Tramways 提供的「Hong Kong Tramways stop data」資源。請參閱官方文件及來源的最新條款。"
     },
     "termsEvidenceState": "ambiguity-identified",
     "type": "official"
@@ -6147,7 +6147,7 @@
     },
     "summary": {
       "en": "Thirty GTFS files plus update metadata.",
-      "zh-Hant": "由 Transport Department 提供的「Public transport headway in GTFS」資源。請參閱官方文件及最新上游條款。"
+      "zh-Hant": "由 Transport Department 提供的「Public transport headway in GTFS」資源。請參閱官方文件及來源的最新條款。"
     },
     "termsEvidenceState": "ambiguity-identified",
     "type": "official"
@@ -6168,7 +6168,7 @@
     },
     "summary": {
       "en": "Route, fare, stop and operator reference information.",
-      "zh-Hant": "由 Transport Department 提供的「Routes and fares of public transport」資源。請參閱官方文件及最新上游條款。"
+      "zh-Hant": "由 Transport Department 提供的「Routes and fares of public transport」資源。請參閱官方文件及來源的最新條款。"
     },
     "termsEvidenceState": "ambiguity-identified",
     "type": "official"
@@ -6189,7 +6189,7 @@
     },
     "summary": {
       "en": "Map routes, stops and related transport infrastructure.",
-      "zh-Hant": "由 Transport Department 提供的「Public transport routes and stop geospatial layers」資源。請參閱官方文件及最新上游條款。"
+      "zh-Hant": "由 Transport Department 提供的「Public transport routes and stop geospatial layers」資源。請參閱官方文件及來源的最新條款。"
     },
     "termsEvidenceState": "ambiguity-identified",
     "type": "official"
@@ -6210,7 +6210,7 @@
     },
     "summary": {
       "en": "Road-segment network for routing and map matching.",
-      "zh-Hant": "由 Transport Department 提供的「Road Network Data version 2」資源。請參閱官方文件及最新上游條款。"
+      "zh-Hant": "由 Transport Department 提供的「Road Network Data version 2」資源。請參閱官方文件及來源的最新條款。"
     },
     "termsEvidenceState": "ambiguity-identified",
     "type": "official"
@@ -6231,7 +6231,7 @@
     },
     "summary": {
       "en": "Routes, piers, timetables, fares and ETA.",
-      "zh-Hant": "由 Hong Kong & Kowloon Ferry 提供的「Hong Kong & Kowloon Ferry APIs」資源。請參閱官方文件及最新上游條款。"
+      "zh-Hant": "由 Hong Kong & Kowloon Ferry 提供的「Hong Kong & Kowloon Ferry APIs」資源。請參閱官方文件及來源的最新條款。"
     },
     "termsEvidenceState": "ambiguity-identified",
     "type": "official"
@@ -6252,7 +6252,7 @@
     },
     "summary": {
       "en": "Next-ferry estimates for supported services.",
-      "zh-Hant": "由 Fortune Ferry 提供的「Fortune Ferry ETA」資源。請參閱官方文件及最新上游條款。"
+      "zh-Hant": "由 Fortune Ferry 提供的「Fortune Ferry ETA」資源。請參閱官方文件及來源的最新條款。"
     },
     "termsEvidenceState": "ambiguity-identified",
     "type": "official"
@@ -6273,7 +6273,7 @@
     },
     "summary": {
       "en": "ETA for supported Water Taxi services.",
-      "zh-Hant": "由 Hong Kong Water Taxi 提供的「Hong Kong Water Taxi ETA」資源。請參閱官方文件及最新上游條款。"
+      "zh-Hant": "由 Hong Kong Water Taxi 提供的「Hong Kong Water Taxi ETA」資源。請參閱官方文件及來源的最新條款。"
     },
     "termsEvidenceState": "ambiguity-identified",
     "type": "official"
@@ -6294,7 +6294,7 @@
     },
     "summary": {
       "en": "Next-ferry ETA and route support data.",
-      "zh-Hant": "由 Sun Ferry 提供的「Sun Ferry next-ferry ETA」資源。請參閱官方文件及最新上游條款。"
+      "zh-Hant": "由 Sun Ferry 提供的「Sun Ferry next-ferry ETA」資源。請參閱官方文件及來源的最新條款。"
     },
     "termsEvidenceState": "ambiguity-identified",
     "type": "official"
@@ -6315,7 +6315,7 @@
     },
     "summary": {
       "en": "Published schedules and fares.",
-      "zh-Hant": "由 Star Ferry 提供的「Star Ferry timetables and fares」資源。請參閱官方文件及最新上游條款。"
+      "zh-Hant": "由 Star Ferry 提供的「Star Ferry timetables and fares」資源。請參閱官方文件及來源的最新條款。"
     },
     "termsEvidenceState": "ambiguity-identified",
     "type": "official"
@@ -6336,7 +6336,7 @@
     },
     "summary": {
       "en": "Multiple licensed routes/operators.",
-      "zh-Hant": "由 Transport Department 提供的「Licensed ferry timetables and fares」資源。請參閱官方文件及最新上游條款。"
+      "zh-Hant": "由 Transport Department 提供的「Licensed ferry timetables and fares」資源。請參閱官方文件及來源的最新條款。"
     },
     "termsEvidenceState": "ambiguity-identified",
     "type": "official"
@@ -6357,7 +6357,7 @@
     },
     "summary": {
       "en": "Consolidated car-park information and vacancies; filter by vehicle, ID and map extent.",
-      "zh-Hant": "由 Digital Policy Office / Transport Department / EKEO 提供的「Parking Vacancy Data — one-stop API」資源。請參閱官方文件及最新上游條款。"
+      "zh-Hant": "由 Digital Policy Office / Transport Department / EKEO 提供的「Parking Vacancy Data — one-stop API」資源。請參閱官方文件及來源的最新條款。"
     },
     "termsEvidenceState": "ambiguity-identified",
     "type": "official"
@@ -6378,7 +6378,7 @@
     },
     "summary": {
       "en": "Vacancy counts from participating car parks.",
-      "zh-Hant": "由 Transport Department 提供的「Participating car parks — vacancy feed」資源。請參閱官方文件及最新上游條款。"
+      "zh-Hant": "由 Transport Department 提供的「Participating car parks — vacancy feed」資源。請參閱官方文件及來源的最新條款。"
     },
     "termsEvidenceState": "ambiguity-identified",
     "type": "official"
@@ -6399,7 +6399,7 @@
     },
     "summary": {
       "en": "Locations, fees, opening hours and restrictions.",
-      "zh-Hant": "由 Transport Department 提供的「Participating car parks — basic information feed」資源。請參閱官方文件及最新上游條款。"
+      "zh-Hant": "由 Transport Department 提供的「Participating car parks — basic information feed」資源。請參閱官方文件及來源的最新條款。"
     },
     "termsEvidenceState": "ambiguity-identified",
     "type": "official"
@@ -6420,7 +6420,7 @@
     },
     "summary": {
       "en": "Information and vacancies for Kowloon East/Kai Tak participating car parks.",
-      "zh-Hant": "由 Energizing Kowloon East Office 提供的「Kowloon East smart parking APIs」資源。請參閱官方文件及最新上游條款。"
+      "zh-Hant": "由 Energizing Kowloon East Office 提供的「Kowloon East smart parking APIs」資源。請參閱官方文件及來源的最新條款。"
     },
     "termsEvidenceState": "ambiguity-identified",
     "type": "official"
@@ -6441,7 +6441,7 @@
     },
     "summary": {
       "en": "Distribution and occupancy for spaces using newer meters.",
-      "zh-Hant": "由 Transport Department 提供的「Metered parking spaces and occupancy」資源。請參閱官方文件及最新上游條款。"
+      "zh-Hant": "由 Transport Department 提供的「Metered parking spaces and occupancy」資源。請參閱官方文件及來源的最新條款。"
     },
     "termsEvidenceState": "ambiguity-identified",
     "type": "official"
@@ -6462,7 +6462,7 @@
     },
     "summary": {
       "en": "Occupancy from supported radar-equipped spaces.",
-      "zh-Hant": "由 Transport Department 提供的「Radar parking-meter occupancy」資源。請參閱官方文件及最新上游條款。"
+      "zh-Hant": "由 Transport Department 提供的「Radar parking-meter occupancy」資源。請參閱官方文件及來源的最新條款。"
     },
     "termsEvidenceState": "ambiguity-identified",
     "type": "official"
@@ -6483,7 +6483,7 @@
     },
     "summary": {
       "en": "Selected trial locations.",
-      "zh-Hant": "由 Transport Department 提供的「Non-metered on-street parking occupancy trial」資源。請參閱官方文件及最新上游條款。"
+      "zh-Hant": "由 Transport Department 提供的「Non-metered on-street parking occupancy trial」資源。請參閱官方文件及來源的最新條款。"
     },
     "termsEvidenceState": "ambiguity-identified",
     "type": "official"
@@ -6504,7 +6504,7 @@
     },
     "summary": {
       "en": "Science Park parking availability.",
-      "zh-Hant": "由 Hong Kong Science and Technology Parks Corporation 提供的「HKSTP car-park vacancy」資源。請參閱官方文件及最新上游條款。"
+      "zh-Hant": "由 Hong Kong Science and Technology Parks Corporation 提供的「HKSTP car-park vacancy」資源。請參閱官方文件及來源的最新條款。"
     },
     "termsEvidenceState": "ambiguity-identified",
     "type": "official"
@@ -6525,7 +6525,7 @@
     },
     "summary": {
       "en": "Charger locations and attributes.",
-      "zh-Hant": "由 Government / electricity providers 提供的「Public-access EV charger locations」資源。請參閱官方文件及最新上游條款。"
+      "zh-Hant": "由 Government / electricity providers 提供的「Public-access EV charger locations」資源。請參閱官方文件及來源的最新條款。"
     },
     "termsEvidenceState": "ambiguity-identified",
     "type": "official"
@@ -6546,7 +6546,7 @@
     },
     "summary": {
       "en": "CLP charging-station locations and attributes.",
-      "zh-Hant": "由 CLP Power Hong Kong 提供的「CLP charging-station data」資源。請參閱官方文件及最新上游條款。"
+      "zh-Hant": "由 CLP Power Hong Kong 提供的「CLP charging-station data」資源。請參閱官方文件及來源的最新條款。"
     },
     "termsEvidenceState": "ambiguity-identified",
     "type": "official"
@@ -6567,7 +6567,7 @@
     },
     "summary": {
       "en": "Current incidents, disruptions and management measures.",
-      "zh-Hant": "由 Transport Department 提供的「Special Traffic News v2」資源。請參閱官方文件及最新上游條款。"
+      "zh-Hant": "由 Transport Department 提供的「Special Traffic News v2」資源。請參閱官方文件及來源的最新條款。"
     },
     "termsEvidenceState": "ambiguity-identified",
     "type": "official"
@@ -6588,7 +6588,7 @@
     },
     "summary": {
       "en": "Official planned and current traffic notices.",
-      "zh-Hant": "由 Transport Department 提供的「Traffic notices」資源。請參閱官方文件及最新上游條款。"
+      "zh-Hant": "由 Transport Department 提供的「Traffic notices」資源。請參閱官方文件及來源的最新條款。"
     },
     "termsEvidenceState": "ambiguity-identified",
     "type": "official"
@@ -6609,7 +6609,7 @@
     },
     "summary": {
       "en": "Map active and shortly starting roadworks.",
-      "zh-Hant": "由 Highways Department / Transport Department 提供的「Active and imminent roadworks」資源。請參閱官方文件及最新上游條款。"
+      "zh-Hant": "由 Highways Department / Transport Department 提供的「Active and imminent roadworks」資源。請參閱官方文件及來源的最新條款。"
     },
     "termsEvidenceState": "ambiguity-identified",
     "type": "official"
@@ -6630,7 +6630,7 @@
     },
     "summary": {
       "en": "Camera snapshots for visual road-condition monitoring.",
-      "zh-Hant": "由 Transport Department 提供的「Traffic snapshot images」資源。請參閱官方文件及最新上游條款。"
+      "zh-Hant": "由 Transport Department 提供的「Traffic snapshot images」資源。請參閱官方文件及來源的最新條款。"
     },
     "termsEvidenceState": "ambiguity-identified",
     "type": "official"
@@ -6651,7 +6651,7 @@
     },
     "summary": {
       "en": "Coordinates and camera metadata.",
-      "zh-Hant": "由 Transport Department 提供的「Traffic camera locations」資源。請參閱官方文件及最新上游條款。"
+      "zh-Hant": "由 Transport Department 提供的「Traffic camera locations」資源。請參閱官方文件及來源的最新條款。"
     },
     "termsEvidenceState": "ambiguity-identified",
     "type": "official"
@@ -6672,7 +6672,7 @@
     },
     "summary": {
       "en": "Speed, volume and route-journey analytics.",
-      "zh-Hant": "由 Transport Department 提供的「Traffic Data Analytics System APIs」資源。請參閱官方文件及最新上游條款。"
+      "zh-Hant": "由 Transport Department 提供的「Traffic Data Analytics System APIs」資源。請參閱官方文件及來源的最新條款。"
     },
     "termsEvidenceState": "ambiguity-identified",
     "type": "official"
@@ -6693,7 +6693,7 @@
     },
     "summary": {
       "en": "Traffic volume, speed and detector observations.",
-      "zh-Hant": "由 Transport Department 提供的「Strategic and major-road detector data」資源。請參閱官方文件及最新上游條款。"
+      "zh-Hant": "由 Transport Department 提供的「Strategic and major-road detector data」資源。請參閱官方文件及來源的最新條款。"
     },
     "termsEvidenceState": "ambiguity-identified",
     "type": "official"
@@ -6714,7 +6714,7 @@
     },
     "summary": {
       "en": "Volume, speed and occupancy from selected sensors.",
-      "zh-Hant": "由 Transport Department / Digital Policy Office 提供的「Smart lamppost traffic measurements」資源。請參閱官方文件及最新上游條款。"
+      "zh-Hant": "由 Transport Department / Digital Policy Office 提供的「Smart lamppost traffic measurements」資源。請參閱官方文件及來源的最新條款。"
     },
     "termsEvidenceState": "ambiguity-identified",
     "type": "official"
@@ -6735,7 +6735,7 @@
     },
     "summary": {
       "en": "Current journey times on selected strategic routes.",
-      "zh-Hant": "由 Transport Department 提供的「Journey Time Indicators v2」資源。請參閱官方文件及最新上游條款。"
+      "zh-Hant": "由 Transport Department 提供的「Journey Time Indicators v2」資源。請參閱官方文件及來源的最新條款。"
     },
     "termsEvidenceState": "ambiguity-identified",
     "type": "official"
@@ -6756,7 +6756,7 @@
     },
     "summary": {
       "en": "Current segment/map traffic speed.",
-      "zh-Hant": "由 Transport Department 提供的「Traffic speed map data」資源。請參閱官方文件及最新上游條款。"
+      "zh-Hant": "由 Transport Department 提供的「Traffic speed map data」資源。請參閱官方文件及來源的最新條款。"
     },
     "termsEvidenceState": "ambiguity-identified",
     "type": "official"
@@ -6777,7 +6777,7 @@
     },
     "summary": {
       "en": "Daily observations from counting stations.",
-      "zh-Hant": "由 Transport Department 提供的「Annual Traffic Census daily detector feed」資源。請參閱官方文件及最新上游條款。"
+      "zh-Hant": "由 Transport Department 提供的「Annual Traffic Census daily detector feed」資源。請參閱官方文件及來源的最新條款。"
     },
     "termsEvidenceState": "ambiguity-identified",
     "type": "official"
@@ -6798,7 +6798,7 @@
     },
     "summary": {
       "en": "Long-run traffic-flow statistics and mapped counting locations.",
-      "zh-Hant": "由 Transport Department 提供的「Traffic Flow Census and historical counts」資源。請參閱官方文件及最新上游條款。"
+      "zh-Hant": "由 Transport Department 提供的「Traffic Flow Census and historical counts」資源。請參閱官方文件及來源的最新條款。"
     },
     "termsEvidenceState": "ambiguity-identified",
     "type": "official"
@@ -6819,7 +6819,7 @@
     },
     "summary": {
       "en": "Fixed enforcement-camera locations.",
-      "zh-Hant": "由 Hong Kong Police / transport bodies 提供的「Red-light and speed-camera locations」資源。請參閱官方文件及最新上游條款。"
+      "zh-Hant": "由 Hong Kong Police / transport bodies 提供的「Red-light and speed-camera locations」資源。請參閱官方文件及來源的最新條款。"
     },
     "termsEvidenceState": "ambiguity-identified",
     "type": "official"
@@ -6840,7 +6840,7 @@
     },
     "summary": {
       "en": "Volume and speed derived from selected video-analytics deployments.",
-      "zh-Hant": "由 Transport Department / project owners 提供的「AI video traffic measurements」資源。請參閱官方文件及最新上游條款。"
+      "zh-Hant": "由 Transport Department / project owners 提供的「AI video traffic measurements」資源。請參閱官方文件及來源的最新條款。"
     },
     "termsEvidenceState": "ambiguity-identified",
     "type": "official"
@@ -6861,7 +6861,7 @@
     },
     "summary": {
       "en": "Operating status for participating fleet vehicles.",
-      "zh-Hant": "由 Amigo Taxi 提供的「Amigo taxi vehicle operating status」資源。請參閱官方文件及最新上游條款。"
+      "zh-Hant": "由 Amigo Taxi 提供的「Amigo taxi vehicle operating status」資源。請參閱官方文件及來源的最新條款。"
     },
     "termsEvidenceState": "ambiguity-identified",
     "type": "official"
@@ -6882,7 +6882,7 @@
     },
     "summary": {
       "en": "Operating status for participating fleet vehicles.",
-      "zh-Hant": "由 Big Boss Taxi 提供的「Big Boss taxi vehicle operating status」資源。請參閱官方文件及最新上游條款。"
+      "zh-Hant": "由 Big Boss Taxi 提供的「Big Boss taxi vehicle operating status」資源。請參閱官方文件及來源的最新條款。"
     },
     "termsEvidenceState": "ambiguity-identified",
     "type": "official"
@@ -6903,7 +6903,7 @@
     },
     "summary": {
       "en": "Operating status for participating fleet vehicles.",
-      "zh-Hant": "由 Joie Taxi 提供的「Joie taxi vehicle operating status」資源。請參閱官方文件及最新上游條款。"
+      "zh-Hant": "由 Joie Taxi 提供的「Joie taxi vehicle operating status」資源。請參閱官方文件及來源的最新條款。"
     },
     "termsEvidenceState": "ambiguity-identified",
     "type": "official"
@@ -6924,7 +6924,7 @@
     },
     "summary": {
       "en": "Mapped stopping places.",
-      "zh-Hant": "由 Transport Department 提供的「Fleet taxi stopping places」資源。請參閱官方文件及最新上游條款。"
+      "zh-Hant": "由 Transport Department 提供的「Fleet taxi stopping places」資源。請參閱官方文件及來源的最新條款。"
     },
     "termsEvidenceState": "ambiguity-identified",
     "type": "official"
@@ -6945,7 +6945,7 @@
     },
     "summary": {
       "en": "Aggregated taxi activity/spatial data.",
-      "zh-Hant": "由 Transport Department 提供的「Taxi pick-up/drop-off spatial datasets」資源。請參閱官方文件及最新上游條款。"
+      "zh-Hant": "由 Transport Department 提供的「Taxi pick-up/drop-off spatial datasets」資源。請參閱官方文件及來源的最新條款。"
     },
     "termsEvidenceState": "ambiguity-identified",
     "type": "official"
@@ -6966,7 +6966,7 @@
     },
     "summary": {
       "en": "Previous-day arrivals/departures and history.",
-      "zh-Hant": "由 Airport Authority Hong Kong 提供的「HKIA flight information open dataset」資源。請參閱官方文件及最新上游條款。"
+      "zh-Hant": "由 Airport Authority Hong Kong 提供的「HKIA flight information open dataset」資源。請參閱官方文件及來源的最新條款。"
     },
     "termsEvidenceState": "ambiguity-identified",
     "type": "official"
@@ -6987,7 +6987,7 @@
     },
     "summary": {
       "en": "Separate resident and visitor waiting-time information.",
-      "zh-Hant": "由 Immigration Department 提供的「Land-boundary waiting times」資源。請參閱官方文件及最新上游條款。"
+      "zh-Hant": "由 Immigration Department 提供的「Land-boundary waiting times」資源。請參閱官方文件及來源的最新條款。"
     },
     "termsEvidenceState": "ambiguity-identified",
     "type": "official"
@@ -7008,7 +7008,7 @@
     },
     "summary": {
       "en": "Arrival/departure counts by control point.",
-      "zh-Hant": "由 Immigration Department 提供的「Daily passenger traffic at control points」資源。請參閱官方文件及最新上游條款。"
+      "zh-Hant": "由 Immigration Department 提供的「Daily passenger traffic at control points」資源。請參閱官方文件及來源的最新條款。"
     },
     "termsEvidenceState": "ambiguity-identified",
     "type": "official"
@@ -7029,7 +7029,7 @@
     },
     "summary": {
       "en": "Mapped land, sea and air control points.",
-      "zh-Hant": "由 Immigration Department 提供的「Immigration control-point locations」資源。請參閱官方文件及最新上游條款。"
+      "zh-Hant": "由 Immigration Department 提供的「Immigration control-point locations」資源。請參閱官方文件及來源的最新條款。"
     },
     "termsEvidenceState": "ambiguity-identified",
     "type": "official"
@@ -7050,7 +7050,7 @@
     },
     "summary": {
       "en": "Vehicle throughput by control point.",
-      "zh-Hant": "由 Customs and Excise Department 提供的「Land-boundary vehicle throughput」資源。請參閱官方文件及最新上游條款。"
+      "zh-Hant": "由 Customs and Excise Department 提供的「Land-boundary vehicle throughput」資源。請參閱官方文件及來源的最新條款。"
     },
     "termsEvidenceState": "ambiguity-identified",
     "type": "official"
@@ -7071,7 +7071,7 @@
     },
     "summary": {
       "en": "Recent arrivals/departures, due arrivals and vessels in port.",
-      "zh-Hant": "由 Marine Department 提供的「Ocean-going vessel arrivals/departures」資源。請參閱官方文件及最新上游條款。"
+      "zh-Hant": "由 Marine Department 提供的「Ocean-going vessel arrivals/departures」資源。請參閱官方文件及來源的最新條款。"
     },
     "termsEvidenceState": "ambiguity-identified",
     "type": "official"
@@ -7092,7 +7092,7 @@
     },
     "summary": {
       "en": "Arrivals, due arrivals/departures, in-port and recent departures.",
-      "zh-Hant": "由 Marine Department 提供的「Non-convention vessel arrivals/departures」資源。請參閱官方文件及最新上游條款。"
+      "zh-Hant": "由 Marine Department 提供的「Non-convention vessel arrivals/departures」資源。請參閱官方文件及來源的最新條款。"
     },
     "termsEvidenceState": "ambiguity-identified",
     "type": "official"
@@ -7113,7 +7113,7 @@
     },
     "summary": {
       "en": "Due entry, intended departure, entries, departures, in-port and transit.",
-      "zh-Hant": "由 Marine Department 提供的「Vessel Traffic Management System report」資源。請參閱官方文件及最新上游條款。"
+      "zh-Hant": "由 Marine Department 提供的「Vessel Traffic Management System report」資源。請參閱官方文件及來源的最新條款。"
     },
     "termsEvidenceState": "ambiguity-identified",
     "type": "official"
@@ -7134,7 +7134,7 @@
     },
     "summary": {
       "en": "Available berths at public cargo areas.",
-      "zh-Hant": "由 Marine Department 提供的「Public cargo-area berth vacancies」資源。請參閱官方文件及最新上游條款。"
+      "zh-Hant": "由 Marine Department 提供的「Public cargo-area berth vacancies」資源。請參閱官方文件及來源的最新條款。"
     },
     "termsEvidenceState": "ambiguity-identified",
     "type": "official"
@@ -7155,7 +7155,7 @@
     },
     "summary": {
       "en": "Arrival information for cross-boundary services.",
-      "zh-Hant": "由 Marine Department / operators 提供的「Cross-boundary ferry arrival information」資源。請參閱官方文件及最新上游條款。"
+      "zh-Hant": "由 Marine Department / operators 提供的「Cross-boundary ferry arrival information」資源。請參閱官方文件及來源的最新條款。"
     },
     "termsEvidenceState": "ambiguity-identified",
     "type": "official"
@@ -7176,7 +7176,7 @@
     },
     "summary": {
       "en": "Regional temperature, humidity, rainfall, UV and related observations.",
-      "zh-Hant": "由 Hong Kong Observatory 提供的「HKO current weather report API」資源。請參閱官方文件及最新上游條款。"
+      "zh-Hant": "由 Hong Kong Observatory 提供的「HKO current weather report API」資源。請參閱官方文件及來源的最新條款。"
     },
     "termsEvidenceState": "ambiguity-identified",
     "type": "official"
@@ -7197,7 +7197,7 @@
     },
     "summary": {
       "en": "Text local forecast and outlook.",
-      "zh-Hant": "由 Hong Kong Observatory 提供的「HKO local weather forecast」資源。請參閱官方文件及最新上游條款。"
+      "zh-Hant": "由 Hong Kong Observatory 提供的「HKO local weather forecast」資源。請參閱官方文件及來源的最新條款。"
     },
     "termsEvidenceState": "ambiguity-identified",
     "type": "official"
@@ -7218,7 +7218,7 @@
     },
     "summary": {
       "en": "Nine-day daily forecast.",
-      "zh-Hant": "由 Hong Kong Observatory 提供的「HKO 9-day weather forecast」資源。請參閱官方文件及最新上游條款。"
+      "zh-Hant": "由 Hong Kong Observatory 提供的「HKO 9-day weather forecast」資源。請參閱官方文件及來源的最新條款。"
     },
     "termsEvidenceState": "ambiguity-identified",
     "type": "official"
@@ -7239,7 +7239,7 @@
     },
     "summary": {
       "en": "Summary of active warnings.",
-      "zh-Hant": "由 Hong Kong Observatory 提供的「HKO warning summary」資源。請參閱官方文件及最新上游條款。"
+      "zh-Hant": "由 Hong Kong Observatory 提供的「HKO warning summary」資源。請參閱官方文件及來源的最新條款。"
     },
     "termsEvidenceState": "ambiguity-identified",
     "type": "official"
@@ -7260,7 +7260,7 @@
     },
     "summary": {
       "en": "Detailed warning content.",
-      "zh-Hant": "由 Hong Kong Observatory 提供的「HKO detailed warning information」資源。請參閱官方文件及最新上游條款。"
+      "zh-Hant": "由 Hong Kong Observatory 提供的「HKO detailed warning information」資源。請參閱官方文件及來源的最新條款。"
     },
     "termsEvidenceState": "ambiguity-identified",
     "type": "official"
@@ -7281,7 +7281,7 @@
     },
     "summary": {
       "en": "Special weather tips/advisories.",
-      "zh-Hant": "由 Hong Kong Observatory 提供的「HKO special weather tips」資源。請參閱官方文件及最新上游條款。"
+      "zh-Hant": "由 Hong Kong Observatory 提供的「HKO special weather tips」資源。請參閱官方文件及來源的最新條款。"
     },
     "termsEvidenceState": "ambiguity-identified",
     "type": "official"
@@ -7302,7 +7302,7 @@
     },
     "summary": {
       "en": "Magnitude-6+ quick messages and locally felt tremor reports.",
-      "zh-Hant": "由 Hong Kong Observatory 提供的「HKO earthquake APIs」資源。請參閱官方文件及最新上游條款。"
+      "zh-Hant": "由 Hong Kong Observatory 提供的「HKO earthquake APIs」資源。請參閱官方文件及來源的最新條款。"
     },
     "termsEvidenceState": "ambiguity-identified",
     "type": "official"
@@ -7323,7 +7323,7 @@
     },
     "summary": {
       "en": "Climate observations across rainfall, temperature, wind, pressure, radiation and more.",
-      "zh-Hant": "由 Hong Kong Observatory 提供的「HKO climate/open-data API families」資源。請參閱官方文件及最新上游條款。"
+      "zh-Hant": "由 Hong Kong Observatory 提供的「HKO climate/open-data API families」資源。請參閱官方文件及來源的最新條款。"
     },
     "termsEvidenceState": "ambiguity-identified",
     "type": "official"
@@ -7344,7 +7344,7 @@
     },
     "summary": {
       "en": "Half-hourly rainfall nowcast up to two hours.",
-      "zh-Hant": "由 Hong Kong Observatory 提供的「Gridded rainfall nowcast」資源。請參閱官方文件及最新上游條款。"
+      "zh-Hant": "由 Hong Kong Observatory 提供的「Gridded rainfall nowcast」資源。請參閱官方文件及來源的最新條款。"
     },
     "termsEvidenceState": "ambiguity-identified",
     "type": "official"
@@ -7365,7 +7365,7 @@
     },
     "summary": {
       "en": "Past-hour rainfall by station.",
-      "zh-Hant": "由 Hong Kong Observatory 提供的「Past-hour automatic-weather-station rainfall」資源。請參閱官方文件及最新上游條款。"
+      "zh-Hant": "由 Hong Kong Observatory 提供的「Past-hour automatic-weather-station rainfall」資源。請參閱官方文件及來源的最新條款。"
     },
     "termsEvidenceState": "ambiguity-identified",
     "type": "official"
@@ -7386,7 +7386,7 @@
     },
     "summary": {
       "en": "Observed and predicted tides.",
-      "zh-Hant": "由 Hong Kong Observatory 提供的「Latest tide and predicted tide data」資源。請參閱官方文件及最新上游條款。"
+      "zh-Hant": "由 Hong Kong Observatory 提供的「Latest tide and predicted tide data」資源。請參閱官方文件及來源的最新條款。"
     },
     "termsEvidenceState": "ambiguity-identified",
     "type": "official"
@@ -7407,7 +7407,7 @@
     },
     "summary": {
       "en": "Current UV and solar-radiation observations/history.",
-      "zh-Hant": "由 Hong Kong Observatory 提供的「UV index and solar-radiation data」資源。請參閱官方文件及最新上游條款。"
+      "zh-Hant": "由 Hong Kong Observatory 提供的「UV index and solar-radiation data」資源。請參閱官方文件及來源的最新條款。"
     },
     "termsEvidenceState": "ambiguity-identified",
     "type": "official"
@@ -7428,7 +7428,7 @@
     },
     "summary": {
       "en": "Station locations and metadata.",
-      "zh-Hant": "由 Hong Kong Observatory 提供的「HKO weather-station network」資源。請參閱官方文件及最新上游條款。"
+      "zh-Hant": "由 Hong Kong Observatory 提供的「HKO weather-station network」資源。請參閱官方文件及來源的最新條款。"
     },
     "termsEvidenceState": "ambiguity-identified",
     "type": "official"
@@ -7449,7 +7449,7 @@
     },
     "summary": {
       "en": "Synchronise systems to official Hong Kong time.",
-      "zh-Hant": "由 Hong Kong Observatory 提供的「Hong Kong public network time service」資源。請參閱官方文件及最新上游條款。"
+      "zh-Hant": "由 Hong Kong Observatory 提供的「Hong Kong public network time service」資源。請參閱官方文件及來源的最新條款。"
     },
     "termsEvidenceState": "ambiguity-identified",
     "type": "official"
@@ -7470,7 +7470,7 @@
     },
     "summary": {
       "en": "Hyperlocal weather from selected lampposts.",
-      "zh-Hant": "由 Hong Kong Observatory 提供的「Smart lamppost meteorological data」資源。請參閱官方文件及最新上游條款。"
+      "zh-Hant": "由 Hong Kong Observatory 提供的「Smart lamppost meteorological data」資源。請參閱官方文件及來源的最新條款。"
     },
     "termsEvidenceState": "ambiguity-identified",
     "type": "official"
@@ -7491,7 +7491,7 @@
     },
     "summary": {
       "en": "Current AQHI and health-risk category by station.",
-      "zh-Hant": "由 Environmental Protection Department 提供的「Current AQHI by station」資源。請參閱官方文件及最新上游條款。"
+      "zh-Hant": "由 Environmental Protection Department 提供的「Current AQHI by station」資源。請參閱官方文件及來源的最新條款。"
     },
     "termsEvidenceState": "ambiguity-identified",
     "type": "official"
@@ -7512,7 +7512,7 @@
     },
     "summary": {
       "en": "Forecast AQHI ranges and health risks.",
-      "zh-Hant": "由 Environmental Protection Department 提供的「AQHI forecast and range」資源。請參閱官方文件及最新上游條款。"
+      "zh-Hant": "由 Environmental Protection Department 提供的「AQHI forecast and range」資源。請參閱官方文件及來源的最新條款。"
     },
     "termsEvidenceState": "ambiguity-identified",
     "type": "official"
@@ -7533,7 +7533,7 @@
     },
     "summary": {
       "en": "Hourly pollutants by station.",
-      "zh-Hant": "由 Environmental Protection Department 提供的「Past 24-hour pollutant concentrations」資源。請參閱官方文件及最新上游條款。"
+      "zh-Hant": "由 Environmental Protection Department 提供的「Past 24-hour pollutant concentrations」資源。請參閱官方文件及來源的最新條款。"
     },
     "termsEvidenceState": "ambiguity-identified",
     "type": "official"
@@ -7554,7 +7554,7 @@
     },
     "summary": {
       "en": "Recent AQHI history.",
-      "zh-Hant": "由 Environmental Protection Department 提供的「Past 24-hour AQHI」資源。請參閱官方文件及最新上游條款。"
+      "zh-Hant": "由 Environmental Protection Department 提供的「Past 24-hour AQHI」資源。請參閱官方文件及來源的最新條款。"
     },
     "termsEvidenceState": "ambiguity-identified",
     "type": "official"
@@ -7575,7 +7575,7 @@
     },
     "summary": {
       "en": "Station locations and attributes.",
-      "zh-Hant": "由 Environmental Protection Department 提供的「Air-quality monitoring station network」資源。請參閱官方文件及最新上游條款。"
+      "zh-Hant": "由 Environmental Protection Department 提供的「Air-quality monitoring station network」資源。請參閱官方文件及來源的最新條款。"
     },
     "termsEvidenceState": "restriction-identified",
     "type": "official"
@@ -7596,7 +7596,7 @@
     },
     "summary": {
       "en": "Spatial pollution-model output.",
-      "zh-Hant": "由 Environmental Protection Department 提供的「PATH pollutant-model spatial output」資源。請參閱官方文件及最新上游條款。"
+      "zh-Hant": "由 Environmental Protection Department 提供的「PATH pollutant-model spatial output」資源。請參閱官方文件及來源的最新條款。"
     },
     "termsEvidenceState": "ambiguity-identified",
     "type": "official"
@@ -7617,7 +7617,7 @@
     },
     "summary": {
       "en": "Current grades and mapped beaches.",
-      "zh-Hant": "由 Environmental Protection Department 提供的「Beach water-quality grading」資源。請參閱官方文件及最新上游條款。"
+      "zh-Hant": "由 Environmental Protection Department 提供的「Beach water-quality grading」資源。請參閱官方文件及來源的最新條款。"
     },
     "termsEvidenceState": "restriction-identified",
     "type": "official"
@@ -7638,7 +7638,7 @@
     },
     "summary": {
       "en": "Longitudinal beach records.",
-      "zh-Hant": "由 Environmental Protection Department 提供的「Historical beach water quality」資源。請參閱官方文件及最新上游條款。"
+      "zh-Hant": "由 Environmental Protection Department 提供的「Historical beach water quality」資源。請參閱官方文件及來源的最新條款。"
     },
     "termsEvidenceState": "restriction-identified",
     "type": "official"
@@ -7659,7 +7659,7 @@
     },
     "summary": {
       "en": "Recent monitoring results and stations.",
-      "zh-Hant": "由 Environmental Protection Department 提供的「Recent marine water-quality data」資源。請參閱官方文件及最新上游條款。"
+      "zh-Hant": "由 Environmental Protection Department 提供的「Recent marine water-quality data」資源。請參閱官方文件及來源的最新條款。"
     },
     "termsEvidenceState": "restriction-identified",
     "type": "official"
@@ -7680,7 +7680,7 @@
     },
     "summary": {
       "en": "Historical marine records.",
-      "zh-Hant": "由 Environmental Protection Department 提供的「Historical marine water quality」資源。請參閱官方文件及最新上游條款。"
+      "zh-Hant": "由 Environmental Protection Department 提供的「Historical marine water quality」資源。請參閱官方文件及來源的最新條款。"
     },
     "termsEvidenceState": "restriction-identified",
     "type": "official"
@@ -7701,7 +7701,7 @@
     },
     "summary": {
       "en": "Recent river monitoring.",
-      "zh-Hant": "由 Environmental Protection Department 提供的「Recent river water-quality data」資源。請參閱官方文件及最新上游條款。"
+      "zh-Hant": "由 Environmental Protection Department 提供的「Recent river water-quality data」資源。請參閱官方文件及來源的最新條款。"
     },
     "termsEvidenceState": "restriction-identified",
     "type": "official"
@@ -7722,7 +7722,7 @@
     },
     "summary": {
       "en": "Historical river records.",
-      "zh-Hant": "由 Environmental Protection Department 提供的「Historical river water quality」資源。請參閱官方文件及最新上游條款。"
+      "zh-Hant": "由 Environmental Protection Department 提供的「Historical river water quality」資源。請參閱官方文件及來源的最新條款。"
     },
     "termsEvidenceState": "ambiguity-identified",
     "type": "official"
@@ -7743,7 +7743,7 @@
     },
     "summary": {
       "en": "Spatial noise-model outputs.",
-      "zh-Hant": "由 Environmental Protection Department 提供的「Strategic noise maps and calculated L10」資源。請參閱官方文件及最新上游條款。"
+      "zh-Hant": "由 Environmental Protection Department 提供的「Strategic noise maps and calculated L10」資源。請參閱官方文件及來源的最新條款。"
     },
     "termsEvidenceState": "restriction-identified",
     "type": "official"
@@ -7764,7 +7764,7 @@
     },
     "summary": {
       "en": "Territory-wide GHG inventories.",
-      "zh-Hant": "由 Environmental Protection Department 提供的「Hong Kong greenhouse-gas emissions」資源。請參閱官方文件及最新上游條款。"
+      "zh-Hant": "由 Environmental Protection Department 提供的「Hong Kong greenhouse-gas emissions」資源。請參閱官方文件及來源的最新條款。"
     },
     "termsEvidenceState": "ambiguity-identified",
     "type": "official"
@@ -7785,7 +7785,7 @@
     },
     "summary": {
       "en": "Locations and attributes of EIA projects.",
-      "zh-Hant": "由 Environmental Protection Department 提供的「EIA project layers」資源。請參閱官方文件及最新上游條款。"
+      "zh-Hant": "由 Environmental Protection Department 提供的「EIA project layers」資源。請參閱官方文件及來源的最新條款。"
     },
     "termsEvidenceState": "restriction-identified",
     "type": "official"
@@ -7806,7 +7806,7 @@
     },
     "summary": {
       "en": "Facilities and environmental-licence locations.",
-      "zh-Hant": "由 Environmental Protection Department 提供的「EPD facility and licence layers」資源。請參閱官方文件及最新上游條款。"
+      "zh-Hant": "由 Environmental Protection Department 提供的「EPD facility and licence layers」資源。請參閱官方文件及來源的最新條款。"
     },
     "termsEvidenceState": "restriction-identified",
     "type": "official"
@@ -7827,7 +7827,7 @@
     },
     "summary": {
       "en": "Habitat maps and planning layers.",
-      "zh-Hant": "由 Environmental Protection Department 提供的「Habitat and ecological spatial datasets」資源。請參閱官方文件及最新上游條款。"
+      "zh-Hant": "由 Environmental Protection Department 提供的「Habitat and ecological spatial datasets」資源。請參閱官方文件及來源的最新條款。"
     },
     "termsEvidenceState": "restriction-identified",
     "type": "official"
@@ -7848,7 +7848,7 @@
     },
     "summary": {
       "en": "Historical NO, NO2 and PM2.5 through 2026-01-31.",
-      "zh-Hant": "由 Environmental Protection Department 提供的「Smart lamppost air-quality data」資源。請參閱官方文件及最新上游條款。"
+      "zh-Hant": "由 Environmental Protection Department 提供的「Smart lamppost air-quality data」資源。請參閱官方文件及來源的最新條款。"
     },
     "termsEvidenceState": "ambiguity-identified",
     "type": "official"
@@ -7869,7 +7869,7 @@
     },
     "summary": {
       "en": "Current waiting-time bands by public A&E department.",
-      "zh-Hant": "由 Hospital Authority 提供的「Accident & Emergency waiting times」資源。請參閱官方文件及最新上游條款。"
+      "zh-Hant": "由 Hospital Authority 提供的「Accident & Emergency waiting times」資源。請參閱官方文件及來源的最新條款。"
     },
     "termsEvidenceState": "ambiguity-identified",
     "type": "official"
@@ -7890,7 +7890,7 @@
     },
     "summary": {
       "en": "Facility services, addresses, contacts and coordinates.",
-      "zh-Hant": "由 Hospital Authority 提供的「HA hospitals, institutions, SOPCs and family medicine clinics」資源。請參閱官方文件及最新上游條款。"
+      "zh-Hant": "由 Hospital Authority 提供的「HA hospitals, institutions, SOPCs and family medicine clinics」資源。請參閱官方文件及來源的最新條款。"
     },
     "termsEvidenceState": "ambiguity-identified",
     "type": "official"
@@ -7911,7 +7911,7 @@
     },
     "summary": {
       "en": "Waiting times by specialty/cluster.",
-      "zh-Hant": "由 Hospital Authority 提供的「SOPC new-case waiting time」資源。請參閱官方文件及最新上游條款。"
+      "zh-Hant": "由 Hospital Authority 提供的「SOPC new-case waiting time」資源。請參閱官方文件及來源的最新條款。"
     },
     "termsEvidenceState": "ambiguity-identified",
     "type": "official"
@@ -7932,7 +7932,7 @@
     },
     "summary": {
       "en": "Average consultation quota by district.",
-      "zh-Hant": "由 Hospital Authority 提供的「Family Medicine Clinic quota averages by district」資源。請參閱官方文件及最新上游條款。"
+      "zh-Hant": "由 Hospital Authority 提供的「Family Medicine Clinic quota averages by district」資源。請參閱官方文件及來源的最新條款。"
     },
     "termsEvidenceState": "ambiguity-identified",
     "type": "official"
@@ -7953,7 +7953,7 @@
     },
     "summary": {
       "en": "Selected demand/capacity indicators.",
-      "zh-Hant": "由 Hospital Authority 提供的「Service demand surge key statistics」資源。請參閱官方文件及最新上游條款。"
+      "zh-Hant": "由 Hospital Authority 提供的「Service demand surge key statistics」資源。請參閱官方文件及來源的最新條款。"
     },
     "termsEvidenceState": "ambiguity-identified",
     "type": "official"
@@ -7974,7 +7974,7 @@
     },
     "summary": {
       "en": "Ambulatory, allied-health and community activity.",
-      "zh-Hant": "由 Hospital Authority 提供的「Ambulatory and community service throughput」資源。請參閱官方文件及最新上游條款。"
+      "zh-Hant": "由 Hospital Authority 提供的「Ambulatory and community service throughput」資源。請參閱官方文件及來源的最新條款。"
     },
     "termsEvidenceState": "ambiguity-identified",
     "type": "official"
@@ -7995,7 +7995,7 @@
     },
     "summary": {
       "en": "Beds, discharges, patient days and occupancy.",
-      "zh-Hant": "由 Hospital Authority 提供的「Inpatient and day-inpatient statistics」資源。請參閱官方文件及最新上游條款。"
+      "zh-Hant": "由 Hospital Authority 提供的「Inpatient and day-inpatient statistics」資源。請參閱官方文件及來源的最新條款。"
     },
     "termsEvidenceState": "ambiguity-identified",
     "type": "official"
@@ -8016,7 +8016,7 @@
     },
     "summary": {
       "en": "Selected financial indicators.",
-      "zh-Hant": "由 Hospital Authority 提供的「Hospital Authority key financial data」資源。請參閱官方文件及最新上游條款。"
+      "zh-Hant": "由 Hospital Authority 提供的「Hospital Authority key financial data」資源。請參閱官方文件及來源的最新條款。"
     },
     "termsEvidenceState": "ambiguity-identified",
     "type": "official"
@@ -8037,7 +8037,7 @@
     },
     "summary": {
       "en": "Monthly counts with long history.",
-      "zh-Hant": "由 Centre for Health Protection 提供的「Notifiable infectious diseases」資源。請參閱官方文件及最新上游條款。"
+      "zh-Hant": "由 Centre for Health Protection 提供的「Notifiable infectious diseases」資源。請參閱官方文件及來源的最新條款。"
     },
     "termsEvidenceState": "ambiguity-identified",
     "type": "official"
@@ -8058,7 +8058,7 @@
     },
     "summary": {
       "en": "Communicable-disease syndrome indicators.",
-      "zh-Hant": "由 Centre for Health Protection 提供的「A&E syndromic surveillance」資源。請參閱官方文件及最新上游條款。"
+      "zh-Hant": "由 Centre for Health Protection 提供的「A&E syndromic surveillance」資源。請參閱官方文件及來源的最新條款。"
     },
     "termsEvidenceState": "ambiguity-identified",
     "type": "official"
@@ -8079,7 +8079,7 @@
     },
     "summary": {
       "en": "Syndromic indicators from participating centres.",
-      "zh-Hant": "由 Centre for Health Protection 提供的「Child-care and kindergarten sentinel surveillance」資源。請參閱官方文件及最新上游條款。"
+      "zh-Hant": "由 Centre for Health Protection 提供的「Child-care and kindergarten sentinel surveillance」資源。請參閱官方文件及來源的最新條款。"
     },
     "termsEvidenceState": "ambiguity-identified",
     "type": "official"
@@ -8100,7 +8100,7 @@
     },
     "summary": {
       "en": "Syndromic indicators from residential homes.",
-      "zh-Hant": "由 Centre for Health Protection 提供的「Residential-care-home sentinel surveillance」資源。請參閱官方文件及最新上游條款。"
+      "zh-Hant": "由 Centre for Health Protection 提供的「Residential-care-home sentinel surveillance」資源。請參閱官方文件及來源的最新條款。"
     },
     "termsEvidenceState": "ambiguity-identified",
     "type": "official"
@@ -8121,7 +8121,7 @@
     },
     "summary": {
       "en": "Selected syndromic indicators.",
-      "zh-Hant": "由 Centre for Health Protection 提供的「Chinese medicine practitioner sentinel surveillance」資源。請參閱官方文件及最新上游條款。"
+      "zh-Hant": "由 Centre for Health Protection 提供的「Chinese medicine practitioner sentinel surveillance」資源。請參閱官方文件及來源的最新條款。"
     },
     "termsEvidenceState": "ambiguity-identified",
     "type": "official"
@@ -8142,7 +8142,7 @@
     },
     "summary": {
       "en": "Separate datasets for specific diseases.",
-      "zh-Hant": "由 Centre for Health Protection 提供的「Disease-specific surveillance datasets」資源。請參閱官方文件及最新上游條款。"
+      "zh-Hant": "由 Centre for Health Protection 提供的「Disease-specific surveillance datasets」資源。請參閱官方文件及來源的最新條款。"
     },
     "termsEvidenceState": "ambiguity-identified",
     "type": "official"
@@ -8163,7 +8163,7 @@
     },
     "summary": {
       "en": "Pharmaceutical product registration records.",
-      "zh-Hant": "由 Department of Health 提供的「Registered pharmaceutical products」資源。請參閱官方文件及最新上游條款。"
+      "zh-Hant": "由 Department of Health 提供的「Registered pharmaceutical products」資源。請參閱官方文件及來源的最新條款。"
     },
     "termsEvidenceState": "ambiguity-identified",
     "type": "official"
@@ -8184,7 +8184,7 @@
     },
     "summary": {
       "en": "Licensed pharmacies, wholesalers and dealers.",
-      "zh-Hant": "由 Department of Health 提供的「Licensed drug dealers and pharmacies」資源。請參閱官方文件及最新上游條款。"
+      "zh-Hant": "由 Department of Health 提供的「Licensed drug dealers and pharmacies」資源。請參閱官方文件及來源的最新條款。"
     },
     "termsEvidenceState": "ambiguity-identified",
     "type": "official"
@@ -8205,7 +8205,7 @@
     },
     "summary": {
       "en": "Registration information.",
-      "zh-Hant": "由 Department of Health 提供的「Proprietary Chinese medicine registrations」資源。請參閱官方文件及最新上游條款。"
+      "zh-Hant": "由 Department of Health 提供的「Proprietary Chinese medicine registrations」資源。請參閱官方文件及來源的最新條款。"
     },
     "termsEvidenceState": "ambiguity-identified",
     "type": "official"
@@ -8226,7 +8226,7 @@
     },
     "summary": {
       "en": "Historical cases, testing, vaccination and related datasets.",
-      "zh-Hant": "由 Department of Health / CHP 提供的「COVID-19 open datasets」資源。請參閱官方文件及最新上游條款。"
+      "zh-Hant": "由 Department of Health / CHP 提供的「COVID-19 open datasets」資源。請參閱官方文件及來源的最新條款。"
     },
     "termsEvidenceState": "ambiguity-identified",
     "type": "official"
@@ -8247,7 +8247,7 @@
     },
     "summary": {
       "en": "Public AED locations.",
-      "zh-Hant": "由 Fire Services Department 提供的「Automated External Defibrillator locations」資源。請參閱官方文件及最新上游條款。"
+      "zh-Hant": "由 Fire Services Department 提供的「Automated External Defibrillator locations」資源。請參閱官方文件及來源的最新條款。"
     },
     "termsEvidenceState": "ambiguity-identified",
     "type": "official"
@@ -8268,7 +8268,7 @@
     },
     "summary": {
       "en": "Mapped clinics/health centres and service attributes.",
-      "zh-Hant": "由 Department of Health 提供的「Department of Health clinics and health centres」資源。請參閱官方文件及最新上游條款。"
+      "zh-Hant": "由 Department of Health 提供的「Department of Health clinics and health centres」資源。請參閱官方文件及來源的最新條款。"
     },
     "termsEvidenceState": "ambiguity-identified",
     "type": "official"
@@ -8289,7 +8289,7 @@
     },
     "summary": {
       "en": "Exchange, liquidity, rates, monetary and banking statistics.",
-      "zh-Hant": "由 Hong Kong Monetary Authority 提供的「HKMA public market and monetary data APIs」資源。請參閱官方文件及最新上游條款。"
+      "zh-Hant": "由 Hong Kong Monetary Authority 提供的「HKMA public market and monetary data APIs」資源。請參閱官方文件及來源的最新條款。"
     },
     "termsEvidenceState": "ambiguity-identified",
     "type": "official"
@@ -8310,7 +8310,7 @@
     },
     "summary": {
       "en": "Authorized institution and SVF reference data.",
-      "zh-Hant": "由 Hong Kong Monetary Authority 提供的「HKMA bank and stored-value-facility information」資源。請參閱官方文件及最新上游條款。"
+      "zh-Hant": "由 Hong Kong Monetary Authority 提供的「HKMA bank and stored-value-facility information」資源。請參閱官方文件及來源的最新條款。"
     },
     "termsEvidenceState": "ambiguity-identified",
     "type": "official"
@@ -8331,7 +8331,7 @@
     },
     "summary": {
       "en": "Clearing, settlement and infrastructure data.",
-      "zh-Hant": "由 Hong Kong Monetary Authority 提供的「HKMA financial-market-infrastructure data」資源。請參閱官方文件及最新上游條款。"
+      "zh-Hant": "由 Hong Kong Monetary Authority 提供的「HKMA financial-market-infrastructure data」資源。請參閱官方文件及來源的最新條款。"
     },
     "termsEvidenceState": "ambiguity-identified",
     "type": "official"
@@ -8352,7 +8352,7 @@
     },
     "summary": {
       "en": "Current and historical HKMA tenders.",
-      "zh-Hant": "由 Hong Kong Monetary Authority 提供的「HKMA tender invitations API」資源。請參閱官方文件及最新上游條款。"
+      "zh-Hant": "由 Hong Kong Monetary Authority 提供的「HKMA tender invitations API」資源。請參閱官方文件及來源的最新條款。"
     },
     "termsEvidenceState": "ambiguity-identified",
     "type": "official"
@@ -8373,7 +8373,7 @@
     },
     "summary": {
       "en": "Product/service information and application/onboarding APIs.",
-      "zh-Hant": "由 Banks under HKMA framework 提供的「Bank Open APIs — Phases I and II」資源。請參閱官方文件及最新上游條款。"
+      "zh-Hant": "由 Banks under HKMA framework 提供的「Bank Open APIs — Phases I and II」資源。請參閱官方文件及來源的最新條款。"
     },
     "termsEvidenceState": "ambiguity-identified",
     "type": "official"
@@ -8394,7 +8394,7 @@
     },
     "summary": {
       "en": "Account information and transaction initiation where supported.",
-      "zh-Hant": "由 Banks under HKMA framework 提供的「Bank Open APIs — Phases III and IV」資源。請參閱官方文件及最新上游條款。"
+      "zh-Hant": "由 Banks under HKMA framework 提供的「Bank Open APIs — Phases III and IV」資源。請參閱官方文件及來源的最新條款。"
     },
     "termsEvidenceState": "ambiguity-identified",
     "type": "official"
@@ -8415,7 +8415,7 @@
     },
     "summary": {
       "en": "Population, trade, labour, prices, national accounts, business, tourism and more.",
-      "zh-Hant": "由 Census and Statistics Department 提供的「C&SD Web Table API — supported tables」資源。請參閱官方文件及最新上游條款。"
+      "zh-Hant": "由 Census and Statistics Department 提供的「C&SD Web Table API — supported tables」資源。請參閱官方文件及來源的最新條款。"
     },
     "termsEvidenceState": "ambiguity-identified",
     "type": "official"
@@ -8436,7 +8436,7 @@
     },
     "summary": {
       "en": "Portal mirrors useful for direct files and historical versions.",
-      "zh-Hant": "由 Census and Statistics Department 提供的「C&SD datasets on DATA.GOV.HK」資源。請參閱官方文件及最新上游條款。"
+      "zh-Hant": "由 Census and Statistics Department 提供的「C&SD datasets on DATA.GOV.HK」資源。請參閱官方文件及來源的最新條款。"
     },
     "termsEvidenceState": "ambiguity-identified",
     "type": "official"
@@ -8457,7 +8457,7 @@
     },
     "summary": {
       "en": "Registered-office/principal-place data in the open set.",
-      "zh-Hant": "由 Companies Registry 提供的「Registered office / principal place of business」資源。請參閱官方文件及最新上游條款。"
+      "zh-Hant": "由 Companies Registry 提供的「Registered office / principal place of business」資源。請參閱官方文件及來源的最新條款。"
     },
     "termsEvidenceState": "ambiguity-identified",
     "type": "official"
@@ -8478,7 +8478,7 @@
     },
     "summary": {
       "en": "Public licensed-money-lender register.",
-      "zh-Hant": "由 Companies Registry 提供的「Licensed money lenders」資源。請參閱官方文件及最新上游條款。"
+      "zh-Hant": "由 Companies Registry 提供的「Licensed money lenders」資源。請參閱官方文件及來源的最新條款。"
     },
     "termsEvidenceState": "ambiguity-identified",
     "type": "official"
@@ -8499,7 +8499,7 @@
     },
     "summary": {
       "en": "New incorporations and name changes.",
-      "zh-Hant": "由 Companies Registry 提供的「New companies and company name changes」資源。請參閱官方文件及最新上游條款。"
+      "zh-Hant": "由 Companies Registry 提供的「New companies and company name changes」資源。請參閱官方文件及來源的最新條款。"
     },
     "termsEvidenceState": "ambiguity-identified",
     "type": "official"
@@ -8520,7 +8520,7 @@
     },
     "summary": {
       "en": "Prices, rents, completions, take-up, stock and related indicators.",
-      "zh-Hant": "由 Rating and Valuation Department 提供的「Private property market statistics」資源。請參閱官方文件及最新上游條款。"
+      "zh-Hant": "由 Rating and Valuation Department 提供的「Private property market statistics」資源。請參閱官方文件及來源的最新條款。"
     },
     "termsEvidenceState": "ambiguity-identified",
     "type": "official"
@@ -8541,7 +8541,7 @@
     },
     "summary": {
       "en": "Aggregated valuation/rent-roll statistics.",
-      "zh-Hant": "由 Rating and Valuation Department 提供的「Valuation List and Government Rent Roll statistics」資源。請參閱官方文件及最新上游條款。"
+      "zh-Hant": "由 Rating and Valuation Department 提供的「Valuation List and Government Rent Roll statistics」資源。請參閱官方文件及來源的最新條款。"
     },
     "termsEvidenceState": "ambiguity-identified",
     "type": "official"
@@ -8562,7 +8562,7 @@
     },
     "summary": {
       "en": "Information/statistics on newly built properties.",
-      "zh-Hant": "由 Rating and Valuation Department 提供的「Newly built property data」資源。請參閱官方文件及最新上游條款。"
+      "zh-Hant": "由 Rating and Valuation Department 提供的「Newly built property data」資源。請參閱官方文件及來源的最新條款。"
     },
     "termsEvidenceState": "ambiguity-identified",
     "type": "official"
@@ -8583,7 +8583,7 @@
     },
     "summary": {
       "en": "Annual environmental indicators.",
-      "zh-Hant": "由 Hong Kong and China Gas Company 提供的「Towngas environmental performance」資源。請參閱官方文件及最新上游條款。"
+      "zh-Hant": "由 Hong Kong and China Gas Company 提供的「Towngas environmental performance」資源。請參閱官方文件及來源的最新條款。"
     },
     "termsEvidenceState": "ambiguity-identified",
     "type": "official"
@@ -8604,7 +8604,7 @@
     },
     "summary": {
       "en": "Generation and fuel mix.",
-      "zh-Hant": "由 The Hongkong Electric Company 提供的「HK Electric fuel mix and generation」資源。請參閱官方文件及最新上游條款。"
+      "zh-Hant": "由 The Hongkong Electric Company 提供的「HK Electric fuel mix and generation」資源。請參閱官方文件及來源的最新條款。"
     },
     "termsEvidenceState": "ambiguity-identified",
     "type": "official"
@@ -8625,7 +8625,7 @@
     },
     "summary": {
       "en": "District electricity consumption.",
-      "zh-Hant": "由 The Hongkong Electric Company 提供的「HK Electric consumption by district」資源。請參閱官方文件及最新上游條款。"
+      "zh-Hant": "由 The Hongkong Electric Company 提供的「HK Electric consumption by district」資源。請參閱官方文件及來源的最新條款。"
     },
     "termsEvidenceState": "ambiguity-identified",
     "type": "official"
@@ -8646,7 +8646,7 @@
     },
     "summary": {
       "en": "Renewable generation data.",
-      "zh-Hant": "由 The Hongkong Electric Company 提供的「HK Electric renewable generation」資源。請參閱官方文件及最新上游條款。"
+      "zh-Hant": "由 The Hongkong Electric Company 提供的「HK Electric renewable generation」資源。請參閱官方文件及來源的最新條款。"
     },
     "termsEvidenceState": "ambiguity-identified",
     "type": "official"
@@ -8667,7 +8667,7 @@
     },
     "summary": {
       "en": "Sectoral/fuel energy consumption.",
-      "zh-Hant": "由 Electrical and Mechanical Services Department 提供的「Hong Kong Energy End-use Data」資源。請參閱官方文件及最新上游條款。"
+      "zh-Hant": "由 Electrical and Mechanical Services Department 提供的「Hong Kong Energy End-use Data」資源。請參閱官方文件及來源的最新條款。"
     },
     "termsEvidenceState": "ambiguity-identified",
     "type": "official"
@@ -8688,7 +8688,7 @@
     },
     "summary": {
       "en": "Reservoir storage levels.",
-      "zh-Hant": "由 Water Supplies Department 提供的「Reservoir storage」資源。請參閱官方文件及最新上游條款。"
+      "zh-Hant": "由 Water Supplies Department 提供的「Reservoir storage」資源。請參閱官方文件及來源的最新條款。"
     },
     "termsEvidenceState": "ambiguity-identified",
     "type": "official"
@@ -8709,7 +8709,7 @@
     },
     "summary": {
       "en": "Supply, resources and consumption.",
-      "zh-Hant": "由 Water Supplies Department 提供的「Water resources statistics」資源。請參閱官方文件及最新上游條款。"
+      "zh-Hant": "由 Water Supplies Department 提供的「Water resources statistics」資源。請參閱官方文件及來源的最新條款。"
     },
     "termsEvidenceState": "ambiguity-identified",
     "type": "official"
@@ -8730,7 +8730,7 @@
     },
     "summary": {
       "en": "Current planned/emergency suspensions.",
-      "zh-Hant": "由 Water Supplies Department 提供的「Temporary water-suspension notices」資源。請參閱官方文件及最新上游條款。"
+      "zh-Hant": "由 Water Supplies Department 提供的「Temporary water-suspension notices」資源。請參閱官方文件及來源的最新條款。"
     },
     "termsEvidenceState": "ambiguity-identified",
     "type": "official"
@@ -8751,7 +8751,7 @@
     },
     "summary": {
       "en": "Monthly sewage-flow statistics.",
-      "zh-Hant": "由 Drainage Services Department 提供的「Sewage-flow statistics」資源。請參閱官方文件及最新上游條款。"
+      "zh-Hant": "由 Drainage Services Department 提供的「Sewage-flow statistics」資源。請參閱官方文件及來源的最新條款。"
     },
     "termsEvidenceState": "ambiguity-identified",
     "type": "official"
@@ -8772,7 +8772,7 @@
     },
     "summary": {
       "en": "Charger locations and attributes.",
-      "zh-Hant": "由 CLP Power Hong Kong 提供的「CLP EV charging-station reference data」資源。請參閱官方文件及最新上游條款。"
+      "zh-Hant": "由 CLP Power Hong Kong 提供的「CLP EV charging-station reference data」資源。請參閱官方文件及來源的最新條款。"
     },
     "termsEvidenceState": "ambiguity-identified",
     "type": "official"
@@ -8793,7 +8793,7 @@
     },
     "summary": {
       "en": "Live and archived proceedings.",
-      "zh-Hant": "由 Legislative Council Secretariat 提供的「LegCo live and archived webcasts」資源。請參閱官方文件及最新上游條款。"
+      "zh-Hant": "由 Legislative Council Secretariat 提供的「LegCo live and archived webcasts」資源。請參閱官方文件及來源的最新條款。"
     },
     "termsEvidenceState": "ambiguity-identified",
     "type": "official"
@@ -8814,7 +8814,7 @@
     },
     "summary": {
       "en": "Bills, stages, papers and status.",
-      "zh-Hant": "由 Legislative Council Secretariat 提供的「LegCo Bills database」資源。請參閱官方文件及最新上游條款。"
+      "zh-Hant": "由 Legislative Council Secretariat 提供的「LegCo Bills database」資源。請參閱官方文件及來源的最新條款。"
     },
     "termsEvidenceState": "ambiguity-identified",
     "type": "official"
@@ -8835,7 +8835,7 @@
     },
     "summary": {
       "en": "Council and committee schedules.",
-      "zh-Hant": "由 Legislative Council Secretariat 提供的「LegCo meeting schedule」資源。請參閱官方文件及最新上游條款。"
+      "zh-Hant": "由 Legislative Council Secretariat 提供的「LegCo meeting schedule」資源。請參閱官方文件及來源的最新條款。"
     },
     "termsEvidenceState": "ambiguity-identified",
     "type": "official"
@@ -8856,7 +8856,7 @@
     },
     "summary": {
       "en": "Machine-queryable questions.",
-      "zh-Hant": "由 Legislative Council Secretariat 提供的「Questions at Council meetings — OData」資源。請參閱官方文件及最新上游條款。"
+      "zh-Hant": "由 Legislative Council Secretariat 提供的「Questions at Council meetings — OData」資源。請參閱官方文件及來源的最新條款。"
     },
     "termsEvidenceState": "ambiguity-identified",
     "type": "official"
@@ -8877,7 +8877,7 @@
     },
     "summary": {
       "en": "Voting outcomes and member-level data.",
-      "zh-Hant": "由 Legislative Council Secretariat 提供的「LegCo voting results」資源。請參閱官方文件及最新上游條款。"
+      "zh-Hant": "由 Legislative Council Secretariat 提供的「LegCo voting results」資源。請參閱官方文件及來源的最新條款。"
     },
     "termsEvidenceState": "ambiguity-identified",
     "type": "official"
@@ -8898,7 +8898,7 @@
     },
     "summary": {
       "en": "Member attendance records.",
-      "zh-Hant": "由 Legislative Council Secretariat 提供的「LegCo member attendance」資源。請參閱官方文件及最新上游條款。"
+      "zh-Hant": "由 Legislative Council Secretariat 提供的「LegCo member attendance」資源。請參閱官方文件及來源的最新條款。"
     },
     "termsEvidenceState": "ambiguity-identified",
     "type": "official"
@@ -8919,7 +8919,7 @@
     },
     "summary": {
       "en": "Official verbatim records.",
-      "zh-Hant": "由 Legislative Council Secretariat 提供的「LegCo Hansard database」資源。請參閱官方文件及最新上游條款。"
+      "zh-Hant": "由 Legislative Council Secretariat 提供的「LegCo Hansard database」資源。請參閱官方文件及來源的最新條款。"
     },
     "termsEvidenceState": "ambiguity-identified",
     "type": "official"
@@ -8940,7 +8940,7 @@
     },
     "summary": {
       "en": "Machine-readable list of current laws.",
-      "zh-Hant": "由 Department of Justice / Hong Kong e-Legislation 提供的「Current legislation list」資源。請參閱官方文件及最新上游條款。"
+      "zh-Hant": "由 Department of Justice / Hong Kong e-Legislation 提供的「Current legislation list」資源。請參閱官方文件及來源的最新條款。"
     },
     "termsEvidenceState": "ambiguity-identified",
     "type": "official"
@@ -8961,7 +8961,7 @@
     },
     "summary": {
       "en": "Current consolidated legislation.",
-      "zh-Hant": "由 Department of Justice / Hong Kong e-Legislation 提供的「Current full legislation XML corpus」資源。請參閱官方文件及最新上游條款。"
+      "zh-Hant": "由 Department of Justice / Hong Kong e-Legislation 提供的「Current full legislation XML corpus」資源。請參閱官方文件及來源的最新條款。"
     },
     "termsEvidenceState": "ambiguity-identified",
     "type": "official"
@@ -8982,7 +8982,7 @@
     },
     "summary": {
       "en": "Past versions since 30 June 1997.",
-      "zh-Hant": "由 Department of Justice / Hong Kong e-Legislation 提供的「Past legislation XML corpus since 30 June 1997」資源。請參閱官方文件及最新上游條款。"
+      "zh-Hant": "由 Department of Justice / Hong Kong e-Legislation 提供的「Past legislation XML corpus since 30 June 1997」資源。請參閱官方文件及來源的最新條款。"
     },
     "termsEvidenceState": "ambiguity-identified",
     "type": "official"
@@ -9003,7 +9003,7 @@
     },
     "summary": {
       "en": "Bilingual legal terms/translations.",
-      "zh-Hant": "由 Department of Justice / Hong Kong e-Legislation 提供的「Hong Kong legal glossary」資源。請參閱官方文件及最新上游條款。"
+      "zh-Hant": "由 Department of Justice / Hong Kong e-Legislation 提供的「Hong Kong legal glossary」資源。請參閱官方文件及來源的最新條款。"
     },
     "termsEvidenceState": "ambiguity-identified",
     "type": "official"
@@ -9024,7 +9024,7 @@
     },
     "summary": {
       "en": "LegCo, District Council and other election results.",
-      "zh-Hant": "由 Registration and Electoral Office 提供的「Election results datasets」資源。請參閱官方文件及最新上游條款。"
+      "zh-Hant": "由 Registration and Electoral Office 提供的「Election results datasets」資源。請參閱官方文件及來源的最新條款。"
     },
     "termsEvidenceState": "ambiguity-identified",
     "type": "official"
@@ -9045,7 +9045,7 @@
     },
     "summary": {
       "en": "Polling/constituency boundaries and election geography.",
-      "zh-Hant": "由 Registration and Electoral Office 提供的「Voter-registration and constituency spatial layers」資源。請參閱官方文件及最新上游條款。"
+      "zh-Hant": "由 Registration and Electoral Office 提供的「Voter-registration and constituency spatial layers」資源。請參閱官方文件及來源的最新條款。"
     },
     "termsEvidenceState": "ambiguity-identified",
     "type": "official"
@@ -9066,7 +9066,7 @@
     },
     "summary": {
       "en": "Official government press releases.",
-      "zh-Hant": "由 Information Services Department 提供的「Government press-release RSS」資源。請參閱官方文件及最新上游條款。"
+      "zh-Hant": "由 Information Services Department 提供的「Government press-release RSS」資源。請參閱官方文件及來源的最新條款。"
     },
     "termsEvidenceState": "ambiguity-identified",
     "type": "official"
@@ -9087,7 +9087,7 @@
     },
     "summary": {
       "en": "Current government vacancies.",
-      "zh-Hant": "由 Civil Service Bureau / departments 提供的「Government recruitment advertisements」資源。請參閱官方文件及最新上游條款。"
+      "zh-Hant": "由 Civil Service Bureau / departments 提供的「Government recruitment advertisements」資源。請參閱官方文件及來源的最新條款。"
     },
     "termsEvidenceState": "ambiguity-identified",
     "type": "official"
@@ -9108,7 +9108,7 @@
     },
     "summary": {
       "en": "Open tender notices.",
-      "zh-Hant": "由 Government Logistics Department 提供的「Government Logistics Department open tenders」資源。請參閱官方文件及最新上游條款。"
+      "zh-Hant": "由 Government Logistics Department 提供的「Government Logistics Department open tenders」資源。請參閱官方文件及來源的最新條款。"
     },
     "termsEvidenceState": "ambiguity-identified",
     "type": "official"
@@ -9129,7 +9129,7 @@
     },
     "summary": {
       "en": "Award results by department.",
-      "zh-Hant": "由 Government departments 提供的「Department-awarded tender results」資源。請參閱官方文件及最新上游條款。"
+      "zh-Hant": "由 Government departments 提供的「Department-awarded tender results」資源。請參閱官方文件及來源的最新條款。"
     },
     "termsEvidenceState": "ambiguity-identified",
     "type": "official"
@@ -9150,7 +9150,7 @@
     },
     "summary": {
       "en": "Historical EventHK listings.",
-      "zh-Hant": "由 Digital Policy Office 提供的「EventHK information APIs」資源。請參閱官方文件及最新上游條款。"
+      "zh-Hant": "由 Digital Policy Office 提供的「EventHK information APIs」資源。請參閱官方文件及來源的最新條款。"
     },
     "termsEvidenceState": "ambiguity-identified",
     "type": "official"
@@ -9171,7 +9171,7 @@
     },
     "summary": {
       "en": "Stations, posts, reporting centres, kiosks and vehicle pounds.",
-      "zh-Hant": "由 Hong Kong Police Force 提供的「Police stations and public-service facilities」資源。請參閱官方文件及最新上游條款。"
+      "zh-Hant": "由 Hong Kong Police Force 提供的「Police stations and public-service facilities」資源。請參閱官方文件及來源的最新條款。"
     },
     "termsEvidenceState": "ambiguity-identified",
     "type": "official"
@@ -9192,7 +9192,7 @@
     },
     "summary": {
       "en": "Aggregated crime statistics and maps.",
-      "zh-Hant": "由 Hong Kong Police Force 提供的「Crime statistics and crime map」資源。請參閱官方文件及最新上游條款。"
+      "zh-Hant": "由 Hong Kong Police Force 提供的「Crime statistics and crime map」資源。請參閱官方文件及來源的最新條款。"
     },
     "termsEvidenceState": "ambiguity-identified",
     "type": "official"
@@ -9213,7 +9213,7 @@
     },
     "summary": {
       "en": "Fire stations, licensing offices and selected safety/hazard layers.",
-      "zh-Hant": "由 Fire Services Department 提供的「Fire-station and fire-safety facility layers」資源。請參閱官方文件及最新上游條款。"
+      "zh-Hant": "由 Fire Services Department 提供的「Fire-station and fire-safety facility layers」資源。請參閱官方文件及來源的最新條款。"
     },
     "termsEvidenceState": "ambiguity-identified",
     "type": "official"
@@ -9234,7 +9234,7 @@
     },
     "summary": {
       "en": "Licensed restaurants and locations.",
-      "zh-Hant": "由 Food and Environmental Hygiene Department 提供的「Restaurant licences」資源。請參閱官方文件及最新上游條款。"
+      "zh-Hant": "由 Food and Environmental Hygiene Department 提供的「Restaurant licences」資源。請參閱官方文件及來源的最新條款。"
     },
     "termsEvidenceState": "ambiguity-identified",
     "type": "official"
@@ -9255,7 +9255,7 @@
     },
     "summary": {
       "en": "Other licensed food premises.",
-      "zh-Hant": "由 Food and Environmental Hygiene Department 提供的「Other food licences」資源。請參閱官方文件及最新上游條款。"
+      "zh-Hant": "由 Food and Environmental Hygiene Department 提供的「Other food licences」資源。請參閱官方文件及來源的最新條款。"
     },
     "termsEvidenceState": "ambiguity-identified",
     "type": "official"
@@ -9276,7 +9276,7 @@
     },
     "summary": {
       "en": "Restricted-food permits.",
-      "zh-Hant": "由 Food and Environmental Hygiene Department 提供的「Restricted food permits」資源。請參閱官方文件及最新上游條款。"
+      "zh-Hant": "由 Food and Environmental Hygiene Department 提供的「Restricted food permits」資源。請參閱官方文件及來源的最新條款。"
     },
     "termsEvidenceState": "ambiguity-identified",
     "type": "official"
@@ -9297,7 +9297,7 @@
     },
     "summary": {
       "en": "Entertainment, bathhouse, pool, slaughterhouse, offensive-trade, funeral and undertaker licences.",
-      "zh-Hant": "由 Food and Environmental Hygiene Department 提供的「FEHD trade licence registers」資源。請參閱官方文件及最新上游條款。"
+      "zh-Hant": "由 Food and Environmental Hygiene Department 提供的「FEHD trade licence registers」資源。請參閱官方文件及來源的最新條款。"
     },
     "termsEvidenceState": "ambiguity-identified",
     "type": "official"
@@ -9318,7 +9318,7 @@
     },
     "summary": {
       "en": "Licensed liquor premises.",
-      "zh-Hant": "由 Liquor Licensing Board / FEHD 提供的「Liquor licences」資源。請參閱官方文件及最新上游條款。"
+      "zh-Hant": "由 Liquor Licensing Board / FEHD 提供的「Liquor licences」資源。請參閱官方文件及來源的最新條款。"
     },
     "termsEvidenceState": "ambiguity-identified",
     "type": "official"
@@ -9339,7 +9339,7 @@
     },
     "summary": {
       "en": "Toilets, refuse points, markets and related facilities.",
-      "zh-Hant": "由 Food and Environmental Hygiene Department 提供的「FEHD facility and service locations」資源。請參閱官方文件及最新上游條款。"
+      "zh-Hant": "由 Food and Environmental Hygiene Department 提供的「FEHD facility and service locations」資源。請參閱官方文件及來源的最新條款。"
     },
     "termsEvidenceState": "ambiguity-identified",
     "type": "official"
@@ -9360,7 +9360,7 @@
     },
     "summary": {
       "en": "Market locations, facilities and operations.",
-      "zh-Hant": "由 Food and Environmental Hygiene Department 提供的「Public market information」資源。請參閱官方文件及最新上游條款。"
+      "zh-Hant": "由 Food and Environmental Hygiene Department 提供的「Public market information」資源。請參閱官方文件及來源的最新條款。"
     },
     "termsEvidenceState": "ambiguity-identified",
     "type": "official"
@@ -9381,7 +9381,7 @@
     },
     "summary": {
       "en": "Food recalls, alerts and allergy alerts.",
-      "zh-Hant": "由 Centre for Food Safety 提供的「Food and allergy alert RSS」資源。請參閱官方文件及最新上游條款。"
+      "zh-Hant": "由 Centre for Food Safety 提供的「Food and allergy alert RSS」資源。請參閱官方文件及來源的最新條款。"
     },
     "termsEvidenceState": "ambiguity-identified",
     "type": "official"
@@ -9402,7 +9402,7 @@
     },
     "summary": {
       "en": "Survey boundaries and data.",
-      "zh-Hant": "由 Food and Environmental Hygiene Department 提供的「Dengue vector-survey areas」資源。請參閱官方文件及最新上游條款。"
+      "zh-Hant": "由 Food and Environmental Hygiene Department 提供的「Dengue vector-survey areas」資源。請參閱官方文件及來源的最新條款。"
     },
     "termsEvidenceState": "ambiguity-identified",
     "type": "official"
@@ -9423,7 +9423,7 @@
     },
     "summary": {
       "en": "Machine-readable food taxonomy.",
-      "zh-Hant": "由 Centre for Food Safety 提供的「Centre for Food Safety food codes」資源。請參閱官方文件及最新上游條款。"
+      "zh-Hant": "由 Centre for Food Safety 提供的「Centre for Food Safety food codes」資源。請參閱官方文件及來源的最新條款。"
     },
     "termsEvidenceState": "ambiguity-identified",
     "type": "official"
@@ -9444,7 +9444,7 @@
     },
     "summary": {
       "en": "Public registration lists.",
-      "zh-Hant": "由 Centre for Food Safety 提供的「Registered food importers and distributors」資源。請參閱官方文件及最新上游條款。"
+      "zh-Hant": "由 Centre for Food Safety 提供的「Registered food importers and distributors」資源。請參閱官方文件及來源的最新條款。"
     },
     "termsEvidenceState": "ambiguity-identified",
     "type": "official"
@@ -9465,7 +9465,7 @@
     },
     "summary": {
       "en": "Licensed premises, categories and locations.",
-      "zh-Hant": "由 Home Affairs Department 提供的「Licensed hotels and guesthouses」資源。請參閱官方文件及最新上游條款。"
+      "zh-Hant": "由 Home Affairs Department 提供的「Licensed hotels and guesthouses」資源。請參閱官方文件及來源的最新條款。"
     },
     "termsEvidenceState": "ambiguity-identified",
     "type": "official"
@@ -9486,7 +9486,7 @@
     },
     "summary": {
       "en": "Licensed karaoke locations.",
-      "zh-Hant": "由 Home Affairs Department 提供的「Licensed karaoke establishments」資源。請參閱官方文件及最新上游條款。"
+      "zh-Hant": "由 Home Affairs Department 提供的「Licensed karaoke establishments」資源。請參閱官方文件及來源的最新條款。"
     },
     "termsEvidenceState": "ambiguity-identified",
     "type": "official"
@@ -9507,7 +9507,7 @@
     },
     "summary": {
       "en": "Licensed clubhouses.",
-      "zh-Hant": "由 Home Affairs Department 提供的「Licensed clubhouses」資源。請參閱官方文件及最新上游條款。"
+      "zh-Hant": "由 Home Affairs Department 提供的「Licensed clubhouses」資源。請參閱官方文件及來源的最新條款。"
     },
     "termsEvidenceState": "ambiguity-identified",
     "type": "official"
@@ -9528,7 +9528,7 @@
     },
     "summary": {
       "en": "Verified feeds include tennis, turf soccer, basketball, badminton and volleyball.",
-      "zh-Hant": "由 Leisure and Cultural Services Department 提供的「SmartPLAY facility-session availability」資源。請參閱官方文件及最新上游條款。"
+      "zh-Hant": "由 Leisure and Cultural Services Department 提供的「SmartPLAY facility-session availability」資源。請參閱官方文件及來源的最新條款。"
     },
     "termsEvidenceState": "ambiguity-identified",
     "type": "official"
@@ -9549,7 +9549,7 @@
     },
     "summary": {
       "en": "Programme listings and sessions.",
-      "zh-Hant": "由 Leisure and Cultural Services Department 提供的「Community recreation and sports programmes」資源。請參閱官方文件及最新上游條款。"
+      "zh-Hant": "由 Leisure and Cultural Services Department 提供的「Community recreation and sports programmes」資源。請參閱官方文件及來源的最新條款。"
     },
     "termsEvidenceState": "ambiguity-identified",
     "type": "official"
@@ -9570,7 +9570,7 @@
     },
     "summary": {
       "en": "Availability of public access computers.",
-      "zh-Hant": "由 Leisure and Cultural Services Department 提供的「Public-library computer availability」資源。請參閱官方文件及最新上游條款。"
+      "zh-Hant": "由 Leisure and Cultural Services Department 提供的「Public-library computer availability」資源。請參閱官方文件及來源的最新條款。"
     },
     "termsEvidenceState": "ambiguity-identified",
     "type": "official"
@@ -9591,7 +9591,7 @@
     },
     "summary": {
       "en": "Newly added materials and bibliographic metadata.",
-      "zh-Hant": "由 Hong Kong Public Libraries 提供的「New library additions」資源。請參閱官方文件及最新上游條款。"
+      "zh-Hant": "由 Hong Kong Public Libraries 提供的「New library additions」資源。請參閱官方文件及來源的最新條款。"
     },
     "termsEvidenceState": "ambiguity-identified",
     "type": "official"
@@ -9612,7 +9612,7 @@
     },
     "summary": {
       "en": "Library locations and attributes.",
-      "zh-Hant": "由 Leisure and Cultural Services Department 提供的「Public libraries」資源。請參閱官方文件及最新上游條款。"
+      "zh-Hant": "由 Leisure and Cultural Services Department 提供的「Public libraries」資源。請參閱官方文件及來源的最新條款。"
     },
     "termsEvidenceState": "ambiguity-identified",
     "type": "official"
@@ -9633,7 +9633,7 @@
     },
     "summary": {
       "en": "Pool locations and details.",
-      "zh-Hant": "由 Leisure and Cultural Services Department 提供的「Public swimming pools」資源。請參閱官方文件及最新上游條款。"
+      "zh-Hant": "由 Leisure and Cultural Services Department 提供的「Public swimming pools」資源。請參閱官方文件及來源的最新條款。"
     },
     "termsEvidenceState": "ambiguity-identified",
     "type": "official"
@@ -9654,7 +9654,7 @@
     },
     "summary": {
       "en": "Sports centres, grounds and facilities.",
-      "zh-Hant": "由 Leisure and Cultural Services Department 提供的「Sports centres and grounds」資源。請參閱官方文件及最新上游條款。"
+      "zh-Hant": "由 Leisure and Cultural Services Department 提供的「Sports centres and grounds」資源。請參閱官方文件及來源的最新條款。"
     },
     "termsEvidenceState": "ambiguity-identified",
     "type": "official"
@@ -9675,7 +9675,7 @@
     },
     "summary": {
       "en": "BBQ sites, parks, pet gardens and amenities.",
-      "zh-Hant": "由 Leisure and Cultural Services Department 提供的「BBQ areas, parks and pet-inclusive facilities」資源。請參閱官方文件及最新上游條款。"
+      "zh-Hant": "由 Leisure and Cultural Services Department 提供的「BBQ areas, parks and pet-inclusive facilities」資源。請參閱官方文件及來源的最新條款。"
     },
     "termsEvidenceState": "ambiguity-identified",
     "type": "official"
@@ -9696,7 +9696,7 @@
     },
     "summary": {
       "en": "Niche recreation facilities and dispensers.",
-      "zh-Hant": "由 Leisure and Cultural Services Department 提供的「Model boat pools and water dispensers」資源。請參閱官方文件及最新上游條款。"
+      "zh-Hant": "由 Leisure and Cultural Services Department 提供的「Model boat pools and water dispensers」資源。請參閱官方文件及來源的最新條款。"
     },
     "termsEvidenceState": "ambiguity-identified",
     "type": "official"
@@ -9717,7 +9717,7 @@
     },
     "summary": {
       "en": "Pool, museum, library and facility usage statistics.",
-      "zh-Hant": "由 Leisure and Cultural Services Department 提供的「LCSD facility attendance and usage」資源。請參閱官方文件及最新上游條款。"
+      "zh-Hant": "由 Leisure and Cultural Services Department 提供的「LCSD facility attendance and usage」資源。請參閱官方文件及來源的最新條款。"
     },
     "termsEvidenceState": "ambiguity-identified",
     "type": "official"
@@ -9738,7 +9738,7 @@
     },
     "summary": {
       "en": "Tourism-oriented events and locations.",
-      "zh-Hant": "由 Hong Kong Tourism Board 提供的「Hong Kong Tourism Board event datasets」資源。請參閱官方文件及最新上游條款。"
+      "zh-Hant": "由 Hong Kong Tourism Board 提供的「Hong Kong Tourism Board event datasets」資源。請參閱官方文件及來源的最新條款。"
     },
     "termsEvidenceState": "ambiguity-identified",
     "type": "official"
@@ -9759,7 +9759,7 @@
     },
     "summary": {
       "en": "Attraction names, descriptions and locations.",
-      "zh-Hant": "由 Hong Kong Tourism Board 提供的「Major visitor attractions」資源。請參閱官方文件及最新上游條款。"
+      "zh-Hant": "由 Hong Kong Tourism Board 提供的「Major visitor attractions」資源。請參閱官方文件及來源的最新條款。"
     },
     "termsEvidenceState": "ambiguity-identified",
     "type": "official"
@@ -9780,7 +9780,7 @@
     },
     "summary": {
       "en": "Hotel counts, room supply, occupancy and rates.",
-      "zh-Hant": "由 Hong Kong Tourism Board 提供的「Hotel supply, rates and occupancy statistics」資源。請參閱官方文件及最新上游條款。"
+      "zh-Hant": "由 Hong Kong Tourism Board 提供的「Hotel supply, rates and occupancy statistics」資源。請參閱官方文件及來源的最新條款。"
     },
     "termsEvidenceState": "ambiguity-identified",
     "type": "official"
@@ -9801,7 +9801,7 @@
     },
     "summary": {
       "en": "Accessibility-related locations and attributes.",
-      "zh-Hant": "由 Government / tourism bodies 提供的「Accessible facilities and tourism information」資源。請參閱官方文件及最新上游條款。"
+      "zh-Hant": "由 Government / tourism bodies 提供的「Accessible facilities and tourism information」資源。請參閱官方文件及來源的最新條款。"
     },
     "termsEvidenceState": "ambiguity-identified",
     "type": "official"
@@ -9822,7 +9822,7 @@
     },
     "summary": {
       "en": "Estates, HOS/PSPS/GSH courts, shopping centres and flatted factories.",
-      "zh-Hant": "由 Hong Kong Housing Authority 提供的「Public housing estate and court profiles」資源。請參閱官方文件及最新上游條款。"
+      "zh-Hant": "由 Hong Kong Housing Authority 提供的「Public housing estate and court profiles」資源。請參閱官方文件及來源的最新條款。"
     },
     "termsEvidenceState": "ambiguity-identified",
     "type": "official"
@@ -9843,7 +9843,7 @@
     },
     "summary": {
       "en": "Stock statistics.",
-      "zh-Hant": "由 Hong Kong Housing Authority 提供的「Public rental housing stock」資源。請參閱官方文件及最新上游條款。"
+      "zh-Hant": "由 Hong Kong Housing Authority 提供的「Public rental housing stock」資源。請參閱官方文件及來源的最新條款。"
     },
     "termsEvidenceState": "ambiguity-identified",
     "type": "official"
@@ -9864,7 +9864,7 @@
     },
     "summary": {
       "en": "Mapped construction pipeline.",
-      "zh-Hant": "由 Hong Kong Housing Authority 提供的「Housing construction programme」資源。請參閱官方文件及最新上游條款。"
+      "zh-Hant": "由 Hong Kong Housing Authority 提供的「Housing construction programme」資源。請參閱官方文件及來源的最新條款。"
     },
     "termsEvidenceState": "restriction-identified",
     "type": "official"
@@ -9885,7 +9885,7 @@
     },
     "summary": {
       "en": "Estate open-space facilities.",
-      "zh-Hant": "由 Hong Kong Housing Authority 提供的「Open spaces in public housing estates」資源。請參閱官方文件及最新上游條款。"
+      "zh-Hant": "由 Hong Kong Housing Authority 提供的「Open spaces in public housing estates」資源。請參閱官方文件及來源的最新條款。"
     },
     "termsEvidenceState": "restriction-identified",
     "type": "official"
@@ -9906,7 +9906,7 @@
     },
     "summary": {
       "en": "Commercial leasing opportunities.",
-      "zh-Hant": "由 Hong Kong Housing Society 提供的「Housing Society commercial leasing」資源。請參閱官方文件及最新上游條款。"
+      "zh-Hant": "由 Hong Kong Housing Society 提供的「Housing Society commercial leasing」資源。請參閱官方文件及來源的最新條款。"
     },
     "termsEvidenceState": "ambiguity-identified",
     "type": "official"
@@ -9927,7 +9927,7 @@
     },
     "summary": {
       "en": "Estate/project profiles and construction data.",
-      "zh-Hant": "由 Hong Kong Housing Society 提供的「Housing Society estates and projects」資源。請參閱官方文件及最新上游條款。"
+      "zh-Hant": "由 Hong Kong Housing Society 提供的「Housing Society estates and projects」資源。請參閱官方文件及來源的最新條款。"
     },
     "termsEvidenceState": "restriction-identified",
     "type": "official"
@@ -9948,7 +9948,7 @@
     },
     "summary": {
       "en": "Public registers and lists.",
-      "zh-Hant": "由 Buildings Department 提供的「Buildings Department registers」資源。請參閱官方文件及最新上游條款。"
+      "zh-Hant": "由 Buildings Department 提供的「Buildings Department registers」資源。請參閱官方文件及來源的最新條款。"
     },
     "termsEvidenceState": "ambiguity-identified",
     "type": "official"
@@ -9969,7 +9969,7 @@
     },
     "summary": {
       "en": "Building footprints/records and age attributes.",
-      "zh-Hant": "由 Buildings Department / Lands Department 提供的「Building information and age」資源。請參閱官方文件及最新上游條款。"
+      "zh-Hant": "由 Buildings Department / Lands Department 提供的「Building information and age」資源。請參閱官方文件及來源的最新條款。"
     },
     "termsEvidenceState": "restriction-identified",
     "type": "official"
@@ -9990,7 +9990,7 @@
     },
     "summary": {
       "en": "Orders on unauthorized works, drains and investigations.",
-      "zh-Hant": "由 Buildings Department 提供的「Statutory building orders」資源。請參閱官方文件及最新上游條款。"
+      "zh-Hant": "由 Buildings Department 提供的「Statutory building orders」資源。請參閱官方文件及來源的最新條款。"
     },
     "termsEvidenceState": "restriction-identified",
     "type": "official"
@@ -10011,7 +10011,7 @@
     },
     "summary": {
       "en": "Plans, consents, occupation and control statistics.",
-      "zh-Hant": "由 Buildings Department 提供的「Monthly digests and building approvals」資源。請參閱官方文件及最新上游條款。"
+      "zh-Hant": "由 Buildings Department 提供的「Monthly digests and building approvals」資源。請參閱官方文件及來源的最新條款。"
     },
     "termsEvidenceState": "ambiguity-identified",
     "type": "official"
@@ -10032,7 +10032,7 @@
     },
     "summary": {
       "en": "Consents/approvals for works.",
-      "zh-Hant": "由 Buildings Department 提供的「Foundation/work consents」資源。請參閱官方文件及最新上游條款。"
+      "zh-Hant": "由 Buildings Department 提供的「Foundation/work consents」資源。請參閱官方文件及來源的最新條款。"
     },
     "termsEvidenceState": "ambiguity-identified",
     "type": "official"
@@ -10053,7 +10053,7 @@
     },
     "summary": {
       "en": "Records and locations of demolished buildings.",
-      "zh-Hant": "由 Buildings Department 提供的「Demolished buildings」資源。請參閱官方文件及最新上游條款。"
+      "zh-Hant": "由 Buildings Department 提供的「Demolished buildings」資源。請參閱官方文件及來源的最新條款。"
     },
     "termsEvidenceState": "restriction-identified",
     "type": "official"
@@ -10074,7 +10074,7 @@
     },
     "summary": {
       "en": "Outline Zoning Plans and other statutory geometry.",
-      "zh-Hant": "由 Planning Department 提供的「Statutory plan digital GIS data」資源。請參閱官方文件及最新上游條款。"
+      "zh-Hant": "由 Planning Department 提供的「Statutory plan digital GIS data」資源。請參閱官方文件及來源的最新條款。"
     },
     "termsEvidenceState": "restriction-identified",
     "type": "official"
@@ -10095,7 +10095,7 @@
     },
     "summary": {
       "en": "Common statistical/planning geographies.",
-      "zh-Hant": "由 Planning Department / C&SD 提供的「TPU, street block and village boundaries」資源。請參閱官方文件及最新上游條款。"
+      "zh-Hant": "由 Planning Department / C&SD 提供的「TPU, street block and village boundaries」資源。請參閱官方文件及來源的最新條款。"
     },
     "termsEvidenceState": "restriction-identified",
     "type": "official"
@@ -10116,7 +10116,7 @@
     },
     "summary": {
       "en": "Spatial estimates/projections.",
-      "zh-Hant": "由 Planning Department 提供的「Territorial population and employment spatial data」資源。請參閱官方文件及最新上游條款。"
+      "zh-Hant": "由 Planning Department 提供的「Territorial population and employment spatial data」資源。請參閱官方文件及來源的最新條款。"
     },
     "termsEvidenceState": "restriction-identified",
     "type": "official"
@@ -10137,7 +10137,7 @@
     },
     "summary": {
       "en": "Parcel geometry and identifiers.",
-      "zh-Hant": "由 Lands Department 提供的「Land-lot datasets」資源。請參閱官方文件及最新上游條款。"
+      "zh-Hant": "由 Lands Department 提供的「Land-lot datasets」資源。請參閱官方文件及來源的最新條款。"
     },
     "termsEvidenceState": "restriction-identified",
     "type": "official"
@@ -10158,7 +10158,7 @@
     },
     "summary": {
       "en": "Government land allocation data.",
-      "zh-Hant": "由 Lands Department 提供的「Government land allocations」資源。請參閱官方文件及最新上游條款。"
+      "zh-Hant": "由 Lands Department 提供的「Government land allocations」資源。請參閱官方文件及來源的最新條款。"
     },
     "termsEvidenceState": "restriction-identified",
     "type": "official"
@@ -10179,7 +10179,7 @@
     },
     "summary": {
       "en": "Published short-term tenancy data.",
-      "zh-Hant": "由 Lands Department 提供的「Short-term tenancies」資源。請參閱官方文件及最新上游條款。"
+      "zh-Hant": "由 Lands Department 提供的「Short-term tenancies」資源。請參閱官方文件及來源的最新條款。"
     },
     "termsEvidenceState": "restriction-identified",
     "type": "official"
@@ -10200,7 +10200,7 @@
     },
     "summary": {
       "en": "Building-licence information.",
-      "zh-Hant": "由 Lands Department 提供的「Building licences」資源。請參閱官方文件及最新上游條款。"
+      "zh-Hant": "由 Lands Department 提供的「Building licences」資源。請參閱官方文件及來源的最新條款。"
     },
     "termsEvidenceState": "restriction-identified",
     "type": "official"
@@ -10221,7 +10221,7 @@
     },
     "summary": {
       "en": "Slope boundaries and responsibility.",
-      "zh-Hant": "由 Geotechnical Engineering Office / Lands Department 提供的「Slope responsibility boundaries」資源。請參閱官方文件及最新上游條款。"
+      "zh-Hant": "由 Geotechnical Engineering Office / Lands Department 提供的「Slope responsibility boundaries」資源。請參閱官方文件及來源的最新條款。"
     },
     "termsEvidenceState": "restriction-identified",
     "type": "official"
@@ -10242,7 +10242,7 @@
     },
     "summary": {
       "en": "Registered owners' corporation data.",
-      "zh-Hant": "由 Home Affairs Department 提供的「Index of owners' corporations」資源。請參閱官方文件及最新上游條款。"
+      "zh-Hant": "由 Home Affairs Department 提供的「Index of owners' corporations」資源。請參閱官方文件及來源的最新條款。"
     },
     "termsEvidenceState": "ambiguity-identified",
     "type": "official"
@@ -10263,7 +10263,7 @@
     },
     "summary": {
       "en": "Private-building reference data.",
-      "zh-Hant": "由 Relevant departments 提供的「Private building database」資源。請參閱官方文件及最新上游條款。"
+      "zh-Hant": "由 Relevant departments 提供的「Private building database」資源。請參閱官方文件及來源的最新條款。"
     },
     "termsEvidenceState": "ambiguity-identified",
     "type": "official"
@@ -10284,7 +10284,7 @@
     },
     "summary": {
       "en": "Historical landslide locations.",
-      "zh-Hant": "由 Civil Engineering and Development Department 提供的「Landslide incident locations」資源。請參閱官方文件及最新上游條款。"
+      "zh-Hant": "由 Civil Engineering and Development Department 提供的「Landslide incident locations」資源。請參閱官方文件及來源的最新條款。"
     },
     "termsEvidenceState": "restriction-identified",
     "type": "official"
@@ -10305,7 +10305,7 @@
     },
     "summary": {
       "en": "Government, aided, DSS, ESF, special and other schools.",
-      "zh-Hant": "由 Education Bureau 提供的「School Location and Information APIs」資源。請參閱官方文件及最新上游條款。"
+      "zh-Hant": "由 Education Bureau 提供的「School Location and Information APIs」資源。請參閱官方文件及來源的最新條款。"
     },
     "termsEvidenceState": "ambiguity-identified",
     "type": "official"
@@ -10326,7 +10326,7 @@
     },
     "summary": {
       "en": "Nearby-school search from coordinates.",
-      "zh-Hant": "由 Education Bureau / Digital Policy Office 提供的「Nearest schools API」資源。請參閱官方文件及最新上游條款。"
+      "zh-Hant": "由 Education Bureau / Digital Policy Office 提供的「Nearest schools API」資源。請參閱官方文件及來源的最新條款。"
     },
     "termsEvidenceState": "ambiguity-identified",
     "type": "official"
@@ -10347,7 +10347,7 @@
     },
     "summary": {
       "en": "School registration/status information.",
-      "zh-Hant": "由 Education Bureau 提供的「School registration information」資源。請參閱官方文件及最新上游條款。"
+      "zh-Hant": "由 Education Bureau 提供的「School registration information」資源。請參閱官方文件及來源的最新條款。"
     },
     "termsEvidenceState": "ambiguity-identified",
     "type": "official"
@@ -10368,7 +10368,7 @@
     },
     "summary": {
       "en": "Locations and reference data.",
-      "zh-Hant": "由 Education Bureau / University Grants Committee 提供的「Higher education institutions」資源。請參閱官方文件及最新上游條款。"
+      "zh-Hant": "由 Education Bureau / University Grants Committee 提供的「Higher education institutions」資源。請參閱官方文件及來源的最新條款。"
     },
     "termsEvidenceState": "ambiguity-identified",
     "type": "official"
@@ -10389,7 +10389,7 @@
     },
     "summary": {
       "en": "Spatial school-net boundaries.",
-      "zh-Hant": "由 Education Bureau 提供的「Primary One school-net boundaries」資源。請參閱官方文件及最新上游條款。"
+      "zh-Hant": "由 Education Bureau 提供的「Primary One school-net boundaries」資源。請參閱官方文件及來源的最新條款。"
     },
     "termsEvidenceState": "ambiguity-identified",
     "type": "official"
@@ -10410,7 +10410,7 @@
     },
     "summary": {
       "en": "Secondary allocation net information.",
-      "zh-Hant": "由 Education Bureau 提供的「Secondary School Places Allocation net information」資源。請參閱官方文件及最新上游條款。"
+      "zh-Hant": "由 Education Bureau 提供的「Secondary School Places Allocation net information」資源。請參閱官方文件及來源的最新條款。"
     },
     "termsEvidenceState": "ambiguity-identified",
     "type": "official"
@@ -10431,7 +10431,7 @@
     },
     "summary": {
       "en": "DSS profiles and fees.",
-      "zh-Hant": "由 Education Bureau 提供的「DSS school information and fees」資源。請參閱官方文件及最新上游條款。"
+      "zh-Hant": "由 Education Bureau 提供的「DSS school information and fees」資源。請參閱官方文件及來源的最新條款。"
     },
     "termsEvidenceState": "ambiguity-identified",
     "type": "official"
@@ -10452,7 +10452,7 @@
     },
     "summary": {
       "en": "Primary-secondary through-train relationships.",
-      "zh-Hant": "由 Education Bureau 提供的「Through-train schools」資源。請參閱官方文件及最新上游條款。"
+      "zh-Hant": "由 Education Bureau 提供的「Through-train schools」資源。請參閱官方文件及來源的最新條款。"
     },
     "termsEvidenceState": "ambiguity-identified",
     "type": "official"
@@ -10473,7 +10473,7 @@
     },
     "summary": {
       "en": "Participating and non-participating lists.",
-      "zh-Hant": "由 Education Bureau 提供的「Kindergarten education-scheme lists」資源。請參閱官方文件及最新上游條款。"
+      "zh-Hant": "由 Education Bureau 提供的「Kindergarten education-scheme lists」資源。請參閱官方文件及來源的最新條款。"
     },
     "termsEvidenceState": "ambiguity-identified",
     "type": "official"
@@ -10494,7 +10494,7 @@
     },
     "summary": {
       "en": "Enrolment, schools, classes, special education, cross-boundary and SEN statistics.",
-      "zh-Hant": "由 Education Bureau / C&SD 提供的「Education statistics datasets」資源。請參閱官方文件及最新上游條款。"
+      "zh-Hant": "由 Education Bureau / C&SD 提供的「Education statistics datasets」資源。請參閱官方文件及來源的最新條款。"
     },
     "termsEvidenceState": "ambiguity-identified",
     "type": "official"
@@ -10515,7 +10515,7 @@
     },
     "summary": {
       "en": "Locations, services and providers.",
-      "zh-Hant": "由 Social Welfare Department 提供的「Residential care homes for the elderly」資源。請參閱官方文件及最新上游條款。"
+      "zh-Hant": "由 Social Welfare Department 提供的「Residential care homes for the elderly」資源。請參閱官方文件及來源的最新條款。"
     },
     "termsEvidenceState": "ambiguity-identified",
     "type": "official"
@@ -10536,7 +10536,7 @@
     },
     "summary": {
       "en": "Home/community-care teams.",
-      "zh-Hant": "由 Social Welfare Department 提供的「Home-care and community-care service teams」資源。請參閱官方文件及最新上游條款。"
+      "zh-Hant": "由 Social Welfare Department 提供的「Home-care and community-care service teams」資源。請參閱官方文件及來源的最新條款。"
     },
     "termsEvidenceState": "ambiguity-identified",
     "type": "official"
@@ -10557,7 +10557,7 @@
     },
     "summary": {
       "en": "Locations and contacts.",
-      "zh-Hant": "由 Social Welfare Department 提供的「Social Security Field Units」資源。請參閱官方文件及最新上游條款。"
+      "zh-Hant": "由 Social Welfare Department 提供的「Social Security Field Units」資源。請參閱官方文件及來源的最新條款。"
     },
     "termsEvidenceState": "ambiguity-identified",
     "type": "official"
@@ -10578,7 +10578,7 @@
     },
     "summary": {
       "en": "Family and child support units.",
-      "zh-Hant": "由 Social Welfare Department 提供的「Family and child welfare service units」資源。請參閱官方文件及最新上游條款。"
+      "zh-Hant": "由 Social Welfare Department 提供的「Family and child welfare service units」資源。請參閱官方文件及來源的最新條款。"
     },
     "termsEvidenceState": "ambiguity-identified",
     "type": "official"
@@ -10599,7 +10599,7 @@
     },
     "summary": {
       "en": "Locations and service information.",
-      "zh-Hant": "由 Social Welfare Department 提供的「Small group homes」資源。請參閱官方文件及最新上游條款。"
+      "zh-Hant": "由 Social Welfare Department 提供的「Small group homes」資源。請參閱官方文件及來源的最新條款。"
     },
     "termsEvidenceState": "ambiguity-identified",
     "type": "official"
@@ -10620,7 +10620,7 @@
     },
     "summary": {
       "en": "Outreach-team information.",
-      "zh-Hant": "由 Social Welfare Department 提供的「Street-sleeper outreach teams」資源。請參閱官方文件及最新上游條款。"
+      "zh-Hant": "由 Social Welfare Department 提供的「Street-sleeper outreach teams」資源。請參閱官方文件及來源的最新條款。"
     },
     "termsEvidenceState": "ambiguity-identified",
     "type": "official"
@@ -10641,7 +10641,7 @@
     },
     "summary": {
       "en": "Selected cross-boundary support units.",
-      "zh-Hant": "由 Social Welfare Department 提供的「Cross-boundary welfare services」資源。請參閱官方文件及最新上游條款。"
+      "zh-Hant": "由 Social Welfare Department 提供的「Cross-boundary welfare services」資源。請參閱官方文件及來源的最新條款。"
     },
     "termsEvidenceState": "ambiguity-identified",
     "type": "official"
@@ -10662,7 +10662,7 @@
     },
     "summary": {
       "en": "Service teams and participating institutions.",
-      "zh-Hant": "由 Social Welfare Department 提供的「Pre-primary institution social-work services」資源。請參閱官方文件及最新上游條款。"
+      "zh-Hant": "由 Social Welfare Department 提供的「Pre-primary institution social-work services」資源。請參閱官方文件及來源的最新條款。"
     },
     "termsEvidenceState": "ambiguity-identified",
     "type": "official"
@@ -10683,7 +10683,7 @@
     },
     "summary": {
       "en": "Specialised support services.",
-      "zh-Hant": "由 Social Welfare Department 提供的「Support services for persons with severe disabilities」資源。請參閱官方文件及最新上游條款。"
+      "zh-Hant": "由 Social Welfare Department 提供的「Support services for persons with severe disabilities」資源。請參閱官方文件及來源的最新條款。"
     },
     "termsEvidenceState": "ambiguity-identified",
     "type": "official"
@@ -10704,7 +10704,7 @@
     },
     "summary": {
       "en": "Application dates and waiting indicators.",
-      "zh-Hant": "由 Social Welfare Department 提供的「Elderly placement application and waiting status」資源。請參閱官方文件及最新上游條款。"
+      "zh-Hant": "由 Social Welfare Department 提供的「Elderly placement application and waiting status」資源。請參閱官方文件及來源的最新條款。"
     },
     "termsEvidenceState": "ambiguity-identified",
     "type": "official"
@@ -10725,7 +10725,7 @@
     },
     "summary": {
       "en": "Mobile/wireless subscriptions, traffic and indicators.",
-      "zh-Hant": "由 Office of the Communications Authority 提供的「Wireless statistics」資源。請參閱官方文件及最新上游條款。"
+      "zh-Hant": "由 Office of the Communications Authority 提供的「Wireless statistics」資源。請參閱官方文件及來源的最新條款。"
     },
     "termsEvidenceState": "ambiguity-identified",
     "type": "official"
@@ -10746,7 +10746,7 @@
     },
     "summary": {
       "en": "Sector penetration, usage and market indicators.",
-      "zh-Hant": "由 Office of the Communications Authority 提供的「Telecommunications indicators」資源。請參閱官方文件及最新上游條款。"
+      "zh-Hant": "由 Office of the Communications Authority 提供的「Telecommunications indicators」資源。請參閱官方文件及來源的最新條款。"
     },
     "termsEvidenceState": "ambiguity-identified",
     "type": "official"
@@ -10767,7 +10767,7 @@
     },
     "summary": {
       "en": "Number ranges, service types and assignments.",
-      "zh-Hant": "由 Office of the Communications Authority 提供的「Hong Kong numbering plan and assignments」資源。請參閱官方文件及最新上游條款。"
+      "zh-Hant": "由 Office of the Communications Authority 提供的「Hong Kong numbering plan and assignments」資源。請參閱官方文件及來源的最新條款。"
     },
     "termsEvidenceState": "ambiguity-identified",
     "type": "official"
@@ -10788,7 +10788,7 @@
     },
     "summary": {
       "en": "Broadband/internet subscription data.",
-      "zh-Hant": "由 Office of the Communications Authority 提供的「Internet subscription statistics」資源。請參閱官方文件及最新上游條款。"
+      "zh-Hant": "由 Office of the Communications Authority 提供的「Internet subscription statistics」資源。請參閱官方文件及來源的最新條款。"
     },
     "termsEvidenceState": "ambiguity-identified",
     "type": "official"
@@ -10809,7 +10809,7 @@
     },
     "summary": {
       "en": "Fixed-line service/network statistics.",
-      "zh-Hant": "由 Office of the Communications Authority 提供的「Wireline telecommunications statistics」資源。請參閱官方文件及最新上游條款。"
+      "zh-Hant": "由 Office of the Communications Authority 提供的「Wireline telecommunications statistics」資源。請參閱官方文件及來源的最新條款。"
     },
     "termsEvidenceState": "ambiguity-identified",
     "type": "official"
@@ -10830,7 +10830,7 @@
     },
     "summary": {
       "en": "Public Wi-Fi usage/access statistics.",
-      "zh-Hant": "由 Digital Policy Office / providers 提供的「Public Wi-Fi usage/statistics」資源。請參閱官方文件及最新上游條款。"
+      "zh-Hant": "由 Digital Policy Office / providers 提供的「Public Wi-Fi usage/statistics」資源。請參閱官方文件及來源的最新條款。"
     },
     "termsEvidenceState": "ambiguity-identified",
     "type": "official"
@@ -10851,7 +10851,7 @@
     },
     "summary": {
       "en": "Mapped access points.",
-      "zh-Hant": "由 Office of the Communications Authority / Digital Policy Office 提供的「Registered Wi-Fi access-point locations」資源。請參閱官方文件及最新上游條款。"
+      "zh-Hant": "由 Office of the Communications Authority / Digital Policy Office 提供的「Registered Wi-Fi access-point locations」資源。請參閱官方文件及來源的最新條款。"
     },
     "termsEvidenceState": "ambiguity-identified",
     "type": "official"
@@ -10872,7 +10872,7 @@
     },
     "summary": {
       "en": "DTT coverage/reference information.",
-      "zh-Hant": "由 Office of the Communications Authority 提供的「Digital terrestrial television coverage」資源。請參閱官方文件及最新上游條款。"
+      "zh-Hant": "由 Office of the Communications Authority 提供的「Digital terrestrial television coverage」資源。請參閱官方文件及來源的最新條款。"
     },
     "termsEvidenceState": "ambiguity-identified",
     "type": "official"
@@ -10893,7 +10893,7 @@
     },
     "summary": {
       "en": "ISP and selected telecom licensee registers.",
-      "zh-Hant": "由 Office of the Communications Authority 提供的「ISP and telecommunications licensee lists」資源。請參閱官方文件及最新上游條款。"
+      "zh-Hant": "由 Office of the Communications Authority 提供的「ISP and telecommunications licensee lists」資源。請參閱官方文件及來源的最新條款。"
     },
     "termsEvidenceState": "ambiguity-identified",
     "type": "official"
@@ -10914,7 +10914,7 @@
     },
     "summary": {
       "en": "Weather, traffic and experimental smart-city functions.",
-      "zh-Hant": "由 Digital Policy Office / departments 提供的「Smart lamppost open-data bundle」資源。請參閱官方文件及最新上游條款。"
+      "zh-Hant": "由 Digital Policy Office / departments 提供的「Smart lamppost open-data bundle」資源。請參閱官方文件及來源的最新條款。"
     },
     "termsEvidenceState": "ambiguity-identified",
     "type": "official"
@@ -10935,7 +10935,7 @@
     },
     "summary": {
       "en": "Historical compartment/environment sensor measurements.",
-      "zh-Hant": "由 Digital Policy Office 提供的「Smart lamppost compartment-sensor data」資源。請參閱官方文件及最新上游條款。"
+      "zh-Hant": "由 Digital Policy Office 提供的「Smart lamppost compartment-sensor data」資源。請參閱官方文件及來源的最新條款。"
     },
     "termsEvidenceState": "ambiguity-identified",
     "type": "official"

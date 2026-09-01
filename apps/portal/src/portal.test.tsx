@@ -30,24 +30,24 @@ describe("public status and developer portal", () => {
     expect(await screen.findByRole("heading", { name: "Public data status" })).toBeVisible();
     expect(screen.getByText("Reviewed schema impact")).toBeVisible();
     expect(screen.queryByText("Internal note")).not.toBeInTheDocument();
-    expect(screen.getByText(/not provider endorsement/i)).toBeVisible();
-    expect(screen.getByText(/self-hosted observe profile/i)).toBeVisible();
+    expect(screen.getByText(/not maintained or endorsed/i)).toBeVisible();
+    expect(screen.getByText(/self-hosted API health checks mode/i)).toBeVisible();
   });
 
-  it("distinguishes terms evidence from runtime activation", async () => {
+  it("distinguishes a terms review from source enablement", async () => {
     render(
       <PortalApp api={api()} operatingProfile="observe" initialEntries={["/sources"]} />,
     );
 
-    expect(await screen.findByText(/terms evidence: official terms linked/i)).toBeVisible();
-    expect(screen.getByText(/source access: not activated/i)).toBeVisible();
+    expect(await screen.findByText(/terms review: official terms linked/i)).toBeVisible();
+    expect(screen.getByText(/source access: not enabled/i)).toBeVisible();
     expect(screen.queryByText(/approved for use/i)).not.toBeInTheDocument();
   });
 
   it("labels an expired response as a last-known snapshot", async () => {
     render(<PortalApp api={api("2026-08-27T01:00:00Z")} now={() => new Date("2026-08-28T10:30:00Z")} initialEntries={["/"]} />);
-    expect(await screen.findByText("Last-known snapshot")).toBeVisible();
-    expect(screen.getByText(/Status data is older than the publication window/)).toBeVisible();
+    expect(await screen.findByText("Last-known update")).toBeVisible();
+    expect(screen.getByText(/This status is older than expected/)).toBeVisible();
   });
 
   it("serves the last complete reviewed snapshot during an API outage", async () => {
@@ -71,7 +71,7 @@ describe("public status and developer portal", () => {
 
     render(<PortalApp api={cachedApi} now={() => new Date("2026-08-28T10:30:00Z")} initialEntries={["/"]} />);
 
-    expect(await screen.findByText("Last-known snapshot")).toBeVisible();
+    expect(await screen.findByText("Last-known update")).toBeVisible();
     expect(screen.getByText("DATA.GOV.HK")).toBeVisible();
   });
 
@@ -81,7 +81,7 @@ describe("public status and developer portal", () => {
     await screen.findByRole("heading", { name: "Public data status" });
     await user.click(screen.getByRole("button", { name: "繁體中文" }));
     expect(screen.getByRole("heading", { name: "公共數據狀態" })).toBeVisible();
-    expect(screen.getByText(/獨立監察/)).toBeVisible();
+    expect(screen.getByText(/獨立檢查/)).toBeVisible();
   });
 
   it("keeps status summary, notice, incidents and sources in the mobile reading order", async () => {

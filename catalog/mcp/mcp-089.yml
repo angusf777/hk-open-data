@@ -18,11 +18,11 @@ provider:
 categories:
 - security
 tags:
-- P01
-- P02
-- P05
-- P10
-- P14
+- data-access
+- legal-regulatory
+- supplier-risk
+- healthcare-services
+- api-monitoring
 protocols:
 - mcp
 formats:
@@ -43,8 +43,8 @@ termsEvidence:
   state: not-reviewed
   checkedAt: '2026-08-31'
   note:
-    en: No current project review of upstream terms is recorded.
-    zh-Hant: 本項目尚未記錄對上游條款的當前審查。
+    en: No current terms review is recorded.
+    zh-Hant: 本項目尚未記錄現行條款的查核結果。
   attribution: null
   restrictions: []
 integrations:

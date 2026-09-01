@@ -108,11 +108,14 @@ def render_ledger(root: Path) -> str:
         raise RuntimeError(f"required import roots are missing: {', '.join(report['missing'])}")
 
     lines = [
-        "# P01/P14 migration ledger",
+        "# Migration record for the data access and API health tools",
         "",
-        "This ledger records the source-relative files selected by the closed migration allowlist.",
-        "Absolute source paths and source payloads are intentionally omitted. A hash identifies",
-        "mechanical input; later public-boundary edits are reviewable in Git.",
+        "This historical ledger records source-relative files selected by a fixed migration list.",
+        "Absolute source paths and source payloads are intentionally omitted.",
+        "A hash identifies each mechanical input. Later publication-safety edits are reviewable",
+        "in Git. The `P01` and `P14` prefixes below are legacy file and contract identifiers.",
+        "They are retained so recorded paths and hashes remain accurate and refer to the data",
+        "access and API health components, respectively.",
         "",
         "## Imported source inventory",
         "",
@@ -122,7 +125,7 @@ def render_ledger(root: Path) -> str:
     for relative in report["imported"]:
         lines.append(
             f"| `{relative}` | `{relative}` | `{sha256(root / relative)}` | import | "
-            "Project-authored runtime source or test inside the closed allowlist. |"
+            "Project-authored runtime source or test selected by the fixed migration list. |"
         )
 
     lines.extend(

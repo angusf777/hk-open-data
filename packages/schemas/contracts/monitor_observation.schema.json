@@ -1,7 +1,7 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "urn:hk-public-data:schema:monitor-observation:1",
-  "title": "P14 Monitor Observation",
+  "title": "HK Open Data health-check observation",
   "type": "object",
   "required": ["observation_id", "monitor_id", "started_at", "finished_at", "outcome", "check_results", "latency_ms", "evidence_hash", "baseline_version", "seeded_failure"],
   "properties": {

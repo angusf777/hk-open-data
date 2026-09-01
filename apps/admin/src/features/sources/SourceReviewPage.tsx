@@ -107,14 +107,14 @@ export function SourceReviewPage() {
           <dl className="definition-list">
             <div>
               <dt>Source group</dt>
-              <dd>{item.sourceGroupId ?? "P14-only; no P01 connector"}</dd>
+              <dd>{item.sourceGroupId ?? "Health-check only; no data connector"}</dd>
             </div>
             <div>
               <dt>Connector state</dt>
               <dd>{sourceApproved ? "Approval recorded; version activation required" : "Quarantined until approval"}</dd>
             </div>
             <div>
-              <dt>Terms evidence</dt>
+              <dt>Terms review</dt>
               <dd>{item.termsEvidenceState ?? "not-reviewed"}</dd>
             </div>
             <div>
@@ -162,11 +162,11 @@ export function SourceReviewPage() {
       {sourceApproved && item.sourceGroupId !== null ? (
         <section className="activation-panel" aria-labelledby="connector-heading">
           <div>
-            <p className="eyebrow">CONNECTOR OPERATOR</p>
+            <p className="eyebrow">CONNECTOR SETUP</p>
             <h2 id="connector-heading">Activate an exact connector version</h2>
             <p>
-              This step creates the scheduler job only after the fixture suite and operator-reviewed
-              live sandbox probe have evidence URLs. The worker rechecks activation before every run.
+              This step creates the scheduled job only after the synthetic tests and reviewed live
+              sandbox check have result URLs. The worker rechecks the source settings before every run.
             </p>
           </div>
           <form

@@ -1,8 +1,8 @@
 # v0.1.0 pre-publication audit
 
 Date: 2026-08-31  
-Scope: public repository, static catalogue, optional self-hosted P01/P14 toolkit, and metadata-only
-release package
+Scope: public repository, static catalogue, optional self-hosted data access and API health tools,
+and metadata-only release package
 
 This audit is a release checklist, not legal advice, provider authorization, a production service
 qualification, or an independent security certification. Provider terms, dataset-specific terms,
@@ -11,20 +11,21 @@ technical controls, and applicable law remain controlling.
 ## Product boundary
 
 - The public product is a static, bilingual metadata catalogue and open-source self-hosting toolkit.
-- The project does not host, proxy, sell, sublicense, or redistribute upstream API or dataset
+- The project does not host, proxy, sell, sublicense, or redistribute provider API or dataset
   payloads.
-- The default `catalogue` profile performs no provider requests.
-- `observe` and `fabric` are explicit operator choices; all seeded sources and connectors remain
-  inactive.
-- `observe` stores bounded metadata and digests. `fabric` permits raw evidence only after the
-  operator records source-specific approval and configures retention and storage controls.
+- The default `catalogue` mode makes no requests to listed data providers.
+- API health checks (`observe`) and data access (`fabric`) must be selected explicitly; all included
+  sources and connectors remain inactive.
+- API health checks store bounded metadata and fingerprints. Data access may store complete
+  responses only after the person running the toolkit records a source-specific review and
+  configures retention and storage controls.
 - The Pages workflow publishes only `apps/catalog/dist`; it contains no server runtime, secrets,
   provider payloads, or analytics.
 
-## Catalogue and rights evidence
+## Catalogue and terms reviews
 
 - 521 records: 265 official, 145 external, and 111 MCP candidates.
-- Rights-evidence states: 330 `ambiguity-identified`, 111 `not-reviewed`, and 80
+- Terms-review states: 330 `ambiguity-identified`, 111 `not-reviewed`, and 80
   `restriction-identified`.
 - All 521 Traditional Chinese descriptions are marked `seeded`; no human-review claim is made.
 - Evidence labels describe dated source research. They never mean commercial use, caching,
@@ -37,15 +38,15 @@ technical controls, and applicable law remain controlling.
   traffic, imagery, and TLS conditions and links the CSDI terms.
 
 Link reachability is operational evidence only. It is neither a rights determination nor an uptime
-promise, and any upstream page can change after this audit.
+promise, and any provider page can change after this audit.
 
 ## Runtime safeguards
 
 - API, worker, MCP, portal, and admin processes run as non-root users.
 - Public edge exposure is restricted to the configured web entry points; PostgreSQL and object
   storage are not published by the release Compose topology.
-- Provider fetching is fail-closed, SSRF guarded, size and timeout bounded, and gated by profile,
-  source activation, approval, and immutable rule-version evidence.
+- External requests are off by default, protected against SSRF, bounded by size and timeout, and
+  require the relevant mode, source activation, review, and recorded rule version.
 - REST and SDK surfaces are bounded; the eleven MCP tools are read-only.
 - Synthetic connector fixtures carry checksums and provenance. No provider payload is included in
   the repository or release artifacts.

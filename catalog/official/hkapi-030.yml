@@ -8,7 +8,7 @@ name:
   zh-Hant: New Lantao Bus v2 APIs
 summary:
   en: Routes, stops by route and ETA.
-  zh-Hant: 由 Transport Department / New Lantao Bus 提供的「New Lantao Bus v2 APIs」資源。請參閱官方文件及最新上游條款。
+  zh-Hant: 由 Transport Department / New Lantao Bus 提供的「New Lantao Bus v2 APIs」資源。請參閱官方文件及來源的最新條款。
 translationStatus: seeded
 provider:
   name:

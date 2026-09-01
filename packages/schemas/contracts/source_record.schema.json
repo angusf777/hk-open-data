@@ -1,7 +1,7 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "urn:hk-public-data:schema:source-record:1",
-  "title": "P01 Source Record",
+  "title": "HK Open Data source record",
   "type": "object",
   "required": [
     "source_record_id",

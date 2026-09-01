@@ -6,7 +6,7 @@ It calls only the
 platform REST service; it does not fetch provider URLs, return raw object bodies, or expose writes.
 
 The HTTP container is an internal/loopback service. Any internet-facing self-hosted deployment must
-place it behind operator-controlled authentication, pass a short-lived audience-bound bearer token
+place it behind authentication you control, pass a short-lived audience-bound bearer token
 for each authorized caller, and keep the container port private.
 
 ## Configuration
@@ -34,7 +34,7 @@ pnpm --filter @hk-open-data/mcp start:http
 
 The HTTP transport forwards each request's bearer token to the REST API. It does not use a
 process-wide platform token, so REST and MCP apply the same audience, expiry and scope policy for
-the same caller. Place any public endpoint behind an operator-controlled identity-aware gateway.
+the same caller. Place any public endpoint behind an identity-aware gateway you manage.
 
 The server binds `127.0.0.1:3100/mcp` and applies localhost Host and Origin validation. Put an
 authenticated, TLS-terminating gateway in front of it for any remote deployment.

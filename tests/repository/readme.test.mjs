@@ -8,7 +8,7 @@ for (const file of ["README.md", "README.zh-HK.md"]) {
     assert.match(text, /catalog|目錄/i);
     assert.match(text, /docker compose|pnpm/i);
     assert.match(text, /independent|獨立/i);
-    assert.match(text, /upstream|上游/i);
+    assert.match(text, /current terms|現行條款/i);
     assert.match(text, /correction|更正/i);
   });
 }

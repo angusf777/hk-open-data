@@ -147,7 +147,7 @@ export class RestPlatformClient implements PlatformReadClient {
     const limitations = strings(item["limitations"]);
     if (includesTermsEvidence(payload)) {
       limitations.push(
-        "Terms evidence is informational, not permission for commercial use, caching, or redistribution.",
+        "The terms review is informational and does not grant permission for commercial use, caching, or redistribution.",
       );
     }
     return {

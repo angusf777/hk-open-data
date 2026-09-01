@@ -1,4 +1,4 @@
-# P01/P14 First-Party MCP Tool Contract
+# HK Open Data read-only MCP tool contract
 
 **Contract version:** `2026-08-28.v1`  
 **Runtime rule:** read-only; no third-party MCP dependency
@@ -137,6 +137,6 @@ Any future write workflow requires a separate prepare/show/approve/commit contra
 
 - Tool names and input schemas are fingerprinted at build time.
 - A startup self-test compares the exposed tool list with the pinned contract.
-- A mismatch prevents production readiness and raises a P14 incident.
+- A mismatch prevents production readiness and raises an API health incident.
 - REST and MCP calls for the same authorized object must return the same object version and evidence IDs.
 - Authorization, pagination, size and rate-limit tests apply equally to REST and MCP.

@@ -54,4 +54,4 @@ do not contact provider hosts.
 
 Do not copy provider datasets, substantial documentation, credentials, personal data, internal
 research files, or private correspondence into the catalogue. See
-[Source Rights and Evidence](../governance/SOURCE_RIGHTS.md) before changing a terms-evidence state.
+[Source terms and permissions](../governance/SOURCE_RIGHTS.md) before changing a terms-review state.

@@ -4,10 +4,10 @@ export function MethodologyPage() {
       <p className="public-eyebrow">HOW STATUS IS PRODUCED</p>
       <h1>Methodology</h1>
       <p>
-        When a local operator explicitly activates a source, HK Open Data Runtime can observe its
-        public endpoint or publication path. The observe profile stores response digests and
-        metadata; the fabric profile can preserve raw evidence only after separate source-specific
-        approval.
+        When you enable a source, the self-hosted toolkit can check its public endpoint or
+        publication path. API health check mode stores a SHA-256 fingerprint and summary
+        measurements, not the response content. Data access mode can store complete responses only
+        when you enable storage for that source after reviewing its terms.
       </p>
       <h2>What status means</h2>
       <dl>
@@ -18,8 +18,9 @@ export function MethodologyPage() {
       </dl>
       <h2>Limits</h2>
       <p>
-        This is independent monitoring, not a provider service, endorsement, or guarantee. Runtime
-        status reflects one operator&apos;s configured checks and does not determine legal permission.
+        These are independent checks, not a provider service, endorsement, or guarantee. Results
+        depend on the checks configured by the person running the toolkit and do not grant permission
+        to use a source.
       </p>
     </main>
   );

@@ -8,7 +8,7 @@ name:
   zh-Hant: SatRef GNSS correction streams
 summary:
   en: Survey-grade GNSS corrections.
-  zh-Hant: 由 Lands Department 提供的「SatRef GNSS correction streams」資源。請參閱官方文件及最新上游條款。
+  zh-Hant: 由 Lands Department 提供的「SatRef GNSS correction streams」資源。請參閱官方文件及來源的最新條款。
 translationStatus: seeded
 provider:
   name:

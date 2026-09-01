@@ -8,7 +8,7 @@ name:
   zh-Hant: Nearest schools API
 summary:
   en: Find nearby schools from coordinates and filters.
-  zh-Hant: 由 Digital Policy Office / Education Bureau 提供的「Nearest schools API」資源。請參閱官方文件及最新上游條款。
+  zh-Hant: 由 Digital Policy Office / Education Bureau 提供的「Nearest schools API」資源。請參閱官方文件及來源的最新條款。
 translationStatus: seeded
 provider:
   name:

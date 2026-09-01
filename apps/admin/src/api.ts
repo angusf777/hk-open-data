@@ -178,7 +178,7 @@ export function createFixtureAdminApi(): AdminApi {
     async listTargets() { return [{ id: "P14-M001", sourceId: "HKAPI-001", provider: "Digital Policy Office", outcome: "pass", lastChecked: "2026-08-28T10:20:00Z", activation: "approved", publicVisibility: "public", baselineVersion: 1, version: 2 }]; },
     async listIncidents() { return [{ id: "INC-2026-000143", sourceId: "HKAPI-021", severity: "major", status: "open", openedAt: "2026-08-28T09:14:00Z", version: 2, summary: "Required field removed from the reviewed WFS schema.", publicState: "review_required" }]; },
     async listDeliveries() { return [{ id: "DEL-000001", eventType: "source.changed", endpoint: "subscriber endpoint", status: "retry", attempts: 2, nextAttempt: "2026-08-28T10:30:00Z" }]; },
-    async listAudit() { return [{ id: "AUD-000001", actor: "source-reviewer", action: "source.approved", targetId: "HKAPI-001", reason: "Rights evidence reviewed", occurredAt: "2026-08-28T09:00:00Z" }]; },
+    async listAudit() { return [{ id: "AUD-000001", actor: "source-reviewer", action: "source.approved", targetId: "HKAPI-001", reason: "Source terms reviewed", occurredAt: "2026-08-28T09:00:00Z" }]; },
     async decideSource() { return undefined; },
     async activateTarget() { return undefined; },
     async activateConnector() { return undefined; },

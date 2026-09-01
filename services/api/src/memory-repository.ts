@@ -434,7 +434,7 @@ export class MemoryPlatformRepository implements PlatformRepository {
     ) {
       throw new RepositoryError(
         "INVALID_STATE",
-        "Monitor activation requires an effective P14 quality-monitoring approval",
+        "Enabling a health check requires a current source review for API monitoring",
       );
     }
     if (input.evidenceObservationIds.length === 0) {

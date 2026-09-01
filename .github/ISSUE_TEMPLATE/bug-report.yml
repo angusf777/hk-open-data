@@ -25,8 +25,8 @@ body:
   - type: dropdown
     id: profile
     attributes:
-      label: Operating profile
-      options: [Static catalogue, Catalogue profile, Observe profile, Fabric profile, Not applicable]
+      label: Toolkit mode
+      options: [Static catalogue, Catalogue only, API health checks, Data access, Not applicable]
     validations:
       required: true
   - type: textarea

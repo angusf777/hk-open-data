@@ -16,7 +16,7 @@ RUNBOOKS = {
 
 
 def main() -> int:
-    parser = argparse.ArgumentParser(description="Validate a P01/P14 operational runbook")
+    parser = argparse.ArgumentParser(description="Validate an HK Open Data toolkit runbook")
     parser.add_argument("runbook", choices=sorted(RUNBOOKS))
     parser.add_argument("--dry-run", action="store_true", required=True)
     arguments = parser.parse_args()

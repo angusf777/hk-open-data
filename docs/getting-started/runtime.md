@@ -1,22 +1,24 @@
-# Optional self-hosted runtime
+# Self-host the developer toolkit
 
 [繁體中文版](runtime.zh-HK.md)
 
-The P01/P14 runtime is an optional local toolkit for operators who want normalized read access or
-API-quality observations. It is not a hosted service, data resale product, upstream authorization,
-or legal conclusion. The static catalogue works without Docker and remains the safe default.
+The optional toolkit lets you normalize data from selected sources or monitor their API health on
+infrastructure you control. This project does not run a hosted API or grant permission to use any
+listed source. The static catalogue works without Docker and remains the default.
 
-## Fail-closed profiles
+## Choose what to run
 
-| Profile | Supported command | Provider traffic | Evidence retained |
+The profile names below are command-line settings. All external data connections start switched off.
+
+| Mode | Command | Requests to external providers | What is stored |
 | --- | --- | --- | --- |
-| `catalogue` | `make runtime-catalogue` | None | None; serves committed catalogue artifacts |
-| `observe` | `make runtime-observe` | Possible only after an operator activates a source | SHA-256 digest and derived quality metadata; no response body |
-| `fabric` | `make runtime-fabric` | Possible only after source and connector activation | Raw evidence only where the operator has recorded compatible source approval |
+| Catalogue only (`catalogue`) | `make runtime-catalogue` | None | Nothing; serves files included in the repository |
+| API health checks (`observe`) | `make runtime-observe` | Only after you enable an individual source | SHA-256 fingerprint and summary quality measurements; no response content |
+| Data access with full-response storage (`fabric`) | `make runtime-fabric` | Only after you enable both the source and its connector | Complete source responses for sources whose terms and storage settings you have reviewed |
 
 Plain `docker compose up` enables only `catalog`. Runtime, database, worker, MCP, admin, telemetry,
-and object-store services all have explicit Compose profiles. The `observe` topology has no object
-store. The `fabric` worker refuses to start without both raw-evidence opt-in and complete object-store
+and object-store services require an explicit Compose profile. API health check mode has no object
+store. Full-response storage will not start until you opt in and provide a complete object-store
 configuration.
 
 ## 1. Run the catalogue safely
@@ -26,11 +28,12 @@ make runtime-catalogue
 open http://127.0.0.1:8080/hk-open-data/
 ```
 
-This path does not read `.env`, contact providers, start PostgreSQL, or start the P01/P14 workers.
+This path does not read `.env`, contact external providers, start PostgreSQL, or start the data and
+health-check workers.
 
 ## 2. Prepare a runtime environment
 
-Only continue if you intend to operate the runtime and have reviewed the sources you may activate.
+Only continue if you intend to run the toolkit and have reviewed the sources you may enable.
 
 ```bash
 cp .env.example .env
@@ -46,10 +49,10 @@ PY
 ```
 
 Copy the generated values into the ignored `.env`. Do not commit or paste it into an issue. The
-example identity URLs are deliberately non-functional; configure an operator-owned OIDC provider
-before using authenticated administration outside isolated local evaluation.
+example identity URLs are deliberately non-functional; configure your own OIDC provider before
+using authenticated administration outside isolated local evaluation.
 
-## 3. Start digest-only observation
+## 3. Start API health checks
 
 ```bash
 make runtime-observe
@@ -60,24 +63,24 @@ Local endpoints bind to loopback only:
 - API: `http://127.0.0.1:3000`
 - read-only MCP: `http://127.0.0.1:3100/mcp`
 - public runtime portal: `http://127.0.0.1:4174`
-- operator UI: `http://127.0.0.1:4175`
+- administration UI: `http://127.0.0.1:4175`
 - Prometheus: `http://127.0.0.1:9090`
 
-Starting `observe` opts the worker into provider-capable mode, but all seeded sources, monitor
-targets, and connectors remain pending activation. The worker keeps no provider response body: it
-stores a `digest://sha256/...` reference plus derived observation metadata. Source activation is a
-separate, audited operator action and must not be inferred from a catalogue terms-evidence label.
+Starting `observe` makes health checks available, but every included source, check, and connector
+remains disabled. When you enable a source, the worker stores a `digest://sha256/...` fingerprint
+plus summary measurements and discards the response content. Enabling a connection is a separate,
+logged action; a catalogue terms-review label never enables a source or grants permission to use it.
 
-## 4. Start raw-evidence fabric mode
+## 4. Start data access with full-response storage
 
 ```bash
 make runtime-fabric
 ```
 
-`fabric` starts a digest-pinned RustFS object store, enables versioning and object lock, blocks
-public access, and then starts the raw-evidence worker. The worker still checks the exact source and
-connector activation before every job. Retention and legal holds remain the operator's
-responsibility; object lock can make deletion intentionally difficult.
+`fabric` starts a version-pinned RustFS object store, enables versioning and object lock, blocks
+public access, and then starts the full-response worker. The worker checks the exact source and
+connector settings before every job. You are responsible for choosing an appropriate retention
+period and handling any legal hold; object lock can make deletion intentionally difficult.
 
 ## Stop and clean up
 
@@ -93,21 +96,21 @@ does not automate destructive volume deletion.
 
 ```bash
 make verify-runtime       # unit, contract, types, builds, lint, static security checks
-make verify-integrated    # catalogue and opted-in observe containers; no live source activation
+make verify-integrated    # catalogue and API health containers; no live source is enabled
 make verify-all           # catalogue, site, runtime, browser, boundary and secret checks
 ```
 
 Integrated tests use synthetic fixtures declared in `tests/fixtures/connectors/manifest.json`.
-They start no approved connector and do not make a live provider request. Local green tests prove
-only the checked-out code and test environment. They do not qualify an internet deployment,
-approve a source, or establish commercial-use, caching, redistribution, scraping, privacy, or
-other legal rights.
+They start no source connector and do not make a live provider request. Passing local tests proves
+only the checked-out code and test environment. It does not prove an internet deployment is ready
+for production, grant permission to use a source, or establish commercial-use, caching,
+redistribution, scraping, privacy, or other legal rights.
 
 ## Operating boundaries
 
 - Verify current provider and dataset-specific terms before enabling a source.
 - Use a source-specific request rate, retention period, attribution, and purpose.
-- Keep the runtime on a private network unless you add real OIDC, TLS, gateway policy, backups,
-  monitoring, and an operator-owned security review.
-- Treat `termsEvidenceState` as dated research, not permission or legal advice.
+- Keep the toolkit on a private network unless you add real OIDC, TLS, gateway policy, backups,
+  monitoring, and a security review for your deployment.
+- Treat `termsEvidenceState` as a dated terms review, not permission or legal advice.
 - Use the runbooks in `docs/runbooks/` for local incidents, revocation, correction, and restore.

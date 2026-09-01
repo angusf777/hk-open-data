@@ -8,7 +8,7 @@ name:
   zh-Hant: Parking Vacancy Data — one-stop API
 summary:
   en: Consolidated car-park information and vacancies; filter by vehicle, ID and map extent.
-  zh-Hant: 由 Digital Policy Office / Transport Department / EKEO 提供的「Parking Vacancy Data — one-stop API」資源。請參閱官方文件及最新上游條款。
+  zh-Hant: 由 Digital Policy Office / Transport Department / EKEO 提供的「Parking Vacancy Data — one-stop API」資源。請參閱官方文件及來源的最新條款。
 translationStatus: seeded
 provider:
   name:

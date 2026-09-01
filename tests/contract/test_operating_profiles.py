@@ -18,10 +18,10 @@ def test_default_profile_cannot_access_providers() -> None:
     assert configuration.evidence_mode == "none"
 
 
-def test_catalogue_rejects_provider_or_raw_evidence_opt_in() -> None:
-    with pytest.raises(ValueError, match="catalogue profile"):
+def test_catalogue_rejects_external_requests_or_response_storage() -> None:
+    with pytest.raises(ValueError, match="catalogue-only mode"):
         load_configuration(BASE_ENV | {"HKOD_ENABLE_PROVIDER_ACCESS": "true"})
-    with pytest.raises(ValueError, match="catalogue profile"):
+    with pytest.raises(ValueError, match="catalogue-only mode"):
         load_configuration(BASE_ENV | {"HKOD_ENABLE_RAW_EVIDENCE": "true"})
 
 

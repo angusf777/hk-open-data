@@ -14,13 +14,13 @@ variable "enable_runtime" {
 }
 
 variable "enable_raw_evidence" {
-  description = "Explicitly enable raw evidence storage for the fabric profile."
+  description = "Explicitly enable full-response storage for data access mode."
   type        = bool
   default     = false
 }
 
 variable "source_approval_inputs" {
-  description = "Operator-maintained source approval references required for raw evidence."
+  description = "Source review references required for full-response storage."
   type        = list(string)
   default     = []
 }
@@ -49,7 +49,7 @@ variable "database" {
 }
 
 variable "object_store" {
-  description = "S3-compatible immutable raw-evidence store."
+  description = "S3-compatible, immutable full-response store."
   type = object({
     endpoint             = string
     bucket               = string
@@ -74,7 +74,7 @@ variable "identity" {
 }
 
 variable "domains" {
-  description = "Operator-controlled origins. Public deployments must terminate TLS."
+  description = "Origins managed by this deployment. Public deployments must terminate TLS."
   type = object({
     api    = string
     admin  = string

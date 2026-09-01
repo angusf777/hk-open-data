@@ -7,13 +7,14 @@
 
 > **Independent community project.** This repository is not operated by, affiliated with, or
 > endorsed by the Hong Kong Government or any listed provider. It is a catalogue and optional
-> self-hosted toolkit—not a hosted data service. Upstream sources and their current terms always
+> self-hosted toolkit—not a hosted data service. Original sources and their current terms always
 > control.
 
 ## Hong Kong public data, mapped and runnable.
 
 Find official APIs, useful external data sources, and MCP projects in one searchable, bilingual
-catalogue. Every record keeps its provenance, verification date, and terms-evidence state visible.
+catalogue. Every record shows where the information came from, when it was checked, and what we
+found about the source's terms of use.
 
 <!-- catalog-counts:start -->
 **521 resources** · **265 official** · **145 external** · **111 MCP candidates**
@@ -22,7 +23,7 @@ catalogue. Every record keeps its provenance, verification date, and terms-evide
 [**Browse the live catalogue →**](https://angusf777.github.io/hk-open-data/) ·
 [Run it locally](#run-the-catalogue-locally) · [繁體中文版](README.zh-HK.md)
 
-![The HK Open Data Civic Signal catalogue showing search, evidence-labelled resources, and filters.](docs/images/catalogue-home.png)
+![The HK Open Data catalogue showing search, terms-review labels, and filters.](docs/images/catalogue-home.png)
 
 ## Why this project exists
 
@@ -30,15 +31,15 @@ Hong Kong public-data discovery is fragmented across portals, departmental pages
 services, and community tools. HK Open Data turns that landscape into reviewable public metadata:
 
 - **Discover:** search one bilingual index instead of maintaining private bookmark lists.
-- **Evaluate:** see provider, access method, protocol, last check, and rights-evidence state before
-  opening an upstream source.
-- **Build:** generate deterministic JSON for local applications and optionally run the fail-closed,
-  self-hosted P01/P14 toolkit.
+- **Evaluate:** see the provider, access method, protocol, last check, and terms review before
+  opening a source.
+- **Build:** generate consistent JSON for local applications or run the optional developer toolkit
+  on your own computer.
 - **Improve:** correct one YAML record through a small, source-backed pull request.
 
 The static site reads only repository-generated JSON. It does not call providers, copy their
 datasets, create accounts, or track visitors. External navigation happens only when a user chooses
-an upstream link.
+a source link.
 
 ## Run the catalogue locally
 
@@ -68,38 +69,37 @@ The YAML records in [`catalog/`](catalog/) are authoritative for this repository
 including a compact search index, lives in [`catalog/generated/`](catalog/generated/). The
 [field reference](docs/resources/CATALOGUE_FIELDS.md) explains every value.
 
-## Evidence labels are not legal conclusions
+## Check each source before you use it
 
-`termsEvidence` reports what was found at a source on a recorded date. It does **not** decide whether
-commercial use, caching, redistribution, scraping, attribution, personal-data processing, or any
-other activity is lawful or permitted. A missing restriction is not permission. A reachable URL is
-not production approval. Records may be incomplete, outdated, or wrong.
+The catalogue's terms-review label summarizes what the project found on a recorded date. It does
+**not** decide whether commercial use, caching, redistribution, scraping, attribution,
+personal-data processing, or any other activity is lawful or permitted. A missing restriction is
+not permission, and a working link does not mean a source is approved for your intended use.
+Records may be incomplete, outdated, or wrong.
 
 Before using a resource, review the provider's current dataset-specific and platform-wide terms,
 policies, licences, technical controls, and applicable law. Obtain provider confirmation or
-professional advice where appropriate. Read [Source Rights and Evidence](docs/governance/SOURCE_RIGHTS.md).
+professional advice where appropriate. Read [Source terms and permissions](docs/governance/SOURCE_RIGHTS.md).
 
-## Optional self-hosted toolkit
+## Optional developer toolkit
 
-The repository includes two optional local, fail-closed runtime components without turning this
-project into a hosted resale service:
+Developers can run the toolkit locally to work with Hong Kong public data through consistent APIs,
+SDKs, and read-only MCP tools:
 
-- **P01 — Public Data Fabric:** local normalized read access, SDK surfaces, and read-only MCP tools.
-- **P14 — API Quality Observatory:** local probes and quality evidence for explicitly enabled
-  sources.
+- **Data access toolkit:** explore and normalize data from sources you choose to enable.
+- **API health monitor:** check the availability and quality of enabled data sources.
 
-Plain `docker compose up` starts only the `catalogue` profile and performs no provider traffic.
-`observe` is an explicit, digest-only runtime; `fabric` adds raw-evidence retention for sources the
-operator has separately approved. All seeded sources and connectors remain inactive. Setup,
-verification, local endpoints, and activation boundaries are documented in the bilingual
-[runtime guide](docs/getting-started/runtime.md).
+Running `docker compose up` starts the catalogue only and does not contact external data providers.
+Data connections must be enabled individually after you review each source's applicable terms and
+permissions. The bilingual [self-hosting guide](docs/getting-started/runtime.md) explains setup,
+local endpoints, the available storage choices, and how to enable connections safely.
 
 ## Architecture
 
 ```text
 source-backed YAML ── validate ── deterministic JSON ── static bilingual catalogue
        │                         │
-       └── provenance/evidence  └── optional local P01/P14 runtime (explicit profiles)
+       └── sources and reviews  └── optional local data and health tools
 ```
 
 See [Architecture Overview](docs/architecture/OVERVIEW.md) and
@@ -121,9 +121,9 @@ vulnerabilities privately under [SECURITY.md](SECURITY.md).
 See [ROADMAP.md](ROADMAP.md) for the `Now / Next / Later` plan and the explicit boundary against a
 centrally hosted data service without a new rights and architecture review.
 
-## Licence and upstream material
+## Licence and third-party material
 
 Project-authored code and documentation are licensed under [Apache License 2.0](LICENSE). Catalogue
-facts, names, links, upstream APIs, datasets, documentation, trademarks, and provider content remain
-subject to their respective rights and terms. The repository licence does not grant rights in
-upstream material. See [NOTICE](NOTICE) for the full project notice.
+facts, names, links, third-party APIs, datasets, documentation, trademarks, and provider content
+remain subject to their respective rights and terms. The repository licence does not grant rights
+in third-party material. See [NOTICE](NOTICE) for the full project notice.

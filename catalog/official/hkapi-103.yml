@@ -8,7 +8,7 @@ name:
   zh-Hant: Past 24-hour pollutant concentrations
 summary:
   en: Hourly pollutants by station.
-  zh-Hant: 由 Environmental Protection Department 提供的「Past 24-hour pollutant concentrations」資源。請參閱官方文件及最新上游條款。
+  zh-Hant: 由 Environmental Protection Department 提供的「Past 24-hour pollutant concentrations」資源。請參閱官方文件及來源的最新條款。
 translationStatus: seeded
 provider:
   name:

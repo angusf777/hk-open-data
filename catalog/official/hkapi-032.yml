@@ -8,7 +8,7 @@ name:
   zh-Hant: Real-time MTR next-train API
 summary:
   en: Up to the next four trains on ten MTR lines.
-  zh-Hant: 由 MTR Corporation 提供的「Real-time MTR next-train API」資源。請參閱官方文件及最新上游條款。
+  zh-Hant: 由 MTR Corporation 提供的「Real-time MTR next-train API」資源。請參閱官方文件及來源的最新條款。
 translationStatus: seeded
 provider:
   name:

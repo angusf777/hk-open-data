@@ -77,7 +77,7 @@ export function AppShell({
           <Activity aria-hidden="true" size={34} />
           <div>
             <strong>{product}</strong>
-            <span>API Quality Observatory</span>
+            <span>Data access &amp; API health</span>
           </div>
         </div>
         <nav aria-label="Primary" className="ui-nav">
