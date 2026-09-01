@@ -19,6 +19,14 @@ test("search, locale and resource permalink work without automatic external requ
   expect(outsideRequests).toEqual([]);
 });
 
+test("shows ten resources before the user asks for more", async ({ page }) => {
+  await page.goto("./");
+  await expect(page.getByRole("article")).toHaveCount(10);
+
+  await page.getByRole("button", { name: /Show more resources/ }).click();
+  await expect(page.getByRole("article")).toHaveCount(30);
+});
+
 test("static detail permalink loads directly", async ({ page }) => {
   await page.goto("resources/official%3Ahkapi-001/");
   await expect(

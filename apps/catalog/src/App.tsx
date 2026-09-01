@@ -24,13 +24,13 @@ export function App({ catalogue, initialLocale = "en" }: AppProps) {
   const [query, setQuery] = useState("");
   const [filters, setFilters] = useState<ResourceFilters>({});
   const [selected, setSelected] = useState<Resource | undefined>(initialResource);
-  const [visibleLimit, setVisibleLimit] = useState(2);
+  const [visibleLimit, setVisibleLimit] = useState(10);
   const text = copy(locale);
   const visibleResources = useMemo(
     () => searchResources(catalogue.resources, query, filters),
     [catalogue.resources, filters, query],
   );
-  useEffect(() => setVisibleLimit(2), [filters, query]);
+  useEffect(() => setVisibleLimit(10), [filters, query]);
 
   const openResource = (resource: Resource) => {
     setSelected(resource);
