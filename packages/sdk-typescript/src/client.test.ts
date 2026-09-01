@@ -22,7 +22,7 @@ describe("HKDataClient", () => {
   });
 
   it("throws the common safe error envelope", async () => {
-    const fetcher = vi.fn<typeof fetch>().mockResolvedValue(
+    const fetcher = vi.fn<typeof fetch>().mockImplementation(async () =>
       new Response(
         JSON.stringify({ code: "FORBIDDEN", message: "Missing scope", retryable: false, correlation_id: "corr-1" }),
         { status: 403 },
@@ -58,6 +58,59 @@ describe("HKDataClient", () => {
 
   it("still rejects insecure non-loopback API origins", () => {
     expect(() => new HKDataClient({ baseUrl: "http://api.example/v1" })).toThrow(/https/i);
+  });
+
+  it("encodes recipe references and returns a typed example", async () => {
+    const fetcher = vi.fn<typeof fetch>().mockImplementation(
+      async () =>
+        new Response(
+        JSON.stringify({
+          source_reference: "HKAPI-001",
+          status: "fixture-tested",
+          effective_status: "fixture-tested",
+          examples: {
+            curl: "curl https://example.com/data",
+            python: "import httpx",
+            typescript: "await fetch('https://example.com/data');",
+          },
+        }),
+        { status: 200 },
+        ),
+    );
+    const client = new HKDataClient({ baseUrl: "https://api.example/v1", fetcher });
+
+    const recipe = await client.getAccessRecipe("HKAPI-001");
+    expect(recipe.source_reference).toBe("HKAPI-001");
+    expect(await client.getAccessExample("HKAPI-001", "typescript")).toContain("fetch(");
+    expect(String(fetcher.mock.calls[0]?.[0])).toContain("/access-recipes/HKAPI-001");
+  });
+
+  it("lists access recipes with public filters", async () => {
+    const fetcher = vi.fn<typeof fetch>().mockResolvedValue(
+      new Response(
+        JSON.stringify({
+          items: [{ source_reference: "HKAPI-001", status: "fixture-tested" }],
+          page: { next_cursor: null },
+        }),
+        { status: 200 },
+      ),
+    );
+    const client = new HKDataClient({ baseUrl: "https://api.example/v1", fetcher });
+
+    const page = await client.listAccessRecipes({ status: "fixture-tested", limit: 1 });
+
+    expect(page.items[0]?.source_reference).toBe("HKAPI-001");
+    expect(String(fetcher.mock.calls[0]?.[0])).toContain("status=fixture-tested&limit=1");
+  });
+
+  it("rejects an unsupported example language without making a request", async () => {
+    const fetcher = vi.fn<typeof fetch>();
+    const client = new HKDataClient({ baseUrl: "https://api.example/v1", fetcher });
+
+    await expect(client.getAccessExample("HKAPI-001", "ruby" as never)).rejects.toThrow(
+      /curl, python, or typescript/,
+    );
+    expect(fetcher).not.toHaveBeenCalled();
   });
 
   it("aborts requests after the configured timeout", async () => {

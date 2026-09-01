@@ -1,4 +1,12 @@
-import type { ApiObject, ErrorEnvelope, Page, Query, SourceSummary } from "./types.js";
+import type {
+  AccessExampleLanguage,
+  AccessRecipe,
+  ApiObject,
+  ErrorEnvelope,
+  Page,
+  Query,
+  SourceSummary,
+} from "./types.js";
 
 export class ApiError extends Error {
   readonly code: string;
@@ -131,6 +139,29 @@ export class HKDataClient {
     return this.#request(`sources/${encodeURIComponent(sourceId)}`);
   }
 
+  listAccessRecipes(query: Query = {}): Promise<Page<AccessRecipe>> {
+    return this.#request("access-recipes", { query });
+  }
+
+  getAccessRecipe(sourceReference: string): Promise<AccessRecipe> {
+    return this.#request(`access-recipes/${encodeURIComponent(sourceReference)}`);
+  }
+
+  async getAccessExample(
+    sourceReference: string,
+    language: AccessExampleLanguage,
+  ): Promise<string> {
+    if (!(["curl", "python", "typescript"] as const).includes(language)) {
+      throw new Error("language must be curl, python, or typescript");
+    }
+    const recipe = await this.getAccessRecipe(sourceReference);
+    const example = recipe.examples[language];
+    if (typeof example !== "string" || example.length === 0) {
+      throw new Error(`${language} example is not available for this source`);
+    }
+    return example;
+  }
+
   listSourceRecords(query: Query = {}): Promise<Page<ApiObject>> {
     return this.#request("source-records", { query });
   }
@@ -234,6 +265,9 @@ export class HKDataClient {
 }
 
 export type {
+  AccessExampleLanguage,
+  AccessRecipe,
+  AccessStatus,
   ApiObject,
   ErrorEnvelope,
   OperatingProfile,

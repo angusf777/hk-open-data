@@ -2,9 +2,11 @@ from __future__ import annotations
 
 from collections.abc import Mapping
 from typing import cast
+from urllib.parse import quote
 
 import httpx
 
+from .access import AccessRecipe, access_example
 from .models import ErrorEnvelope, Page
 
 
@@ -101,6 +103,18 @@ class HKDataClient:
 
     def get_source(self, source_id: str) -> dict[str, object]:
         return self._request(f"sources/{source_id}")
+
+    def list_access_recipes(self, **query: str | int | bool | None) -> Page:
+        return cast(Page, self._request("access-recipes", params=query))
+
+    def get_access_recipe(self, source_reference: str) -> AccessRecipe:
+        encoded = quote(source_reference, safe="")
+        return cast(AccessRecipe, self._request(f"access-recipes/{encoded}"))
+
+    def get_access_example(self, source_reference: str, language: str) -> str:
+        if language not in {"curl", "python", "typescript"}:
+            raise ValueError("language must be curl, python, or typescript")
+        return access_example(self.get_access_recipe(source_reference), language)
 
     def list_source_records(self, **query: str | int | bool | None) -> Page:
         return cast(Page, self._request("source-records", params=query))

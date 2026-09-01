@@ -35,6 +35,39 @@ export interface SourceSummary {
   [key: string]: unknown;
 }
 
+export type AccessStatus =
+  | "live-verified"
+  | "fixture-tested"
+  | "credential-required"
+  | "manual-only"
+  | "blocked"
+  | "unavailable";
+
+export type AccessExampleLanguage = "curl" | "python" | "typescript";
+
+export interface AccessRecipe {
+  schema_version: 1;
+  source_reference: string;
+  recipe_version: string;
+  adapter: string;
+  status: AccessStatus;
+  effective_status: AccessStatus;
+  documentation_url: string;
+  limitations: string[];
+  authentication: {
+    type: string;
+    environment_variables: string[];
+    setup: string | null;
+  };
+  request: ApiObject | null;
+  response: ApiObject | null;
+  reason: string | null;
+  next_action: string | null;
+  recipe_sha256: string;
+  examples: Record<AccessExampleLanguage, string | null>;
+  verification: ApiObject | null;
+}
+
 export type ApiObject = Record<string, unknown>;
 export type QueryValue = string | number | boolean | undefined;
 export type Query = Record<string, QueryValue>;
