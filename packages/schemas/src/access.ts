@@ -1,0 +1,220 @@
+import { readFileSync } from "node:fs";
+import { dirname, resolve } from "node:path";
+import { fileURLToPath } from "node:url";
+
+import { z } from "zod";
+
+export const accessStatusSchema = z.enum([
+  "live-verified",
+  "fixture-tested",
+  "credential-required",
+  "manual-only",
+  "blocked",
+  "unavailable",
+]);
+
+export const adapterNameSchema = z.enum([
+  "none",
+  "ckan-action",
+  "rest-json",
+  "odata",
+  "arcgis-rest",
+  "ogc-wfs",
+  "ogc-wms",
+  "xml",
+  "csv",
+  "rss",
+  "file-download",
+]);
+
+const environmentVariableSchema = z.string().regex(/^[A-Z][A-Z0-9_]{2,127}$/);
+const scalarSchema = z.union([z.string(), z.number(), z.boolean()]);
+
+const authenticationSchema = z
+  .object({
+    type: z.enum(["none", "api-key", "bearer", "basic", "oauth2", "registration"]),
+    environmentVariables: z.array(environmentVariableSchema),
+    setup: z.string().min(1).nullable(),
+  })
+  .strict();
+
+const parameterSchema = z
+  .object({
+    name: z.string().min(1),
+    location: z.enum(["path", "query", "header", "body"]),
+    dataType: z.enum(["string", "integer", "number", "boolean", "date", "datetime"]),
+    required: z.boolean(),
+    default: scalarSchema.nullable(),
+    example: scalarSchema.nullable(),
+    description: z.string().min(1),
+    enum: z.array(scalarSchema),
+  })
+  .strict();
+
+const headerSchema = z
+  .object({
+    name: z.string().min(1),
+    value: z.string().min(1).nullable(),
+    environmentVariable: environmentVariableSchema.nullable(),
+  })
+  .strict()
+  .superRefine((header, context) => {
+    if ((header.value === null) === (header.environmentVariable === null)) {
+      context.addIssue({ code: "custom", message: "header requires exactly one value source" });
+    }
+    if (
+      ["authorization", "cookie", "proxy-authorization"].includes(header.name.toLowerCase()) &&
+      header.value !== null
+    ) {
+      context.addIssue({ code: "custom", message: "credential values are forbidden in recipes" });
+    }
+  });
+
+const requestSchema = z
+  .object({
+    method: z.enum(["GET", "POST", "HEAD"]),
+    urlTemplate: z.url().startsWith("https://"),
+    allowedHosts: z.array(z.string().regex(/^[A-Za-z0-9.-]+$/)).min(1),
+    parameters: z.array(parameterSchema),
+    headers: z.array(headerSchema),
+    bodyTemplate: z.union([z.record(z.string(), z.unknown()), z.string()]).nullable(),
+    timeoutMs: z.number().int().min(1_000).max(60_000),
+    maxResponseBytes: z.number().int().positive().max(25 * 1024 * 1024),
+    maxPages: z.number().int().min(1).max(100),
+    retry: z
+      .object({
+        attempts: z.number().int().min(1).max(3),
+        statusCodes: z.array(z.number().int().min(100).max(599)),
+      })
+      .strict(),
+  })
+  .strict()
+  .superRefine((request, context) => {
+    const host = new URL(request.urlTemplate).hostname.toLowerCase().replace(/\.$/, "");
+    const allowed = request.allowedHosts.map((value) => value.toLowerCase().replace(/\.$/, ""));
+    if (!allowed.includes(host)) {
+      context.addIssue({ code: "custom", message: "initial request host must be allowlisted" });
+    }
+  });
+
+const responseSchema = z
+  .object({
+    mediaTypes: z.array(z.string().min(1)).min(1),
+    recordPath: z.string(),
+    idPath: z.string().nullable(),
+    timestampPath: z.string().nullable(),
+    pagination: z
+      .object({
+        strategy: z.enum([
+          "none",
+          "offset",
+          "cursor",
+          "next-link",
+          "page-number",
+          "provider-specific",
+        ]),
+        nextPath: z.string().min(1).nullable(),
+      })
+      .strict(),
+    normalization: z
+      .object({
+        fields: z.record(z.string(), z.string()),
+        language: z.string().min(1).nullable(),
+        geometry: z.string().min(1).nullable(),
+        timestamp: z.string().min(1).nullable(),
+      })
+      .strict(),
+  })
+  .strict();
+
+const accessRecipeShape = {
+  schemaVersion: z.literal(1),
+  sourceReference: z.string().regex(/^HKAPI-[0-9]{3}$/),
+  recipeVersion: z.string().regex(/^[0-9]+\.[0-9]+\.[0-9]+$/),
+  adapter: adapterNameSchema,
+  status: accessStatusSchema,
+  documentationUrl: z.url().startsWith("https://"),
+  limitations: z.array(z.string().min(1)).min(1),
+  authentication: authenticationSchema,
+  request: requestSchema.nullable(),
+  response: responseSchema.nullable(),
+  reason: z.string().min(1).nullable(),
+  nextAction: z.string().min(1).nullable(),
+} as const;
+
+type RecipeContract = z.infer<z.ZodObject<typeof accessRecipeShape>>;
+
+function refineRecipe(recipe: RecipeContract, context: z.RefinementCtx): void {
+  if (["manual-only", "blocked"].includes(recipe.status)) {
+    if (recipe.request !== null) {
+      context.addIssue({ code: "custom", message: `${recipe.status} recipes cannot define a request` });
+    }
+    if (recipe.adapter !== "none" || recipe.response !== null) {
+      context.addIssue({ code: "custom", message: `${recipe.status} recipes are not executable` });
+    }
+  }
+}
+
+export const accessRecipeSchema = z.object(accessRecipeShape).strict().superRefine(refineRecipe);
+
+export const verificationSummarySchema = z
+  .object({
+    checkedAt: z.iso.datetime(),
+    validUntil: z.iso.datetime(),
+    outcome: z.enum(["success", "failure"]),
+    recipeSha256: z.string().regex(/^[a-f0-9]{64}$/),
+    finalHost: z.string().min(1),
+    httpStatus: z.number().int().min(100).max(599).nullable(),
+    elapsedMs: z.number().int().nonnegative(),
+    mediaType: z.string().min(1).nullable(),
+    responseBytes: z.number().int().nonnegative(),
+    responseSha256: z.string().regex(/^[a-f0-9]{64}$/).nullable(),
+    schemaFingerprint: z.string().regex(/^[a-f0-9]{64}$/).nullable(),
+    parsedRecordCount: z.number().int().nonnegative(),
+    limitations: z.array(z.string().min(1)),
+    toolVersion: z.string().min(1),
+  })
+  .strict();
+
+export const generatedAccessRecipeSchema = z
+  .object({
+    ...accessRecipeShape,
+    recipeSha256: z.string().regex(/^[a-f0-9]{64}$/),
+    effectiveStatus: accessStatusSchema,
+    examples: z
+      .object({ curl: z.string().min(1), python: z.string().min(1), typescript: z.string().min(1) })
+      .strict(),
+    verification: verificationSummarySchema.nullable(),
+  })
+  .strict()
+  .superRefine(refineRecipe);
+
+export const accessCoverageSchema = z
+  .object({
+    totalOfficial: z.number().int().nonnegative(),
+    unclassified: z.number().int().nonnegative(),
+    byStatus: z.record(accessStatusSchema, z.number().int().nonnegative()),
+  })
+  .strict();
+
+export const accessRecipeIndexSchema = z
+  .object({
+    schemaVersion: z.literal(1),
+    generatedAt: z.iso.datetime().nullable(),
+    recipes: z.array(generatedAccessRecipeSchema),
+    coverage: accessCoverageSchema,
+  })
+  .strict();
+
+export type AccessRecipe = z.infer<typeof accessRecipeSchema>;
+export type GeneratedAccessRecipe = z.infer<typeof generatedAccessRecipeSchema>;
+export type AccessRecipeIndex = z.infer<typeof accessRecipeIndexSchema>;
+export type AccessStatus = z.infer<typeof accessStatusSchema>;
+
+const workspaceRoot = resolve(dirname(fileURLToPath(import.meta.url)), "../../..");
+
+export function loadAccessRecipeIndex(
+  path = resolve(workspaceRoot, "access/generated/recipes.json"),
+): AccessRecipeIndex {
+  return accessRecipeIndexSchema.parse(JSON.parse(readFileSync(path, "utf8")) as unknown);
+}

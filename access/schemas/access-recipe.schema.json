@@ -1,0 +1,379 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://angusf777.github.io/hk-open-data/schemas/access-recipe.schema.json",
+  "title": "HK Open Data access recipe",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schemaVersion",
+    "sourceReference",
+    "recipeVersion",
+    "adapter",
+    "status",
+    "documentationUrl",
+    "limitations",
+    "authentication",
+    "request",
+    "response",
+    "reason",
+    "nextAction"
+  ],
+  "properties": {
+    "schemaVersion": { "const": 1 },
+    "sourceReference": { "type": "string", "pattern": "^HKAPI-[0-9]{3}$" },
+    "recipeVersion": { "type": "string", "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$" },
+    "adapter": { "$ref": "#/$defs/adapter" },
+    "status": { "$ref": "#/$defs/status" },
+    "documentationUrl": { "$ref": "#/$defs/httpsUrl" },
+    "limitations": {
+      "type": "array",
+      "items": { "type": "string", "minLength": 1 },
+      "minItems": 1
+    },
+    "authentication": { "$ref": "#/$defs/authentication" },
+    "request": {
+      "oneOf": [
+        { "$ref": "#/$defs/request" },
+        { "type": "null" }
+      ]
+    },
+    "response": {
+      "oneOf": [
+        { "$ref": "#/$defs/response" },
+        { "type": "null" }
+      ]
+    },
+    "reason": {
+      "oneOf": [
+        { "type": "string", "minLength": 1 },
+        { "type": "null" }
+      ]
+    },
+    "nextAction": {
+      "oneOf": [
+        { "type": "string", "minLength": 1 },
+        { "type": "null" }
+      ]
+    }
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": { "status": { "enum": ["manual-only", "blocked"] } },
+        "required": ["status"]
+      },
+      "then": {
+        "properties": {
+          "adapter": { "const": "none" },
+          "request": { "type": "null" },
+          "response": { "type": "null" },
+          "reason": { "type": "string", "minLength": 1 },
+          "nextAction": { "type": "string", "minLength": 1 }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "status": {
+            "enum": ["live-verified", "fixture-tested", "credential-required"]
+          }
+        },
+        "required": ["status"]
+      },
+      "then": {
+        "properties": {
+          "adapter": { "not": { "const": "none" } },
+          "request": { "$ref": "#/$defs/request" },
+          "response": { "$ref": "#/$defs/response" }
+        }
+      }
+    }
+  ],
+  "$defs": {
+    "httpsUrl": {
+      "type": "string",
+      "format": "uri",
+      "pattern": "^https://"
+    },
+    "environmentVariable": {
+      "type": "string",
+      "pattern": "^[A-Z][A-Z0-9_]{2,127}$"
+    },
+    "adapter": {
+      "type": "string",
+      "enum": [
+        "none",
+        "ckan-action",
+        "rest-json",
+        "odata",
+        "arcgis-rest",
+        "ogc-wfs",
+        "ogc-wms",
+        "xml",
+        "csv",
+        "rss",
+        "file-download"
+      ]
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "live-verified",
+        "fixture-tested",
+        "credential-required",
+        "manual-only",
+        "blocked",
+        "unavailable"
+      ]
+    },
+    "authentication": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["type", "environmentVariables", "setup"],
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": ["none", "api-key", "bearer", "basic", "oauth2", "registration"]
+        },
+        "environmentVariables": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/environmentVariable" },
+          "uniqueItems": true
+        },
+        "setup": {
+          "oneOf": [
+            { "type": "string", "minLength": 1 },
+            { "type": "null" }
+          ]
+        }
+      }
+    },
+    "scalar": {
+      "type": ["string", "integer", "number", "boolean"]
+    },
+    "parameter": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "name",
+        "location",
+        "dataType",
+        "required",
+        "default",
+        "example",
+        "description",
+        "enum"
+      ],
+      "properties": {
+        "name": { "type": "string", "minLength": 1 },
+        "location": { "enum": ["path", "query", "header", "body"] },
+        "dataType": {
+          "enum": ["string", "integer", "number", "boolean", "date", "datetime"]
+        },
+        "required": { "type": "boolean" },
+        "default": {
+          "oneOf": [
+            { "$ref": "#/$defs/scalar" },
+            { "type": "null" }
+          ]
+        },
+        "example": {
+          "oneOf": [
+            { "$ref": "#/$defs/scalar" },
+            { "type": "null" }
+          ]
+        },
+        "description": { "type": "string", "minLength": 1 },
+        "enum": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/scalar" },
+          "uniqueItems": true
+        }
+      }
+    },
+    "header": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["name", "value", "environmentVariable"],
+      "properties": {
+        "name": { "type": "string", "minLength": 1 },
+        "value": {
+          "oneOf": [
+            { "type": "string", "minLength": 1 },
+            { "type": "null" }
+          ]
+        },
+        "environmentVariable": {
+          "oneOf": [
+            { "$ref": "#/$defs/environmentVariable" },
+            { "type": "null" }
+          ]
+        }
+      },
+      "oneOf": [
+        {
+          "properties": {
+            "value": { "type": "string", "minLength": 1 },
+            "environmentVariable": { "type": "null" }
+          }
+        },
+        {
+          "properties": {
+            "value": { "type": "null" },
+            "environmentVariable": { "$ref": "#/$defs/environmentVariable" }
+          }
+        }
+      ],
+      "not": {
+        "properties": {
+          "name": {
+            "type": "string",
+            "pattern": "^(?i:authorization|cookie|proxy-authorization)$"
+          },
+          "value": { "type": "string", "minLength": 1 }
+        },
+        "required": ["name", "value"]
+      }
+    },
+    "retry": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["attempts", "statusCodes"],
+      "properties": {
+        "attempts": { "type": "integer", "minimum": 1, "maximum": 3 },
+        "statusCodes": {
+          "type": "array",
+          "items": { "type": "integer", "minimum": 100, "maximum": 599 },
+          "uniqueItems": true
+        }
+      }
+    },
+    "request": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "method",
+        "urlTemplate",
+        "allowedHosts",
+        "parameters",
+        "headers",
+        "bodyTemplate",
+        "timeoutMs",
+        "maxResponseBytes",
+        "maxPages",
+        "retry"
+      ],
+      "properties": {
+        "method": { "enum": ["GET", "POST", "HEAD"] },
+        "urlTemplate": { "$ref": "#/$defs/httpsUrl" },
+        "allowedHosts": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^[A-Za-z0-9.-]+$"
+          },
+          "minItems": 1,
+          "uniqueItems": true
+        },
+        "parameters": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/parameter" },
+          "uniqueItems": true
+        },
+        "headers": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/header" },
+          "uniqueItems": true
+        },
+        "bodyTemplate": {
+          "oneOf": [
+            { "type": "object" },
+            { "type": "string" },
+            { "type": "null" }
+          ]
+        },
+        "timeoutMs": { "type": "integer", "minimum": 1000, "maximum": 60000 },
+        "maxResponseBytes": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 26214400
+        },
+        "maxPages": { "type": "integer", "minimum": 1, "maximum": 100 },
+        "retry": { "$ref": "#/$defs/retry" }
+      }
+    },
+    "pagination": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["strategy", "nextPath"],
+      "properties": {
+        "strategy": {
+          "enum": [
+            "none",
+            "offset",
+            "cursor",
+            "next-link",
+            "page-number",
+            "provider-specific"
+          ]
+        },
+        "nextPath": {
+          "oneOf": [
+            { "type": "string", "minLength": 1 },
+            { "type": "null" }
+          ]
+        }
+      }
+    },
+    "normalization": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["fields", "language", "geometry", "timestamp"],
+      "properties": {
+        "fields": {
+          "type": "object",
+          "additionalProperties": { "type": "string" }
+        },
+        "language": {
+          "oneOf": [{ "type": "string", "minLength": 1 }, { "type": "null" }]
+        },
+        "geometry": {
+          "oneOf": [{ "type": "string", "minLength": 1 }, { "type": "null" }]
+        },
+        "timestamp": {
+          "oneOf": [{ "type": "string", "minLength": 1 }, { "type": "null" }]
+        }
+      }
+    },
+    "response": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "mediaTypes",
+        "recordPath",
+        "idPath",
+        "timestampPath",
+        "pagination",
+        "normalization"
+      ],
+      "properties": {
+        "mediaTypes": {
+          "type": "array",
+          "items": { "type": "string", "minLength": 1 },
+          "minItems": 1,
+          "uniqueItems": true
+        },
+        "recordPath": { "type": "string" },
+        "idPath": {
+          "oneOf": [{ "type": "string" }, { "type": "null" }]
+        },
+        "timestampPath": {
+          "oneOf": [{ "type": "string" }, { "type": "null" }]
+        },
+        "pagination": { "$ref": "#/$defs/pagination" },
+        "normalization": { "$ref": "#/$defs/normalization" }
+      }
+    }
+  }
+}
