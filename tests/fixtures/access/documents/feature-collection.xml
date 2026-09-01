@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FeatureCollection><featureMember><id>one</id><geometry>POINT (1 2)</geometry></featureMember><featureMember><id>two</id><geometry>POINT (3 4)</geometry></featureMember></FeatureCollection>
