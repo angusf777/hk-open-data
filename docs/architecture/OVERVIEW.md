@@ -10,6 +10,9 @@ flowchart LR
     V --> J[Deterministic JSON artifacts]
     J --> S[Static bilingual catalogue]
     J --> R[Optional self-hosted runtime]
+    A[Versioned source-access recipes] --> G[Examples and verification summaries]
+    G --> S
+    G --> R
     S -->|explicit user action| U[Provider pages]
     R -->|user enables one source| P[External data source]
 ```
@@ -26,6 +29,21 @@ flowchart LR
 5. GitHub Pages serves static files. Search, filtering, locale changes, and detail navigation do not
    call provider systems.
 
+## Source-access path
+
+1. Every official `HKAPI-NNN` record has one matching recipe under `access/recipes/official/`.
+2. An executable recipe defines an exact HTTPS request, allowed host, typed and bounded parameters,
+   response contract and limitations. A manual entry explains why no safe request is published and
+   gives a concrete next step.
+3. The generator creates deterministic curl, Python and TypeScript examples and joins each recipe
+   to the corresponding catalogue record.
+4. Synthetic fixtures test planning and parsing. An explicit live check records metadata and hashes
+   without retaining a source response body.
+5. The static site, REST routes, Python and TypeScript SDKs, and read-only MCP tools expose the same
+   version, hash, status, limitations, examples and verification summary.
+6. Only the local CLI's explicit `fetch` and `verify` commands execute a recipe. Catalogue browsing,
+   REST recipe lookup, SDK recipe lookup and MCP recipe lookup do not contact listed sources.
+
 ## Optional toolkit path
 
 The self-hosted toolkit keeps every external data connection off by default. `catalogue` serves
@@ -38,6 +56,8 @@ source responses only when the user enables that storage for a source after revi
 | Boundary | Repository guarantee | Outside the guarantee |
 | --- | --- | --- |
 | Catalogue record | Schema-valid, reproducibly generated metadata for the tested commit | Provider correctness, completeness, uptime, security, or permission |
+| Access recipe | Bounded request instructions or a documented manual next step, with a canonical hash | Future compatibility, source accuracy, endorsement, or usage rights |
+| Live verification | Time-limited technical metadata for one bounded check | Continuous monitoring, permission, licence clearance, or guaranteed availability |
 | Static site | Local catalogue reads and explicit external navigation | Behaviour of provider pages after navigation |
 | Toolkit defaults | No external data access in the default mode | User configuration, deployment security, and permission to use each source |
 | Terms review | Dated summary of project research | Legal advice, permission, endorsement, or proof that a deployment is production-ready |

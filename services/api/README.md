@@ -36,3 +36,18 @@ therefore the supported default. Before exposing multiple API replicas or servin
 one reverse-proxy address, deploy a shared edge or distributed rate limiter and document the trusted
 proxy boundary. Never trust forwarding headers from a CIDR that untrusted clients can reach as a
 direct peer, and configure each trusted proxy to replace caller-supplied forwarding headers.
+
+## Source-access recipes
+
+The public recipe routes expose the generated registry without contacting a listed source:
+
+- GET `/v1/access-recipes` lists recipes with `adapter`, `status`, `authentication`,
+  `verification_freshness`, `cursor` and `limit` filters.
+- GET `/v1/access-recipes/{source_reference}` returns one recipe, its examples, limitations,
+  canonical hash and metadata-only verification summary.
+
+The registry is read-only for the running service. It is generated from
+`access/recipes/official/` and `access/verification/` during repository development. There is no
+REST route that accepts an arbitrary source URL or executes a recipe. See the
+[source-access guide](../../docs/getting-started/access-recipes.md) for the explicit CLI execution
+boundary.

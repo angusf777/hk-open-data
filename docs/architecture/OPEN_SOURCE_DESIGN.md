@@ -13,7 +13,7 @@ authoritative pages. Private research workspaces, internal planning, credentials
 provider payloads, and substantial copies of provider documentation are excluded by policy and a
 repository boundary scan.
 
-## One catalogue, two consumers
+## One catalogue and one access registry
 
 Versioned YAML is the only hand-edited catalogue source. Deterministic JSON is consumed by:
 
@@ -24,11 +24,24 @@ Versioned YAML is the only hand-edited catalogue source. Deterministic JSON is c
 Keeping one generated input prevents the website and runtime from quietly diverging about source
 identity, evidence dates, or rights states.
 
+Every official catalogue record also has one versioned source-access recipe. The recipe either
+defines a bounded, source-specific request or records why only manual guidance is currently safe.
+Generated recipe JSON is projected into the catalogue, two REST routes, both SDKs and two read-only
+MCP tools. All of those views carry the same recipe hash and limitations. They do not execute the
+request; network use is confined to explicit local CLI commands and individually enabled runtime
+connections.
+
+Metadata-only verification evidence is separate from source data. It records a bounded check's
+time, outcome, response size, hashes, media type and record count, and expires automatically. The
+repository does not retain the checked response body. A working check is technical evidence only,
+not provider authorization or a promise of continued availability.
+
 ## Publication guarantees
 
 A release candidate must demonstrate:
 
 - schema-valid, deterministically regenerated catalogue artifacts;
+- a complete source-access registry with deterministic examples, fixtures and status documentation;
 - drift-free generated counts and README statistics;
 - unit, type, build, browser, accessibility, and no-provider-traffic checks;
 - runtime unit and contract tests for any included runtime component;

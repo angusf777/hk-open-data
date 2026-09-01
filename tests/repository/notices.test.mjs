@@ -26,6 +26,20 @@ const required = {
     "source URL",
     "acknowledgement",
   ],
+  "docs/getting-started/access-recipes.md": [
+    "technical instructions",
+    "does not grant",
+    "commercial use",
+    "caching",
+    "redistribution",
+  ],
+  "docs/getting-started/access-recipes.zh-HK.md": [
+    "技術指引",
+    "不授予",
+    "商業使用",
+    "快取",
+    "再分發",
+  ],
 };
 
 for (const [file, phrases] of Object.entries(required)) {

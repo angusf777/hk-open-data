@@ -31,6 +31,28 @@ open http://127.0.0.1:8080/hk-open-data/
 This path does not read `.env`, contact external providers, start PostgreSQL, or start the data and
 health-check workers.
 
+## Inspect source instructions before starting services
+
+The repository includes a versioned access recipe or manual guide for all 265 official sources.
+Recipe and example lookup is offline:
+
+```bash
+uv run --project packages/sdk-python hkdata recipe HKAPI-001
+uv run --project packages/sdk-python hkdata example HKAPI-001 python
+```
+
+Only explicit `fetch` and `verify` commands can contact a listed source:
+
+```bash
+uv run --project packages/sdk-python hkdata verify HKAPI-001
+uv run --project packages/sdk-python hkdata fetch HKAPI-001 --output json
+```
+
+In installed form the first three commands are `hkdata recipe HKAPI-001`,
+`hkdata example HKAPI-001 python`, and `hkdata verify HKAPI-001`. Read the bilingual
+[source-access guide](access-recipes.md) for statuses, `--allow-unverified`, exit codes, evidence,
+and the exact permission boundary.
+
 ## 2. Prepare a runtime environment
 
 Only continue if you intend to run the toolkit and have reviewed the sources you may enable.
@@ -70,6 +92,11 @@ Starting `observe` makes health checks available, but every included source, che
 remains disabled. When you enable a source, the worker stores a `digest://sha256/...` fingerprint
 plus summary measurements and discards the response content. Enabling a connection is a separate,
 logged action; a catalogue terms-review label never enables a source or grants permission to use it.
+
+The API exposes `GET /v1/access-recipes` and
+`GET /v1/access-recipes/{source_reference}`. The read-only MCP server provides
+`access_recipes_list` and `access_recipe_get`. These interfaces read the generated recipe registry;
+they do not execute a listed source.
 
 ## 4. Start data access with full-response storage
 

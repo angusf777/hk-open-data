@@ -13,6 +13,13 @@ const readerFacingFiles = [
   "docs/architecture/OVERVIEW.md",
   "docs/getting-started/runtime.md",
   "docs/getting-started/runtime.zh-HK.md",
+  "docs/getting-started/access-recipes.md",
+  "docs/getting-started/access-recipes.zh-HK.md",
+  "packages/connectors/README.md",
+  "packages/sdk-python/README.md",
+  "packages/sdk-typescript/README.md",
+  "services/api/README.md",
+  "services/mcp/README.md",
   "docs/launch/LAUNCH_COPY.md",
   "docs/release/PRE_PUBLICATION_AUDIT.md",
   "docs/release/v0.1.0.md",
@@ -44,4 +51,49 @@ test("published catalogue tags use understandable topics instead of portfolio co
     assert.doesNotMatch(catalogue, /"P(?:0[1-9]|1[0-8])"/);
     assert.doesNotMatch(catalogue, /\bupstream\b|上游/i);
   }
+});
+
+test("bilingual guides explain source access with copyable commands and evidence limits", async () => {
+  const english = await readFile("README.md", "utf8");
+  const chinese = await readFile("README.zh-HK.md", "utf8");
+  const guide = await readFile("docs/getting-started/access-recipes.md", "utf8");
+  const chineseGuide = await readFile(
+    "docs/getting-started/access-recipes.zh-HK.md",
+    "utf8",
+  );
+
+  for (const text of [english, chinese, guide, chineseGuide]) {
+    assert.match(text, /hkdata recipe HKAPI-001/);
+    assert.match(text, /hkdata example HKAPI-001 python/);
+    assert.match(text, /hkdata verify HKAPI-001/);
+  }
+  assert.match(english, /265 official sources/i);
+  assert.match(english, /37 executable recipes/i);
+  assert.match(english, /29.*live verification/is);
+  assert.match(english, /does not grant.*commercial use.*caching.*redistribution/is);
+  assert.match(guide, /--allow-unverified/);
+  assert.match(guide, /GET \/v1\/access-recipes/);
+  assert.match(guide, /access_recipes_list/);
+  assert.match(guide, /access_recipe_get/);
+  assert.match(chinese, /265 項官方來源/);
+  assert.match(chinese, /37 項可執行配方/);
+});
+
+test("SDK and service guides document the access recipe surfaces", async () => {
+  const python = await readFile("packages/sdk-python/README.md", "utf8");
+  const typescript = await readFile("packages/sdk-typescript/README.md", "utf8");
+  const api = await readFile("services/api/README.md", "utf8");
+  const mcp = await readFile("services/mcp/README.md", "utf8");
+
+  assert.match(python, /list_access_recipes/);
+  assert.match(python, /get_access_recipe/);
+  assert.match(python, /get_access_example/);
+  assert.match(typescript, /listAccessRecipes/);
+  assert.match(typescript, /getAccessRecipe/);
+  assert.match(typescript, /getAccessExample/);
+  assert.match(api, /GET `?\/v1\/access-recipes`?/);
+  assert.match(api, /GET `?\/v1\/access-recipes\/\{source_reference\}`?/);
+  assert.match(mcp, /access_recipes_list/);
+  assert.match(mcp, /access_recipe_get/);
+  assert.match(mcp, /does not execute/i);
 });

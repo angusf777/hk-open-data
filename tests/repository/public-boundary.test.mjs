@@ -1,6 +1,6 @@
 import test from "node:test";
 import assert from "node:assert/strict";
-import { mkdtemp, mkdir, rm, writeFile } from "node:fs/promises";
+import { mkdtemp, mkdir, readdir, readFile, rm, writeFile } from "node:fs/promises";
 import os from "node:os";
 import path from "node:path";
 
@@ -29,5 +29,41 @@ test("scanner reports excluded state, private paths, and secret patterns", async
     ]);
   } finally {
     await rm(root, { recursive: true, force: true });
+  }
+});
+
+test("published source verification files contain approved metadata only", async () => {
+  const root = "access/verification";
+  const allowed = new Set([
+    "checkedAt",
+    "elapsedMs",
+    "errorCode",
+    "finalHost",
+    "httpStatus",
+    "limitations",
+    "mediaType",
+    "outcome",
+    "parsedRecordCount",
+    "recipeSha256",
+    "recipeVersion",
+    "responseBytes",
+    "responseSha256",
+    "schemaFingerprint",
+    "schemaVersion",
+    "sourceReference",
+    "toolVersion",
+    "validUntil",
+  ]);
+  const files = (await readdir(root)).filter((name) => name.endsWith(".json"));
+  assert.equal(files.length, 37);
+  for (const file of files) {
+    const value = JSON.parse(await readFile(path.join(root, file), "utf8"));
+    assert.deepEqual(
+      Object.keys(value).sort(),
+      [...allowed].sort(),
+      `${file} contains an unexpected evidence field`,
+    );
+    assert.equal(typeof value.finalHost, "string");
+    assert.ok(["success", "failure"].includes(value.outcome));
   }
 });

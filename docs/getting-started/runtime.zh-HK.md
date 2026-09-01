@@ -28,6 +28,26 @@ open http://127.0.0.1:8080/hk-open-data/
 
 此路徑不會讀取 `.env`、接觸外部提供者、啟動 PostgreSQL，亦不會啟動數據或健康檢查工作程序。
 
+## 啟動服務前先查看來源指引
+
+本儲存庫為全部 265 項官方來源提供有版本的存取配方或手動指引。查看配方及範例只會讀取本機檔案：
+
+```bash
+uv run --project packages/sdk-python hkdata recipe HKAPI-001
+uv run --project packages/sdk-python hkdata example HKAPI-001 python
+```
+
+只有明確執行 `fetch` 或 `verify` 才可聯絡所列來源：
+
+```bash
+uv run --project packages/sdk-python hkdata verify HKAPI-001
+uv run --project packages/sdk-python hkdata fetch HKAPI-001 --output json
+```
+
+安裝後首三項指令可簡寫為 `hkdata recipe HKAPI-001`、`hkdata example HKAPI-001 python` 及
+`hkdata verify HKAPI-001`。狀態、`--allow-unverified`、退出碼、證據及確切權限界線，見雙語
+[數據來源指南](access-recipes.zh-HK.md)。
+
 ## 準備執行環境
 
 只有在你確實打算執行此工具，並已核對可能啟用的來源時才繼續：
@@ -59,6 +79,10 @@ make runtime-fabric
 `observe` 會提供 API 健康檢查功能，但所有隨附來源、檢查項目及連接器仍維持停用。每次啟用
 均是另一項有紀錄的設定，不能從目錄的條款查核標籤推斷。`observe` 不保存回應內容；
 `fabric` 才會啟用附版本控制及物件鎖定的完整回應儲存。
+
+API 提供 `GET /v1/access-recipes` 及 `GET /v1/access-recipes/{source_reference}`；唯讀 MCP
+伺服器提供 `access_recipes_list` 及 `access_recipe_get`。這些介面只讀取產生的配方登記，不會
+執行所列來源。
 
 所有介面只綁定本機 loopback：API `3000`、唯讀 MCP `3100`、公開工具頁面 `4174`、
 管理介面 `4175`、Prometheus `9090`。

@@ -726,8 +726,8 @@
         "Review current provider terms, attribution, caching and redistribution requirements before use."
       ],
       "nextAction": "Use the provider's API builder for the chosen dataset, then review the generated bounded query before execution.",
-      "reason": "The filtering API query embeds a separately selected upstream resource URL and dataset-specific fields.",
-      "recipeSha256": "5fab2ea4e9e09d825797ca4e88e5555dd7ed89c92aca3213278b65fb40f74488",
+      "reason": "The filtering API query embeds a separately selected source resource URL and dataset-specific fields.",
+      "recipeSha256": "40101e6780d8b0c2ddf7f232c829983d843c178a35547b74855339ca6c9b8f86",
       "recipeVersion": "1.0.0",
       "request": null,
       "response": null,

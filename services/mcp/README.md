@@ -39,6 +39,17 @@ the same caller. Place any public endpoint behind an identity-aware gateway you 
 The server binds `127.0.0.1:3100/mcp` and applies localhost Host and Origin validation. Put an
 authenticated, TLS-terminating gateway in front of it for any remote deployment.
 
+## Source-access recipe tools
+
+- `access_recipes_list` reads the REST recipe list with optional status, adapter, authentication,
+  freshness and page filters.
+- `access_recipe_get` reads one recipe by `HKAPI-NNN` source reference.
+
+Both tools are read-only and return repository-authored instructions and metadata-only evidence.
+The MCP server does not execute a listed source, accept an arbitrary source URL, or return stored
+source response bodies. Run `hkdata recipe HKAPI-001`, `hkdata example HKAPI-001 python`, and
+`hkdata verify HKAPI-001` through the local CLI when that is your deliberate intent.
+
 ## Verification
 
 ```sh

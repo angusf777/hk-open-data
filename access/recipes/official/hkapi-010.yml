@@ -14,7 +14,7 @@ authentication:
   setup: null
 request: null
 response: null
-reason: The filtering API query embeds a separately selected upstream resource URL and dataset-specific
+reason: The filtering API query embeds a separately selected source resource URL and dataset-specific
   fields.
 nextAction: Use the provider's API builder for the chosen dataset, then review the generated bounded query
   before execution.

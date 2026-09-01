@@ -76,14 +76,41 @@ make catalogue
 
 ## 可選用的開發者工具
 
-開發者可以在本機執行工具，透過一致的 API、SDK 及唯讀 MCP 工具使用香港公共數據：
+本儲存庫現已為全部 **265 項官方來源**提供實用存取配方。每項配方會把來源文件整理為有版本的
+要求規格，或清楚列出仍須人手完成的步驟：
 
-- **數據存取工具：** 探索並整理你選擇啟用的數據來源。
-- **API 健康監察：** 檢查已啟用數據來源的可用性及質素。
+- **37 項可執行配方**均有有界限參數、curl／Python／TypeScript 範例，以及帶雜湊的人工合成
+  測試資料。
+- 當中 **29 項**在 2026 年 9 月 1 日的一次有界限核查中成功完成即時技術驗證；證據會到期，
+  並不保證日後仍可使用。
+- **228 項手動指引**列出官方文件、尚未適合發布自動要求的原因，以及下一步。
+
+以下指令只在本機查看配方及產生程式碼，不會發出網絡要求：
+
+```bash
+uv run --project packages/sdk-python hkdata recipe HKAPI-001
+uv run --project packages/sdk-python hkdata example HKAPI-001 python
+```
+
+安裝後的簡寫是 `hkdata recipe HKAPI-001` 及 `hkdata example HKAPI-001 python`。請先核對來源的
+現行條款，再以明確指令聯絡來源：
+
+```bash
+uv run --project packages/sdk-python hkdata verify HKAPI-001
+uv run --project packages/sdk-python hkdata fetch HKAPI-001 --output json
+```
+
+本機 REST API、Python 及 TypeScript SDK，以及兩項唯讀 MCP 工具 `access_recipes_list` 和
+`access_recipe_get`，會提供相同配方、範例、限制、雜湊、狀態及驗證摘要。MCP 配方工具不會
+執行所列來源。
 
 直接執行 `docker compose up` 只會啟動目錄，不會聯絡外部數據提供者。你必須逐一核對來源的
-適用條款及權限，然後自行啟用數據連線。雙語[自託管指南](docs/getting-started/runtime.zh-HK.md)
-說明設定、本機介面、可選的儲存方式，以及如何安全地啟用連線。
+適用條款及權限，然後自行啟用數據連線。先閱讀雙語[數據來源指南](docs/getting-started/access-recipes.zh-HK.md)
+取得可複製指令；如需要本機 API、SDK 或 MCP 服務，再參閱
+[自託管指南](docs/getting-started/runtime.zh-HK.md)。
+
+技術指引不會授予商業使用、快取、再分發、抓取或其他擬議用途的權限；個別來源條款及適用法例
+仍然作準。
 
 ## 架構
 

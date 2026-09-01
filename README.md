@@ -83,16 +83,45 @@ professional advice where appropriate. Read [Source terms and permissions](docs/
 
 ## Optional developer toolkit
 
-Developers can run the toolkit locally to work with Hong Kong public data through consistent APIs,
-SDKs, and read-only MCP tools:
+The repository now includes a practical access recipe for all **265 official sources**. Each recipe
+turns source documentation into a versioned request contract or explains the exact manual step
+still needed:
 
-- **Data access toolkit:** explore and normalize data from sources you choose to enable.
-- **API health monitor:** check the availability and quality of enabled data sources.
+- **37 executable recipes** have bounded parameters, curl/Python/TypeScript examples, and hashed
+  synthetic fixtures.
+- **29 of those 37** recorded successful live verification in a bounded run on 1 September 2026;
+  this evidence expires and does not promise later availability.
+- **228 manual guides** identify the official documentation, explain why an executable request is
+  not yet safe to publish, and state the next step.
+
+Inspect a recipe and generate working code without making a network request:
+
+```bash
+uv run --project packages/sdk-python hkdata recipe HKAPI-001
+uv run --project packages/sdk-python hkdata example HKAPI-001 python
+```
+
+In installed form these are `hkdata recipe HKAPI-001` and
+`hkdata example HKAPI-001 python`. Contact a listed source only through an explicit command after
+reviewing its current terms:
+
+```bash
+uv run --project packages/sdk-python hkdata verify HKAPI-001
+uv run --project packages/sdk-python hkdata fetch HKAPI-001 --output json
+```
+
+The local REST API, Python and TypeScript SDKs, and the two read-only MCP tools
+`access_recipes_list` and `access_recipe_get` expose the same recipe, examples, limitations, hash,
+status, and verification summary. MCP recipe tools do not execute listed sources.
 
 Running `docker compose up` starts the catalogue only and does not contact external data providers.
 Data connections must be enabled individually after you review each source's applicable terms and
-permissions. The bilingual [self-hosting guide](docs/getting-started/runtime.md) explains setup,
-local endpoints, the available storage choices, and how to enable connections safely.
+permissions. Start with the bilingual [source-access guide](docs/getting-started/access-recipes.md)
+for copyable commands, then use the [self-hosting guide](docs/getting-started/runtime.md) if you need
+the local API, SDK or MCP services.
+
+Technical guidance does not grant permission for commercial use, caching, redistribution,
+scraping, or any other proposed use. Source-specific terms and applicable law remain controlling.
 
 ## Architecture
 

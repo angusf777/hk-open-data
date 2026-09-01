@@ -5,6 +5,30 @@ All notable project changes are documented here. The format follows
 
 ## [Unreleased]
 
+### Added
+
+- Complete source-access registry for all 265 official catalogue records: 37 bounded executable
+  recipes with curl, Python and TypeScript examples plus hashed synthetic fixtures, and 228
+  source-specific manual guides.
+- Local `hkdata recipe`, `example`, `fetch` and `verify` commands with typed parameters, stable exit
+  codes, request safety limits, and metadata-only verification evidence.
+- Catalogue access panels and filters, two REST recipe routes, Python and TypeScript SDK recipe
+  methods, and the read-only MCP tools `access_recipes_list` and `access_recipe_get`.
+- English and Traditional Chinese source-access guides, generated per-source status documentation,
+  and evidence from a bounded 37-recipe check on 1 September 2026.
+
+### Changed
+
+- The MCP contract now pins exactly 13 read-only tools at version `2026-09-01.v1`.
+- Catalogue connector labels are derived from each source's effective recipe status.
+
+### Security
+
+- Recipe execution requires explicit CLI or per-source runtime action and enforces HTTPS, exact
+  host allowlists, bounded parameters, timeouts, response sizes, retry limits and redirect checks.
+- Live checks retain hashes and technical metadata rather than source response bodies or
+  credentials. Technical success does not grant usage rights or provider approval.
+
 ## [0.1.0] - 2026-08-31
 
 ### Added
