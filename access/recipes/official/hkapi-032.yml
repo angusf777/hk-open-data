@@ -1,0 +1,98 @@
+schemaVersion: 1
+sourceReference: HKAPI-032
+recipeVersion: 1.0.0
+adapter: rest-json
+status: fixture-tested
+documentationUrl: https://data.gov.hk/en-data/dataset/mtr-data2-nexttrain-data/resource/103472ed-01be-4dda-92c6-30530dee022f
+limitations:
+- Technical access example only; review current provider terms, attribution, caching and redistribution
+  requirements before use.
+- The bounded example is not a promise of availability, completeness or fitness for a particular purpose.
+authentication:
+  type: none
+  environmentVariables: []
+  setup: null
+request:
+  method: GET
+  urlTemplate: https://rt.data.gov.hk/v1/transport/mtr/getSchedule.php
+  allowedHosts:
+  - rt.data.gov.hk
+  parameters:
+  - name: line
+    location: query
+    dataType: string
+    required: true
+    default: TKL
+    example: TKL
+    description: MTR line code.
+    enum:
+    - AEL
+    - TCL
+    - TML
+    - TKL
+    - EAL
+    - SIL
+    - TWL
+    - ISL
+    - KTL
+    - DRL
+    minimum: null
+    maximum: null
+    pattern: null
+  - name: sta
+    location: query
+    dataType: string
+    required: true
+    default: TKO
+    example: TKO
+    description: MTR station code.
+    enum: []
+    minimum: null
+    maximum: null
+    pattern: ^[A-Z]{3}$
+  - name: lang
+    location: query
+    dataType: string
+    required: true
+    default: EN
+    example: EN
+    description: Response language.
+    enum:
+    - EN
+    - TC
+    minimum: null
+    maximum: null
+    pattern: null
+  headers:
+  - name: accept
+    value: application/json
+    environmentVariable: null
+  bodyTemplate: null
+  timeoutMs: 15000
+  maxResponseBytes: 1048576
+  maxPages: 1
+  retry:
+    attempts: 2
+    statusCodes:
+    - 408
+    - 429
+    - 500
+    - 502
+    - 503
+    - 504
+response:
+  mediaTypes:
+  - application/json
+  recordPath: /data
+  idPath: null
+  timestampPath: null
+  pagination:
+    strategy: none
+    nextPath: null
+  normalization:
+    fields: {}
+    language: null
+    geometry: null
+    timestamp: null
+reason: null
+nextAction: null

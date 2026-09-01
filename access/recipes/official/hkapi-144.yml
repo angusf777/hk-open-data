@@ -1,0 +1,20 @@
+schemaVersion: 1
+sourceReference: HKAPI-144
+recipeVersion: 1.0.0
+adapter: none
+status: manual-only
+documentationUrl: https://www.hkma.gov.hk/eng/key-functions/international-financial-centre/fintech/open-application-programming-interface-api-for-the-banking-sector/
+limitations:
+- Technical access example only; review current provider terms, attribution, caching and redistribution
+  requirements before use.
+- The bounded example is not a promise of availability, completeness or fitness for a particular purpose.
+authentication:
+  type: none
+  environmentVariables: []
+  setup: null
+request: null
+response: null
+reason: Provider registration or an account-specific access arrangement is required, and no safe anonymous
+  request can be published.
+nextAction: Complete provider registration, review the issued access instructions and terms, then add
+  an environment-variable-backed recipe without committing credentials.

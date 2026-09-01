@@ -5,17 +5,16 @@ adapter: none
 status: manual-only
 documentationUrl: https://www.censtatd.gov.hk/datagovhk/WT_data_dict_en.pdf
 limitations:
-- No executable request is published because the source requires a provider-generated
-  value, prerequisite discovery or a dataset-specific choice.
-- Review current provider terms, attribution, caching and redistribution requirements
-  before use.
+- No executable request is published because the source requires a provider-generated value, prerequisite
+  discovery or a dataset-specific choice.
+- Review current provider terms, attribution, caching and redistribution requirements before use.
 authentication:
   type: none
   environmentVariables: []
   setup: null
 request: null
 response: null
-reason: GET requests require a provider-generated encrypted param value tied to a
-  selected statistical table and dimensions.
-nextAction: Open the chosen C&SD web table, select API, and copy the provider-generated
-  GET link or POST data dictionary.
+reason: GET requests require a provider-generated encrypted param value tied to a selected statistical
+  table and dimensions.
+nextAction: Open the chosen C&SD web table, select API, and copy the provider-generated GET link or POST
+  data dictionary.

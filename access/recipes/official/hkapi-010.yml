@@ -5,17 +5,16 @@ adapter: none
 status: manual-only
 documentationUrl: https://data.gov.hk/en/help/api-spec
 limitations:
-- No executable request is published because the source requires a provider-generated
-  value, prerequisite discovery or a dataset-specific choice.
-- Review current provider terms, attribution, caching and redistribution requirements
-  before use.
+- No executable request is published because the source requires a provider-generated value, prerequisite
+  discovery or a dataset-specific choice.
+- Review current provider terms, attribution, caching and redistribution requirements before use.
 authentication:
   type: none
   environmentVariables: []
   setup: null
 request: null
 response: null
-reason: The filtering API query embeds a separately selected upstream resource URL
-  and dataset-specific fields.
-nextAction: Use the provider's API builder for the chosen dataset, then review the
-  generated bounded query before execution.
+reason: The filtering API query embeds a separately selected upstream resource URL and dataset-specific
+  fields.
+nextAction: Use the provider's API builder for the chosen dataset, then review the generated bounded query
+  before execution.

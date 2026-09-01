@@ -1,0 +1,14 @@
+{
+  "platform_list": [
+    {
+      "platform_id": 1,
+      "route_list": [
+        {
+          "dest_en": "Fixture destination",
+          "route_no": "505",
+          "time_en": "2 mins"
+        }
+      ]
+    }
+  ]
+}

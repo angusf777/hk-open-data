@@ -1,0 +1,34 @@
+{
+  "approvedRequests": [
+    {
+      "allowed_hosts": [
+        "api.hkma.gov.hk"
+      ],
+      "allowed_media_types": [
+        "application/json"
+      ],
+      "body": null,
+      "headers": {
+        "accept": "application/json"
+      },
+      "max_attempts": 2,
+      "max_compressed_response_bytes": 1048576,
+      "max_response_bytes": 1048576,
+      "method": "GET",
+      "retry_status_codes": [
+        408,
+        429,
+        500,
+        502,
+        503,
+        504
+      ],
+      "timeout_ms": 30000,
+      "url": "https://api.hkma.gov.hk/public/market-data-and-statistics/monthly-statistical-bulletin/er-ir/er-eeri-daily?pagesize=10&offset=0"
+    }
+  ],
+  "parameters": {
+    "offset": 0,
+    "pagesize": 10
+  }
+}

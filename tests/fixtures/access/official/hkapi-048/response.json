@@ -1,0 +1,19 @@
+{
+  "car_park": [
+    {
+      "park_id": "tdcp1",
+      "vehicle_type": [
+        {
+          "service_category": [
+            {
+              "category": "HOURLY",
+              "vacancy": 8,
+              "vacancy_type": "A"
+            }
+          ],
+          "type": "P"
+        }
+      ]
+    }
+  ]
+}

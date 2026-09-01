@@ -5,10 +5,9 @@ adapter: rest-json
 status: fixture-tested
 documentationUrl: https://data.weather.gov.hk/weatherAPI/doc/HKO_Open_Data_API_Documentation.pdf
 limitations:
-- Technical access example only; review current provider terms, attribution, caching
-  and redistribution requirements before use.
-- The bounded example is not a promise of availability, completeness or fitness for
-  a particular purpose.
+- Technical access example only; review current provider terms, attribution, caching and redistribution
+  requirements before use.
+- The bounded example is not a promise of availability, completeness or fitness for a particular purpose.
 authentication:
   type: none
   environmentVariables: []
@@ -33,6 +32,9 @@ request:
     - warnsum
     - warningInfo
     - swt
+    minimum: null
+    maximum: null
+    pattern: null
   - name: lang
     location: query
     dataType: string
@@ -44,6 +46,9 @@ request:
     - en
     - tc
     - sc
+    minimum: null
+    maximum: null
+    pattern: null
   headers:
   - name: accept
     value: application/json

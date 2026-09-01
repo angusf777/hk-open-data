@@ -1,0 +1,10 @@
+{
+  "car_park": [
+    {
+      "latitude": 22.3,
+      "longitude": 114.2,
+      "name_en": "Fixture Car Park",
+      "park_id": "tdcp1"
+    }
+  ]
+}

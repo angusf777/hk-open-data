@@ -1,4 +1,4 @@
-.PHONY: catalogue verify-catalogue verify-site verify-runtime verify-integrated verify-all \
+.PHONY: catalogue verify-catalogue verify-access verify-site verify-runtime verify-integrated verify-all \
 	check-boundary check-secrets test-repository runtime-catalogue runtime-observe runtime-fabric \
 	runtime-stop hkdata
 
@@ -13,6 +13,10 @@ verify-catalogue:
 	uv run pytest tests/catalog -q
 	uv run python scripts/catalog.py check
 	node scripts/update-readme-stats.mjs --check
+
+verify-access:
+	uv run pytest tests/access -q
+	uv run python scripts/access.py check
 
 verify-site:
 	pnpm --filter @hk-open-data/catalog test
@@ -42,7 +46,7 @@ verify-runtime:
 verify-integrated:
 	RUN_DOCKER_TESTS=1 uv run pytest tests/integration/test_compose_config.py -q
 
-verify-all: verify-catalogue verify-site verify-runtime check-boundary check-secrets test-repository
+verify-all: verify-catalogue verify-access verify-site verify-runtime check-boundary check-secrets test-repository
 
 runtime-catalogue:
 	docker compose up --build --detach --wait

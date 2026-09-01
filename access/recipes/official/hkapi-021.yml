@@ -5,10 +5,9 @@ adapter: rest-json
 status: fixture-tested
 documentationUrl: https://www.als.gov.hk/docs/Data_Dictionary_for_ALS_EN.pdf
 limitations:
-- Technical access example only; review current provider terms, attribution, caching
-  and redistribution requirements before use.
-- The bounded example is not a promise of availability, completeness or fitness for
-  a particular purpose.
+- Technical access example only; review current provider terms, attribution, caching and redistribution
+  requirements before use.
+- The bounded example is not a promise of availability, completeness or fitness for a particular purpose.
 authentication:
   type: none
   environmentVariables: []
@@ -27,6 +26,9 @@ request:
     example: 10 Queensway
     description: Address text, up to 255 characters.
     enum: []
+    minimum: null
+    maximum: null
+    pattern: ^[^\r\n]{1,200}$
   - name: n
     location: query
     dataType: integer
@@ -35,6 +37,9 @@ request:
     example: 10
     description: Maximum suggested addresses.
     enum: []
+    minimum: 1.0
+    maximum: 100.0
+    pattern: null
   headers:
   - name: accept
     value: application/json

@@ -38,7 +38,7 @@ def test_recipe_hash_uses_canonical_public_contract_bytes() -> None:
     recipe = load_recipes(FIXTURES / "valid")[0]
 
     assert recipe_sha256(recipe) == (
-        "2cc269b959a49237c8fcb131e5c046013dbbd8a9eeffc9868a7ec37b7bad3749"
+        "52e226da48a3821920df1260a017e260a3e2c22a97aea56c057e5e62af86e489"
     )
 
 

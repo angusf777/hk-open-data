@@ -1,0 +1,86 @@
+schemaVersion: 1
+sourceReference: HKAPI-236
+recipeVersion: 1.0.0
+adapter: rest-json
+status: fixture-tested
+documentationUrl: https://data.gov.hk/en/help/api-spec
+limitations:
+- Technical access example only; review current provider terms, attribution, caching and redistribution
+  requirements before use.
+- The bounded example is not a promise of availability, completeness or fitness for a particular purpose.
+authentication:
+  type: none
+  environmentVariables: []
+  setup: null
+request:
+  method: GET
+  urlTemplate: https://api.data.gov.hk/v1/nearest-schools
+  allowedHosts:
+  - api.data.gov.hk
+  parameters:
+  - name: lat
+    location: query
+    dataType: number
+    required: true
+    default: 22.2812
+    example: 22.2812
+    description: WGS84 latitude.
+    enum: []
+    minimum: 22.0
+    maximum: 22.7
+    pattern: null
+  - name: long
+    location: query
+    dataType: number
+    required: true
+    default: 114.1659
+    example: 114.1659
+    description: WGS84 longitude.
+    enum: []
+    minimum: 113.8
+    maximum: 114.6
+    pattern: null
+  - name: max
+    location: query
+    dataType: integer
+    required: true
+    default: 5
+    example: 5
+    description: Maximum schools returned.
+    enum: []
+    minimum: 1.0
+    maximum: 100.0
+    pattern: null
+  headers:
+  - name: accept
+    value: application/json
+    environmentVariable: null
+  bodyTemplate: null
+  timeoutMs: 15000
+  maxResponseBytes: 1048576
+  maxPages: 1
+  retry:
+    attempts: 2
+    statusCodes:
+    - 408
+    - 429
+    - 500
+    - 502
+    - 503
+    - 504
+response:
+  mediaTypes:
+  - application/json
+  recordPath: /results
+  idPath: null
+  timestampPath: null
+  pagination:
+    strategy: none
+    nextPath: null
+  normalization:
+    fields: {}
+    language: null
+    geometry: null
+    timestamp: null
+reason: null
+nextAction: null

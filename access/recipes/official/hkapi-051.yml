@@ -1,0 +1,20 @@
+schemaVersion: 1
+sourceReference: HKAPI-051
+recipeVersion: 1.0.0
+adapter: none
+status: manual-only
+documentationUrl: https://data.gov.hk/en-data/dataset/hk-td-msd_1-metered-parking-spaces-data
+limitations:
+- Technical access example only; review current provider terms, attribution, caching and redistribution
+  requirements before use.
+- The bounded example is not a promise of availability, completeness or fitness for a particular purpose.
+authentication:
+  type: none
+  environmentVariables: []
+  setup: null
+request: null
+response: null
+reason: The linked official page is a dataset or provider collection with multiple resources and does
+  not identify one safe default endpoint for this recipe.
+nextAction: Choose the intended official resource on the linked page and document its exact URL, media
+  type and record shape before enabling automated access.

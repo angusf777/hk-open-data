@@ -1,0 +1,75 @@
+schemaVersion: 1
+sourceReference: HKAPI-167
+recipeVersion: 1.0.0
+adapter: odata
+status: fixture-tested
+documentationUrl: https://www.legco.gov.hk/en/open-legco/open-data/voting-result-database.html
+limitations:
+- Technical access example only; review current provider terms, attribution, caching and redistribution
+  requirements before use.
+- The bounded example is not a promise of availability, completeness or fitness for a particular purpose.
+authentication:
+  type: none
+  environmentVariables: []
+  setup: null
+request:
+  method: GET
+  urlTemplate: https://app.legco.gov.hk/vrdb/odata/vVotingResult
+  allowedHosts:
+  - app.legco.gov.hk
+  parameters:
+  - name: $top
+    location: query
+    dataType: integer
+    required: true
+    default: 10
+    example: 10
+    description: Maximum records returned.
+    enum: []
+    minimum: 1.0
+    maximum: 100.0
+    pattern: null
+  - name: $skip
+    location: query
+    dataType: integer
+    required: true
+    default: 0
+    example: 0
+    description: Records omitted before the response.
+    enum: []
+    minimum: 0.0
+    maximum: 10000.0
+    pattern: null
+  headers:
+  - name: accept
+    value: application/json
+    environmentVariable: null
+  bodyTemplate: null
+  timeoutMs: 15000
+  maxResponseBytes: 1048576
+  maxPages: 1
+  retry:
+    attempts: 2
+    statusCodes:
+    - 408
+    - 429
+    - 500
+    - 502
+    - 503
+    - 504
+response:
+  mediaTypes:
+  - application/json
+  recordPath: /value
+  idPath: null
+  timestampPath: null
+  pagination:
+    strategy: none
+    nextPath: null
+  normalization:
+    fields: {}
+    language: null
+    geometry: null
+    timestamp: null
+reason: null
+nextAction: null

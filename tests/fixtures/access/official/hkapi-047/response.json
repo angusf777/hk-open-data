@@ -1,0 +1,14 @@
+{
+  "results": [
+    {
+      "park_Id": "10",
+      "privateCar": [
+        {
+          "lastupdate": "2026-09-01 12:00:00",
+          "vacancy": 8,
+          "vacancy_type": "A"
+        }
+      ]
+    }
+  ]
+}

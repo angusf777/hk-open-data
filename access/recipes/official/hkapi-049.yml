@@ -1,0 +1,53 @@
+schemaVersion: 1
+sourceReference: HKAPI-049
+recipeVersion: 1.0.0
+adapter: rest-json
+status: fixture-tested
+documentationUrl: https://data.gov.hk/en-data/dataset/hk-td-tis_5-real-time-parking-vacancy-data/resource/98a9ecfa-907d-48bf-93f4-91912459d404
+limitations:
+- Technical access example only; review current provider terms, attribution, caching and redistribution
+  requirements before use.
+- The bounded example is not a promise of availability, completeness or fitness for a particular purpose.
+authentication:
+  type: none
+  environmentVariables: []
+  setup: null
+request:
+  method: GET
+  urlTemplate: https://resource.data.one.gov.hk/td/carpark/basic_info_all.json
+  allowedHosts:
+  - resource.data.one.gov.hk
+  parameters: []
+  headers:
+  - name: accept
+    value: application/json
+    environmentVariable: null
+  bodyTemplate: null
+  timeoutMs: 15000
+  maxResponseBytes: 1048576
+  maxPages: 1
+  retry:
+    attempts: 2
+    statusCodes:
+    - 408
+    - 429
+    - 500
+    - 502
+    - 503
+    - 504
+response:
+  mediaTypes:
+  - application/json
+  recordPath: /car_park
+  idPath: /park_id
+  timestampPath: null
+  pagination:
+    strategy: none
+    nextPath: null
+  normalization:
+    fields: {}
+    language: null
+    geometry: null
+    timestamp: null
+reason: null
+nextAction: null

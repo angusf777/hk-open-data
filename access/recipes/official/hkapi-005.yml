@@ -5,10 +5,9 @@ adapter: rest-json
 status: fixture-tested
 documentationUrl: https://data.gov.hk/en/help/api-spec
 limitations:
-- Technical access example only; review current provider terms, attribution, caching
-  and redistribution requirements before use.
-- The bounded example is not a promise of availability, completeness or fitness for
-  a particular purpose.
+- Technical access example only; review current provider terms, attribution, caching and redistribution
+  requirements before use.
+- The bounded example is not a promise of availability, completeness or fitness for a particular purpose.
 authentication:
   type: none
   environmentVariables: []
@@ -27,6 +26,9 @@ request:
     example: '20260829'
     description: Start date in YYYYMMDD format.
     enum: []
+    minimum: null
+    maximum: null
+    pattern: ^[0-9]{8}$
   - name: end
     location: query
     dataType: string
@@ -35,6 +37,9 @@ request:
     example: '20260830'
     description: End date in YYYYMMDD format.
     enum: []
+    minimum: null
+    maximum: null
+    pattern: ^[0-9]{8}$
   - name: max
     location: query
     dataType: integer
@@ -43,6 +48,9 @@ request:
     example: 10
     description: Maximum records returned.
     enum: []
+    minimum: 1.0
+    maximum: 100.0
+    pattern: null
   - name: skip
     location: query
     dataType: integer
@@ -51,6 +59,9 @@ request:
     example: 0
     description: Records omitted before the response.
     enum: []
+    minimum: 0.0
+    maximum: 10000.0
+    pattern: null
   headers:
   - name: accept
     value: application/json

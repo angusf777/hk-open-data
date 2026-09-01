@@ -1,0 +1,31 @@
+{
+  "approvedRequests": [
+    {
+      "allowed_hosts": [
+        "mapapi.geodata.gov.hk"
+      ],
+      "allowed_media_types": [
+        "image/png"
+      ],
+      "body": null,
+      "headers": {
+        "accept": "image/png"
+      },
+      "max_attempts": 2,
+      "max_compressed_response_bytes": 2097152,
+      "max_response_bytes": 2097152,
+      "method": "GET",
+      "retry_status_codes": [
+        408,
+        429,
+        500,
+        502,
+        503,
+        504
+      ],
+      "timeout_ms": 15000,
+      "url": "https://mapapi.geodata.gov.hk/gs/api/v1.0.0/xyz/basemap/HK80/11/287/385.png"
+    }
+  ],
+  "parameters": {}
+}

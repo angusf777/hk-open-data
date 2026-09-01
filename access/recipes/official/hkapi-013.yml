@@ -5,10 +5,9 @@ adapter: ogc-wfs
 status: fixture-tested
 documentationUrl: https://portal.csdi.gov.hk/csdi-webpage/doc/GeoSpatialServices
 limitations:
-- Technical access example only; review current provider terms, attribution, caching
-  and redistribution requirements before use.
-- The bounded example is not a promise of availability, completeness or fitness for
-  a particular purpose.
+- Technical access example only; review current provider terms, attribution, caching and redistribution
+  requirements before use.
+- The bounded example is not a promise of availability, completeness or fitness for a particular purpose.
 authentication:
   type: none
   environmentVariables: []

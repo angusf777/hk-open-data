@@ -1,0 +1,67 @@
+schemaVersion: 1
+sourceReference: HKAPI-029
+recipeVersion: 1.0.0
+adapter: rest-json
+status: fixture-tested
+documentationUrl: https://data.gov.hk/en-data/dataset/hk-td-sm_7-real-time-arrival-data-of-gmb/resource/02913a6d-e520-4232-bdd5-eef86a906631
+limitations:
+- Technical access example only; review current provider terms, attribution, caching and redistribution
+  requirements before use.
+- The bounded example is not a promise of availability, completeness or fitness for a particular purpose.
+authentication:
+  type: none
+  environmentVariables: []
+  setup: null
+request:
+  method: GET
+  urlTemplate: https://data.etagmb.gov.hk/route/{region}
+  allowedHosts:
+  - data.etagmb.gov.hk
+  parameters:
+  - name: region
+    location: path
+    dataType: string
+    required: true
+    default: HKI
+    example: HKI
+    description: Green-minibus region code.
+    enum:
+    - HKI
+    - KLN
+    - NT
+    minimum: null
+    maximum: null
+    pattern: null
+  headers:
+  - name: accept
+    value: application/json
+    environmentVariable: null
+  bodyTemplate: null
+  timeoutMs: 15000
+  maxResponseBytes: 1048576
+  maxPages: 1
+  retry:
+    attempts: 2
+    statusCodes:
+    - 408
+    - 429
+    - 500
+    - 502
+    - 503
+    - 504
+response:
+  mediaTypes:
+  - application/json
+  recordPath: /data/routes
+  idPath: null
+  timestampPath: null
+  pagination:
+    strategy: none
+    nextPath: null
+  normalization:
+    fields: {}
+    language: null
+    geometry: null
+    timestamp: null
+reason: null
+nextAction: null

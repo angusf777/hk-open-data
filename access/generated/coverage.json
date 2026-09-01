@@ -1,0 +1,12 @@
+{
+  "byStatus": {
+    "blocked": 0,
+    "credential-required": 0,
+    "fixture-tested": 37,
+    "live-verified": 0,
+    "manual-only": 228,
+    "unavailable": 0
+  },
+  "totalOfficial": 265,
+  "unclassified": 0
+}

@@ -5,10 +5,9 @@ adapter: rest-json
 status: fixture-tested
 documentationUrl: https://apidocs.hkma.gov.hk/documentation/market-data-and-statistics/monthly-statistical-bulletin/er-ir/er-eeri-daily/
 limitations:
-- Technical access example only; review current provider terms, attribution, caching
-  and redistribution requirements before use.
-- The bounded example is not a promise of availability, completeness or fitness for
-  a particular purpose.
+- Technical access example only; review current provider terms, attribution, caching and redistribution
+  requirements before use.
+- The bounded example is not a promise of availability, completeness or fitness for a particular purpose.
 authentication:
   type: none
   environmentVariables: []
@@ -27,6 +26,9 @@ request:
     example: 10
     description: Maximum rows returned.
     enum: []
+    minimum: 1.0
+    maximum: 100.0
+    pattern: null
   - name: offset
     location: query
     dataType: integer
@@ -35,6 +37,9 @@ request:
     example: 0
     description: Rows omitted before the response.
     enum: []
+    minimum: 0.0
+    maximum: 10000.0
+    pattern: null
   headers:
   - name: accept
     value: application/json
