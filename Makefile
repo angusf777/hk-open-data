@@ -1,10 +1,13 @@
 .PHONY: catalogue verify-catalogue verify-site verify-runtime verify-integrated verify-all \
 	check-boundary check-secrets test-repository runtime-catalogue runtime-observe runtime-fabric \
-	runtime-stop
+	runtime-stop hkdata
 
 catalogue:
 	uv run python scripts/catalog.py generate
 	pnpm --filter @hk-open-data/catalog build
+
+hkdata:
+	uv run --project packages/sdk-python hkdata --help
 
 verify-catalogue:
 	uv run pytest tests/catalog -q
