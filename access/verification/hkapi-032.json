@@ -1,6 +1,6 @@
 {
-  "checkedAt": "2026-09-01T10:20:42.328385Z",
-  "elapsedMs": 408,
+  "checkedAt": "2026-09-03T04:12:00.644182Z",
+  "elapsedMs": 228,
   "errorCode": null,
   "finalHost": "rt.data.gov.hk",
   "httpStatus": 200,
@@ -13,11 +13,11 @@
   "parsedRecordCount": 1,
   "recipeSha256": "7140c0499ccc0f38f7a64fe52a0d7dbb29c0d13ea2c9efaef7a3c4dc6a825173",
   "recipeVersion": "1.0.0",
-  "responseBytes": 1028,
-  "responseSha256": "b7607e9210706afb10f4b69fc13cbd3d1bfe961d2a201e348065d3233050c869",
+  "responseBytes": 1030,
+  "responseSha256": "7ecfa5112e152cb5507ed88ae78621695793363dfd036a4189178acae7b9717a",
   "schemaFingerprint": "63f5ff8c53c36acc750ddc85ba9ffe220df9dc1ede426c304c3c5495049144f2",
   "schemaVersion": 1,
   "sourceReference": "HKAPI-032",
   "toolVersion": "0.1.0",
-  "validUntil": "2026-09-08T10:20:42.328385Z"
+  "validUntil": "2026-09-10T04:12:00.644182Z"
 }

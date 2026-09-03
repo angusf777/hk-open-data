@@ -119,4 +119,21 @@ export const schemas = {
   access_recipe_get: z
     .object({ source_reference: z.string().regex(/^HKAPI-[0-9]{3}$/) })
     .strict(),
+  access_resources_list: z
+    .object({
+      source_reference: z.string().regex(/^HKAPI-[0-9]{3}$/),
+      dataset_id: z.string().regex(/^[A-Za-z0-9][A-Za-z0-9._-]{1,299}$/).optional(),
+      format: z.string().min(1).max(32).optional(),
+      access: z
+        .enum(["ready", "parameters-required", "insecure-http", "invalid-url"])
+        .optional(),
+      ...page,
+    })
+    .strict(),
+  access_resource_get: z
+    .object({
+      dataset_id: z.string().regex(/^[A-Za-z0-9][A-Za-z0-9._-]{1,299}$/),
+      resource_id: z.string().regex(/^[A-Za-z0-9][A-Za-z0-9._-]{1,299}$/),
+    })
+    .strict(),
 } as const;

@@ -16,7 +16,7 @@ def compose() -> dict[str, object]:
     return yaml.safe_load((ROOT / "docker-compose.yml").read_text(encoding="utf-8"))
 
 
-def mcp_recipe_probe() -> str:
+def mcp_access_probe() -> str:
     return textwrap.dedent(
         """
         const endpoint = 'http://127.0.0.1:3100/mcp';
@@ -57,16 +57,27 @@ def mcp_recipe_probe() -> str:
           },
         });
         await post({ jsonrpc: '2.0', method: 'notifications/initialized' }, initialized.session);
-        const result = await post({
+        const recipeResult = await post({
           jsonrpc: '2.0', id: 2, method: 'tools/call',
           params: {
             name: 'access_recipe_get',
             arguments: { source_reference: 'HKAPI-001' },
           },
         }, initialized.session);
-        const item = result.value?.result?.structuredContent?.data?.item;
-        if (!item) throw new Error('MCP recipe result is missing');
-        process.stdout.write(JSON.stringify(item));
+        const resourceResult = await post({
+          jsonrpc: '2.0', id: 3, method: 'tools/call',
+          params: {
+            name: 'access_resource_get',
+            arguments: {
+              dataset_id: 'nlb-bus-nlb-bus-service-v2',
+              resource_id: '96c5e827-3d3a-4110-8cd2-e7c80cd562bc',
+            },
+          },
+        }, initialized.session);
+        const recipe = recipeResult.value?.result?.structuredContent?.data?.item;
+        const resource = resourceResult.value?.result?.structuredContent?.data?.item;
+        if (!recipe || !resource) throw new Error('MCP access result is missing');
+        process.stdout.write(JSON.stringify({ recipe, resource }));
         """
     )
 
@@ -91,13 +102,16 @@ def test_generated_access_recipe_matches_the_catalogue_projection() -> None:
     assert projected == expected
 
 
-def test_local_smoke_checks_the_access_api_and_both_recipe_tools() -> None:
+def test_local_smoke_checks_recipe_and_resource_api_and_mcp_tools() -> None:
     script = (ROOT / "scripts" / "smoke-local.mjs").read_text(encoding="utf-8")
 
     assert '"http://127.0.0.1:3000/v1"' in script
     assert "/access-recipes/HKAPI-001" in script
     assert "access_recipes_list" in script
     assert "access_recipe_get" in script
+    assert "/access-resources/" in script
+    assert "access_resources_list" in script
+    assert "access_resource_get" in script
     assert "recipe_sha256" in script
 
 
@@ -353,7 +367,29 @@ def test_observe_stack_is_healthy_digest_only_and_has_no_object_store() -> None:
             text=True,
             timeout=30,
         )
-        mcp_recipe = subprocess.run(
+        api_resource = subprocess.run(
+            [
+                *base,
+                "exec",
+                "--no-TTY",
+                "api",
+                "node",
+                "-e",
+                (
+                    "fetch('http://127.0.0.1:3000/v1/access-resources/"
+                    "nlb-bus-nlb-bus-service-v2/"
+                    "96c5e827-3d3a-4110-8cd2-e7c80cd562bc')"
+                    ".then(r=>r.json()).then(v=>process.stdout.write(JSON.stringify(v)))"
+                ),
+            ],
+            cwd=ROOT,
+            env=environment,
+            capture_output=True,
+            check=False,
+            text=True,
+            timeout=30,
+        )
+        mcp_access = subprocess.run(
             [
                 *base,
                 "exec",
@@ -362,7 +398,7 @@ def test_observe_stack_is_healthy_digest_only_and_has_no_object_store() -> None:
                 "node",
                 "--input-type=module",
                 "-e",
-                mcp_recipe_probe(),
+                mcp_access_probe(),
             ],
             cwd=ROOT,
             env=environment,
@@ -411,11 +447,27 @@ def test_observe_stack_is_healthy_digest_only_and_has_no_object_store() -> None:
     assert api_value["source_reference"] == expected["sourceReference"]
     assert api_value["recipe_sha256"] == expected["recipeSha256"]
     assert api_value["effective_status"] == expected["effectiveStatus"]
-    assert mcp_recipe.returncode == 0, mcp_recipe.stdout + mcp_recipe.stderr
-    mcp_value = json.loads(mcp_recipe.stdout)
-    assert mcp_value["source_reference"] == expected["sourceReference"]
-    assert mcp_value["recipe_sha256"] == expected["recipeSha256"]
-    assert mcp_value["effective_status"] == expected["effectiveStatus"]
+    expected_resource = next(
+        resource
+        for resource in json.loads(
+            (ROOT / "access" / "generated" / "data-gov-resources.json").read_text(
+                encoding="utf-8"
+            )
+        )["resources"]
+        if resource["datasetId"] == "nlb-bus-nlb-bus-service-v2"
+        and resource["resourceId"] == "96c5e827-3d3a-4110-8cd2-e7c80cd562bc"
+    )
+    assert api_resource.returncode == 0, api_resource.stdout + api_resource.stderr
+    api_resource_value = json.loads(api_resource.stdout)
+    assert api_resource_value["resource_id"] == expected_resource["resourceId"]
+    assert api_resource_value["url_template"] == expected_resource["urlTemplate"]
+    assert mcp_access.returncode == 0, mcp_access.stdout + mcp_access.stderr
+    mcp_value = json.loads(mcp_access.stdout)
+    assert mcp_value["recipe"]["source_reference"] == expected["sourceReference"]
+    assert mcp_value["recipe"]["recipe_sha256"] == expected["recipeSha256"]
+    assert mcp_value["recipe"]["effective_status"] == expected["effectiveStatus"]
+    assert mcp_value["resource"]["resource_id"] == expected_resource["resourceId"]
+    assert mcp_value["resource"]["url_template"] == expected_resource["urlTemplate"]
     running_services = set(running.stdout.splitlines())
     assert "worker-observe" in running_services
     assert "worker-fabric" not in running_services

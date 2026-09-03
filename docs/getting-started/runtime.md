@@ -93,10 +93,12 @@ remains disabled. When you enable a source, the worker stores a `digest://sha256
 plus summary measurements and discards the response content. Enabling a connection is a separate,
 logged action; a catalogue terms-review label never enables a source or grants permission to use it.
 
-The API exposes `GET /v1/access-recipes` and
-`GET /v1/access-recipes/{source_reference}`. The read-only MCP server provides
-`access_recipes_list` and `access_recipe_get`. These interfaces read the generated recipe registry;
-they do not execute a listed source.
+The API exposes `GET /v1/access-recipes`, `GET /v1/access-recipes/{source_reference}`,
+`GET /v1/access-resources`, and
+`GET /v1/access-resources/{dataset_id}/{resource_id}`. The read-only MCP server provides matching
+`access_recipes_list`, `access_recipe_get`, `access_resources_list`, and `access_resource_get`
+tools. These interfaces read the generated recipe and provider-resource registries; they do not
+execute a listed source.
 
 ## 4. Start data access with full-response storage
 

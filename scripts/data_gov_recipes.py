@@ -259,13 +259,13 @@ def verify_all_dataset_ids(
                 "errorCode": error.code,
             }
 
-    dataset_ids = sorted(references_by_dataset)
+    all_dataset_ids = sorted(references_by_dataset)
     if concurrency == 1:
-        checked = map(attempt, dataset_ids)
+        checked = map(attempt, all_dataset_ids)
         results = dict(checked)
     else:
         with ThreadPoolExecutor(max_workers=concurrency) as executor:
-            results = dict(executor.map(attempt, dataset_ids))
+            results = dict(executor.map(attempt, all_dataset_ids))
     successes = sum(value["outcome"] == "success" for value in results.values())
     report = {
         "schemaVersion": 1,
@@ -277,9 +277,9 @@ def verify_all_dataset_ids(
         ),
         "sourceCount": len(mapping),
         "sourceDatasetMappings": sum(len(value) for value in mapping.values()),
-        "uniqueDatasetIds": len(dataset_ids),
+        "uniqueDatasetIds": len(all_dataset_ids),
         "successes": successes,
-        "failures": len(dataset_ids) - successes,
+        "failures": len(all_dataset_ids) - successes,
         "datasets": results,
     }
     output = (

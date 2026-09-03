@@ -118,4 +118,22 @@ describe("REST-backed MCP parity", () => {
     expect(url.searchParams.get("verification_freshness")).toBe("current");
     expect(url.searchParams.has("freshness")).toBe(false);
   });
+
+  it("routes provider resource tools to bounded read-only REST paths", async () => {
+    const fetcher = vi.fn<typeof fetch>().mockResolvedValue(
+      new Response(JSON.stringify({ items: [], page: { next_cursor: null } }), { status: 200 }),
+    );
+    const client = new RestPlatformClient({ baseUrl: "https://api.example/v1", fetcher });
+
+    await client.call("access_resources_list", {
+      source_reference: "HKAPI-030",
+      access: "ready",
+      limit: 10,
+    });
+
+    const url = new URL(String(fetcher.mock.calls[0]?.[0]));
+    expect(url.pathname).toBe("/v1/access-resources");
+    expect(url.searchParams.get("source_reference")).toBe("HKAPI-030");
+    expect(url.searchParams.get("access")).toBe("ready");
+  });
 });

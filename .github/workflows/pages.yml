@@ -6,10 +6,12 @@ on:
     branches: [main]
     paths:
       - "apps/catalog/**"
+      - "access/**"
       - "catalog/**"
       - "docs/**"
       - "packages/catalog/**"
       - "scripts/catalog.py"
+      - "scripts/data_gov_resources.py"
       - "package.json"
       - "pnpm-lock.yaml"
       - "pyproject.toml"

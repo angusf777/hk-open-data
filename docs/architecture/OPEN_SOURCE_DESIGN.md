@@ -26,8 +26,9 @@ identity, evidence dates, or rights states.
 
 Every official catalogue record also has one versioned source-access recipe. The recipe either
 defines a bounded, source-specific request or records why only manual guidance is currently safe.
-Generated recipe JSON is projected into the catalogue, two REST routes, both SDKs and two read-only
-MCP tools. All of those views carry the same recipe hash and limitations. They do not execute the
+Generated recipe and provider-resource JSON are projected into the catalogue, four REST routes,
+both SDKs and four read-only MCP tools. All of those views carry the same recipe hash and
+limitations. They do not execute the
 request; network use is confined to explicit local CLI commands and individually enabled runtime
 connections.
 

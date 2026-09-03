@@ -116,6 +116,14 @@ class HKDataClient:
             raise ValueError("language must be curl, python, or typescript")
         return access_example(self.get_access_recipe(source_reference), language)
 
+    def list_access_resources(self, **query: str | int | bool | None) -> Page:
+        return cast(Page, self._request("access-resources", params=query))
+
+    def get_access_resource(self, dataset_id: str, resource_id: str) -> dict[str, object]:
+        encoded_dataset = quote(dataset_id, safe="")
+        encoded_resource = quote(resource_id, safe="")
+        return self._request(f"access-resources/{encoded_dataset}/{encoded_resource}")
+
     def list_source_records(self, **query: str | int | bool | None) -> Page:
         return cast(Page, self._request("source-records", params=query))
 

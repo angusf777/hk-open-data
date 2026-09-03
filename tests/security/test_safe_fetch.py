@@ -223,3 +223,71 @@ def test_rejects_unexpected_response_media_type_without_body() -> None:
         )
 
     assert "secret" not in str(caught.value)
+
+
+def test_fetch_sample_reads_a_bounded_prefix_when_server_ignores_range() -> None:
+    observed_range = None
+
+    def handler(outbound: httpx.Request) -> httpx.Response:
+        nonlocal observed_range
+        observed_range = outbound.headers.get("range")
+        return httpx.Response(
+            200,
+            headers={"content-length": "10", "content-type": "text/plain"},
+            content=b"0123456789",
+            request=outbound,
+        )
+
+    result = SafeFetcher(
+        transport=httpx.MockTransport(handler),
+        resolver=resolver,
+    ).fetch_sample(request("https://public.example/data", cap=1024), sample_bytes=4)
+
+    assert observed_range == "bytes=0-3"
+    assert result.status_code == 200
+    assert result.body == b"0123"
+    assert result.truncated is True
+
+
+def test_fetch_sample_reports_complete_partial_content() -> None:
+    fetcher = SafeFetcher(
+        transport=httpx.MockTransport(
+            lambda outbound: httpx.Response(
+                206,
+                headers={"content-length": "3", "content-range": "bytes 0-2/3"},
+                content=b"abc",
+                request=outbound,
+            )
+        ),
+        resolver=resolver,
+    )
+
+    result = fetcher.fetch_sample(
+        request("https://public.example/data", cap=1024),
+        sample_bytes=4,
+    )
+
+    assert result.body == b"abc"
+    assert result.truncated is False
+
+
+def test_fetch_sample_uses_content_range_total_to_report_truncation() -> None:
+    fetcher = SafeFetcher(
+        transport=httpx.MockTransport(
+            lambda outbound: httpx.Response(
+                206,
+                headers={"content-length": "4", "content-range": "bytes 0-3/10"},
+                content=b"abcd",
+                request=outbound,
+            )
+        ),
+        resolver=resolver,
+    )
+
+    result = fetcher.fetch_sample(
+        request("https://public.example/data", cap=1024),
+        sample_bytes=4,
+    )
+
+    assert result.body == b"abcd"
+    assert result.truncated is True

@@ -45,7 +45,7 @@ async function connectedClient(): Promise<Client> {
 afterEach(async () => closeCurrent?.());
 
 describe("first-party read-only MCP server", () => {
-  it("exposes exactly the thirteen normative tools with read-only annotations", async () => {
+  it("exposes exactly the fifteen normative tools with read-only annotations", async () => {
     const client = await connectedClient();
     const result = await client.listTools();
 
@@ -91,7 +91,7 @@ describe("first-party read-only MCP server", () => {
     });
     await client.connect(transport);
 
-    expect((await client.listTools()).tools).toHaveLength(13);
+    expect((await client.listTools()).tools).toHaveLength(15);
     const result = await client.callTool({ name: "status_summary", arguments: {} });
     expect(result.isError).not.toBe(true);
     await client.close();

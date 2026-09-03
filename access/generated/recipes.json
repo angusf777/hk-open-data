@@ -114,8 +114,8 @@
       "sourceReference": "HKAPI-001",
       "status": "live-verified",
       "verification": {
-        "checkedAt": "2026-09-01T10:20:42.328385Z",
-        "elapsedMs": 284,
+        "checkedAt": "2026-09-03T04:12:00.644182Z",
+        "elapsedMs": 3583,
         "errorCode": null,
         "finalHost": "data.gov.hk",
         "httpStatus": 200,
@@ -131,7 +131,7 @@
         "responseSha256": "1ffa0e7fb38c42c5686a555c7b81c32919bd5c1699e362709939c341ab16bc0c",
         "schemaFingerprint": "0a4932c7e03fe084254f4da99354167763dad5181be2278e1d0a024a2135ef86",
         "toolVersion": "0.1.0",
-        "validUntil": "2026-09-08T10:20:42.328385Z"
+        "validUntil": "2026-09-10T04:12:00.644182Z"
       }
     },
     {
@@ -222,8 +222,8 @@
       "sourceReference": "HKAPI-002",
       "status": "live-verified",
       "verification": {
-        "checkedAt": "2026-09-01T10:20:42.328385Z",
-        "elapsedMs": 2377,
+        "checkedAt": "2026-09-03T04:12:00.644182Z",
+        "elapsedMs": 3752,
         "errorCode": null,
         "finalHost": "data.gov.hk",
         "httpStatus": 200,
@@ -239,7 +239,7 @@
         "responseSha256": "60a761806596aa628f2de9200c2e5e729d41cc83c0c72e3ad22f37a267ec83eb",
         "schemaFingerprint": "e6e55a65ad4f8364c54a847d8368ea7a35002a343b7ed365d921c5a4119acab2",
         "toolVersion": "0.1.0",
-        "validUntil": "2026-09-08T10:20:42.328385Z"
+        "validUntil": "2026-09-10T04:12:00.644182Z"
       }
     },
     {
@@ -316,8 +316,8 @@
       "sourceReference": "HKAPI-003",
       "status": "live-verified",
       "verification": {
-        "checkedAt": "2026-09-01T10:20:42.328385Z",
-        "elapsedMs": 485,
+        "checkedAt": "2026-09-03T04:12:00.644182Z",
+        "elapsedMs": 363,
         "errorCode": null,
         "finalHost": "data.gov.hk",
         "httpStatus": 200,
@@ -333,7 +333,7 @@
         "responseSha256": "2e7554f73d8a262a34ee330cd11d5bb63b165100c5ac53b7ec8973ab533477cb",
         "schemaFingerprint": "0a4932c7e03fe084254f4da99354167763dad5181be2278e1d0a024a2135ef86",
         "toolVersion": "0.1.0",
-        "validUntil": "2026-09-08T10:20:42.328385Z"
+        "validUntil": "2026-09-10T04:12:00.644182Z"
       }
     },
     {
@@ -424,8 +424,8 @@
       "sourceReference": "HKAPI-004",
       "status": "live-verified",
       "verification": {
-        "checkedAt": "2026-09-01T10:20:42.328385Z",
-        "elapsedMs": 238,
+        "checkedAt": "2026-09-03T04:12:00.644182Z",
+        "elapsedMs": 305,
         "errorCode": null,
         "finalHost": "data.gov.hk",
         "httpStatus": 200,
@@ -437,11 +437,11 @@
         "outcome": "success",
         "parsedRecordCount": 1,
         "recipeSha256": "04f2c8a0e67398753f89d55ccb2fc61516575341c70710c0160efb7977bd4ef3",
-        "responseBytes": 920,
-        "responseSha256": "596c990bd4558bae838b9abdaa7c24ff10bde5d17b541d5b374f83a4cad3a502",
+        "responseBytes": 919,
+        "responseSha256": "961d62c1772f50e56e6d97937ac6797a2d32095b1287f2fd8a3ea65e098673ca",
         "schemaFingerprint": "9536eade907dfaf56c619a9f04a8d64ad0f9d0ef340d9282688f9fff524f1235",
         "toolVersion": "0.1.0",
-        "validUntil": "2026-09-08T10:20:42.328385Z"
+        "validUntil": "2026-09-10T04:12:00.644182Z"
       }
     },
     {
@@ -571,8 +571,8 @@
       "sourceReference": "HKAPI-005",
       "status": "live-verified",
       "verification": {
-        "checkedAt": "2026-09-01T10:20:42.328385Z",
-        "elapsedMs": 8360,
+        "checkedAt": "2026-09-03T04:12:00.644182Z",
+        "elapsedMs": 5365,
         "errorCode": null,
         "finalHost": "app.data.gov.hk",
         "httpStatus": 200,
@@ -588,7 +588,7 @@
         "responseSha256": "2b277412fb856d6cf1c6412e455b9e6f5e0a432f1a8b2b51a58e82d94e3a48b3",
         "schemaFingerprint": "d0ededd7d952c9711f45c57903465bf6ba56d0595b8816a2765b3a5118529fe4",
         "toolVersion": "0.1.0",
-        "validUntil": "2026-09-08T10:20:42.328385Z"
+        "validUntil": "2026-09-10T04:12:00.644182Z"
       }
     },
     {
@@ -850,8 +850,8 @@
       "sourceReference": "HKAPI-011",
       "status": "live-verified",
       "verification": {
-        "checkedAt": "2026-09-01T10:20:42.328385Z",
-        "elapsedMs": 1598,
+        "checkedAt": "2026-09-03T04:12:00.644182Z",
+        "elapsedMs": 5068,
         "errorCode": null,
         "finalHost": "api.data.gov.hk",
         "httpStatus": 200,
@@ -867,7 +867,7 @@
         "responseSha256": "179bfd0c559326c3c7478d8994b8ba64f673a1cd9f602cfbbf8d0fab98520dd0",
         "schemaFingerprint": "042e466954b3c0ecf3bf3eb7f5612327811077a8b1310204cf0938a841b3c910",
         "toolVersion": "0.1.0",
-        "validUntil": "2026-09-08T10:20:42.328385Z"
+        "validUntil": "2026-09-10T04:12:00.644182Z"
       }
     },
     {
@@ -945,8 +945,8 @@
       "sourceReference": "HKAPI-012",
       "status": "live-verified",
       "verification": {
-        "checkedAt": "2026-09-01T10:20:42.328385Z",
-        "elapsedMs": 203,
+        "checkedAt": "2026-09-03T04:12:00.644182Z",
+        "elapsedMs": 290,
         "errorCode": null,
         "finalHost": "data.gov.hk",
         "httpStatus": 200,
@@ -956,13 +956,13 @@
         ],
         "mediaType": "text/xml",
         "outcome": "success",
-        "parsedRecordCount": 149,
+        "parsedRecordCount": 185,
         "recipeSha256": "b57b180a406e1c4897d7ba942d15e35bb2647339dd37d3388cd51965753f2353",
-        "responseBytes": 84034,
-        "responseSha256": "8a28afd6477410fe89f984e3943d2f9277398fe4dddf9d481bcd31b668d89e9a",
+        "responseBytes": 111973,
+        "responseSha256": "b777953623f502d677d473288e733bdf9c95973eab8d2dae912ae30bc4c1d6f1",
         "schemaFingerprint": "bda7b9972154aca47de570b68e17dedf42695b582e76f5eafe92df660cf12868",
         "toolVersion": "0.1.0",
-        "validUntil": "2026-09-08T10:20:42.328385Z"
+        "validUntil": "2026-09-10T04:12:00.644182Z"
       }
     },
     {
@@ -1040,8 +1040,8 @@
       "sourceReference": "HKAPI-013",
       "status": "live-verified",
       "verification": {
-        "checkedAt": "2026-09-01T10:20:42.328385Z",
-        "elapsedMs": 519,
+        "checkedAt": "2026-09-03T04:12:00.644182Z",
+        "elapsedMs": 1597,
         "errorCode": null,
         "finalHost": "portal.csdi.gov.hk",
         "httpStatus": 200,
@@ -1057,7 +1057,7 @@
         "responseSha256": "d1daa6600b72fa1589860d11d2a5568934e2e3d9a81e7cb7299bf5f28c5cdcd1",
         "schemaFingerprint": "df27d1c9f62d7d2311d9ca3dccc4e1688937546ec56bcfc00cfe4968565813a5",
         "toolVersion": "0.1.0",
-        "validUntil": "2026-09-08T10:20:42.328385Z"
+        "validUntil": "2026-09-10T04:12:00.644182Z"
       }
     },
     {
@@ -1134,8 +1134,8 @@
       "sourceReference": "HKAPI-014",
       "status": "live-verified",
       "verification": {
-        "checkedAt": "2026-09-01T10:20:42.328385Z",
-        "elapsedMs": 454,
+        "checkedAt": "2026-09-03T04:12:00.644182Z",
+        "elapsedMs": 1593,
         "errorCode": null,
         "finalHost": "portal.csdi.gov.hk",
         "httpStatus": 200,
@@ -1151,7 +1151,7 @@
         "responseSha256": "194526f826f7553cecdcf645be9e9559cc5e4e1999fafe02b2cdff120105cb27",
         "schemaFingerprint": "51931fb57c04baf13a60e9d656b081ff095aea0be56831eac1d00e6d7f8974fe",
         "toolVersion": "0.1.0",
-        "validUntil": "2026-09-08T10:20:42.328385Z"
+        "validUntil": "2026-09-10T04:12:00.644182Z"
       }
     },
     {
@@ -1295,8 +1295,8 @@
       "sourceReference": "HKAPI-016",
       "status": "live-verified",
       "verification": {
-        "checkedAt": "2026-09-01T10:20:42.328385Z",
-        "elapsedMs": 191,
+        "checkedAt": "2026-09-03T04:12:00.644182Z",
+        "elapsedMs": 382,
         "errorCode": null,
         "finalHost": "data.weather.gov.hk",
         "httpStatus": 200,
@@ -1308,11 +1308,11 @@
         "outcome": "success",
         "parsedRecordCount": 1,
         "recipeSha256": "b4622acb5d8fa0493937ec708cdecbffc727f2a970624daf3afb33f96210b9de",
-        "responseBytes": 486,
-        "responseSha256": "8a577064fad8134908e8877164be19b124fe9c4efb42915e86b5feee9fcccb22",
+        "responseBytes": 490,
+        "responseSha256": "50f01f14c5da54783b78451781dbc68a1eef87c3d643e8e09be037c6e780fa42",
         "schemaFingerprint": "3f9958446d446313fab148ba7c58056b231f686828807756a0799d5d3401db37",
         "toolVersion": "0.1.0",
-        "validUntil": "2026-09-08T10:20:42.328385Z"
+        "validUntil": "2026-09-10T04:12:00.644182Z"
       }
     },
     {
@@ -1445,7 +1445,7 @@
       "sourceReference": "HKAPI-018",
       "status": "fixture-tested",
       "verification": {
-        "checkedAt": "2026-09-01T10:20:42.328385Z",
+        "checkedAt": "2026-09-03T04:12:00.644182Z",
         "elapsedMs": 0,
         "errorCode": "MEDIA_TYPE_MISMATCH",
         "finalHost": "api.hkma.gov.hk",
@@ -1463,7 +1463,7 @@
         "responseSha256": null,
         "schemaFingerprint": null,
         "toolVersion": "0.1.0",
-        "validUntil": "2026-09-08T10:20:42.328385Z"
+        "validUntil": "2026-09-10T04:12:00.644182Z"
       }
     },
     {
@@ -1596,7 +1596,7 @@
       "sourceReference": "HKAPI-020",
       "status": "fixture-tested",
       "verification": {
-        "checkedAt": "2026-09-01T10:20:42.328385Z",
+        "checkedAt": "2026-09-03T04:12:00.644182Z",
         "elapsedMs": 0,
         "errorCode": "SOURCE_UNAVAILABLE",
         "finalHost": "app.legco.gov.hk",
@@ -1614,7 +1614,7 @@
         "responseSha256": null,
         "schemaFingerprint": null,
         "toolVersion": "0.1.0",
-        "validUntil": "2026-09-08T10:20:42.328385Z"
+        "validUntil": "2026-09-10T04:12:00.644182Z"
       }
     },
     {
@@ -1723,8 +1723,8 @@
       "sourceReference": "HKAPI-021",
       "status": "live-verified",
       "verification": {
-        "checkedAt": "2026-09-01T10:20:42.328385Z",
-        "elapsedMs": 476,
+        "checkedAt": "2026-09-03T04:12:00.644182Z",
+        "elapsedMs": 593,
         "errorCode": null,
         "finalHost": "www.als.gov.hk",
         "httpStatus": 200,
@@ -1740,7 +1740,7 @@
         "responseSha256": "fbb5dfd096706c8994834e861bf31c44a75c8995cc766328fc288e7f4b136952",
         "schemaFingerprint": "91e0e5c21757e9f11ff7a894e45050b49e0bb127827e94d3f132e0c5869b0269",
         "toolVersion": "0.1.0",
-        "validUntil": "2026-09-08T10:20:42.328385Z"
+        "validUntil": "2026-09-10T04:12:00.644182Z"
       }
     },
     {
@@ -1846,8 +1846,8 @@
       "sourceReference": "HKAPI-023",
       "status": "live-verified",
       "verification": {
-        "checkedAt": "2026-09-01T10:20:42.328385Z",
-        "elapsedMs": 408,
+        "checkedAt": "2026-09-03T04:12:00.644182Z",
+        "elapsedMs": 574,
         "errorCode": null,
         "finalHost": "mapapi.geodata.gov.hk",
         "httpStatus": 200,
@@ -1863,7 +1863,7 @@
         "responseSha256": "48eb13d9573c08ea88a02129997de69b05d47e51c4ea3f4fefab2c647e60cf7d",
         "schemaFingerprint": "34c7be104094b1826b29583f581f9c4870ee646c429827fa9ce5e847f7063c01",
         "toolVersion": "0.1.0",
-        "validUntil": "2026-09-08T10:20:42.328385Z"
+        "validUntil": "2026-09-10T04:12:00.644182Z"
       }
     },
     {
@@ -2027,8 +2027,8 @@
       "sourceReference": "HKAPI-027",
       "status": "live-verified",
       "verification": {
-        "checkedAt": "2026-09-01T10:20:42.328385Z",
-        "elapsedMs": 14591,
+        "checkedAt": "2026-09-03T04:12:00.644182Z",
+        "elapsedMs": 14796,
         "errorCode": null,
         "finalHost": "rt.data.gov.hk",
         "httpStatus": 200,
@@ -2041,10 +2041,10 @@
         "parsedRecordCount": 406,
         "recipeSha256": "b21ba0fedb4ec6f6007173328081830c5bb35366e4ae0f4233857b9d980697c4",
         "responseBytes": 111826,
-        "responseSha256": "0121774616fd17f7c8e06ac0b69c87af7242aa28a991eeecdef0e20d06e9e19c",
+        "responseSha256": "0a3035ea7d0196c2b58759cd682427bab67c36842a92fbf19a7954b79aedfede",
         "schemaFingerprint": "f8e1907e3774914bf32e6cf0e69c47422d8fa817319ced83954227afac3a2d38",
         "toolVersion": "0.1.0",
-        "validUntil": "2026-09-08T10:20:42.328385Z"
+        "validUntil": "2026-09-10T04:12:00.644182Z"
       }
     },
     {
@@ -2121,8 +2121,8 @@
       "sourceReference": "HKAPI-028",
       "status": "live-verified",
       "verification": {
-        "checkedAt": "2026-09-01T10:20:42.328385Z",
-        "elapsedMs": 464,
+        "checkedAt": "2026-09-03T04:12:00.644182Z",
+        "elapsedMs": 542,
         "errorCode": null,
         "finalHost": "data.etabus.gov.hk",
         "httpStatus": 200,
@@ -2135,10 +2135,10 @@
         "parsedRecordCount": 1601,
         "recipeSha256": "9f42c91fc9c528476de00e3807f37f8a551a8c00cc0664043e78e81ca821c455",
         "responseBytes": 349723,
-        "responseSha256": "84d68406a62687cfd41cd7fb4e40c76461a4dc03ba0ac7a335380b70307adbe9",
+        "responseSha256": "c752429be9fee10da092f79c17bd9c4982f6d05898517e82ce9140a3170e9ca9",
         "schemaFingerprint": "d8b9264f3f5d981d737da07cd0d402869ff179b63b4a9db681845b47c1a35a5b",
         "toolVersion": "0.1.0",
-        "validUntil": "2026-09-08T10:20:42.328385Z"
+        "validUntil": "2026-09-10T04:12:00.644182Z"
       }
     },
     {
@@ -2233,8 +2233,8 @@
       "sourceReference": "HKAPI-029",
       "status": "live-verified",
       "verification": {
-        "checkedAt": "2026-09-01T10:20:42.328385Z",
-        "elapsedMs": 378,
+        "checkedAt": "2026-09-03T04:12:00.644182Z",
+        "elapsedMs": 1473,
         "errorCode": null,
         "finalHost": "data.etagmb.gov.hk",
         "httpStatus": 200,
@@ -2247,10 +2247,10 @@
         "parsedRecordCount": 108,
         "recipeSha256": "9190a75016969079400dbc7794bf3e9309c40a49b5f03caeb7c55cb852f44d14",
         "responseBytes": 761,
-        "responseSha256": "eb96d78057798965cc0aec4962b51da32b6cbf5fd07e708d7730699ee14171be",
+        "responseSha256": "674264044b64348b8dd5912bd05d0c1a5a2f45d8baec20689fd2f40cca3a760d",
         "schemaFingerprint": "6db71c67421344ad7e1667518dca25adee93a0588df504b9a168e6c73511aefc",
         "toolVersion": "0.1.0",
-        "validUntil": "2026-09-08T10:20:42.328385Z"
+        "validUntil": "2026-09-10T04:12:00.644182Z"
       }
     },
     {
@@ -2344,8 +2344,8 @@
       "sourceReference": "HKAPI-030",
       "status": "live-verified",
       "verification": {
-        "checkedAt": "2026-09-01T10:20:42.328385Z",
-        "elapsedMs": 194,
+        "checkedAt": "2026-09-03T04:12:00.644182Z",
+        "elapsedMs": 291,
         "errorCode": null,
         "finalHost": "data.gov.hk",
         "httpStatus": 200,
@@ -2362,7 +2362,7 @@
         "responseSha256": "cad3a556b09b4606914eab485cc9e5418c4a0bd8ef9ddd211c5a5206a11d0adf",
         "schemaFingerprint": "d4aed0d0c51c176b464d6da30a934e35b23a788d1124c37c00465523c4513d67",
         "toolVersion": "0.1.0",
-        "validUntil": "2026-09-08T10:20:42.328385Z"
+        "validUntil": "2026-09-10T04:12:00.644182Z"
       }
     },
     {
@@ -2456,8 +2456,8 @@
       "sourceReference": "HKAPI-031",
       "status": "live-verified",
       "verification": {
-        "checkedAt": "2026-09-01T10:25:29.844991Z",
-        "elapsedMs": 1035,
+        "checkedAt": "2026-09-03T04:12:00.644182Z",
+        "elapsedMs": 297,
         "errorCode": null,
         "finalHost": "data.gov.hk",
         "httpStatus": 200,
@@ -2474,7 +2474,7 @@
         "responseSha256": "d919f75cee0f58cc2c3b527141eb28b4929941daa89a7dee61942c07a1b7da25",
         "schemaFingerprint": "67bf7d53de9c5b8b88a79a591ef5627b2840edd185962d8c6e0e6001025c3113",
         "toolVersion": "0.1.0",
-        "validUntil": "2026-09-08T10:25:29.844991Z"
+        "validUntil": "2026-09-10T04:12:00.644182Z"
       }
     },
     {
@@ -2605,8 +2605,8 @@
       "sourceReference": "HKAPI-032",
       "status": "live-verified",
       "verification": {
-        "checkedAt": "2026-09-01T10:20:42.328385Z",
-        "elapsedMs": 408,
+        "checkedAt": "2026-09-03T04:12:00.644182Z",
+        "elapsedMs": 228,
         "errorCode": null,
         "finalHost": "rt.data.gov.hk",
         "httpStatus": 200,
@@ -2618,11 +2618,11 @@
         "outcome": "success",
         "parsedRecordCount": 1,
         "recipeSha256": "7140c0499ccc0f38f7a64fe52a0d7dbb29c0d13ea2c9efaef7a3c4dc6a825173",
-        "responseBytes": 1028,
-        "responseSha256": "b7607e9210706afb10f4b69fc13cbd3d1bfe961d2a201e348065d3233050c869",
+        "responseBytes": 1030,
+        "responseSha256": "7ecfa5112e152cb5507ed88ae78621695793363dfd036a4189178acae7b9717a",
         "schemaFingerprint": "63f5ff8c53c36acc750ddc85ba9ffe220df9dc1ede426c304c3c5495049144f2",
         "toolVersion": "0.1.0",
-        "validUntil": "2026-09-08T10:20:42.328385Z"
+        "validUntil": "2026-09-10T04:12:00.644182Z"
       }
     },
     {
@@ -2713,8 +2713,8 @@
       "sourceReference": "HKAPI-033",
       "status": "live-verified",
       "verification": {
-        "checkedAt": "2026-09-01T10:20:42.328385Z",
-        "elapsedMs": 319,
+        "checkedAt": "2026-09-03T04:12:00.644182Z",
+        "elapsedMs": 510,
         "errorCode": null,
         "finalHost": "rt.data.gov.hk",
         "httpStatus": 200,
@@ -2726,11 +2726,11 @@
         "outcome": "success",
         "parsedRecordCount": 5,
         "recipeSha256": "17eb710d23961b846e8d9da517c00a237d4e9a6b27f0a6422d209bc1f8bf2596",
-        "responseBytes": 4025,
-        "responseSha256": "c69049aae2ae344d8b7bb5080b5c47ca8078c20f896d38e841af99fdee1cd14e",
+        "responseBytes": 2823,
+        "responseSha256": "d58f2764d7e6d4ba11e9e7ae133c17d8557f68207493965d49663d0810bf3545",
         "schemaFingerprint": "b5ba29e25c7bfa0b69c01c894691b172cbe98040ba281dff6013c3238412de23",
         "toolVersion": "0.1.0",
-        "validUntil": "2026-09-08T10:20:42.328385Z"
+        "validUntil": "2026-09-10T04:12:00.644182Z"
       }
     },
     {
@@ -2815,8 +2815,8 @@
       "sourceReference": "HKAPI-034",
       "status": "live-verified",
       "verification": {
-        "checkedAt": "2026-09-01T10:20:42.328385Z",
-        "elapsedMs": 202,
+        "checkedAt": "2026-09-03T04:12:00.644182Z",
+        "elapsedMs": 510,
         "errorCode": null,
         "finalHost": "rt.data.gov.hk",
         "httpStatus": 200,
@@ -2828,11 +2828,11 @@
         "outcome": "success",
         "parsedRecordCount": 7,
         "recipeSha256": "32f35a10d0c988667cf09345d8fc17330593b3fe56914b962ed822f7eb21bf44",
-        "responseBytes": 15541,
-        "responseSha256": "800117778f86b9ef076a117912ddb64be57a5e522b7758fe944dd50ad1c47456",
+        "responseBytes": 9691,
+        "responseSha256": "2c2f0cfea1620fcfb156daef2c9c888b9ee87870eb114cd2b14855a8cd89ad8d",
         "schemaFingerprint": "e6e45c8c30293c1c604a3103f8e02f89cde1870eb45a6ad538e0198e091f4925",
         "toolVersion": "0.1.0",
-        "validUntil": "2026-09-08T10:20:42.328385Z"
+        "validUntil": "2026-09-10T04:12:00.644182Z"
       }
     },
     {
@@ -2955,8 +2955,8 @@
       "sourceReference": "HKAPI-036",
       "status": "live-verified",
       "verification": {
-        "checkedAt": "2026-09-01T10:20:42.328385Z",
-        "elapsedMs": 831,
+        "checkedAt": "2026-09-03T04:12:00.644182Z",
+        "elapsedMs": 293,
         "errorCode": null,
         "finalHost": "data.gov.hk",
         "httpStatus": 200,
@@ -2973,7 +2973,7 @@
         "responseSha256": "213d3924f6a99d1ee49b5d133f202f33274e603ec537d08468594604f0cc5466",
         "schemaFingerprint": "499117790c4a17cf01ab69b2f0d812f12743047ee2d467d9bbf39afde5c61f37",
         "toolVersion": "0.1.0",
-        "validUntil": "2026-09-08T10:20:42.328385Z"
+        "validUntil": "2026-09-10T04:12:00.644182Z"
       }
     },
     {
@@ -3067,8 +3067,8 @@
       "sourceReference": "HKAPI-037",
       "status": "live-verified",
       "verification": {
-        "checkedAt": "2026-09-01T10:20:42.328385Z",
-        "elapsedMs": 245,
+        "checkedAt": "2026-09-03T04:12:00.644182Z",
+        "elapsedMs": 352,
         "errorCode": null,
         "finalHost": "data.gov.hk",
         "httpStatus": 200,
@@ -3085,7 +3085,7 @@
         "responseSha256": "fdb897a6622c1e3699587b394c469dcd00a0f7a5f0c4fa1bd48b503fc5565269",
         "schemaFingerprint": "214e940fbba224285f7ae2a4a5283d1d9b71d34e937755a749fa100b0aa2c56e",
         "toolVersion": "0.1.0",
-        "validUntil": "2026-09-08T10:20:42.328385Z"
+        "validUntil": "2026-09-10T04:12:00.644182Z"
       }
     },
     {
@@ -3179,8 +3179,8 @@
       "sourceReference": "HKAPI-038",
       "status": "live-verified",
       "verification": {
-        "checkedAt": "2026-09-01T10:20:42.328385Z",
-        "elapsedMs": 295,
+        "checkedAt": "2026-09-03T04:12:00.644182Z",
+        "elapsedMs": 386,
         "errorCode": null,
         "finalHost": "data.gov.hk",
         "httpStatus": 200,
@@ -3197,7 +3197,7 @@
         "responseSha256": "d130e8b690e71259bb70ba6d7e53dd0e203f4e6237214f4437576d263aac5863",
         "schemaFingerprint": "e6e55a65ad4f8364c54a847d8368ea7a35002a343b7ed365d921c5a4119acab2",
         "toolVersion": "0.1.0",
-        "validUntil": "2026-09-08T10:20:42.328385Z"
+        "validUntil": "2026-09-10T04:12:00.644182Z"
       }
     },
     {
@@ -3291,8 +3291,8 @@
       "sourceReference": "HKAPI-039",
       "status": "live-verified",
       "verification": {
-        "checkedAt": "2026-09-01T10:20:42.328385Z",
-        "elapsedMs": 273,
+        "checkedAt": "2026-09-03T04:12:00.644182Z",
+        "elapsedMs": 302,
         "errorCode": null,
         "finalHost": "data.gov.hk",
         "httpStatus": 200,
@@ -3309,7 +3309,7 @@
         "responseSha256": "f19f4722c905d3183d1df3599cd6903f433fd10af02896b7196f6b6386b204f0",
         "schemaFingerprint": "0ddc931c2525b63b87100e2d8c9f2696208a8cee8491bb8291764314679990fd",
         "toolVersion": "0.1.0",
-        "validUntil": "2026-09-08T10:20:42.328385Z"
+        "validUntil": "2026-09-10T04:12:00.644182Z"
       }
     },
     {
@@ -3403,8 +3403,8 @@
       "sourceReference": "HKAPI-040",
       "status": "live-verified",
       "verification": {
-        "checkedAt": "2026-09-01T10:20:42.328385Z",
-        "elapsedMs": 516,
+        "checkedAt": "2026-09-03T04:12:00.644182Z",
+        "elapsedMs": 444,
         "errorCode": null,
         "finalHost": "data.gov.hk",
         "httpStatus": 200,
@@ -3421,7 +3421,7 @@
         "responseSha256": "9a7f6bb1ac095f90fe263b0b9e2a5a7d118563f512d98bafa753c3402bd8a365",
         "schemaFingerprint": "e806b64debb035728990db90e2f4c4b6ef9846d5980d8b05da7c1d2254677dc5",
         "toolVersion": "0.1.0",
-        "validUntil": "2026-09-08T10:20:42.328385Z"
+        "validUntil": "2026-09-10T04:12:00.644182Z"
       }
     },
     {
@@ -3515,8 +3515,8 @@
       "sourceReference": "HKAPI-041",
       "status": "live-verified",
       "verification": {
-        "checkedAt": "2026-09-01T10:20:42.328385Z",
-        "elapsedMs": 1116,
+        "checkedAt": "2026-09-03T04:12:00.644182Z",
+        "elapsedMs": 308,
         "errorCode": null,
         "finalHost": "data.gov.hk",
         "httpStatus": 200,
@@ -3533,7 +3533,7 @@
         "responseSha256": "cb926dfda6c6b234267a91edded73e6d9980b7390bd006db3674ced5f8376166",
         "schemaFingerprint": "dd73bf501bac8a039bcd2fa6a816e5a6000325dd25cd3a6c660e28c447931fc1",
         "toolVersion": "0.1.0",
-        "validUntil": "2026-09-08T10:20:42.328385Z"
+        "validUntil": "2026-09-10T04:12:00.644182Z"
       }
     },
     {
@@ -3627,8 +3627,8 @@
       "sourceReference": "HKAPI-042",
       "status": "live-verified",
       "verification": {
-        "checkedAt": "2026-09-01T10:20:42.328385Z",
-        "elapsedMs": 1329,
+        "checkedAt": "2026-09-03T04:12:00.644182Z",
+        "elapsedMs": 298,
         "errorCode": null,
         "finalHost": "data.gov.hk",
         "httpStatus": 200,
@@ -3645,7 +3645,7 @@
         "responseSha256": "2411681745d005853fd1cea414f9d6295ed321c7b05bb8b3d19284c9822117ba",
         "schemaFingerprint": "9fc3a3c6d282f7e2754a73a43bd83631acfbed3b039152574f114e7be1220bfd",
         "toolVersion": "0.1.0",
-        "validUntil": "2026-09-08T10:20:42.328385Z"
+        "validUntil": "2026-09-10T04:12:00.644182Z"
       }
     },
     {
@@ -3739,8 +3739,8 @@
       "sourceReference": "HKAPI-043",
       "status": "live-verified",
       "verification": {
-        "checkedAt": "2026-09-01T10:20:42.328385Z",
-        "elapsedMs": 1254,
+        "checkedAt": "2026-09-03T04:12:00.644182Z",
+        "elapsedMs": 297,
         "errorCode": null,
         "finalHost": "data.gov.hk",
         "httpStatus": 200,
@@ -3757,7 +3757,7 @@
         "responseSha256": "a7abdedc2a4694561c5a70e206aee53ad45fa47f1d7e0134c26a177d1854a604",
         "schemaFingerprint": "9fc3a3c6d282f7e2754a73a43bd83631acfbed3b039152574f114e7be1220bfd",
         "toolVersion": "0.1.0",
-        "validUntil": "2026-09-08T10:20:42.328385Z"
+        "validUntil": "2026-09-10T04:12:00.644182Z"
       }
     },
     {
@@ -3851,8 +3851,8 @@
       "sourceReference": "HKAPI-044",
       "status": "live-verified",
       "verification": {
-        "checkedAt": "2026-09-01T10:20:42.328385Z",
-        "elapsedMs": 719,
+        "checkedAt": "2026-09-03T04:12:00.644182Z",
+        "elapsedMs": 295,
         "errorCode": null,
         "finalHost": "data.gov.hk",
         "httpStatus": 200,
@@ -3869,7 +3869,7 @@
         "responseSha256": "a5a179704c7a06a85b489be6fa95d815d7c7b703672a5c79037e059307c35846",
         "schemaFingerprint": "e806b64debb035728990db90e2f4c4b6ef9846d5980d8b05da7c1d2254677dc5",
         "toolVersion": "0.1.0",
-        "validUntil": "2026-09-08T10:20:42.328385Z"
+        "validUntil": "2026-09-10T04:12:00.644182Z"
       }
     },
     {
@@ -3963,8 +3963,8 @@
       "sourceReference": "HKAPI-045",
       "status": "live-verified",
       "verification": {
-        "checkedAt": "2026-09-01T10:20:42.328385Z",
-        "elapsedMs": 788,
+        "checkedAt": "2026-09-03T04:12:00.644182Z",
+        "elapsedMs": 322,
         "errorCode": null,
         "finalHost": "data.gov.hk",
         "httpStatus": 200,
@@ -3981,7 +3981,7 @@
         "responseSha256": "30bb30b9c777ed63ef5b85585e025b78cf22073166628860553770dfd48b86ac",
         "schemaFingerprint": "499117790c4a17cf01ab69b2f0d812f12743047ee2d467d9bbf39afde5c61f37",
         "toolVersion": "0.1.0",
-        "validUntil": "2026-09-08T10:20:42.328385Z"
+        "validUntil": "2026-09-10T04:12:00.644182Z"
       }
     },
     {
@@ -4075,8 +4075,8 @@
       "sourceReference": "HKAPI-046",
       "status": "live-verified",
       "verification": {
-        "checkedAt": "2026-09-01T10:20:42.328385Z",
-        "elapsedMs": 1986,
+        "checkedAt": "2026-09-03T04:12:00.644182Z",
+        "elapsedMs": 984,
         "errorCode": null,
         "finalHost": "data.gov.hk",
         "httpStatus": 200,
@@ -4093,7 +4093,7 @@
         "responseSha256": "3fd7f2748e9eaa6e4422fa33c253d1442a556cd11d8a4da49c6722747468bc32",
         "schemaFingerprint": "e6e55a65ad4f8364c54a847d8368ea7a35002a343b7ed365d921c5a4119acab2",
         "toolVersion": "0.1.0",
-        "validUntil": "2026-09-08T10:20:42.328385Z"
+        "validUntil": "2026-09-10T04:12:00.644182Z"
       }
     },
     {
@@ -4224,8 +4224,8 @@
       "sourceReference": "HKAPI-047",
       "status": "live-verified",
       "verification": {
-        "checkedAt": "2026-09-01T10:20:42.328385Z",
-        "elapsedMs": 688,
+        "checkedAt": "2026-09-03T04:12:00.644182Z",
+        "elapsedMs": 914,
         "errorCode": null,
         "finalHost": "api.data.gov.hk",
         "httpStatus": 200,
@@ -4235,13 +4235,13 @@
         ],
         "mediaType": "application/json",
         "outcome": "success",
-        "parsedRecordCount": 565,
+        "parsedRecordCount": 566,
         "recipeSha256": "4930354ff8c0b7971bb86dc47dce6fe9df6865dac0e452fa7be3a2c08195dd16",
-        "responseBytes": 95359,
-        "responseSha256": "dae5de700669c301280a4553a895201408586478bad8e41737f99ac857692da7",
+        "responseBytes": 95377,
+        "responseSha256": "1f1a5c574b1010b71d306f46d0083d7128811a5073b636cf62d065c8fb5ef2ac",
         "schemaFingerprint": "6a6976cca0ea2fb14e5f79c1dd2addcabbd435702f7fef81a95a49666a6ca4ba",
         "toolVersion": "0.1.0",
-        "validUntil": "2026-09-08T10:20:42.328385Z"
+        "validUntil": "2026-09-10T04:12:00.644182Z"
       }
     },
     {
@@ -4318,8 +4318,8 @@
       "sourceReference": "HKAPI-048",
       "status": "live-verified",
       "verification": {
-        "checkedAt": "2026-09-01T10:20:42.328385Z",
-        "elapsedMs": 485,
+        "checkedAt": "2026-09-03T04:12:00.644182Z",
+        "elapsedMs": 383,
         "errorCode": null,
         "finalHost": "resource.data.one.gov.hk",
         "httpStatus": 200,
@@ -4331,11 +4331,11 @@
         "outcome": "success",
         "parsedRecordCount": 550,
         "recipeSha256": "3800ebf168ea2abb1b9b54b70f5701f20f5ef199996903118153370f54b0e658",
-        "responseBytes": 118913,
-        "responseSha256": "6f8a6dc191782005226d6698a16eb9aedb50a78724433a0ab54c7059843cc189",
+        "responseBytes": 118784,
+        "responseSha256": "ef5a2b160df2ee0841a507f9d5c5a3b7c106951bd0817f932bbf54b9971e2285",
         "schemaFingerprint": "1fd31c3c5705f8ab5e839bd195373df3998b33579296f51884596691bb8426c9",
         "toolVersion": "0.1.0",
-        "validUntil": "2026-09-08T10:20:42.328385Z"
+        "validUntil": "2026-09-10T04:12:00.644182Z"
       }
     },
     {
@@ -4412,8 +4412,8 @@
       "sourceReference": "HKAPI-049",
       "status": "live-verified",
       "verification": {
-        "checkedAt": "2026-09-01T10:20:42.328385Z",
-        "elapsedMs": 319,
+        "checkedAt": "2026-09-03T04:12:00.644182Z",
+        "elapsedMs": 510,
         "errorCode": null,
         "finalHost": "resource.data.one.gov.hk",
         "httpStatus": 200,
@@ -4423,13 +4423,13 @@
         ],
         "mediaType": "application/json",
         "outcome": "success",
-        "parsedRecordCount": 549,
+        "parsedRecordCount": 550,
         "recipeSha256": "8025aba8d07cb1077de577f662f78fde498ff1d590f7f3ed941b7b83e5832efb",
-        "responseBytes": 670745,
-        "responseSha256": "1a99efd504d499bf96639887066fd24df96575511f9869f50accf3ff588382fd",
+        "responseBytes": 671461,
+        "responseSha256": "46eb6aafe12667860f92231c74a89f85f9c8943d6077e8b3d65936d4766952da",
         "schemaFingerprint": "0d2059f693b04b991d95c6d702c3b27940557618ca8e758dde416be248654779",
         "toolVersion": "0.1.0",
-        "validUntil": "2026-09-08T10:20:42.328385Z"
+        "validUntil": "2026-09-10T04:12:00.644182Z"
       }
     },
     {
@@ -4581,8 +4581,8 @@
       "sourceReference": "HKAPI-052",
       "status": "live-verified",
       "verification": {
-        "checkedAt": "2026-09-01T10:20:42.328385Z",
-        "elapsedMs": 633,
+        "checkedAt": "2026-09-03T04:12:00.644182Z",
+        "elapsedMs": 299,
         "errorCode": null,
         "finalHost": "data.gov.hk",
         "httpStatus": 200,
@@ -4599,7 +4599,7 @@
         "responseSha256": "2511dcf0982f8afbc26396fb5940940a92f5582ff1ff7c9d1ff783915ea242bb",
         "schemaFingerprint": "e806b64debb035728990db90e2f4c4b6ef9846d5980d8b05da7c1d2254677dc5",
         "toolVersion": "0.1.0",
-        "validUntil": "2026-09-08T10:20:42.328385Z"
+        "validUntil": "2026-09-10T04:12:00.644182Z"
       }
     },
     {
@@ -4693,8 +4693,8 @@
       "sourceReference": "HKAPI-053",
       "status": "live-verified",
       "verification": {
-        "checkedAt": "2026-09-01T10:20:42.328385Z",
-        "elapsedMs": 496,
+        "checkedAt": "2026-09-03T04:12:00.644182Z",
+        "elapsedMs": 301,
         "errorCode": null,
         "finalHost": "data.gov.hk",
         "httpStatus": 200,
@@ -4711,7 +4711,7 @@
         "responseSha256": "45738f22eda92ba649b19dea36323cd4ed1ba8fc00944ee7b9bc1e0a5ef9adef",
         "schemaFingerprint": "e806b64debb035728990db90e2f4c4b6ef9846d5980d8b05da7c1d2254677dc5",
         "toolVersion": "0.1.0",
-        "validUntil": "2026-09-08T10:20:42.328385Z"
+        "validUntil": "2026-09-10T04:12:00.644182Z"
       }
     },
     {
@@ -4805,8 +4805,8 @@
       "sourceReference": "HKAPI-054",
       "status": "live-verified",
       "verification": {
-        "checkedAt": "2026-09-01T10:20:42.328385Z",
-        "elapsedMs": 430,
+        "checkedAt": "2026-09-03T04:12:00.644182Z",
+        "elapsedMs": 282,
         "errorCode": null,
         "finalHost": "data.gov.hk",
         "httpStatus": 200,
@@ -4823,7 +4823,7 @@
         "responseSha256": "b2a267d7810467ba1c7fabb2cf325dd423e11dea1696d81a69329a78df459811",
         "schemaFingerprint": "e806b64debb035728990db90e2f4c4b6ef9846d5980d8b05da7c1d2254677dc5",
         "toolVersion": "0.1.0",
-        "validUntil": "2026-09-08T10:20:42.328385Z"
+        "validUntil": "2026-09-10T04:12:00.644182Z"
       }
     },
     {
@@ -4917,8 +4917,8 @@
       "sourceReference": "HKAPI-055",
       "status": "live-verified",
       "verification": {
-        "checkedAt": "2026-09-01T10:20:42.328385Z",
-        "elapsedMs": 657,
+        "checkedAt": "2026-09-03T04:12:00.644182Z",
+        "elapsedMs": 287,
         "errorCode": null,
         "finalHost": "data.gov.hk",
         "httpStatus": 200,
@@ -4935,7 +4935,7 @@
         "responseSha256": "f77a8eeabf3c7b7408c2b80877130cf4d4c6d64796a7e92597ab9155b96e4a36",
         "schemaFingerprint": "18c83d2d3cf062d47be3672b852b1a502a6be7ae09af6d1b3014856a257d188e",
         "toolVersion": "0.1.0",
-        "validUntil": "2026-09-08T10:20:42.328385Z"
+        "validUntil": "2026-09-10T04:12:00.644182Z"
       }
     },
     {
@@ -5029,8 +5029,8 @@
       "sourceReference": "HKAPI-056",
       "status": "live-verified",
       "verification": {
-        "checkedAt": "2026-09-01T10:20:42.328385Z",
-        "elapsedMs": 701,
+        "checkedAt": "2026-09-03T04:12:00.644182Z",
+        "elapsedMs": 314,
         "errorCode": null,
         "finalHost": "data.gov.hk",
         "httpStatus": 200,
@@ -5047,7 +5047,7 @@
         "responseSha256": "7a370c1e42914436ac71bad5727d187297a08e09d652885d3dccc66d1017fa73",
         "schemaFingerprint": "e6e55a65ad4f8364c54a847d8368ea7a35002a343b7ed365d921c5a4119acab2",
         "toolVersion": "0.1.0",
-        "validUntil": "2026-09-08T10:20:42.328385Z"
+        "validUntil": "2026-09-10T04:12:00.644182Z"
       }
     },
     {
@@ -5141,8 +5141,8 @@
       "sourceReference": "HKAPI-057",
       "status": "live-verified",
       "verification": {
-        "checkedAt": "2026-09-01T10:20:42.328385Z",
-        "elapsedMs": 703,
+        "checkedAt": "2026-09-03T04:12:00.644182Z",
+        "elapsedMs": 300,
         "errorCode": null,
         "finalHost": "data.gov.hk",
         "httpStatus": 200,
@@ -5159,7 +5159,7 @@
         "responseSha256": "1327d53f3cf3f322864c7d8f1130ce59e88239e5c2fa86ce23893a910ffbcebb",
         "schemaFingerprint": "097730c6c18e43db48a9ea15c75cab5915a1da5520a9fe9d7a3c73430134d107",
         "toolVersion": "0.1.0",
-        "validUntil": "2026-09-08T10:20:42.328385Z"
+        "validUntil": "2026-09-10T04:12:00.644182Z"
       }
     },
     {
@@ -5253,8 +5253,8 @@
       "sourceReference": "HKAPI-058",
       "status": "live-verified",
       "verification": {
-        "checkedAt": "2026-09-01T10:20:42.328385Z",
-        "elapsedMs": 920,
+        "checkedAt": "2026-09-03T04:12:00.644182Z",
+        "elapsedMs": 295,
         "errorCode": null,
         "finalHost": "data.gov.hk",
         "httpStatus": 200,
@@ -5271,7 +5271,7 @@
         "responseSha256": "42745dfd350a202dc1fa485b16d6bdaee5d69ab1b73c22d66b276d370f939772",
         "schemaFingerprint": "e806b64debb035728990db90e2f4c4b6ef9846d5980d8b05da7c1d2254677dc5",
         "toolVersion": "0.1.0",
-        "validUntil": "2026-09-08T10:20:42.328385Z"
+        "validUntil": "2026-09-10T04:12:00.644182Z"
       }
     },
     {
@@ -5365,8 +5365,8 @@
       "sourceReference": "HKAPI-059",
       "status": "live-verified",
       "verification": {
-        "checkedAt": "2026-09-01T10:20:42.328385Z",
-        "elapsedMs": 538,
+        "checkedAt": "2026-09-03T04:12:00.644182Z",
+        "elapsedMs": 298,
         "errorCode": null,
         "finalHost": "data.gov.hk",
         "httpStatus": 200,
@@ -5383,7 +5383,7 @@
         "responseSha256": "f89bda9d4cf268389020e258713c03abeaefd3cd7bd95cd1d5df8df9c75dee44",
         "schemaFingerprint": "e6e55a65ad4f8364c54a847d8368ea7a35002a343b7ed365d921c5a4119acab2",
         "toolVersion": "0.1.0",
-        "validUntil": "2026-09-08T10:20:42.328385Z"
+        "validUntil": "2026-09-10T04:12:00.644182Z"
       }
     },
     {
@@ -5477,8 +5477,8 @@
       "sourceReference": "HKAPI-060",
       "status": "live-verified",
       "verification": {
-        "checkedAt": "2026-09-01T10:20:42.328385Z",
-        "elapsedMs": 3064,
+        "checkedAt": "2026-09-03T04:12:00.644182Z",
+        "elapsedMs": 3410,
         "errorCode": null,
         "finalHost": "data.gov.hk",
         "httpStatus": 200,
@@ -5495,7 +5495,7 @@
         "responseSha256": "60a761806596aa628f2de9200c2e5e729d41cc83c0c72e3ad22f37a267ec83eb",
         "schemaFingerprint": "e6e55a65ad4f8364c54a847d8368ea7a35002a343b7ed365d921c5a4119acab2",
         "toolVersion": "0.1.0",
-        "validUntil": "2026-09-08T10:20:42.328385Z"
+        "validUntil": "2026-09-10T04:12:00.644182Z"
       }
     },
     {
@@ -5589,8 +5589,8 @@
       "sourceReference": "HKAPI-061",
       "status": "live-verified",
       "verification": {
-        "checkedAt": "2026-09-01T10:20:42.328385Z",
-        "elapsedMs": 2374,
+        "checkedAt": "2026-09-03T04:12:00.644182Z",
+        "elapsedMs": 3573,
         "errorCode": null,
         "finalHost": "data.gov.hk",
         "httpStatus": 200,
@@ -5607,7 +5607,7 @@
         "responseSha256": "60a761806596aa628f2de9200c2e5e729d41cc83c0c72e3ad22f37a267ec83eb",
         "schemaFingerprint": "e6e55a65ad4f8364c54a847d8368ea7a35002a343b7ed365d921c5a4119acab2",
         "toolVersion": "0.1.0",
-        "validUntil": "2026-09-08T10:20:42.328385Z"
+        "validUntil": "2026-09-10T04:12:00.644182Z"
       }
     },
     {
@@ -5701,8 +5701,8 @@
       "sourceReference": "HKAPI-062",
       "status": "live-verified",
       "verification": {
-        "checkedAt": "2026-09-01T10:20:42.328385Z",
-        "elapsedMs": 283,
+        "checkedAt": "2026-09-03T04:12:00.644182Z",
+        "elapsedMs": 1856,
         "errorCode": null,
         "finalHost": "data.gov.hk",
         "httpStatus": 200,
@@ -5719,7 +5719,7 @@
         "responseSha256": "02477287bd9c4422e63e6299b5575824041cdc19df37311a375ce54f9d1bf2ab",
         "schemaFingerprint": "e806b64debb035728990db90e2f4c4b6ef9846d5980d8b05da7c1d2254677dc5",
         "toolVersion": "0.1.0",
-        "validUntil": "2026-09-08T10:20:42.328385Z"
+        "validUntil": "2026-09-10T04:12:00.644182Z"
       }
     },
     {
@@ -5813,8 +5813,8 @@
       "sourceReference": "HKAPI-063",
       "status": "live-verified",
       "verification": {
-        "checkedAt": "2026-09-01T10:20:42.328385Z",
-        "elapsedMs": 386,
+        "checkedAt": "2026-09-03T04:12:00.644182Z",
+        "elapsedMs": 325,
         "errorCode": null,
         "finalHost": "data.gov.hk",
         "httpStatus": 200,
@@ -5831,7 +5831,7 @@
         "responseSha256": "7a9c0260e35c133228898504ff9775a5871738e9a20e6d9ce3b69345ec0fe80b",
         "schemaFingerprint": "729591af1d84950eedb20e421b5d4db2600c68876414317628c299508935cee0",
         "toolVersion": "0.1.0",
-        "validUntil": "2026-09-08T10:20:42.328385Z"
+        "validUntil": "2026-09-10T04:12:00.644182Z"
       }
     },
     {
@@ -5925,8 +5925,8 @@
       "sourceReference": "HKAPI-064",
       "status": "live-verified",
       "verification": {
-        "checkedAt": "2026-09-01T10:20:42.328385Z",
-        "elapsedMs": 296,
+        "checkedAt": "2026-09-03T04:12:00.644182Z",
+        "elapsedMs": 303,
         "errorCode": null,
         "finalHost": "data.gov.hk",
         "httpStatus": 200,
@@ -5943,7 +5943,7 @@
         "responseSha256": "28bceb1a13eee48968a1a069777b656a4ce6a12384b68541edb56f751b9abe1d",
         "schemaFingerprint": "729591af1d84950eedb20e421b5d4db2600c68876414317628c299508935cee0",
         "toolVersion": "0.1.0",
-        "validUntil": "2026-09-08T10:20:42.328385Z"
+        "validUntil": "2026-09-10T04:12:00.644182Z"
       }
     },
     {
@@ -6037,8 +6037,8 @@
       "sourceReference": "HKAPI-065",
       "status": "live-verified",
       "verification": {
-        "checkedAt": "2026-09-01T10:20:42.328385Z",
-        "elapsedMs": 305,
+        "checkedAt": "2026-09-03T04:12:00.644182Z",
+        "elapsedMs": 306,
         "errorCode": null,
         "finalHost": "data.gov.hk",
         "httpStatus": 200,
@@ -6055,7 +6055,7 @@
         "responseSha256": "d3aae8d6ba80f30b15dd2a2e1ca0db107cc17121682f23e5f637d37af5b69354",
         "schemaFingerprint": "fc6aab9ca8c72993db3330bedec893c24caffadd42cd9f0dd0f55e168fb2ce0c",
         "toolVersion": "0.1.0",
-        "validUntil": "2026-09-08T10:20:42.328385Z"
+        "validUntil": "2026-09-10T04:12:00.644182Z"
       }
     },
     {
@@ -6149,8 +6149,8 @@
       "sourceReference": "HKAPI-066",
       "status": "live-verified",
       "verification": {
-        "checkedAt": "2026-09-01T10:20:42.328385Z",
-        "elapsedMs": 324,
+        "checkedAt": "2026-09-03T04:12:00.644182Z",
+        "elapsedMs": 298,
         "errorCode": null,
         "finalHost": "data.gov.hk",
         "httpStatus": 200,
@@ -6167,7 +6167,7 @@
         "responseSha256": "67a60a3db5ab68f84831203a3307921f06c16cfc65f4e5e771d958c6905f968b",
         "schemaFingerprint": "0ddc931c2525b63b87100e2d8c9f2696208a8cee8491bb8291764314679990fd",
         "toolVersion": "0.1.0",
-        "validUntil": "2026-09-08T10:20:42.328385Z"
+        "validUntil": "2026-09-10T04:12:00.644182Z"
       }
     },
     {
@@ -6261,8 +6261,8 @@
       "sourceReference": "HKAPI-067",
       "status": "live-verified",
       "verification": {
-        "checkedAt": "2026-09-01T10:20:42.328385Z",
-        "elapsedMs": 491,
+        "checkedAt": "2026-09-03T04:12:00.644182Z",
+        "elapsedMs": 319,
         "errorCode": null,
         "finalHost": "data.gov.hk",
         "httpStatus": 200,
@@ -6279,7 +6279,7 @@
         "responseSha256": "d37b2295a40f0ec858ff1c804ead6bda7284b6e6270c18e99404f859443297bc",
         "schemaFingerprint": "0ddc931c2525b63b87100e2d8c9f2696208a8cee8491bb8291764314679990fd",
         "toolVersion": "0.1.0",
-        "validUntil": "2026-09-08T10:20:42.328385Z"
+        "validUntil": "2026-09-10T04:12:00.644182Z"
       }
     },
     {
@@ -6373,8 +6373,8 @@
       "sourceReference": "HKAPI-068",
       "status": "live-verified",
       "verification": {
-        "checkedAt": "2026-09-01T10:20:42.328385Z",
-        "elapsedMs": 238,
+        "checkedAt": "2026-09-03T04:12:00.644182Z",
+        "elapsedMs": 323,
         "errorCode": null,
         "finalHost": "data.gov.hk",
         "httpStatus": 200,
@@ -6391,7 +6391,7 @@
         "responseSha256": "d37b2295a40f0ec858ff1c804ead6bda7284b6e6270c18e99404f859443297bc",
         "schemaFingerprint": "0ddc931c2525b63b87100e2d8c9f2696208a8cee8491bb8291764314679990fd",
         "toolVersion": "0.1.0",
-        "validUntil": "2026-09-08T10:20:42.328385Z"
+        "validUntil": "2026-09-10T04:12:00.644182Z"
       }
     },
     {
@@ -6486,8 +6486,8 @@
       "sourceReference": "HKAPI-069",
       "status": "live-verified",
       "verification": {
-        "checkedAt": "2026-09-01T10:20:42.328385Z",
-        "elapsedMs": 208,
+        "checkedAt": "2026-09-03T04:12:00.644182Z",
+        "elapsedMs": 292,
         "errorCode": null,
         "finalHost": "data.gov.hk",
         "httpStatus": 200,
@@ -6504,7 +6504,7 @@
         "responseSha256": "e6234e59b6c6f40405245f64dd68f3268f63f46225a7ea2015e9641b230df08c",
         "schemaFingerprint": "e806b64debb035728990db90e2f4c4b6ef9846d5980d8b05da7c1d2254677dc5",
         "toolVersion": "0.1.0",
-        "validUntil": "2026-09-08T10:20:42.328385Z"
+        "validUntil": "2026-09-10T04:12:00.644182Z"
       }
     },
     {
@@ -6598,8 +6598,8 @@
       "sourceReference": "HKAPI-070",
       "status": "live-verified",
       "verification": {
-        "checkedAt": "2026-09-01T10:20:42.328385Z",
-        "elapsedMs": 209,
+        "checkedAt": "2026-09-03T04:12:00.644182Z",
+        "elapsedMs": 300,
         "errorCode": null,
         "finalHost": "data.gov.hk",
         "httpStatus": 200,
@@ -6616,7 +6616,7 @@
         "responseSha256": "3d617c8ec597a9d2d061a8a3036115855277d7ec1411663499089f8b886f35dd",
         "schemaFingerprint": "e6e55a65ad4f8364c54a847d8368ea7a35002a343b7ed365d921c5a4119acab2",
         "toolVersion": "0.1.0",
-        "validUntil": "2026-09-08T10:20:42.328385Z"
+        "validUntil": "2026-09-10T04:12:00.644182Z"
       }
     },
     {
@@ -6710,8 +6710,8 @@
       "sourceReference": "HKAPI-071",
       "status": "live-verified",
       "verification": {
-        "checkedAt": "2026-09-01T10:20:42.328385Z",
-        "elapsedMs": 203,
+        "checkedAt": "2026-09-03T04:12:00.644182Z",
+        "elapsedMs": 285,
         "errorCode": null,
         "finalHost": "data.gov.hk",
         "httpStatus": 200,
@@ -6728,7 +6728,7 @@
         "responseSha256": "c6f79f82d319a98cc9e8933b52af8034831936b54d0970d6452ec47a359a3448",
         "schemaFingerprint": "e806b64debb035728990db90e2f4c4b6ef9846d5980d8b05da7c1d2254677dc5",
         "toolVersion": "0.1.0",
-        "validUntil": "2026-09-08T10:20:42.328385Z"
+        "validUntil": "2026-09-10T04:12:00.644182Z"
       }
     },
     {
@@ -6822,8 +6822,8 @@
       "sourceReference": "HKAPI-072",
       "status": "live-verified",
       "verification": {
-        "checkedAt": "2026-09-01T10:20:42.328385Z",
-        "elapsedMs": 190,
+        "checkedAt": "2026-09-03T04:12:00.644182Z",
+        "elapsedMs": 290,
         "errorCode": null,
         "finalHost": "data.gov.hk",
         "httpStatus": 200,
@@ -6840,7 +6840,7 @@
         "responseSha256": "afef7ee3e9bfb136017ae2b0a01caadba9a62df84989c75e1115dade497da8f2",
         "schemaFingerprint": "e806b64debb035728990db90e2f4c4b6ef9846d5980d8b05da7c1d2254677dc5",
         "toolVersion": "0.1.0",
-        "validUntil": "2026-09-08T10:20:42.328385Z"
+        "validUntil": "2026-09-10T04:12:00.644182Z"
       }
     },
     {
@@ -6934,8 +6934,8 @@
       "sourceReference": "HKAPI-073",
       "status": "live-verified",
       "verification": {
-        "checkedAt": "2026-09-01T10:20:42.328385Z",
-        "elapsedMs": 235,
+        "checkedAt": "2026-09-03T04:12:00.644182Z",
+        "elapsedMs": 300,
         "errorCode": null,
         "finalHost": "data.gov.hk",
         "httpStatus": 200,
@@ -6952,7 +6952,7 @@
         "responseSha256": "bcb7dcd88ccf751720e15d75a913ae5de4558f16cb1386ccfcac84904bbfc905",
         "schemaFingerprint": "e806b64debb035728990db90e2f4c4b6ef9846d5980d8b05da7c1d2254677dc5",
         "toolVersion": "0.1.0",
-        "validUntil": "2026-09-08T10:20:42.328385Z"
+        "validUntil": "2026-09-10T04:12:00.644182Z"
       }
     },
     {
@@ -7046,8 +7046,8 @@
       "sourceReference": "HKAPI-074",
       "status": "live-verified",
       "verification": {
-        "checkedAt": "2026-09-01T10:20:42.328385Z",
-        "elapsedMs": 269,
+        "checkedAt": "2026-09-03T04:12:00.644182Z",
+        "elapsedMs": 280,
         "errorCode": null,
         "finalHost": "data.gov.hk",
         "httpStatus": 200,
@@ -7064,7 +7064,7 @@
         "responseSha256": "95195abe7cb906894823ec51c63b7ad2677e8a1f328680200198ce0fa5fe1e2e",
         "schemaFingerprint": "6a30b7ca70ac0cb6d6b32794281ada9e2363695717a780db905efeb3ad86fc22",
         "toolVersion": "0.1.0",
-        "validUntil": "2026-09-08T10:20:42.328385Z"
+        "validUntil": "2026-09-10T04:12:00.644182Z"
       }
     },
     {
@@ -7158,8 +7158,8 @@
       "sourceReference": "HKAPI-075",
       "status": "live-verified",
       "verification": {
-        "checkedAt": "2026-09-01T10:20:42.328385Z",
-        "elapsedMs": 191,
+        "checkedAt": "2026-09-03T04:12:00.644182Z",
+        "elapsedMs": 325,
         "errorCode": null,
         "finalHost": "data.gov.hk",
         "httpStatus": 200,
@@ -7176,7 +7176,7 @@
         "responseSha256": "5bebe51336e6af832a878dff2ae4404e401aca2de76133419af1ab062673ed60",
         "schemaFingerprint": "6a30b7ca70ac0cb6d6b32794281ada9e2363695717a780db905efeb3ad86fc22",
         "toolVersion": "0.1.0",
-        "validUntil": "2026-09-08T10:20:42.328385Z"
+        "validUntil": "2026-09-10T04:12:00.644182Z"
       }
     },
     {
@@ -7270,8 +7270,8 @@
       "sourceReference": "HKAPI-076",
       "status": "live-verified",
       "verification": {
-        "checkedAt": "2026-09-01T10:20:42.328385Z",
-        "elapsedMs": 189,
+        "checkedAt": "2026-09-03T04:12:00.644182Z",
+        "elapsedMs": 285,
         "errorCode": null,
         "finalHost": "data.gov.hk",
         "httpStatus": 200,
@@ -7288,7 +7288,7 @@
         "responseSha256": "4fdbf053482f308c06c0d2547e04e4682016e84e4bdd658ad04181fa311fb548",
         "schemaFingerprint": "e806b64debb035728990db90e2f4c4b6ef9846d5980d8b05da7c1d2254677dc5",
         "toolVersion": "0.1.0",
-        "validUntil": "2026-09-08T10:20:42.328385Z"
+        "validUntil": "2026-09-10T04:12:00.644182Z"
       }
     },
     {
@@ -7382,8 +7382,8 @@
       "sourceReference": "HKAPI-077",
       "status": "live-verified",
       "verification": {
-        "checkedAt": "2026-09-01T10:20:42.328385Z",
-        "elapsedMs": 205,
+        "checkedAt": "2026-09-03T04:12:00.644182Z",
+        "elapsedMs": 304,
         "errorCode": null,
         "finalHost": "data.gov.hk",
         "httpStatus": 200,
@@ -7400,7 +7400,7 @@
         "responseSha256": "8c6754b1ab8f6d89aab554dd56f555554a8ded6c947034f5a5417d195a26df13",
         "schemaFingerprint": "e806b64debb035728990db90e2f4c4b6ef9846d5980d8b05da7c1d2254677dc5",
         "toolVersion": "0.1.0",
-        "validUntil": "2026-09-08T10:20:42.328385Z"
+        "validUntil": "2026-09-10T04:12:00.644182Z"
       }
     },
     {
@@ -7494,8 +7494,8 @@
       "sourceReference": "HKAPI-078",
       "status": "live-verified",
       "verification": {
-        "checkedAt": "2026-09-01T10:20:42.328385Z",
-        "elapsedMs": 230,
+        "checkedAt": "2026-09-03T04:12:00.644182Z",
+        "elapsedMs": 306,
         "errorCode": null,
         "finalHost": "data.gov.hk",
         "httpStatus": 200,
@@ -7512,7 +7512,7 @@
         "responseSha256": "8ced0b93122a7db76978498279120193b0de50309367f70068cd7ed3c9355153",
         "schemaFingerprint": "892aec2dda864267a49d46cfd1a651324b740e2c60d12f02384519c1fd40bdbd",
         "toolVersion": "0.1.0",
-        "validUntil": "2026-09-08T10:20:42.328385Z"
+        "validUntil": "2026-09-10T04:12:00.644182Z"
       }
     },
     {
@@ -7606,8 +7606,8 @@
       "sourceReference": "HKAPI-079",
       "status": "live-verified",
       "verification": {
-        "checkedAt": "2026-09-01T10:20:42.328385Z",
-        "elapsedMs": 197,
+        "checkedAt": "2026-09-03T04:12:00.644182Z",
+        "elapsedMs": 293,
         "errorCode": null,
         "finalHost": "data.gov.hk",
         "httpStatus": 200,
@@ -7624,7 +7624,7 @@
         "responseSha256": "4f976622948f5cffa2219d9f78b33152f26320628d0f1cde45ab0c1d7aa6d5a0",
         "schemaFingerprint": "6a30b7ca70ac0cb6d6b32794281ada9e2363695717a780db905efeb3ad86fc22",
         "toolVersion": "0.1.0",
-        "validUntil": "2026-09-08T10:20:42.328385Z"
+        "validUntil": "2026-09-10T04:12:00.644182Z"
       }
     },
     {
@@ -7718,8 +7718,8 @@
       "sourceReference": "HKAPI-080",
       "status": "live-verified",
       "verification": {
-        "checkedAt": "2026-09-01T10:20:42.328385Z",
-        "elapsedMs": 274,
+        "checkedAt": "2026-09-03T04:12:00.644182Z",
+        "elapsedMs": 296,
         "errorCode": null,
         "finalHost": "data.gov.hk",
         "httpStatus": 200,
@@ -7736,7 +7736,7 @@
         "responseSha256": "f2e11c634e97e8eff0c2d60955b4ab4ccfa88e058598225f8d830c71c9309dd3",
         "schemaFingerprint": "e806b64debb035728990db90e2f4c4b6ef9846d5980d8b05da7c1d2254677dc5",
         "toolVersion": "0.1.0",
-        "validUntil": "2026-09-08T10:20:42.328385Z"
+        "validUntil": "2026-09-10T04:12:00.644182Z"
       }
     },
     {
@@ -7830,8 +7830,8 @@
       "sourceReference": "HKAPI-081",
       "status": "live-verified",
       "verification": {
-        "checkedAt": "2026-09-01T10:20:42.328385Z",
-        "elapsedMs": 1220,
+        "checkedAt": "2026-09-03T04:12:00.644182Z",
+        "elapsedMs": 302,
         "errorCode": null,
         "finalHost": "data.gov.hk",
         "httpStatus": 200,
@@ -7848,7 +7848,7 @@
         "responseSha256": "d69dda1d36de25f210a81d0506f3b503c22d7ecc1066f62dfbbfc678ce2d314e",
         "schemaFingerprint": "e806b64debb035728990db90e2f4c4b6ef9846d5980d8b05da7c1d2254677dc5",
         "toolVersion": "0.1.0",
-        "validUntil": "2026-09-08T10:20:42.328385Z"
+        "validUntil": "2026-09-10T04:12:00.644182Z"
       }
     },
     {
@@ -7942,8 +7942,8 @@
       "sourceReference": "HKAPI-082",
       "status": "live-verified",
       "verification": {
-        "checkedAt": "2026-09-01T10:20:42.328385Z",
-        "elapsedMs": 256,
+        "checkedAt": "2026-09-03T04:12:00.644182Z",
+        "elapsedMs": 292,
         "errorCode": null,
         "finalHost": "data.gov.hk",
         "httpStatus": 200,
@@ -7960,7 +7960,7 @@
         "responseSha256": "25527d16b79bb15b40b285939f87863e255b4bf576a021ccf653364471bd7239",
         "schemaFingerprint": "e806b64debb035728990db90e2f4c4b6ef9846d5980d8b05da7c1d2254677dc5",
         "toolVersion": "0.1.0",
-        "validUntil": "2026-09-08T10:20:42.328385Z"
+        "validUntil": "2026-09-10T04:12:00.644182Z"
       }
     },
     {
@@ -8054,8 +8054,8 @@
       "sourceReference": "HKAPI-083",
       "status": "live-verified",
       "verification": {
-        "checkedAt": "2026-09-01T10:20:42.328385Z",
-        "elapsedMs": 214,
+        "checkedAt": "2026-09-03T04:12:00.644182Z",
+        "elapsedMs": 313,
         "errorCode": null,
         "finalHost": "data.gov.hk",
         "httpStatus": 200,
@@ -8072,7 +8072,7 @@
         "responseSha256": "7201131b4a996b023311336bd46ef236f9256c8aaa1ea5a3f82fe856f467ec7c",
         "schemaFingerprint": "e806b64debb035728990db90e2f4c4b6ef9846d5980d8b05da7c1d2254677dc5",
         "toolVersion": "0.1.0",
-        "validUntil": "2026-09-08T10:20:42.328385Z"
+        "validUntil": "2026-09-10T04:12:00.644182Z"
       }
     },
     {
@@ -8166,8 +8166,8 @@
       "sourceReference": "HKAPI-084",
       "status": "live-verified",
       "verification": {
-        "checkedAt": "2026-09-01T10:20:42.328385Z",
-        "elapsedMs": 213,
+        "checkedAt": "2026-09-03T04:12:00.644182Z",
+        "elapsedMs": 287,
         "errorCode": null,
         "finalHost": "data.gov.hk",
         "httpStatus": 200,
@@ -8184,7 +8184,7 @@
         "responseSha256": "c8f86fb712743fc18fd04170c251ff6dec29a29bafe9a516d51f928d1d11168a",
         "schemaFingerprint": "fe2d9353842618538c7a8ab5b1fadb39a2c9ba36419438ff6415746beca1a54c",
         "toolVersion": "0.1.0",
-        "validUntil": "2026-09-08T10:20:42.328385Z"
+        "validUntil": "2026-09-10T04:12:00.644182Z"
       }
     },
     {
@@ -8278,8 +8278,8 @@
       "sourceReference": "HKAPI-085",
       "status": "live-verified",
       "verification": {
-        "checkedAt": "2026-09-01T10:20:42.328385Z",
-        "elapsedMs": 190,
+        "checkedAt": "2026-09-03T04:12:00.644182Z",
+        "elapsedMs": 298,
         "errorCode": null,
         "finalHost": "data.gov.hk",
         "httpStatus": 200,
@@ -8296,7 +8296,7 @@
         "responseSha256": "dbd27864db438f4b3659c785d5b69c27ba076c316fd94027bdfa1180d4a70eb9",
         "schemaFingerprint": "e806b64debb035728990db90e2f4c4b6ef9846d5980d8b05da7c1d2254677dc5",
         "toolVersion": "0.1.0",
-        "validUntil": "2026-09-08T10:20:42.328385Z"
+        "validUntil": "2026-09-10T04:12:00.644182Z"
       }
     },
     {
@@ -8406,8 +8406,8 @@
       "sourceReference": "HKAPI-086",
       "status": "live-verified",
       "verification": {
-        "checkedAt": "2026-09-01T10:20:42.328385Z",
-        "elapsedMs": 182,
+        "checkedAt": "2026-09-03T04:12:00.644182Z",
+        "elapsedMs": 254,
         "errorCode": null,
         "finalHost": "data.weather.gov.hk",
         "httpStatus": 200,
@@ -8419,11 +8419,11 @@
         "outcome": "success",
         "parsedRecordCount": 1,
         "recipeSha256": "aa232d5396ec3704999e0274746772c669387245a44639d028368871696349aa",
-        "responseBytes": 3233,
-        "responseSha256": "8939cfa9c5c4d258eca8271150ad869d45c41853d175bef38c0fa2b95c13d594",
-        "schemaFingerprint": "6323f61d423cfb6050e881523153265619f9cc60ab44ddc4beceae558c135b9f",
+        "responseBytes": 3276,
+        "responseSha256": "6471c9b86c573f1fe9ff47f0ea7eb2619f0a4a0bfd8d98ddca9f09a131db6143",
+        "schemaFingerprint": "ae5401b0f9f801bbd636a75b94cba0234fa317765d12d6093cd5c68a7387c86b",
         "toolVersion": "0.1.0",
-        "validUntil": "2026-09-08T10:20:42.328385Z"
+        "validUntil": "2026-09-10T04:12:00.644182Z"
       }
     },
     {
@@ -8533,8 +8533,8 @@
       "sourceReference": "HKAPI-087",
       "status": "live-verified",
       "verification": {
-        "checkedAt": "2026-09-01T10:20:42.328385Z",
-        "elapsedMs": 211,
+        "checkedAt": "2026-09-03T04:12:00.644182Z",
+        "elapsedMs": 245,
         "errorCode": null,
         "finalHost": "data.weather.gov.hk",
         "httpStatus": 200,
@@ -8546,11 +8546,11 @@
         "outcome": "success",
         "parsedRecordCount": 1,
         "recipeSha256": "c2a8a4cbe01e68d4ac4aa386f99388db9495426fe11cc162829436f33f1ea490",
-        "responseBytes": 486,
-        "responseSha256": "8a577064fad8134908e8877164be19b124fe9c4efb42915e86b5feee9fcccb22",
+        "responseBytes": 490,
+        "responseSha256": "50f01f14c5da54783b78451781dbc68a1eef87c3d643e8e09be037c6e780fa42",
         "schemaFingerprint": "3f9958446d446313fab148ba7c58056b231f686828807756a0799d5d3401db37",
         "toolVersion": "0.1.0",
-        "validUntil": "2026-09-08T10:20:42.328385Z"
+        "validUntil": "2026-09-10T04:12:00.644182Z"
       }
     },
     {
@@ -8660,8 +8660,8 @@
       "sourceReference": "HKAPI-088",
       "status": "live-verified",
       "verification": {
-        "checkedAt": "2026-09-01T10:20:42.328385Z",
-        "elapsedMs": 209,
+        "checkedAt": "2026-09-03T04:12:00.644182Z",
+        "elapsedMs": 257,
         "errorCode": null,
         "finalHost": "data.weather.gov.hk",
         "httpStatus": 200,
@@ -8673,11 +8673,11 @@
         "outcome": "success",
         "parsedRecordCount": 1,
         "recipeSha256": "3f19d4a439f88db72167700c6b9ef4f651f96b3c2c6f6ba1b7807c8ee7d7c379",
-        "responseBytes": 4686,
-        "responseSha256": "f2aa629e487386d1cb360273d19b837a1452ed3780bd41801a53cfbc2833706d",
+        "responseBytes": 4348,
+        "responseSha256": "1caf15152932a360228c4afa80c365778a721ebe61b1a0ad4d57efa4df42024d",
         "schemaFingerprint": "4b2627b3aface48abaf7b70cbdc70970fbb58c3333987d4de0ff5c59507ab4a8",
         "toolVersion": "0.1.0",
-        "validUntil": "2026-09-08T10:20:42.328385Z"
+        "validUntil": "2026-09-10T04:12:00.644182Z"
       }
     },
     {
@@ -8787,8 +8787,8 @@
       "sourceReference": "HKAPI-089",
       "status": "live-verified",
       "verification": {
-        "checkedAt": "2026-09-01T10:20:42.328385Z",
-        "elapsedMs": 153,
+        "checkedAt": "2026-09-03T04:12:00.644182Z",
+        "elapsedMs": 252,
         "errorCode": null,
         "finalHost": "data.weather.gov.hk",
         "httpStatus": 200,
@@ -8804,7 +8804,7 @@
         "responseSha256": "a0eff01dc6225c64f002322ddf5bb5817d9d929b5a57d1905a2c0b97b5f65cbf",
         "schemaFingerprint": "595cd502c22420c13d5f2718fc2d51f88fa7aab19813682503bfee3b6584be19",
         "toolVersion": "0.1.0",
-        "validUntil": "2026-09-08T10:20:42.328385Z"
+        "validUntil": "2026-09-10T04:12:00.644182Z"
       }
     },
     {
@@ -8914,8 +8914,8 @@
       "sourceReference": "HKAPI-090",
       "status": "live-verified",
       "verification": {
-        "checkedAt": "2026-09-01T10:20:42.328385Z",
-        "elapsedMs": 162,
+        "checkedAt": "2026-09-03T04:12:00.644182Z",
+        "elapsedMs": 250,
         "errorCode": null,
         "finalHost": "data.weather.gov.hk",
         "httpStatus": 200,
@@ -8927,11 +8927,11 @@
         "outcome": "success",
         "parsedRecordCount": 1,
         "recipeSha256": "970e2c6127d670a757313dbf1f03d6cfb95dc9b5d508e35218dfbbc398a832cc",
-        "responseBytes": 2743,
-        "responseSha256": "a37ae3cdb6818fab98333b993f06348b17f7aa8d7ee9188d6aafc6caf73cbee7",
+        "responseBytes": 2562,
+        "responseSha256": "b3bb094500561382e65308c07bb1936fd4743276e33fa007811d83c2eae64795",
         "schemaFingerprint": "6fe78fb0f867d68bee59294edee520931abd08a1e36006ed12d8957d96f0d40e",
         "toolVersion": "0.1.0",
-        "validUntil": "2026-09-08T10:20:42.328385Z"
+        "validUntil": "2026-09-10T04:12:00.644182Z"
       }
     },
     {
@@ -9041,8 +9041,8 @@
       "sourceReference": "HKAPI-091",
       "status": "live-verified",
       "verification": {
-        "checkedAt": "2026-09-01T10:20:42.328385Z",
-        "elapsedMs": 165,
+        "checkedAt": "2026-09-03T04:12:00.644182Z",
+        "elapsedMs": 250,
         "errorCode": null,
         "finalHost": "data.weather.gov.hk",
         "httpStatus": 200,
@@ -9058,7 +9058,7 @@
         "responseSha256": "cb0f6fc10f8448b2e38bd5227e96377a0d34c0faea4c886ed52fc581235e38f0",
         "schemaFingerprint": "8ba32b403ed9786d5ce08773f973b6c95e333a842d5daced70fa889e203c2286",
         "toolVersion": "0.1.0",
-        "validUntil": "2026-09-08T10:20:42.328385Z"
+        "validUntil": "2026-09-10T04:12:00.644182Z"
       }
     },
     {
@@ -9169,8 +9169,8 @@
       "sourceReference": "HKAPI-092",
       "status": "live-verified",
       "verification": {
-        "checkedAt": "2026-09-01T10:20:42.328385Z",
-        "elapsedMs": 158,
+        "checkedAt": "2026-09-03T04:12:00.644182Z",
+        "elapsedMs": 259,
         "errorCode": null,
         "finalHost": "data.weather.gov.hk",
         "httpStatus": 200,
@@ -9182,11 +9182,11 @@
         "outcome": "success",
         "parsedRecordCount": 1,
         "recipeSha256": "9d3b4ed77053489eef99aaf4554c277f41cba8c263c9e00e70dc4376b1543a07",
-        "responseBytes": 145,
-        "responseSha256": "f3abe0e24a1aad9d80c3573d5497bf0a9eea11852972f4b4ce3c2a68f949b65a",
+        "responseBytes": 158,
+        "responseSha256": "df94a91ba806c1b30e186b97ba38979cb3dda793f130a28169828271852a8ee6",
         "schemaFingerprint": "eacedc26e27745a1358c7dfbbe36a8882b57cbc5309dd2f85263e39633446f9b",
         "toolVersion": "0.1.0",
-        "validUntil": "2026-09-08T10:20:42.328385Z"
+        "validUntil": "2026-09-10T04:12:00.644182Z"
       }
     },
     {
@@ -9512,8 +9512,8 @@
       "sourceReference": "HKAPI-101",
       "status": "live-verified",
       "verification": {
-        "checkedAt": "2026-09-01T10:20:42.328385Z",
-        "elapsedMs": 243,
+        "checkedAt": "2026-09-03T04:12:00.644182Z",
+        "elapsedMs": 301,
         "errorCode": null,
         "finalHost": "data.gov.hk",
         "httpStatus": 200,
@@ -9530,7 +9530,7 @@
         "responseSha256": "fb8f6d96a53b8c63824b6dfe9222062dcdcad16b3bbfb260f29c49787de90f57",
         "schemaFingerprint": "e806b64debb035728990db90e2f4c4b6ef9846d5980d8b05da7c1d2254677dc5",
         "toolVersion": "0.1.0",
-        "validUntil": "2026-09-08T10:20:42.328385Z"
+        "validUntil": "2026-09-10T04:12:00.644182Z"
       }
     },
     {
@@ -9624,8 +9624,8 @@
       "sourceReference": "HKAPI-102",
       "status": "live-verified",
       "verification": {
-        "checkedAt": "2026-09-01T10:20:42.328385Z",
-        "elapsedMs": 242,
+        "checkedAt": "2026-09-03T04:12:00.644182Z",
+        "elapsedMs": 301,
         "errorCode": null,
         "finalHost": "data.gov.hk",
         "httpStatus": 200,
@@ -9642,7 +9642,7 @@
         "responseSha256": "1347475ffb6920e61cfa6797af46d5f6bb28c26f8b754d045b3c0a14316912c8",
         "schemaFingerprint": "e806b64debb035728990db90e2f4c4b6ef9846d5980d8b05da7c1d2254677dc5",
         "toolVersion": "0.1.0",
-        "validUntil": "2026-09-08T10:20:42.328385Z"
+        "validUntil": "2026-09-10T04:12:00.644182Z"
       }
     },
     {
@@ -9736,8 +9736,8 @@
       "sourceReference": "HKAPI-103",
       "status": "live-verified",
       "verification": {
-        "checkedAt": "2026-09-01T10:20:42.328385Z",
-        "elapsedMs": 217,
+        "checkedAt": "2026-09-03T04:12:00.644182Z",
+        "elapsedMs": 305,
         "errorCode": null,
         "finalHost": "data.gov.hk",
         "httpStatus": 200,
@@ -9754,7 +9754,7 @@
         "responseSha256": "f757b079c822da1619d2b8bb3b6d747bcad3d63ab1fa9506161e195f00299c48",
         "schemaFingerprint": "e806b64debb035728990db90e2f4c4b6ef9846d5980d8b05da7c1d2254677dc5",
         "toolVersion": "0.1.0",
-        "validUntil": "2026-09-08T10:20:42.328385Z"
+        "validUntil": "2026-09-10T04:12:00.644182Z"
       }
     },
     {
@@ -9848,8 +9848,8 @@
       "sourceReference": "HKAPI-104",
       "status": "live-verified",
       "verification": {
-        "checkedAt": "2026-09-01T10:20:42.328385Z",
-        "elapsedMs": 204,
+        "checkedAt": "2026-09-03T04:12:00.644182Z",
+        "elapsedMs": 303,
         "errorCode": null,
         "finalHost": "data.gov.hk",
         "httpStatus": 200,
@@ -9866,7 +9866,7 @@
         "responseSha256": "105cfa49b454140aa9f075e7634985786e9838ca304459ff0cc3fe2a7af9438a",
         "schemaFingerprint": "e806b64debb035728990db90e2f4c4b6ef9846d5980d8b05da7c1d2254677dc5",
         "toolVersion": "0.1.0",
-        "validUntil": "2026-09-08T10:20:42.328385Z"
+        "validUntil": "2026-09-10T04:12:00.644182Z"
       }
     },
     {
@@ -9960,8 +9960,8 @@
       "sourceReference": "HKAPI-105",
       "status": "live-verified",
       "verification": {
-        "checkedAt": "2026-09-01T10:20:42.328385Z",
-        "elapsedMs": 220,
+        "checkedAt": "2026-09-03T04:12:00.644182Z",
+        "elapsedMs": 292,
         "errorCode": null,
         "finalHost": "data.gov.hk",
         "httpStatus": 200,
@@ -9978,7 +9978,7 @@
         "responseSha256": "1cfb02c4589af62f41c334629d5c9978e6307e7b3654b2a0a0ccbf7e9e12f477",
         "schemaFingerprint": "6a30b7ca70ac0cb6d6b32794281ada9e2363695717a780db905efeb3ad86fc22",
         "toolVersion": "0.1.0",
-        "validUntil": "2026-09-08T10:20:42.328385Z"
+        "validUntil": "2026-09-10T04:12:00.644182Z"
       }
     },
     {
@@ -10072,8 +10072,8 @@
       "sourceReference": "HKAPI-106",
       "status": "live-verified",
       "verification": {
-        "checkedAt": "2026-09-01T10:20:42.328385Z",
-        "elapsedMs": 227,
+        "checkedAt": "2026-09-03T04:12:00.644182Z",
+        "elapsedMs": 293,
         "errorCode": null,
         "finalHost": "data.gov.hk",
         "httpStatus": 200,
@@ -10090,7 +10090,7 @@
         "responseSha256": "638c7e951484be95151b73b40a4d6ac5e2977dd7cfc1f9c92aa3c068753bf095",
         "schemaFingerprint": "6b715e728ad6e2d19a8a1742264cac613d58bca2fb979d0f2bab2cea3669c2af",
         "toolVersion": "0.1.0",
-        "validUntil": "2026-09-08T10:20:42.328385Z"
+        "validUntil": "2026-09-10T04:12:00.644182Z"
       }
     },
     {
@@ -10184,8 +10184,8 @@
       "sourceReference": "HKAPI-107",
       "status": "live-verified",
       "verification": {
-        "checkedAt": "2026-09-01T10:20:42.328385Z",
-        "elapsedMs": 196,
+        "checkedAt": "2026-09-03T04:12:00.644182Z",
+        "elapsedMs": 283,
         "errorCode": null,
         "finalHost": "data.gov.hk",
         "httpStatus": 200,
@@ -10199,10 +10199,10 @@
         "parsedRecordCount": 1,
         "recipeSha256": "b6d6438ea14d0d8efcfeab2f47010bfd22dea8da4bf911d20c908ec6ab0ef493",
         "responseBytes": 9623,
-        "responseSha256": "59f9e3cbce04fa84ca83b02f0cd2a06a4fa3f27db3fd3f9e1ffa1984d8d5e8cb",
+        "responseSha256": "8046661e96a096a36cf9cc7743d692980900774a59142f60320b8ba94d0879e1",
         "schemaFingerprint": "03860b81f0865162ad223214e3ffecf261c39d9a9d87b6122d4812ba59a24e80",
         "toolVersion": "0.1.0",
-        "validUntil": "2026-09-08T10:20:42.328385Z"
+        "validUntil": "2026-09-10T04:12:00.644182Z"
       }
     },
     {
@@ -10296,8 +10296,8 @@
       "sourceReference": "HKAPI-108",
       "status": "live-verified",
       "verification": {
-        "checkedAt": "2026-09-01T10:20:42.328385Z",
-        "elapsedMs": 193,
+        "checkedAt": "2026-09-03T04:12:00.644182Z",
+        "elapsedMs": 299,
         "errorCode": null,
         "finalHost": "data.gov.hk",
         "httpStatus": 200,
@@ -10311,10 +10311,10 @@
         "parsedRecordCount": 1,
         "recipeSha256": "4df9daee22dd87c4372190a7a614564ea77898ebc35da816bffc394777e4e07c",
         "responseBytes": 41107,
-        "responseSha256": "ae1a9101ccd7e4f2c69953aca6032733e48cf68f451e3829c44ed4ab5c50e771",
+        "responseSha256": "d55ef319486b544bc0001dbf216f3cfc4b2d39bdff87b324bed2618fb6075787",
         "schemaFingerprint": "03860b81f0865162ad223214e3ffecf261c39d9a9d87b6122d4812ba59a24e80",
         "toolVersion": "0.1.0",
-        "validUntil": "2026-09-08T10:20:42.328385Z"
+        "validUntil": "2026-09-10T04:12:00.644182Z"
       }
     },
     {
@@ -10408,8 +10408,8 @@
       "sourceReference": "HKAPI-109",
       "status": "live-verified",
       "verification": {
-        "checkedAt": "2026-09-01T10:20:42.328385Z",
-        "elapsedMs": 184,
+        "checkedAt": "2026-09-03T04:12:00.644182Z",
+        "elapsedMs": 296,
         "errorCode": null,
         "finalHost": "data.gov.hk",
         "httpStatus": 200,
@@ -10423,10 +10423,10 @@
         "parsedRecordCount": 1,
         "recipeSha256": "94a14ecf7b3fd9e135d4d6f8fc596ae843019a98cd362cfbdf9d5ec8f8fb46e5",
         "responseBytes": 7766,
-        "responseSha256": "e65063c27c59171cfd91c9ebd005364698e5bd3e3cc32f3fa6e236bab149448c",
+        "responseSha256": "a76e628cb6b20f56df01a473f60147992fb3cc2790cb241167686dda68c98b4f",
         "schemaFingerprint": "e806b64debb035728990db90e2f4c4b6ef9846d5980d8b05da7c1d2254677dc5",
         "toolVersion": "0.1.0",
-        "validUntil": "2026-09-08T10:20:42.328385Z"
+        "validUntil": "2026-09-10T04:12:00.644182Z"
       }
     },
     {
@@ -10520,8 +10520,8 @@
       "sourceReference": "HKAPI-110",
       "status": "live-verified",
       "verification": {
-        "checkedAt": "2026-09-01T10:20:42.328385Z",
-        "elapsedMs": 314,
+        "checkedAt": "2026-09-03T04:12:00.644182Z",
+        "elapsedMs": 364,
         "errorCode": null,
         "finalHost": "data.gov.hk",
         "httpStatus": 200,
@@ -10538,7 +10538,7 @@
         "responseSha256": "c6e70f61839cef5b3a2f0345f7c3c181bffc384c85759f412ff6618f5d9ad545",
         "schemaFingerprint": "e806b64debb035728990db90e2f4c4b6ef9846d5980d8b05da7c1d2254677dc5",
         "toolVersion": "0.1.0",
-        "validUntil": "2026-09-08T10:20:42.328385Z"
+        "validUntil": "2026-09-10T04:12:00.644182Z"
       }
     },
     {
@@ -10632,8 +10632,8 @@
       "sourceReference": "HKAPI-111",
       "status": "live-verified",
       "verification": {
-        "checkedAt": "2026-09-01T10:20:42.328385Z",
-        "elapsedMs": 222,
+        "checkedAt": "2026-09-03T04:12:00.644182Z",
+        "elapsedMs": 325,
         "errorCode": null,
         "finalHost": "data.gov.hk",
         "httpStatus": 200,
@@ -10650,7 +10650,7 @@
         "responseSha256": "be4b95be2e730c82790ab2e42878fc19a1011a3b447557e1d3cf75409fe0c341",
         "schemaFingerprint": "e806b64debb035728990db90e2f4c4b6ef9846d5980d8b05da7c1d2254677dc5",
         "toolVersion": "0.1.0",
-        "validUntil": "2026-09-08T10:20:42.328385Z"
+        "validUntil": "2026-09-10T04:12:00.644182Z"
       }
     },
     {
@@ -10744,8 +10744,8 @@
       "sourceReference": "HKAPI-112",
       "status": "live-verified",
       "verification": {
-        "checkedAt": "2026-09-01T10:20:42.328385Z",
-        "elapsedMs": 269,
+        "checkedAt": "2026-09-03T04:12:00.644182Z",
+        "elapsedMs": 356,
         "errorCode": null,
         "finalHost": "data.gov.hk",
         "httpStatus": 200,
@@ -10762,7 +10762,7 @@
         "responseSha256": "288023fcf6d9a7ded7c914e68f214ccc12a1528633e00b5e02c61812800b422a",
         "schemaFingerprint": "e806b64debb035728990db90e2f4c4b6ef9846d5980d8b05da7c1d2254677dc5",
         "toolVersion": "0.1.0",
-        "validUntil": "2026-09-08T10:20:42.328385Z"
+        "validUntil": "2026-09-10T04:12:00.644182Z"
       }
     },
     {
@@ -10856,8 +10856,8 @@
       "sourceReference": "HKAPI-113",
       "status": "live-verified",
       "verification": {
-        "checkedAt": "2026-09-01T10:25:29.844991Z",
-        "elapsedMs": 1007,
+        "checkedAt": "2026-09-03T04:12:00.644182Z",
+        "elapsedMs": 287,
         "errorCode": null,
         "finalHost": "data.gov.hk",
         "httpStatus": 200,
@@ -10874,7 +10874,7 @@
         "responseSha256": "61ef0e2c774c80e44c1cca18251a82b5cbbddd834bb37a8c10e4477c1fc17b20",
         "schemaFingerprint": "6a30b7ca70ac0cb6d6b32794281ada9e2363695717a780db905efeb3ad86fc22",
         "toolVersion": "0.1.0",
-        "validUntil": "2026-09-08T10:25:29.844991Z"
+        "validUntil": "2026-09-10T04:12:00.644182Z"
       }
     },
     {
@@ -10969,8 +10969,8 @@
       "sourceReference": "HKAPI-114",
       "status": "live-verified",
       "verification": {
-        "checkedAt": "2026-09-01T10:20:42.328385Z",
-        "elapsedMs": 192,
+        "checkedAt": "2026-09-03T04:12:00.644182Z",
+        "elapsedMs": 291,
         "errorCode": null,
         "finalHost": "data.gov.hk",
         "httpStatus": 200,
@@ -10987,7 +10987,7 @@
         "responseSha256": "80ecf10baf78d5ccae6d9d787e194b79d546e8a0c25a11cdea77bd2e30d8953c",
         "schemaFingerprint": "e806b64debb035728990db90e2f4c4b6ef9846d5980d8b05da7c1d2254677dc5",
         "toolVersion": "0.1.0",
-        "validUntil": "2026-09-08T10:20:42.328385Z"
+        "validUntil": "2026-09-10T04:12:00.644182Z"
       }
     },
     {
@@ -11082,8 +11082,8 @@
       "sourceReference": "HKAPI-115",
       "status": "live-verified",
       "verification": {
-        "checkedAt": "2026-09-01T10:25:29.844991Z",
-        "elapsedMs": 1032,
+        "checkedAt": "2026-09-03T04:12:00.644182Z",
+        "elapsedMs": 283,
         "errorCode": null,
         "finalHost": "data.gov.hk",
         "httpStatus": 200,
@@ -11100,7 +11100,7 @@
         "responseSha256": "4c1f2c3b82b4e10bf2fef71dbbd771d29d43901170badf8fbfdfc0d045bbd1e0",
         "schemaFingerprint": "6a30b7ca70ac0cb6d6b32794281ada9e2363695717a780db905efeb3ad86fc22",
         "toolVersion": "0.1.0",
-        "validUntil": "2026-09-08T10:25:29.844991Z"
+        "validUntil": "2026-09-10T04:12:00.644182Z"
       }
     },
     {
@@ -11197,8 +11197,8 @@
       "sourceReference": "HKAPI-116",
       "status": "live-verified",
       "verification": {
-        "checkedAt": "2026-09-01T10:25:29.844991Z",
-        "elapsedMs": 285,
+        "checkedAt": "2026-09-03T04:12:00.644182Z",
+        "elapsedMs": 284,
         "errorCode": null,
         "finalHost": "data.gov.hk",
         "httpStatus": 200,
@@ -11215,7 +11215,7 @@
         "responseSha256": "f3c4a20072bfde335e0d16c5b82e5a5fce20d69878ad7e178d7cd6fe04ef1130",
         "schemaFingerprint": "6a30b7ca70ac0cb6d6b32794281ada9e2363695717a780db905efeb3ad86fc22",
         "toolVersion": "0.1.0",
-        "validUntil": "2026-09-08T10:25:29.844991Z"
+        "validUntil": "2026-09-10T04:12:00.644182Z"
       }
     },
     {
@@ -11310,8 +11310,8 @@
       "sourceReference": "HKAPI-117",
       "status": "live-verified",
       "verification": {
-        "checkedAt": "2026-09-01T10:25:29.844991Z",
-        "elapsedMs": 376,
+        "checkedAt": "2026-09-03T04:12:00.644182Z",
+        "elapsedMs": 295,
         "errorCode": null,
         "finalHost": "data.gov.hk",
         "httpStatus": 200,
@@ -11328,7 +11328,7 @@
         "responseSha256": "4fd70b5e5b732516d518a377eb7158e08466fb7b113dd0bc30a140d5ac45a65e",
         "schemaFingerprint": "6a30b7ca70ac0cb6d6b32794281ada9e2363695717a780db905efeb3ad86fc22",
         "toolVersion": "0.1.0",
-        "validUntil": "2026-09-08T10:25:29.844991Z"
+        "validUntil": "2026-09-10T04:12:00.644182Z"
       }
     },
     {
@@ -11451,8 +11451,8 @@
       "sourceReference": "HKAPI-119",
       "status": "live-verified",
       "verification": {
-        "checkedAt": "2026-09-01T10:20:42.328385Z",
-        "elapsedMs": 251,
+        "checkedAt": "2026-09-03T04:12:00.644182Z",
+        "elapsedMs": 300,
         "errorCode": null,
         "finalHost": "data.gov.hk",
         "httpStatus": 200,
@@ -11469,7 +11469,7 @@
         "responseSha256": "8afe426f16ee73ebf2e1909901a97f6fc8a85871fd21a033fa20a8422585679d",
         "schemaFingerprint": "214e940fbba224285f7ae2a4a5283d1d9b71d34e937755a749fa100b0aa2c56e",
         "toolVersion": "0.1.0",
-        "validUntil": "2026-09-08T10:20:42.328385Z"
+        "validUntil": "2026-09-10T04:12:00.644182Z"
       }
     },
     {
@@ -11563,8 +11563,8 @@
       "sourceReference": "HKAPI-120",
       "status": "live-verified",
       "verification": {
-        "checkedAt": "2026-09-01T10:20:42.328385Z",
-        "elapsedMs": 251,
+        "checkedAt": "2026-09-03T04:12:00.644182Z",
+        "elapsedMs": 296,
         "errorCode": null,
         "finalHost": "data.gov.hk",
         "httpStatus": 200,
@@ -11581,7 +11581,7 @@
         "responseSha256": "a18f9ef111e77cabdcd79484c80d0c80be27c508eff01551f158aea36ddbb382",
         "schemaFingerprint": "e806b64debb035728990db90e2f4c4b6ef9846d5980d8b05da7c1d2254677dc5",
         "toolVersion": "0.1.0",
-        "validUntil": "2026-09-08T10:20:42.328385Z"
+        "validUntil": "2026-09-10T04:12:00.644182Z"
       }
     },
     {
@@ -11675,8 +11675,8 @@
       "sourceReference": "HKAPI-121",
       "status": "live-verified",
       "verification": {
-        "checkedAt": "2026-09-01T10:20:42.328385Z",
-        "elapsedMs": 209,
+        "checkedAt": "2026-09-03T04:12:00.644182Z",
+        "elapsedMs": 289,
         "errorCode": null,
         "finalHost": "data.gov.hk",
         "httpStatus": 200,
@@ -11693,7 +11693,7 @@
         "responseSha256": "dfd360092b89237271eace9918825ff66d29705a4fedaf9cf68b9b64e414de35",
         "schemaFingerprint": "e806b64debb035728990db90e2f4c4b6ef9846d5980d8b05da7c1d2254677dc5",
         "toolVersion": "0.1.0",
-        "validUntil": "2026-09-08T10:20:42.328385Z"
+        "validUntil": "2026-09-10T04:12:00.644182Z"
       }
     },
     {
@@ -11787,8 +11787,8 @@
       "sourceReference": "HKAPI-122",
       "status": "live-verified",
       "verification": {
-        "checkedAt": "2026-09-01T10:20:42.328385Z",
-        "elapsedMs": 214,
+        "checkedAt": "2026-09-03T04:12:00.644182Z",
+        "elapsedMs": 298,
         "errorCode": null,
         "finalHost": "data.gov.hk",
         "httpStatus": 200,
@@ -11805,7 +11805,7 @@
         "responseSha256": "3b65affe956467cb10d9bcd547ccccaf403bb357209a3083a431f11dfb3454ee",
         "schemaFingerprint": "e806b64debb035728990db90e2f4c4b6ef9846d5980d8b05da7c1d2254677dc5",
         "toolVersion": "0.1.0",
-        "validUntil": "2026-09-08T10:20:42.328385Z"
+        "validUntil": "2026-09-10T04:12:00.644182Z"
       }
     },
     {
@@ -11899,8 +11899,8 @@
       "sourceReference": "HKAPI-123",
       "status": "live-verified",
       "verification": {
-        "checkedAt": "2026-09-01T10:20:42.328385Z",
-        "elapsedMs": 206,
+        "checkedAt": "2026-09-03T04:12:00.644182Z",
+        "elapsedMs": 288,
         "errorCode": null,
         "finalHost": "data.gov.hk",
         "httpStatus": 200,
@@ -11917,7 +11917,7 @@
         "responseSha256": "08b2fe8b72b1337ae971697803801ab9a1287422486d04a739acf239061ef4ba",
         "schemaFingerprint": "e806b64debb035728990db90e2f4c4b6ef9846d5980d8b05da7c1d2254677dc5",
         "toolVersion": "0.1.0",
-        "validUntil": "2026-09-08T10:20:42.328385Z"
+        "validUntil": "2026-09-10T04:12:00.644182Z"
       }
     },
     {
@@ -12011,8 +12011,8 @@
       "sourceReference": "HKAPI-124",
       "status": "live-verified",
       "verification": {
-        "checkedAt": "2026-09-01T10:20:42.328385Z",
-        "elapsedMs": 361,
+        "checkedAt": "2026-09-03T04:12:00.644182Z",
+        "elapsedMs": 443,
         "errorCode": null,
         "finalHost": "data.gov.hk",
         "httpStatus": 200,
@@ -12029,7 +12029,7 @@
         "responseSha256": "f20c89ca6e4833e5f0514a34880232026fc6564e48f6ae189335d4d7c0bf0eef",
         "schemaFingerprint": "e806b64debb035728990db90e2f4c4b6ef9846d5980d8b05da7c1d2254677dc5",
         "toolVersion": "0.1.0",
-        "validUntil": "2026-09-08T10:20:42.328385Z"
+        "validUntil": "2026-09-10T04:12:00.644182Z"
       }
     },
     {
@@ -12123,8 +12123,8 @@
       "sourceReference": "HKAPI-125",
       "status": "live-verified",
       "verification": {
-        "checkedAt": "2026-09-01T10:20:42.328385Z",
-        "elapsedMs": 266,
+        "checkedAt": "2026-09-03T04:12:00.644182Z",
+        "elapsedMs": 373,
         "errorCode": null,
         "finalHost": "data.gov.hk",
         "httpStatus": 200,
@@ -12141,7 +12141,7 @@
         "responseSha256": "b7eed24c67c1d20e2d29476a7a80ce9430edcc522a89740ce2d4b7d1e58d4cb8",
         "schemaFingerprint": "e806b64debb035728990db90e2f4c4b6ef9846d5980d8b05da7c1d2254677dc5",
         "toolVersion": "0.1.0",
-        "validUntil": "2026-09-08T10:20:42.328385Z"
+        "validUntil": "2026-09-10T04:12:00.644182Z"
       }
     },
     {
@@ -12235,8 +12235,8 @@
       "sourceReference": "HKAPI-126",
       "status": "live-verified",
       "verification": {
-        "checkedAt": "2026-09-01T10:20:42.328385Z",
-        "elapsedMs": 217,
+        "checkedAt": "2026-09-03T04:12:00.644182Z",
+        "elapsedMs": 295,
         "errorCode": null,
         "finalHost": "data.gov.hk",
         "httpStatus": 200,
@@ -12253,7 +12253,7 @@
         "responseSha256": "ab015766903cfbc98a6408baf9bbb11044fff6c796eeb58b4fb4a4c58b9c52a6",
         "schemaFingerprint": "e806b64debb035728990db90e2f4c4b6ef9846d5980d8b05da7c1d2254677dc5",
         "toolVersion": "0.1.0",
-        "validUntil": "2026-09-08T10:20:42.328385Z"
+        "validUntil": "2026-09-10T04:12:00.644182Z"
       }
     },
     {
@@ -12347,8 +12347,8 @@
       "sourceReference": "HKAPI-127",
       "status": "live-verified",
       "verification": {
-        "checkedAt": "2026-09-01T10:20:42.328385Z",
-        "elapsedMs": 415,
+        "checkedAt": "2026-09-03T04:12:00.644182Z",
+        "elapsedMs": 379,
         "errorCode": null,
         "finalHost": "data.gov.hk",
         "httpStatus": 200,
@@ -12365,7 +12365,7 @@
         "responseSha256": "d6da0a15b231eb380b375060b3cb49ecd912343257d709dfb1101ed0da63aef2",
         "schemaFingerprint": "6a30b7ca70ac0cb6d6b32794281ada9e2363695717a780db905efeb3ad86fc22",
         "toolVersion": "0.1.0",
-        "validUntil": "2026-09-08T10:20:42.328385Z"
+        "validUntil": "2026-09-10T04:12:00.644182Z"
       }
     },
     {
@@ -12459,8 +12459,8 @@
       "sourceReference": "HKAPI-128",
       "status": "live-verified",
       "verification": {
-        "checkedAt": "2026-09-01T10:20:42.328385Z",
-        "elapsedMs": 242,
+        "checkedAt": "2026-09-03T04:12:00.644182Z",
+        "elapsedMs": 289,
         "errorCode": null,
         "finalHost": "data.gov.hk",
         "httpStatus": 200,
@@ -12477,7 +12477,7 @@
         "responseSha256": "c12222ba8bca58a8597ccc12eecca572360e4925542331c2eb4fb366bb70a365",
         "schemaFingerprint": "e806b64debb035728990db90e2f4c4b6ef9846d5980d8b05da7c1d2254677dc5",
         "toolVersion": "0.1.0",
-        "validUntil": "2026-09-08T10:20:42.328385Z"
+        "validUntil": "2026-09-10T04:12:00.644182Z"
       }
     },
     {
@@ -12571,8 +12571,8 @@
       "sourceReference": "HKAPI-129",
       "status": "live-verified",
       "verification": {
-        "checkedAt": "2026-09-01T10:20:42.328385Z",
-        "elapsedMs": 202,
+        "checkedAt": "2026-09-03T04:12:00.644182Z",
+        "elapsedMs": 281,
         "errorCode": null,
         "finalHost": "data.gov.hk",
         "httpStatus": 200,
@@ -12589,7 +12589,7 @@
         "responseSha256": "3af8dd06c404ec180b7afb6aa142a14dfcbb3b115b026843b96995658a6ed15f",
         "schemaFingerprint": "e806b64debb035728990db90e2f4c4b6ef9846d5980d8b05da7c1d2254677dc5",
         "toolVersion": "0.1.0",
-        "validUntil": "2026-09-08T10:20:42.328385Z"
+        "validUntil": "2026-09-10T04:12:00.644182Z"
       }
     },
     {
@@ -12683,8 +12683,8 @@
       "sourceReference": "HKAPI-130",
       "status": "live-verified",
       "verification": {
-        "checkedAt": "2026-09-01T10:20:42.328385Z",
-        "elapsedMs": 198,
+        "checkedAt": "2026-09-03T04:12:00.644182Z",
+        "elapsedMs": 293,
         "errorCode": null,
         "finalHost": "data.gov.hk",
         "httpStatus": 200,
@@ -12701,7 +12701,7 @@
         "responseSha256": "bcd4986381f554572f6a6a673726538cfa0f6cf9c5f628156418eda1f0b87996",
         "schemaFingerprint": "e806b64debb035728990db90e2f4c4b6ef9846d5980d8b05da7c1d2254677dc5",
         "toolVersion": "0.1.0",
-        "validUntil": "2026-09-08T10:20:42.328385Z"
+        "validUntil": "2026-09-10T04:12:00.644182Z"
       }
     },
     {
@@ -12795,8 +12795,8 @@
       "sourceReference": "HKAPI-131",
       "status": "live-verified",
       "verification": {
-        "checkedAt": "2026-09-01T10:20:42.328385Z",
-        "elapsedMs": 201,
+        "checkedAt": "2026-09-03T04:12:00.644182Z",
+        "elapsedMs": 277,
         "errorCode": null,
         "finalHost": "data.gov.hk",
         "httpStatus": 200,
@@ -12813,7 +12813,7 @@
         "responseSha256": "c7f7d46cfee4bc77e741673078d9b23edbe28d3472f88cc39301c78d9223f32f",
         "schemaFingerprint": "e806b64debb035728990db90e2f4c4b6ef9846d5980d8b05da7c1d2254677dc5",
         "toolVersion": "0.1.0",
-        "validUntil": "2026-09-08T10:20:42.328385Z"
+        "validUntil": "2026-09-10T04:12:00.644182Z"
       }
     },
     {
@@ -12920,8 +12920,8 @@
       "sourceReference": "HKAPI-132",
       "status": "live-verified",
       "verification": {
-        "checkedAt": "2026-09-01T10:25:29.844991Z",
-        "elapsedMs": 395,
+        "checkedAt": "2026-09-03T04:12:00.644182Z",
+        "elapsedMs": 417,
         "errorCode": null,
         "finalHost": "data.gov.hk",
         "httpStatus": 200,
@@ -12938,7 +12938,7 @@
         "responseSha256": "1853465f383933c0394c5613f84646d2adc7df040d92b2eb36a9cf166741ea40",
         "schemaFingerprint": "e806b64debb035728990db90e2f4c4b6ef9846d5980d8b05da7c1d2254677dc5",
         "toolVersion": "0.1.0",
-        "validUntil": "2026-09-08T10:25:29.844991Z"
+        "validUntil": "2026-09-10T04:12:00.644182Z"
       }
     },
     {
@@ -13032,8 +13032,8 @@
       "sourceReference": "HKAPI-133",
       "status": "live-verified",
       "verification": {
-        "checkedAt": "2026-09-01T10:20:42.328385Z",
-        "elapsedMs": 268,
+        "checkedAt": "2026-09-03T04:12:00.644182Z",
+        "elapsedMs": 293,
         "errorCode": null,
         "finalHost": "data.gov.hk",
         "httpStatus": 200,
@@ -13050,7 +13050,7 @@
         "responseSha256": "4b575d22333917309c44d541bc53b8e2fbe932a16c84efc71f6fcabea55acbbf",
         "schemaFingerprint": "5e4dd799f50fa9e8c5e3dc1d8747fa9f47a4ae4fbb1f44b942a8112f826a0a79",
         "toolVersion": "0.1.0",
-        "validUntil": "2026-09-08T10:20:42.328385Z"
+        "validUntil": "2026-09-10T04:12:00.644182Z"
       }
     },
     {
@@ -13145,8 +13145,8 @@
       "sourceReference": "HKAPI-134",
       "status": "live-verified",
       "verification": {
-        "checkedAt": "2026-09-01T10:20:42.328385Z",
-        "elapsedMs": 211,
+        "checkedAt": "2026-09-03T04:12:00.644182Z",
+        "elapsedMs": 342,
         "errorCode": null,
         "finalHost": "data.gov.hk",
         "httpStatus": 200,
@@ -13163,7 +13163,7 @@
         "responseSha256": "e8e0bf39afc3b6b395560e2d3537b2290b3c6b9b4eee9ce105e56dfe777ba5a4",
         "schemaFingerprint": "5e4dd799f50fa9e8c5e3dc1d8747fa9f47a4ae4fbb1f44b942a8112f826a0a79",
         "toolVersion": "0.1.0",
-        "validUntil": "2026-09-08T10:20:42.328385Z"
+        "validUntil": "2026-09-10T04:12:00.644182Z"
       }
     },
     {
@@ -13257,8 +13257,8 @@
       "sourceReference": "HKAPI-135",
       "status": "live-verified",
       "verification": {
-        "checkedAt": "2026-09-01T10:20:42.328385Z",
-        "elapsedMs": 192,
+        "checkedAt": "2026-09-03T04:12:00.644182Z",
+        "elapsedMs": 425,
         "errorCode": null,
         "finalHost": "data.gov.hk",
         "httpStatus": 200,
@@ -13275,7 +13275,7 @@
         "responseSha256": "2de9239cbbb1cacc29948b251573ea218acd27b5e1fcaeb0baae923ad3966387",
         "schemaFingerprint": "6a30b7ca70ac0cb6d6b32794281ada9e2363695717a780db905efeb3ad86fc22",
         "toolVersion": "0.1.0",
-        "validUntil": "2026-09-08T10:20:42.328385Z"
+        "validUntil": "2026-09-10T04:12:00.644182Z"
       }
     },
     {
@@ -13371,8 +13371,8 @@
       "sourceReference": "HKAPI-136",
       "status": "live-verified",
       "verification": {
-        "checkedAt": "2026-09-01T10:25:29.844991Z",
-        "elapsedMs": 685,
+        "checkedAt": "2026-09-03T04:12:00.644182Z",
+        "elapsedMs": 423,
         "errorCode": null,
         "finalHost": "data.gov.hk",
         "httpStatus": 200,
@@ -13389,7 +13389,7 @@
         "responseSha256": "f600f5819aee5e99d4dc169511a0b50060d01af251a6b5deeb9e450ce2006206",
         "schemaFingerprint": "e806b64debb035728990db90e2f4c4b6ef9846d5980d8b05da7c1d2254677dc5",
         "toolVersion": "0.1.0",
-        "validUntil": "2026-09-08T10:25:29.844991Z"
+        "validUntil": "2026-09-10T04:12:00.644182Z"
       }
     },
     {
@@ -13483,8 +13483,8 @@
       "sourceReference": "HKAPI-137",
       "status": "live-verified",
       "verification": {
-        "checkedAt": "2026-09-01T10:20:42.328385Z",
-        "elapsedMs": 205,
+        "checkedAt": "2026-09-03T04:12:00.644182Z",
+        "elapsedMs": 402,
         "errorCode": null,
         "finalHost": "data.gov.hk",
         "httpStatus": 200,
@@ -13501,7 +13501,7 @@
         "responseSha256": "65672149bd699988660577db8855482d7d7c07c0fc87b0336a94fa571b57c8ee",
         "schemaFingerprint": "65b67fa4b9cf6e2ad0bd20c45223e3702c0d4d7c49f68d6fb846b6754ad3f4ce",
         "toolVersion": "0.1.0",
-        "validUntil": "2026-09-08T10:20:42.328385Z"
+        "validUntil": "2026-09-10T04:12:00.644182Z"
       }
     },
     {
@@ -13595,8 +13595,8 @@
       "sourceReference": "HKAPI-138",
       "status": "live-verified",
       "verification": {
-        "checkedAt": "2026-09-01T10:20:42.328385Z",
-        "elapsedMs": 236,
+        "checkedAt": "2026-09-03T04:12:00.644182Z",
+        "elapsedMs": 441,
         "errorCode": null,
         "finalHost": "data.gov.hk",
         "httpStatus": 200,
@@ -13613,7 +13613,7 @@
         "responseSha256": "62df6183d80abd8757cb5a3ee9aaa0d1195dc15ea508a71c5807720db1a19279",
         "schemaFingerprint": "6a30b7ca70ac0cb6d6b32794281ada9e2363695717a780db905efeb3ad86fc22",
         "toolVersion": "0.1.0",
-        "validUntil": "2026-09-08T10:20:42.328385Z"
+        "validUntil": "2026-09-10T04:12:00.644182Z"
       }
     },
     {
@@ -13939,8 +13939,8 @@
       "sourceReference": "HKAPI-147",
       "status": "live-verified",
       "verification": {
-        "checkedAt": "2026-09-01T10:20:42.328385Z",
-        "elapsedMs": 225,
+        "checkedAt": "2026-09-03T04:12:00.644182Z",
+        "elapsedMs": 726,
         "errorCode": null,
         "finalHost": "data.gov.hk",
         "httpStatus": 200,
@@ -13957,7 +13957,7 @@
         "responseSha256": "5404fadcbb3165858e596ace5765ebe545b3483c242279af174f71c9ecee7fc4",
         "schemaFingerprint": "e806b64debb035728990db90e2f4c4b6ef9846d5980d8b05da7c1d2254677dc5",
         "toolVersion": "0.1.0",
-        "validUntil": "2026-09-08T10:20:42.328385Z"
+        "validUntil": "2026-09-10T04:12:00.644182Z"
       }
     },
     {
@@ -14051,8 +14051,8 @@
       "sourceReference": "HKAPI-148",
       "status": "live-verified",
       "verification": {
-        "checkedAt": "2026-09-01T10:20:42.328385Z",
-        "elapsedMs": 266,
+        "checkedAt": "2026-09-03T04:12:00.644182Z",
+        "elapsedMs": 717,
         "errorCode": null,
         "finalHost": "data.gov.hk",
         "httpStatus": 200,
@@ -14069,7 +14069,7 @@
         "responseSha256": "11e2779fd638e0128cc7cac778a6907314245b2c40e4441e0dcb10902e9c701f",
         "schemaFingerprint": "e806b64debb035728990db90e2f4c4b6ef9846d5980d8b05da7c1d2254677dc5",
         "toolVersion": "0.1.0",
-        "validUntil": "2026-09-08T10:20:42.328385Z"
+        "validUntil": "2026-09-10T04:12:00.644182Z"
       }
     },
     {
@@ -14167,8 +14167,8 @@
       "sourceReference": "HKAPI-149",
       "status": "live-verified",
       "verification": {
-        "checkedAt": "2026-09-01T10:25:29.844991Z",
-        "elapsedMs": 834,
+        "checkedAt": "2026-09-03T04:12:00.644182Z",
+        "elapsedMs": 661,
         "errorCode": null,
         "finalHost": "data.gov.hk",
         "httpStatus": 200,
@@ -14185,7 +14185,7 @@
         "responseSha256": "a119e56f6c71761cc9450996cd718b8979e1f4b595a97b1385927b5361013f98",
         "schemaFingerprint": "e806b64debb035728990db90e2f4c4b6ef9846d5980d8b05da7c1d2254677dc5",
         "toolVersion": "0.1.0",
-        "validUntil": "2026-09-08T10:25:29.844991Z"
+        "validUntil": "2026-09-10T04:12:00.644182Z"
       }
     },
     {
@@ -14279,8 +14279,8 @@
       "sourceReference": "HKAPI-150",
       "status": "live-verified",
       "verification": {
-        "checkedAt": "2026-09-01T10:20:42.328385Z",
-        "elapsedMs": 217,
+        "checkedAt": "2026-09-03T04:12:00.644182Z",
+        "elapsedMs": 676,
         "errorCode": null,
         "finalHost": "data.gov.hk",
         "httpStatus": 200,
@@ -14297,7 +14297,7 @@
         "responseSha256": "6727ea3fd09bb2a502f5dfae042798d2162808ab29b1fef09d6c0bab391d2ae5",
         "schemaFingerprint": "2fa564869dea80de1b91f8867b9a2fa164dd0c4b9adc529c5a5bbe1b034c12cf",
         "toolVersion": "0.1.0",
-        "validUntil": "2026-09-08T10:20:42.328385Z"
+        "validUntil": "2026-09-10T04:12:00.644182Z"
       }
     },
     {
@@ -14391,8 +14391,8 @@
       "sourceReference": "HKAPI-151",
       "status": "live-verified",
       "verification": {
-        "checkedAt": "2026-09-01T10:20:42.328385Z",
-        "elapsedMs": 251,
+        "checkedAt": "2026-09-03T04:12:00.644182Z",
+        "elapsedMs": 353,
         "errorCode": null,
         "finalHost": "data.gov.hk",
         "httpStatus": 200,
@@ -14409,7 +14409,7 @@
         "responseSha256": "b1d01d87407cc136e9637cf457073b7655135be9e8b9333ccdeaf459fd47c30d",
         "schemaFingerprint": "2fa564869dea80de1b91f8867b9a2fa164dd0c4b9adc529c5a5bbe1b034c12cf",
         "toolVersion": "0.1.0",
-        "validUntil": "2026-09-08T10:20:42.328385Z"
+        "validUntil": "2026-09-10T04:12:00.644182Z"
       }
     },
     {
@@ -14503,8 +14503,8 @@
       "sourceReference": "HKAPI-152",
       "status": "live-verified",
       "verification": {
-        "checkedAt": "2026-09-01T10:20:42.328385Z",
-        "elapsedMs": 184,
+        "checkedAt": "2026-09-03T04:12:00.644182Z",
+        "elapsedMs": 405,
         "errorCode": null,
         "finalHost": "data.gov.hk",
         "httpStatus": 200,
@@ -14521,7 +14521,7 @@
         "responseSha256": "f05643ed9e94426fd008d927ac14fe190cbf05a50bffcc13c0b5971c737f2095",
         "schemaFingerprint": "2fa564869dea80de1b91f8867b9a2fa164dd0c4b9adc529c5a5bbe1b034c12cf",
         "toolVersion": "0.1.0",
-        "validUntil": "2026-09-08T10:20:42.328385Z"
+        "validUntil": "2026-09-10T04:12:00.644182Z"
       }
     },
     {
@@ -14615,8 +14615,8 @@
       "sourceReference": "HKAPI-153",
       "status": "live-verified",
       "verification": {
-        "checkedAt": "2026-09-01T10:20:42.328385Z",
-        "elapsedMs": 213,
+        "checkedAt": "2026-09-03T04:12:00.644182Z",
+        "elapsedMs": 286,
         "errorCode": null,
         "finalHost": "data.gov.hk",
         "httpStatus": 200,
@@ -14633,7 +14633,7 @@
         "responseSha256": "b08e63dc463bae48d2106f2011cdf2b161ed53e719db8f5fb4d0bc06cb8184e6",
         "schemaFingerprint": "18c83d2d3cf062d47be3672b852b1a502a6be7ae09af6d1b3014856a257d188e",
         "toolVersion": "0.1.0",
-        "validUntil": "2026-09-08T10:20:42.328385Z"
+        "validUntil": "2026-09-10T04:12:00.644182Z"
       }
     },
     {
@@ -14727,8 +14727,8 @@
       "sourceReference": "HKAPI-154",
       "status": "live-verified",
       "verification": {
-        "checkedAt": "2026-09-01T10:20:42.328385Z",
-        "elapsedMs": 246,
+        "checkedAt": "2026-09-03T04:12:00.644182Z",
+        "elapsedMs": 297,
         "errorCode": null,
         "finalHost": "data.gov.hk",
         "httpStatus": 200,
@@ -14745,7 +14745,7 @@
         "responseSha256": "ed56461417d1906cbd892a79f3af5f76622d0eadb2b156f4733655f03941fae7",
         "schemaFingerprint": "b132136385c0dfbe6b805119424a33b32785f026e831d95270d1a8b8e86cbe10",
         "toolVersion": "0.1.0",
-        "validUntil": "2026-09-08T10:20:42.328385Z"
+        "validUntil": "2026-09-10T04:12:00.644182Z"
       }
     },
     {
@@ -14839,8 +14839,8 @@
       "sourceReference": "HKAPI-155",
       "status": "live-verified",
       "verification": {
-        "checkedAt": "2026-09-01T10:20:42.328385Z",
-        "elapsedMs": 214,
+        "checkedAt": "2026-09-03T04:12:00.644182Z",
+        "elapsedMs": 280,
         "errorCode": null,
         "finalHost": "data.gov.hk",
         "httpStatus": 200,
@@ -14857,7 +14857,7 @@
         "responseSha256": "c0393272be9b9e5fe299a65287ae924f083d0049c49c22a8325f2561e62ab809",
         "schemaFingerprint": "b132136385c0dfbe6b805119424a33b32785f026e831d95270d1a8b8e86cbe10",
         "toolVersion": "0.1.0",
-        "validUntil": "2026-09-08T10:20:42.328385Z"
+        "validUntil": "2026-09-10T04:12:00.644182Z"
       }
     },
     {
@@ -14953,8 +14953,8 @@
       "sourceReference": "HKAPI-156",
       "status": "live-verified",
       "verification": {
-        "checkedAt": "2026-09-01T10:20:42.328385Z",
-        "elapsedMs": 205,
+        "checkedAt": "2026-09-03T04:12:00.644182Z",
+        "elapsedMs": 481,
         "errorCode": null,
         "finalHost": "data.gov.hk",
         "httpStatus": 200,
@@ -14971,7 +14971,7 @@
         "responseSha256": "5b84e8d91df07c2ab53ca6ea5db73731445dcc339d0b71628806f9d273958c70",
         "schemaFingerprint": "b132136385c0dfbe6b805119424a33b32785f026e831d95270d1a8b8e86cbe10",
         "toolVersion": "0.1.0",
-        "validUntil": "2026-09-08T10:20:42.328385Z"
+        "validUntil": "2026-09-10T04:12:00.644182Z"
       }
     },
     {
@@ -15086,8 +15086,8 @@
       "sourceReference": "HKAPI-157",
       "status": "live-verified",
       "verification": {
-        "checkedAt": "2026-09-01T10:25:29.844991Z",
-        "elapsedMs": 871,
+        "checkedAt": "2026-09-03T04:12:00.644182Z",
+        "elapsedMs": 585,
         "errorCode": null,
         "finalHost": "data.gov.hk",
         "httpStatus": 200,
@@ -15104,7 +15104,7 @@
         "responseSha256": "fe9d7aeaa85b6716a614947503fb037530033f7dea6904a00ff56af8528f30f2",
         "schemaFingerprint": "e806b64debb035728990db90e2f4c4b6ef9846d5980d8b05da7c1d2254677dc5",
         "toolVersion": "0.1.0",
-        "validUntil": "2026-09-08T10:25:29.844991Z"
+        "validUntil": "2026-09-10T04:12:00.644182Z"
       }
     },
     {
@@ -15198,8 +15198,8 @@
       "sourceReference": "HKAPI-158",
       "status": "live-verified",
       "verification": {
-        "checkedAt": "2026-09-01T10:20:42.328385Z",
-        "elapsedMs": 212,
+        "checkedAt": "2026-09-03T04:12:00.644182Z",
+        "elapsedMs": 423,
         "errorCode": null,
         "finalHost": "data.gov.hk",
         "httpStatus": 200,
@@ -15216,7 +15216,7 @@
         "responseSha256": "17bd6838505b54478216a7d6822fb1517b13ef01ebcf92a645ca121bf6969cc6",
         "schemaFingerprint": "e806b64debb035728990db90e2f4c4b6ef9846d5980d8b05da7c1d2254677dc5",
         "toolVersion": "0.1.0",
-        "validUntil": "2026-09-08T10:20:42.328385Z"
+        "validUntil": "2026-09-10T04:12:00.644182Z"
       }
     },
     {
@@ -15310,8 +15310,8 @@
       "sourceReference": "HKAPI-159",
       "status": "live-verified",
       "verification": {
-        "checkedAt": "2026-09-01T10:20:42.328385Z",
-        "elapsedMs": 265,
+        "checkedAt": "2026-09-03T04:12:00.644182Z",
+        "elapsedMs": 362,
         "errorCode": null,
         "finalHost": "data.gov.hk",
         "httpStatus": 200,
@@ -15328,7 +15328,7 @@
         "responseSha256": "977d1a2b9d06183ab4d54f287f3b2b2f8e5b0a5b64fb7cfab4250ec26429c559",
         "schemaFingerprint": "e806b64debb035728990db90e2f4c4b6ef9846d5980d8b05da7c1d2254677dc5",
         "toolVersion": "0.1.0",
-        "validUntil": "2026-09-08T10:20:42.328385Z"
+        "validUntil": "2026-09-10T04:12:00.644182Z"
       }
     },
     {
@@ -15422,8 +15422,8 @@
       "sourceReference": "HKAPI-160",
       "status": "live-verified",
       "verification": {
-        "checkedAt": "2026-09-01T10:20:42.328385Z",
-        "elapsedMs": 210,
+        "checkedAt": "2026-09-03T04:12:00.644182Z",
+        "elapsedMs": 286,
         "errorCode": null,
         "finalHost": "data.gov.hk",
         "httpStatus": 200,
@@ -15440,7 +15440,7 @@
         "responseSha256": "16cf427c3c0dbb4a5003be4e3fafcd5418b9fee5716b3f888b74869b1010dfbd",
         "schemaFingerprint": "e806b64debb035728990db90e2f4c4b6ef9846d5980d8b05da7c1d2254677dc5",
         "toolVersion": "0.1.0",
-        "validUntil": "2026-09-08T10:20:42.328385Z"
+        "validUntil": "2026-09-10T04:12:00.644182Z"
       }
     },
     {
@@ -15534,8 +15534,8 @@
       "sourceReference": "HKAPI-161",
       "status": "live-verified",
       "verification": {
-        "checkedAt": "2026-09-01T10:20:42.328385Z",
-        "elapsedMs": 182,
+        "checkedAt": "2026-09-03T04:12:00.644182Z",
+        "elapsedMs": 306,
         "errorCode": null,
         "finalHost": "data.gov.hk",
         "httpStatus": 200,
@@ -15552,7 +15552,7 @@
         "responseSha256": "b7aaa9a6ab2189607915687996e2f94e38370c51b18e1a40d89732c5a1ee8696",
         "schemaFingerprint": "e806b64debb035728990db90e2f4c4b6ef9846d5980d8b05da7c1d2254677dc5",
         "toolVersion": "0.1.0",
-        "validUntil": "2026-09-08T10:20:42.328385Z"
+        "validUntil": "2026-09-10T04:12:00.644182Z"
       }
     },
     {
@@ -15646,8 +15646,8 @@
       "sourceReference": "HKAPI-162",
       "status": "live-verified",
       "verification": {
-        "checkedAt": "2026-09-01T10:20:42.328385Z",
-        "elapsedMs": 193,
+        "checkedAt": "2026-09-03T04:12:00.644182Z",
+        "elapsedMs": 292,
         "errorCode": null,
         "finalHost": "data.gov.hk",
         "httpStatus": 200,
@@ -15664,7 +15664,7 @@
         "responseSha256": "7a370c1e42914436ac71bad5727d187297a08e09d652885d3dccc66d1017fa73",
         "schemaFingerprint": "e6e55a65ad4f8364c54a847d8368ea7a35002a343b7ed365d921c5a4119acab2",
         "toolVersion": "0.1.0",
-        "validUntil": "2026-09-08T10:20:42.328385Z"
+        "validUntil": "2026-09-10T04:12:00.644182Z"
       }
     },
     {
@@ -15768,7 +15768,7 @@
       "sourceReference": "HKAPI-163",
       "status": "fixture-tested",
       "verification": {
-        "checkedAt": "2026-09-01T10:20:42.328385Z",
+        "checkedAt": "2026-09-03T04:12:00.644182Z",
         "elapsedMs": 0,
         "errorCode": "SOURCE_UNAVAILABLE",
         "finalHost": "app.legco.gov.hk",
@@ -15786,7 +15786,7 @@
         "responseSha256": null,
         "schemaFingerprint": null,
         "toolVersion": "0.1.0",
-        "validUntil": "2026-09-08T10:20:42.328385Z"
+        "validUntil": "2026-09-10T04:12:00.644182Z"
       }
     },
     {
@@ -15890,7 +15890,7 @@
       "sourceReference": "HKAPI-164",
       "status": "fixture-tested",
       "verification": {
-        "checkedAt": "2026-09-01T10:20:42.328385Z",
+        "checkedAt": "2026-09-03T04:12:00.644182Z",
         "elapsedMs": 0,
         "errorCode": "SOURCE_UNAVAILABLE",
         "finalHost": "app.legco.gov.hk",
@@ -15908,7 +15908,7 @@
         "responseSha256": null,
         "schemaFingerprint": null,
         "toolVersion": "0.1.0",
-        "validUntil": "2026-09-08T10:20:42.328385Z"
+        "validUntil": "2026-09-10T04:12:00.644182Z"
       }
     },
     {
@@ -16012,7 +16012,7 @@
       "sourceReference": "HKAPI-165",
       "status": "fixture-tested",
       "verification": {
-        "checkedAt": "2026-09-01T10:20:42.328385Z",
+        "checkedAt": "2026-09-03T04:12:00.644182Z",
         "elapsedMs": 0,
         "errorCode": "SOURCE_UNAVAILABLE",
         "finalHost": "app.legco.gov.hk",
@@ -16030,7 +16030,7 @@
         "responseSha256": null,
         "schemaFingerprint": null,
         "toolVersion": "0.1.0",
-        "validUntil": "2026-09-08T10:20:42.328385Z"
+        "validUntil": "2026-09-10T04:12:00.644182Z"
       }
     },
     {
@@ -16134,7 +16134,7 @@
       "sourceReference": "HKAPI-166",
       "status": "fixture-tested",
       "verification": {
-        "checkedAt": "2026-09-01T10:20:42.328385Z",
+        "checkedAt": "2026-09-03T04:12:00.644182Z",
         "elapsedMs": 0,
         "errorCode": "SOURCE_UNAVAILABLE",
         "finalHost": "app.legco.gov.hk",
@@ -16152,7 +16152,7 @@
         "responseSha256": null,
         "schemaFingerprint": null,
         "toolVersion": "0.1.0",
-        "validUntil": "2026-09-08T10:20:42.328385Z"
+        "validUntil": "2026-09-10T04:12:00.644182Z"
       }
     },
     {
@@ -16256,7 +16256,7 @@
       "sourceReference": "HKAPI-167",
       "status": "fixture-tested",
       "verification": {
-        "checkedAt": "2026-09-01T10:20:42.328385Z",
+        "checkedAt": "2026-09-03T04:12:00.644182Z",
         "elapsedMs": 0,
         "errorCode": "SOURCE_UNAVAILABLE",
         "finalHost": "app.legco.gov.hk",
@@ -16274,7 +16274,7 @@
         "responseSha256": null,
         "schemaFingerprint": null,
         "toolVersion": "0.1.0",
-        "validUntil": "2026-09-08T10:20:42.328385Z"
+        "validUntil": "2026-09-10T04:12:00.644182Z"
       }
     },
     {
@@ -16407,7 +16407,7 @@
       "sourceReference": "HKAPI-169",
       "status": "fixture-tested",
       "verification": {
-        "checkedAt": "2026-09-01T10:20:42.328385Z",
+        "checkedAt": "2026-09-03T04:12:00.644182Z",
         "elapsedMs": 0,
         "errorCode": "SOURCE_UNAVAILABLE",
         "finalHost": "app.legco.gov.hk",
@@ -16425,7 +16425,7 @@
         "responseSha256": null,
         "schemaFingerprint": null,
         "toolVersion": "0.1.0",
-        "validUntil": "2026-09-08T10:20:42.328385Z"
+        "validUntil": "2026-09-10T04:12:00.644182Z"
       }
     },
     {
@@ -16519,8 +16519,8 @@
       "sourceReference": "HKAPI-170",
       "status": "live-verified",
       "verification": {
-        "checkedAt": "2026-09-01T10:20:42.328385Z",
-        "elapsedMs": 171,
+        "checkedAt": "2026-09-03T04:12:00.644182Z",
+        "elapsedMs": 567,
         "errorCode": null,
         "finalHost": "data.gov.hk",
         "httpStatus": 200,
@@ -16537,7 +16537,7 @@
         "responseSha256": "96d0b7aa536d0b87c82ead700e7f5b281533bd004e29b5715428d3ced055fd4e",
         "schemaFingerprint": "14f2048274e3a9f512753d809c3ac1d6b39ff00cd6e9226296820e200e473ecb",
         "toolVersion": "0.1.0",
-        "validUntil": "2026-09-08T10:20:42.328385Z"
+        "validUntil": "2026-09-10T04:12:00.644182Z"
       }
     },
     {
@@ -16631,8 +16631,8 @@
       "sourceReference": "HKAPI-171",
       "status": "live-verified",
       "verification": {
-        "checkedAt": "2026-09-01T10:20:42.328385Z",
-        "elapsedMs": 210,
+        "checkedAt": "2026-09-03T04:12:00.644182Z",
+        "elapsedMs": 765,
         "errorCode": null,
         "finalHost": "data.gov.hk",
         "httpStatus": 200,
@@ -16649,7 +16649,7 @@
         "responseSha256": "80a5ffe377239ad76583a497f4db78d404d5eac5beee1108bf9df699d5eef639",
         "schemaFingerprint": "d14903910173290e748cf796ec9a6dec3105ef9a772f6f9ef2b98c495b0b7ac9",
         "toolVersion": "0.1.0",
-        "validUntil": "2026-09-08T10:20:42.328385Z"
+        "validUntil": "2026-09-10T04:12:00.644182Z"
       }
     },
     {
@@ -16743,8 +16743,8 @@
       "sourceReference": "HKAPI-172",
       "status": "live-verified",
       "verification": {
-        "checkedAt": "2026-09-01T10:20:42.328385Z",
-        "elapsedMs": 239,
+        "checkedAt": "2026-09-03T04:12:00.644182Z",
+        "elapsedMs": 508,
         "errorCode": null,
         "finalHost": "data.gov.hk",
         "httpStatus": 200,
@@ -16761,7 +16761,7 @@
         "responseSha256": "568ad821bcef272bf5772aae96bd367bf754f181f89a1dfd2c8362e1511b8e97",
         "schemaFingerprint": "d14903910173290e748cf796ec9a6dec3105ef9a772f6f9ef2b98c495b0b7ac9",
         "toolVersion": "0.1.0",
-        "validUntil": "2026-09-08T10:20:42.328385Z"
+        "validUntil": "2026-09-10T04:12:00.644182Z"
       }
     },
     {
@@ -16904,8 +16904,8 @@
       "sourceReference": "HKAPI-174",
       "status": "live-verified",
       "verification": {
-        "checkedAt": "2026-09-01T10:25:29.844991Z",
-        "elapsedMs": 357,
+        "checkedAt": "2026-09-03T04:12:00.644182Z",
+        "elapsedMs": 295,
         "errorCode": null,
         "finalHost": "data.gov.hk",
         "httpStatus": 200,
@@ -16922,7 +16922,7 @@
         "responseSha256": "2c2ac569af86198a273db91f853ac11f568b996fed7a3c7df03854788761d7c3",
         "schemaFingerprint": "283bf963d6b354a26c3be3a1af89b76030e080e3ad0f47f7c318584a4bb14a0f",
         "toolVersion": "0.1.0",
-        "validUntil": "2026-09-08T10:25:29.844991Z"
+        "validUntil": "2026-09-10T04:12:00.644182Z"
       }
     },
     {
@@ -17027,8 +17027,8 @@
       "sourceReference": "HKAPI-175",
       "status": "live-verified",
       "verification": {
-        "checkedAt": "2026-09-01T10:25:29.844991Z",
-        "elapsedMs": 415,
+        "checkedAt": "2026-09-03T04:12:00.644182Z",
+        "elapsedMs": 432,
         "errorCode": null,
         "finalHost": "data.gov.hk",
         "httpStatus": 200,
@@ -17045,7 +17045,7 @@
         "responseSha256": "30e19075ad811926219838d3b1d324d7b25182b82ad020f4283aeec593206c02",
         "schemaFingerprint": "283bf963d6b354a26c3be3a1af89b76030e080e3ad0f47f7c318584a4bb14a0f",
         "toolVersion": "0.1.0",
-        "validUntil": "2026-09-08T10:25:29.844991Z"
+        "validUntil": "2026-09-10T04:12:00.644182Z"
       }
     },
     {
@@ -17139,8 +17139,8 @@
       "sourceReference": "HKAPI-176",
       "status": "live-verified",
       "verification": {
-        "checkedAt": "2026-09-01T10:20:42.328385Z",
-        "elapsedMs": 206,
+        "checkedAt": "2026-09-03T04:12:00.644182Z",
+        "elapsedMs": 300,
         "errorCode": null,
         "finalHost": "data.gov.hk",
         "httpStatus": 200,
@@ -17157,7 +17157,7 @@
         "responseSha256": "8558c4b85ba78b7aa56b1030d9d17c3e266c90712ad068f1b0136da467b72bef",
         "schemaFingerprint": "5e4dd799f50fa9e8c5e3dc1d8747fa9f47a4ae4fbb1f44b942a8112f826a0a79",
         "toolVersion": "0.1.0",
-        "validUntil": "2026-09-08T10:20:42.328385Z"
+        "validUntil": "2026-09-10T04:12:00.644182Z"
       }
     },
     {
@@ -17251,8 +17251,8 @@
       "sourceReference": "HKAPI-177",
       "status": "live-verified",
       "verification": {
-        "checkedAt": "2026-09-01T10:20:42.328385Z",
-        "elapsedMs": 199,
+        "checkedAt": "2026-09-03T04:12:00.644182Z",
+        "elapsedMs": 299,
         "errorCode": null,
         "finalHost": "data.gov.hk",
         "httpStatus": 200,
@@ -17269,7 +17269,7 @@
         "responseSha256": "d2fe5eb4db7398836eec15eec4879e2ca6c8fe146f8b1f8de5cb7cfc37f0ccd8",
         "schemaFingerprint": "e806b64debb035728990db90e2f4c4b6ef9846d5980d8b05da7c1d2254677dc5",
         "toolVersion": "0.1.0",
-        "validUntil": "2026-09-08T10:20:42.328385Z"
+        "validUntil": "2026-09-10T04:12:00.644182Z"
       }
     },
     {
@@ -17363,8 +17363,8 @@
       "sourceReference": "HKAPI-178",
       "status": "live-verified",
       "verification": {
-        "checkedAt": "2026-09-01T10:20:42.328385Z",
-        "elapsedMs": 196,
+        "checkedAt": "2026-09-03T04:12:00.644182Z",
+        "elapsedMs": 324,
         "errorCode": null,
         "finalHost": "data.gov.hk",
         "httpStatus": 200,
@@ -17381,7 +17381,7 @@
         "responseSha256": "ed3255c6ca0c012c0379dda3c606e1876fb1626d93e5d527073431f588179476",
         "schemaFingerprint": "eb88bd1346ca13575f1f13332d3ffd6e04a2defc1c46d520de4ca4e11d780e03",
         "toolVersion": "0.1.0",
-        "validUntil": "2026-09-08T10:20:42.328385Z"
+        "validUntil": "2026-09-10T04:12:00.644182Z"
       }
     },
     {
@@ -17478,8 +17478,8 @@
       "sourceReference": "HKAPI-179",
       "status": "live-verified",
       "verification": {
-        "checkedAt": "2026-09-01T10:25:29.844991Z",
-        "elapsedMs": 911,
+        "checkedAt": "2026-09-03T04:12:00.644182Z",
+        "elapsedMs": 289,
         "errorCode": null,
         "finalHost": "data.gov.hk",
         "httpStatus": 200,
@@ -17496,7 +17496,7 @@
         "responseSha256": "134d1eeb797b606769c323ea7a1d1840d9dacf76fc35fb0bc3d84a09b25e288d",
         "schemaFingerprint": "a2d0cc92cd2c29942a8b2858955730281490cdc93855b2083f991f3037e993eb",
         "toolVersion": "0.1.0",
-        "validUntil": "2026-09-08T10:25:29.844991Z"
+        "validUntil": "2026-09-10T04:12:00.644182Z"
       }
     },
     {
@@ -17706,8 +17706,8 @@
       "sourceReference": "HKAPI-184",
       "status": "live-verified",
       "verification": {
-        "checkedAt": "2026-09-01T10:20:42.328385Z",
-        "elapsedMs": 241,
+        "checkedAt": "2026-09-03T04:12:00.644182Z",
+        "elapsedMs": 301,
         "errorCode": null,
         "finalHost": "data.gov.hk",
         "httpStatus": 200,
@@ -17724,7 +17724,7 @@
         "responseSha256": "45a4c6070f0c6dad74854b23c0c7380b7f87cb8c327e174862ce09f0b13df247",
         "schemaFingerprint": "eb88bd1346ca13575f1f13332d3ffd6e04a2defc1c46d520de4ca4e11d780e03",
         "toolVersion": "0.1.0",
-        "validUntil": "2026-09-08T10:20:42.328385Z"
+        "validUntil": "2026-09-10T04:12:00.644182Z"
       }
     },
     {
@@ -17818,8 +17818,8 @@
       "sourceReference": "HKAPI-185",
       "status": "live-verified",
       "verification": {
-        "checkedAt": "2026-09-01T10:20:42.328385Z",
-        "elapsedMs": 210,
+        "checkedAt": "2026-09-03T04:12:00.644182Z",
+        "elapsedMs": 284,
         "errorCode": null,
         "finalHost": "data.gov.hk",
         "httpStatus": 200,
@@ -17836,7 +17836,7 @@
         "responseSha256": "1597c868eb796e01dc077b79b3b00e6d36d787976ab1dac77b157b16da40b28c",
         "schemaFingerprint": "eb88bd1346ca13575f1f13332d3ffd6e04a2defc1c46d520de4ca4e11d780e03",
         "toolVersion": "0.1.0",
-        "validUntil": "2026-09-08T10:20:42.328385Z"
+        "validUntil": "2026-09-10T04:12:00.644182Z"
       }
     },
     {
@@ -17930,8 +17930,8 @@
       "sourceReference": "HKAPI-186",
       "status": "live-verified",
       "verification": {
-        "checkedAt": "2026-09-01T10:20:42.328385Z",
-        "elapsedMs": 187,
+        "checkedAt": "2026-09-03T04:12:00.644182Z",
+        "elapsedMs": 301,
         "errorCode": null,
         "finalHost": "data.gov.hk",
         "httpStatus": 200,
@@ -17948,7 +17948,7 @@
         "responseSha256": "9d6df79c2cc25c782bdf645eda3d37858d96de1affaa685a2f5066b33af22016",
         "schemaFingerprint": "eb88bd1346ca13575f1f13332d3ffd6e04a2defc1c46d520de4ca4e11d780e03",
         "toolVersion": "0.1.0",
-        "validUntil": "2026-09-08T10:20:42.328385Z"
+        "validUntil": "2026-09-10T04:12:00.644182Z"
       }
     },
     {
@@ -18042,8 +18042,8 @@
       "sourceReference": "HKAPI-187",
       "status": "live-verified",
       "verification": {
-        "checkedAt": "2026-09-01T10:20:42.328385Z",
-        "elapsedMs": 208,
+        "checkedAt": "2026-09-03T04:12:00.644182Z",
+        "elapsedMs": 302,
         "errorCode": null,
         "finalHost": "data.gov.hk",
         "httpStatus": 200,
@@ -18060,7 +18060,7 @@
         "responseSha256": "dc3ef8fa068080a9b24dd147dd07aeb80009157a6afaecd197033ea88f4b2208",
         "schemaFingerprint": "eb88bd1346ca13575f1f13332d3ffd6e04a2defc1c46d520de4ca4e11d780e03",
         "toolVersion": "0.1.0",
-        "validUntil": "2026-09-08T10:20:42.328385Z"
+        "validUntil": "2026-09-10T04:12:00.644182Z"
       }
     },
     {
@@ -18154,8 +18154,8 @@
       "sourceReference": "HKAPI-188",
       "status": "live-verified",
       "verification": {
-        "checkedAt": "2026-09-01T10:20:42.328385Z",
-        "elapsedMs": 202,
+        "checkedAt": "2026-09-03T04:12:00.644182Z",
+        "elapsedMs": 299,
         "errorCode": null,
         "finalHost": "data.gov.hk",
         "httpStatus": 200,
@@ -18172,7 +18172,7 @@
         "responseSha256": "12523c12efb40c15edb57dc3e44ab0c9c854bc6913135c586c9143cfc9c757bb",
         "schemaFingerprint": "8ee86d3de382896df9c33851f1cad132072b04ced989bf95f3df93fdbbc6fc42",
         "toolVersion": "0.1.0",
-        "validUntil": "2026-09-08T10:20:42.328385Z"
+        "validUntil": "2026-09-10T04:12:00.644182Z"
       }
     },
     {
@@ -18266,8 +18266,8 @@
       "sourceReference": "HKAPI-189",
       "status": "live-verified",
       "verification": {
-        "checkedAt": "2026-09-01T10:20:42.328385Z",
-        "elapsedMs": 219,
+        "checkedAt": "2026-09-03T04:12:00.644182Z",
+        "elapsedMs": 289,
         "errorCode": null,
         "finalHost": "data.gov.hk",
         "httpStatus": 200,
@@ -18284,7 +18284,7 @@
         "responseSha256": "6457af2094b706a2344ef23f2f6986ed5d4f2e6e91d6835a966eb877193a0b7b",
         "schemaFingerprint": "fe3e280aeeb270b3b6ec1fa5bfb8ccc5c1f1b39cd7f900020175d828f4230bbe",
         "toolVersion": "0.1.0",
-        "validUntil": "2026-09-08T10:20:42.328385Z"
+        "validUntil": "2026-09-10T04:12:00.644182Z"
       }
     },
     {
@@ -18378,8 +18378,8 @@
       "sourceReference": "HKAPI-190",
       "status": "live-verified",
       "verification": {
-        "checkedAt": "2026-09-01T10:20:42.328385Z",
-        "elapsedMs": 221,
+        "checkedAt": "2026-09-03T04:12:00.644182Z",
+        "elapsedMs": 296,
         "errorCode": null,
         "finalHost": "data.gov.hk",
         "httpStatus": 200,
@@ -18396,7 +18396,7 @@
         "responseSha256": "d5a682834aab13e03ed2eb7c47c13dafafa302656325819bfc9912ba26417924",
         "schemaFingerprint": "b132136385c0dfbe6b805119424a33b32785f026e831d95270d1a8b8e86cbe10",
         "toolVersion": "0.1.0",
-        "validUntil": "2026-09-08T10:20:42.328385Z"
+        "validUntil": "2026-09-10T04:12:00.644182Z"
       }
     },
     {
@@ -18490,8 +18490,8 @@
       "sourceReference": "HKAPI-191",
       "status": "live-verified",
       "verification": {
-        "checkedAt": "2026-09-01T10:20:42.328385Z",
-        "elapsedMs": 199,
+        "checkedAt": "2026-09-03T04:12:00.644182Z",
+        "elapsedMs": 294,
         "errorCode": null,
         "finalHost": "data.gov.hk",
         "httpStatus": 200,
@@ -18508,7 +18508,7 @@
         "responseSha256": "b729a11260e8dc0c0c3042f12869e2d8fe4beb1b206ecad5be6fba4ce33a935f",
         "schemaFingerprint": "48d4d8cccada5437f7a788c918c4db9967a29e8af0bc3f089847bf3f5b9d90d0",
         "toolVersion": "0.1.0",
-        "validUntil": "2026-09-08T10:20:42.328385Z"
+        "validUntil": "2026-09-10T04:12:00.644182Z"
       }
     },
     {
@@ -18602,8 +18602,8 @@
       "sourceReference": "HKAPI-192",
       "status": "live-verified",
       "verification": {
-        "checkedAt": "2026-09-01T10:20:42.328385Z",
-        "elapsedMs": 220,
+        "checkedAt": "2026-09-03T04:12:00.644182Z",
+        "elapsedMs": 294,
         "errorCode": null,
         "finalHost": "data.gov.hk",
         "httpStatus": 200,
@@ -18620,7 +18620,7 @@
         "responseSha256": "f8a013616c7b47829a316b9d593835242dbf82133f2fbeee6bf9efba643d753b",
         "schemaFingerprint": "b132136385c0dfbe6b805119424a33b32785f026e831d95270d1a8b8e86cbe10",
         "toolVersion": "0.1.0",
-        "validUntil": "2026-09-08T10:20:42.328385Z"
+        "validUntil": "2026-09-10T04:12:00.644182Z"
       }
     },
     {
@@ -18714,8 +18714,8 @@
       "sourceReference": "HKAPI-193",
       "status": "live-verified",
       "verification": {
-        "checkedAt": "2026-09-01T10:20:42.328385Z",
-        "elapsedMs": 195,
+        "checkedAt": "2026-09-03T04:12:00.644182Z",
+        "elapsedMs": 294,
         "errorCode": null,
         "finalHost": "data.gov.hk",
         "httpStatus": 200,
@@ -18732,7 +18732,7 @@
         "responseSha256": "a29959d6e3cd61420f1018c8b70a13fc9e502e085ddd2895b8dee77a00c121d3",
         "schemaFingerprint": "4fa05256eab0d181085a666ccd6f1fdd7a6b05c83676e51025c4aaedc70d0048",
         "toolVersion": "0.1.0",
-        "validUntil": "2026-09-08T10:20:42.328385Z"
+        "validUntil": "2026-09-10T04:12:00.644182Z"
       }
     },
     {
@@ -18826,8 +18826,8 @@
       "sourceReference": "HKAPI-194",
       "status": "live-verified",
       "verification": {
-        "checkedAt": "2026-09-01T10:20:42.328385Z",
-        "elapsedMs": 219,
+        "checkedAt": "2026-09-03T04:12:00.644182Z",
+        "elapsedMs": 291,
         "errorCode": null,
         "finalHost": "data.gov.hk",
         "httpStatus": 200,
@@ -18844,7 +18844,7 @@
         "responseSha256": "4f00e3c7ab810fc47a61793ff3280582d235b90265f33c36616a4c4ab23b7a1d",
         "schemaFingerprint": "b132136385c0dfbe6b805119424a33b32785f026e831d95270d1a8b8e86cbe10",
         "toolVersion": "0.1.0",
-        "validUntil": "2026-09-08T10:20:42.328385Z"
+        "validUntil": "2026-09-10T04:12:00.644182Z"
       }
     },
     {
@@ -18938,8 +18938,8 @@
       "sourceReference": "HKAPI-195",
       "status": "live-verified",
       "verification": {
-        "checkedAt": "2026-09-01T10:20:42.328385Z",
-        "elapsedMs": 222,
+        "checkedAt": "2026-09-03T04:12:00.644182Z",
+        "elapsedMs": 286,
         "errorCode": null,
         "finalHost": "data.gov.hk",
         "httpStatus": 200,
@@ -18956,7 +18956,7 @@
         "responseSha256": "b8d581d9b359a2986819c033d7e46f345764faceba073ee661b6a66566579a26",
         "schemaFingerprint": "e806b64debb035728990db90e2f4c4b6ef9846d5980d8b05da7c1d2254677dc5",
         "toolVersion": "0.1.0",
-        "validUntil": "2026-09-08T10:20:42.328385Z"
+        "validUntil": "2026-09-10T04:12:00.644182Z"
       }
     },
     {
@@ -19050,8 +19050,8 @@
       "sourceReference": "HKAPI-196",
       "status": "live-verified",
       "verification": {
-        "checkedAt": "2026-09-01T10:20:42.328385Z",
-        "elapsedMs": 201,
+        "checkedAt": "2026-09-03T04:12:00.644182Z",
+        "elapsedMs": 286,
         "errorCode": null,
         "finalHost": "data.gov.hk",
         "httpStatus": 200,
@@ -19068,7 +19068,7 @@
         "responseSha256": "1adeae65cccc5e923beca80925a9a8d85500f737cfdcfb605c6ce7f7dd25a1a7",
         "schemaFingerprint": "e806b64debb035728990db90e2f4c4b6ef9846d5980d8b05da7c1d2254677dc5",
         "toolVersion": "0.1.0",
-        "validUntil": "2026-09-08T10:20:42.328385Z"
+        "validUntil": "2026-09-10T04:12:00.644182Z"
       }
     },
     {
@@ -19162,8 +19162,8 @@
       "sourceReference": "HKAPI-197",
       "status": "live-verified",
       "verification": {
-        "checkedAt": "2026-09-01T10:20:42.328385Z",
-        "elapsedMs": 200,
+        "checkedAt": "2026-09-03T04:12:00.644182Z",
+        "elapsedMs": 301,
         "errorCode": null,
         "finalHost": "data.gov.hk",
         "httpStatus": 200,
@@ -19180,7 +19180,7 @@
         "responseSha256": "d446d04b188bedcf04e661e04a795a2982f3902ca19a1ffa50300cbe5781b1fd",
         "schemaFingerprint": "e806b64debb035728990db90e2f4c4b6ef9846d5980d8b05da7c1d2254677dc5",
         "toolVersion": "0.1.0",
-        "validUntil": "2026-09-08T10:20:42.328385Z"
+        "validUntil": "2026-09-10T04:12:00.644182Z"
       }
     },
     {
@@ -19278,8 +19278,8 @@
       "sourceReference": "HKAPI-198",
       "status": "live-verified",
       "verification": {
-        "checkedAt": "2026-09-01T10:25:29.844991Z",
-        "elapsedMs": 904,
+        "checkedAt": "2026-09-03T04:12:00.644182Z",
+        "elapsedMs": 282,
         "errorCode": null,
         "finalHost": "data.gov.hk",
         "httpStatus": 200,
@@ -19296,7 +19296,7 @@
         "responseSha256": "1996b65b2d9501186b3b8447d35b30703c522eff0702f45964062d5edaf03aa7",
         "schemaFingerprint": "e806b64debb035728990db90e2f4c4b6ef9846d5980d8b05da7c1d2254677dc5",
         "toolVersion": "0.1.0",
-        "validUntil": "2026-09-08T10:25:29.844991Z"
+        "validUntil": "2026-09-10T04:12:00.644182Z"
       }
     },
     {
@@ -19390,8 +19390,8 @@
       "sourceReference": "HKAPI-199",
       "status": "live-verified",
       "verification": {
-        "checkedAt": "2026-09-01T10:20:42.328385Z",
-        "elapsedMs": 208,
+        "checkedAt": "2026-09-03T04:12:00.644182Z",
+        "elapsedMs": 286,
         "errorCode": null,
         "finalHost": "data.gov.hk",
         "httpStatus": 200,
@@ -19408,7 +19408,7 @@
         "responseSha256": "a8448c8dfad9e9d21155d02c14660ae768f60d25f6eeaaa7e875068c093e1f5c",
         "schemaFingerprint": "097730c6c18e43db48a9ea15c75cab5915a1da5520a9fe9d7a3c73430134d107",
         "toolVersion": "0.1.0",
-        "validUntil": "2026-09-08T10:20:42.328385Z"
+        "validUntil": "2026-09-10T04:12:00.644182Z"
       }
     },
     {
@@ -19502,8 +19502,8 @@
       "sourceReference": "HKAPI-200",
       "status": "live-verified",
       "verification": {
-        "checkedAt": "2026-09-01T10:20:42.328385Z",
-        "elapsedMs": 228,
+        "checkedAt": "2026-09-03T04:12:00.644182Z",
+        "elapsedMs": 281,
         "errorCode": null,
         "finalHost": "data.gov.hk",
         "httpStatus": 200,
@@ -19520,7 +19520,7 @@
         "responseSha256": "cfc79d47829cb12be09bca88c838954deaef3acb24b66c140a4ad246a3b261ef",
         "schemaFingerprint": "e806b64debb035728990db90e2f4c4b6ef9846d5980d8b05da7c1d2254677dc5",
         "toolVersion": "0.1.0",
-        "validUntil": "2026-09-08T10:20:42.328385Z"
+        "validUntil": "2026-09-10T04:12:00.644182Z"
       }
     },
     {
@@ -19614,8 +19614,8 @@
       "sourceReference": "HKAPI-201",
       "status": "live-verified",
       "verification": {
-        "checkedAt": "2026-09-01T10:20:42.328385Z",
-        "elapsedMs": 482,
+        "checkedAt": "2026-09-03T04:12:00.644182Z",
+        "elapsedMs": 345,
         "errorCode": null,
         "finalHost": "data.gov.hk",
         "httpStatus": 200,
@@ -19632,7 +19632,7 @@
         "responseSha256": "9192297600b5b8fafc70762fdfbb4aa0a73101ec8c92169a7f7798e21dba175a",
         "schemaFingerprint": "e806b64debb035728990db90e2f4c4b6ef9846d5980d8b05da7c1d2254677dc5",
         "toolVersion": "0.1.0",
-        "validUntil": "2026-09-08T10:20:42.328385Z"
+        "validUntil": "2026-09-10T04:12:00.644182Z"
       }
     },
     {
@@ -19726,8 +19726,8 @@
       "sourceReference": "HKAPI-202",
       "status": "live-verified",
       "verification": {
-        "checkedAt": "2026-09-01T10:20:42.328385Z",
-        "elapsedMs": 451,
+        "checkedAt": "2026-09-03T04:12:00.644182Z",
+        "elapsedMs": 299,
         "errorCode": null,
         "finalHost": "data.gov.hk",
         "httpStatus": 200,
@@ -19744,7 +19744,7 @@
         "responseSha256": "3d398699cf84d4dca796e67181d3c4d6b82380a54f6a5bc03cc0ecea501ab928",
         "schemaFingerprint": "6a30b7ca70ac0cb6d6b32794281ada9e2363695717a780db905efeb3ad86fc22",
         "toolVersion": "0.1.0",
-        "validUntil": "2026-09-08T10:20:42.328385Z"
+        "validUntil": "2026-09-10T04:12:00.644182Z"
       }
     },
     {
@@ -19838,8 +19838,8 @@
       "sourceReference": "HKAPI-203",
       "status": "live-verified",
       "verification": {
-        "checkedAt": "2026-09-01T10:20:42.328385Z",
-        "elapsedMs": 382,
+        "checkedAt": "2026-09-03T04:12:00.644182Z",
+        "elapsedMs": 362,
         "errorCode": null,
         "finalHost": "data.gov.hk",
         "httpStatus": 200,
@@ -19856,7 +19856,7 @@
         "responseSha256": "e85c24774ceeb11a78163e8c24565af2437097fb1f2fa6194f69c4a108725c1e",
         "schemaFingerprint": "6a30b7ca70ac0cb6d6b32794281ada9e2363695717a780db905efeb3ad86fc22",
         "toolVersion": "0.1.0",
-        "validUntil": "2026-09-08T10:20:42.328385Z"
+        "validUntil": "2026-09-10T04:12:00.644182Z"
       }
     },
     {
@@ -19951,8 +19951,8 @@
       "sourceReference": "HKAPI-204",
       "status": "live-verified",
       "verification": {
-        "checkedAt": "2026-09-01T10:20:42.328385Z",
-        "elapsedMs": 439,
+        "checkedAt": "2026-09-03T04:12:00.644182Z",
+        "elapsedMs": 293,
         "errorCode": null,
         "finalHost": "data.gov.hk",
         "httpStatus": 200,
@@ -19969,7 +19969,7 @@
         "responseSha256": "e7b31b8041429a893e7c7e45334e4acf9c75bf07fb19ba5ba0fa3c6c2cc6d9ff",
         "schemaFingerprint": "6a30b7ca70ac0cb6d6b32794281ada9e2363695717a780db905efeb3ad86fc22",
         "toolVersion": "0.1.0",
-        "validUntil": "2026-09-08T10:20:42.328385Z"
+        "validUntil": "2026-09-10T04:12:00.644182Z"
       }
     },
     {
@@ -20065,8 +20065,8 @@
       "sourceReference": "HKAPI-205",
       "status": "live-verified",
       "verification": {
-        "checkedAt": "2026-09-01T10:20:42.328385Z",
-        "elapsedMs": 289,
+        "checkedAt": "2026-09-03T04:12:00.644182Z",
+        "elapsedMs": 296,
         "errorCode": null,
         "finalHost": "data.gov.hk",
         "httpStatus": 200,
@@ -20083,7 +20083,7 @@
         "responseSha256": "f94810dc22bd655bdf81f540bb29c543c0343009ebeef95746c9216963ca7a12",
         "schemaFingerprint": "6a30b7ca70ac0cb6d6b32794281ada9e2363695717a780db905efeb3ad86fc22",
         "toolVersion": "0.1.0",
-        "validUntil": "2026-09-08T10:20:42.328385Z"
+        "validUntil": "2026-09-10T04:12:00.644182Z"
       }
     },
     {
@@ -20178,8 +20178,8 @@
       "sourceReference": "HKAPI-206",
       "status": "live-verified",
       "verification": {
-        "checkedAt": "2026-09-01T10:20:42.328385Z",
-        "elapsedMs": 269,
+        "checkedAt": "2026-09-03T04:12:00.644182Z",
+        "elapsedMs": 289,
         "errorCode": null,
         "finalHost": "data.gov.hk",
         "httpStatus": 200,
@@ -20196,7 +20196,7 @@
         "responseSha256": "1e39c299ed68d8f545b38f2c9be63d4a80d9936815c107652cfcbbf0eee5d59e",
         "schemaFingerprint": "e806b64debb035728990db90e2f4c4b6ef9846d5980d8b05da7c1d2254677dc5",
         "toolVersion": "0.1.0",
-        "validUntil": "2026-09-08T10:20:42.328385Z"
+        "validUntil": "2026-09-10T04:12:00.644182Z"
       }
     },
     {
@@ -20299,8 +20299,8 @@
       "sourceReference": "HKAPI-207",
       "status": "live-verified",
       "verification": {
-        "checkedAt": "2026-09-01T10:25:29.844991Z",
-        "elapsedMs": 669,
+        "checkedAt": "2026-09-03T04:12:00.644182Z",
+        "elapsedMs": 284,
         "errorCode": null,
         "finalHost": "data.gov.hk",
         "httpStatus": 200,
@@ -20317,7 +20317,7 @@
         "responseSha256": "e5fc825fe3c70532c16d310c52efe3aa6dd464548f736562b5832c9aee4303a4",
         "schemaFingerprint": "6a30b7ca70ac0cb6d6b32794281ada9e2363695717a780db905efeb3ad86fc22",
         "toolVersion": "0.1.0",
-        "validUntil": "2026-09-08T10:25:29.844991Z"
+        "validUntil": "2026-09-10T04:12:00.644182Z"
       }
     },
     {
@@ -20411,8 +20411,8 @@
       "sourceReference": "HKAPI-208",
       "status": "live-verified",
       "verification": {
-        "checkedAt": "2026-09-01T10:20:42.328385Z",
-        "elapsedMs": 223,
+        "checkedAt": "2026-09-03T04:12:00.644182Z",
+        "elapsedMs": 302,
         "errorCode": null,
         "finalHost": "data.gov.hk",
         "httpStatus": 200,
@@ -20429,7 +20429,7 @@
         "responseSha256": "600274efee5b84d7f24fefc08ec20d8c878d164b5cc7e333cfdd596d6566df1e",
         "schemaFingerprint": "e806b64debb035728990db90e2f4c4b6ef9846d5980d8b05da7c1d2254677dc5",
         "toolVersion": "0.1.0",
-        "validUntil": "2026-09-08T10:20:42.328385Z"
+        "validUntil": "2026-09-10T04:12:00.644182Z"
       }
     },
     {
@@ -20523,8 +20523,8 @@
       "sourceReference": "HKAPI-209",
       "status": "live-verified",
       "verification": {
-        "checkedAt": "2026-09-01T10:20:42.328385Z",
-        "elapsedMs": 206,
+        "checkedAt": "2026-09-03T04:12:00.644182Z",
+        "elapsedMs": 302,
         "errorCode": null,
         "finalHost": "data.gov.hk",
         "httpStatus": 200,
@@ -20541,7 +20541,7 @@
         "responseSha256": "f88cd661ac91bda850a6229a0406981b38a009eb66fa6b7fce004115e86e8ca8",
         "schemaFingerprint": "e806b64debb035728990db90e2f4c4b6ef9846d5980d8b05da7c1d2254677dc5",
         "toolVersion": "0.1.0",
-        "validUntil": "2026-09-08T10:20:42.328385Z"
+        "validUntil": "2026-09-10T04:12:00.644182Z"
       }
     },
     {
@@ -20645,8 +20645,8 @@
       "sourceReference": "HKAPI-210",
       "status": "live-verified",
       "verification": {
-        "checkedAt": "2026-09-01T10:25:29.844991Z",
-        "elapsedMs": 294,
+        "checkedAt": "2026-09-03T04:12:00.644182Z",
+        "elapsedMs": 300,
         "errorCode": null,
         "finalHost": "data.gov.hk",
         "httpStatus": 200,
@@ -20663,7 +20663,7 @@
         "responseSha256": "0782dc6d7974cc5be5107fec4152ebd0f8b5784957ac07bc0f1b51b252eaae45",
         "schemaFingerprint": "e806b64debb035728990db90e2f4c4b6ef9846d5980d8b05da7c1d2254677dc5",
         "toolVersion": "0.1.0",
-        "validUntil": "2026-09-08T10:25:29.844991Z"
+        "validUntil": "2026-09-10T04:12:00.644182Z"
       }
     },
     {
@@ -20757,8 +20757,8 @@
       "sourceReference": "HKAPI-211",
       "status": "live-verified",
       "verification": {
-        "checkedAt": "2026-09-01T10:25:29.844991Z",
-        "elapsedMs": 267,
+        "checkedAt": "2026-09-03T04:12:00.644182Z",
+        "elapsedMs": 306,
         "errorCode": null,
         "finalHost": "data.gov.hk",
         "httpStatus": 200,
@@ -20775,7 +20775,7 @@
         "responseSha256": "01d2cc1f04ab17ecb6810b2e84492934d1613138d11def24a7551f2094062064",
         "schemaFingerprint": "b132136385c0dfbe6b805119424a33b32785f026e831d95270d1a8b8e86cbe10",
         "toolVersion": "0.1.0",
-        "validUntil": "2026-09-08T10:25:29.844991Z"
+        "validUntil": "2026-09-10T04:12:00.644182Z"
       }
     },
     {
@@ -20869,8 +20869,8 @@
       "sourceReference": "HKAPI-212",
       "status": "live-verified",
       "verification": {
-        "checkedAt": "2026-09-01T10:20:42.328385Z",
-        "elapsedMs": 192,
+        "checkedAt": "2026-09-03T04:12:00.644182Z",
+        "elapsedMs": 296,
         "errorCode": null,
         "finalHost": "data.gov.hk",
         "httpStatus": 200,
@@ -20887,7 +20887,7 @@
         "responseSha256": "2ead01963d910558ca194560160f23327edc65e3e3aa5349b91892879e848b43",
         "schemaFingerprint": "2fa564869dea80de1b91f8867b9a2fa164dd0c4b9adc529c5a5bbe1b034c12cf",
         "toolVersion": "0.1.0",
-        "validUntil": "2026-09-08T10:20:42.328385Z"
+        "validUntil": "2026-09-10T04:12:00.644182Z"
       }
     },
     {
@@ -20981,8 +20981,8 @@
       "sourceReference": "HKAPI-213",
       "status": "live-verified",
       "verification": {
-        "checkedAt": "2026-09-01T10:20:42.328385Z",
-        "elapsedMs": 236,
+        "checkedAt": "2026-09-03T04:12:00.644182Z",
+        "elapsedMs": 352,
         "errorCode": null,
         "finalHost": "data.gov.hk",
         "httpStatus": 200,
@@ -20999,7 +20999,7 @@
         "responseSha256": "524fd62959397461930932b08434809c5eb262b90bd0a2e787d4ba0aca058da8",
         "schemaFingerprint": "2fa564869dea80de1b91f8867b9a2fa164dd0c4b9adc529c5a5bbe1b034c12cf",
         "toolVersion": "0.1.0",
-        "validUntil": "2026-09-08T10:20:42.328385Z"
+        "validUntil": "2026-09-10T04:12:00.644182Z"
       }
     },
     {
@@ -21093,8 +21093,8 @@
       "sourceReference": "HKAPI-214",
       "status": "live-verified",
       "verification": {
-        "checkedAt": "2026-09-01T10:20:42.328385Z",
-        "elapsedMs": 257,
+        "checkedAt": "2026-09-03T04:12:00.644182Z",
+        "elapsedMs": 284,
         "errorCode": null,
         "finalHost": "data.gov.hk",
         "httpStatus": 200,
@@ -21111,7 +21111,7 @@
         "responseSha256": "56c614f6585ffccc56a84a62499d53da0a1e1911bc32982a8b57fcbe168149c6",
         "schemaFingerprint": "6a30b7ca70ac0cb6d6b32794281ada9e2363695717a780db905efeb3ad86fc22",
         "toolVersion": "0.1.0",
-        "validUntil": "2026-09-08T10:20:42.328385Z"
+        "validUntil": "2026-09-10T04:12:00.644182Z"
       }
     },
     {
@@ -21206,8 +21206,8 @@
       "sourceReference": "HKAPI-215",
       "status": "live-verified",
       "verification": {
-        "checkedAt": "2026-09-01T10:25:29.844991Z",
-        "elapsedMs": 239,
+        "checkedAt": "2026-09-03T04:12:00.644182Z",
+        "elapsedMs": 283,
         "errorCode": null,
         "finalHost": "data.gov.hk",
         "httpStatus": 200,
@@ -21224,7 +21224,7 @@
         "responseSha256": "81a08e907defa7e804262473d06642bc7aa66d129f4be97ad3a6c5ffc1b6563e",
         "schemaFingerprint": "6a30b7ca70ac0cb6d6b32794281ada9e2363695717a780db905efeb3ad86fc22",
         "toolVersion": "0.1.0",
-        "validUntil": "2026-09-08T10:25:29.844991Z"
+        "validUntil": "2026-09-10T04:12:00.644182Z"
       }
     },
     {
@@ -21318,8 +21318,8 @@
       "sourceReference": "HKAPI-216",
       "status": "live-verified",
       "verification": {
-        "checkedAt": "2026-09-01T10:20:42.328385Z",
-        "elapsedMs": 223,
+        "checkedAt": "2026-09-03T04:12:00.644182Z",
+        "elapsedMs": 319,
         "errorCode": null,
         "finalHost": "data.gov.hk",
         "httpStatus": 200,
@@ -21336,7 +21336,7 @@
         "responseSha256": "b1bc16c9346e9adae0a8ffdcaf5d33d633796e908f8a3c42aef4b08429d5cc2a",
         "schemaFingerprint": "e59903c6eede1cb61b154abd4c63104a232287f0f57e217587a7b8fa2cf47514",
         "toolVersion": "0.1.0",
-        "validUntil": "2026-09-08T10:20:42.328385Z"
+        "validUntil": "2026-09-10T04:12:00.644182Z"
       }
     },
     {
@@ -21430,8 +21430,8 @@
       "sourceReference": "HKAPI-217",
       "status": "live-verified",
       "verification": {
-        "checkedAt": "2026-09-01T10:20:42.328385Z",
-        "elapsedMs": 218,
+        "checkedAt": "2026-09-03T04:12:00.644182Z",
+        "elapsedMs": 297,
         "errorCode": null,
         "finalHost": "data.gov.hk",
         "httpStatus": 200,
@@ -21448,7 +21448,7 @@
         "responseSha256": "b79abfc22817f482303591acd12084131ab9956aea94885c9de542f8fce6eb20",
         "schemaFingerprint": "e59903c6eede1cb61b154abd4c63104a232287f0f57e217587a7b8fa2cf47514",
         "toolVersion": "0.1.0",
-        "validUntil": "2026-09-08T10:20:42.328385Z"
+        "validUntil": "2026-09-10T04:12:00.644182Z"
       }
     },
     {
@@ -21542,8 +21542,8 @@
       "sourceReference": "HKAPI-218",
       "status": "live-verified",
       "verification": {
-        "checkedAt": "2026-09-01T10:20:42.328385Z",
-        "elapsedMs": 269,
+        "checkedAt": "2026-09-03T04:12:00.644182Z",
+        "elapsedMs": 300,
         "errorCode": null,
         "finalHost": "data.gov.hk",
         "httpStatus": 200,
@@ -21560,7 +21560,7 @@
         "responseSha256": "44caef41a0a83bc20deddab896add8b8074986a33c5c0a515c880f7c5391962e",
         "schemaFingerprint": "07bc9ace9c2bc0324e4afe59ec80624ed3bb0ffc332b3e821bae87451db4de4b",
         "toolVersion": "0.1.0",
-        "validUntil": "2026-09-08T10:20:42.328385Z"
+        "validUntil": "2026-09-10T04:12:00.644182Z"
       }
     },
     {
@@ -21654,8 +21654,8 @@
       "sourceReference": "HKAPI-219",
       "status": "live-verified",
       "verification": {
-        "checkedAt": "2026-09-01T10:20:42.328385Z",
-        "elapsedMs": 237,
+        "checkedAt": "2026-09-03T04:12:00.644182Z",
+        "elapsedMs": 312,
         "errorCode": null,
         "finalHost": "data.gov.hk",
         "httpStatus": 200,
@@ -21672,7 +21672,7 @@
         "responseSha256": "b3a8f8da03768b3a8789ac355e7a80ace91a551bf339800b8b32689539084649",
         "schemaFingerprint": "07bc9ace9c2bc0324e4afe59ec80624ed3bb0ffc332b3e821bae87451db4de4b",
         "toolVersion": "0.1.0",
-        "validUntil": "2026-09-08T10:20:42.328385Z"
+        "validUntil": "2026-09-10T04:12:00.644182Z"
       }
     },
     {
@@ -21773,8 +21773,8 @@
       "sourceReference": "HKAPI-220",
       "status": "live-verified",
       "verification": {
-        "checkedAt": "2026-09-01T10:25:29.844991Z",
-        "elapsedMs": 168,
+        "checkedAt": "2026-09-03T04:12:00.644182Z",
+        "elapsedMs": 299,
         "errorCode": null,
         "finalHost": "data.gov.hk",
         "httpStatus": 200,
@@ -21791,7 +21791,7 @@
         "responseSha256": "98c36af70aad3f3c7bbce30ec3376aa572df6dc8c99d6fd7072db07792ea7408",
         "schemaFingerprint": "07bc9ace9c2bc0324e4afe59ec80624ed3bb0ffc332b3e821bae87451db4de4b",
         "toolVersion": "0.1.0",
-        "validUntil": "2026-09-08T10:25:29.844991Z"
+        "validUntil": "2026-09-10T04:12:00.644182Z"
       }
     },
     {
@@ -21885,8 +21885,8 @@
       "sourceReference": "HKAPI-221",
       "status": "live-verified",
       "verification": {
-        "checkedAt": "2026-09-01T10:20:42.328385Z",
-        "elapsedMs": 202,
+        "checkedAt": "2026-09-03T04:12:00.644182Z",
+        "elapsedMs": 322,
         "errorCode": null,
         "finalHost": "data.gov.hk",
         "httpStatus": 200,
@@ -21903,7 +21903,7 @@
         "responseSha256": "f1614a49ce4d2af57d8c8ac8179cb38b5fb92cf12e834d68c8ab1f8543413a16",
         "schemaFingerprint": "07bc9ace9c2bc0324e4afe59ec80624ed3bb0ffc332b3e821bae87451db4de4b",
         "toolVersion": "0.1.0",
-        "validUntil": "2026-09-08T10:20:42.328385Z"
+        "validUntil": "2026-09-10T04:12:00.644182Z"
       }
     },
     {
@@ -21997,8 +21997,8 @@
       "sourceReference": "HKAPI-222",
       "status": "live-verified",
       "verification": {
-        "checkedAt": "2026-09-01T10:20:42.328385Z",
-        "elapsedMs": 196,
+        "checkedAt": "2026-09-03T04:12:00.644182Z",
+        "elapsedMs": 284,
         "errorCode": null,
         "finalHost": "data.gov.hk",
         "httpStatus": 200,
@@ -22015,7 +22015,7 @@
         "responseSha256": "5d9259280475d96e00dbdd4b5e5c41d75f291d8dc1dff4aad94df9e711506c47",
         "schemaFingerprint": "07bc9ace9c2bc0324e4afe59ec80624ed3bb0ffc332b3e821bae87451db4de4b",
         "toolVersion": "0.1.0",
-        "validUntil": "2026-09-08T10:20:42.328385Z"
+        "validUntil": "2026-09-10T04:12:00.644182Z"
       }
     },
     {
@@ -22109,8 +22109,8 @@
       "sourceReference": "HKAPI-223",
       "status": "live-verified",
       "verification": {
-        "checkedAt": "2026-09-01T10:20:42.328385Z",
-        "elapsedMs": 190,
+        "checkedAt": "2026-09-03T04:12:00.644182Z",
+        "elapsedMs": 303,
         "errorCode": null,
         "finalHost": "data.gov.hk",
         "httpStatus": 200,
@@ -22127,7 +22127,7 @@
         "responseSha256": "2f6b8a021d6ee2ae8f78f7995e298689704c418809f40ed23c50ae3d6f019faa",
         "schemaFingerprint": "07bc9ace9c2bc0324e4afe59ec80624ed3bb0ffc332b3e821bae87451db4de4b",
         "toolVersion": "0.1.0",
-        "validUntil": "2026-09-08T10:20:42.328385Z"
+        "validUntil": "2026-09-10T04:12:00.644182Z"
       }
     },
     {
@@ -22221,8 +22221,8 @@
       "sourceReference": "HKAPI-224",
       "status": "live-verified",
       "verification": {
-        "checkedAt": "2026-09-01T10:20:42.328385Z",
-        "elapsedMs": 242,
+        "checkedAt": "2026-09-03T04:12:00.644182Z",
+        "elapsedMs": 302,
         "errorCode": null,
         "finalHost": "data.gov.hk",
         "httpStatus": 200,
@@ -22239,7 +22239,7 @@
         "responseSha256": "86a91208f12e60771557a6bb59daeecee763ce7297c78f22b795502af81599cb",
         "schemaFingerprint": "8129cd2368de82d7b4dbe6429b842baff934b3bca9cd0df035f1e0b07269d4be",
         "toolVersion": "0.1.0",
-        "validUntil": "2026-09-08T10:20:42.328385Z"
+        "validUntil": "2026-09-10T04:12:00.644182Z"
       }
     },
     {
@@ -22333,8 +22333,8 @@
       "sourceReference": "HKAPI-225",
       "status": "live-verified",
       "verification": {
-        "checkedAt": "2026-09-01T10:20:42.328385Z",
-        "elapsedMs": 234,
+        "checkedAt": "2026-09-03T04:12:00.644182Z",
+        "elapsedMs": 315,
         "errorCode": null,
         "finalHost": "data.gov.hk",
         "httpStatus": 200,
@@ -22351,7 +22351,7 @@
         "responseSha256": "6284f6f270d564f54036fb125602d64f01ff8deb4b55de73bdcc02e5f81b8143",
         "schemaFingerprint": "6a30b7ca70ac0cb6d6b32794281ada9e2363695717a780db905efeb3ad86fc22",
         "toolVersion": "0.1.0",
-        "validUntil": "2026-09-08T10:20:42.328385Z"
+        "validUntil": "2026-09-10T04:12:00.644182Z"
       }
     },
     {
@@ -22445,8 +22445,8 @@
       "sourceReference": "HKAPI-226",
       "status": "live-verified",
       "verification": {
-        "checkedAt": "2026-09-01T10:20:42.328385Z",
-        "elapsedMs": 208,
+        "checkedAt": "2026-09-03T04:12:00.644182Z",
+        "elapsedMs": 313,
         "errorCode": null,
         "finalHost": "data.gov.hk",
         "httpStatus": 200,
@@ -22463,7 +22463,7 @@
         "responseSha256": "f594edcee4030665ce7a6bb0399934e017ef82019aaea16e9eb8a357c9a89a98",
         "schemaFingerprint": "61a980d33cc7badc84f2e3d46a3a1ba9e73cf3cfc3a4d660ea2f544ad5eabe17",
         "toolVersion": "0.1.0",
-        "validUntil": "2026-09-08T10:20:42.328385Z"
+        "validUntil": "2026-09-10T04:12:00.644182Z"
       }
     },
     {
@@ -22557,8 +22557,8 @@
       "sourceReference": "HKAPI-227",
       "status": "live-verified",
       "verification": {
-        "checkedAt": "2026-09-01T10:20:42.328385Z",
-        "elapsedMs": 200,
+        "checkedAt": "2026-09-03T04:12:00.644182Z",
+        "elapsedMs": 291,
         "errorCode": null,
         "finalHost": "data.gov.hk",
         "httpStatus": 200,
@@ -22575,7 +22575,7 @@
         "responseSha256": "f81686f17b6e389f820278543f26ed432164ef531ed0c8de59b526373ff39d3f",
         "schemaFingerprint": "8129cd2368de82d7b4dbe6429b842baff934b3bca9cd0df035f1e0b07269d4be",
         "toolVersion": "0.1.0",
-        "validUntil": "2026-09-08T10:20:42.328385Z"
+        "validUntil": "2026-09-10T04:12:00.644182Z"
       }
     },
     {
@@ -22669,8 +22669,8 @@
       "sourceReference": "HKAPI-228",
       "status": "live-verified",
       "verification": {
-        "checkedAt": "2026-09-01T10:20:42.328385Z",
-        "elapsedMs": 195,
+        "checkedAt": "2026-09-03T04:12:00.644182Z",
+        "elapsedMs": 280,
         "errorCode": null,
         "finalHost": "data.gov.hk",
         "httpStatus": 200,
@@ -22687,7 +22687,7 @@
         "responseSha256": "0ab07bef0548d37ac322355bd187198a0d009d3515fa22c37dfec195d41f3a32",
         "schemaFingerprint": "8129cd2368de82d7b4dbe6429b842baff934b3bca9cd0df035f1e0b07269d4be",
         "toolVersion": "0.1.0",
-        "validUntil": "2026-09-08T10:20:42.328385Z"
+        "validUntil": "2026-09-10T04:12:00.644182Z"
       }
     },
     {
@@ -22781,8 +22781,8 @@
       "sourceReference": "HKAPI-229",
       "status": "live-verified",
       "verification": {
-        "checkedAt": "2026-09-01T10:20:42.328385Z",
-        "elapsedMs": 215,
+        "checkedAt": "2026-09-03T04:12:00.644182Z",
+        "elapsedMs": 291,
         "errorCode": null,
         "finalHost": "data.gov.hk",
         "httpStatus": 200,
@@ -22799,7 +22799,7 @@
         "responseSha256": "60daa01dcbf3dfdcb55180b2e3764d12ce6f6b44072c23e56fd668e0fe243b24",
         "schemaFingerprint": "6a30b7ca70ac0cb6d6b32794281ada9e2363695717a780db905efeb3ad86fc22",
         "toolVersion": "0.1.0",
-        "validUntil": "2026-09-08T10:20:42.328385Z"
+        "validUntil": "2026-09-10T04:12:00.644182Z"
       }
     },
     {
@@ -22893,8 +22893,8 @@
       "sourceReference": "HKAPI-230",
       "status": "live-verified",
       "verification": {
-        "checkedAt": "2026-09-01T10:20:42.328385Z",
-        "elapsedMs": 215,
+        "checkedAt": "2026-09-03T04:12:00.644182Z",
+        "elapsedMs": 284,
         "errorCode": null,
         "finalHost": "data.gov.hk",
         "httpStatus": 200,
@@ -22911,7 +22911,7 @@
         "responseSha256": "a47f2567c7a069660e0aaffe40659b910f5f4c6251250acae40b2160e0b4a30a",
         "schemaFingerprint": "8129cd2368de82d7b4dbe6429b842baff934b3bca9cd0df035f1e0b07269d4be",
         "toolVersion": "0.1.0",
-        "validUntil": "2026-09-08T10:20:42.328385Z"
+        "validUntil": "2026-09-10T04:12:00.644182Z"
       }
     },
     {
@@ -23005,8 +23005,8 @@
       "sourceReference": "HKAPI-231",
       "status": "live-verified",
       "verification": {
-        "checkedAt": "2026-09-01T10:20:42.328385Z",
-        "elapsedMs": 187,
+        "checkedAt": "2026-09-03T04:12:00.644182Z",
+        "elapsedMs": 284,
         "errorCode": null,
         "finalHost": "data.gov.hk",
         "httpStatus": 200,
@@ -23023,7 +23023,7 @@
         "responseSha256": "471ef04625cbf1dd7d6079f82b652f8d6816f737487280a2f8579e0ebfdae4e5",
         "schemaFingerprint": "8129cd2368de82d7b4dbe6429b842baff934b3bca9cd0df035f1e0b07269d4be",
         "toolVersion": "0.1.0",
-        "validUntil": "2026-09-08T10:20:42.328385Z"
+        "validUntil": "2026-09-10T04:12:00.644182Z"
       }
     },
     {
@@ -23117,8 +23117,8 @@
       "sourceReference": "HKAPI-232",
       "status": "live-verified",
       "verification": {
-        "checkedAt": "2026-09-01T10:20:42.328385Z",
-        "elapsedMs": 186,
+        "checkedAt": "2026-09-03T04:12:00.644182Z",
+        "elapsedMs": 296,
         "errorCode": null,
         "finalHost": "data.gov.hk",
         "httpStatus": 200,
@@ -23135,7 +23135,7 @@
         "responseSha256": "9060ad19ec05c48d925030c5b43d5a1cbd4b3c05ea4b9998ec96724cf3a1ddb9",
         "schemaFingerprint": "e806b64debb035728990db90e2f4c4b6ef9846d5980d8b05da7c1d2254677dc5",
         "toolVersion": "0.1.0",
-        "validUntil": "2026-09-08T10:20:42.328385Z"
+        "validUntil": "2026-09-10T04:12:00.644182Z"
       }
     },
     {
@@ -23229,8 +23229,8 @@
       "sourceReference": "HKAPI-233",
       "status": "live-verified",
       "verification": {
-        "checkedAt": "2026-09-01T10:20:42.328385Z",
-        "elapsedMs": 206,
+        "checkedAt": "2026-09-03T04:12:00.644182Z",
+        "elapsedMs": 282,
         "errorCode": null,
         "finalHost": "data.gov.hk",
         "httpStatus": 200,
@@ -23247,7 +23247,7 @@
         "responseSha256": "acb0a54b685bd4bf994d11a75f5457d877b3f9b8a52d7c2fc99f8e4f02161673",
         "schemaFingerprint": "6a30b7ca70ac0cb6d6b32794281ada9e2363695717a780db905efeb3ad86fc22",
         "toolVersion": "0.1.0",
-        "validUntil": "2026-09-08T10:20:42.328385Z"
+        "validUntil": "2026-09-10T04:12:00.644182Z"
       }
     },
     {
@@ -23341,8 +23341,8 @@
       "sourceReference": "HKAPI-234",
       "status": "live-verified",
       "verification": {
-        "checkedAt": "2026-09-01T10:20:42.328385Z",
-        "elapsedMs": 240,
+        "checkedAt": "2026-09-03T04:12:00.644182Z",
+        "elapsedMs": 286,
         "errorCode": null,
         "finalHost": "data.gov.hk",
         "httpStatus": 200,
@@ -23359,7 +23359,7 @@
         "responseSha256": "ad773393609e798796e44fde27a02658e18710322f0db9d4abb31dff2662e8ea",
         "schemaFingerprint": "0ddc931c2525b63b87100e2d8c9f2696208a8cee8491bb8291764314679990fd",
         "toolVersion": "0.1.0",
-        "validUntil": "2026-09-08T10:20:42.328385Z"
+        "validUntil": "2026-09-10T04:12:00.644182Z"
       }
     },
     {
@@ -23453,8 +23453,8 @@
       "sourceReference": "HKAPI-235",
       "status": "live-verified",
       "verification": {
-        "checkedAt": "2026-09-01T10:20:42.328385Z",
-        "elapsedMs": 205,
+        "checkedAt": "2026-09-03T04:12:00.644182Z",
+        "elapsedMs": 319,
         "errorCode": null,
         "finalHost": "data.gov.hk",
         "httpStatus": 200,
@@ -23471,7 +23471,7 @@
         "responseSha256": "87c177887323eb7bff4cda3024e0ff684fd477990798a5781297d5163051c67f",
         "schemaFingerprint": "e806b64debb035728990db90e2f4c4b6ef9846d5980d8b05da7c1d2254677dc5",
         "toolVersion": "0.1.0",
-        "validUntil": "2026-09-08T10:20:42.328385Z"
+        "validUntil": "2026-09-10T04:12:00.644182Z"
       }
     },
     {
@@ -23588,8 +23588,8 @@
       "sourceReference": "HKAPI-236",
       "status": "live-verified",
       "verification": {
-        "checkedAt": "2026-09-01T10:20:42.328385Z",
-        "elapsedMs": 1438,
+        "checkedAt": "2026-09-03T04:12:00.644182Z",
+        "elapsedMs": 1578,
         "errorCode": null,
         "finalHost": "api.data.gov.hk",
         "httpStatus": 200,
@@ -23605,7 +23605,7 @@
         "responseSha256": "179bfd0c559326c3c7478d8994b8ba64f673a1cd9f602cfbbf8d0fab98520dd0",
         "schemaFingerprint": "042e466954b3c0ecf3bf3eb7f5612327811077a8b1310204cf0938a841b3c910",
         "toolVersion": "0.1.0",
-        "validUntil": "2026-09-08T10:20:42.328385Z"
+        "validUntil": "2026-09-10T04:12:00.644182Z"
       }
     },
     {
@@ -23699,8 +23699,8 @@
       "sourceReference": "HKAPI-237",
       "status": "live-verified",
       "verification": {
-        "checkedAt": "2026-09-01T10:20:42.328385Z",
-        "elapsedMs": 194,
+        "checkedAt": "2026-09-03T04:12:00.644182Z",
+        "elapsedMs": 301,
         "errorCode": null,
         "finalHost": "data.gov.hk",
         "httpStatus": 200,
@@ -23717,7 +23717,7 @@
         "responseSha256": "784a404ef8c9d945eca7cf821a0a599cd4e4bf6b06b8851e5d409e69dda29350",
         "schemaFingerprint": "e806b64debb035728990db90e2f4c4b6ef9846d5980d8b05da7c1d2254677dc5",
         "toolVersion": "0.1.0",
-        "validUntil": "2026-09-08T10:20:42.328385Z"
+        "validUntil": "2026-09-10T04:12:00.644182Z"
       }
     },
     {
@@ -23811,8 +23811,8 @@
       "sourceReference": "HKAPI-238",
       "status": "live-verified",
       "verification": {
-        "checkedAt": "2026-09-01T10:20:42.328385Z",
-        "elapsedMs": 253,
+        "checkedAt": "2026-09-03T04:12:00.644182Z",
+        "elapsedMs": 293,
         "errorCode": null,
         "finalHost": "data.gov.hk",
         "httpStatus": 200,
@@ -23829,7 +23829,7 @@
         "responseSha256": "a226e810b9e0323655a43187781eca2be296bc6c32b68ff9b424c7eb35e967e1",
         "schemaFingerprint": "6a30b7ca70ac0cb6d6b32794281ada9e2363695717a780db905efeb3ad86fc22",
         "toolVersion": "0.1.0",
-        "validUntil": "2026-09-08T10:20:42.328385Z"
+        "validUntil": "2026-09-10T04:12:00.644182Z"
       }
     },
     {
@@ -23923,8 +23923,8 @@
       "sourceReference": "HKAPI-239",
       "status": "live-verified",
       "verification": {
-        "checkedAt": "2026-09-01T10:20:42.328385Z",
-        "elapsedMs": 185,
+        "checkedAt": "2026-09-03T04:12:00.644182Z",
+        "elapsedMs": 289,
         "errorCode": null,
         "finalHost": "data.gov.hk",
         "httpStatus": 200,
@@ -23941,7 +23941,7 @@
         "responseSha256": "d0a869ec9cdf5c67c6a2df8cd474b566791b12a6eccb697c7233a622884130ff",
         "schemaFingerprint": "2fa564869dea80de1b91f8867b9a2fa164dd0c4b9adc529c5a5bbe1b034c12cf",
         "toolVersion": "0.1.0",
-        "validUntil": "2026-09-08T10:20:42.328385Z"
+        "validUntil": "2026-09-10T04:12:00.644182Z"
       }
     },
     {
@@ -24035,8 +24035,8 @@
       "sourceReference": "HKAPI-240",
       "status": "live-verified",
       "verification": {
-        "checkedAt": "2026-09-01T10:20:42.328385Z",
-        "elapsedMs": 185,
+        "checkedAt": "2026-09-03T04:12:00.644182Z",
+        "elapsedMs": 294,
         "errorCode": null,
         "finalHost": "data.gov.hk",
         "httpStatus": 200,
@@ -24053,7 +24053,7 @@
         "responseSha256": "9a44bcc2c5f6a8e8c997e604d67a456739dabb4ec04ecdc346a429fd22ec6a58",
         "schemaFingerprint": "e806b64debb035728990db90e2f4c4b6ef9846d5980d8b05da7c1d2254677dc5",
         "toolVersion": "0.1.0",
-        "validUntil": "2026-09-08T10:20:42.328385Z"
+        "validUntil": "2026-09-10T04:12:00.644182Z"
       }
     },
     {
@@ -24147,8 +24147,8 @@
       "sourceReference": "HKAPI-241",
       "status": "live-verified",
       "verification": {
-        "checkedAt": "2026-09-01T10:20:42.328385Z",
-        "elapsedMs": 223,
+        "checkedAt": "2026-09-03T04:12:00.644182Z",
+        "elapsedMs": 316,
         "errorCode": null,
         "finalHost": "data.gov.hk",
         "httpStatus": 200,
@@ -24165,7 +24165,7 @@
         "responseSha256": "9e7bf5def08881d40d54e27eb18f085e914d63cb57be89cd9b883b6ee58a6284",
         "schemaFingerprint": "a2d0cc92cd2c29942a8b2858955730281490cdc93855b2083f991f3037e993eb",
         "toolVersion": "0.1.0",
-        "validUntil": "2026-09-08T10:20:42.328385Z"
+        "validUntil": "2026-09-10T04:12:00.644182Z"
       }
     },
     {
@@ -24259,8 +24259,8 @@
       "sourceReference": "HKAPI-242",
       "status": "live-verified",
       "verification": {
-        "checkedAt": "2026-09-01T10:20:42.328385Z",
-        "elapsedMs": 221,
+        "checkedAt": "2026-09-03T04:12:00.644182Z",
+        "elapsedMs": 364,
         "errorCode": null,
         "finalHost": "data.gov.hk",
         "httpStatus": 200,
@@ -24277,7 +24277,7 @@
         "responseSha256": "10277d8a05eea641651d33d228d1aa542b6e4bf885b771466c5258e34c498cef",
         "schemaFingerprint": "a2d0cc92cd2c29942a8b2858955730281490cdc93855b2083f991f3037e993eb",
         "toolVersion": "0.1.0",
-        "validUntil": "2026-09-08T10:20:42.328385Z"
+        "validUntil": "2026-09-10T04:12:00.644182Z"
       }
     },
     {
@@ -24371,8 +24371,8 @@
       "sourceReference": "HKAPI-243",
       "status": "live-verified",
       "verification": {
-        "checkedAt": "2026-09-01T10:20:42.328385Z",
-        "elapsedMs": 417,
+        "checkedAt": "2026-09-03T04:12:00.644182Z",
+        "elapsedMs": 321,
         "errorCode": null,
         "finalHost": "data.gov.hk",
         "httpStatus": 200,
@@ -24389,7 +24389,7 @@
         "responseSha256": "25fa5fe504a3ab89c22a07e5169da691b70b5e86e647d16252f09b0c06b767ec",
         "schemaFingerprint": "b132136385c0dfbe6b805119424a33b32785f026e831d95270d1a8b8e86cbe10",
         "toolVersion": "0.1.0",
-        "validUntil": "2026-09-08T10:20:42.328385Z"
+        "validUntil": "2026-09-10T04:12:00.644182Z"
       }
     },
     {
@@ -24508,8 +24508,8 @@
       "sourceReference": "HKAPI-244",
       "status": "live-verified",
       "verification": {
-        "checkedAt": "2026-09-01T10:25:29.844991Z",
-        "elapsedMs": 204,
+        "checkedAt": "2026-09-03T04:12:00.644182Z",
+        "elapsedMs": 301,
         "errorCode": null,
         "finalHost": "data.gov.hk",
         "httpStatus": 200,
@@ -24526,7 +24526,7 @@
         "responseSha256": "e58da63ad6ea2abb9cb440b8838a49d7ab567f876d7bbd27cc313e6d7c01f64e",
         "schemaFingerprint": "b132136385c0dfbe6b805119424a33b32785f026e831d95270d1a8b8e86cbe10",
         "toolVersion": "0.1.0",
-        "validUntil": "2026-09-08T10:25:29.844991Z"
+        "validUntil": "2026-09-10T04:12:00.644182Z"
       }
     },
     {
@@ -24620,8 +24620,8 @@
       "sourceReference": "HKAPI-245",
       "status": "live-verified",
       "verification": {
-        "checkedAt": "2026-09-01T10:20:42.328385Z",
-        "elapsedMs": 215,
+        "checkedAt": "2026-09-03T04:12:00.644182Z",
+        "elapsedMs": 296,
         "errorCode": null,
         "finalHost": "data.gov.hk",
         "httpStatus": 200,
@@ -24638,7 +24638,7 @@
         "responseSha256": "e9e709c1e196bc94d72e795c3f026f677eed73da7ae94a43217ce3add219db61",
         "schemaFingerprint": "8ee86d3de382896df9c33851f1cad132072b04ced989bf95f3df93fdbbc6fc42",
         "toolVersion": "0.1.0",
-        "validUntil": "2026-09-08T10:20:42.328385Z"
+        "validUntil": "2026-09-10T04:12:00.644182Z"
       }
     },
     {
@@ -24733,8 +24733,8 @@
       "sourceReference": "HKAPI-246",
       "status": "live-verified",
       "verification": {
-        "checkedAt": "2026-09-01T10:25:29.844991Z",
-        "elapsedMs": 190,
+        "checkedAt": "2026-09-03T04:12:00.644182Z",
+        "elapsedMs": 293,
         "errorCode": null,
         "finalHost": "data.gov.hk",
         "httpStatus": 200,
@@ -24751,7 +24751,7 @@
         "responseSha256": "715b2f61b0e4e58f7618e605ce8911daa916dde5f1eb846086e7a8eeb8b0cda3",
         "schemaFingerprint": "e806b64debb035728990db90e2f4c4b6ef9846d5980d8b05da7c1d2254677dc5",
         "toolVersion": "0.1.0",
-        "validUntil": "2026-09-08T10:25:29.844991Z"
+        "validUntil": "2026-09-10T04:12:00.644182Z"
       }
     },
     {
@@ -24845,8 +24845,8 @@
       "sourceReference": "HKAPI-247",
       "status": "live-verified",
       "verification": {
-        "checkedAt": "2026-09-01T10:20:42.328385Z",
-        "elapsedMs": 210,
+        "checkedAt": "2026-09-03T04:12:00.644182Z",
+        "elapsedMs": 278,
         "errorCode": null,
         "finalHost": "data.gov.hk",
         "httpStatus": 200,
@@ -24863,7 +24863,7 @@
         "responseSha256": "c20aa270adcd895b78db197d3d0b5f87bf7af9c9fea932ffbdcc9f5caae94b7c",
         "schemaFingerprint": "6a30b7ca70ac0cb6d6b32794281ada9e2363695717a780db905efeb3ad86fc22",
         "toolVersion": "0.1.0",
-        "validUntil": "2026-09-08T10:20:42.328385Z"
+        "validUntil": "2026-09-10T04:12:00.644182Z"
       }
     },
     {
@@ -24973,8 +24973,8 @@
       "sourceReference": "HKAPI-248",
       "status": "live-verified",
       "verification": {
-        "checkedAt": "2026-09-01T10:25:29.844991Z",
-        "elapsedMs": 174,
+        "checkedAt": "2026-09-03T04:12:00.644182Z",
+        "elapsedMs": 306,
         "errorCode": null,
         "finalHost": "data.gov.hk",
         "httpStatus": 200,
@@ -24991,7 +24991,7 @@
         "responseSha256": "50e6607c42651538707a64b679b83eb10279d80c097f3dabda09775d2721e33c",
         "schemaFingerprint": "bbd47474197401977141cd77057f5a71171146f5193d2607e5a2ff396952d59b",
         "toolVersion": "0.1.0",
-        "validUntil": "2026-09-08T10:25:29.844991Z"
+        "validUntil": "2026-09-10T04:12:00.644182Z"
       }
     },
     {
@@ -25085,8 +25085,8 @@
       "sourceReference": "HKAPI-249",
       "status": "live-verified",
       "verification": {
-        "checkedAt": "2026-09-01T10:20:42.328385Z",
-        "elapsedMs": 198,
+        "checkedAt": "2026-09-03T04:12:00.644182Z",
+        "elapsedMs": 323,
         "errorCode": null,
         "finalHost": "data.gov.hk",
         "httpStatus": 200,
@@ -25103,7 +25103,7 @@
         "responseSha256": "af4bb2d1d1962cd76b2eae231a335678dcb2c69c1d1ef91d16d69a8d6ace8818",
         "schemaFingerprint": "9fc3a3c6d282f7e2754a73a43bd83631acfbed3b039152574f114e7be1220bfd",
         "toolVersion": "0.1.0",
-        "validUntil": "2026-09-08T10:20:42.328385Z"
+        "validUntil": "2026-09-10T04:12:00.644182Z"
       }
     },
     {
@@ -25197,8 +25197,8 @@
       "sourceReference": "HKAPI-250",
       "status": "live-verified",
       "verification": {
-        "checkedAt": "2026-09-01T10:20:42.328385Z",
-        "elapsedMs": 229,
+        "checkedAt": "2026-09-03T04:12:00.644182Z",
+        "elapsedMs": 317,
         "errorCode": null,
         "finalHost": "data.gov.hk",
         "httpStatus": 200,
@@ -25215,7 +25215,7 @@
         "responseSha256": "528ddc36122d4028beff9582940091b28d4b71c9515d274c5e412a5b270041a3",
         "schemaFingerprint": "e806b64debb035728990db90e2f4c4b6ef9846d5980d8b05da7c1d2254677dc5",
         "toolVersion": "0.1.0",
-        "validUntil": "2026-09-08T10:20:42.328385Z"
+        "validUntil": "2026-09-10T04:12:00.644182Z"
       }
     },
     {
@@ -25309,8 +25309,8 @@
       "sourceReference": "HKAPI-251",
       "status": "live-verified",
       "verification": {
-        "checkedAt": "2026-09-01T10:20:42.328385Z",
-        "elapsedMs": 224,
+        "checkedAt": "2026-09-03T04:12:00.644182Z",
+        "elapsedMs": 301,
         "errorCode": null,
         "finalHost": "data.gov.hk",
         "httpStatus": 200,
@@ -25327,7 +25327,7 @@
         "responseSha256": "7cf400468809d30830703cd132f1a043be3f7912e548611da158f025e452bacb",
         "schemaFingerprint": "eb67e36ac00ee37c0bda7c70dfe99482faa676bfd82606612738b3ca39cdcce8",
         "toolVersion": "0.1.0",
-        "validUntil": "2026-09-08T10:20:42.328385Z"
+        "validUntil": "2026-09-10T04:12:00.644182Z"
       }
     },
     {
@@ -25421,8 +25421,8 @@
       "sourceReference": "HKAPI-252",
       "status": "live-verified",
       "verification": {
-        "checkedAt": "2026-09-01T10:20:42.328385Z",
-        "elapsedMs": 214,
+        "checkedAt": "2026-09-03T04:12:00.644182Z",
+        "elapsedMs": 338,
         "errorCode": null,
         "finalHost": "data.gov.hk",
         "httpStatus": 200,
@@ -25439,7 +25439,7 @@
         "responseSha256": "84ed05e73ddbe0b8772bb4141869305668ccf8485cf9ff04f16f2580c1446989",
         "schemaFingerprint": "734de5cd295f10879a69a74a406f079ea61df86b30ff12bcf972a8351ae9e14f",
         "toolVersion": "0.1.0",
-        "validUntil": "2026-09-08T10:20:42.328385Z"
+        "validUntil": "2026-09-10T04:12:00.644182Z"
       }
     },
     {
@@ -25533,8 +25533,8 @@
       "sourceReference": "HKAPI-253",
       "status": "live-verified",
       "verification": {
-        "checkedAt": "2026-09-01T10:20:42.328385Z",
-        "elapsedMs": 203,
+        "checkedAt": "2026-09-03T04:12:00.644182Z",
+        "elapsedMs": 351,
         "errorCode": null,
         "finalHost": "data.gov.hk",
         "httpStatus": 200,
@@ -25551,7 +25551,7 @@
         "responseSha256": "7a7d2f4a1ce76846f1873aa24653a229246ef0a66252175c66a4f88653b16589",
         "schemaFingerprint": "6a30b7ca70ac0cb6d6b32794281ada9e2363695717a780db905efeb3ad86fc22",
         "toolVersion": "0.1.0",
-        "validUntil": "2026-09-08T10:20:42.328385Z"
+        "validUntil": "2026-09-10T04:12:00.644182Z"
       }
     },
     {
@@ -25645,8 +25645,8 @@
       "sourceReference": "HKAPI-254",
       "status": "live-verified",
       "verification": {
-        "checkedAt": "2026-09-01T10:20:42.328385Z",
-        "elapsedMs": 187,
+        "checkedAt": "2026-09-03T04:12:00.644182Z",
+        "elapsedMs": 284,
         "errorCode": null,
         "finalHost": "data.gov.hk",
         "httpStatus": 200,
@@ -25663,7 +25663,7 @@
         "responseSha256": "729eb4539945aac316bc5584e704ea949c5cfc75b721df9c645c53fcae17baa8",
         "schemaFingerprint": "e806b64debb035728990db90e2f4c4b6ef9846d5980d8b05da7c1d2254677dc5",
         "toolVersion": "0.1.0",
-        "validUntil": "2026-09-08T10:20:42.328385Z"
+        "validUntil": "2026-09-10T04:12:00.644182Z"
       }
     },
     {
@@ -25757,8 +25757,8 @@
       "sourceReference": "HKAPI-255",
       "status": "live-verified",
       "verification": {
-        "checkedAt": "2026-09-01T10:20:42.328385Z",
-        "elapsedMs": 227,
+        "checkedAt": "2026-09-03T04:12:00.644182Z",
+        "elapsedMs": 301,
         "errorCode": null,
         "finalHost": "data.gov.hk",
         "httpStatus": 200,
@@ -25775,7 +25775,7 @@
         "responseSha256": "c3458bc94e2bccbf67b887a7a3d1140a28cdc56afdc323dc9db8eaad3b575e28",
         "schemaFingerprint": "bbd47474197401977141cd77057f5a71171146f5193d2607e5a2ff396952d59b",
         "toolVersion": "0.1.0",
-        "validUntil": "2026-09-08T10:20:42.328385Z"
+        "validUntil": "2026-09-10T04:12:00.644182Z"
       }
     },
     {
@@ -25869,8 +25869,8 @@
       "sourceReference": "HKAPI-256",
       "status": "live-verified",
       "verification": {
-        "checkedAt": "2026-09-01T10:20:42.328385Z",
-        "elapsedMs": 209,
+        "checkedAt": "2026-09-03T04:12:00.644182Z",
+        "elapsedMs": 316,
         "errorCode": null,
         "finalHost": "data.gov.hk",
         "httpStatus": 200,
@@ -25887,7 +25887,7 @@
         "responseSha256": "95f707f63434b0351d772bfd4702fbe073e6393ebc59a4a1f4c669fe7454810d",
         "schemaFingerprint": "bbd47474197401977141cd77057f5a71171146f5193d2607e5a2ff396952d59b",
         "toolVersion": "0.1.0",
-        "validUntil": "2026-09-08T10:20:42.328385Z"
+        "validUntil": "2026-09-10T04:12:00.644182Z"
       }
     },
     {
@@ -25981,8 +25981,8 @@
       "sourceReference": "HKAPI-257",
       "status": "live-verified",
       "verification": {
-        "checkedAt": "2026-09-01T10:20:42.328385Z",
-        "elapsedMs": 207,
+        "checkedAt": "2026-09-03T04:12:00.644182Z",
+        "elapsedMs": 313,
         "errorCode": null,
         "finalHost": "data.gov.hk",
         "httpStatus": 200,
@@ -25999,7 +25999,7 @@
         "responseSha256": "41c940db296cd57bf36708e2187a6f5a6e8a731a32020c7da7e31bd31af3c17c",
         "schemaFingerprint": "9fc3a3c6d282f7e2754a73a43bd83631acfbed3b039152574f114e7be1220bfd",
         "toolVersion": "0.1.0",
-        "validUntil": "2026-09-08T10:20:42.328385Z"
+        "validUntil": "2026-09-10T04:12:00.644182Z"
       }
     },
     {
@@ -26093,8 +26093,8 @@
       "sourceReference": "HKAPI-258",
       "status": "live-verified",
       "verification": {
-        "checkedAt": "2026-09-01T10:20:42.328385Z",
-        "elapsedMs": 207,
+        "checkedAt": "2026-09-03T04:12:00.644182Z",
+        "elapsedMs": 285,
         "errorCode": null,
         "finalHost": "data.gov.hk",
         "httpStatus": 200,
@@ -26111,7 +26111,7 @@
         "responseSha256": "4f14c9c2939c24afae605316bb064bedbd26bd76384bffb8097c869e53f25128",
         "schemaFingerprint": "bbd47474197401977141cd77057f5a71171146f5193d2607e5a2ff396952d59b",
         "toolVersion": "0.1.0",
-        "validUntil": "2026-09-08T10:20:42.328385Z"
+        "validUntil": "2026-09-10T04:12:00.644182Z"
       }
     },
     {
@@ -26205,8 +26205,8 @@
       "sourceReference": "HKAPI-259",
       "status": "live-verified",
       "verification": {
-        "checkedAt": "2026-09-01T10:20:42.328385Z",
-        "elapsedMs": 314,
+        "checkedAt": "2026-09-03T04:12:00.644182Z",
+        "elapsedMs": 296,
         "errorCode": null,
         "finalHost": "data.gov.hk",
         "httpStatus": 200,
@@ -26223,7 +26223,7 @@
         "responseSha256": "e1595bb6f38179d4d34b95ef2af6c9c4fd0f23f553bcd662c6450ec5dcc76aaf",
         "schemaFingerprint": "9fc3a3c6d282f7e2754a73a43bd83631acfbed3b039152574f114e7be1220bfd",
         "toolVersion": "0.1.0",
-        "validUntil": "2026-09-08T10:20:42.328385Z"
+        "validUntil": "2026-09-10T04:12:00.644182Z"
       }
     },
     {
@@ -26317,8 +26317,8 @@
       "sourceReference": "HKAPI-260",
       "status": "live-verified",
       "verification": {
-        "checkedAt": "2026-09-01T10:20:42.328385Z",
-        "elapsedMs": 336,
+        "checkedAt": "2026-09-03T04:12:00.644182Z",
+        "elapsedMs": 284,
         "errorCode": null,
         "finalHost": "data.gov.hk",
         "httpStatus": 200,
@@ -26335,7 +26335,7 @@
         "responseSha256": "83e37df941d17a665cc7e986998138c67a27688c8ff3af71f95fb25b5e48542e",
         "schemaFingerprint": "9fc3a3c6d282f7e2754a73a43bd83631acfbed3b039152574f114e7be1220bfd",
         "toolVersion": "0.1.0",
-        "validUntil": "2026-09-08T10:20:42.328385Z"
+        "validUntil": "2026-09-10T04:12:00.644182Z"
       }
     },
     {
@@ -26429,8 +26429,8 @@
       "sourceReference": "HKAPI-261",
       "status": "live-verified",
       "verification": {
-        "checkedAt": "2026-09-01T10:20:42.328385Z",
-        "elapsedMs": 305,
+        "checkedAt": "2026-09-03T04:12:00.644182Z",
+        "elapsedMs": 892,
         "errorCode": null,
         "finalHost": "data.gov.hk",
         "httpStatus": 200,
@@ -26447,7 +26447,7 @@
         "responseSha256": "8893039b3867723aac1412b1dbd0af2d723d92018577943b80ef6f16048c5dc4",
         "schemaFingerprint": "6a30b7ca70ac0cb6d6b32794281ada9e2363695717a780db905efeb3ad86fc22",
         "toolVersion": "0.1.0",
-        "validUntil": "2026-09-08T10:20:42.328385Z"
+        "validUntil": "2026-09-10T04:12:00.644182Z"
       }
     },
     {
@@ -26541,8 +26541,8 @@
       "sourceReference": "HKAPI-262",
       "status": "live-verified",
       "verification": {
-        "checkedAt": "2026-09-01T10:20:42.328385Z",
-        "elapsedMs": 421,
+        "checkedAt": "2026-09-03T04:12:00.644182Z",
+        "elapsedMs": 894,
         "errorCode": null,
         "finalHost": "data.gov.hk",
         "httpStatus": 200,
@@ -26559,7 +26559,7 @@
         "responseSha256": "6b6aa7dea6fb24636dd09a091541994ef86b7b71d1971ed6ec4e5826fb4e3b85",
         "schemaFingerprint": "e806b64debb035728990db90e2f4c4b6ef9846d5980d8b05da7c1d2254677dc5",
         "toolVersion": "0.1.0",
-        "validUntil": "2026-09-08T10:20:42.328385Z"
+        "validUntil": "2026-09-10T04:12:00.644182Z"
       }
     },
     {
@@ -26656,8 +26656,8 @@
       "sourceReference": "HKAPI-263",
       "status": "live-verified",
       "verification": {
-        "checkedAt": "2026-09-01T10:25:29.844991Z",
-        "elapsedMs": 186,
+        "checkedAt": "2026-09-03T04:12:00.644182Z",
+        "elapsedMs": 822,
         "errorCode": null,
         "finalHost": "data.gov.hk",
         "httpStatus": 200,
@@ -26674,7 +26674,7 @@
         "responseSha256": "842b2de47fa47213663f8fb57f3aee6673d4c2bb9aa7f8ed1a8cf1699697420d",
         "schemaFingerprint": "9fc3a3c6d282f7e2754a73a43bd83631acfbed3b039152574f114e7be1220bfd",
         "toolVersion": "0.1.0",
-        "validUntil": "2026-09-08T10:25:29.844991Z"
+        "validUntil": "2026-09-10T04:12:00.644182Z"
       }
     },
     {
@@ -26770,8 +26770,8 @@
       "sourceReference": "HKAPI-264",
       "status": "live-verified",
       "verification": {
-        "checkedAt": "2026-09-01T10:25:29.844991Z",
-        "elapsedMs": 171,
+        "checkedAt": "2026-09-03T04:12:00.644182Z",
+        "elapsedMs": 303,
         "errorCode": null,
         "finalHost": "data.gov.hk",
         "httpStatus": 200,
@@ -26788,7 +26788,7 @@
         "responseSha256": "461652dad62ef2caba4c7755270559e63896c08616f97a7fd1b986ba878ea1af",
         "schemaFingerprint": "0ddc931c2525b63b87100e2d8c9f2696208a8cee8491bb8291764314679990fd",
         "toolVersion": "0.1.0",
-        "validUntil": "2026-09-08T10:25:29.844991Z"
+        "validUntil": "2026-09-10T04:12:00.644182Z"
       }
     },
     {
@@ -26882,8 +26882,8 @@
       "sourceReference": "HKAPI-265",
       "status": "live-verified",
       "verification": {
-        "checkedAt": "2026-09-01T10:20:42.328385Z",
-        "elapsedMs": 359,
+        "checkedAt": "2026-09-03T04:12:00.644182Z",
+        "elapsedMs": 329,
         "errorCode": null,
         "finalHost": "data.gov.hk",
         "httpStatus": 200,
@@ -26900,7 +26900,7 @@
         "responseSha256": "461652dad62ef2caba4c7755270559e63896c08616f97a7fd1b986ba878ea1af",
         "schemaFingerprint": "0ddc931c2525b63b87100e2d8c9f2696208a8cee8491bb8291764314679990fd",
         "toolVersion": "0.1.0",
-        "validUntil": "2026-09-08T10:20:42.328385Z"
+        "validUntil": "2026-09-10T04:12:00.644182Z"
       }
     }
   ],

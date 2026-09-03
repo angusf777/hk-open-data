@@ -29,6 +29,23 @@ def recipe_transport() -> httpx.MockTransport:
                     },
                 },
             )
+        if request.url.path == "/v1/access-resources":
+            return httpx.Response(
+                200,
+                json={
+                    "items": [{"dataset_id": "dataset-one", "resource_id": "resource-one"}],
+                    "page": {"next_cursor": None},
+                },
+            )
+        if request.url.path == "/v1/access-resources/dataset-one/resource-one":
+            return httpx.Response(
+                200,
+                json={
+                    "dataset_id": "dataset-one",
+                    "resource_id": "resource-one",
+                    "url_template": "https://example.hk/data.json",
+                },
+            )
         return httpx.Response(
             404,
             json={
@@ -52,6 +69,19 @@ def test_python_sdk_reads_recipe_page_and_example() -> None:
     recipe = client.get_access_recipe("HKAPI-001")
     assert recipe["source_reference"] == "HKAPI-001"
     assert client.get_access_example("HKAPI-001", "python").startswith("import httpx")
+
+
+def test_python_sdk_reads_provider_resource_page_and_detail() -> None:
+    client = HKDataClient(
+        base_url="https://api.example/v1",
+        transport=recipe_transport(),
+    )
+
+    page = client.list_access_resources(source_reference="HKAPI-030", limit=10)
+    resource = client.get_access_resource("dataset-one", "resource-one")
+
+    assert page["items"][0]["resource_id"] == "resource-one"
+    assert resource["url_template"] == "https://example.hk/data.json"
 
 
 def test_python_sdk_rejects_invalid_example_language_before_request() -> None:

@@ -91,6 +91,45 @@
         }
       }
     },
+    "/v1/access-resources": {
+      "get": {
+        "operationId": "listAccessResources",
+        "summary": "List mapped DATA.GOV.HK provider resources",
+        "tags": ["Access"],
+        "security": [{}],
+        "parameters": [
+          {"$ref": "#/components/parameters/Cursor"},
+          {"$ref": "#/components/parameters/Limit"},
+          {"name": "source_reference", "in": "query", "schema": {"type": "string", "pattern": "^HKAPI-[0-9]{3}$"}},
+          {"name": "dataset_id", "in": "query", "schema": {"type": "string"}},
+          {"name": "format", "in": "query", "schema": {"type": "string"}},
+          {"name": "access", "in": "query", "schema": {"$ref": "#/components/schemas/ResourceAccess"}}
+        ],
+        "responses": {
+          "200": {"description": "Bounded provider resource metadata", "content": {"application/json": {"schema": {"$ref": "#/components/schemas/AccessResourcePage"}}}},
+          "400": {"description": "Unsupported resource filter", "content": {"application/json": {"schema": {"$ref": "#/components/schemas/Error"}}}},
+          "429": {"$ref": "#/components/responses/TooManyRequests"}
+        }
+      }
+    },
+    "/v1/access-resources/{dataset_id}/{resource_id}": {
+      "get": {
+        "operationId": "getAccessResource",
+        "summary": "Get one mapped DATA.GOV.HK provider resource",
+        "tags": ["Access"],
+        "security": [{}],
+        "parameters": [
+          {"name": "dataset_id", "in": "path", "required": true, "schema": {"type": "string"}},
+          {"name": "resource_id", "in": "path", "required": true, "schema": {"type": "string"}}
+        ],
+        "responses": {
+          "200": {"description": "One provider resource with usage commands", "content": {"application/json": {"schema": {"$ref": "#/components/schemas/AccessResource"}}}},
+          "400": {"description": "Invalid provider resource identifier", "content": {"application/json": {"schema": {"$ref": "#/components/schemas/Error"}}}},
+          "404": {"$ref": "#/components/responses/NotFound"},
+          "429": {"$ref": "#/components/responses/TooManyRequests"}
+        }
+      }
+    },
     "/v1/source-records": {
       "get": {
         "operationId": "querySourceRecords",
@@ -535,6 +574,45 @@
         "required": ["items", "page"],
         "properties": {
           "items": {"type": "array", "items": {"$ref": "#/components/schemas/AccessRecipe"}},
+          "page": {"$ref": "#/components/schemas/PageMeta"}
+        },
+        "additionalProperties": false
+      },
+      "ResourceAccess": {
+        "enum": ["ready", "parameters-required", "insecure-http", "invalid-url"]
+      },
+      "AccessResource": {
+        "type": "object",
+        "required": ["schema_version", "source_references", "dataset_id", "resource_id", "name", "format", "url_template", "template_parameters", "access", "usage", "limitations"],
+        "properties": {
+          "schema_version": {"const": 1},
+          "source_references": {"type": "array", "minItems": 1, "items": {"type": "string", "pattern": "^HKAPI-[0-9]{3}$"}},
+          "dataset_id": {"type": "string"},
+          "resource_id": {"type": "string"},
+          "name": {"type": "string"},
+          "format": {"type": "string"},
+          "url_template": {"type": "string"},
+          "template_parameters": {"type": "array", "items": {"type": "string"}},
+          "access": {"$ref": "#/components/schemas/ResourceAccess"},
+          "usage": {
+            "type": "object",
+            "required": ["list_cli", "example_cli", "fetch_cli"],
+            "properties": {
+              "list_cli": {"type": "string"},
+              "example_cli": {"type": "string"},
+              "fetch_cli": {"type": "string"}
+            },
+            "additionalProperties": false
+          },
+          "limitations": {"type": "array", "minItems": 1, "items": {"type": "string"}}
+        },
+        "additionalProperties": false
+      },
+      "AccessResourcePage": {
+        "type": "object",
+        "required": ["items", "page"],
+        "properties": {
+          "items": {"type": "array", "items": {"$ref": "#/components/schemas/AccessResource"}},
           "page": {"$ref": "#/components/schemas/PageMeta"}
         },
         "additionalProperties": false

@@ -4,6 +4,7 @@ import ipaddress
 import socket
 import time
 from collections.abc import Callable
+from dataclasses import dataclass
 from typing import Protocol, cast
 from urllib.parse import urljoin, urlsplit
 
@@ -46,6 +47,16 @@ class RetryExhausted(FetchError):
 
 class UnexpectedMediaType(FetchError):
     pass
+
+
+@dataclass(frozen=True)
+class FetchSampleResult:
+    status_code: int
+    headers: dict[str, str]
+    body: bytes
+    final_url: str
+    elapsed_ms: int
+    truncated: bool
 
 
 class SafeFetcher:
@@ -102,8 +113,38 @@ class SafeFetcher:
                 raise EgressDenied("destination resolves to a non-public address")
 
     def fetch(self, request: ApprovedRequest) -> FetchResult:
+        result, _truncated = self._fetch(request, sample_bytes=None)
+        return result
+
+    def fetch_sample(
+        self,
+        request: ApprovedRequest,
+        *,
+        sample_bytes: int,
+    ) -> FetchSampleResult:
+        if not 1 <= sample_bytes <= request.max_response_bytes:
+            raise ValueError("sample_bytes must fit within the approved response limit")
+        result, truncated = self._fetch(request, sample_bytes=sample_bytes)
+        return FetchSampleResult(
+            status_code=result.status_code,
+            headers=result.headers,
+            body=result.body,
+            final_url=result.final_url,
+            elapsed_ms=result.elapsed_ms,
+            truncated=truncated,
+        )
+
+    def _fetch(
+        self,
+        request: ApprovedRequest,
+        *,
+        sample_bytes: int | None,
+    ) -> tuple[FetchResult, bool]:
         started = time.monotonic()
         timeout = httpx.Timeout(request.timeout_ms / 1_000)
+        headers = {key: value for key, value in request.headers.items() if key.lower() != "range"}
+        if sample_bytes is not None:
+            headers["range"] = f"bytes=0-{sample_bytes - 1}"
         with httpx.Client(
             transport=self._transport,
             timeout=timeout,
@@ -117,7 +158,7 @@ class SafeFetcher:
                         with client.stream(
                             request.method,
                             current_url,
-                            headers=request.headers,
+                            headers=headers,
                             content=request.body,
                         ) as response:
                             if response.is_redirect:
@@ -151,10 +192,17 @@ class SafeFetcher:
                                 raise UnexpectedMediaType(
                                     "provider response media type is not allowlisted"
                                 )
+                            retryable = response.status_code in request.retry_status_codes
+                            if retryable and attempt < request.max_attempts:
+                                self._sleeper(self._retry_delay(response, attempt))
+                                break
+                            if retryable:
+                                raise RetryExhausted("configured retries were exhausted")
                             body = bytearray()
                             content_length = response.headers.get("content-length")
                             if (
-                                content_length is not None
+                                sample_bytes is None
+                                and content_length is not None
                                 and content_length.isdigit()
                                 and int(content_length) > request.max_compressed_response_bytes
                             ):
@@ -171,18 +219,46 @@ class SafeFetcher:
                                         "compressed response exceeded "
                                         f"{request.max_compressed_response_bytes} bytes"
                                     )
+                                if sample_bytes is not None:
+                                    remaining = sample_bytes - len(body)
+                                    body.extend(chunk[:remaining])
+                                    if len(body) == sample_bytes:
+                                        content_range = response.headers.get("content-range")
+                                        range_total = (
+                                            None
+                                            if content_range is None
+                                            else content_range.rpartition("/")[2]
+                                        )
+                                        declared_larger = (
+                                            content_length is not None
+                                            and content_length.isdigit()
+                                            and int(content_length) > len(body)
+                                        ) or (
+                                            range_total is not None
+                                            and range_total.isdigit()
+                                            and int(range_total) > len(body)
+                                        )
+                                        result = FetchResult(
+                                            status_code=response.status_code,
+                                            headers={
+                                                key.lower(): value
+                                                for key, value in response.headers.items()
+                                            },
+                                            body=bytes(body),
+                                            final_url=current_url,
+                                            elapsed_ms=max(
+                                                0,
+                                                round((time.monotonic() - started) * 1_000),
+                                            ),
+                                        )
+                                        return result, len(chunk) > remaining or declared_larger
+                                    continue
                                 if len(body) + len(chunk) > request.max_response_bytes:
                                     raise BodyTooLarge(
                                         f"response exceeded {request.max_response_bytes} bytes"
                                     )
                                 body.extend(chunk)
-                            retryable = response.status_code in request.retry_status_codes
-                            if retryable and attempt < request.max_attempts:
-                                self._sleeper(self._retry_delay(response, attempt))
-                                break
-                            if retryable:
-                                raise RetryExhausted("configured retries were exhausted")
-                            return FetchResult(
+                            result = FetchResult(
                                 status_code=response.status_code,
                                 headers={
                                     key.lower(): value for key, value in response.headers.items()
@@ -191,6 +267,7 @@ class SafeFetcher:
                                 final_url=current_url,
                                 elapsed_ms=max(0, round((time.monotonic() - started) * 1_000)),
                             )
+                            return result, False
                     except httpx.TimeoutException as error:
                         if attempt >= request.max_attempts:
                             raise FetchTimedOut("provider request timed out") from error

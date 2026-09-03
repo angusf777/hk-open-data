@@ -1,6 +1,6 @@
 {
-  "checkedAt": "2026-09-01T10:20:42.328385Z",
-  "elapsedMs": 464,
+  "checkedAt": "2026-09-03T04:12:00.644182Z",
+  "elapsedMs": 542,
   "errorCode": null,
   "finalHost": "data.etabus.gov.hk",
   "httpStatus": 200,
@@ -14,10 +14,10 @@
   "recipeSha256": "9f42c91fc9c528476de00e3807f37f8a551a8c00cc0664043e78e81ca821c455",
   "recipeVersion": "1.0.0",
   "responseBytes": 349723,
-  "responseSha256": "84d68406a62687cfd41cd7fb4e40c76461a4dc03ba0ac7a335380b70307adbe9",
+  "responseSha256": "c752429be9fee10da092f79c17bd9c4982f6d05898517e82ce9140a3170e9ca9",
   "schemaFingerprint": "d8b9264f3f5d981d737da07cd0d402869ff179b63b4a9db681845b47c1a35a5b",
   "schemaVersion": 1,
   "sourceReference": "HKAPI-028",
   "toolVersion": "0.1.0",
-  "validUntil": "2026-09-08T10:20:42.328385Z"
+  "validUntil": "2026-09-10T04:12:00.644182Z"
 }

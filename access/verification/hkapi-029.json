@@ -1,6 +1,6 @@
 {
-  "checkedAt": "2026-09-01T10:20:42.328385Z",
-  "elapsedMs": 378,
+  "checkedAt": "2026-09-03T04:12:00.644182Z",
+  "elapsedMs": 1473,
   "errorCode": null,
   "finalHost": "data.etagmb.gov.hk",
   "httpStatus": 200,
@@ -14,10 +14,10 @@
   "recipeSha256": "9190a75016969079400dbc7794bf3e9309c40a49b5f03caeb7c55cb852f44d14",
   "recipeVersion": "1.0.0",
   "responseBytes": 761,
-  "responseSha256": "eb96d78057798965cc0aec4962b51da32b6cbf5fd07e708d7730699ee14171be",
+  "responseSha256": "674264044b64348b8dd5912bd05d0c1a5a2f45d8baec20689fd2f40cca3a760d",
   "schemaFingerprint": "6db71c67421344ad7e1667518dca25adee93a0588df504b9a168e6c73511aefc",
   "schemaVersion": 1,
   "sourceReference": "HKAPI-029",
   "toolVersion": "0.1.0",
-  "validUntil": "2026-09-08T10:20:42.328385Z"
+  "validUntil": "2026-09-10T04:12:00.644182Z"
 }

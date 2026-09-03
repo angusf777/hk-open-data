@@ -30,20 +30,25 @@ export class PlatformClientError extends Error {
   }
 }
 
-const routeByTool: Record<string, { path: string; detailKey?: string }> = {
+const routeByTool: Record<string, { path: string; detailKeys?: readonly string[] }> = {
   sources_list: { path: "sources" },
-  source_get: { path: "sources", detailKey: "source_id" },
+  source_get: { path: "sources", detailKeys: ["source_id"] },
   source_records_query: { path: "source-records" },
-  source_record_get: { path: "source-records", detailKey: "source_record_id" },
+  source_record_get: { path: "source-records", detailKeys: ["source_record_id"] },
   events_query: { path: "events" },
-  event_get: { path: "events", detailKey: "event_id" },
+  event_get: { path: "events", detailKeys: ["event_id"] },
   monitor_targets_list: { path: "monitor-targets" },
-  monitor_target_get: { path: "monitor-targets", detailKey: "monitor_id" },
+  monitor_target_get: { path: "monitor-targets", detailKeys: ["monitor_id"] },
   incidents_list: { path: "incidents" },
-  incident_get: { path: "incidents", detailKey: "incident_id" },
+  incident_get: { path: "incidents", detailKeys: ["incident_id"] },
   status_summary: { path: "status/summary" },
   access_recipes_list: { path: "access-recipes" },
-  access_recipe_get: { path: "access-recipes", detailKey: "source_reference" },
+  access_recipe_get: { path: "access-recipes", detailKeys: ["source_reference"] },
+  access_resources_list: { path: "access-resources" },
+  access_resource_get: {
+    path: "access-resources",
+    detailKeys: ["dataset_id", "resource_id"],
+  },
 };
 
 function strings(value: unknown): string[] {
@@ -100,13 +105,20 @@ export class RestPlatformClient implements PlatformReadClient {
     }
     const values = { ...input };
     let path = route.path;
-    if (route.detailKey !== undefined) {
-      const identifier = values[route.detailKey];
-      if (typeof identifier !== "string") {
-        throw new PlatformClientError("INVALID_REQUEST", "Detail identifier is required", false, "local");
+    if (route.detailKeys !== undefined) {
+      for (const detailKey of route.detailKeys) {
+        const identifier = values[detailKey];
+        if (typeof identifier !== "string") {
+          throw new PlatformClientError(
+            "INVALID_REQUEST",
+            "Detail identifier is required",
+            false,
+            "local",
+          );
+        }
+        path = `${path}/${encodeURIComponent(identifier)}`;
+        delete values[detailKey];
       }
-      path = `${path}/${encodeURIComponent(identifier)}`;
-      delete values[route.detailKey];
     }
     if (name === "source_record_get") {
       delete values["include_lineage"];

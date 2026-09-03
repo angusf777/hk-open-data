@@ -212,3 +212,40 @@ No technical or link check grants permission for commercial use, caching, redist
 personal-data processing or any other proposed use. Current provider terms, licences, technical
 controls and applicable law remain controlling. This record does not establish a GitHub push,
 hosted CI, Pages deployment, release publication, provider approval or independent certification.
+
+## 2026-09-03 — provider-resource access qualification
+
+- **Tested tree base:** `e19d716fbe28c96e9f44c494c5f5887c766a2122`
+- **Branch:** `codex/source-access-toolkit-implementation`
+- **Environment:** macOS arm64; Node.js `v22.22.3`; pnpm `10.0.0`; uv `0.11.16`;
+  uv-managed Python `3.12.11`; Docker `29.7.2`; Compose `5.5.0`
+- **Current inventory:** 5,862 resources across 350 unique DATA.GOV.HK datasets; 5,391
+  parameter-free HTTPS, six parameterized HTTPS and 465 HTTP-only; inventory SHA-256
+  `528da915711f0a227c0aebb6eba7937662f29ba960185b228fa7a3814e2f8c95`
+- **Current recipe evidence:** 227 anonymous executable recipes attempted; 219 successes; eight
+  retained failures; 38 additional official entries remain manual guidance
+
+| Command or gate | Observed result |
+| --- | --- |
+| `python -m scripts.data_gov_resources refresh --concurrency 3` | All 350 reviewed package identifiers resolved exactly once to the 5,862-resource inventory |
+| `python -m scripts.data_gov_resources probe --concurrency 3 --sample-bytes 4096 --max-candidates 3` | 310 datasets returned a non-empty 2xx representative payload; five returned current failures; 35 had no parameter-free HTTPS candidate; expected exit 1 preserved the failures rather than reporting a false pass |
+| `hkdata verify --all-anonymous --concurrency 3` | 219/227 recipe requests succeeded; HKAPI-018 retained `MEDIA_TYPE_MISMATCH`; seven LegCo recipes retained `SOURCE_UNAVAILABLE`; expected exit 5 reflected the failures |
+| Guarded NLB route → stops → ETA workflow | All three requests returned HTTP 200; 64 routes, 56 stops for route 1 and one current ETA for route 1/stop 1; complete hashes are published in the bilingual usage guide and response bodies were deleted |
+| Generated cURL, Python and Node examples for the NLB route resource | Each ran from an isolated directory, downloaded exactly 18,797 bytes and parsed a non-empty route list; redirect, size and overwrite safeguards remained active |
+| Other parameterized resource checks | Airport history returned HTTP 200 with 414 flight records; Sun Ferry returned HTTP 200 with one ETA; Water Taxi and Fortune Ferry returned HTTP 403 and remain explicit current failures |
+| `make verify-all` | Passed: deterministic 521-record catalogue, 265-recipe and 5,862-resource registries; workspace tests/builds/type checks; browser/accessibility checks; Ruff; strict mypy; contract drift; secret and public-boundary scans; repository policy tests |
+| `make verify-integrated` | Passed: PostgreSQL/PostGIS, raw-byte connector and Docker/Compose tests; the built API and MCP containers returned the same exact provider-resource URL template |
+| Production dependency audits | `pnpm audit --prod` and `uv run pip-audit` reported no known vulnerabilities in scanned dependencies |
+| `git diff --check` | Passed with no whitespace errors before this qualification record was added |
+
+The automatic payload probe does not invent required parameter values. Source-specific examples
+for all six parameterized URLs are documented separately; four were exercised successfully through
+the guarded CLI and the two Water Taxi/Fortune Ferry datasets were blocked by HTTP 403 from this
+host. The 465 HTTP-only resources are intentionally discoverable but not fetched by the safe client.
+
+This qualification proves current technical access only within the scopes above. It does not mean
+that all 5,862 URLs were fetched, that the 38 manual-only sources or 111 third-party MCP candidates
+were executed, or that any source grants permission for commercial use, caching, redistribution,
+scraping or personal-data processing. Provider terms, access controls and applicable law remain
+controlling. This entry records no GitHub push, hosted CI, deployment, release, provider approval,
+legal clearance or independent certification.

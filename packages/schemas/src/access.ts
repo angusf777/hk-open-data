@@ -242,10 +242,67 @@ export type GeneratedAccessRecipe = z.infer<typeof generatedAccessRecipeSchema>;
 export type AccessRecipeIndex = z.infer<typeof accessRecipeIndexSchema>;
 export type AccessStatus = z.infer<typeof accessStatusSchema>;
 
+export const dataGovResourceAccessSchema = z.enum([
+  "ready",
+  "parameters-required",
+  "insecure-http",
+  "invalid-url",
+]);
+
+export const dataGovResourceSchema = z
+  .object({
+    schemaVersion: z.literal(1),
+    sourceReferences: z.array(z.string().regex(/^HKAPI-[0-9]{3}$/)).min(1),
+    datasetId: z.string().min(1),
+    resourceId: z.string().min(1),
+    name: z.string().min(1),
+    format: z.string().min(1),
+    urlTemplate: z.string().min(1),
+    templateParameters: z.array(z.string().regex(/^[A-Za-z][A-Za-z0-9_]*$/)),
+    access: dataGovResourceAccessSchema,
+  })
+  .strict()
+  .superRefine((resource, context) => {
+    const expected = resource.urlTemplate.startsWith("http://")
+      ? "insecure-http"
+      : resource.urlTemplate.startsWith("https://")
+        ? resource.templateParameters.length > 0
+          ? "parameters-required"
+          : "ready"
+        : "invalid-url";
+    if (resource.access !== expected) {
+      context.addIssue({ code: "custom", message: `resource access must be ${expected}` });
+    }
+    if (new Set(resource.sourceReferences).size !== resource.sourceReferences.length) {
+      context.addIssue({ code: "custom", message: "source references must be unique" });
+    }
+    if (new Set(resource.templateParameters).size !== resource.templateParameters.length) {
+      context.addIssue({ code: "custom", message: "template parameters must be unique" });
+    }
+  });
+
+export const dataGovResourceInventorySchema = z
+  .object({
+    schemaVersion: z.literal(1),
+    checkedAt: z.iso.datetime(),
+    packageEndpoint: z.url().startsWith("https://"),
+    resources: z.array(dataGovResourceSchema),
+  })
+  .strict();
+
+export type DataGovResource = z.infer<typeof dataGovResourceSchema>;
+export type DataGovResourceInventory = z.infer<typeof dataGovResourceInventorySchema>;
+
 const workspaceRoot = resolve(dirname(fileURLToPath(import.meta.url)), "../../..");
 
 export function loadAccessRecipeIndex(
   path = resolve(workspaceRoot, "access/generated/recipes.json"),
 ): AccessRecipeIndex {
   return accessRecipeIndexSchema.parse(JSON.parse(readFileSync(path, "utf8")) as unknown);
+}
+
+export function loadDataGovResourceInventory(
+  path = resolve(workspaceRoot, "access/generated/data-gov-resources.json"),
+): DataGovResourceInventory {
+  return dataGovResourceInventorySchema.parse(JSON.parse(readFileSync(path, "utf8")) as unknown);
 }

@@ -45,9 +45,14 @@ The public recipe routes expose the generated registry without contacting a list
   `verification_freshness`, `cursor` and `limit` filters.
 - GET `/v1/access-recipes/{source_reference}` returns one recipe, its examples, limitations,
   canonical hash and metadata-only verification summary.
+- GET `/v1/access-resources` lists exact mapped provider resources using `source_reference`,
+  `dataset_id`, `format`, `access`, `cursor` and `limit` filters.
+- GET `/v1/access-resources/{dataset_id}/{resource_id}` returns one URL template, required
+  parameters, access classification and copyable local CLI commands.
 
 The registry is read-only for the running service. It is generated from
-`access/recipes/official/` and `access/verification/` during repository development. There is no
+`access/recipes/official/`, `access/generated/data-gov-resources.json` and
+`access/verification/` during repository development. There is no
 REST route that accepts an arbitrary source URL or executes a recipe. See the
 [source-access guide](../../docs/getting-started/access-recipes.md) for the explicit CLI execution
 boundary.

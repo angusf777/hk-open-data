@@ -6,6 +6,7 @@ from pathlib import Path
 
 import pytest
 from hk_data_sdk.cli import main
+from hk_data_worker.access.resources import DataGovResourceInventory, build_resource
 from hk_data_worker.fetch import RetryExhausted, SafeFetcher
 from hk_data_worker.models import ApprovedRequest, FetchResult
 
@@ -17,6 +18,29 @@ def _repository(tmp_path: Path) -> Path:
     recipes.mkdir(parents=True)
     shutil.copy(FIXTURES / "valid" / "hkapi-001.yml", recipes)
     return tmp_path
+
+
+def _resource_inventory(root: Path, *, url: str = "https://public.example/data.csv") -> None:
+    inventory = DataGovResourceInventory(
+        schema_version=1,
+        checked_at="2026-09-03T00:00:00Z",
+        package_endpoint="https://data.gov.hk/en-data/api/3/action/package_show",
+        resources=(
+            build_resource(
+                "dataset-one",
+                ("HKAPI-001",),
+                {
+                    "id": "resource-one",
+                    "name": "Current data",
+                    "format": "CSV",
+                    "url": url,
+                },
+            ),
+        ),
+    )
+    path = root / "access" / "generated" / "data-gov-resources.json"
+    path.parent.mkdir(parents=True)
+    path.write_text(inventory.model_dump_json(by_alias=True), encoding="utf-8")
 
 
 class FixtureFetcher:
@@ -99,11 +123,14 @@ def test_verify_writes_metadata_only_evidence(
 ) -> None:
     root = _repository(tmp_path)
 
-    assert main(
-        ["verify", "HKAPI-001"],
-        repository_root=root,
-        fetcher=FixtureFetcher(),
-    ) == 0
+    assert (
+        main(
+            ["verify", "HKAPI-001"],
+            repository_root=root,
+            fetcher=FixtureFetcher(),
+        )
+        == 0
+    )
 
     evidence = root / "access" / "verification" / "hkapi-001.json"
     assert evidence.exists()
@@ -127,3 +154,101 @@ def test_verify_all_records_failure_evidence_and_returns_a_stable_exit_code(
     assert '"outcome": "failure"' in evidence.read_text(encoding="utf-8")
     assert "provider details" not in evidence.read_text(encoding="utf-8")
     assert "SOURCE_UNAVAILABLE" in capsys.readouterr().err
+
+
+def test_resources_lists_current_provider_endpoints_offline(
+    tmp_path: Path,
+    monkeypatch: pytest.MonkeyPatch,
+    capsys: pytest.CaptureFixture[str],
+) -> None:
+    root = _repository(tmp_path)
+    _resource_inventory(root)
+    monkeypatch.setattr(SafeFetcher, "fetch", lambda *_: pytest.fail("network used"))
+
+    assert main(["resources", "HKAPI-001"], repository_root=root) == 0
+
+    output = json.loads(capsys.readouterr().out)
+    assert output[0]["resourceId"] == "resource-one"
+    assert output[0]["urlTemplate"] == "https://public.example/data.csv"
+
+
+def test_cli_uses_repository_environment_outside_checkout(
+    tmp_path: Path,
+    monkeypatch: pytest.MonkeyPatch,
+    capsys: pytest.CaptureFixture[str],
+) -> None:
+    root = _repository(tmp_path / "repository")
+    _resource_inventory(root)
+    outside = tmp_path / "outside"
+    outside.mkdir()
+    monkeypatch.chdir(outside)
+
+    assert (
+        main(
+            ["resources", "HKAPI-001"],
+            environ={"HK_OPEN_DATA_REPOSITORY": str(root)},
+        )
+        == 0
+    )
+
+    assert json.loads(capsys.readouterr().out)[0]["resourceId"] == "resource-one"
+
+
+def test_resource_example_uses_selected_provider_endpoint(
+    tmp_path: Path, capsys: pytest.CaptureFixture[str]
+) -> None:
+    root = _repository(tmp_path)
+    _resource_inventory(root)
+
+    assert (
+        main(
+            ["resource-example", "HKAPI-001", "resource-one", "python"],
+            repository_root=root,
+        )
+        == 0
+    )
+
+    assert "https://public.example/data.csv" in capsys.readouterr().out
+
+
+def test_fetch_resource_writes_provider_bytes_without_overwriting(
+    tmp_path: Path, capsys: pytest.CaptureFixture[str]
+) -> None:
+    root = _repository(tmp_path)
+    _resource_inventory(root)
+    output = tmp_path / "download.csv"
+
+    assert (
+        main(
+            [
+                "fetch-resource",
+                "HKAPI-001",
+                "resource-one",
+                "--output",
+                str(output),
+            ],
+            repository_root=root,
+            fetcher=FixtureFetcher(),
+        )
+        == 0
+    )
+    assert output.read_bytes() == b'{"success":true,"result":[{"id":"one"}]}'
+    diagnostics = json.loads(capsys.readouterr().err)
+    assert diagnostics["resourceId"] == "resource-one"
+    assert diagnostics["responseSha256"]
+
+    assert (
+        main(
+            [
+                "fetch-resource",
+                "HKAPI-001",
+                "resource-one",
+                "--output",
+                str(output),
+            ],
+            repository_root=root,
+            fetcher=FixtureFetcher(),
+        )
+        == 2
+    )
+    assert "OUTPUT_EXISTS" in capsys.readouterr().err

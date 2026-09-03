@@ -30,17 +30,18 @@ HK Open Data v0.1.0 是獨立社群維護的香港公共數據、API 及唯讀 M
 
 I built HK Open Data to make Hong Kong's public-data landscape easier to inspect and reuse
 responsibly. It is a bilingual, source-backed catalogue with deterministic JSON, 521 resource
-records, local SDK/API surfaces, and 13 read-only MCP tools. The static site never contacts listed
-providers. The optional data access and API health tools are self-hosted, and connections stay off
-until the user enables them. Corrections, translations, accessibility improvements, and connectors
-backed by synthetic test data are welcome.
+records, 5,862 resolved DATA.GOV.HK provider resources, copyable source-specific examples, local
+SDK/API surfaces, and 15 read-only MCP tools. A bounded live run read representative payloads for
+310 of 350 mapped DATA.GOV.HK datasets; every current exception is published. The static site never
+contacts listed providers. Provider requests remain explicit user actions.
 
 ## 開發者及公民科技社群 — 繁體中文
 
 HK Open Data 將分散的香港公共數據資源整理成可搜尋、可審閱的雙語目錄。項目包含 521 項附
-來源紀錄、可重現 JSON、本機 SDK/API 介面及 11 個唯讀 MCP 工具。靜態網站不會聯絡列出的
-提供者；可選的數據存取及 API 健康監察工具只供自託管，所有連線均預設關閉。歡迎協助更正
-資料、審閱繁體中文、改善無障礙體驗，或以合成測試資料新增連接器。
+來源紀錄、5,862 項已解析的 DATA.GOV.HK 供應者資源、可複製的來源專用範例、本機 SDK/API
+介面及 15 個唯讀 MCP 工具。有界限即時核查已讀取 350 個已對應 DATA.GOV.HK 數據集中 310 個
+的代表內容，所有現行例外均已公開。靜態網站不會聯絡列出的提供者；供應者要求必須由使用者
+明確執行。
 
 ## Professional network — English
 

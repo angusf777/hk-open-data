@@ -10,12 +10,15 @@ all of that locally before deciding whether to contact a listed source.
 The current registry covers all 265 official sources in the catalogue: 227 executable recipes with
 synthetic test fixtures and 38 entries with source-specific manual guidance. Of the executable
 recipes, 190 contain 356 reviewed source-to-dataset mappings across 350 unique DATA.GOV.HK dataset
-identifiers and resolve them to their current resource URLs;
-the other 37 contact a documented data endpoint directly. A bounded check on 1 September 2026
-recorded successful live verification for all 350 mapped dataset identifiers, all 190 resource
-index defaults, and 29 direct-response recipes.
-The eight other direct-response recipes retain fixture evidence and a recorded live failure. Live
-evidence expires and never guarantees later availability.
+identifiers; the other 37 contact a documented data endpoint directly.
+
+On 3 September 2026, all 350 mapped DATA.GOV.HK package records resolved successfully to 5,862
+provider resources. The safe inventory classified 5,391 as parameter-free HTTPS, 6 as HTTPS
+templates that require parameters, and 465 as HTTP-only. A separate bounded payload run received a
+non-empty 2xx response for a representative resource from 310 datasets. Five datasets returned a
+current provider failure and 35 had no parameter-free HTTPS candidate. See the
+[exact exceptions and method](../access/provider-resources.md). Live evidence expires and never
+guarantees later availability.
 
 The 145 external resources and 111 community MCP projects are catalogue candidates rather than
 source recipes. The current link pass reached or safely redirected 128 external landing pages and
@@ -33,6 +36,9 @@ uv sync --frozen --all-groups
 ```
 
 The commands below use the project-local environment, so they do not install a global package.
+Run them inside the checkout. If you invoke the installed `hkdata` entry point from elsewhere, set
+`HK_OPEN_DATA_REPOSITORY=/absolute/path/to/hk-open-data`; the CLI also discovers its checkout when
+installed in editable development mode.
 
 ## Inspect a recipe without using the network
 
@@ -54,9 +60,92 @@ dataset-specific choice.
 ### DATA.GOV.HK resource indexes
 
 `data-gov-resource-index` recipes call the official CKAN `package_show` action with one or more
-reviewed dataset identifiers. The response contains current resource names, formats and URLs. It
-does **not** mean that every linked file or downstream API was downloaded, parsed, licensed, or
-live-tested. For a catalogue entry that represents several datasets, inspect the `id` parameter's
+reviewed dataset identifiers. The generated
+[`data-gov-resources.json`](../../access/generated/data-gov-resources.json) inventory then records
+each resource ID, exact provider URL or template, format, required parameter names, mapped
+catalogue sources and access classification. It contains provider metadata—not copied datasets.
+
+List the current provider resources for one catalogue source without using the network:
+
+```bash
+uv run --project packages/sdk-python hkdata resources HKAPI-030
+uv run --project packages/sdk-python hkdata resources HKAPI-030 \
+  --dataset nlb-bus-nlb-bus-service-v2
+```
+
+Generate copyable cURL, Python or TypeScript for one resource. Required values are substituted and
+URL-encoded only after all parameter names pass the resource template's allowlist:
+
+```bash
+uv run --project packages/sdk-python hkdata resource-example HKAPI-030 \
+  6a3b194a-4718-44aa-9087-34ac2f7117ff curl \
+  --dataset nlb-bus-nlb-bus-service-v2 --param routeId=1
+```
+
+The result is a direct provider request:
+
+```bash
+curl --fail-with-body --location --max-time 30 --max-filesize 26214400 \
+  --output resource.data \
+  'https://rt.data.gov.hk/v2/transport/nlb/stop.php?action=list&routeId=1'
+```
+
+To download through the guarded CLI, choose the destination and size limit explicitly. The command
+uses exclusive file creation and refuses to overwrite an existing file:
+
+```bash
+uv run --project packages/sdk-python hkdata fetch-resource HKAPI-030 \
+  96c5e827-3d3a-4110-8cd2-e7c80cd562bc \
+  --dataset nlb-bus-nlb-bus-service-v2 --max-bytes 1048576 \
+  --output nlb-routes.json
+```
+
+This exact command was rerun on 3 September 2026 and returned HTTP 200, 64 NLB routes and 18,797
+bytes. The following commands prove both parameterized URL paths through the same guarded CLI:
+
+```bash
+uv run --project packages/sdk-python hkdata fetch-resource HKAPI-030 \
+  6a3b194a-4718-44aa-9087-34ac2f7117ff \
+  --dataset nlb-bus-nlb-bus-service-v2 --param routeId=1 \
+  --max-bytes 1048576 --output nlb-stops.json
+
+uv run --project packages/sdk-python hkdata fetch-resource HKAPI-030 \
+  690662ca-748a-4dc0-89c1-b3aaf280d06a \
+  --dataset nlb-bus-nlb-bus-service-v2 \
+  --param routeId=1 --param stopId=1 --param languageCode=en \
+  --max-bytes 1048576 --output nlb-eta.json
+```
+
+The check completed at 2026-09-03T04:00:42Z with these observations:
+
+| Request | HTTP | Bytes | Parsed records | Response SHA-256 |
+| --- | ---: | ---: | ---: | --- |
+| Routes | 200 | 18,797 | 64 routes | `44369c71003e8ac47f3970be2ce9f84535629fee90631bc0b9e4c94e9307c590` |
+| Stops for `routeId=1` | 200 | 20,259 | 56 stops | `8e10f16ad787fe3a7344791391136cd907ac69d1359606b6cf2c58ec3771c51b` |
+| ETA for route 1, stop 1 | 200 | 427 | 1 ETA | `37312e81e13c0648899e0ca7b550ede1192594fd9c939dec93dfe25bff58d4d7` |
+
+The hashes and record counts are point-in-time evidence and will change as the provider updates the
+feeds; they are not permanent availability or content guarantees. The downloaded bodies were
+deleted after the check.
+
+The other parameterized provider URLs were checked with values from their official data
+dictionaries:
+
+| Source | Required example | 3 September 2026 observation |
+| --- | --- | --- |
+| HKAPI-076, airport history | `--param date=2026-09-02` (use the previous calendar day in `YYYY-MM-DD`) | HTTP 200; 82,810 bytes; 414 flight records; SHA-256 `efd0f1fbf9a28cedc6da773f691290cf5048d485253aa9d2cdbc1e942623a343` |
+| HKAPI-044, Sun Ferry | `--param routecode=CEMW` (Central to Mui Wo) | HTTP 200; 379 bytes; 1 ETA; SHA-256 `7aba513f6fa8af32717099bee61241e143a4dcf3c5eb369e4389b5eb57380343` |
+| HKAPI-043, Water Taxi | `--param route_code=WATERTAXI` | HTTP 403 from this host; correct documented parameter, but no current automated-access claim |
+| HKAPI-042, Fortune Ferry | `--param route_code=HHTEC` (Hung Hom to Tsim Sha Tsui East) | HTTP 403 from this host; correct documented parameter, but no current automated-access claim |
+
+Use the relevant resource ID from `hkdata resources SOURCE` before the flag above. The airport
+[data specification](https://www.hongkongairport.com/iwov-resources/misc/opendata/Flight_Information_DataSpec_en.pdf),
+Sun Ferry [ETA specification](https://www.sunferry.com.hk/eta/SunFerry_ETA_API_Specification_and_Data_Dictionary.pdf),
+and Water Taxi [data dictionary](https://www.hongkongwatertaxi.com.hk/csv/DataDictionary.pdf)
+remain authoritative for valid parameter values. The 403 responses were preserved as failures;
+the toolkit does not bypass provider access controls.
+
+For a catalogue entry that represents several datasets, inspect the recipe's `id` parameter
 `enum` and select a reviewed identifier explicitly:
 
 ```bash
@@ -112,6 +201,20 @@ Stable non-zero exit codes are: `2` invalid input or unknown recipe, `3` authent
 `4` source unavailable, `5` response media or schema mismatch, `6` recipe not executable, and `7`
 unsafe redirect or oversized response.
 
+Refresh the provider-resource inventory and rerun representative payload evidence only when you
+intend to contact the providers. Concurrency is capped at three; payload samples are capped at 4
+KiB by default and are hashed but not retained:
+
+```bash
+uv run python -m scripts.data_gov_resources refresh --concurrency 3
+uv run python -m scripts.data_gov_resources probe --concurrency 3 \
+  --sample-bytes 4096 --max-candidates 3
+uv run python -m scripts.data_gov_resources check
+```
+
+`check` verifies that the inventory still matches all reviewed dataset mappings, that the probe
+evidence matches the exact inventory hash, and that the generated exception report has not drifted.
+
 ## Understand the status labels
 
 | Status | Meaning |
@@ -133,6 +236,8 @@ The self-hosted REST service exposes repository data only; these routes do not e
 ```text
 GET /v1/access-recipes
 GET /v1/access-recipes/{source_reference}
+GET /v1/access-resources?source_reference=HKAPI-030
+GET /v1/access-resources/{dataset_id}/{resource_id}
 ```
 
 List filters include `adapter`, `status`, `authentication`, `verification_freshness`, `cursor` and
@@ -145,6 +250,11 @@ Python SDK methods:
 recipe = client.get_access_recipe("HKAPI-001")
 page = client.list_access_recipes(status="live-verified")
 example = client.get_access_example("HKAPI-001", "python")
+resources = client.list_access_resources(source_reference="HKAPI-030", limit=10)
+resource = client.get_access_resource(
+    "nlb-bus-nlb-bus-service-v2",
+    "96c5e827-3d3a-4110-8cd2-e7c80cd562bc",
+)
 ```
 
 TypeScript SDK methods:
@@ -153,11 +263,18 @@ TypeScript SDK methods:
 const recipe = await client.getAccessRecipe("HKAPI-001");
 const page = await client.listAccessRecipes({ status: "live-verified" });
 const example = await client.getAccessExample("HKAPI-001", "typescript");
+const resources = await client.listAccessResources({ source_reference: "HKAPI-030", limit: 10 });
+const resource = await client.getAccessResource(
+  "nlb-bus-nlb-bus-service-v2",
+  "96c5e827-3d3a-4110-8cd2-e7c80cd562bc",
+);
 ```
 
-The read-only MCP server provides `access_recipes_list` and `access_recipe_get`. They read the two
-REST routes above and do not execute a source, accept an arbitrary URL, or return source response
-bodies.
+The read-only MCP server provides `access_recipes_list`, `access_recipe_get`,
+`access_resources_list` and `access_resource_get`. They read the four REST routes above and do not
+execute a source, accept an arbitrary URL, or return source response bodies. The resource tools
+make exact URLs and required parameters available to MCP clients while leaving network execution
+as a separate, deliberate action.
 
 ## Add or correct one source
 

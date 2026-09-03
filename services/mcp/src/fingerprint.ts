@@ -21,4 +21,4 @@ export function toolFingerprint(
   return createHash("sha256").update(JSON.stringify(contract)).digest("hex");
 }
 
-export const PINNED_TOOL_FINGERPRINT = "d2c81ecb71afee7a0bd8b46d573a8329866d78c3751de951682f1459e99ec187";
+export const PINNED_TOOL_FINGERPRINT = "196a4ea324b00f0b4815e86ccebd471e7d88cb3824497d175f3dde4a49f8153d";

@@ -1,4 +1,5 @@
 import type {
+  AccessResource,
   AccessExampleLanguage,
   AccessRecipe,
   ApiObject,
@@ -160,6 +161,16 @@ export class HKDataClient {
       throw new Error(`${language} example is not available for this source`);
     }
     return example;
+  }
+
+  listAccessResources(query: Query = {}): Promise<Page<AccessResource>> {
+    return this.#request("access-resources", { query });
+  }
+
+  getAccessResource(datasetId: string, resourceId: string): Promise<AccessResource> {
+    return this.#request(
+      `access-resources/${encodeURIComponent(datasetId)}/${encodeURIComponent(resourceId)}`,
+    );
   }
 
   listSourceRecords(query: Query = {}): Promise<Page<ApiObject>> {

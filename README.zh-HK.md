@@ -82,17 +82,24 @@ make catalogue
 - **227 項可執行配方**均有有界限參數、curl／Python／TypeScript 範例，以及帶雜湊的人工合成
   測試資料。
 - **190 項 DATA.GOV.HK 資源索引配方**包含 356 組已查核的來源至數據集對應，涵蓋 350 個
-  不重複的數據集識別碼，並會把它們解析為提供者的現行資源網址。這些配方回傳官方中繼資料
-  及連結，而非底層資源內容；全部 350 個識別碼在 2026 年 9 月 1 日通過有界限套件中繼資料核查。
-- **37 項直接回應配方**會聯絡已有文件記錄的數據端點；當中 29 項通過同一次有界限即時核查，
-  其餘八項保留人工合成測試證據及已記錄的即時失敗。
+  不重複的數據集識別碼。2026 年 9 月 3 日的更新把它們解析為 **5,862 項實際供應者資源**：
+  5,391 個毋須參數的 HTTPS 網址、6 個需要參數的網址範本，以及 465 個安全擷取器會拒絕的
+  HTTP-only 舊網址。
+- 其後的有界限內容核查，從 **350 個數據集中的 310 個**收到非空白 2xx 樣本；另記錄 5 項
+  當前供應者失敗，以及 35 個沒有免參數 HTTPS 候選資源的數據集。這是每個數據集的代表性證據，
+  並非聲稱已下載全部 5,862 個網址。所有例外均列於
+  [供應者資源核查報告](docs/access/provider-resources.md)。
+- **37 項直接回應配方**會聯絡已有文件記錄的數據端點；2026 年 9 月 3 日的新一輪核查有 29 項
+  成功，其餘八項保留人工合成測試證據及已記錄的即時失敗。
 - **38 項手動指引**列出具體的文件、帳戶、互動流程或尚未解決的端點界線。現時合共 219 項
   配方有相符的即時證據；證據會到期，並不保證日後仍可使用。
 
-**145 項外部資源**及 **111 個社群 MCP 項目**是供讀者探索的目錄項目，並非隨附連接器。
+完整現行資源清單公開於
+[`access/generated/data-gov-resources.json`](access/generated/data-gov-resources.json)，亦會隨靜態
+目錄發布。**145 項外部資源**及 **111 個社群 MCP 項目**是供讀者探索的目錄項目，並非隨附連接器。
 2026 年 9 月 1 日的連結核查成功連接或跟隨有效重新導向至 128 項外部資源及 107 個 MCP
 儲存庫，並為其餘項目記錄結果。該次核查並無登入外部 API，亦無安裝或執行第三方 MCP
-程式碼。本儲存庫自有的 13 項唯讀 MCP 工具則另有合約及整合測試。詳見
+程式碼。本儲存庫自有的 15 項唯讀 MCP 工具則另有合約及整合測試。詳見
 [覆蓋及證據矩陣](docs/access/coverage.md)。
 
 以下指令只在本機查看配方及產生程式碼，不會發出網絡要求：
@@ -100,6 +107,10 @@ make catalogue
 ```bash
 uv run --project packages/sdk-python hkdata recipe HKAPI-001
 uv run --project packages/sdk-python hkdata example HKAPI-001 python
+uv run --project packages/sdk-python hkdata resources HKAPI-030
+uv run --project packages/sdk-python hkdata resource-example HKAPI-030 \
+  96c5e827-3d3a-4110-8cd2-e7c80cd562bc curl \
+  --dataset nlb-bus-nlb-bus-service-v2
 ```
 
 安裝後的簡寫是 `hkdata recipe HKAPI-001` 及 `hkdata example HKAPI-001 python`。請先核對來源的
@@ -108,11 +119,15 @@ uv run --project packages/sdk-python hkdata example HKAPI-001 python
 ```bash
 uv run --project packages/sdk-python hkdata verify HKAPI-001
 uv run --project packages/sdk-python hkdata fetch HKAPI-001 --output json
+uv run --project packages/sdk-python hkdata fetch-resource HKAPI-030 \
+  96c5e827-3d3a-4110-8cd2-e7c80cd562bc \
+  --dataset nlb-bus-nlb-bus-service-v2 --max-bytes 1048576 \
+  --output nlb-routes.json
 ```
 
-本機 REST API、Python 及 TypeScript SDK，以及兩項唯讀 MCP 工具 `access_recipes_list` 和
-`access_recipe_get`，會提供相同配方、範例、限制、雜湊、狀態及驗證摘要。MCP 配方工具不會
-執行所列來源。
+本機 REST API、Python 及 TypeScript SDK，以及四項唯讀存取 MCP 工具，會同時提供配方清單及
+準確的供應者資源清單。`access_resources_list` 與 `access_resource_get` 只會回傳網址範本、
+所需參數、存取分類及 CLI 用法，不會聯絡供應者；實際下載仍須明確執行 CLI 指令。
 
 直接執行 `docker compose up` 只會啟動目錄，不會聯絡外部數據提供者。你必須逐一核對來源的
 適用條款及權限，然後自行啟用數據連線。先閱讀雙語[數據來源指南](docs/getting-started/access-recipes.zh-HK.md)

@@ -53,6 +53,10 @@ def _tree_bytes(root: Path) -> dict[str, bytes]:
         str(path.relative_to(root)): path.read_bytes()
         for path in sorted(root.rglob("*"))
         if path.is_file()
+        and (
+            path.relative_to(root).name in {"recipes.json", "coverage.json"}
+            or path.relative_to(root).parts[0] == "examples"
+        )
     }
 
 
@@ -103,6 +107,14 @@ def _status_document(index: dict[str, object]) -> str:
             "A manual-only entry is an explicit boundary, not a claim that the underlying "
             "public data is unavailable. Live evidence is a time-limited technical check, not "
             "a guarantee of future availability, data quality, licensing or permitted use."
+        ),
+        "",
+        (
+            "For a `data-gov-resource-index` entry, `live-verified` means the official package "
+            "metadata compatibility check passed; it does not mean every downstream file or "
+            "API was fetched. "
+            "Representative provider-payload results and exact exceptions are recorded in the "
+            "[provider-resource verification](provider-resources.md)."
         ),
         "",
         f'- Total official sources: {coverage.get("totalOfficial", 0)}',

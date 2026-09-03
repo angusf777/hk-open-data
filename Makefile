@@ -17,6 +17,7 @@ verify-catalogue:
 verify-access:
 	uv run pytest tests/access -q
 	uv run python scripts/access.py check
+	uv run python -m scripts.data_gov_resources check
 
 verify-site:
 	pnpm --filter @hk-open-data/catalog test

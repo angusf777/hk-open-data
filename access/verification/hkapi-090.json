@@ -1,6 +1,6 @@
 {
-  "checkedAt": "2026-09-01T10:20:42.328385Z",
-  "elapsedMs": 162,
+  "checkedAt": "2026-09-03T04:12:00.644182Z",
+  "elapsedMs": 250,
   "errorCode": null,
   "finalHost": "data.weather.gov.hk",
   "httpStatus": 200,
@@ -13,11 +13,11 @@
   "parsedRecordCount": 1,
   "recipeSha256": "970e2c6127d670a757313dbf1f03d6cfb95dc9b5d508e35218dfbbc398a832cc",
   "recipeVersion": "1.0.0",
-  "responseBytes": 2743,
-  "responseSha256": "a37ae3cdb6818fab98333b993f06348b17f7aa8d7ee9188d6aafc6caf73cbee7",
+  "responseBytes": 2562,
+  "responseSha256": "b3bb094500561382e65308c07bb1936fd4743276e33fa007811d83c2eae64795",
   "schemaFingerprint": "6fe78fb0f867d68bee59294edee520931abd08a1e36006ed12d8957d96f0d40e",
   "schemaVersion": 1,
   "sourceReference": "HKAPI-090",
   "toolVersion": "0.1.0",
-  "validUntil": "2026-09-08T10:20:42.328385Z"
+  "validUntil": "2026-09-10T04:12:00.644182Z"
 }

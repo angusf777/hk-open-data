@@ -11,6 +11,11 @@ const client = new HKDataClient({ baseUrl: "https://toolkit.example/v1" });
 const page = await client.listAccessRecipes({ status: "live-verified", limit: 10 });
 const recipe = await client.getAccessRecipe("HKAPI-001");
 const example = await client.getAccessExample("HKAPI-001", "typescript");
+const resources = await client.listAccessResources({ source_reference: "HKAPI-030", limit: 10 });
+const resource = await client.getAccessResource(
+  "nlb-bus-nlb-bus-service-v2",
+  "96c5e827-3d3a-4110-8cd2-e7c80cd562bc",
+);
 ```
 
 The access methods are:
@@ -18,6 +23,8 @@ The access methods are:
 - `listAccessRecipes(query)` for a cursor page and API-supported filters;
 - `getAccessRecipe(sourceReference)` for one complete recipe; and
 - `getAccessExample(sourceReference, language)` for `curl`, `python`, or `typescript` code.
+- `listAccessResources(query)` for exact mapped provider URLs and templates; and
+- `getAccessResource(datasetId, resourceId)` for one resource and its CLI usage.
 
 These methods read the self-hosted REST registry and do not execute a listed source. For offline
 lookup or a deliberate bounded request, use `hkdata recipe HKAPI-001`,

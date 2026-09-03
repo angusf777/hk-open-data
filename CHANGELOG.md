@@ -15,12 +15,19 @@ All notable project changes are documented here. The format follows
 - Catalogue access panels and filters, two REST recipe routes, Python and TypeScript SDK recipe
   methods, and the read-only MCP tools `access_recipes_list` and `access_recipe_get`.
 - English and Traditional Chinese source-access guides, generated per-source status documentation,
-  and evidence from a bounded 37-recipe check on 1 September 2026.
+  and refreshed evidence from a bounded 227-recipe check on 3 September 2026.
+- Reproducible inventory of 5,862 provider resources from all 350 reviewed DATA.GOV.HK package
+  identifiers, including exact URL templates, required parameters, formats and source mappings.
+- Guarded `hkdata resources`, `resource-example` and `fetch-resource` commands; corresponding REST,
+  Python SDK, TypeScript SDK and read-only MCP resource-discovery surfaces.
+- Metadata-only evidence from a bounded representative payload check of all 350 mapped datasets,
+  with 310 successes and every current failure or non-probeable dataset published.
 
 ### Changed
 
-- The MCP contract now pins exactly 13 read-only tools at version `2026-09-01.v1`.
+- The MCP contract now pins exactly 15 read-only tools at version `2026-09-01.v1`.
 - Catalogue connector labels are derived from each source's effective recipe status.
+- Recipe generation preserves independently generated provider-resource artifacts.
 
 ### Security
 

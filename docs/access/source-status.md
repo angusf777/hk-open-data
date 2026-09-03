@@ -2,6 +2,8 @@
 
 This generated review index records what the toolkit can execute safely today. A manual-only entry is an explicit boundary, not a claim that the underlying public data is unavailable. Live evidence is a time-limited technical check, not a guarantee of future availability, data quality, licensing or permitted use.
 
+For a `data-gov-resource-index` entry, `live-verified` means the official package metadata compatibility check passed; it does not mean every downstream file or API was fetched. Representative provider-payload results and exact exceptions are recorded in the [provider-resource verification](provider-resources.md).
+
 - Total official sources: 265
 - Executable recipes: 227
 - DATA.GOV.HK resource-index recipes: 190

@@ -8,10 +8,13 @@
 
 現有登記涵蓋目錄內全部 265 項官方來源：227 項可執行配方均有人工合成測試資料，另有 38 項
 按來源編寫的手動指引。可執行配方中，190 項包含 356 組已查核的來源至數據集對應，涵蓋 350
-個不重複的 DATA.GOV.HK 數據集識別碼，並會把它們解析為現行資源網址；另外 37 項會直接聯絡
-已記錄的數據端點。2026 年 9 月 1 日的一次有界限核查，為全部 350 個數據集識別碼、190 項
-資源索引的預設值及 29 項直接回應配方記錄了成功的即時技術驗證；其餘八項直接回應配方保留
-測試資料證據及一次即時失敗記錄。即時證據會到期，亦不保證日後仍可使用。
+個不重複的 DATA.GOV.HK 數據集識別碼；另外 37 項會直接聯絡已有文件記錄的數據端點。
+
+2026 年 9 月 3 日，全部 350 個 DATA.GOV.HK 套件紀錄均成功解析為 5,862 項供應者資源：
+5,391 個免參數 HTTPS 網址、6 個需要參數的 HTTPS 範本，以及 465 個 HTTP-only 網址。另一輪
+有界限內容核查從 310 個數據集的代表資源收到非空白 2xx 回應；5 個數據集出現當前供應者失敗，
+35 個則沒有免參數 HTTPS 候選。詳見[準確例外及核查方法](../access/provider-resources.md)。即時
+證據會到期，亦不保證日後仍可使用。
 
 145 項外部資源及 111 個社群 MCP 項目屬目錄候選項目，並非來源配方。現行連結核查成功到達或
 安全重新導向 128 個外部首頁及 107 個 MCP 程式庫連結，但沒有登入這些 API，亦沒有執行第三方
@@ -28,6 +31,9 @@ uv sync --frozen --all-groups
 ```
 
 以下指令使用項目本身的環境，不會安裝全域套件。
+請在儲存庫工作目錄內執行。如要在其他目錄呼叫已安裝的 `hkdata`，請設定
+`HK_OPEN_DATA_REPOSITORY=/absolute/path/to/hk-open-data`；以 editable 開發模式安裝時，CLI
+亦會自動尋找所屬工作目錄。
 
 ## 離線查看配方
 
@@ -46,9 +52,80 @@ uv run --project packages/sdk-python hkdata example HKAPI-001 python
 ### DATA.GOV.HK 資源索引
 
 `data-gov-resource-index` 配方會使用一個或多個已查核的數據集識別碼，呼叫官方 CKAN
-`package_show` 動作。回應包含現行資源名稱、格式及網址；這**不代表**每個連結檔案或下游 API
-均已下載、解析、獲授權或通過即時測試。如一項目錄紀錄涵蓋多個數據集，請查看 `id` 參數的
-`enum`，並明確選擇已查核的識別碼：
+`package_show` 動作。產生的
+[`data-gov-resources.json`](../../access/generated/data-gov-resources.json) 會列出每項資源的 ID、
+準確供應者網址或範本、格式、所需參數、所屬目錄來源及存取分類；檔案只含供應者中繼資料，
+不含複製的數據集。
+
+以下指令離線列出 HKAPI-030 的現行供應者資源：
+
+```bash
+uv run --project packages/sdk-python hkdata resources HKAPI-030
+uv run --project packages/sdk-python hkdata resources HKAPI-030 \
+  --dataset nlb-bus-nlb-bus-service-v2
+```
+
+為指定資源產生可複製的 cURL、Python 或 TypeScript；只有經範本准許的參數名稱才可代入，參數
+值會安全編碼：
+
+```bash
+uv run --project packages/sdk-python hkdata resource-example HKAPI-030 \
+  6a3b194a-4718-44aa-9087-34ac2f7117ff curl \
+  --dataset nlb-bus-nlb-bus-service-v2 --param routeId=1
+```
+
+透過有保護措施的 CLI 下載時，必須明確指定目的地及大小上限；如檔案已存在，指令會拒絕覆寫：
+
+```bash
+uv run --project packages/sdk-python hkdata fetch-resource HKAPI-030 \
+  96c5e827-3d3a-4110-8cd2-e7c80cd562bc \
+  --dataset nlb-bus-nlb-bus-service-v2 --max-bytes 1048576 \
+  --output nlb-routes.json
+```
+
+此準確指令在 2026 年 9 月 3 日重新執行時收到 HTTP 200、64 條新大嶼山巴士路線及 18,797
+bytes。以下指令透過同一個受保護 CLI 核實兩種帶參數網址：
+
+```bash
+uv run --project packages/sdk-python hkdata fetch-resource HKAPI-030 \
+  6a3b194a-4718-44aa-9087-34ac2f7117ff \
+  --dataset nlb-bus-nlb-bus-service-v2 --param routeId=1 \
+  --max-bytes 1048576 --output nlb-stops.json
+
+uv run --project packages/sdk-python hkdata fetch-resource HKAPI-030 \
+  690662ca-748a-4dc0-89c1-b3aaf280d06a \
+  --dataset nlb-bus-nlb-bus-service-v2 \
+  --param routeId=1 --param stopId=1 --param languageCode=en \
+  --max-bytes 1048576 --output nlb-eta.json
+```
+
+核查於 2026-09-03T04:00:42Z 完成，觀察結果如下：
+
+| 要求 | HTTP | Bytes | 已解析紀錄 | 回應 SHA-256 |
+| --- | ---: | ---: | ---: | --- |
+| 路線 | 200 | 18,797 | 64 條路線 | `44369c71003e8ac47f3970be2ce9f84535629fee90631bc0b9e4c94e9307c590` |
+| `routeId=1` 的車站 | 200 | 20,259 | 56 個車站 | `8e10f16ad787fe3a7344791391136cd907ac69d1359606b6cf2c58ec3771c51b` |
+| 路線 1、車站 1 的 ETA | 200 | 427 | 1 項 ETA | `37312e81e13c0648899e0ca7b550ede1192594fd9c939dec93dfe25bff58d4d7` |
+
+雜湊及紀錄數只屬該時點證據，會隨供應者更新而改變，並非永久可用性或內容保證。核查後已刪除
+所下載的內容。
+
+其餘帶參數供應者網址，已使用官方數據字典內的值核查：
+
+| 來源 | 所需範例 | 2026 年 9 月 3 日觀察結果 |
+| --- | --- | --- |
+| HKAPI-076，機場歷史航班 | `--param date=2026-09-02`（應使用前一曆日，格式為 `YYYY-MM-DD`） | HTTP 200；82,810 bytes；414 項航班紀錄；SHA-256 `efd0f1fbf9a28cedc6da773f691290cf5048d485253aa9d2cdbc1e942623a343` |
+| HKAPI-044，新渡輪 | `--param routecode=CEMW`（中環至梅窩） | HTTP 200；379 bytes；1 項 ETA；SHA-256 `7aba513f6fa8af32717099bee61241e143a4dcf3c5eb369e4389b5eb57380343` |
+| HKAPI-043，水上的士 | `--param route_code=WATERTAXI` | 本核查主機收到 HTTP 403；參數符合文件，但目前不聲稱可自動存取 |
+| HKAPI-042，富裕小輪 | `--param route_code=HHTEC`（紅磡至尖沙咀東） | 本核查主機收到 HTTP 403；參數符合文件，但目前不聲稱可自動存取 |
+
+請先以 `hkdata resources SOURCE` 找出對應資源 ID，再加上表內參數。機場
+[數據規格](https://www.hongkongairport.com/iwov-resources/misc/opendata/Flight_Information_DataSpec_en.pdf)、
+新渡輪 [ETA 規格](https://www.sunferry.com.hk/eta/SunFerry_ETA_API_Specification_and_Data_Dictionary.pdf)
+及水上的士[數據字典](https://www.hongkongwatertaxi.com.hk/csv/DataDictionary.pdf)仍是有效參數值的
+權威來源。HTTP 403 會保留為失敗證據；工具不會繞過供應者存取控制。
+
+如一項目錄紀錄涵蓋多個數據集，請查看配方 `id` 參數的 `enum`，並明確選擇已查核的識別碼：
 
 ```bash
 uv run --project packages/sdk-python hkdata recipe HKAPI-174
@@ -97,6 +174,16 @@ uv run --project packages/sdk-python hkdata verify --all-anonymous --concurrency
 穩定的非零退出碼為：`2` 輸入無效或找不到配方、`3` 需要身份驗證、`4` 來源未能連線、`5`
 回應媒體或結構不符、`6` 配方不可執行、`7` 不安全重新導向或回應過大。
 
+只有在你明確選擇聯絡供應者時，才更新資源清單及代表內容證據。並行數上限為三；內容樣本預設
+上限為 4 KiB，只會保存雜湊，不會保存內容：
+
+```bash
+uv run python -m scripts.data_gov_resources refresh --concurrency 3
+uv run python -m scripts.data_gov_resources probe --concurrency 3 \
+  --sample-bytes 4096 --max-candidates 3
+uv run python -m scripts.data_gov_resources check
+```
+
 ## 理解狀態
 
 | 狀態 | 意義 |
@@ -117,6 +204,8 @@ uv run --project packages/sdk-python hkdata verify --all-anonymous --concurrency
 ```text
 GET /v1/access-recipes
 GET /v1/access-recipes/{source_reference}
+GET /v1/access-resources?source_reference=HKAPI-030
+GET /v1/access-resources/{dataset_id}/{resource_id}
 ```
 
 列表可按 `adapter`、`status`、`authentication`、`verification_freshness`、`cursor` 及 `limit`
@@ -128,6 +217,11 @@ Python SDK 方法：
 recipe = client.get_access_recipe("HKAPI-001")
 page = client.list_access_recipes(status="live-verified")
 example = client.get_access_example("HKAPI-001", "python")
+resources = client.list_access_resources(source_reference="HKAPI-030", limit=10)
+resource = client.get_access_resource(
+    "nlb-bus-nlb-bus-service-v2",
+    "96c5e827-3d3a-4110-8cd2-e7c80cd562bc",
+)
 ```
 
 TypeScript SDK 方法：
@@ -136,10 +230,17 @@ TypeScript SDK 方法：
 const recipe = await client.getAccessRecipe("HKAPI-001");
 const page = await client.listAccessRecipes({ status: "live-verified" });
 const example = await client.getAccessExample("HKAPI-001", "typescript");
+const resources = await client.listAccessResources({ source_reference: "HKAPI-030", limit: 10 });
+const resource = await client.getAccessResource(
+  "nlb-bus-nlb-bus-service-v2",
+  "96c5e827-3d3a-4110-8cd2-e7c80cd562bc",
+);
 ```
 
-唯讀 MCP 伺服器提供 `access_recipes_list` 及 `access_recipe_get`。它們只讀取以上兩個 REST
-路徑，不會執行來源、接受任意網址或回傳來源回應內容。
+唯讀 MCP 伺服器提供 `access_recipes_list`、`access_recipe_get`、
+`access_resources_list` 及 `access_resource_get`。它們只讀取以上四個 REST 路徑，不會執行
+來源、接受任意網址或回傳來源回應內容；資源工具會把準確網址及所需參數提供給 MCP 客戶端，
+實際網絡執行仍是另一項明確操作。
 
 ## 新增或修正一項來源
 

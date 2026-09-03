@@ -6,7 +6,9 @@ records timestamps, schema fingerprints and technical evidence. Synthetic fixtur
 executable recipe without contacting a listed source.
 
 All 265 official catalogue sources have an entry under `access/recipes/official/`. The current
-breakdown is 37 executable recipes and 228 source-specific manual guides. A manual guide is a
+breakdown is 227 executable recipes and 38 source-specific manual guides. The 190 DATA.GOV.HK
+recipes resolve to 5,862 current provider resources in `access/generated/data-gov-resources.json`;
+a 3 September 2026 bounded run sampled a working resource for 310 of 350 mapped datasets. A manual guide is a
 deliberate boundary: it gives the official documentation, reason and next step instead of guessing
 an endpoint or request shape.
 

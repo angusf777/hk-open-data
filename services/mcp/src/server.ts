@@ -27,6 +27,8 @@ export const NORMATIVE_TOOL_NAMES = [
   "status_summary",
   "access_recipes_list",
   "access_recipe_get",
+  "access_resources_list",
+  "access_resource_get",
 ] as const;
 
 const descriptions: Record<(typeof NORMATIVE_TOOL_NAMES)[number], string> = {
@@ -43,6 +45,10 @@ const descriptions: Record<(typeof NORMATIVE_TOOL_NAMES)[number], string> = {
   status_summary: "Return aggregate read-only platform status.",
   access_recipes_list: "List bounded technical access recipes without contacting providers.",
   access_recipe_get: "Get one technical access recipe and its generated code examples.",
+  access_resources_list:
+    "List current provider resource URLs and required parameters for one catalogue source.",
+  access_resource_get:
+    "Get one provider resource URL template, access classification, and local usage commands.",
 };
 
 const annotations = {
@@ -102,6 +108,18 @@ export function createMcpServer(platform: PlatformReadClient): McpServer {
     platform,
     "access_recipe_get",
     accessRecipeToolSchemas.access_recipe_get,
+  );
+  registerReadTool(
+    server,
+    platform,
+    "access_resources_list",
+    accessRecipeToolSchemas.access_resources_list,
+  );
+  registerReadTool(
+    server,
+    platform,
+    "access_resource_get",
+    accessRecipeToolSchemas.access_resource_get,
   );
   return server;
 }

@@ -113,6 +113,40 @@ describe("HKDataClient", () => {
     expect(fetcher).not.toHaveBeenCalled();
   });
 
+  it("lists and gets current provider resources", async () => {
+    const fetcher = vi
+      .fn<typeof fetch>()
+      .mockResolvedValueOnce(
+        new Response(
+          JSON.stringify({
+            items: [{ dataset_id: "dataset-one", resource_id: "resource-one" }],
+            page: { next_cursor: null },
+          }),
+          { status: 200 },
+        ),
+      )
+      .mockResolvedValueOnce(
+        new Response(
+          JSON.stringify({
+            dataset_id: "dataset-one",
+            resource_id: "resource-one",
+            url_template: "https://example.hk/data.json",
+          }),
+          { status: 200 },
+        ),
+      );
+    const client = new HKDataClient({ baseUrl: "https://api.example/v1", fetcher });
+
+    const page = await client.listAccessResources({ source_reference: "HKAPI-030", limit: 10 });
+    const resource = await client.getAccessResource("dataset-one", "resource-one");
+
+    expect(page.items[0]?.resource_id).toBe("resource-one");
+    expect(resource.url_template).toBe("https://example.hk/data.json");
+    expect(String(fetcher.mock.calls[1]?.[0])).toContain(
+      "/access-resources/dataset-one/resource-one",
+    );
+  });
+
   it("aborts requests after the configured timeout", async () => {
     const fetcher = vi.fn<typeof fetch>().mockImplementation(async (_url, init) => {
       await new Promise((_resolve, reject) => {

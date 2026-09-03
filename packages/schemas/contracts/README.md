@@ -8,7 +8,7 @@ does not grant permission for caching, retention, redistribution, or production 
 - `p01-source-groups.csv`: ten normalized source groups.
 - `p14-monitor-targets.csv`: fifty bounded monitor definitions.
 - `openapi.json`: versioned REST surface.
-- `mcp-tool-contract.md`: thirteen read-only MCP tools.
+- `mcp-tool-contract.md`: fifteen read-only MCP tools.
 - `*.schema.json`: runtime event, observation, incident, connector, and allowlist schemas.
 - `contract-manifest.json`: SHA-256 integrity map regenerated from this directory.
 

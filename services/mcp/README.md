@@ -1,6 +1,6 @@
 # HK Public Data read-only MCP
 
-This project-provided server exposes the thirteen tools pinned in
+This project-provided server exposes the fifteen tools pinned in
 [`packages/schemas/contracts/mcp-tool-contract.md`](../../packages/schemas/contracts/mcp-tool-contract.md).
 It calls only the
 platform REST service; it does not fetch provider URLs, return raw object bodies, or expose writes.
@@ -44,8 +44,11 @@ authenticated, TLS-terminating gateway in front of it for any remote deployment.
 - `access_recipes_list` reads the REST recipe list with optional status, adapter, authentication,
   freshness and page filters.
 - `access_recipe_get` reads one recipe by `HKAPI-NNN` source reference.
+- `access_resources_list` reads bounded exact resource URLs/templates for one `HKAPI-NNN` source.
+- `access_resource_get` reads one resource by dataset ID and resource ID, including required
+  parameters and local CLI usage.
 
-Both tools are read-only and return repository-authored instructions and metadata-only evidence.
+All four access tools are read-only and return repository-authored instructions and metadata-only evidence.
 The MCP server does not execute a listed source, accept an arbitrary source URL, or return stored
 source response bodies. Run `hkdata recipe HKAPI-001`, `hkdata example HKAPI-001 python`, and
 `hkdata verify HKAPI-001` through the local CLI when that is your deliberate intent.

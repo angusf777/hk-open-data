@@ -90,20 +90,25 @@ still needed:
 - **227 executable recipes** have bounded parameters, curl/Python/TypeScript examples, and hashed
   synthetic fixtures.
 - **190 DATA.GOV.HK resource-index recipes** contain 356 reviewed source-to-dataset mappings across
-  350 unique dataset identifiers and resolve them to the
-  provider's current resource URLs. Their package lookups passed on 1 September 2026; they return
-  official metadata and links, not the underlying resource payloads. All 350 identifiers passed
-  the bounded package-metadata check on 1 September 2026.
-- **37 direct-response recipes** contact a documented data endpoint. Twenty-nine passed the same
-  bounded live run; eight retain fixture evidence and a recorded live failure.
+  350 unique dataset identifiers. A 3 September 2026 refresh resolved these to **5,862 actual
+  provider resources**: 5,391 parameter-free HTTPS URLs, 6 parameterized URL templates, and 465
+  HTTP-only legacy URLs that the safe fetcher refuses.
+- A bounded payload run then received a non-empty 2xx sample for **310 of the 350 datasets**. It
+  recorded 5 current provider failures and 35 datasets without a parameter-free HTTPS candidate.
+  This is representative dataset proof—not a claim that all 5,862 URLs were downloaded. Every
+  exception is published in the [provider-resource verification report](docs/access/provider-resources.md).
+- **37 direct-response recipes** contact a documented data endpoint. A fresh 3 September 2026 run
+  succeeded for twenty-nine; eight retain fixture evidence and a recorded live failure.
 - **38 manual guides** identify a concrete documentation, account, interactive-workflow, or
   unresolved endpoint boundary. In total, 219 recipes currently have matching live evidence;
   evidence expires and does not promise later availability.
 
-The **145 external resources** and **111 community MCP projects** are discovery entries, not bundled
+The complete current resource inventory is public as
+[`access/generated/data-gov-resources.json`](access/generated/data-gov-resources.json) and is also
+shipped with the static catalogue. The **145 external resources** and **111 community MCP projects** are discovery entries, not bundled
 connectors. A 1 September 2026 link check reached or followed a valid redirect for 128 external
 entries and 107 MCP repositories; it recorded findings for the rest. Those checks did not log in to
-external APIs or install and execute third-party MCP code. The repository's own 13-tool read-only
+external APIs or install and execute third-party MCP code. The repository's own 15-tool read-only
 MCP server is separately covered by contract and integration tests. See the
 [coverage and evidence matrix](docs/access/coverage.md).
 
@@ -112,6 +117,10 @@ Inspect a recipe and generate working code without making a network request:
 ```bash
 uv run --project packages/sdk-python hkdata recipe HKAPI-001
 uv run --project packages/sdk-python hkdata example HKAPI-001 python
+uv run --project packages/sdk-python hkdata resources HKAPI-030
+uv run --project packages/sdk-python hkdata resource-example HKAPI-030 \
+  96c5e827-3d3a-4110-8cd2-e7c80cd562bc curl \
+  --dataset nlb-bus-nlb-bus-service-v2
 ```
 
 In installed form these are `hkdata recipe HKAPI-001` and
@@ -121,11 +130,16 @@ reviewing its current terms:
 ```bash
 uv run --project packages/sdk-python hkdata verify HKAPI-001
 uv run --project packages/sdk-python hkdata fetch HKAPI-001 --output json
+uv run --project packages/sdk-python hkdata fetch-resource HKAPI-030 \
+  96c5e827-3d3a-4110-8cd2-e7c80cd562bc \
+  --dataset nlb-bus-nlb-bus-service-v2 --max-bytes 1048576 \
+  --output nlb-routes.json
 ```
 
-The local REST API, Python and TypeScript SDKs, and the two read-only MCP tools
-`access_recipes_list` and `access_recipe_get` expose the same recipe, examples, limitations, hash,
-status, and verification summary. MCP recipe tools do not execute listed sources.
+The local REST API, Python and TypeScript SDKs, and four read-only access MCP tools expose both the
+recipe registry and exact provider-resource inventory. `access_resources_list` and
+`access_resource_get` return URL templates, required parameters, access classifications and CLI
+usage without contacting providers; explicit downloads remain a CLI action.
 
 Running `docker compose up` starts the catalogue only and does not contact external data providers.
 Data connections must be enabled individually after you review each source's applicable terms and

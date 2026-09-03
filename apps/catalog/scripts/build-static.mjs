@@ -12,9 +12,14 @@ execFileSync("uv", ["run", "python", "scripts/catalog.py", "check"], {
   stdio: "inherit",
 });
 execFileSync("pnpm", ["exec", "vite", "build"], { cwd: appRoot, stdio: "inherit" });
+await copyFile(
+  resolve(repositoryRoot, "access/generated/data-gov-resources.json"),
+  resolve(distRoot, "data-gov-resources.json"),
+);
 
 for (const name of [
   "access-recipes.json",
+  "data-gov-resources.json",
   "catalogue.json",
   "counts.json",
   "official.json",

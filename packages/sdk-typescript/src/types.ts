@@ -68,6 +68,30 @@ export interface AccessRecipe {
   verification: ApiObject | null;
 }
 
+export type ResourceAccess =
+  | "ready"
+  | "parameters-required"
+  | "insecure-http"
+  | "invalid-url";
+
+export interface AccessResource {
+  schema_version: 1;
+  source_references: string[];
+  dataset_id: string;
+  resource_id: string;
+  name: string;
+  format: string;
+  url_template: string;
+  template_parameters: string[];
+  access: ResourceAccess;
+  usage: {
+    list_cli: string;
+    example_cli: string;
+    fetch_cli: string;
+  };
+  limitations: string[];
+}
+
 export type ApiObject = Record<string, unknown>;
 export type QueryValue = string | number | boolean | undefined;
 export type Query = Record<string, QueryValue>;

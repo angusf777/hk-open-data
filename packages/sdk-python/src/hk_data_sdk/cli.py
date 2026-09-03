@@ -5,7 +5,9 @@ import json
 import os
 import sys
 from collections.abc import Mapping
+from hashlib import sha256
 from pathlib import Path
+from urllib.parse import urlsplit
 
 import yaml
 from hk_data_worker.access.errors import AccessFailure, access_failure
@@ -20,7 +22,24 @@ from hk_data_worker.access.execution import (
 from hk_data_worker.access.live import verify_all_anonymous
 from hk_data_worker.access.models import AccessRecipe
 from hk_data_worker.access.registry import load_recipes
-from hk_data_worker.fetch import SafeFetcher
+from hk_data_worker.access.resources import (
+    RESOURCE_SIZE_LIMIT,
+    DataGovResource,
+    DataGovResourceInventory,
+    render_resource_example,
+    resource_request,
+    resources_for_source,
+)
+from hk_data_worker.fetch import (
+    BodyTooLarge,
+    EgressDenied,
+    FetchError,
+    FetchTimedOut,
+    RetryExhausted,
+    SafeFetcher,
+    UnsafeRedirect,
+)
+from hk_data_worker.models import ApprovedRequest, FetchResult
 
 EXIT_BY_CODE = {
     "INVALID_PARAMETER": 2,
@@ -30,13 +49,41 @@ EXIT_BY_CODE = {
     "SCHEMA_MISMATCH": 5,
     "MEDIA_TYPE_MISMATCH": 5,
     "RECIPE_NOT_EXECUTABLE": 6,
+    "RESOURCE_NOT_FOUND": 2,
+    "OUTPUT_EXISTS": 2,
     "UNSAFE_REDIRECT": 7,
+    "UNSAFE_RESOURCE_URL": 7,
     "RESPONSE_TOO_LARGE": 7,
 }
 
 
 def _recipes(repository_root: Path) -> tuple[AccessRecipe, ...]:
     return load_recipes(repository_root / "access" / "recipes" / "official")
+
+
+def _repository_root(
+    explicit: Path | None,
+    environ: Mapping[str, str],
+) -> Path:
+    if explicit is not None:
+        return explicit
+    configured = environ.get("HK_OPEN_DATA_REPOSITORY")
+    if configured:
+        candidate = Path(configured).expanduser().resolve()
+        if (candidate / "access" / "recipes" / "official").is_dir():
+            return candidate
+        raise AccessFailure(
+            "INVALID_PARAMETER",
+            "HK_OPEN_DATA_REPOSITORY does not point to an hk-open-data checkout.",
+        )
+    candidates = [Path.cwd(), *Path.cwd().parents, *Path(__file__).resolve().parents]
+    for candidate in dict.fromkeys(candidates):
+        if (candidate / "access" / "recipes" / "official").is_dir():
+            return candidate
+    raise AccessFailure(
+        "RESOURCE_NOT_FOUND",
+        "Run inside an hk-open-data checkout or set HK_OPEN_DATA_REPOSITORY.",
+    )
 
 
 def _recipe(repository_root: Path, source_reference: str) -> AccessRecipe:
@@ -62,6 +109,43 @@ def _parameters(values: list[str]) -> dict[str, str]:
     return result
 
 
+def _resource_inventory(repository_root: Path) -> DataGovResourceInventory:
+    path = repository_root / "access" / "generated" / "data-gov-resources.json"
+    if not path.exists():
+        raise AccessFailure(
+            "RESOURCE_NOT_FOUND",
+            "The generated DATA.GOV.HK resource inventory is not available.",
+        )
+    return DataGovResourceInventory.model_validate_json(path.read_text(encoding="utf-8"))
+
+
+def _resource(
+    repository_root: Path,
+    source_reference: str,
+    resource_id: str,
+    dataset_id: str | None,
+) -> DataGovResource:
+    resources = resources_for_source(
+        _resource_inventory(repository_root),
+        source_reference,
+        dataset_id=dataset_id,
+    )
+    matches = tuple(resource for resource in resources if resource.resource_id == resource_id)
+    if len(matches) == 1:
+        return matches[0]
+    if len(matches) > 1:
+        raise AccessFailure(
+            "INVALID_PARAMETER",
+            "Resource id is ambiguous; specify --dataset.",
+            source_reference=source_reference.upper(),
+        )
+    raise AccessFailure(
+        "RESOURCE_NOT_FOUND",
+        f"Resource {resource_id} is not mapped to {source_reference.upper()}.",
+        source_reference=source_reference.upper(),
+    )
+
+
 def _parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(
         prog="hkdata",
@@ -82,6 +166,31 @@ def _parser() -> argparse.ArgumentParser:
     fetch.add_argument("--param", action="append", default=[])
     fetch.add_argument("--allow-unverified", action="store_true")
     fetch.add_argument("--output", choices=("json", "ndjson"), default="json")
+
+    resources = commands.add_parser(
+        "resources", help="list the current DATA.GOV.HK resources mapped to one source offline"
+    )
+    resources.add_argument("source_reference")
+    resources.add_argument("--dataset")
+
+    resource_example = commands.add_parser(
+        "resource-example", help="show code that downloads one mapped provider resource"
+    )
+    resource_example.add_argument("source_reference")
+    resource_example.add_argument("resource_id")
+    resource_example.add_argument("language", choices=("curl", "python", "typescript"))
+    resource_example.add_argument("--dataset")
+    resource_example.add_argument("--param", action="append", default=[])
+
+    fetch_resource = commands.add_parser(
+        "fetch-resource", help="explicitly download one mapped provider resource"
+    )
+    fetch_resource.add_argument("source_reference")
+    fetch_resource.add_argument("resource_id")
+    fetch_resource.add_argument("--dataset")
+    fetch_resource.add_argument("--param", action="append", default=[])
+    fetch_resource.add_argument("--max-bytes", type=int, default=RESOURCE_SIZE_LIMIT)
+    fetch_resource.add_argument("--output", required=True)
 
     verify = commands.add_parser("verify", help="explicitly verify anonymous source access")
     verify.add_argument("source_reference", nargs="?")
@@ -105,11 +214,44 @@ def _write_fetch(result: ExecutionResult, output: str) -> None:
                 sort_keys=True,
             )
         )
-    diagnostics = [
-        response.model_dump(mode="json", by_alias=True)
-        for response in result.responses
-    ]
+    diagnostics = [response.model_dump(mode="json", by_alias=True) for response in result.responses]
     print(json.dumps({"responses": diagnostics}, sort_keys=True), file=sys.stderr)
+
+
+def _write_resource(body: bytes, output: Path) -> None:
+    try:
+        with output.open("xb") as stream:
+            stream.write(body)
+    except FileExistsError as error:
+        raise AccessFailure("OUTPUT_EXISTS", f"Output already exists: {output}") from error
+    except OSError as error:
+        raise AccessFailure("INVALID_PARAMETER", "The output file could not be created.") from error
+
+
+def _fetch_resource(active_fetcher: Fetcher, request: ApprovedRequest) -> FetchResult:
+    try:
+        response = active_fetcher.fetch(request)
+    except (UnsafeRedirect, EgressDenied) as error:
+        raise AccessFailure(
+            "UNSAFE_REDIRECT", "The provider destination was not permitted."
+        ) from error
+    except BodyTooLarge as error:
+        raise AccessFailure(
+            "RESPONSE_TOO_LARGE", "The provider response exceeded its limit."
+        ) from error
+    except (FetchTimedOut, RetryExhausted) as error:
+        raise AccessFailure(
+            "SOURCE_UNAVAILABLE", "The provider did not respond successfully."
+        ) from error
+    except FetchError as error:
+        raise AccessFailure("SOURCE_UNAVAILABLE", "The provider request failed.") from error
+    if not 200 <= response.status_code < 300:
+        raise AccessFailure(
+            "SOURCE_UNAVAILABLE",
+            f"The provider returned HTTP {response.status_code}.",
+            retryable=response.status_code in request.retry_status_codes,
+        )
+    return response
 
 
 def _verify_targets(
@@ -141,9 +283,9 @@ def main(
     environ: Mapping[str, str] = os.environ,
 ) -> int:
     args = _parser().parse_args(argv)
-    root = repository_root or Path.cwd()
     active_fetcher = fetcher or SafeFetcher()
     try:
+        root = _repository_root(repository_root, environ)
         if args.command == "recipe":
             recipe = _recipe(root, args.source_reference)
             value = recipe.model_dump(mode="json", by_alias=True)
@@ -154,6 +296,66 @@ def main(
             return 0
         if args.command == "example":
             print(render_example(_recipe(root, args.source_reference), args.language), end="")
+            return 0
+        if args.command == "resources":
+            values = resources_for_source(
+                _resource_inventory(root),
+                args.source_reference,
+                dataset_id=args.dataset,
+            )
+            print(
+                json.dumps(
+                    [item.model_dump(mode="json", by_alias=True) for item in values],
+                    ensure_ascii=False,
+                    indent=2,
+                    sort_keys=True,
+                )
+            )
+            return 0
+        if args.command == "resource-example":
+            selected_resource = _resource(
+                root, args.source_reference, args.resource_id, args.dataset
+            )
+            print(
+                render_resource_example(selected_resource, args.language, _parameters(args.param)),
+                end="",
+            )
+            return 0
+        if args.command == "fetch-resource":
+            selected_resource = _resource(
+                root, args.source_reference, args.resource_id, args.dataset
+            )
+            request = resource_request(
+                selected_resource,
+                _parameters(args.param),
+                max_bytes=args.max_bytes,
+            )
+            response = _fetch_resource(active_fetcher, request)
+            _write_resource(response.body, Path(args.output))
+            host = urlsplit(response.final_url).hostname
+            content_type = response.headers.get("content-type")
+            print(
+                json.dumps(
+                    {
+                        "datasetId": selected_resource.dataset_id,
+                        "elapsedMs": response.elapsed_ms,
+                        "finalHost": host,
+                        "httpStatus": response.status_code,
+                        "mediaType": (
+                            None
+                            if content_type is None
+                            else content_type.partition(";")[0].strip().lower()
+                        ),
+                        "output": args.output,
+                        "resourceId": selected_resource.resource_id,
+                        "responseBytes": len(response.body),
+                        "responseSha256": sha256(response.body).hexdigest(),
+                        "sourceReference": args.source_reference.upper(),
+                    },
+                    sort_keys=True,
+                ),
+                file=sys.stderr,
+            )
             return 0
         if args.command == "fetch":
             result = execute_recipe(

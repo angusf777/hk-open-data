@@ -1,6 +1,10 @@
 import { describe, expect, it } from "vitest";
 
-import { accessRecipeSchema } from "./access.js";
+import {
+  accessRecipeSchema,
+  dataGovResourceInventorySchema,
+  loadDataGovResourceInventory,
+} from "./access.js";
 
 const validRecipe = {
   schemaVersion: 1,
@@ -69,5 +73,39 @@ describe("access recipe contract", () => {
     expect(() => accessRecipeSchema.parse({ ...validRecipe, request })).toThrow(
       /credential values are forbidden/i,
     );
+  });
+});
+
+describe("DATA.GOV.HK resource inventory contract", () => {
+  it("loads the generated public inventory", () => {
+    const inventory = loadDataGovResourceInventory();
+
+    expect(inventory.resources.length).toBeGreaterThan(5_000);
+    expect(inventory.resources.every((resource) => resource.sourceReferences.length > 0)).toBe(
+      true,
+    );
+  });
+
+  it("rejects an HTTPS template incorrectly labelled ready", () => {
+    expect(() =>
+      dataGovResourceInventorySchema.parse({
+        schemaVersion: 1,
+        checkedAt: "2026-09-03T00:00:00Z",
+        packageEndpoint: "https://data.gov.hk/en-data/api/3/action/package_show",
+        resources: [
+          {
+            schemaVersion: 1,
+            sourceReferences: ["HKAPI-030"],
+            datasetId: "dataset-one",
+            resourceId: "resource-one",
+            name: "Stops",
+            format: "JSON",
+            urlTemplate: "https://example.hk/stops/{routeId}",
+            templateParameters: ["routeId"],
+            access: "ready",
+          },
+        ],
+      }),
+    ).toThrow(/parameters-required/i);
   });
 });

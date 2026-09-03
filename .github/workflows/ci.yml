@@ -42,7 +42,8 @@ jobs:
       - uses: ./.github/actions/setup
       - run: uv run ruff check scripts services tests packages/sdk-python/src
       - run: uv run mypy services/worker packages/sdk-python/src
-      - run: uv run pytest tests/catalog tests/contract tests/security packages/sdk-python/tests -q
+      - run: uv run pytest tests/access tests/catalog tests/contract tests/security packages/sdk-python/tests -q
+      - run: uv run python -m scripts.data_gov_resources check
 
   browser:
     name: browser

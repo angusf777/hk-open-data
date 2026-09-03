@@ -82,4 +82,18 @@ describe("AccessPanel", () => {
     expect(writeText).toHaveBeenCalledWith(recipe.examples.python);
     expect(screen.getByRole("status")).toHaveTextContent("Python example copied");
   });
+
+  it("links DATA.GOV.HK recipes to the public provider-resource inventory", () => {
+    render(
+      <AccessPanel
+        locale="en"
+        recipe={{ ...recipe, adapter: "data-gov-resource-index" }}
+      />,
+    );
+
+    expect(screen.getByRole("link", { name: /browse exact provider resources/i })).toHaveAttribute(
+      "href",
+      "/data-gov-resources.json",
+    );
+  });
 });

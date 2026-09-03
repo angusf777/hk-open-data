@@ -43,6 +43,8 @@ describe("normative MCP tool contract", () => {
       "status_summary",
       "access_recipes_list",
       "access_recipe_get",
+      "access_resources_list",
+      "access_resource_get",
     ]);
     expect(documented).toEqual(NORMATIVE_TOOL_NAMES);
     expect(toolFingerprint(tools)).toBe(PINNED_TOOL_FINGERPRINT);

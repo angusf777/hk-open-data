@@ -31,9 +31,13 @@ def test_repository_commands_validate_generate_and_detect_drift(
     tmp_path: Path, capsys: object
 ) -> None:
     root = _repository(tmp_path)
+    provider_inventory = root / "access" / "generated" / "data-gov-resources.json"
+    provider_inventory.parent.mkdir(parents=True)
+    provider_inventory.write_text('{"preserve": true}\n', encoding="utf-8")
 
     assert main(["validate"], repository_root=root) == 0
     assert main(["generate"], repository_root=root) == 0
+    assert provider_inventory.read_text(encoding="utf-8") == '{"preserve": true}\n'
     assert main(["check"], repository_root=root) == 0
 
     generated = root / "access" / "generated" / "recipes.json"
@@ -82,6 +86,8 @@ def test_generate_writes_a_deterministic_public_status_index(tmp_path: Path) -> 
     assert "- Live verification attempts recorded: 1" in status
     assert "- Successful live verification records: 0" in status
     assert "- Failed live verification records: 1" in status
+    assert "package metadata compatibility" in status
+    assert "provider-resources.md" in status
     assert "| HKAPI-001 | fixture-tested | ckan-action | failure |" in status
 
     assert main(["check"], repository_root=root) == 0

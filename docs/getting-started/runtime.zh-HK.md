@@ -80,9 +80,10 @@ make runtime-fabric
 均是另一項有紀錄的設定，不能從目錄的條款查核標籤推斷。`observe` 不保存回應內容；
 `fabric` 才會啟用附版本控制及物件鎖定的完整回應儲存。
 
-API 提供 `GET /v1/access-recipes` 及 `GET /v1/access-recipes/{source_reference}`；唯讀 MCP
-伺服器提供 `access_recipes_list` 及 `access_recipe_get`。這些介面只讀取產生的配方登記，不會
-執行所列來源。
+API 提供 `GET /v1/access-recipes`、`GET /v1/access-recipes/{source_reference}`、
+`GET /v1/access-resources` 及 `GET /v1/access-resources/{dataset_id}/{resource_id}`；唯讀 MCP
+伺服器提供對應的 `access_recipes_list`、`access_recipe_get`、`access_resources_list` 及
+`access_resource_get`。這些介面只讀取產生的配方及供應者資源登記，不會執行所列來源。
 
 所有介面只綁定本機 loopback：API `3000`、唯讀 MCP `3100`、公開工具頁面 `4174`、
 管理介面 `4175`、Prometheus `9090`。

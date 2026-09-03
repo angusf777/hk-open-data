@@ -1,6 +1,6 @@
 {
-  "checkedAt": "2026-09-01T10:25:29.844991Z",
-  "elapsedMs": 685,
+  "checkedAt": "2026-09-03T04:12:00.644182Z",
+  "elapsedMs": 423,
   "errorCode": null,
   "finalHost": "data.gov.hk",
   "httpStatus": 200,
@@ -20,5 +20,5 @@
   "schemaVersion": 1,
   "sourceReference": "HKAPI-136",
   "toolVersion": "0.1.0",
-  "validUntil": "2026-09-08T10:25:29.844991Z"
+  "validUntil": "2026-09-10T04:12:00.644182Z"
 }

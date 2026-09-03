@@ -1,7 +1,11 @@
 import { randomUUID } from "node:crypto";
 
 import rateLimit from "@fastify/rate-limit";
-import type { GeneratedAccessRecipe, OperatingProfile } from "@hk-open-data/schemas";
+import type {
+  DataGovResource,
+  GeneratedAccessRecipe,
+  OperatingProfile,
+} from "@hk-open-data/schemas";
 import Fastify, { type FastifyInstance } from "fastify";
 import { ZodError } from "zod";
 
@@ -15,10 +19,12 @@ import {
 } from "./auth.js";
 import { HttpError } from "./errors.js";
 import { AccessRegistry } from "./access-registry.js";
+import { ResourceRegistry } from "./resource-registry.js";
 import { RepositoryError } from "./repository.js";
 import type { PlatformRepository } from "./repository.js";
 import { registerAdminRoutes } from "./routes/admin.js";
 import { registerAccessRecipeRoutes } from "./routes/access-recipes.js";
+import { registerAccessResourceRoutes } from "./routes/access-resources.js";
 import { registerEventRoutes } from "./routes/events.js";
 import { registerQualityRoutes } from "./routes/quality.js";
 import { registerRecordRoutes } from "./routes/records.js";
@@ -39,6 +45,7 @@ export interface BuildAppDependencies {
   operatingProfile?: OperatingProfile;
   trustedProxies?: string[];
   accessRecipes?: readonly GeneratedAccessRecipe[];
+  accessResources?: readonly DataGovResource[];
 }
 
 export function buildApp(dependencies: BuildAppDependencies): FastifyInstance {
@@ -110,6 +117,7 @@ export function buildApp(dependencies: BuildAppDependencies): FastifyInstance {
     ),
   };
   const accessRegistry = new AccessRegistry(dependencies.accessRecipes ?? [], clock);
+  const resourceRegistry = new ResourceRegistry(dependencies.accessResources ?? []);
   app.register(async (routes) => {
     routes.get("/health/live", async () => ({
       status: "live",
@@ -154,6 +162,7 @@ export function buildApp(dependencies: BuildAppDependencies): FastifyInstance {
 
     registerAdminRoutes(routes, context);
     registerAccessRecipeRoutes(routes, accessRegistry);
+    registerAccessResourceRoutes(routes, resourceRegistry);
     registerSourceRoutes(routes, context);
     registerRecordRoutes(routes, context);
     registerEventRoutes(routes, context);

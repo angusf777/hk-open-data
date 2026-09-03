@@ -17,5 +17,9 @@ describe("static catalogue build", () => {
       '<link rel="canonical" href="https://angusf777.github.io/hk-open-data/resources/official%3Ahkapi-001/" />',
     );
     expect(detail).toContain('window.__HK_OPEN_DATA_RESOURCE_ID__="official:hkapi-001"');
+    const providerResources = JSON.parse(
+      readFileSync(resolve(appRoot, "dist/data-gov-resources.json"), "utf8"),
+    );
+    expect(providerResources.resources.length).toBeGreaterThan(5_000);
   });
 });

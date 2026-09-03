@@ -171,17 +171,17 @@ def _verification_summary(
 
 def _publish_tree(staged: Path, output: Path) -> None:
     output.mkdir(parents=True, exist_ok=True)
-    expected = {
-        str(path.relative_to(staged)) for path in staged.rglob("*") if path.is_file()
-    }
-    for current in sorted(output.rglob("*"), reverse=True):
-        if current.is_file() and str(current.relative_to(output)) not in expected:
-            current.unlink()
-        elif current.is_dir():
-            try:
+    for filename in ("recipes.json", "coverage.json"):
+        (output / filename).unlink(missing_ok=True)
+    examples = output / "examples"
+    if examples.exists():
+        for current in sorted(examples.rglob("*"), reverse=True):
+            if current.is_file():
+                current.unlink()
+            elif current.is_dir():
                 current.rmdir()
-            except OSError:
-                pass
+        if examples.exists():
+            examples.rmdir()
     for staged_file in sorted(path for path in staged.rglob("*") if path.is_file()):
         relative = staged_file.relative_to(staged)
         destination = output / relative

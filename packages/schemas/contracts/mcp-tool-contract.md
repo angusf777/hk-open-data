@@ -136,6 +136,24 @@ Gets one project-authored access recipe and its generated code examples.
 - Output: endpoint template, bounded parameters, authentication setup, response shape, examples and limitations
 - Requests to listed sources: none; this tool cannot execute a recipe or accept an arbitrary URL
 
+### `access_resources_list`
+
+Lists the current provider resource URLs mapped to one DATA.GOV.HK catalogue source.
+
+- Inputs: required `source_reference`; optional `dataset_id`, `format`, `access`, `cursor`, `limit`
+- Required scope: none
+- Output: bounded resource metadata, URL templates, required parameters, access classification and local usage commands
+- Requests to listed sources: none; this tool reads the generated local resource inventory only
+
+### `access_resource_get`
+
+Gets one provider resource from the generated DATA.GOV.HK inventory.
+
+- Inputs: `dataset_id` and `resource_id`
+- Required scope: none
+- Output: exact URL template, required parameters, access classification, source mappings and local usage commands
+- Requests to listed sources: none; explicit downloads remain a separate CLI action
+
 ## Explicitly prohibited tools
 
 The v0 server must not expose tools that:
