@@ -15,11 +15,7 @@ export function ToolkitBand({ locale }: { locale: Locale }) {
         <p>{text.toolkitSummary}</p>
       </div>
       <code>git clone https://github.com/angusf777/hk-open-data.git</code>
-      <a
-        href="https://github.com/angusf777/hk-open-data/blob/main/docs/getting-started/runtime.md"
-        target="_blank"
-        rel="noreferrer"
-      >
+      <a href={`${import.meta.env.BASE_URL}provider-resources/`}>
         {text.toolkitLink}
         <ArrowRight aria-hidden="true" size={18} strokeWidth={1.75} />
       </a>

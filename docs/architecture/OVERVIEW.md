@@ -11,6 +11,8 @@ flowchart LR
     J --> S[Static bilingual catalogue]
     J --> R[Optional self-hosted runtime]
     A[Versioned source-access recipes] --> G[Examples and verification summaries]
+    I[Exact provider-resource inventory] --> S
+    I --> R
     G --> S
     G --> R
     S -->|explicit user action| U[Provider pages]
@@ -39,10 +41,14 @@ flowchart LR
    to the corresponding catalogue record.
 4. Synthetic fixtures test planning and parsing. An explicit live check records metadata and hashes
    without retaining a source response body.
-5. The static site, REST routes, Python and TypeScript SDKs, and read-only MCP tools expose the same
+5. Reviewed DATA.GOV.HK dataset mappings also produce an exact provider-resource inventory. The
+   static browser loads it only on `/provider-resources/`, then searches, filters and generates
+   bounded usage commands entirely in the browser.
+6. The static site, REST routes, Python and TypeScript SDKs, and read-only MCP tools expose the same
    version, hash, status, limitations, examples and verification summary.
-6. Only the local CLI's explicit `fetch` and `verify` commands execute a recipe. Catalogue browsing,
-   REST recipe lookup, SDK recipe lookup and MCP recipe lookup do not contact listed sources.
+7. Only the local CLI's explicit `fetch`, `fetch-resource` and `verify` commands execute a request.
+   Catalogue browsing, command generation, REST lookup, SDK lookup and MCP lookup do not contact
+   listed sources.
 
 ## Optional toolkit path
 

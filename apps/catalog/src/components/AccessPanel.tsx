@@ -177,7 +177,9 @@ export function AccessPanel({ locale, recipe }: AccessPanelProps) {
           <ExternalLink aria-hidden="true" size={16} />
         </a>
         {recipe.adapter === "data-gov-resource-index" && (
-          <a href={`${import.meta.env.BASE_URL}data-gov-resources.json`}>
+          <a
+            href={`${import.meta.env.BASE_URL}provider-resources/?source=${encodeURIComponent(recipe.sourceReference)}`}
+          >
             {locale === "en"
               ? "Browse exact provider resources"
               : "瀏覽準確的供應者資源"}

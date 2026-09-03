@@ -69,6 +69,27 @@ function resourceHtml(resource) {
 }
 
 const sitemapUrls = [siteRoot];
+
+const providerResourcesCanonical = `${siteRoot}provider-resources/`;
+const providerResourcesHtml = indexHtml
+  .replaceAll('href="./', 'href="../')
+  .replace(/<title>.*?<\/title>/s, "<title>Browse exact provider resources — HK Open Data</title>")
+  .replace(
+    /<meta\s+name="description"\s+content="[^"]*"\s*\/?>/,
+    '<meta name="description" content="Search exact DATA.GOV.HK provider files and API endpoints, then generate safe cURL, Python, Node and hkdata commands." />',
+  )
+  .replace(
+    /<link\s+rel="canonical"\s+href="[^"]*"\s*\/?>/,
+    `<link rel="canonical" href="${providerResourcesCanonical}" />`,
+  );
+await mkdir(resolve(distRoot, "provider-resources"), { recursive: true });
+await writeFile(
+  resolve(distRoot, "provider-resources", "index.html"),
+  providerResourcesHtml,
+  "utf8",
+);
+sitemapUrls.push(providerResourcesCanonical);
+
 for (const resource of catalogue.resources) {
   const encodedId = encodeURIComponent(resource.id);
   const html = resourceHtml(resource);

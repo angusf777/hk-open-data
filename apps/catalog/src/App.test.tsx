@@ -14,6 +14,15 @@ describe("catalogue application", () => {
     expect(notice.compareDocumentPosition(resource) & Node.DOCUMENT_POSITION_FOLLOWING).toBeTruthy();
   });
 
+  it("makes the exact provider-resource browser discoverable from the catalogue", () => {
+    render(<App catalogue={fixtureCatalogue} initialLocale="en" />);
+
+    expect(screen.getByRole("link", { name: /browse exact provider resources/i })).toHaveAttribute(
+      "href",
+      "/provider-resources/",
+    );
+  });
+
   it("searches, filters, switches locale and opens an internal detail", async () => {
     const user = userEvent.setup();
     render(<App catalogue={fixtureCatalogue} initialLocale="en" />);

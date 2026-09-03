@@ -6,6 +6,7 @@ Verified on 2026-08-31 against the three pinned concepts in
 | Check | Concept evidence | Browser-render evidence | Result |
 | --- | --- | --- | --- |
 | First-viewport hierarchy | Notice, quiet header, headline, search, categories, filters/results, toolkit preview | [`catalogue-home.png`](../images/catalogue-home.png) at 1536 × 1024 | Matched; the toolkit remains visible at the bottom edge. |
+| Provider-resource browser | Summary and evidence date, access counts, local filters, exact provider URLs and usage actions | [`provider-resources.png`](../images/provider-resources.png) at 1536 × 1024 and [`provider-resources-mobile.png`](../images/provider-resources-mobile.png) at 390 × 844 | Matched; 20 rows are progressively rendered and long URLs wrap without horizontal overflow. |
 | Palette and container model | Warm paper, white controls, dark ink, restrained red, thin ledger rules, warning band | Homepage and [`resource-detail.png`](../images/resource-detail.png) at 1536 × 1024 | Matched without gradients, glow, government marks or a card grid. |
 | Typography and controls | Compact editorial sans, large balanced heading, deliberate labels and buttons | All three rendered screenshots | Matched using local system fonts; interactive targets remain at least 44px. |
 | Resource anatomy | Provider, type, protocol, authentication, terms review, date and detail action | Homepage rows and resource detail metadata ledger | Matched with validated record values replacing mockup examples. |

@@ -14,4 +14,11 @@ test("catalogue and detail page have no automated accessibility violations", asy
     .withTags(["wcag2a", "wcag2aa", "wcag21a", "wcag21aa"])
     .analyze();
   expect(detailResults.violations).toEqual([]);
+
+  await page.goto("provider-resources/");
+  await expect(page.getByRole("heading", { level: 1, name: "Browse exact provider resources" })).toBeVisible();
+  const providerResourcesResults = await new AxeBuilder({ page })
+    .withTags(["wcag2a", "wcag2aa", "wcag21a", "wcag21aa"])
+    .analyze();
+  expect(providerResourcesResults.violations).toEqual([]);
 });

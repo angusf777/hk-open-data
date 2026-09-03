@@ -29,6 +29,17 @@ site to `apps/catalog/dist/`. Serve that directory over HTTP or start the develo
 pnpm --filter @hk-open-data/catalog dev
 ```
 
+## Browse provider files and API endpoints
+
+Open `/provider-resources/` from the catalogue's toolkit section to search the exact files and API
+endpoints mapped from reviewed DATA.GOV.HK datasets. You can filter by access status or format,
+fill any required URL parameters, and generate bounded cURL, Python, Node or `hkdata` commands.
+
+The browser lazily reads the repository-generated `data-gov-resources.json` only after you open
+that page. Search, filters and command generation run in your browser and do not contact a listed
+provider. A provider request occurs only if you explicitly run a generated command or open a ready
+HTTPS resource link. HTTP-only and invalid URLs do not receive executable commands.
+
 ## Verify a checkout
 
 ```bash
@@ -38,8 +49,8 @@ make test-repository
 make check-boundary
 ```
 
-The browser tests assert that initial load, search, filtering, language changes, and detail routes
-do not contact provider hosts.
+The browser tests assert that initial load, search, filtering, language changes, detail routes and
+provider-resource browsing do not contact provider hosts.
 
 ## Edit a resource
 

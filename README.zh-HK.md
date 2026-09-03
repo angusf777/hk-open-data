@@ -19,9 +19,10 @@
 <!-- catalog-counts:end -->
 
 [**瀏覽線上目錄 →**](https://angusf777.github.io/hk-open-data/) ·
+[瀏覽供應者檔案及 API](https://angusf777.github.io/hk-open-data/provider-resources/) ·
 [在本機執行](#在本機執行目錄) · [English](README.md)
 
-![HK Open Data 目錄，展示搜尋、使用條款查核標籤及篩選器。](docs/images/catalogue-home.png)
+![HK Open Data 供應者資源瀏覽器，展示可搜尋端點、存取分類及使用方法。](docs/images/provider-resources.png)
 
 ## 為何建立本項目
 
@@ -94,9 +95,15 @@ make catalogue
 - **38 項手動指引**列出具體的文件、帳戶、互動流程或尚未解決的端點界線。現時合共 219 項
   配方有相符的即時證據；證據會到期，並不保證日後仍可使用。
 
-完整現行資源清單公開於
-[`access/generated/data-gov-resources.json`](access/generated/data-gov-resources.json)，亦會隨靜態
-目錄發布。**145 項外部資源**及 **111 個社群 MCP 項目**是供讀者探索的目錄項目，並非隨附連接器。
+你可以使用雙語[供應者資源瀏覽器](https://angusf777.github.io/hk-open-data/provider-resources/)
+搜尋完整現行清單、按存取狀態或格式篩選、填寫網址必要參數，並產生有界限的 cURL、Python、
+Node 或 `hkdata` 指令。瀏覽及產生指令均在本機完成；只有當你開啟供應者資源連結或選擇執行
+指令時，才會聯絡供應者。
+
+同一清單亦以供機器讀取的
+[`access/generated/data-gov-resources.json`](access/generated/data-gov-resources.json) 發布。
+
+**145 項外部資源**及 **111 個社群 MCP 項目**是供讀者探索的目錄項目，並非隨附連接器。
 2026 年 9 月 1 日的連結核查成功連接或跟隨有效重新導向至 128 項外部資源及 107 個 MCP
 儲存庫，並為其餘項目記錄結果。該次核查並無登入外部 API，亦無安裝或執行第三方 MCP
 程式碼。本儲存庫自有的 15 項唯讀 MCP 工具則另有合約及整合測試。詳見

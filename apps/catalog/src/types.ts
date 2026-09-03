@@ -162,6 +162,31 @@ export interface Catalogue {
   counts: CatalogueCounts;
 }
 
+export type ProviderResourceAccess =
+  | "ready"
+  | "parameters-required"
+  | "insecure-http"
+  | "invalid-url";
+
+export interface ProviderResource {
+  schemaVersion: 1;
+  sourceReferences: string[];
+  datasetId: string;
+  resourceId: string;
+  name: string;
+  format: string;
+  urlTemplate: string;
+  templateParameters: string[];
+  access: ProviderResourceAccess;
+}
+
+export interface ProviderResourceInventory {
+  schemaVersion: 1;
+  checkedAt: string;
+  packageEndpoint: string;
+  resources: ProviderResource[];
+}
+
 export interface ResourceFilters {
   type?: string;
   authentication?: string;

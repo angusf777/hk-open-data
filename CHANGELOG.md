@@ -22,6 +22,8 @@ All notable project changes are documented here. The format follows
   Python SDK, TypeScript SDK and read-only MCP resource-discovery surfaces.
 - Metadata-only evidence from a bounded representative payload check of all 350 mapped datasets,
   with 310 successes and every current failure or non-probeable dataset published.
+- Bilingual provider-resource browser with local search and filters, parameter-aware cURL, Python,
+  Node and `hkdata` commands, source-scoped links and fail-closed handling of unsafe URLs.
 
 ### Changed
 

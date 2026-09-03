@@ -65,6 +65,12 @@ reviewed dataset identifiers. The generated
 each resource ID, exact provider URL or template, format, required parameter names, mapped
 catalogue sources and access classification. It contains provider metadata—not copied datasets.
 
+For a visual workflow, open the public
+[provider-resource browser](https://angusf777.github.io/hk-open-data/provider-resources/). It
+searches the same inventory, accepts required parameter values, and generates cURL, Python, Node
+or `hkdata` usage without contacting providers. Add `?source=HKAPI-030` to scope the page to a
+catalogue source. Running a generated command remains a separate, explicit action.
+
 List the current provider resources for one catalogue source without using the network:
 
 ```bash

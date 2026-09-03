@@ -49,9 +49,9 @@ const messages = {
       "This dated review does not grant permission. Check the provider's current terms before commercial use, caching or redistribution.",
     projectNote:
       "This community-maintained entry may change. Verify details and terms on the provider's site before use.",
-    toolkitHeading: "Run the toolkit locally",
-    toolkitSummary: "Validate catalogue metadata and run optional integrations on your machine.",
-    toolkitLink: "View toolkit quick start",
+    toolkitHeading: "Go from source to working request",
+    toolkitSummary: "Browse mapped provider files and endpoints, then generate a bounded cURL, Python, Node or hkdata command.",
+    toolkitLink: "Browse exact provider resources",
     legal:
       "HK Open Data is independently maintained and is not affiliated with any government agency or listed provider. Apache-2.0 covers project-authored code and catalogue material only; linked resources remain governed by their providers. Report corrections or request takedown through the repository process.",
     correction: "Corrections and takedowns",
@@ -127,9 +127,9 @@ const messages = {
     evidenceBoundary:
       "這項日期化查核不會授予使用權。商業使用、快取或再分發前，請核實供應者的現行條款。",
     projectNote: "本社群維護的記錄可能有變。使用前請在供應者網站核實資料及條款。",
-    toolkitHeading: "在本機執行工具包",
-    toolkitSummary: "在你的電腦驗證目錄元數據，並執行可選整合。",
-    toolkitLink: "查看工具包快速入門",
+    toolkitHeading: "從資料來源開始建立可用請求",
+    toolkitSummary: "瀏覽已配對的供應者檔案及端點，並產生有界限的 cURL、Python、Node 或 hkdata 指令。",
+    toolkitLink: "瀏覽準確的供應者資源",
     legal:
       "HK Open Data 是獨立社群項目，與任何政府機構或所列供應者均無隸屬關係。Apache-2.0 只涵蓋項目自行編寫的程式碼及目錄材料；連結資源仍受其供應者條款規管。請透過程式庫流程提交更正或下架要求。",
     correction: "更正及下架",

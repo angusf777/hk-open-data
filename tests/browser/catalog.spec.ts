@@ -53,6 +53,38 @@ test("static detail permalink loads directly", async ({ page }) => {
   );
 });
 
+test("provider-resource browser searches exact endpoints and generates parameterized usage locally", async ({ page }) => {
+  const outsideRequests: string[] = [];
+  page.on("request", (request) => {
+    const hostname = new URL(request.url()).hostname;
+    if (!new Set(["127.0.0.1", "localhost"]).has(hostname)) outsideRequests.push(request.url());
+  });
+
+  await page.goto("provider-resources/?source=HKAPI-076");
+  await expect(page.getByRole("heading", { level: 1, name: "Browse exact provider resources" })).toBeVisible();
+  await expect(page.getByRole("heading", { level: 2, name: "1 resource" })).toBeVisible();
+
+  const historical = page.getByRole("article", {
+    name: "Flight schedule information of Hong Kong International Airport (Historical).",
+  }).first();
+  await historical.getByRole("button", { name: "View usage" }).click();
+  await expect(historical.getByRole("button", { name: "Copy command" })).toBeDisabled();
+  await historical.getByLabel("date").fill("2026-09-02");
+  await historical.getByRole("tab", { name: "hkdata" }).click();
+  await expect(historical.locator("pre")).toContainText("hkdata fetch-resource HKAPI-076");
+  await expect(historical.locator("pre")).toContainText("--param date=2026-09-02");
+  expect(outsideRequests).toEqual([]);
+});
+
+test("provider-resource browser reflows without horizontal overflow", async ({ page }) => {
+  await page.setViewportSize({ width: 390, height: 844 });
+  await page.goto("provider-resources/");
+  await expect(page.getByRole("heading", { level: 1, name: "Browse exact provider resources" })).toBeVisible();
+  await expect(page.getByRole("article")).toHaveCount(20);
+  const overflow = await page.evaluate(() => document.documentElement.scrollWidth - innerWidth);
+  expect(overflow).toBeLessThanOrEqual(0);
+});
+
 test("mobile catalogue reflows without horizontal overflow", async ({ page }) => {
   await page.setViewportSize({ width: 390, height: 844 });
   await page.goto("./");

@@ -57,6 +57,11 @@ uv run --project packages/sdk-python hkdata example HKAPI-001 python
 準確供應者網址或範本、格式、所需參數、所屬目錄來源及存取分類；檔案只含供應者中繼資料，
 不含複製的數據集。
 
+如要使用圖像化流程，可開啟公開的
+[供應者資源瀏覽器](https://angusf777.github.io/hk-open-data/provider-resources/)。它會搜尋同一份清單、
+接收必要參數值，並在不聯絡供應者的情況下產生 cURL、Python、Node 或 `hkdata` 用法。在網址加入
+`?source=HKAPI-030`，即可只顯示一個目錄來源。執行產生的指令仍是另一個明確步驟。
+
 以下指令離線列出 HKAPI-030 的現行供應者資源：
 
 ```bash

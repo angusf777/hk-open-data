@@ -93,7 +93,7 @@ describe("AccessPanel", () => {
 
     expect(screen.getByRole("link", { name: /browse exact provider resources/i })).toHaveAttribute(
       "href",
-      "/data-gov-resources.json",
+      "/provider-resources/?source=HKAPI-001",
     );
   });
 });

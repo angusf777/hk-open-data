@@ -21,5 +21,14 @@ describe("static catalogue build", () => {
       readFileSync(resolve(appRoot, "dist/data-gov-resources.json"), "utf8"),
     );
     expect(providerResources.resources.length).toBeGreaterThan(5_000);
+
+    const providerBrowser = readFileSync(
+      resolve(appRoot, "dist/provider-resources/index.html"),
+      "utf8",
+    );
+    expect(providerBrowser).toContain(
+      '<link rel="canonical" href="https://angusf777.github.io/hk-open-data/provider-resources/" />',
+    );
+    expect(providerBrowser).toContain('href="../data-gov-resources.json"');
   });
 });

@@ -21,9 +21,10 @@ found about the source's terms of use.
 <!-- catalog-counts:end -->
 
 [**Browse the live catalogue →**](https://angusf777.github.io/hk-open-data/) ·
+[Browse provider files and APIs](https://angusf777.github.io/hk-open-data/provider-resources/) ·
 [Run it locally](#run-the-catalogue-locally) · [繁體中文版](README.zh-HK.md)
 
-![The HK Open Data catalogue showing search, terms-review labels, and filters.](docs/images/catalogue-home.png)
+![The HK Open Data provider-resource browser showing searchable endpoints, access classifications, and usage actions.](docs/images/provider-resources.png)
 
 ## Why this project exists
 
@@ -103,9 +104,14 @@ still needed:
   unresolved endpoint boundary. In total, 219 recipes currently have matching live evidence;
   evidence expires and does not promise later availability.
 
-The complete current resource inventory is public as
-[`access/generated/data-gov-resources.json`](access/generated/data-gov-resources.json) and is also
-shipped with the static catalogue. The **145 external resources** and **111 community MCP projects** are discovery entries, not bundled
+Use the bilingual [provider-resource browser](https://angusf777.github.io/hk-open-data/provider-resources/)
+to search the complete current inventory, filter by access status or format, fill required URL
+parameters, and generate bounded cURL, Python, Node or `hkdata` commands. Browsing and generating
+commands remain local; a provider is contacted only when you open its resource link or choose to
+run a command. The same inventory is available as
+[`access/generated/data-gov-resources.json`](access/generated/data-gov-resources.json) for machines.
+
+The **145 external resources** and **111 community MCP projects** are discovery entries, not bundled
 connectors. A 1 September 2026 link check reached or followed a valid redirect for 128 external
 entries and 107 MCP repositories; it recorded findings for the rest. Those checks did not log in to
 external APIs or install and execute third-party MCP code. The repository's own 15-tool read-only

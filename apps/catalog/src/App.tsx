@@ -4,6 +4,7 @@ import { useEffect, useMemo, useState } from "react";
 import { Disclaimer } from "./components/Disclaimer";
 import { Filters } from "./components/Filters";
 import { Hero } from "./components/Hero";
+import { ProviderResourceBrowser } from "./components/ProviderResourceBrowser";
 import { ResourceCard } from "./components/ResourceCard";
 import { ResourceDetail } from "./components/ResourceDetail";
 import { ToolkitBand } from "./components/ToolkitBand";
@@ -17,13 +18,17 @@ interface AppProps {
 }
 
 export function App({ catalogue, initialLocale = "en" }: AppProps) {
+  const initialProviderBrowser = /\/provider-resources\/?$/.test(window.location.pathname);
   const initialResource = catalogue.resources.find(
     (resource) => resource.id === window.__HK_OPEN_DATA_RESOURCE_ID__,
   );
   const [locale, setLocale] = useState<Locale>(initialLocale);
   const [query, setQuery] = useState("");
   const [filters, setFilters] = useState<ResourceFilters>({});
-  const [selected, setSelected] = useState<Resource | undefined>(initialResource);
+  const [selected, setSelected] = useState<Resource | undefined>(
+    initialProviderBrowser ? undefined : initialResource,
+  );
+  const [providerBrowser, setProviderBrowser] = useState(initialProviderBrowser);
   const [visibleLimit, setVisibleLimit] = useState(10);
   const text = copy(locale);
   const visibleResources = useMemo(
@@ -33,6 +38,7 @@ export function App({ catalogue, initialLocale = "en" }: AppProps) {
   useEffect(() => setVisibleLimit(10), [filters, query]);
 
   const openResource = (resource: Resource) => {
+    setProviderBrowser(false);
     setSelected(resource);
     window.history.pushState(
       { resourceId: resource.id },
@@ -43,16 +49,21 @@ export function App({ catalogue, initialLocale = "en" }: AppProps) {
   };
   const closeResource = () => {
     setSelected(undefined);
+    setProviderBrowser(false);
     window.history.pushState({}, "", import.meta.env.BASE_URL);
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
   useEffect(() => {
     const handlePopState = () => {
+      const onProviderBrowser = /\/provider-resources\/?$/.test(window.location.pathname);
       const pathId = decodeURIComponent(
         window.location.pathname.match(/\/resources\/([^/]+)\/?$/)?.[1] ?? "",
       );
-      setSelected(catalogue.resources.find((resource) => resource.id === pathId));
+      setProviderBrowser(onProviderBrowser);
+      setSelected(
+        onProviderBrowser ? undefined : catalogue.resources.find((resource) => resource.id === pathId),
+      );
     };
     window.addEventListener("popstate", handlePopState);
     return () => window.removeEventListener("popstate", handlePopState);
@@ -61,7 +72,11 @@ export function App({ catalogue, initialLocale = "en" }: AppProps) {
   return (
     <div className="app-shell" lang={locale === "zh-Hant" ? "zh-HK" : "en"}>
       <a className="skip-link" href="#main-content">
-        {text.skip}
+        {providerBrowser
+          ? locale === "en"
+            ? "Skip to provider resources"
+            : "跳至供應者資源"
+          : text.skip}
       </a>
       <Disclaimer locale={locale} />
       <header className="site-header">
@@ -69,7 +84,7 @@ export function App({ catalogue, initialLocale = "en" }: AppProps) {
           className="brand"
           href={import.meta.env.BASE_URL}
           onClick={(event) => {
-            if (selected) {
+            if (selected || providerBrowser) {
               event.preventDefault();
               closeResource();
             }
@@ -95,7 +110,9 @@ export function App({ catalogue, initialLocale = "en" }: AppProps) {
         </button>
       </header>
 
-      {selected ? (
+      {providerBrowser ? (
+        <ProviderResourceBrowser locale={locale} onBack={closeResource} />
+      ) : selected ? (
         <ResourceDetail locale={locale} resource={selected} onBack={closeResource} />
       ) : (
         <>
@@ -147,7 +164,7 @@ export function App({ catalogue, initialLocale = "en" }: AppProps) {
         </>
       )}
 
-      <ToolkitBand locale={locale} />
+      {!providerBrowser && <ToolkitBand locale={locale} />}
       <footer className="legal-footer" id="legal">
         <p>{text.legal}</p>
         <nav aria-label={locale === "en" ? "Legal and project links" : "法律及項目連結"}>
