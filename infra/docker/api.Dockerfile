@@ -1,4 +1,4 @@
-FROM node:22.22.0-alpine3.22 AS build
+FROM node:26.3.0-alpine3.22 AS build
 WORKDIR /app
 RUN corepack enable && corepack prepare pnpm@10.0.0 --activate
 COPY package.json pnpm-lock.yaml pnpm-workspace.yaml tsconfig.base.json ./
@@ -11,7 +11,7 @@ COPY catalog/generated catalog/generated
 COPY access/generated access/generated
 RUN pnpm --filter @hk-open-data/schemas build && pnpm --filter @hk-open-data/api build
 
-FROM node:22.22.0-alpine3.22 AS prod-deps
+FROM node:26.3.0-alpine3.22 AS prod-deps
 WORKDIR /app
 RUN corepack enable && corepack prepare pnpm@10.0.0 --activate
 COPY package.json pnpm-lock.yaml pnpm-workspace.yaml ./
@@ -19,7 +19,7 @@ COPY packages/schemas/package.json packages/schemas/package.json
 COPY services/api/package.json services/api/package.json
 RUN pnpm install --frozen-lockfile --prod --filter @hk-open-data/api... --filter @hk-open-data/schemas...
 
-FROM node:22.22.0-alpine3.22
+FROM node:26.3.0-alpine3.22
 ENV NODE_ENV=production
 WORKDIR /app
 RUN apk upgrade --no-cache \

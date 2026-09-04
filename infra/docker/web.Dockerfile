@@ -1,4 +1,4 @@
-FROM node:22.22.0-alpine3.22 AS build
+FROM node:26.3.0-alpine3.22 AS build
 ARG APP
 ARG API_BASE_URL=/v1
 ARG HKOD_PROFILE=catalogue
