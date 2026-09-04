@@ -6,7 +6,7 @@ const end = "<!-- catalog-counts:end -->";
 const checkOnly = process.argv.includes("--check");
 
 const files = {
-  "README.md": `**${counts.total} resources** · **${counts.byType.official} official** · **${counts.byType.external} external** · **${counts.byType.mcp} MCP candidates**`,
+  "README.md": `**${counts.total} sources** · **${counts.byType.official} official** · **${counts.byType.external} external** · **${counts.byType.mcp} MCP candidates**`,
   "README.zh-HK.md": `**${counts.total} 項資源** · **${counts.byType.official} 項官方資源** · **${counts.byType.external} 項外部資源** · **${counts.byType.mcp} 項 MCP 候選項目**`,
 };
 

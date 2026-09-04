@@ -18,5 +18,6 @@ test("README statistics are delimited for deterministic updates", async () => {
     const text = await readFile(file, "utf8");
     assert.equal(text.match(/<!-- catalog-counts:start -->/g)?.length, 1);
     assert.equal(text.match(/<!-- catalog-counts:end -->/g)?.length, 1);
+    if (file === "README.md") assert.match(text, /\*\*521 sources\*\*/);
   }
 });
