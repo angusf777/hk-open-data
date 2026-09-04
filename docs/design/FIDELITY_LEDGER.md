@@ -1,12 +1,13 @@
 # Civic Signal fidelity ledger
 
-Verified on 2026-08-31 against the three pinned concepts in
-[`docs/design/concepts`](concepts/) using the in-app browser and committed catalogue data.
+Initially verified on 2026-08-31 against the three pinned concepts in
+[`docs/design/concepts`](concepts/) using the in-app browser and committed catalogue data. The
+provider-resource views were recaptured on 2026-09-04 after the evidence and download improvements.
 
 | Check | Concept evidence | Browser-render evidence | Result |
 | --- | --- | --- | --- |
 | First-viewport hierarchy | Notice, quiet header, headline, search, categories, filters/results, toolkit preview | [`catalogue-home.png`](../images/catalogue-home.png) at 1536 × 1024 | Matched; the toolkit remains visible at the bottom edge. |
-| Provider-resource browser | Summary and evidence date, access counts, local filters, exact provider URLs and usage actions | [`provider-resources.png`](../images/provider-resources.png) at 1536 × 1024 and [`provider-resources-mobile.png`](../images/provider-resources-mobile.png) at 390 × 844 | Matched; 20 rows are progressively rendered and long URLs wrap without horizontal overflow. |
+| Provider-resource browser | Summary and evidence date, access counts, metadata downloads, local filters, exact provider URLs and usage actions | [`provider-resources.png`](../images/provider-resources.png) at 1536 × 1024 and [`provider-resources-mobile.png`](../images/provider-resources-mobile.png) at 390 × 844 | Matched; the captured shared view isolates one verified HKAPI-030 direct file and long URLs wrap without horizontal overflow. |
 | Palette and container model | Warm paper, white controls, dark ink, restrained red, thin ledger rules, warning band | Homepage and [`resource-detail.png`](../images/resource-detail.png) at 1536 × 1024 | Matched without gradients, glow, government marks or a card grid. |
 | Typography and controls | Compact editorial sans, large balanced heading, deliberate labels and buttons | All three rendered screenshots | Matched using local system fonts; interactive targets remain at least 44px. |
 | Resource anatomy | Provider, type, protocol, authentication, terms review, date and detail action | Homepage rows and resource detail metadata ledger | Matched with validated record values replacing mockup examples. |
@@ -18,7 +19,7 @@ Verified on 2026-08-31 against the three pinned concepts in
 ## Material fixes made during review
 
 - Opened the native filter disclosure on desktop while leaving it collapsed on mobile.
-- Replaced the first 521-row render with two initial rows plus a working progressive-disclosure
+- Replaced the first 521-row render with ten initial rows plus a working progressive-disclosure
   control so the toolkit remains discoverable.
 - Darkened the evidence-state label to pass WCAG AA contrast.
 - Added the concept's category icon treatment.
@@ -31,8 +32,8 @@ Verified on 2026-08-31 against the three pinned concepts in
 - Resource names, dates, states and counts always come from the validated catalogue; mockup values
   are not copied.
 - Results use deterministic source-ID order rather than the mockup's unsupported relevance sort.
-- Columns and CSV-export controls shown by the generated concept are omitted because they are not
-  part of the approved product contract.
+- Result rows use a fixed, accessible metadata layout instead of user-configurable columns. The
+  current filtered catalogue can be downloaded as JSON or spreadsheet-safe CSV.
 - The accessible 44px filter targets make the desktop filter rail taller than the visual mockup;
   the hierarchy and toolkit preview are preserved without shrinking controls.
 
