@@ -2,7 +2,9 @@
 
 [![License: Apache-2.0](https://img.shields.io/github/license/angusf777/hk-open-data)](LICENSE)
 [![GitHub stars](https://img.shields.io/github/stars/angusf777/hk-open-data?style=flat)](https://github.com/angusf777/hk-open-data/stargazers)
-[![Catalogue resources](https://img.shields.io/badge/catalogue-521_resources-c81e3a)](catalog/generated/counts.json)
+[![GitHub release](https://img.shields.io/github/v/release/angusf777/hk-open-data)](https://github.com/angusf777/hk-open-data/releases)
+[![Contributors](https://img.shields.io/github/contributors/angusf777/hk-open-data)](https://github.com/angusf777/hk-open-data/graphs/contributors)
+[![Catalogue sources](https://img.shields.io/badge/catalogue-521_sources-c81e3a)](catalog/generated/counts.json)
 [![CI](https://github.com/angusf777/hk-open-data/actions/workflows/ci.yml/badge.svg)](https://github.com/angusf777/hk-open-data/actions/workflows/ci.yml)
 
 > **Independent community project.** This repository is not operated by, affiliated with, or
@@ -17,7 +19,7 @@ catalogue. Every record shows where the information came from, when it was check
 found about the source's terms of use.
 
 <!-- catalog-counts:start -->
-**521 resources** · **265 official** · **145 external** · **111 MCP candidates**
+**521 sources** · **265 official** · **145 external** · **111 MCP candidates**
 <!-- catalog-counts:end -->
 
 [**Browse the live catalogue →**](https://angusf777.github.io/hk-open-data/) ·
@@ -34,8 +36,8 @@ services, and community tools. HK Open Data turns that landscape into reviewable
 - **Discover:** search one bilingual index instead of maintaining private bookmark lists.
 - **Evaluate:** see the provider, access method, protocol, last check, and terms review before
   opening a source.
-- **Build:** generate consistent JSON for local applications or run the optional developer toolkit
-  on your own computer.
+- **Build:** start from tested quickstarts, copy bounded commands, download metadata as JSON, CSV or
+  SQLite, or run the optional developer toolkit on your own computer.
 - **Improve:** correct one YAML record through a small, source-backed pull request.
 
 The static site reads only repository-generated JSON. It does not call providers, copy their
@@ -91,11 +93,13 @@ still needed:
 - **227 executable recipes** have bounded parameters, curl/Python/TypeScript examples, and hashed
   synthetic fixtures.
 - **190 DATA.GOV.HK resource-index recipes** contain 356 reviewed source-to-dataset mappings across
-  350 unique dataset identifiers. A 3 September 2026 refresh resolved these to **5,862 actual
+  350 unique dataset identifiers. A 4 September 2026 refresh resolved these to **5,862 actual
   provider resources**: 5,391 parameter-free HTTPS URLs, 6 parameterized URL templates, and 465
   HTTP-only legacy URLs that the safe fetcher refuses.
-- A bounded payload run then received a non-empty 2xx sample for **310 of the 350 datasets**. It
-  recorded 5 current provider failures and 35 datasets without a parameter-free HTTPS candidate.
+- A bounded payload run on 4 September 2026 received a non-empty 2xx sample from a direct file or
+  API for **234 of the 350 datasets**. It recorded 5 current provider failures and 111 datasets
+  whose listed resources were parameterized, HTTP-only, landing pages, geoportals, or otherwise
+  lacked a parameter-free direct HTTPS payload candidate.
   This is representative dataset proof—not a claim that all 5,862 URLs were downloaded. Every
   exception is published in the [provider-resource verification report](docs/access/provider-resources.md).
 - **37 direct-response recipes** contact a documented data endpoint. A fresh 3 September 2026 run
@@ -105,11 +109,21 @@ still needed:
   evidence expires and does not promise later availability.
 
 Use the bilingual [provider-resource browser](https://angusf777.github.io/hk-open-data/provider-resources/)
-to search the complete current inventory, filter by access status or format, fill required URL
-parameters, and generate bounded cURL, Python, Node or `hkdata` commands. Browsing and generating
-commands remain local; a provider is contacted only when you open its resource link or choose to
-run a command. The same inventory is available as
-[`access/generated/data-gov-resources.json`](access/generated/data-gov-resources.json) for machines.
+to search the complete current inventory, filter by URL type and payload evidence, open a permanent
+dataset page, and generate bounded cURL, Python, Node or `hkdata` commands for the exact direct
+resources that passed. Search and filters have shareable URLs. Browsing and generating commands
+remain local; a provider is contacted only when you open its resource link or run a command.
+
+Start with one of five current, evidence-backed guides: [transport routes](docs/quickstarts/transport-routes.md),
+[weather forecast](docs/quickstarts/weather-forecast.md), [air quality](docs/quickstarts/air-quality.md),
+[traffic geospatial data](docs/quickstarts/traffic-geospatial.md), or
+[company information](docs/quickstarts/company-information.md).
+
+Machines can use the [catalogue JSON](catalog/generated/catalogue.json), exact
+[provider-resource inventory](access/generated/data-gov-resources.json), or the live site's
+[JSON, CSV and SQLite metadata snapshots](https://angusf777.github.io/hk-open-data/downloads/README.txt)
+with a [copyable download and query guide](docs/getting-started/metadata-downloads.md).
+Those downloads contain project metadata and technical evidence, not provider dataset payloads.
 
 The **145 external resources** and **111 community MCP projects** are discovery entries, not bundled
 connectors. A 1 September 2026 link check reached or followed a valid redirect for 128 external
@@ -169,9 +183,14 @@ See [Architecture Overview](docs/architecture/OVERVIEW.md) and
 
 ## Contribute
 
-Good first contributions include correcting a URL, adding a missing official resource, reviewing a
-Traditional Chinese translation, or improving accessibility. Start with [CONTRIBUTING.md](CONTRIBUTING.md)
-and use the issue templates. Please submit factual metadata and authoritative source links—never
+Good first contributions include correcting a URL, adding a missing official source, improving one
+quickstart, or adding an accessibility regression test. Start with the
+[scoped first-contribution list](docs/community/GOOD_FIRST_ISSUES.md), [CONTRIBUTING.md](CONTRIBUTING.md),
+and the issue templates. Questions are welcome in [Discussions](https://github.com/angusf777/hk-open-data/discussions);
+support boundaries are in [SUPPORT.md](SUPPORT.md).
+
+If you reference the project in research or software, use [CITATION.cff](CITATION.cff) and cite the
+original data provider separately. Please submit factual metadata and authoritative source links—never
 credentials, personal data, private correspondence, or copied provider datasets.
 
 For inaccurate metadata, attribution, rights, privacy, or provider representation, use the

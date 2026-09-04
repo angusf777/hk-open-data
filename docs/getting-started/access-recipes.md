@@ -12,11 +12,12 @@ synthetic test fixtures and 38 entries with source-specific manual guidance. Of 
 recipes, 190 contain 356 reviewed source-to-dataset mappings across 350 unique DATA.GOV.HK dataset
 identifiers; the other 37 contact a documented data endpoint directly.
 
-On 3 September 2026, all 350 mapped DATA.GOV.HK package records resolved successfully to 5,862
+On 4 September 2026, all 350 mapped DATA.GOV.HK package records resolved successfully to 5,862
 provider resources. The safe inventory classified 5,391 as parameter-free HTTPS, 6 as HTTPS
 templates that require parameters, and 465 as HTTP-only. A separate bounded payload run received a
-non-empty 2xx response for a representative resource from 310 datasets. Five datasets returned a
-current provider failure and 35 had no parameter-free HTTPS candidate. See the
+non-empty 2xx response for a representative direct file or API from 234 datasets. Five datasets
+returned a current provider failure and 111 had no parameter-free direct HTTPS payload candidate.
+Landing pages and geoportals are deliberately not counted as payload proof. See the
 [exact exceptions and method](../access/provider-resources.md). Live evidence expires and never
 guarantees later availability.
 
@@ -67,9 +68,13 @@ catalogue sources and access classification. It contains provider metadata—not
 
 For a visual workflow, open the public
 [provider-resource browser](https://angusf777.github.io/hk-open-data/provider-resources/). It
-searches the same inventory, accepts required parameter values, and generates cURL, Python, Node
-or `hkdata` usage without contacting providers. Add `?source=HKAPI-030` to scope the page to a
-catalogue source. Running a generated command remains a separate, explicit action.
+searches the same inventory, distinguishes provider pages from direct files and APIs, and generates
+cURL, Python, Node or `hkdata` usage only for exact direct resources with current bounded payload
+evidence. Filters are preserved in the URL; add `?q=HKAPI-030` to scope the page to a catalogue
+source. Running a generated command remains a separate, explicit action.
+
+For zero-install analysis, download JSON, CSV, or SQLite metadata snapshots from the same page.
+They contain catalogue metadata, URLs, and technical evidence—not provider dataset payloads.
 
 List the current provider resources for one catalogue source without using the network:
 

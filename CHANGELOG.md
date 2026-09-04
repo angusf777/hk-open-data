@@ -7,8 +7,8 @@ All notable project changes are documented here. The format follows
 
 ### Added
 
-- Complete source-access registry for all 265 official catalogue records: 37 bounded executable
-  recipes with curl, Python and TypeScript examples plus hashed synthetic fixtures, and 228
+- Complete source-access registry for all 265 official catalogue records: 227 bounded executable
+  recipes with curl, Python and TypeScript examples plus hashed synthetic fixtures, and 38
   source-specific manual guides.
 - Local `hkdata recipe`, `example`, `fetch` and `verify` commands with typed parameters, stable exit
   codes, request safety limits, and metadata-only verification evidence.
@@ -21,15 +21,23 @@ All notable project changes are documented here. The format follows
 - Guarded `hkdata resources`, `resource-example` and `fetch-resource` commands; corresponding REST,
   Python SDK, TypeScript SDK and read-only MCP resource-discovery surfaces.
 - Metadata-only evidence from a bounded representative payload check of all 350 mapped datasets,
-  with 310 successes and every current failure or non-probeable dataset published.
+  with 234 direct file/API successes and every current failure or non-probeable dataset published.
 - Bilingual provider-resource browser with local search and filters, parameter-aware cURL, Python,
   Node and `hkdata` commands, source-scoped links and fail-closed handling of unsafe URLs.
+- Permanent dataset and category pages, shareable filter URLs, prefilled correction reports, and
+  evidence-backed quickstarts for transport, weather, air quality, geospatial, and company data.
+- Zero-install JSON, CSV, and SQLite metadata snapshots; DCAT JSON-LD, structured page metadata,
+  `llms.txt`, and citation metadata for machine and research discovery.
+- Weekly provider-resource metadata refresh, bounded payload recheck, change report, and issue
+  update without retaining provider response bodies.
 
 ### Changed
 
 - The MCP contract now pins exactly 15 read-only tools at version `2026-09-01.v1`.
 - Catalogue connector labels are derived from each source's effective recipe status.
 - Recipe generation preserves independently generated provider-resource artifacts.
+- Runnable provider-resource commands now require a direct file or API classification and current
+  resource-level payload evidence; landing pages and geoportals are labelled separately.
 
 ### Security
 

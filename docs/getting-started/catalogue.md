@@ -32,13 +32,23 @@ pnpm --filter @hk-open-data/catalog dev
 ## Browse provider files and API endpoints
 
 Open `/provider-resources/` from the catalogue's toolkit section to search the exact files and API
-endpoints mapped from reviewed DATA.GOV.HK datasets. You can filter by access status or format,
-fill any required URL parameters, and generate bounded cURL, Python, Node or `hkdata` commands.
+endpoints mapped from reviewed DATA.GOV.HK datasets. You can filter by URL status, resource type,
+payload evidence or format, then generate bounded cURL, Python, Node or `hkdata` commands for a
+direct resource that passed its bounded payload check.
 
 The browser lazily reads the repository-generated `data-gov-resources.json` only after you open
 that page. Search, filters and command generation run in your browser and do not contact a listed
 provider. A provider request occurs only if you explicitly run a generated command or open a ready
 HTTPS resource link. HTTP-only and invalid URLs do not receive executable commands.
+
+Every mapped dataset has a permanent `/datasets/{dataset-id}/` page. Catalogue categories also
+have permanent routes, and both catalogue and provider-resource filters are reflected in the URL
+so a view can be bookmarked or shared. The main catalogue can export its current results as JSON
+or spreadsheet-safe CSV.
+
+The provider browser offers zero-install JSON, CSV, and SQLite downloads. These snapshots contain
+project-authored metadata, provider URLs, and technical evidence—not provider dataset payloads.
+See [Use the metadata snapshots](metadata-downloads.md) for checksum, CSV, and SQLite examples.
 
 ## Verify a checkout
 

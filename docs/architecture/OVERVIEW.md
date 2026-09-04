@@ -26,9 +26,11 @@ flowchart LR
    invalid review states, and duplicate records.
 3. The generator sorts records and keys deterministically, then writes aggregate, collection,
    search, stale-review, and count artifacts.
-4. The React application builds those local artifacts into static routes, including a permalink for
-   every resource.
-5. GitHub Pages serves static files. Search, filtering, locale changes, and detail navigation do not
+4. The React application builds those local artifacts into permanent source, DATA.GOV.HK dataset,
+   and category routes, with schema.org JSON-LD and a DCAT catalogue projection.
+5. The build also publishes JSON, CSV and SQLite snapshots containing project metadata and bounded
+   evidence only, plus the optional runtime's OpenAPI contract.
+6. GitHub Pages serves static files. Search, filtering, locale changes, and detail navigation do not
    call provider systems.
 
 ## Source-access path
@@ -42,8 +44,9 @@ flowchart LR
 4. Synthetic fixtures test planning and parsing. An explicit live check records metadata and hashes
    without retaining a source response body.
 5. Reviewed DATA.GOV.HK dataset mappings also produce an exact provider-resource inventory. The
-   static browser loads it only on `/provider-resources/`, then searches, filters and generates
-   bounded usage commands entirely in the browser.
+   static browser loads it only on `/provider-resources/`, distinguishes provider pages from direct
+   files and APIs, and offers bounded commands only for exact resources with matching payload
+   evidence.
 6. The static site, REST routes, Python and TypeScript SDKs, and read-only MCP tools expose the same
    version, hash, status, limitations, examples and verification summary.
 7. Only the local CLI's explicit `fetch`, `fetch-resource` and `verify` commands execute a request.
