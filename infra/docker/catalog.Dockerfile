@@ -11,7 +11,11 @@ RUN uv sync --frozen
 COPY apps/catalog apps/catalog
 COPY catalog catalog
 COPY access/generated access/generated
+COPY access/verification/data-gov-resources/manifest.json access/verification/data-gov-resources/manifest.json
+COPY packages/schemas/contracts packages/schemas/contracts
 COPY scripts/catalog.py scripts/catalog.py
+COPY scripts/export_snapshots.py scripts/export_snapshots.py
+COPY llms.txt llms.txt
 RUN pnpm --filter @hk-open-data/catalog build && cp -R apps/catalog/dist /site
 
 FROM nginxinc/nginx-unprivileged:1.27.4-alpine
