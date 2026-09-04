@@ -39,6 +39,11 @@ describe("catalogue application", () => {
     );
     expect(screen.getByRole("heading", { name: "如何存取此來源" })).toBeVisible();
     expect(screen.getByRole("tab", { name: "Python" })).toBeVisible();
+    expect(screen.getByRole("link", { name: "跳至存取指引" })).toHaveAttribute("href", "#access");
+    expect(screen.getByRole("link", { name: "報告資料錯誤" })).toHaveAttribute(
+      "href",
+      expect.stringContaining("HKAPI-HKO"),
+    );
   });
 
   it("uses source terminology and clears the search from the unified reset", async () => {

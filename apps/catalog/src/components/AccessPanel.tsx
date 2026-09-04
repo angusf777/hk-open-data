@@ -25,6 +25,9 @@ export function AccessPanel({ locale, recipe }: AccessPanelProps) {
   const [selected, setSelected] = useState<ExampleLanguage>(languages[0] ?? "curl");
   const [announcement, setAnnouncement] = useState("");
   const selectedExample = recipe.examples[selected];
+  const evidenceExpired = recipe.verification
+    ? Date.parse(recipe.verification.validUntil) < Date.now()
+    : false;
 
   const copyExample = async () => {
     if (!selectedExample) return;
@@ -37,7 +40,7 @@ export function AccessPanel({ locale, recipe }: AccessPanelProps) {
   };
 
   return (
-    <section className="access-panel" aria-labelledby="access-heading">
+    <section id="access" className="access-panel" aria-labelledby="access-heading">
       <div className="access-panel-heading">
         <div>
           <p className="section-kicker">{text.sourceAccess}</p>
@@ -49,6 +52,18 @@ export function AccessPanel({ locale, recipe }: AccessPanelProps) {
       </div>
 
       <p className="access-boundary">{text.accessBoundary}</p>
+
+      {recipe.verification && (
+        <p className={`evidence-freshness ${evidenceExpired ? "is-expired" : "is-current"}`}>
+          {evidenceExpired
+            ? text.evidenceExpired
+            : text.evidenceCurrent(
+                new Date(recipe.verification.validUntil).toLocaleDateString(
+                  locale === "en" ? "en-HK" : "zh-HK",
+                ),
+              )}
+        </p>
+      )}
 
       <dl className="access-summary">
         {recipe.status !== recipe.effectiveStatus && (
@@ -181,8 +196,8 @@ export function AccessPanel({ locale, recipe }: AccessPanelProps) {
             href={`${import.meta.env.BASE_URL}provider-resources/?source=${encodeURIComponent(recipe.sourceReference)}`}
           >
             {locale === "en"
-              ? "Browse exact provider resources"
-              : "瀏覽準確的供應者資源"}
+              ? "Browse mapped files and endpoints"
+              : "瀏覽已配對檔案及端點"}
           </a>
         )}
       </div>

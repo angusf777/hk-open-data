@@ -738,6 +738,7 @@ button {
 .detail-actions {
   display: flex;
   flex-wrap: wrap;
+  flex-wrap: wrap;
   gap: 16px;
   margin-top: 16px;
 }
@@ -850,6 +851,24 @@ button {
   background: var(--warning);
   font-size: 0.84rem;
   line-height: 1.5;
+}
+
+.evidence-freshness {
+  margin: -6px 0 18px;
+  padding: 8px 11px;
+  border-radius: var(--radius);
+  font-size: 0.78rem;
+  font-weight: 750;
+}
+
+.evidence-freshness.is-current {
+  background: #eaf6ee;
+  color: #1e5d3f;
+}
+
+.evidence-freshness.is-expired {
+  background: #fff1d2;
+  color: #6d4c05;
 }
 
 .access-summary {
@@ -1313,6 +1332,15 @@ button {
 
 .provider-resource-identity a {
   color: #064bbb;
+}
+
+.provider-resource-identity .provider-resource-report {
+  display: inline-flex;
+  margin-top: 7px;
+  color: #5f6670;
+  font-size: 0.68rem;
+  text-decoration: underline;
+  text-underline-offset: 3px;
 }
 
 .provider-resource-metadata {

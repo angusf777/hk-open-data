@@ -11,6 +11,7 @@ import {
 import { useCallback, useEffect, useMemo, useState } from "react";
 
 import { loadProviderResourceInventory } from "../data";
+import { correctionIssueUrl } from "../issue-links";
 import {
   filterProviderResources,
   providerResourceFormats,
@@ -89,6 +90,8 @@ const messages = {
     sourceReferences: "Catalogue sources",
     formats: "Formats",
     openDataset: "Open dataset on DATA.GOV.HK",
+    reportDataset: "Report this dataset",
+    reportResource: "Report this file or endpoint",
     liveVerified: "Payload verified",
     failed: "Probe failed",
     metadataOnly: "Metadata only",
@@ -156,6 +159,8 @@ const messages = {
     sourceReferences: "目錄來源",
     formats: "格式",
     openDataset: "在 DATA.GOV.HK 開啟數據集",
+    reportDataset: "報告此數據集",
+    reportResource: "報告此檔案或端點",
     liveVerified: "已核實內容",
     failed: "核查失敗",
     metadataOnly: "只核實元數據",
@@ -331,6 +336,9 @@ export function ProviderResourceBrowser({ locale, onBack, datasetId }: ProviderR
           <a href={dataset.landingUrl} target="_blank" rel="noreferrer">
             {text.openDataset}<ExternalLink aria-hidden="true" size={15} />
           </a>
+          <a href={correctionIssueUrl(dataset.datasetId)} target="_blank" rel="noreferrer">
+            {text.reportDataset}
+          </a>
         </section>
       )}
 
@@ -458,6 +466,15 @@ function ProviderResourceRow({ locale, resource, expanded, onToggle }: ProviderR
             {resource.datasetId}
           </a>
         </p>
+        <a
+          className="provider-resource-report"
+          href={correctionIssueUrl(`${resource.datasetId} / ${resource.resourceId}`)}
+          target="_blank"
+          rel="noreferrer"
+          aria-label={`${text.reportResource}: ${resource.name}`}
+        >
+          {text.reportResource}
+        </a>
       </div>
       <dl className="provider-resource-metadata">
         <div><dt>{text.source}</dt><dd>{resource.sourceReferences.join(", ")}</dd></div>

@@ -79,6 +79,11 @@ const messages = {
     copyExample: (language: string) => `Copy ${language} example`,
     copiedExample: (language: string) => `${language} example copied`,
     copyFailed: "The example could not be copied.",
+    jumpToAccess: "Jump to access instructions",
+    browseMappedResources: "Browse mapped files and endpoints",
+    reportCorrection: "Report a correction",
+    evidenceExpired: "Evidence expired — re-verify before relying on it",
+    evidenceCurrent: (date: string) => `Evidence current through ${date}`,
   },
   "zh-Hant": {
     skip: "跳至資源目錄",
@@ -157,6 +162,11 @@ const messages = {
     copyExample: (language: string) => `複製 ${language} 範例`,
     copiedExample: (language: string) => `已複製 ${language} 範例`,
     copyFailed: "無法複製範例。",
+    jumpToAccess: "跳至存取指引",
+    browseMappedResources: "瀏覽已配對檔案及端點",
+    reportCorrection: "報告資料錯誤",
+    evidenceExpired: "證據已過有效期 — 依賴前請重新核實",
+    evidenceCurrent: (date: string) => `證據有效至 ${date}`,
   },
 } as const;
 

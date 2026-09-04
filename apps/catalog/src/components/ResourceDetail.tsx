@@ -1,6 +1,7 @@
 import { ArrowLeft, ExternalLink, FileWarning } from "lucide-react";
 
 import { copy, labelValue } from "../i18n";
+import { correctionIssueUrl } from "../issue-links";
 import type { Locale, Resource } from "../types";
 import { AccessPanel } from "./AccessPanel";
 
@@ -52,12 +53,25 @@ export function ResourceDetail({ locale, resource, onBack }: ResourceDetailProps
           </section>
 
           <div className="detail-actions">
+            {resource.accessRecipe && (
+              <a href="#access" className="primary-link">
+                {text.jumpToAccess}
+              </a>
+            )}
+            {resource.accessRecipe?.adapter === "data-gov-resource-index" && (
+              <a href={`${import.meta.env.BASE_URL}provider-resources/?source=${encodeURIComponent(resource.sourceReference)}`}>
+                {text.browseMappedResources}
+              </a>
+            )}
             {providerUrl && (
-              <a href={providerUrl} target="_blank" rel="noreferrer" className="primary-link">
+              <a href={providerUrl} target="_blank" rel="noreferrer">
                 <ExternalLink aria-hidden="true" size={19} strokeWidth={1.75} />
                 {text.openProvider}
               </a>
             )}
+            <a href={correctionIssueUrl(resource.sourceReference)} target="_blank" rel="noreferrer">
+              {text.reportCorrection}
+            </a>
             <button type="button" onClick={onBack}>
               <ArrowLeft aria-hidden="true" size={18} strokeWidth={1.75} />
               {text.back}

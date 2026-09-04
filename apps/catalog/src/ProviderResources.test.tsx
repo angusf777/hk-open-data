@@ -136,6 +136,9 @@ describe("provider-resource browser", () => {
     await user.selectOptions(screen.getByLabelText("Format"), "JSON");
     expect(screen.getByRole("heading", { name: "1 resource" })).toBeVisible();
     expect(screen.getByText("Bus route information")).toBeVisible();
+    expect(
+      screen.getByRole("link", { name: "Report this file or endpoint: Bus route information" }),
+    ).toHaveAttribute("href", expect.stringContaining("ready-json"));
   });
 
   it("generates copyable commands after required parameters are supplied", async () => {
@@ -196,6 +199,10 @@ describe("provider-resource browser", () => {
     expect(await screen.findByRole("heading", { name: "New Lantao Bus routes" })).toBeVisible();
     expect(screen.getByText("Current bus route information.")).toBeVisible();
     expect(screen.getByRole("article", { name: "Bus route information" })).toBeVisible();
+    expect(screen.getByRole("link", { name: "Report this dataset" })).toHaveAttribute(
+      "href",
+      expect.stringContaining("nlb-bus-service-v2"),
+    );
     expect(screen.queryByRole("article", { name: "Historical flight schedule" })).not.toBeInTheDocument();
   });
 });

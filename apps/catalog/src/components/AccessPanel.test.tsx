@@ -91,9 +91,39 @@ describe("AccessPanel", () => {
       />,
     );
 
-    expect(screen.getByRole("link", { name: /browse exact provider resources/i })).toHaveAttribute(
+    expect(screen.getByRole("link", { name: /browse mapped files and endpoints/i })).toHaveAttribute(
       "href",
       "/provider-resources/?source=HKAPI-001",
     );
+  });
+
+  it("turns the verification validity date into a clear freshness status", () => {
+    render(
+      <AccessPanel
+        locale="en"
+        recipe={{
+          ...recipe,
+          verification: {
+            checkedAt: "2020-01-01T00:00:00Z",
+            validUntil: "2020-01-08T00:00:00Z",
+            outcome: "success",
+            errorCode: null,
+            recipeSha256: "a".repeat(64),
+            finalHost: "example.com",
+            httpStatus: 200,
+            elapsedMs: 25,
+            mediaType: "application/json",
+            responseBytes: 100,
+            responseSha256: "b".repeat(64),
+            schemaFingerprint: "c".repeat(64),
+            parsedRecordCount: 1,
+            limitations: [],
+            toolVersion: "0.1.0",
+          },
+        }}
+      />,
+    );
+
+    expect(screen.getByText("Evidence expired — re-verify before relying on it")).toBeVisible();
   });
 });
