@@ -38,6 +38,15 @@ function isProviderResource(value: unknown): value is ProviderResource {
     candidate.templateParameters.every((parameter) => typeof parameter === "string") &&
     ["ready", "parameters-required", "insecure-http", "invalid-url"].includes(
       String(candidate.access),
+    ) &&
+    ["https", "http", "invalid"].includes(String(candidate.transport)) &&
+    ["api", "file", "dataset-page", "geoportal", "web-page", "unknown"].includes(
+      String(candidate.resourceKind),
+    ) &&
+    typeof candidate.verification === "object" &&
+    candidate.verification !== null &&
+    ["live-verified", "failed", "metadata-only"].includes(
+      String((candidate.verification as Record<string, unknown>).status),
     )
   );
 }

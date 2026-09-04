@@ -1,4 +1,5 @@
 import { execFileSync } from "node:child_process";
+import { createHash } from "node:crypto";
 import { readFile, writeFile, mkdir, copyFile, access } from "node:fs/promises";
 import { resolve } from "node:path";
 
@@ -12,9 +13,51 @@ execFileSync("uv", ["run", "python", "scripts/catalog.py", "check"], {
   stdio: "inherit",
 });
 execFileSync("pnpm", ["exec", "vite", "build"], { cwd: appRoot, stdio: "inherit" });
-await copyFile(
+const providerInventoryBytes = await readFile(
   resolve(repositoryRoot, "access/generated/data-gov-resources.json"),
+);
+const providerInventory = JSON.parse(providerInventoryBytes.toString("utf8"));
+const providerEvidence = JSON.parse(
+  await readFile(
+    resolve(repositoryRoot, "access/verification/data-gov-resources/manifest.json"),
+    "utf8",
+  ),
+);
+const inventorySha256 = createHash("sha256").update(providerInventoryBytes).digest("hex");
+if (providerEvidence.inventorySha256 !== inventorySha256) {
+  throw new Error("provider-resource evidence does not match the current inventory");
+}
+
+const publicProviderInventory = {
+  ...providerInventory,
+  resources: providerInventory.resources.map((resource) => {
+    const datasetEvidence = providerEvidence.datasets?.[resource.datasetId];
+    const attempt = datasetEvidence?.attempts?.find(
+      (candidate) => candidate.resourceId === resource.resourceId,
+    );
+    const verified =
+      datasetEvidence?.outcome === "success" &&
+      datasetEvidence.selectedResourceId === resource.resourceId &&
+      attempt?.outcome === "success";
+    return {
+      ...resource,
+      verification: {
+        status: verified ? "live-verified" : attempt ? "failed" : "metadata-only",
+        checkedAt: attempt ? providerEvidence.checkedAt : providerInventory.checkedAt,
+        datasetOutcome: datasetEvidence?.outcome ?? "unknown",
+        httpStatus: attempt?.httpStatus ?? null,
+        mediaType: attempt?.mediaType ?? null,
+        sampleBytes: attempt?.sampleBytes ?? null,
+        elapsedMs: attempt?.elapsedMs ?? null,
+        errorCode: attempt?.errorCode ?? null,
+      },
+    };
+  }),
+};
+await writeFile(
   resolve(distRoot, "data-gov-resources.json"),
+  `${JSON.stringify(publicProviderInventory, null, 2)}\n`,
+  "utf8",
 );
 
 for (const name of [

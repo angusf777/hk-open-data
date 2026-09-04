@@ -181,7 +181,9 @@ def probe_representatives(
             )
         }
         candidates = [
-            resource for resource in rank_resources(resources) if resource.access == "ready"
+            resource
+            for resource in rank_resources(resources)
+            if resource.access == "ready" and resource.resource_kind in {"api", "file"}
         ]
         if not candidates:
             return dataset_id, {

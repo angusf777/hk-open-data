@@ -1,4 +1,9 @@
-import type { ProviderResource, ProviderResourceAccess } from "./types";
+import type {
+  ProviderResource,
+  ProviderResourceAccess,
+  ProviderResourceKind,
+  ProviderResourceVerificationStatus,
+} from "./types";
 
 export type ProviderResourceLanguage = "curl" | "python" | "node" | "hkdata";
 
@@ -6,6 +11,8 @@ export interface ProviderResourceFilters {
   query: string;
   access: ProviderResourceAccess | "all";
   format: string;
+  kind: ProviderResourceKind | "all";
+  verification: ProviderResourceVerificationStatus | "all";
 }
 
 const MAX_BYTES = 25 * 1024 * 1024;
@@ -19,6 +26,11 @@ export function filterProviderResources(
   return resources.filter((resource) => {
     if (filters.access !== "all" && resource.access !== filters.access) return false;
     if (filters.format !== "all" && resource.format !== filters.format) return false;
+    if (filters.kind !== "all" && resource.resourceKind !== filters.kind) return false;
+    if (
+      filters.verification !== "all" &&
+      resource.verification.status !== filters.verification
+    ) return false;
     if (terms.length === 0) return true;
     const haystack = [
       resource.name,
@@ -67,6 +79,12 @@ export function renderProviderResourceCommand(
   language: ProviderResourceLanguage,
   parameters: Record<string, string>,
 ): string | null {
+  if (
+    !["api", "file"].includes(resource.resourceKind) ||
+    resource.verification.status !== "live-verified"
+  ) {
+    return null;
+  }
   const url = resolveProviderResourceUrl(resource, parameters);
   if (!url) return null;
   if (language === "curl") {

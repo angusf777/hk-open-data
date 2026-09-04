@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-09-03T03:57:52.987235Z",
+  "checkedAt": "2026-09-04T03:13:33.770563Z",
   "datasets": {
     "aahk-team1-flight-info": {
       "accessCounts": {
@@ -26,7 +26,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 1222,
+          "elapsedMs": 445,
           "finalHost": "api.amigo.taxi",
           "format": "JSON",
           "httpStatus": 200,
@@ -34,7 +34,7 @@
           "outcome": "success",
           "resourceId": "0044fd2e-945f-4b33-938d-1c3d0aad43c4",
           "sampleBytes": 4096,
-          "sampleSha256": "3f88fecb4580e7ca88cc937655ba764a683159a74956c84923c6d30bd82c5906",
+          "sampleSha256": "f32fcbeb68a994758149175f5a4dd14a3f2d9343846e4d9910632ece90fe2993",
           "truncated": true
         }
       ],
@@ -55,7 +55,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 614,
+          "elapsedMs": 251,
           "finalHost": "data.bigboss.hk",
           "format": "JSON",
           "httpStatus": 200,
@@ -63,7 +63,7 @@
           "outcome": "success",
           "resourceId": "5e0c3e93-1e57-4a1b-87f9-c7fbbd79ef56",
           "sampleBytes": 4096,
-          "sampleSha256": "3b1a0267e5c94efdd577bf1e1f8ae13512fee284d964f859834e4f858dd97479",
+          "sampleSha256": "c90105018d8a8d45147b696b35c64da0dec964492a0ad5e1d666ab0880358810",
           "truncated": true
         }
       ],
@@ -84,7 +84,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 680,
+          "elapsedMs": 666,
           "finalHost": "www.cfs.gov.hk",
           "format": "XML",
           "httpStatus": 206,
@@ -113,7 +113,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 585,
+          "elapsedMs": 626,
           "finalHost": "www.cfs.gov.hk",
           "format": "JSON",
           "httpStatus": 206,
@@ -142,7 +142,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 258,
+          "elapsedMs": 102,
           "finalHost": "api.clp.com.hk",
           "format": "JSON",
           "httpStatus": 403,
@@ -169,23 +169,10 @@
         "parameters-required": 0,
         "ready": 1
       },
-      "attempts": [
-        {
-          "elapsedMs": 544,
-          "finalHost": "portal.csdi.gov.hk",
-          "format": "API",
-          "httpStatus": 206,
-          "mediaType": "text/html",
-          "outcome": "success",
-          "resourceId": "97671696-3538-4523-87c7-09e218276483",
-          "sampleBytes": 4096,
-          "sampleSha256": "96a073828ac894aa768f3521a0c9b6302644a95d8163603078ae74b76ef84ce1",
-          "truncated": true
-        }
-      ],
-      "outcome": "success",
-      "reason": null,
-      "selectedResourceId": "97671696-3538-4523-87c7-09e218276483",
+      "attempts": [],
+      "outcome": "not-probeable",
+      "reason": "no-parameter-free-https-resource",
+      "selectedResourceId": null,
       "sourceReferences": [
         "HKAPI-175"
       ],
@@ -198,23 +185,10 @@
         "parameters-required": 0,
         "ready": 1
       },
-      "attempts": [
-        {
-          "elapsedMs": 464,
-          "finalHost": "portal.csdi.gov.hk",
-          "format": "API",
-          "httpStatus": 206,
-          "mediaType": "text/html",
-          "outcome": "success",
-          "resourceId": "1950d635-f49a-4282-b5c9-8e49644b4784",
-          "sampleBytes": 4096,
-          "sampleSha256": "897c7464d70637276b209f63fc5817865ee3293bbabe338e5eaa5928a6978c84",
-          "truncated": true
-        }
-      ],
-      "outcome": "success",
-      "reason": null,
-      "selectedResourceId": "1950d635-f49a-4282-b5c9-8e49644b4784",
+      "attempts": [],
+      "outcome": "not-probeable",
+      "reason": "no-parameter-free-https-resource",
+      "selectedResourceId": null,
       "sourceReferences": [
         "HKAPI-175"
       ],
@@ -227,23 +201,10 @@
         "parameters-required": 0,
         "ready": 1
       },
-      "attempts": [
-        {
-          "elapsedMs": 461,
-          "finalHost": "portal.csdi.gov.hk",
-          "format": "API",
-          "httpStatus": 206,
-          "mediaType": "text/html",
-          "outcome": "success",
-          "resourceId": "964c113d-b7fd-47a7-8a94-41754940c97e",
-          "sampleBytes": 4096,
-          "sampleSha256": "13f14290cf5114050b978a998eb5fc19c92e63364dd0b57796b56c09d3d2bf7d",
-          "truncated": true
-        }
-      ],
-      "outcome": "success",
-      "reason": null,
-      "selectedResourceId": "964c113d-b7fd-47a7-8a94-41754940c97e",
+      "attempts": [],
+      "outcome": "not-probeable",
+      "reason": "no-parameter-free-https-resource",
+      "selectedResourceId": null,
       "sourceReferences": [
         "HKAPI-175"
       ],
@@ -256,23 +217,10 @@
         "parameters-required": 0,
         "ready": 1
       },
-      "attempts": [
-        {
-          "elapsedMs": 499,
-          "finalHost": "portal.csdi.gov.hk",
-          "format": "API",
-          "httpStatus": 206,
-          "mediaType": "text/html",
-          "outcome": "success",
-          "resourceId": "6b0ed8f9-22c9-4310-b76c-63eb12bfc2fc",
-          "sampleBytes": 4096,
-          "sampleSha256": "50b722e734068d7952c0dbbb1e34d018a9cff250e5fb0e975c9cf2c2bcc27c7b",
-          "truncated": true
-        }
-      ],
-      "outcome": "success",
-      "reason": null,
-      "selectedResourceId": "6b0ed8f9-22c9-4310-b76c-63eb12bfc2fc",
+      "attempts": [],
+      "outcome": "not-probeable",
+      "reason": "no-parameter-free-https-resource",
+      "selectedResourceId": null,
       "sourceReferences": [
         "HKAPI-175"
       ],
@@ -285,23 +233,10 @@
         "parameters-required": 0,
         "ready": 1
       },
-      "attempts": [
-        {
-          "elapsedMs": 420,
-          "finalHost": "portal.csdi.gov.hk",
-          "format": "API",
-          "httpStatus": 206,
-          "mediaType": "text/html",
-          "outcome": "success",
-          "resourceId": "eff6a303-f3bb-4c85-972b-6f242ef369f8",
-          "sampleBytes": 4096,
-          "sampleSha256": "bf0d1d8d74897d2bd9a559fe9ede94b2f19622b17aeed80e8e66eb25b45fd859",
-          "truncated": true
-        }
-      ],
-      "outcome": "success",
-      "reason": null,
-      "selectedResourceId": "eff6a303-f3bb-4c85-972b-6f242ef369f8",
+      "attempts": [],
+      "outcome": "not-probeable",
+      "reason": "no-parameter-free-https-resource",
+      "selectedResourceId": null,
       "sourceReferences": [
         "HKAPI-175"
       ],
@@ -314,23 +249,10 @@
         "parameters-required": 0,
         "ready": 1
       },
-      "attempts": [
-        {
-          "elapsedMs": 420,
-          "finalHost": "portal.csdi.gov.hk",
-          "format": "API",
-          "httpStatus": 206,
-          "mediaType": "text/html",
-          "outcome": "success",
-          "resourceId": "ffbb5512-cd1e-4d39-8b7f-e7242d1e1701",
-          "sampleBytes": 4096,
-          "sampleSha256": "fffac0b977866c2885cd5a38759f2aa262f01f04c4c87e47c8394eddd60713e2",
-          "truncated": true
-        }
-      ],
-      "outcome": "success",
-      "reason": null,
-      "selectedResourceId": "ffbb5512-cd1e-4d39-8b7f-e7242d1e1701",
+      "attempts": [],
+      "outcome": "not-probeable",
+      "reason": "no-parameter-free-https-resource",
+      "selectedResourceId": null,
       "sourceReferences": [
         "HKAPI-175"
       ],
@@ -343,23 +265,10 @@
         "parameters-required": 0,
         "ready": 1
       },
-      "attempts": [
-        {
-          "elapsedMs": 433,
-          "finalHost": "portal.csdi.gov.hk",
-          "format": "API",
-          "httpStatus": 206,
-          "mediaType": "text/html",
-          "outcome": "success",
-          "resourceId": "1190edc9-4f08-4862-b439-d1580a96a70c",
-          "sampleBytes": 4096,
-          "sampleSha256": "6665c047167d8c4d0dd2b44390486025d42071aeb94da7a74106e9ddb3cc5aa5",
-          "truncated": true
-        }
-      ],
-      "outcome": "success",
-      "reason": null,
-      "selectedResourceId": "1190edc9-4f08-4862-b439-d1580a96a70c",
+      "attempts": [],
+      "outcome": "not-probeable",
+      "reason": "no-parameter-free-https-resource",
+      "selectedResourceId": null,
       "sourceReferences": [
         "HKAPI-175"
       ],
@@ -372,23 +281,10 @@
         "parameters-required": 0,
         "ready": 1
       },
-      "attempts": [
-        {
-          "elapsedMs": 498,
-          "finalHost": "portal.csdi.gov.hk",
-          "format": "API",
-          "httpStatus": 206,
-          "mediaType": "text/html",
-          "outcome": "success",
-          "resourceId": "39eb326a-b9a3-4bb3-83fc-780769a5dcf3",
-          "sampleBytes": 4096,
-          "sampleSha256": "4572956195ed9dc4ee2a07bf4fb8f586cbc976fe7acb76425c467831e331336f",
-          "truncated": true
-        }
-      ],
-      "outcome": "success",
-      "reason": null,
-      "selectedResourceId": "39eb326a-b9a3-4bb3-83fc-780769a5dcf3",
+      "attempts": [],
+      "outcome": "not-probeable",
+      "reason": "no-parameter-free-https-resource",
+      "selectedResourceId": null,
       "sourceReferences": [
         "HKAPI-175"
       ],
@@ -401,23 +297,10 @@
         "parameters-required": 0,
         "ready": 1
       },
-      "attempts": [
-        {
-          "elapsedMs": 508,
-          "finalHost": "portal.csdi.gov.hk",
-          "format": "API",
-          "httpStatus": 206,
-          "mediaType": "text/html",
-          "outcome": "success",
-          "resourceId": "0c6ba249-ce7b-4f0a-b6c3-d461f4b46783",
-          "sampleBytes": 4096,
-          "sampleSha256": "4bdfa77c14be2eb518d9ff06dc796b7094e8e27e2a1b74c1ade3635e1cc74569",
-          "truncated": true
-        }
-      ],
-      "outcome": "success",
-      "reason": null,
-      "selectedResourceId": "0c6ba249-ce7b-4f0a-b6c3-d461f4b46783",
+      "attempts": [],
+      "outcome": "not-probeable",
+      "reason": "no-parameter-free-https-resource",
+      "selectedResourceId": null,
       "sourceReferences": [
         "HKAPI-175"
       ],
@@ -430,23 +313,10 @@
         "parameters-required": 0,
         "ready": 1
       },
-      "attempts": [
-        {
-          "elapsedMs": 423,
-          "finalHost": "portal.csdi.gov.hk",
-          "format": "API",
-          "httpStatus": 206,
-          "mediaType": "text/html",
-          "outcome": "success",
-          "resourceId": "27b6c313-2cbb-400d-a4e0-a4428a66c50c",
-          "sampleBytes": 4096,
-          "sampleSha256": "a20e12349923845aa9c855f0f1d8f61fb756a6995869f57c05afbab600423cc1",
-          "truncated": true
-        }
-      ],
-      "outcome": "success",
-      "reason": null,
-      "selectedResourceId": "27b6c313-2cbb-400d-a4e0-a4428a66c50c",
+      "attempts": [],
+      "outcome": "not-probeable",
+      "reason": "no-parameter-free-https-resource",
+      "selectedResourceId": null,
       "sourceReferences": [
         "HKAPI-175"
       ],
@@ -461,21 +331,21 @@
       },
       "attempts": [
         {
-          "elapsedMs": 489,
-          "finalHost": "portal.csdi.gov.hk",
-          "format": "API",
+          "elapsedMs": 164,
+          "finalHost": "www.eac.hk",
+          "format": "JSON",
           "httpStatus": 206,
-          "mediaType": "text/html",
+          "mediaType": "application/json",
           "outcome": "success",
-          "resourceId": "e7e6e166-4167-4e30-905a-84fb884dc99d",
+          "resourceId": "c1848044-0ec2-4ddf-847d-0c136d2f9722",
           "sampleBytes": 4096,
-          "sampleSha256": "2d28f99f4e3df58efb142dccd9a50c24363f042885ea46cf9b54476b7966e1bc",
+          "sampleSha256": "db93a8f5b5e9e1201766bb750bf3d42bdcc66562379c1034b59c75cd28bcd92e",
           "truncated": true
         }
       ],
       "outcome": "success",
       "reason": null,
-      "selectedResourceId": "e7e6e166-4167-4e30-905a-84fb884dc99d",
+      "selectedResourceId": "c1848044-0ec2-4ddf-847d-0c136d2f9722",
       "sourceReferences": [
         "HKAPI-175"
       ],
@@ -520,23 +390,10 @@
         "parameters-required": 0,
         "ready": 1
       },
-      "attempts": [
-        {
-          "elapsedMs": 461,
-          "finalHost": "portal.csdi.gov.hk",
-          "format": "API",
-          "httpStatus": 206,
-          "mediaType": "text/html",
-          "outcome": "success",
-          "resourceId": "fd1e06ac-0e96-468c-a8ba-fa03b006f14e",
-          "sampleBytes": 4096,
-          "sampleSha256": "a623750922666cfa62ffdb0b856d895bb4d3771325f0131209ebee98ff0e63c9",
-          "truncated": true
-        }
-      ],
-      "outcome": "success",
-      "reason": null,
-      "selectedResourceId": "fd1e06ac-0e96-468c-a8ba-fa03b006f14e",
+      "attempts": [],
+      "outcome": "not-probeable",
+      "reason": "no-parameter-free-https-resource",
+      "selectedResourceId": null,
       "sourceReferences": [
         "HKAPI-117"
       ],
@@ -551,7 +408,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 403,
+          "elapsedMs": 143,
           "finalHost": "www.archsd.gov.hk",
           "format": "JSON",
           "httpStatus": 206,
@@ -580,7 +437,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 286,
+          "elapsedMs": 142,
           "finalHost": "www.archsd.gov.hk",
           "format": "JSON",
           "httpStatus": 206,
@@ -609,7 +466,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 512,
+          "elapsedMs": 379,
           "finalHost": "static.csdi.gov.hk",
           "format": "CSV",
           "httpStatus": 200,
@@ -636,23 +493,10 @@
         "parameters-required": 0,
         "ready": 1
       },
-      "attempts": [
-        {
-          "elapsedMs": 1631,
-          "finalHost": "portal.csdi.gov.hk",
-          "format": "CSV",
-          "httpStatus": 206,
-          "mediaType": "text/csv",
-          "outcome": "success",
-          "resourceId": "0da72366-42c8-4ba8-a9e3-019753d71289",
-          "sampleBytes": 4096,
-          "sampleSha256": "ae9118496d4c58ae90eff4689d5dcf3ede57a3813fdde5ab590088efeabd5eb4",
-          "truncated": true
-        }
-      ],
-      "outcome": "success",
-      "reason": null,
-      "selectedResourceId": "0da72366-42c8-4ba8-a9e3-019753d71289",
+      "attempts": [],
+      "outcome": "not-probeable",
+      "reason": "no-parameter-free-https-resource",
+      "selectedResourceId": null,
       "sourceReferences": [
         "HKAPI-222"
       ],
@@ -665,23 +509,10 @@
         "parameters-required": 0,
         "ready": 1
       },
-      "attempts": [
-        {
-          "elapsedMs": 481,
-          "finalHost": "portal.csdi.gov.hk",
-          "format": "CSV",
-          "httpStatus": 206,
-          "mediaType": "text/csv",
-          "outcome": "success",
-          "resourceId": "dc642e9c-f178-40a0-bfdf-ee1040abc707",
-          "sampleBytes": 4096,
-          "sampleSha256": "ffeb4ffe0aee77f1c8519f6f2b379c2cca336396e586a5904d40f35fb78254c9",
-          "truncated": true
-        }
-      ],
-      "outcome": "success",
-      "reason": null,
-      "selectedResourceId": "dc642e9c-f178-40a0-bfdf-ee1040abc707",
+      "attempts": [],
+      "outcome": "not-probeable",
+      "reason": "no-parameter-free-https-resource",
+      "selectedResourceId": null,
       "sourceReferences": [
         "HKAPI-223"
       ],
@@ -696,7 +527,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 304,
+          "elapsedMs": 93,
           "finalHost": "static.data.gov.hk",
           "format": "CSV",
           "httpStatus": 206,
@@ -725,7 +556,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 314,
+          "elapsedMs": 144,
           "finalHost": "www.bd.gov.hk",
           "format": "CSV",
           "httpStatus": 206,
@@ -752,23 +583,10 @@
         "parameters-required": 0,
         "ready": 1
       },
-      "attempts": [
-        {
-          "elapsedMs": 17213,
-          "finalHost": "portal.csdi.gov.hk",
-          "format": "CSV",
-          "httpStatus": 206,
-          "mediaType": "text/csv",
-          "outcome": "success",
-          "resourceId": "61a400c6-1b35-4aed-8ae2-b17ccfe3e67a",
-          "sampleBytes": 4096,
-          "sampleSha256": "b1040fc38890bf2b0ce5bb2fe625a50615ea6d794044783a5e2f3c7b74b3915f",
-          "truncated": true
-        }
-      ],
-      "outcome": "success",
-      "reason": null,
-      "selectedResourceId": "61a400c6-1b35-4aed-8ae2-b17ccfe3e67a",
+      "attempts": [],
+      "outcome": "not-probeable",
+      "reason": "no-parameter-free-https-resource",
+      "selectedResourceId": null,
       "sourceReferences": [
         "HKAPI-220"
       ],
@@ -781,23 +599,10 @@
         "parameters-required": 0,
         "ready": 1
       },
-      "attempts": [
-        {
-          "elapsedMs": 1954,
-          "finalHost": "portal.csdi.gov.hk",
-          "format": "CSV",
-          "httpStatus": 206,
-          "mediaType": "text/csv",
-          "outcome": "success",
-          "resourceId": "2d3d1a7f-da89-456b-a5ba-95e9b8e6b849",
-          "sampleBytes": 4096,
-          "sampleSha256": "47ed8401c052fac8700ada5ac30e4a7e30070d931fc152229f3f8b920078db53",
-          "truncated": true
-        }
-      ],
-      "outcome": "success",
-      "reason": null,
-      "selectedResourceId": "2d3d1a7f-da89-456b-a5ba-95e9b8e6b849",
+      "attempts": [],
+      "outcome": "not-probeable",
+      "reason": "no-parameter-free-https-resource",
+      "selectedResourceId": null,
       "sourceReferences": [
         "HKAPI-220"
       ],
@@ -810,23 +615,10 @@
         "parameters-required": 0,
         "ready": 1
       },
-      "attempts": [
-        {
-          "elapsedMs": 1538,
-          "finalHost": "portal.csdi.gov.hk",
-          "format": "CSV",
-          "httpStatus": 206,
-          "mediaType": "text/csv",
-          "outcome": "success",
-          "resourceId": "28d32f37-4e64-447a-84f0-152c43334a47",
-          "sampleBytes": 4096,
-          "sampleSha256": "e8ff85dd2ce4b48824e3d7328270a24e51b7d1c045d6769ffebd368c8d458202",
-          "truncated": true
-        }
-      ],
-      "outcome": "success",
-      "reason": null,
-      "selectedResourceId": "28d32f37-4e64-447a-84f0-152c43334a47",
+      "attempts": [],
+      "outcome": "not-probeable",
+      "reason": "no-parameter-free-https-resource",
+      "selectedResourceId": null,
       "sourceReferences": [
         "HKAPI-220"
       ],
@@ -839,23 +631,10 @@
         "parameters-required": 0,
         "ready": 1
       },
-      "attempts": [
-        {
-          "elapsedMs": 1428,
-          "finalHost": "portal.csdi.gov.hk",
-          "format": "CSV",
-          "httpStatus": 206,
-          "mediaType": "text/csv",
-          "outcome": "success",
-          "resourceId": "b3a51f1f-85dc-4cd2-a1eb-1b144d4278ed",
-          "sampleBytes": 4096,
-          "sampleSha256": "da34087eaf427d1b9b8c1a6d47fb80eb715bfc03c73f23df1493994f1af44b02",
-          "truncated": true
-        }
-      ],
-      "outcome": "success",
-      "reason": null,
-      "selectedResourceId": "b3a51f1f-85dc-4cd2-a1eb-1b144d4278ed",
+      "attempts": [],
+      "outcome": "not-probeable",
+      "reason": "no-parameter-free-https-resource",
+      "selectedResourceId": null,
       "sourceReferences": [
         "HKAPI-220"
       ],
@@ -868,23 +647,10 @@
         "parameters-required": 0,
         "ready": 1
       },
-      "attempts": [
-        {
-          "elapsedMs": 1397,
-          "finalHost": "portal.csdi.gov.hk",
-          "format": "CSV",
-          "httpStatus": 206,
-          "mediaType": "text/csv",
-          "outcome": "success",
-          "resourceId": "ad7d326e-fa4b-4dcc-9aec-7cb974286639",
-          "sampleBytes": 4096,
-          "sampleSha256": "ce479e6c35a863a83955f6108ad9fb05973a3ac0f2bb87ce47542e7191a38bd0",
-          "truncated": true
-        }
-      ],
-      "outcome": "success",
-      "reason": null,
-      "selectedResourceId": "ad7d326e-fa4b-4dcc-9aec-7cb974286639",
+      "attempts": [],
+      "outcome": "not-probeable",
+      "reason": "no-parameter-free-https-resource",
+      "selectedResourceId": null,
       "sourceReferences": [
         "HKAPI-220"
       ],
@@ -897,23 +663,10 @@
         "parameters-required": 0,
         "ready": 1
       },
-      "attempts": [
-        {
-          "elapsedMs": 1327,
-          "finalHost": "portal.csdi.gov.hk",
-          "format": "CSV",
-          "httpStatus": 206,
-          "mediaType": "text/csv",
-          "outcome": "success",
-          "resourceId": "30b24c19-edc7-4cbf-a9bc-3c55d42466f2",
-          "sampleBytes": 4096,
-          "sampleSha256": "9f598e67dc8955cd289442760aa600dcefdd1adc30d2376fea2f0091844b8ec2",
-          "truncated": true
-        }
-      ],
-      "outcome": "success",
-      "reason": null,
-      "selectedResourceId": "30b24c19-edc7-4cbf-a9bc-3c55d42466f2",
+      "attempts": [],
+      "outcome": "not-probeable",
+      "reason": "no-parameter-free-https-resource",
+      "selectedResourceId": null,
       "sourceReferences": [
         "HKAPI-220"
       ],
@@ -926,23 +679,10 @@
         "parameters-required": 0,
         "ready": 1
       },
-      "attempts": [
-        {
-          "elapsedMs": 16549,
-          "finalHost": "portal.csdi.gov.hk",
-          "format": "CSV",
-          "httpStatus": 206,
-          "mediaType": "text/csv",
-          "outcome": "success",
-          "resourceId": "4705f658-b2c4-4190-811b-b9de191971d4",
-          "sampleBytes": 4096,
-          "sampleSha256": "b43a73617e0ddfc62b73b2eed33acc6d36fe4d63e9ed845ed0bf5e703fb3ce04",
-          "truncated": true
-        }
-      ],
-      "outcome": "success",
-      "reason": null,
-      "selectedResourceId": "4705f658-b2c4-4190-811b-b9de191971d4",
+      "attempts": [],
+      "outcome": "not-probeable",
+      "reason": "no-parameter-free-https-resource",
+      "selectedResourceId": null,
       "sourceReferences": [
         "HKAPI-220"
       ],
@@ -955,23 +695,10 @@
         "parameters-required": 0,
         "ready": 1
       },
-      "attempts": [
-        {
-          "elapsedMs": 1543,
-          "finalHost": "portal.csdi.gov.hk",
-          "format": "CSV",
-          "httpStatus": 206,
-          "mediaType": "text/csv",
-          "outcome": "success",
-          "resourceId": "97de9550-4fe8-42c9-a80b-7ba13c68964e",
-          "sampleBytes": 4096,
-          "sampleSha256": "b64be0a41f6f04e95284cc1e6a99f1edbe801c2ba32fde9369a749f583525e8f",
-          "truncated": true
-        }
-      ],
-      "outcome": "success",
-      "reason": null,
-      "selectedResourceId": "97de9550-4fe8-42c9-a80b-7ba13c68964e",
+      "attempts": [],
+      "outcome": "not-probeable",
+      "reason": "no-parameter-free-https-resource",
+      "selectedResourceId": null,
       "sourceReferences": [
         "HKAPI-220"
       ],
@@ -984,23 +711,10 @@
         "parameters-required": 0,
         "ready": 1
       },
-      "attempts": [
-        {
-          "elapsedMs": 417,
-          "finalHost": "portal.csdi.gov.hk",
-          "format": "API",
-          "httpStatus": 206,
-          "mediaType": "text/html",
-          "outcome": "success",
-          "resourceId": "89d4ef71-3bfd-40c1-9eaf-7a5f21a97a8b",
-          "sampleBytes": 4096,
-          "sampleSha256": "1bd5134fd01ff385cc6b2c1d9e5e8ba57d9cc55deb0e6995ed5af5b1a5f0fcab",
-          "truncated": true
-        }
-      ],
-      "outcome": "success",
-      "reason": null,
-      "selectedResourceId": "89d4ef71-3bfd-40c1-9eaf-7a5f21a97a8b",
+      "attempts": [],
+      "outcome": "not-probeable",
+      "reason": "no-parameter-free-https-resource",
+      "selectedResourceId": null,
       "sourceReferences": [
         "HKAPI-234"
       ],
@@ -1015,7 +729,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 305,
+          "elapsedMs": 244,
           "finalHost": "data.cr.gov.hk",
           "format": "API",
           "httpStatus": 200,
@@ -1060,7 +774,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 1627,
+          "elapsedMs": 447,
           "finalHost": "www.cr.gov.hk",
           "format": "XLS",
           "httpStatus": 206,
@@ -1089,7 +803,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 1366,
+          "elapsedMs": 429,
           "finalHost": "www.cr.gov.hk",
           "format": "CSV",
           "httpStatus": 206,
@@ -1118,7 +832,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 797,
+          "elapsedMs": 417,
           "finalHost": "www.cr.gov.hk",
           "format": "CSV",
           "httpStatus": 206,
@@ -1147,7 +861,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 649,
+          "elapsedMs": 273,
           "finalHost": "www.cr.gov.hk",
           "format": "CSV",
           "httpStatus": 206,
@@ -1176,7 +890,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 883,
+          "elapsedMs": 743,
           "finalHost": "www.cr.gov.hk",
           "format": "CSV",
           "httpStatus": 200,
@@ -1205,7 +919,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 425,
+          "elapsedMs": 422,
           "finalHost": "www.csb.gov.hk",
           "format": "JSON",
           "httpStatus": 206,
@@ -1234,7 +948,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 1101,
+          "elapsedMs": 1099,
           "finalHost": "www.tourism.gov.hk",
           "format": "CSV",
           "httpStatus": 200,
@@ -1263,7 +977,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 692,
+          "elapsedMs": 908,
           "finalHost": "www.tourism.gov.hk",
           "format": "CSV",
           "httpStatus": 200,
@@ -1292,7 +1006,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 823,
+          "elapsedMs": 929,
           "finalHost": "www.tourism.gov.hk",
           "format": "CSV",
           "httpStatus": 206,
@@ -1321,21 +1035,21 @@
       },
       "attempts": [
         {
-          "elapsedMs": 648,
-          "finalHost": "portal.csdi.gov.hk",
-          "format": "API",
-          "httpStatus": 206,
-          "mediaType": "text/html",
+          "elapsedMs": 1309,
+          "finalHost": "www.tourism.gov.hk",
+          "format": "CSV",
+          "httpStatus": 200,
+          "mediaType": "text/csv",
           "outcome": "success",
-          "resourceId": "4680599f-e5f7-4c91-9933-2a79a3cb2509",
-          "sampleBytes": 4096,
-          "sampleSha256": "33f16c078333686f4c406f661177749e474f9ed4ca84b3293b81d40afedecd3b",
-          "truncated": true
+          "resourceId": "f5dcbf5a-6e43-47c3-bd52-afa3a58ee9f3",
+          "sampleBytes": 597,
+          "sampleSha256": "d4d85e39c4405e38718a267565290c99192fa5e67d201e3854321b13d646c6e0",
+          "truncated": false
         }
       ],
       "outcome": "success",
       "reason": null,
-      "selectedResourceId": "4680599f-e5f7-4c91-9933-2a79a3cb2509",
+      "selectedResourceId": "f5dcbf5a-6e43-47c3-bd52-afa3a58ee9f3",
       "sourceReferences": [
         "HKAPI-208"
       ],
@@ -1350,7 +1064,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 567,
+          "elapsedMs": 861,
           "finalHost": "www.tourism.gov.hk",
           "format": "CSV",
           "httpStatus": 206,
@@ -1379,7 +1093,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 769,
+          "elapsedMs": 916,
           "finalHost": "www.tourism.gov.hk",
           "format": "CSV",
           "httpStatus": 200,
@@ -1408,7 +1122,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 757,
+          "elapsedMs": 1249,
           "finalHost": "www.tourism.gov.hk",
           "format": "CSV",
           "httpStatus": 200,
@@ -1437,7 +1151,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 643,
+          "elapsedMs": 909,
           "finalHost": "www.tourism.gov.hk",
           "format": "CSV",
           "httpStatus": 200,
@@ -1466,21 +1180,21 @@
       },
       "attempts": [
         {
-          "elapsedMs": 607,
-          "finalHost": "portal.csdi.gov.hk",
-          "format": "API",
+          "elapsedMs": 1204,
+          "finalHost": "www.tourism.gov.hk",
+          "format": "CSV",
           "httpStatus": 206,
-          "mediaType": "text/html",
+          "mediaType": "text/csv",
           "outcome": "success",
-          "resourceId": "dccfd32d-308a-4de4-bdfb-7be622d4e5af",
-          "sampleBytes": 4096,
-          "sampleSha256": "fad9ec55e667cefbe13da1d48f0eada806536192e5ebf21b01112157f1513fb2",
-          "truncated": true
+          "resourceId": "1af7f910-2489-45e7-950a-a2a9f4d56626",
+          "sampleBytes": 896,
+          "sampleSha256": "0fb824493f60aec302b7a1572007fe9a27d19f17fd94596ed940b1110c642a81",
+          "truncated": false
         }
       ],
       "outcome": "success",
       "reason": null,
-      "selectedResourceId": "dccfd32d-308a-4de4-bdfb-7be622d4e5af",
+      "selectedResourceId": "1af7f910-2489-45e7-950a-a2a9f4d56626",
       "sourceReferences": [
         "HKAPI-210"
       ],
@@ -1495,7 +1209,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 634,
+          "elapsedMs": 1391,
           "finalHost": "www.tourism.gov.hk",
           "format": "CSV",
           "httpStatus": 200,
@@ -1524,7 +1238,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 558,
+          "elapsedMs": 888,
           "finalHost": "www.tourism.gov.hk",
           "format": "CSV",
           "httpStatus": 200,
@@ -1553,7 +1267,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 540,
+          "elapsedMs": 877,
           "finalHost": "www.tourism.gov.hk",
           "format": "CSV",
           "httpStatus": 206,
@@ -1582,21 +1296,21 @@
       },
       "attempts": [
         {
-          "elapsedMs": 473,
-          "finalHost": "portal.csdi.gov.hk",
-          "format": "API",
+          "elapsedMs": 891,
+          "finalHost": "www.tourism.gov.hk",
+          "format": "CSV",
           "httpStatus": 206,
-          "mediaType": "text/html",
+          "mediaType": "text/csv",
           "outcome": "success",
-          "resourceId": "f4afaea4-1064-48fc-8f72-18120236aa30",
-          "sampleBytes": 4096,
-          "sampleSha256": "63d51dbffeec6c94756ee5630ea433af1af692863b8e1ca489b5ad70e1e5572b",
-          "truncated": true
+          "resourceId": "906dd348-e2d7-461e-850a-df9fd709c785",
+          "sampleBytes": 1078,
+          "sampleSha256": "c3a07b000a957d849dcf1f2d2629f2f69f52e2d21d9ed8389960dd5a8b5b4a00",
+          "truncated": false
         }
       ],
       "outcome": "success",
       "reason": null,
-      "selectedResourceId": "f4afaea4-1064-48fc-8f72-18120236aa30",
+      "selectedResourceId": "906dd348-e2d7-461e-850a-df9fd709c785",
       "sourceReferences": [
         "HKAPI-210"
       ],
@@ -1611,21 +1325,21 @@
       },
       "attempts": [
         {
-          "elapsedMs": 589,
-          "finalHost": "portal.csdi.gov.hk",
-          "format": "API",
+          "elapsedMs": 886,
+          "finalHost": "www.customs.gov.hk",
+          "format": "CSV",
           "httpStatus": 206,
-          "mediaType": "text/html",
+          "mediaType": "text/csv",
           "outcome": "success",
-          "resourceId": "8fe9146b-234c-455f-90e7-8935e682d75f",
+          "resourceId": "cfaa3563-5a02-4a87-b58b-3507eae44b2c",
           "sampleBytes": 4096,
-          "sampleSha256": "dc844e0b3fe9d316e0f5e552198ca9243bcea074529c547c4a64098a7ad49d8e",
+          "sampleSha256": "b8d1f1bf3fbc615ef87b50d1698cc4adda2921b28ba588cc24cdbffc27412501",
           "truncated": true
         }
       ],
       "outcome": "success",
       "reason": null,
-      "selectedResourceId": "8fe9146b-234c-455f-90e7-8935e682d75f",
+      "selectedResourceId": "cfaa3563-5a02-4a87-b58b-3507eae44b2c",
       "sourceReferences": [
         "HKAPI-080"
       ],
@@ -1640,7 +1354,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 378,
+          "elapsedMs": 502,
           "finalHost": "www.chp.gov.hk",
           "format": "CSV",
           "httpStatus": 206,
@@ -1701,7 +1415,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 328,
+          "elapsedMs": 184,
           "finalHost": "www.chp.gov.hk",
           "format": "CSV",
           "httpStatus": 206,
@@ -1746,7 +1460,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 312,
+          "elapsedMs": 171,
           "finalHost": "www.chp.gov.hk",
           "format": "CSV",
           "httpStatus": 206,
@@ -1791,7 +1505,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 250,
+          "elapsedMs": 169,
           "finalHost": "www.chp.gov.hk",
           "format": "CSV",
           "httpStatus": 206,
@@ -1820,7 +1534,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 269,
+          "elapsedMs": 178,
           "finalHost": "www.chp.gov.hk",
           "format": "CSV",
           "httpStatus": 206,
@@ -1849,7 +1563,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 236,
+          "elapsedMs": 149,
           "finalHost": "www.chp.gov.hk",
           "format": "CSV",
           "httpStatus": 206,
@@ -1878,7 +1592,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 276,
+          "elapsedMs": 145,
           "finalHost": "www.chp.gov.hk",
           "format": "CSV",
           "httpStatus": 206,
@@ -1907,7 +1621,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 256,
+          "elapsedMs": 193,
           "finalHost": "www.chp.gov.hk",
           "format": "CSV",
           "httpStatus": 206,
@@ -1936,7 +1650,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 318,
+          "elapsedMs": 220,
           "finalHost": "www.chp.gov.hk",
           "format": "CSV",
           "httpStatus": 206,
@@ -1965,7 +1679,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 238,
+          "elapsedMs": 207,
           "finalHost": "www.chp.gov.hk",
           "format": "CSV",
           "httpStatus": 206,
@@ -1994,7 +1708,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 249,
+          "elapsedMs": 183,
           "finalHost": "www.chp.gov.hk",
           "format": "CSV",
           "httpStatus": 206,
@@ -2023,7 +1737,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 258,
+          "elapsedMs": 168,
           "finalHost": "www.chp.gov.hk",
           "format": "CSV",
           "httpStatus": 206,
@@ -2052,7 +1766,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 283,
+          "elapsedMs": 159,
           "finalHost": "www.chp.gov.hk",
           "format": "CSV",
           "httpStatus": 206,
@@ -2097,7 +1811,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 311,
+          "elapsedMs": 159,
           "finalHost": "www.chp.gov.hk",
           "format": "CSV",
           "httpStatus": 206,
@@ -2126,7 +1840,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 308,
+          "elapsedMs": 147,
           "finalHost": "www.chp.gov.hk",
           "format": "CSV",
           "httpStatus": 206,
@@ -2155,7 +1869,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 238,
+          "elapsedMs": 172,
           "finalHost": "www.chp.gov.hk",
           "format": "CSV",
           "httpStatus": 206,
@@ -2184,7 +1898,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 1402,
+          "elapsedMs": 562,
           "finalHost": "www.cmchk.org.hk",
           "format": "XML",
           "httpStatus": 206,
@@ -2261,7 +1975,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 312,
+          "elapsedMs": 316,
           "finalHost": "www.rrc.gov.hk",
           "format": "XML",
           "httpStatus": 206,
@@ -2290,7 +2004,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 288,
+          "elapsedMs": 193,
           "finalHost": "www.chp.gov.hk",
           "format": "CSV",
           "httpStatus": 206,
@@ -2319,7 +2033,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 531,
+          "elapsedMs": 582,
           "finalHost": "resource.data.one.gov.hk",
           "format": "ZIP",
           "httpStatus": 206,
@@ -2348,7 +2062,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 527,
+          "elapsedMs": 675,
           "finalHost": "resource.data.one.gov.hk",
           "format": "ZIP",
           "httpStatus": 206,
@@ -2377,7 +2091,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 288,
+          "elapsedMs": 263,
           "finalHost": "resource.data.one.gov.hk",
           "format": "JSON",
           "httpStatus": 206,
@@ -2406,7 +2120,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 354,
+          "elapsedMs": 157,
           "finalHost": "rt.data.gov.hk",
           "format": "JSON",
           "httpStatus": 422,
@@ -2417,7 +2131,7 @@
           "truncated": false
         },
         {
-          "elapsedMs": 341,
+          "elapsedMs": 137,
           "finalHost": "rt.data.gov.hk",
           "format": "JSON",
           "httpStatus": 422,
@@ -2445,7 +2159,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 395,
+          "elapsedMs": 184,
           "finalHost": "api.data.gov.hk",
           "format": "API",
           "httpStatus": 200,
@@ -2475,21 +2189,21 @@
       },
       "attempts": [
         {
-          "elapsedMs": 467,
-          "finalHost": "portal.csdi.gov.hk",
-          "format": "API",
+          "elapsedMs": 393,
+          "finalHost": "www.digitalpolicy.gov.hk",
+          "format": "CSV",
           "httpStatus": 206,
-          "mediaType": "text/html",
+          "mediaType": "text/csv",
           "outcome": "success",
-          "resourceId": "27efaf17-3c53-4642-8f11-49ce24663bd0",
+          "resourceId": "4ed6377c-7e06-4e4c-957e-5611f969dee0",
           "sampleBytes": 4096,
-          "sampleSha256": "5b72f3c76e7f3d7329d1a2bdd9050344f8ac2be8da570cdaf14876608bd275f8",
+          "sampleSha256": "8578848d5e1bffabea574f7e1331bed4d61365474a1bd6193214d1577bb371bb",
           "truncated": true
         }
       ],
       "outcome": "success",
       "reason": null,
-      "selectedResourceId": "27efaf17-3c53-4642-8f11-49ce24663bd0",
+      "selectedResourceId": "4ed6377c-7e06-4e4c-957e-5611f969dee0",
       "sourceReferences": [
         "HKAPI-264"
       ],
@@ -2504,7 +2218,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 575,
+          "elapsedMs": 424,
           "finalHost": "resource.data.one.gov.hk",
           "format": "JPEG",
           "httpStatus": 206,
@@ -2533,7 +2247,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 1436,
+          "elapsedMs": 957,
           "finalHost": "www.dsd.gov.hk",
           "format": "JSON",
           "httpStatus": 206,
@@ -2562,7 +2276,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 555,
+          "elapsedMs": 1019,
           "finalHost": "www.edb.gov.hk",
           "format": "CSV",
           "httpStatus": 206,
@@ -2591,7 +2305,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 411,
+          "elapsedMs": 959,
           "finalHost": "www.edb.gov.hk",
           "format": "CSV",
           "httpStatus": 206,
@@ -2620,21 +2334,21 @@
       },
       "attempts": [
         {
-          "elapsedMs": 446,
-          "finalHost": "portal.csdi.gov.hk",
-          "format": "API",
+          "elapsedMs": 336,
+          "finalHost": "www.edb.gov.hk",
+          "format": "CSV",
           "httpStatus": 206,
-          "mediaType": "text/html",
+          "mediaType": "application/octet-stream",
           "outcome": "success",
-          "resourceId": "72a2f237-4b26-4c57-bb99-676794b50dc3",
+          "resourceId": "f668720e-0fa1-447e-b6bf-37307552d3a3",
           "sampleBytes": 4096,
-          "sampleSha256": "2d42ed806c21334cc54d4c4440b5c17cc4c5fcde50a1513fa34007cb3ccc1d7e",
+          "sampleSha256": "7a790799819feb4c2fcee3fd9a30de2ba8d5cda7646b8701c6a6f62a15044454",
           "truncated": true
         }
       ],
       "outcome": "success",
       "reason": null,
-      "selectedResourceId": "72a2f237-4b26-4c57-bb99-676794b50dc3",
+      "selectedResourceId": "f668720e-0fa1-447e-b6bf-37307552d3a3",
       "sourceReferences": [
         "HKAPI-241"
       ],
@@ -2809,7 +2523,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 416,
+          "elapsedMs": 275,
           "finalHost": "www.edb.gov.hk",
           "format": "CSV",
           "httpStatus": 206,
@@ -2838,7 +2552,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 445,
+          "elapsedMs": 272,
           "finalHost": "www.edb.gov.hk",
           "format": "CSV",
           "httpStatus": 206,
@@ -2947,7 +2661,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 443,
+          "elapsedMs": 262,
           "finalHost": "www.edb.gov.hk",
           "format": "CSV",
           "httpStatus": 206,
@@ -3006,23 +2720,10 @@
         "parameters-required": 0,
         "ready": 1
       },
-      "attempts": [
-        {
-          "elapsedMs": 474,
-          "finalHost": "portal.csdi.gov.hk",
-          "format": "API",
-          "httpStatus": 206,
-          "mediaType": "text/html",
-          "outcome": "success",
-          "resourceId": "3bf882de-1d78-485e-9496-fb6741869700",
-          "sampleBytes": 4096,
-          "sampleSha256": "eddb42b6453cdc7ed1245cfc026c5b54cda8ff13d8762b68bfb83b672371a07f",
-          "truncated": true
-        }
-      ],
-      "outcome": "success",
-      "reason": null,
-      "selectedResourceId": "3bf882de-1d78-485e-9496-fb6741869700",
+      "attempts": [],
+      "outcome": "not-probeable",
+      "reason": "no-parameter-free-https-resource",
+      "selectedResourceId": null,
       "sourceReferences": [
         "HKAPI-244"
       ],
@@ -3035,23 +2736,10 @@
         "parameters-required": 0,
         "ready": 1
       },
-      "attempts": [
-        {
-          "elapsedMs": 429,
-          "finalHost": "portal.csdi.gov.hk",
-          "format": "API",
-          "httpStatus": 206,
-          "mediaType": "text/html",
-          "outcome": "success",
-          "resourceId": "91e09ca8-09c7-4996-911b-598c2f7e5597",
-          "sampleBytes": 4096,
-          "sampleSha256": "dd328c950e17704638ca07f28f868bf53ac6228c5de19f07a8f832e8df26f6c6",
-          "truncated": true
-        }
-      ],
-      "outcome": "success",
-      "reason": null,
-      "selectedResourceId": "91e09ca8-09c7-4996-911b-598c2f7e5597",
+      "attempts": [],
+      "outcome": "not-probeable",
+      "reason": "no-parameter-free-https-resource",
+      "selectedResourceId": null,
       "sourceReferences": [
         "HKAPI-244"
       ],
@@ -3080,23 +2768,10 @@
         "parameters-required": 0,
         "ready": 1
       },
-      "attempts": [
-        {
-          "elapsedMs": 463,
-          "finalHost": "portal.csdi.gov.hk",
-          "format": "API",
-          "httpStatus": 206,
-          "mediaType": "text/html",
-          "outcome": "success",
-          "resourceId": "5bf7cfa4-2299-4fae-97ed-7b30cfb653de",
-          "sampleBytes": 4096,
-          "sampleSha256": "1eecfb88e539020c166578d7420e0b3c5c17ad50e5a2302b7b50904303d58ca1",
-          "truncated": true
-        }
-      ],
-      "outcome": "success",
-      "reason": null,
-      "selectedResourceId": "5bf7cfa4-2299-4fae-97ed-7b30cfb653de",
+      "attempts": [],
+      "outcome": "not-probeable",
+      "reason": "no-parameter-free-https-resource",
+      "selectedResourceId": null,
       "sourceReferences": [
         "HKAPI-238"
       ],
@@ -3111,21 +2786,21 @@
       },
       "attempts": [
         {
-          "elapsedMs": 418,
-          "finalHost": "portal.csdi.gov.hk",
-          "format": "API",
+          "elapsedMs": 311,
+          "finalHost": "www.edb.gov.hk",
+          "format": "CSV",
           "httpStatus": 206,
-          "mediaType": "text/html",
+          "mediaType": "application/octet-stream",
           "outcome": "success",
-          "resourceId": "19b31466-a2ca-473d-a1fa-e6771e7bc329",
+          "resourceId": "c7e35034-2682-49d8-a47f-c11ae201f8ba",
           "sampleBytes": 4096,
-          "sampleSha256": "0edd41689c3002225aed0b7fff6ea861d4f68ea5fc82fade9eb204695f6dcd7c",
+          "sampleSha256": "ab369ae427ec7de3b9705b6f916f9e293fadb554155d9eb1bf7c0b50916fc67f",
           "truncated": true
         }
       ],
       "outcome": "success",
       "reason": null,
-      "selectedResourceId": "19b31466-a2ca-473d-a1fa-e6771e7bc329",
+      "selectedResourceId": "c7e35034-2682-49d8-a47f-c11ae201f8ba",
       "sourceReferences": [
         "HKAPI-239"
       ],
@@ -3138,23 +2813,10 @@
         "parameters-required": 0,
         "ready": 1
       },
-      "attempts": [
-        {
-          "elapsedMs": 565,
-          "finalHost": "portal.csdi.gov.hk",
-          "format": "API",
-          "httpStatus": 206,
-          "mediaType": "text/html",
-          "outcome": "success",
-          "resourceId": "21edfabc-4de1-4525-8b1b-76c0555ce5ed",
-          "sampleBytes": 4096,
-          "sampleSha256": "d3117d0cdb661539947777a650c523727b435343d5782220d8abe3488a5f593e",
-          "truncated": true
-        }
-      ],
-      "outcome": "success",
-      "reason": null,
-      "selectedResourceId": "21edfabc-4de1-4525-8b1b-76c0555ce5ed",
+      "attempts": [],
+      "outcome": "not-probeable",
+      "reason": "no-parameter-free-https-resource",
+      "selectedResourceId": null,
       "sourceReferences": [
         "HKAPI-243"
       ],
@@ -3167,23 +2829,10 @@
         "parameters-required": 0,
         "ready": 1
       },
-      "attempts": [
-        {
-          "elapsedMs": 449,
-          "finalHost": "portal.csdi.gov.hk",
-          "format": "API",
-          "httpStatus": 206,
-          "mediaType": "text/html",
-          "outcome": "success",
-          "resourceId": "3316d5dc-3d43-4158-9924-68dfd4655808",
-          "sampleBytes": 4096,
-          "sampleSha256": "abf97703471caa4a81181f41e08543ec2ef776cb1fd38602ac622f261cedc197",
-          "truncated": true
-        }
-      ],
-      "outcome": "success",
-      "reason": null,
-      "selectedResourceId": "3316d5dc-3d43-4158-9924-68dfd4655808",
+      "attempts": [],
+      "outcome": "not-probeable",
+      "reason": "no-parameter-free-https-resource",
+      "selectedResourceId": null,
       "sourceReferences": [
         "HKAPI-237"
       ],
@@ -3196,23 +2845,10 @@
         "parameters-required": 0,
         "ready": 16
       },
-      "attempts": [
-        {
-          "elapsedMs": 444,
-          "finalHost": "portal.csdi.gov.hk",
-          "format": "API",
-          "httpStatus": 206,
-          "mediaType": "text/html",
-          "outcome": "success",
-          "resourceId": "eb19ac1e-1d0c-4e71-8867-678e39088593",
-          "sampleBytes": 4096,
-          "sampleSha256": "a7aa3f7e0052a0c48eb5f14ea09227924340a60dc7cdac4eadca5c7839eeb208",
-          "truncated": true
-        }
-      ],
-      "outcome": "success",
-      "reason": null,
-      "selectedResourceId": "eb19ac1e-1d0c-4e71-8867-678e39088593",
+      "attempts": [],
+      "outcome": "not-probeable",
+      "reason": "no-parameter-free-https-resource",
+      "selectedResourceId": null,
       "sourceReferences": [
         "HKAPI-235"
       ],
@@ -3227,7 +2863,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 472,
+          "elapsedMs": 306,
           "finalHost": "www.edb.gov.hk",
           "format": "CSV",
           "httpStatus": 206,
@@ -3256,21 +2892,21 @@
       },
       "attempts": [
         {
-          "elapsedMs": 431,
-          "finalHost": "portal.csdi.gov.hk",
-          "format": "API",
+          "elapsedMs": 382,
+          "finalHost": "www.edb.gov.hk",
+          "format": "CSV",
           "httpStatus": 206,
-          "mediaType": "text/html",
+          "mediaType": "application/octet-stream",
           "outcome": "success",
-          "resourceId": "8de1f3e4-c922-41e2-894b-1782bd9862f1",
+          "resourceId": "487732f7-d7e6-46a2-9f50-9de372cc112b",
           "sampleBytes": 4096,
-          "sampleSha256": "84eea5025174b1153d918390c13b9c606cf451b13187accf7ead9edcdbf2a6bc",
+          "sampleSha256": "8425d493567bfcefd5d13ea2be786017a3e1994c3390ba86218d71538330f80d",
           "truncated": true
         }
       ],
       "outcome": "success",
       "reason": null,
-      "selectedResourceId": "8de1f3e4-c922-41e2-894b-1782bd9862f1",
+      "selectedResourceId": "487732f7-d7e6-46a2-9f50-9de372cc112b",
       "sourceReferences": [
         "HKAPI-240"
       ],
@@ -3285,21 +2921,21 @@
       },
       "attempts": [
         {
-          "elapsedMs": 395,
-          "finalHost": "portal.csdi.gov.hk",
-          "format": "API",
+          "elapsedMs": 331,
+          "finalHost": "www.edb.gov.hk",
+          "format": "CSV",
           "httpStatus": 206,
-          "mediaType": "text/html",
+          "mediaType": "application/octet-stream",
           "outcome": "success",
-          "resourceId": "1e6c3ae2-fb95-47a7-abf1-c19df156759a",
-          "sampleBytes": 4096,
-          "sampleSha256": "c7b723d13a9cc91e133727f1ff8cd78bd095cb7e68585a95f12f6bf7b5ff3fa0",
-          "truncated": true
+          "resourceId": "b3352927-bd47-44b5-99bb-59d7b449d001",
+          "sampleBytes": 1694,
+          "sampleSha256": "fe1f4cfd596c52f9bc090dd769502ad2e79acaa3c9232d598f2b066843b8648e",
+          "truncated": false
         }
       ],
       "outcome": "success",
       "reason": null,
-      "selectedResourceId": "1e6c3ae2-fb95-47a7-abf1-c19df156759a",
+      "selectedResourceId": "b3352927-bd47-44b5-99bb-59d7b449d001",
       "sourceReferences": [
         "HKAPI-242"
       ],
@@ -3314,7 +2950,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 593,
+          "elapsedMs": 556,
           "finalHost": "www.emsd.gov.hk",
           "format": "CSV",
           "httpStatus": 206,
@@ -3343,7 +2979,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 489,
+          "elapsedMs": 466,
           "finalHost": "www.emsd.gov.hk",
           "format": "CSV",
           "httpStatus": 206,
@@ -3372,7 +3008,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 540,
+          "elapsedMs": 230,
           "finalHost": "www.emsd.gov.hk",
           "format": "CSV",
           "httpStatus": 206,
@@ -3401,7 +3037,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 350,
+          "elapsedMs": 178,
           "finalHost": "www.emsd.gov.hk",
           "format": "CSV",
           "httpStatus": 206,
@@ -3430,7 +3066,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 256,
+          "elapsedMs": 145,
           "finalHost": "www.emsd.gov.hk",
           "format": "CSV",
           "httpStatus": 206,
@@ -3459,7 +3095,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 294,
+          "elapsedMs": 152,
           "finalHost": "www.emsd.gov.hk",
           "format": "CSV",
           "httpStatus": 206,
@@ -3488,7 +3124,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 271,
+          "elapsedMs": 221,
           "finalHost": "www.emsd.gov.hk",
           "format": "CSV",
           "httpStatus": 206,
@@ -3517,7 +3153,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 252,
+          "elapsedMs": 199,
           "finalHost": "www.emsd.gov.hk",
           "format": "CSV",
           "httpStatus": 206,
@@ -3546,7 +3182,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 298,
+          "elapsedMs": 245,
           "finalHost": "www.emsd.gov.hk",
           "format": "CSV",
           "httpStatus": 206,
@@ -3575,7 +3211,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 235,
+          "elapsedMs": 158,
           "finalHost": "www.emsd.gov.hk",
           "format": "CSV",
           "httpStatus": 206,
@@ -3604,7 +3240,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 274,
+          "elapsedMs": 141,
           "finalHost": "www.emsd.gov.hk",
           "format": "CSV",
           "httpStatus": 206,
@@ -3633,7 +3269,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 267,
+          "elapsedMs": 172,
           "finalHost": "www.emsd.gov.hk",
           "format": "CSV",
           "httpStatus": 206,
@@ -3662,7 +3298,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 295,
+          "elapsedMs": 156,
           "finalHost": "www.emsd.gov.hk",
           "format": "CSV",
           "httpStatus": 206,
@@ -3691,7 +3327,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 290,
+          "elapsedMs": 160,
           "finalHost": "www.emsd.gov.hk",
           "format": "CSV",
           "httpStatus": 206,
@@ -3720,7 +3356,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 310,
+          "elapsedMs": 151,
           "finalHost": "www.emsd.gov.hk",
           "format": "CSV",
           "httpStatus": 206,
@@ -3749,7 +3385,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 251,
+          "elapsedMs": 226,
           "finalHost": "www.emsd.gov.hk",
           "format": "CSV",
           "httpStatus": 206,
@@ -3778,7 +3414,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 340,
+          "elapsedMs": 216,
           "finalHost": "www.emsd.gov.hk",
           "format": "CSV",
           "httpStatus": 206,
@@ -3807,7 +3443,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 282,
+          "elapsedMs": 232,
           "finalHost": "www.emsd.gov.hk",
           "format": "CSV",
           "httpStatus": 206,
@@ -3836,7 +3472,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 262,
+          "elapsedMs": 170,
           "finalHost": "www.emsd.gov.hk",
           "format": "CSV",
           "httpStatus": 206,
@@ -3865,7 +3501,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 266,
+          "elapsedMs": 195,
           "finalHost": "www.emsd.gov.hk",
           "format": "CSV",
           "httpStatus": 206,
@@ -3894,7 +3530,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 278,
+          "elapsedMs": 152,
           "finalHost": "www.emsd.gov.hk",
           "format": "CSV",
           "httpStatus": 206,
@@ -3923,7 +3559,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 255,
+          "elapsedMs": 157,
           "finalHost": "www.emsd.gov.hk",
           "format": "CSV",
           "httpStatus": 206,
@@ -3952,15 +3588,15 @@
       },
       "attempts": [
         {
-          "elapsedMs": 424,
+          "elapsedMs": 153,
           "finalHost": "www.aqhi.gov.hk",
           "format": "RSS",
           "httpStatus": 206,
           "mediaType": "text/xml",
           "outcome": "success",
           "resourceId": "da614cbd-5d01-41a8-985b-ea0741bcd5dd",
-          "sampleBytes": 1266,
-          "sampleSha256": "46a466ec326d349a2745b74a9610e41f579a0cef529e27b14be47efe448caf96",
+          "sampleBytes": 1282,
+          "sampleSha256": "553951efebe811f9e906a9e632adc2965810ff0131e65306a25d74b8e9a78817",
           "truncated": false
         }
       ],
@@ -3981,7 +3617,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 409,
+          "elapsedMs": 142,
           "finalHost": "www.aqhi.gov.hk",
           "format": "RSS",
           "httpStatus": 206,
@@ -3989,7 +3625,7 @@
           "outcome": "success",
           "resourceId": "33a48965-adef-4252-a90c-6e3bf9385aad",
           "sampleBytes": 4096,
-          "sampleSha256": "0082546703ac7456ad1f0c46bc6274a3cdf2de81bbd87ea6fed73bdbf963b3a1",
+          "sampleSha256": "ca144dd6616cbf4edc743e702345f0153b3e40c1de6a817852900c730cfb0518",
           "truncated": true
         }
       ],
@@ -4010,7 +3646,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 372,
+          "elapsedMs": 164,
           "finalHost": "www.aqhi.gov.hk",
           "format": "XML",
           "httpStatus": 206,
@@ -4018,7 +3654,7 @@
           "outcome": "success",
           "resourceId": "3d072f2d-30a8-4c25-95cb-08f677d4c60d",
           "sampleBytes": 4096,
-          "sampleSha256": "4e28584089dc765fe0b086ca7acb0a070176897da9ed6ca3fb218d0c27a435cb",
+          "sampleSha256": "87f0a37cd262b44b6348a285f0ea3ca1222cdcff588ac91fd5830e0f5129456d",
           "truncated": true
         }
       ],
@@ -4039,7 +3675,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 360,
+          "elapsedMs": 192,
           "finalHost": "www.aqhi.gov.hk",
           "format": "XML",
           "httpStatus": 206,
@@ -4047,7 +3683,7 @@
           "outcome": "success",
           "resourceId": "d607012f-bb27-410a-b500-d307fe94f0aa",
           "sampleBytes": 4096,
-          "sampleSha256": "7821333e9c25b65289aabc6718fb52dd1db2c6da480c2f2b2f8000a87af57ff2",
+          "sampleSha256": "79d81f03b56247cf3beafef5685601553fbe99666f60369f9d70dbef26dd2ec2",
           "truncated": true
         }
       ],
@@ -4066,23 +3702,10 @@
         "parameters-required": 0,
         "ready": 1
       },
-      "attempts": [
-        {
-          "elapsedMs": 476,
-          "finalHost": "portal.csdi.gov.hk",
-          "format": "API",
-          "httpStatus": 206,
-          "mediaType": "text/html",
-          "outcome": "success",
-          "resourceId": "32c5795b-c2f0-48f2-b54d-69f7793f7a50",
-          "sampleBytes": 4096,
-          "sampleSha256": "c4099b213c509d068c8fae2dc0e2380e1c09be5f09934fce9a730545d1d325f1",
-          "truncated": true
-        }
-      ],
-      "outcome": "success",
-      "reason": null,
-      "selectedResourceId": "32c5795b-c2f0-48f2-b54d-69f7793f7a50",
+      "attempts": [],
+      "outcome": "not-probeable",
+      "reason": "no-parameter-free-https-resource",
+      "selectedResourceId": null,
       "sourceReferences": [
         "HKAPI-113"
       ],
@@ -4095,23 +3718,10 @@
         "parameters-required": 0,
         "ready": 1
       },
-      "attempts": [
-        {
-          "elapsedMs": 573,
-          "finalHost": "portal.csdi.gov.hk",
-          "format": "API",
-          "httpStatus": 206,
-          "mediaType": "text/html",
-          "outcome": "success",
-          "resourceId": "35c77e5d-8211-4b78-82dc-7cfd1ee43dcb",
-          "sampleBytes": 4096,
-          "sampleSha256": "e68b3a3f397dd4df57b0ca265d8e4de79ac866e205f5a194881750087e5e80d3",
-          "truncated": true
-        }
-      ],
-      "outcome": "success",
-      "reason": null,
-      "selectedResourceId": "35c77e5d-8211-4b78-82dc-7cfd1ee43dcb",
+      "attempts": [],
+      "outcome": "not-probeable",
+      "reason": "no-parameter-free-https-resource",
+      "selectedResourceId": null,
       "sourceReferences": [
         "HKAPI-105"
       ],
@@ -4124,23 +3734,10 @@
         "parameters-required": 0,
         "ready": 1
       },
-      "attempts": [
-        {
-          "elapsedMs": 422,
-          "finalHost": "portal.csdi.gov.hk",
-          "format": "SHP",
-          "httpStatus": 206,
-          "mediaType": "text/html",
-          "outcome": "success",
-          "resourceId": "69923420-96b2-4e3a-8cc1-e22e9eaaba6d",
-          "sampleBytes": 4096,
-          "sampleSha256": "d9f397cbd636650ef683bed7efb8a50c3dbfdbebedfab572eb1a5e2234d53b28",
-          "truncated": true
-        }
-      ],
-      "outcome": "success",
-      "reason": null,
-      "selectedResourceId": "69923420-96b2-4e3a-8cc1-e22e9eaaba6d",
+      "attempts": [],
+      "outcome": "not-probeable",
+      "reason": "no-parameter-free-https-resource",
+      "selectedResourceId": null,
       "sourceReferences": [
         "HKAPI-106"
       ],
@@ -4155,21 +3752,21 @@
       },
       "attempts": [
         {
-          "elapsedMs": 423,
-          "finalHost": "portal.csdi.gov.hk",
-          "format": "API",
-          "httpStatus": 206,
-          "mediaType": "text/html",
+          "elapsedMs": 971,
+          "finalHost": "cd.epic.epd.gov.hk",
+          "format": "CSV",
+          "httpStatus": 200,
+          "mediaType": "application/x-msdownload",
           "outcome": "success",
-          "resourceId": "cfd42d6a-ef49-43cb-a46c-6a2338025ac4",
+          "resourceId": "7290c95b-bdd6-4e39-9320-81141439e1c9",
           "sampleBytes": 4096,
-          "sampleSha256": "3bcb03d32c134d25d4f99c39a96a6c4dfe120df9c6ab251ed25f821770e0a509",
+          "sampleSha256": "2596aaa1ccac8224bb711104d181ba34731e33a62c378335a870aafc0c414a4b",
           "truncated": true
         }
       ],
       "outcome": "success",
       "reason": null,
-      "selectedResourceId": "cfd42d6a-ef49-43cb-a46c-6a2338025ac4",
+      "selectedResourceId": "7290c95b-bdd6-4e39-9320-81141439e1c9",
       "sourceReferences": [
         "HKAPI-108"
       ],
@@ -4184,21 +3781,21 @@
       },
       "attempts": [
         {
-          "elapsedMs": 424,
-          "finalHost": "portal.csdi.gov.hk",
-          "format": "API",
-          "httpStatus": 206,
-          "mediaType": "text/html",
+          "elapsedMs": 880,
+          "finalHost": "cd.epic.epd.gov.hk",
+          "format": "RSS",
+          "httpStatus": 200,
+          "mediaType": "text/xml",
           "outcome": "success",
-          "resourceId": "b18c08aa-3ab0-4027-9e5c-96d4422744b4",
+          "resourceId": "97c74f6d-dcd5-4692-9894-6549d14a7f3c",
           "sampleBytes": 4096,
-          "sampleSha256": "94d00122dad03394ff86934e21202e9994a4e6ca3f4782172f0d8746f55d2d99",
+          "sampleSha256": "8ac4a910697fca1c44e828966b0cb2d22ad42b0aef306f841968119d878f80c4",
           "truncated": true
         }
       ],
       "outcome": "success",
       "reason": null,
-      "selectedResourceId": "b18c08aa-3ab0-4027-9e5c-96d4422744b4",
+      "selectedResourceId": "97c74f6d-dcd5-4692-9894-6549d14a7f3c",
       "sourceReferences": [
         "HKAPI-107"
       ],
@@ -4213,7 +3810,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 513,
+          "elapsedMs": 669,
           "finalHost": "cnsd.gov.hk",
           "format": "JSON",
           "httpStatus": 206,
@@ -4242,7 +3839,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 398,
+          "elapsedMs": 162,
           "finalHost": "cnsd.gov.hk",
           "format": "JSON",
           "httpStatus": 206,
@@ -4269,23 +3866,10 @@
         "parameters-required": 0,
         "ready": 1
       },
-      "attempts": [
-        {
-          "elapsedMs": 427,
-          "finalHost": "portal.csdi.gov.hk",
-          "format": "API",
-          "httpStatus": 206,
-          "mediaType": "text/html",
-          "outcome": "success",
-          "resourceId": "2eb2abc9-4fc1-4344-b68e-df2e2c69fc00",
-          "sampleBytes": 4096,
-          "sampleSha256": "8bb77ae2b511dea3b7b75daa8ec25ccacdced98b7b9bb4dd7ce4b015e4b5e59d",
-          "truncated": true
-        }
-      ],
-      "outcome": "success",
-      "reason": null,
-      "selectedResourceId": "2eb2abc9-4fc1-4344-b68e-df2e2c69fc00",
+      "attempts": [],
+      "outcome": "not-probeable",
+      "reason": "no-parameter-free-https-resource",
+      "selectedResourceId": null,
       "sourceReferences": [
         "HKAPI-055"
       ],
@@ -4300,21 +3884,21 @@
       },
       "attempts": [
         {
-          "elapsedMs": 427,
-          "finalHost": "portal.csdi.gov.hk",
-          "format": "API",
-          "httpStatus": 206,
-          "mediaType": "text/html",
+          "elapsedMs": 678,
+          "finalHost": "cd.epic.epd.gov.hk",
+          "format": "CSV",
+          "httpStatus": 200,
+          "mediaType": "application/x-msdownload",
           "outcome": "success",
-          "resourceId": "c2fc433e-ffc9-4433-9c17-fe3702fcc231",
+          "resourceId": "fa918f20-cf3b-42ed-bac7-fe0020e95834",
           "sampleBytes": 4096,
-          "sampleSha256": "168e1797139c427b56e8efd144bf18657c9bf6f4e34d68da57adfe079a5afa50",
+          "sampleSha256": "9a92f4fc2feb07181ff11775f536ef837d411a0f7533abed6ea13df121c12595",
           "truncated": true
         }
       ],
       "outcome": "success",
       "reason": null,
-      "selectedResourceId": "c2fc433e-ffc9-4433-9c17-fe3702fcc231",
+      "selectedResourceId": "fa918f20-cf3b-42ed-bac7-fe0020e95834",
       "sourceReferences": [
         "HKAPI-110"
       ],
@@ -4329,21 +3913,21 @@
       },
       "attempts": [
         {
-          "elapsedMs": 526,
-          "finalHost": "portal.csdi.gov.hk",
-          "format": "API",
-          "httpStatus": 206,
-          "mediaType": "text/html",
+          "elapsedMs": 653,
+          "finalHost": "cd.epic.epd.gov.hk",
+          "format": "CSV",
+          "httpStatus": 200,
+          "mediaType": "application/x-msdownload",
           "outcome": "success",
-          "resourceId": "f5bccf89-2cd3-411e-ba5c-a72586caa382",
+          "resourceId": "49d926a3-b354-4fea-9244-0e71dfec075e",
           "sampleBytes": 4096,
-          "sampleSha256": "44de6786ae2e0682a6e703f24627a19cb184fb0718719ba90e985fa6fedfe018",
+          "sampleSha256": "3c03275342bf993bee904170785a0bf7342d41c877a3c135b343d5b56aa74fc5",
           "truncated": true
         }
       ],
       "outcome": "success",
       "reason": null,
-      "selectedResourceId": "f5bccf89-2cd3-411e-ba5c-a72586caa382",
+      "selectedResourceId": "49d926a3-b354-4fea-9244-0e71dfec075e",
       "sourceReferences": [
         "HKAPI-109"
       ],
@@ -4358,21 +3942,21 @@
       },
       "attempts": [
         {
-          "elapsedMs": 399,
-          "finalHost": "portal.csdi.gov.hk",
-          "format": "API",
-          "httpStatus": 206,
-          "mediaType": "text/html",
+          "elapsedMs": 648,
+          "finalHost": "cd.epic.epd.gov.hk",
+          "format": "CSV",
+          "httpStatus": 200,
+          "mediaType": "application/x-msdownload",
           "outcome": "success",
-          "resourceId": "5468e3f3-6b2b-4b35-a52f-cf2a2ce10ce1",
+          "resourceId": "3fd048cc-a180-470a-9fcb-2f88c4776c36",
           "sampleBytes": 4096,
-          "sampleSha256": "b6ba8b0cd330a1f1d0eb78055358681ac391df1030fe10751842f6af479bbf18",
+          "sampleSha256": "0ac769156570470b6d0757d6328121bf2b69bc9cb7e5e21892582d259eed3cae",
           "truncated": true
         }
       ],
       "outcome": "success",
       "reason": null,
-      "selectedResourceId": "5468e3f3-6b2b-4b35-a52f-cf2a2ce10ce1",
+      "selectedResourceId": "3fd048cc-a180-470a-9fcb-2f88c4776c36",
       "sourceReferences": [
         "HKAPI-112"
       ],
@@ -4387,21 +3971,21 @@
       },
       "attempts": [
         {
-          "elapsedMs": 447,
-          "finalHost": "portal.csdi.gov.hk",
-          "format": "API",
-          "httpStatus": 206,
-          "mediaType": "text/html",
+          "elapsedMs": 523,
+          "finalHost": "cd.epic.epd.gov.hk",
+          "format": "CSV",
+          "httpStatus": 200,
+          "mediaType": "application/x-msdownload",
           "outcome": "success",
-          "resourceId": "06232f04-c679-4e69-94dd-bb735450cc84",
+          "resourceId": "dc81d47c-8825-48be-a525-f596305e5fb6",
           "sampleBytes": 4096,
-          "sampleSha256": "27a4191ca2a87a64fd36290b9155dc6ad1fba95850c6a1169df7429039459962",
+          "sampleSha256": "b85dd2d84650f7aafdc716a6a65edebc109f2fab8dea949fe01aae04827df2c3",
           "truncated": true
         }
       ],
       "outcome": "success",
       "reason": null,
-      "selectedResourceId": "06232f04-c679-4e69-94dd-bb735450cc84",
+      "selectedResourceId": "dc81d47c-8825-48be-a525-f596305e5fb6",
       "sourceReferences": [
         "HKAPI-111"
       ],
@@ -4414,23 +3998,10 @@
         "parameters-required": 0,
         "ready": 1
       },
-      "attempts": [
-        {
-          "elapsedMs": 417,
-          "finalHost": "portal.csdi.gov.hk",
-          "format": "GML",
-          "httpStatus": 206,
-          "mediaType": "text/html",
-          "outcome": "success",
-          "resourceId": "6ae0e6c2-273d-4c1a-9874-6f823c375161",
-          "sampleBytes": 4096,
-          "sampleSha256": "e0c2183bb3c83c549c0b14e32f2c615232125857d55294ea281b15570ae5399b",
-          "truncated": true
-        }
-      ],
-      "outcome": "success",
-      "reason": null,
-      "selectedResourceId": "6ae0e6c2-273d-4c1a-9874-6f823c375161",
+      "attempts": [],
+      "outcome": "not-probeable",
+      "reason": "no-parameter-free-https-resource",
+      "selectedResourceId": null,
       "sourceReferences": [
         "HKAPI-116"
       ],
@@ -4443,23 +4014,10 @@
         "parameters-required": 0,
         "ready": 1
       },
-      "attempts": [
-        {
-          "elapsedMs": 439,
-          "finalHost": "portal.csdi.gov.hk",
-          "format": "GML",
-          "httpStatus": 206,
-          "mediaType": "text/html",
-          "outcome": "success",
-          "resourceId": "82ec033c-52ce-45f4-9248-b09cfbd3034c",
-          "sampleBytes": 4096,
-          "sampleSha256": "c144118202d088576a1cd8eaf32482b1d27b8410ae17e4ecdf20ae84ae7cfed9",
-          "truncated": true
-        }
-      ],
-      "outcome": "success",
-      "reason": null,
-      "selectedResourceId": "82ec033c-52ce-45f4-9248-b09cfbd3034c",
+      "attempts": [],
+      "outcome": "not-probeable",
+      "reason": "no-parameter-free-https-resource",
+      "selectedResourceId": null,
       "sourceReferences": [
         "HKAPI-116"
       ],
@@ -4472,23 +4030,10 @@
         "parameters-required": 0,
         "ready": 1
       },
-      "attempts": [
-        {
-          "elapsedMs": 419,
-          "finalHost": "portal.csdi.gov.hk",
-          "format": "GML",
-          "httpStatus": 206,
-          "mediaType": "text/html",
-          "outcome": "success",
-          "resourceId": "2a47a77b-ea29-4c51-9273-c7a852c6fb27",
-          "sampleBytes": 4096,
-          "sampleSha256": "c30211c82c5980ec63bf2678b1b8f977bc0cb38a0f1c9e858f9b1624c21fd989",
-          "truncated": true
-        }
-      ],
-      "outcome": "success",
-      "reason": null,
-      "selectedResourceId": "2a47a77b-ea29-4c51-9273-c7a852c6fb27",
+      "attempts": [],
+      "outcome": "not-probeable",
+      "reason": "no-parameter-free-https-resource",
+      "selectedResourceId": null,
       "sourceReferences": [
         "HKAPI-116"
       ],
@@ -4501,23 +4046,10 @@
         "parameters-required": 0,
         "ready": 1
       },
-      "attempts": [
-        {
-          "elapsedMs": 454,
-          "finalHost": "portal.csdi.gov.hk",
-          "format": "API",
-          "httpStatus": 206,
-          "mediaType": "text/html",
-          "outcome": "success",
-          "resourceId": "e2d20178-8e55-4a3c-bd9c-fb7b035b8e77",
-          "sampleBytes": 4096,
-          "sampleSha256": "40fc337ba3e9f79fc6c99495aae56a88253b84c1f70af26a9dbb44c6f9772121",
-          "truncated": true
-        }
-      ],
-      "outcome": "success",
-      "reason": null,
-      "selectedResourceId": "e2d20178-8e55-4a3c-bd9c-fb7b035b8e77",
+      "attempts": [],
+      "outcome": "not-probeable",
+      "reason": "no-parameter-free-https-resource",
+      "selectedResourceId": null,
       "sourceReferences": [
         "HKAPI-116"
       ],
@@ -4530,23 +4062,10 @@
         "parameters-required": 0,
         "ready": 1
       },
-      "attempts": [
-        {
-          "elapsedMs": 468,
-          "finalHost": "portal.csdi.gov.hk",
-          "format": "SHP",
-          "httpStatus": 206,
-          "mediaType": "text/html",
-          "outcome": "success",
-          "resourceId": "c2e0f390-e514-41a4-8bd5-af310be96942",
-          "sampleBytes": 4096,
-          "sampleSha256": "9d40ef2602a20d69819c20bc52f420684b835fd29bc03d4ae3c81a429891c28e",
-          "truncated": true
-        }
-      ],
-      "outcome": "success",
-      "reason": null,
-      "selectedResourceId": "c2e0f390-e514-41a4-8bd5-af310be96942",
+      "attempts": [],
+      "outcome": "not-probeable",
+      "reason": "no-parameter-free-https-resource",
+      "selectedResourceId": null,
       "sourceReferences": [
         "HKAPI-115"
       ],
@@ -4559,23 +4078,10 @@
         "parameters-required": 0,
         "ready": 1
       },
-      "attempts": [
-        {
-          "elapsedMs": 402,
-          "finalHost": "portal.csdi.gov.hk",
-          "format": "SHP",
-          "httpStatus": 206,
-          "mediaType": "text/html",
-          "outcome": "success",
-          "resourceId": "69823aef-2ab0-482b-80dd-f8b363fe198c",
-          "sampleBytes": 4096,
-          "sampleSha256": "eb20c4114ac71bfeae0f89f50ef5e2c83f9933a6d5f8c44fc93521d20da6886e",
-          "truncated": true
-        }
-      ],
-      "outcome": "success",
-      "reason": null,
-      "selectedResourceId": "69823aef-2ab0-482b-80dd-f8b363fe198c",
+      "attempts": [],
+      "outcome": "not-probeable",
+      "reason": "no-parameter-free-https-resource",
+      "selectedResourceId": null,
       "sourceReferences": [
         "HKAPI-115"
       ],
@@ -4588,23 +4094,10 @@
         "parameters-required": 0,
         "ready": 1
       },
-      "attempts": [
-        {
-          "elapsedMs": 418,
-          "finalHost": "portal.csdi.gov.hk",
-          "format": "FGDB",
-          "httpStatus": 206,
-          "mediaType": "text/html",
-          "outcome": "success",
-          "resourceId": "b4a2c77c-f166-496f-ac64-70b309f847ae",
-          "sampleBytes": 4096,
-          "sampleSha256": "61a4edbdfb7a6245db00d3c196feecf029fad93de8e779b3d7c8c8c0344d5ce7",
-          "truncated": true
-        }
-      ],
-      "outcome": "success",
-      "reason": null,
-      "selectedResourceId": "b4a2c77c-f166-496f-ac64-70b309f847ae",
+      "attempts": [],
+      "outcome": "not-probeable",
+      "reason": "no-parameter-free-https-resource",
+      "selectedResourceId": null,
       "sourceReferences": [
         "HKAPI-117"
       ],
@@ -4617,23 +4110,10 @@
         "parameters-required": 0,
         "ready": 1
       },
-      "attempts": [
-        {
-          "elapsedMs": 486,
-          "finalHost": "portal.csdi.gov.hk",
-          "format": "API",
-          "httpStatus": 206,
-          "mediaType": "text/html",
-          "outcome": "success",
-          "resourceId": "4a37f965-f3b3-4902-a802-8ee6ad5e46a2",
-          "sampleBytes": 4096,
-          "sampleSha256": "42e62559a233dad8965dce03f665ffc518e6836f392cf33e0fa45e01e6186f55",
-          "truncated": true
-        }
-      ],
-      "outcome": "success",
-      "reason": null,
-      "selectedResourceId": "4a37f965-f3b3-4902-a802-8ee6ad5e46a2",
+      "attempts": [],
+      "outcome": "not-probeable",
+      "reason": "no-parameter-free-https-resource",
+      "selectedResourceId": null,
       "sourceReferences": [
         "HKAPI-192"
       ],
@@ -4648,7 +4128,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 316,
+          "elapsedMs": 202,
           "finalHost": "www.ftp.cfs.gov.hk",
           "format": "JSON",
           "httpStatus": 206,
@@ -4677,21 +4157,21 @@
       },
       "attempts": [
         {
-          "elapsedMs": 418,
-          "finalHost": "portal.csdi.gov.hk",
-          "format": "API",
+          "elapsedMs": 371,
+          "finalHost": "www.fehd.gov.hk",
+          "format": "XML",
           "httpStatus": 206,
-          "mediaType": "text/html",
+          "mediaType": "application/xml",
           "outcome": "success",
-          "resourceId": "4aa7c517-a65d-4322-a51a-743ed27bee27",
+          "resourceId": "571579a6-361b-4b5d-b512-ba3ad8043d68",
           "sampleBytes": 4096,
-          "sampleSha256": "e1bf6c5e8b3bfb91f94a85ed19022f672ca5358c3632a307c4c67ae40abd968c",
+          "sampleSha256": "7b669c01495fe3a3f24f35f3640a40832e77ea98bba00ff56ac17b27f9edc54e",
           "truncated": true
         }
       ],
       "outcome": "success",
       "reason": null,
-      "selectedResourceId": "4aa7c517-a65d-4322-a51a-743ed27bee27",
+      "selectedResourceId": "571579a6-361b-4b5d-b512-ba3ad8043d68",
       "sourceReferences": [
         "HKAPI-185"
       ],
@@ -4706,21 +4186,21 @@
       },
       "attempts": [
         {
-          "elapsedMs": 400,
-          "finalHost": "portal.csdi.gov.hk",
-          "format": "API",
+          "elapsedMs": 184,
+          "finalHost": "www.fehd.gov.hk",
+          "format": "XML",
           "httpStatus": 206,
-          "mediaType": "text/html",
+          "mediaType": "application/xml",
           "outcome": "success",
-          "resourceId": "5d1a5def-fe53-432f-8de1-a06a8274d81f",
+          "resourceId": "9daa7167-931b-487b-a3fc-00689803cbd1",
           "sampleBytes": 4096,
-          "sampleSha256": "168ddadf451d834af91df65da2b7debc4b5dfe1c1918bc8c867c54ed60e6925e",
+          "sampleSha256": "dcd69b5b576b7cd84bbd0210b8ff155718860d6fa7106cbb4503b04d0886baf3",
           "truncated": true
         }
       ],
       "outcome": "success",
       "reason": null,
-      "selectedResourceId": "5d1a5def-fe53-432f-8de1-a06a8274d81f",
+      "selectedResourceId": "9daa7167-931b-487b-a3fc-00689803cbd1",
       "sourceReferences": [
         "HKAPI-184"
       ],
@@ -4735,21 +4215,21 @@
       },
       "attempts": [
         {
-          "elapsedMs": 479,
-          "finalHost": "portal.csdi.gov.hk",
-          "format": "API",
+          "elapsedMs": 218,
+          "finalHost": "www.fehd.gov.hk",
+          "format": "XML",
           "httpStatus": 206,
-          "mediaType": "text/html",
+          "mediaType": "application/xml",
           "outcome": "success",
-          "resourceId": "e781da34-3d83-4600-afca-2787ed2fd3e6",
+          "resourceId": "a23e34a4-438d-4b31-811d-b6fcafa95dac",
           "sampleBytes": 4096,
-          "sampleSha256": "e4fe725d0a08bdfbbecc818e2246bf7dab20588ad774d1110f38292375aa4ea4",
+          "sampleSha256": "fb50fa71411a808c0fa7c469a7d15def699405a10c74ca659c3d45fda73dbef1",
           "truncated": true
         }
       ],
       "outcome": "success",
       "reason": null,
-      "selectedResourceId": "e781da34-3d83-4600-afca-2787ed2fd3e6",
+      "selectedResourceId": "a23e34a4-438d-4b31-811d-b6fcafa95dac",
       "sourceReferences": [
         "HKAPI-186"
       ],
@@ -4764,21 +4244,21 @@
       },
       "attempts": [
         {
-          "elapsedMs": 416,
-          "finalHost": "portal.csdi.gov.hk",
-          "format": "API",
+          "elapsedMs": 207,
+          "finalHost": "www.fehd.gov.hk",
+          "format": "XML",
           "httpStatus": 206,
-          "mediaType": "text/html",
+          "mediaType": "application/xml",
           "outcome": "success",
-          "resourceId": "5a032382-f18c-4181-9b93-078ef942f5a9",
+          "resourceId": "f9fb126e-3377-4284-a996-d7da57353729",
           "sampleBytes": 4096,
-          "sampleSha256": "4e116cc3dcc7343e48b4705a95c3820fa5ea2aacd5564d3dbc4d2c0d38542c6d",
+          "sampleSha256": "c1bcd78944320f5705f30e29e099cfec598fba2434bc3b634ed527134e342319",
           "truncated": true
         }
       ],
       "outcome": "success",
       "reason": null,
-      "selectedResourceId": "5a032382-f18c-4181-9b93-078ef942f5a9",
+      "selectedResourceId": "f9fb126e-3377-4284-a996-d7da57353729",
       "sourceReferences": [
         "HKAPI-187"
       ],
@@ -4793,21 +4273,21 @@
       },
       "attempts": [
         {
-          "elapsedMs": 414,
-          "finalHost": "portal.csdi.gov.hk",
-          "format": "API",
+          "elapsedMs": 148,
+          "finalHost": "www.fehd.gov.hk",
+          "format": "XML",
           "httpStatus": 206,
-          "mediaType": "text/html",
+          "mediaType": "application/xml",
           "outcome": "success",
-          "resourceId": "046a618c-cf63-4cba-aac4-b49a2ef44cfd",
+          "resourceId": "161df8ea-b91a-46bf-b703-817a1aadbdcb",
           "sampleBytes": 4096,
-          "sampleSha256": "a49a3d9a895189744b9631680e102410daa84d648cd90c7bc5740f2515747c07",
+          "sampleSha256": "3469616b0d08c511882d56b2a37e955380682dabc1f0721432162f175a9d76a8",
           "truncated": true
         }
       ],
       "outcome": "success",
       "reason": null,
-      "selectedResourceId": "046a618c-cf63-4cba-aac4-b49a2ef44cfd",
+      "selectedResourceId": "161df8ea-b91a-46bf-b703-817a1aadbdcb",
       "sourceReferences": [
         "HKAPI-189"
       ],
@@ -4822,21 +4302,21 @@
       },
       "attempts": [
         {
-          "elapsedMs": 463,
-          "finalHost": "portal.csdi.gov.hk",
-          "format": "API",
+          "elapsedMs": 149,
+          "finalHost": "www.fehd.gov.hk",
+          "format": "XML",
           "httpStatus": 206,
-          "mediaType": "text/html",
+          "mediaType": "application/xml",
           "outcome": "success",
-          "resourceId": "315aae28-1b8f-4e27-9c20-06b91bf62b3f",
+          "resourceId": "f886c404-4d37-4aea-a80b-272ecd46562a",
           "sampleBytes": 4096,
-          "sampleSha256": "8103f9a9afa9eee907be6e182cd32093ffb6a7dc46ad2e4c5eea2dc9038b345f",
+          "sampleSha256": "fece96b49d30fe247e4a8f2e1b67931171cbe0c77cd82b5fb5e716cad26756b1",
           "truncated": true
         }
       ],
       "outcome": "success",
       "reason": null,
-      "selectedResourceId": "315aae28-1b8f-4e27-9c20-06b91bf62b3f",
+      "selectedResourceId": "f886c404-4d37-4aea-a80b-272ecd46562a",
       "sourceReferences": [
         "HKAPI-190"
       ],
@@ -4851,7 +4331,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 486,
+          "elapsedMs": 262,
           "finalHost": "es.hkfsd.gov.hk",
           "format": "CSV",
           "httpStatus": 200,
@@ -4880,7 +4360,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 431,
+          "elapsedMs": 497,
           "finalHost": "pcms2.gld.gov.hk",
           "format": "XML",
           "httpStatus": 200,
@@ -4888,7 +4368,7 @@
           "outcome": "success",
           "resourceId": "16d4f5cd-45e1-496a-bcf4-f424d35e2ad1",
           "sampleBytes": 4096,
-          "sampleSha256": "c0374ecf9f0872619da2e4ec2c718d99b5ee5d98c57c7858769b084f10d37f50",
+          "sampleSha256": "e0e80313747e8db6df5a264a90926ed5f06cc7033f9cc15a89562b7c3d7882ad",
           "truncated": true
         }
       ],
@@ -4909,7 +4389,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 374,
+          "elapsedMs": 447,
           "finalHost": "www.gld.gov.hk",
           "format": "CSV",
           "httpStatus": 206,
@@ -4936,23 +4416,10 @@
         "parameters-required": 0,
         "ready": 1
       },
-      "attempts": [
-        {
-          "elapsedMs": 418,
-          "finalHost": "portal.csdi.gov.hk",
-          "format": "API",
-          "httpStatus": 206,
-          "mediaType": "text/html",
-          "outcome": "success",
-          "resourceId": "8129bcbf-6f75-4999-8ed4-95eb81df3898",
-          "sampleBytes": 4096,
-          "sampleSha256": "51deede77abeecc23f25e21e76b3e99825ded0c97c1f72d3157f8c2d53f950d3",
-          "truncated": true
-        }
-      ],
-      "outcome": "success",
-      "reason": null,
-      "selectedResourceId": "8129bcbf-6f75-4999-8ed4-95eb81df3898",
+      "attempts": [],
+      "outcome": "not-probeable",
+      "reason": "no-parameter-free-https-resource",
+      "selectedResourceId": null,
       "sourceReferences": [
         "HKAPI-233"
       ],
@@ -4967,21 +4434,21 @@
       },
       "attempts": [
         {
-          "elapsedMs": 417,
-          "finalHost": "portal.csdi.gov.hk",
-          "format": "API",
-          "httpStatus": 206,
-          "mediaType": "text/html",
+          "elapsedMs": 713,
+          "finalHost": "www.hadla.gov.hk",
+          "format": "CSV",
+          "httpStatus": 200,
+          "mediaType": "text/csv",
           "outcome": "success",
-          "resourceId": "255cea1a-99a7-476a-a316-1a5255baa0cd",
+          "resourceId": "6cacfa24-2231-44f4-bb6d-f3c65315f1d7",
           "sampleBytes": 4096,
-          "sampleSha256": "5db1ac554b5e272ab10f5bbdab9fe161530393453896b07fdde340220a419c6a",
+          "sampleSha256": "8e6dac62136dab84831acbe5b12ceb20722bab87ba079d3e24afa47c24abfa00",
           "truncated": true
         }
       ],
       "outcome": "success",
       "reason": null,
-      "selectedResourceId": "255cea1a-99a7-476a-a316-1a5255baa0cd",
+      "selectedResourceId": "6cacfa24-2231-44f4-bb6d-f3c65315f1d7",
       "sourceReferences": [
         "HKAPI-197"
       ],
@@ -4996,21 +4463,21 @@
       },
       "attempts": [
         {
-          "elapsedMs": 444,
-          "finalHost": "portal.csdi.gov.hk",
-          "format": "API",
+          "elapsedMs": 443,
+          "finalHost": "www.hadla.gov.hk",
+          "format": "CSV",
           "httpStatus": 206,
-          "mediaType": "text/html",
+          "mediaType": "text/csv",
           "outcome": "success",
-          "resourceId": "7f0e78ea-cb2f-49cf-914a-7cfe0349b454",
+          "resourceId": "99a7b53a-5fab-4ce1-91eb-86d1d28ef784",
           "sampleBytes": 4096,
-          "sampleSha256": "a1f57359f49945d38352ab0d53aabd9c7d10a1c4c7a13e8dddbbaea5d6d653c2",
+          "sampleSha256": "0f149a6c89191c5b63224367ff13f726a5bc24ed137bca618d9f0519953c60b1",
           "truncated": true
         }
       ],
       "outcome": "success",
       "reason": null,
-      "selectedResourceId": "7f0e78ea-cb2f-49cf-914a-7cfe0349b454",
+      "selectedResourceId": "99a7b53a-5fab-4ce1-91eb-86d1d28ef784",
       "sourceReferences": [
         "HKAPI-195"
       ],
@@ -5025,21 +4492,21 @@
       },
       "attempts": [
         {
-          "elapsedMs": 442,
-          "finalHost": "portal.csdi.gov.hk",
-          "format": "API",
+          "elapsedMs": 424,
+          "finalHost": "www.hadla.gov.hk",
+          "format": "CSV",
           "httpStatus": 206,
-          "mediaType": "text/html",
+          "mediaType": "text/csv",
           "outcome": "success",
-          "resourceId": "b067df4b-f37d-4477-ba83-21d33ad07804",
-          "sampleBytes": 4096,
-          "sampleSha256": "b810dd17971d639e9dd59a3b221a0e9eb57fa8fda7da0994320d03435b582893",
-          "truncated": true
+          "resourceId": "df75c6bd-a1c1-4df4-b23b-7c10a81a3c56",
+          "sampleBytes": 3075,
+          "sampleSha256": "2daf4b5509c781c4d1350971a7fe6994f818c6f8dfaedad31ae649f919be5307",
+          "truncated": false
         }
       ],
       "outcome": "success",
       "reason": null,
-      "selectedResourceId": "b067df4b-f37d-4477-ba83-21d33ad07804",
+      "selectedResourceId": "df75c6bd-a1c1-4df4-b23b-7c10a81a3c56",
       "sourceReferences": [
         "HKAPI-196"
       ],
@@ -5054,21 +4521,21 @@
       },
       "attempts": [
         {
-          "elapsedMs": 502,
+          "elapsedMs": 1050,
           "finalHost": "data.housingauthority.gov.hk",
           "format": "JSON",
-          "httpStatus": 206,
-          "mediaType": "application/json",
+          "httpStatus": 200,
+          "mediaType": "text/json",
           "outcome": "success",
-          "resourceId": "9193fb0d-d675-4ca5-b469-9ad5df5548ef",
+          "resourceId": "9dcf5dc7-b3d8-4a83-9e74-c73bcd5d9e28",
           "sampleBytes": 4096,
-          "sampleSha256": "f1e0175d6d99846fdc7a14e5c2bde2a44a73cc2c763710816c7b2dffaf5b5400",
+          "sampleSha256": "4b81864c3bd144a055cb907d76b39c6619a6fefdc082acf757e223a9f64a3fa9",
           "truncated": true
         }
       ],
       "outcome": "success",
       "reason": null,
-      "selectedResourceId": "9193fb0d-d675-4ca5-b469-9ad5df5548ef",
+      "selectedResourceId": "9dcf5dc7-b3d8-4a83-9e74-c73bcd5d9e28",
       "sourceReferences": [
         "HKAPI-213"
       ],
@@ -5083,21 +4550,21 @@
       },
       "attempts": [
         {
-          "elapsedMs": 942,
-          "finalHost": "www.housingauthority.gov.hk",
+          "elapsedMs": 826,
+          "finalHost": "data.housingauthority.gov.hk",
           "format": "JSON",
-          "httpStatus": 206,
-          "mediaType": "application/json",
+          "httpStatus": 200,
+          "mediaType": "text/json",
           "outcome": "success",
-          "resourceId": "e7f582b4-7492-41cc-aea1-d8959e6652d5",
-          "sampleBytes": 4096,
-          "sampleSha256": "26186401805494c7228465756ba844b1620b9a71d3817c1e5e889fc9e3f08bae",
-          "truncated": true
+          "resourceId": "7b0157ad-572d-45d1-9179-3491d7352712",
+          "sampleBytes": 1601,
+          "sampleSha256": "70497842afdd6af39e0ac3adc28eab04fcd15f13ee1e8b1231e879d47253ce30",
+          "truncated": false
         }
       ],
       "outcome": "success",
       "reason": null,
-      "selectedResourceId": "e7f582b4-7492-41cc-aea1-d8959e6652d5",
+      "selectedResourceId": "7b0157ad-572d-45d1-9179-3491d7352712",
       "sourceReferences": [
         "HKAPI-212"
       ],
@@ -5110,23 +4577,10 @@
         "parameters-required": 0,
         "ready": 1
       },
-      "attempts": [
-        {
-          "elapsedMs": 421,
-          "finalHost": "portal.csdi.gov.hk",
-          "format": "FGDB",
-          "httpStatus": 206,
-          "mediaType": "text/html",
-          "outcome": "success",
-          "resourceId": "c1eba64f-c4c7-41ef-8c67-883085a60fff",
-          "sampleBytes": 4096,
-          "sampleSha256": "f6a8e2511fcb8555ae51a64a938cc13d53ae67937b829c6dae06af060be610db",
-          "truncated": true
-        }
-      ],
-      "outcome": "success",
-      "reason": null,
-      "selectedResourceId": "c1eba64f-c4c7-41ef-8c67-883085a60fff",
+      "attempts": [],
+      "outcome": "not-probeable",
+      "reason": "no-parameter-free-https-resource",
+      "selectedResourceId": null,
       "sourceReferences": [
         "HKAPI-214"
       ],
@@ -5139,23 +4593,10 @@
         "parameters-required": 0,
         "ready": 1
       },
-      "attempts": [
-        {
-          "elapsedMs": 426,
-          "finalHost": "portal.csdi.gov.hk",
-          "format": "FGDB",
-          "httpStatus": 206,
-          "mediaType": "text/html",
-          "outcome": "success",
-          "resourceId": "38b377af-01ab-4afd-aa72-a417944f15d1",
-          "sampleBytes": 4096,
-          "sampleSha256": "de1db535d672a89279f830a958fbb916297b749c2e7c7d90ca598897c89012a6",
-          "truncated": true
-        }
-      ],
-      "outcome": "success",
-      "reason": null,
-      "selectedResourceId": "38b377af-01ab-4afd-aa72-a417944f15d1",
+      "attempts": [],
+      "outcome": "not-probeable",
+      "reason": "no-parameter-free-https-resource",
+      "selectedResourceId": null,
       "sourceReferences": [
         "HKAPI-215"
       ],
@@ -5168,23 +4609,10 @@
         "parameters-required": 0,
         "ready": 1
       },
-      "attempts": [
-        {
-          "elapsedMs": 399,
-          "finalHost": "portal.csdi.gov.hk",
-          "format": "GML",
-          "httpStatus": 206,
-          "mediaType": "text/html",
-          "outcome": "success",
-          "resourceId": "fb2a8a68-fbad-457d-85da-7cdcf9ab1034",
-          "sampleBytes": 4096,
-          "sampleSha256": "58db9555136f150b7df522ab29fa2a980af8e615a05eef5a3985c1515edeebf9",
-          "truncated": true
-        }
-      ],
-      "outcome": "success",
-      "reason": null,
-      "selectedResourceId": "fb2a8a68-fbad-457d-85da-7cdcf9ab1034",
+      "attempts": [],
+      "outcome": "not-probeable",
+      "reason": "no-parameter-free-https-resource",
+      "selectedResourceId": null,
       "sourceReferences": [
         "HKAPI-215"
       ],
@@ -5199,7 +4627,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 539,
+          "elapsedMs": 475,
           "finalHost": "secure1.info.gov.hk",
           "format": "JSON",
           "httpStatus": 206,
@@ -5228,7 +4656,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 304,
+          "elapsedMs": 275,
           "finalHost": "www.immd.gov.hk",
           "format": "CSV",
           "httpStatus": 206,
@@ -5255,23 +4683,10 @@
         "parameters-required": 0,
         "ready": 1
       },
-      "attempts": [
-        {
-          "elapsedMs": 409,
-          "finalHost": "portal.csdi.gov.hk",
-          "format": "API",
-          "httpStatus": 206,
-          "mediaType": "text/html",
-          "outcome": "success",
-          "resourceId": "d2edfcb0-df22-41e2-9510-fa0466731662",
-          "sampleBytes": 4096,
-          "sampleSha256": "0dc8e61959897f619f915da31756a3ba3d06e2a33e1d2fefcc8abac236ecbb8f",
-          "truncated": true
-        }
-      ],
-      "outcome": "success",
-      "reason": null,
-      "selectedResourceId": "d2edfcb0-df22-41e2-9510-fa0466731662",
+      "attempts": [],
+      "outcome": "not-probeable",
+      "reason": "no-parameter-free-https-resource",
+      "selectedResourceId": null,
       "sourceReferences": [
         "HKAPI-079"
       ],
@@ -5286,7 +4701,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 421,
+          "elapsedMs": 334,
           "finalHost": "www.ipd.gov.hk",
           "format": "CSV",
           "httpStatus": 206,
@@ -5329,23 +4744,10 @@
         "parameters-required": 0,
         "ready": 1
       },
-      "attempts": [
-        {
-          "elapsedMs": 415,
-          "finalHost": "portal.csdi.gov.hk",
-          "format": "API",
-          "httpStatus": 206,
-          "mediaType": "text/html",
-          "outcome": "success",
-          "resourceId": "401399c7-1011-44e5-9add-1a3d8d0fae66",
-          "sampleBytes": 4096,
-          "sampleSha256": "016e3f0988d07ddc7d06af664f30c4518a08608c4c9205a2817c69644412c947",
-          "truncated": true
-        }
-      ],
-      "outcome": "success",
-      "reason": null,
-      "selectedResourceId": "401399c7-1011-44e5-9add-1a3d8d0fae66",
+      "attempts": [],
+      "outcome": "not-probeable",
+      "reason": "no-parameter-free-https-resource",
+      "selectedResourceId": null,
       "sourceReferences": [
         "HKAPI-230"
       ],
@@ -5358,23 +4760,10 @@
         "parameters-required": 0,
         "ready": 1
       },
-      "attempts": [
-        {
-          "elapsedMs": 417,
-          "finalHost": "portal.csdi.gov.hk",
-          "format": "API",
-          "httpStatus": 206,
-          "mediaType": "text/html",
-          "outcome": "success",
-          "resourceId": "24de4a7c-6910-4544-beee-d79aa6facaf6",
-          "sampleBytes": 4096,
-          "sampleSha256": "c6e408ff062409a1debfca1e73167720f0c316ea53fbd03aaf5c66e58b2969b6",
-          "truncated": true
-        }
-      ],
-      "outcome": "success",
-      "reason": null,
-      "selectedResourceId": "24de4a7c-6910-4544-beee-d79aa6facaf6",
+      "attempts": [],
+      "outcome": "not-probeable",
+      "reason": "no-parameter-free-https-resource",
+      "selectedResourceId": null,
       "sourceReferences": [
         "HKAPI-228"
       ],
@@ -5387,23 +4776,10 @@
         "parameters-required": 0,
         "ready": 1
       },
-      "attempts": [
-        {
-          "elapsedMs": 449,
-          "finalHost": "portal.csdi.gov.hk",
-          "format": "API",
-          "httpStatus": 206,
-          "mediaType": "text/html",
-          "outcome": "success",
-          "resourceId": "92d24214-a295-4b8e-8d3f-27e9226e1287",
-          "sampleBytes": 4096,
-          "sampleSha256": "b4e02e88de0679f63ed41b9dbbe893937afc032395776f288054ffd62bd96734",
-          "truncated": true
-        }
-      ],
-      "outcome": "success",
-      "reason": null,
-      "selectedResourceId": "92d24214-a295-4b8e-8d3f-27e9226e1287",
+      "attempts": [],
+      "outcome": "not-probeable",
+      "reason": "no-parameter-free-https-resource",
+      "selectedResourceId": null,
       "sourceReferences": [
         "HKAPI-227"
       ],
@@ -5416,23 +4792,10 @@
         "parameters-required": 0,
         "ready": 1
       },
-      "attempts": [
-        {
-          "elapsedMs": 400,
-          "finalHost": "portal.csdi.gov.hk",
-          "format": "API",
-          "httpStatus": 206,
-          "mediaType": "text/html",
-          "outcome": "success",
-          "resourceId": "98f1d45f-ef1a-44e9-b422-0d13c5613e1e",
-          "sampleBytes": 4096,
-          "sampleSha256": "af391cff22590507d3e7ec43498c93fbe503e827450bae2cff8b5515a12743e5",
-          "truncated": true
-        }
-      ],
-      "outcome": "success",
-      "reason": null,
-      "selectedResourceId": "98f1d45f-ef1a-44e9-b422-0d13c5613e1e",
+      "attempts": [],
+      "outcome": "not-probeable",
+      "reason": "no-parameter-free-https-resource",
+      "selectedResourceId": null,
       "sourceReferences": [
         "HKAPI-231"
       ],
@@ -5445,23 +4808,10 @@
         "parameters-required": 0,
         "ready": 1
       },
-      "attempts": [
-        {
-          "elapsedMs": 457,
-          "finalHost": "portal.csdi.gov.hk",
-          "format": "FGDB",
-          "httpStatus": 206,
-          "mediaType": "text/html",
-          "outcome": "success",
-          "resourceId": "4ab627a4-bdd7-40d6-a950-8feb9d178afb",
-          "sampleBytes": 4096,
-          "sampleSha256": "9b2352486ca2093d6d9e45db2d3b9a6ffbbf9643465989236a503cf67abfd939",
-          "truncated": true
-        }
-      ],
-      "outcome": "success",
-      "reason": null,
-      "selectedResourceId": "4ab627a4-bdd7-40d6-a950-8feb9d178afb",
+      "attempts": [],
+      "outcome": "not-probeable",
+      "reason": "no-parameter-free-https-resource",
+      "selectedResourceId": null,
       "sourceReferences": [
         "HKAPI-229"
       ],
@@ -5474,23 +4824,10 @@
         "parameters-required": 0,
         "ready": 1
       },
-      "attempts": [
-        {
-          "elapsedMs": 619,
-          "finalHost": "portal.csdi.gov.hk",
-          "format": "API",
-          "httpStatus": 206,
-          "mediaType": "text/html",
-          "outcome": "success",
-          "resourceId": "598de694-6e9d-43d1-9b9c-962d4fd01c0b",
-          "sampleBytes": 4096,
-          "sampleSha256": "d7fb6c38e9776abeefa2ed0be37d2be87f7eb2a2b096056c632cd624bb811c3b",
-          "truncated": true
-        }
-      ],
-      "outcome": "success",
-      "reason": null,
-      "selectedResourceId": "598de694-6e9d-43d1-9b9c-962d4fd01c0b",
+      "attempts": [],
+      "outcome": "not-probeable",
+      "reason": "no-parameter-free-https-resource",
+      "selectedResourceId": null,
       "sourceReferences": [
         "HKAPI-205"
       ],
@@ -5503,23 +4840,10 @@
         "parameters-required": 0,
         "ready": 1
       },
-      "attempts": [
-        {
-          "elapsedMs": 533,
-          "finalHost": "portal.csdi.gov.hk",
-          "format": "API",
-          "httpStatus": 206,
-          "mediaType": "text/html",
-          "outcome": "success",
-          "resourceId": "588007e5-f877-4c84-8576-854173fe8a53",
-          "sampleBytes": 4096,
-          "sampleSha256": "d69b62eab24b6fb868d6c18757e82e90864abfb933128d5828a05b1312de4a5a",
-          "truncated": true
-        }
-      ],
-      "outcome": "success",
-      "reason": null,
-      "selectedResourceId": "588007e5-f877-4c84-8576-854173fe8a53",
+      "attempts": [],
+      "outcome": "not-probeable",
+      "reason": "no-parameter-free-https-resource",
+      "selectedResourceId": null,
       "sourceReferences": [
         "HKAPI-202"
       ],
@@ -5532,23 +4856,10 @@
         "parameters-required": 0,
         "ready": 1
       },
-      "attempts": [
-        {
-          "elapsedMs": 418,
-          "finalHost": "portal.csdi.gov.hk",
-          "format": "API",
-          "httpStatus": 206,
-          "mediaType": "text/html",
-          "outcome": "success",
-          "resourceId": "4eeaeac4-c93a-4168-99c1-2df99acf17eb",
-          "sampleBytes": 4096,
-          "sampleSha256": "dbf1ed9d42b766dbe6079dd502f60751d50643255c2e1af8a7056ece0badcb0e",
-          "truncated": true
-        }
-      ],
-      "outcome": "success",
-      "reason": null,
-      "selectedResourceId": "4eeaeac4-c93a-4168-99c1-2df99acf17eb",
+      "attempts": [],
+      "outcome": "not-probeable",
+      "reason": "no-parameter-free-https-resource",
+      "selectedResourceId": null,
       "sourceReferences": [
         "HKAPI-205"
       ],
@@ -5561,23 +4872,10 @@
         "parameters-required": 0,
         "ready": 1
       },
-      "attempts": [
-        {
-          "elapsedMs": 643,
-          "finalHost": "portal.csdi.gov.hk",
-          "format": "API",
-          "httpStatus": 206,
-          "mediaType": "text/html",
-          "outcome": "success",
-          "resourceId": "52c8127b-edf0-49f3-909c-6f8dcb706ba4",
-          "sampleBytes": 4096,
-          "sampleSha256": "f0e0ac4cb8fa0bac007e33571929e07d1e1d784120eeb13a853e5a072bd79203",
-          "truncated": true
-        }
-      ],
-      "outcome": "success",
-      "reason": null,
-      "selectedResourceId": "52c8127b-edf0-49f3-909c-6f8dcb706ba4",
+      "attempts": [],
+      "outcome": "not-probeable",
+      "reason": "no-parameter-free-https-resource",
+      "selectedResourceId": null,
       "sourceReferences": [
         "HKAPI-204"
       ],
@@ -5590,23 +4888,10 @@
         "parameters-required": 0,
         "ready": 1
       },
-      "attempts": [
-        {
-          "elapsedMs": 666,
-          "finalHost": "portal.csdi.gov.hk",
-          "format": "API",
-          "httpStatus": 206,
-          "mediaType": "text/html",
-          "outcome": "success",
-          "resourceId": "714aa053-c85e-426b-b12d-bef1733505b8",
-          "sampleBytes": 4096,
-          "sampleSha256": "9228256550cfceab8e944237091aa85884b64f651627fd97afd65b0f722f1f0b",
-          "truncated": true
-        }
-      ],
-      "outcome": "success",
-      "reason": null,
-      "selectedResourceId": "714aa053-c85e-426b-b12d-bef1733505b8",
+      "attempts": [],
+      "outcome": "not-probeable",
+      "reason": "no-parameter-free-https-resource",
+      "selectedResourceId": null,
       "sourceReferences": [
         "HKAPI-204"
       ],
@@ -5619,23 +4904,10 @@
         "parameters-required": 0,
         "ready": 1
       },
-      "attempts": [
-        {
-          "elapsedMs": 640,
-          "finalHost": "portal.csdi.gov.hk",
-          "format": "API",
-          "httpStatus": 206,
-          "mediaType": "text/html",
-          "outcome": "success",
-          "resourceId": "f201056a-e06c-4d0c-9bb9-fd64bdd2691d",
-          "sampleBytes": 4096,
-          "sampleSha256": "9ad6191de90b39e15d3c126a36b8605644573ef9437bde00a5c9db79498bd863",
-          "truncated": true
-        }
-      ],
-      "outcome": "success",
-      "reason": null,
-      "selectedResourceId": "f201056a-e06c-4d0c-9bb9-fd64bdd2691d",
+      "attempts": [],
+      "outcome": "not-probeable",
+      "reason": "no-parameter-free-https-resource",
+      "selectedResourceId": null,
       "sourceReferences": [
         "HKAPI-203"
       ],
@@ -5648,23 +4920,10 @@
         "parameters-required": 0,
         "ready": 1
       },
-      "attempts": [
-        {
-          "elapsedMs": 793,
-          "finalHost": "portal.csdi.gov.hk",
-          "format": "API",
-          "httpStatus": 206,
-          "mediaType": "text/html",
-          "outcome": "success",
-          "resourceId": "b392e8f5-81a7-4436-bbd7-d4dee8dabaad",
-          "sampleBytes": 4096,
-          "sampleSha256": "51896e55a3a60e82547acf43455ec8c8143c75e504d5237dd7f4af1950ed7f33",
-          "truncated": true
-        }
-      ],
-      "outcome": "success",
-      "reason": null,
-      "selectedResourceId": "b392e8f5-81a7-4436-bbd7-d4dee8dabaad",
+      "attempts": [],
+      "outcome": "not-probeable",
+      "reason": "no-parameter-free-https-resource",
+      "selectedResourceId": null,
       "sourceReferences": [
         "HKAPI-207"
       ],
@@ -5695,7 +4954,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 490,
+          "elapsedMs": 722,
           "finalHost": "data.smartplay.lcsd.gov.hk",
           "format": "JSON",
           "httpStatus": 200,
@@ -5703,7 +4962,7 @@
           "outcome": "success",
           "resourceId": "1ede6f71-d702-4b83-acc3-915a275c2cab",
           "sampleBytes": 4096,
-          "sampleSha256": "0b23142a75f0b538534dcc1bf5e5b2107d51ac8e9eb05fc4a31cb444569b7b77",
+          "sampleSha256": "f7d5af16510a85f92fa087a7fd7b4eb610218f998dc52ad1973b344c210573ad",
           "truncated": true
         }
       ],
@@ -5724,7 +4983,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 408,
+          "elapsedMs": 443,
           "finalHost": "data.smartplay.lcsd.gov.hk",
           "format": "JSON",
           "httpStatus": 200,
@@ -5732,7 +4991,7 @@
           "outcome": "success",
           "resourceId": "1c00407f-1c94-4477-a7df-2d30e0335f41",
           "sampleBytes": 4096,
-          "sampleSha256": "0a107646d52f9021466b03e539457b4ed7ceffb1dd61b0033472b8974aa6abd1",
+          "sampleSha256": "bf2756777a26f8730438a850cf0e33439c2cba7770e626509f5e8f1ee89f9b8b",
           "truncated": true
         }
       ],
@@ -5753,21 +5012,21 @@
       },
       "attempts": [
         {
-          "elapsedMs": 439,
-          "finalHost": "portal.csdi.gov.hk",
-          "format": "API",
+          "elapsedMs": 1149,
+          "finalHost": "www.lcsd.gov.hk",
+          "format": "JSON",
           "httpStatus": 206,
-          "mediaType": "text/html",
+          "mediaType": "application/json",
           "outcome": "success",
-          "resourceId": "80181428-41e5-42a4-9d3c-6681be89d0fb",
+          "resourceId": "003a9cfb-6393-4995-a3e0-810f8186ecf0",
           "sampleBytes": 4096,
-          "sampleSha256": "758317b6d83666ff4b8c36bd3b6e8007e2b6a2045dc30b7db7eb696fbc49b27c",
+          "sampleSha256": "89c1fe50e767e334d775a2602810270e374b8be55ded8db3850ddabd61936544",
           "truncated": true
         }
       ],
       "outcome": "success",
       "reason": null,
-      "selectedResourceId": "80181428-41e5-42a4-9d3c-6681be89d0fb",
+      "selectedResourceId": "003a9cfb-6393-4995-a3e0-810f8186ecf0",
       "sourceReferences": [
         "HKAPI-205"
       ],
@@ -5780,23 +5039,10 @@
         "parameters-required": 0,
         "ready": 1
       },
-      "attempts": [
-        {
-          "elapsedMs": 404,
-          "finalHost": "portal.csdi.gov.hk",
-          "format": "API",
-          "httpStatus": 206,
-          "mediaType": "text/html",
-          "outcome": "success",
-          "resourceId": "1a5523d3-efc4-4c34-b32e-ffcf76d6427b",
-          "sampleBytes": 4096,
-          "sampleSha256": "16ec59a8dbc49bea85d950e03b628f1c98b086b8320ca422b015c9a23f6715cc",
-          "truncated": true
-        }
-      ],
-      "outcome": "success",
-      "reason": null,
-      "selectedResourceId": "1a5523d3-efc4-4c34-b32e-ffcf76d6427b",
+      "attempts": [],
+      "outcome": "not-probeable",
+      "reason": "no-parameter-free-https-resource",
+      "selectedResourceId": null,
       "sourceReferences": [
         "HKAPI-206"
       ],
@@ -5811,7 +5057,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 319,
+          "elapsedMs": 247,
           "finalHost": "data.smartplay.lcsd.gov.hk",
           "format": "JSON",
           "httpStatus": 200,
@@ -5819,7 +5065,7 @@
           "outcome": "success",
           "resourceId": "e72228f5-b872-46fb-9b64-fff312086db0",
           "sampleBytes": 4096,
-          "sampleSha256": "1eb53282d38472b1ef80c54b87831745c221dc5c6ad561a4576d7b8ce238e254",
+          "sampleSha256": "88dea5514405cf35594ef118f1c81fb35023ff6c20a46c3b2b4eb3a9f12f5b13",
           "truncated": true
         }
       ],
@@ -5840,7 +5086,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 365,
+          "elapsedMs": 257,
           "finalHost": "data.smartplay.lcsd.gov.hk",
           "format": "JSON",
           "httpStatus": 200,
@@ -5848,7 +5094,7 @@
           "outcome": "success",
           "resourceId": "9b096e38-4cfc-45c7-8b37-489a82640123",
           "sampleBytes": 4096,
-          "sampleSha256": "018a5c895c6ab527756751a246d40cd8c5fe7331ad51598b10e7957fcf482307",
+          "sampleSha256": "139fbe3a657e7cfb847035d3d84bdbc724b26b8c15e44f3a18bb6dde04bf8b80",
           "truncated": true
         }
       ],
@@ -5869,7 +5115,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 324,
+          "elapsedMs": 226,
           "finalHost": "data.smartplay.lcsd.gov.hk",
           "format": "JSON",
           "httpStatus": 200,
@@ -5898,21 +5144,21 @@
       },
       "attempts": [
         {
-          "elapsedMs": 411,
-          "finalHost": "portal.csdi.gov.hk",
-          "format": "API",
+          "elapsedMs": 288,
+          "finalHost": "www.lcsd.gov.hk",
+          "format": "CSV",
           "httpStatus": 206,
-          "mediaType": "text/html",
+          "mediaType": "text/csv",
           "outcome": "success",
-          "resourceId": "34af2da3-a0b6-492f-a485-b58d81c8770d",
+          "resourceId": "e29baf78-1650-4a44-bd59-c366971fd3a7",
           "sampleBytes": 4096,
-          "sampleSha256": "0363b551d12e69cac9d108995c8025dac5720396f90db8810ab13d8e796cf5d6",
+          "sampleSha256": "686221701b98cc98c74f51b83c502b2f997fcf002b7261fff63670f83ced02fa",
           "truncated": true
         }
       ],
       "outcome": "success",
       "reason": null,
-      "selectedResourceId": "34af2da3-a0b6-492f-a485-b58d81c8770d",
+      "selectedResourceId": "e29baf78-1650-4a44-bd59-c366971fd3a7",
       "sourceReferences": [
         "HKAPI-207"
       ],
@@ -5925,23 +5171,10 @@
         "parameters-required": 0,
         "ready": 1
       },
-      "attempts": [
-        {
-          "elapsedMs": 555,
-          "finalHost": "portal.csdi.gov.hk",
-          "format": "API",
-          "httpStatus": 206,
-          "mediaType": "text/html",
-          "outcome": "success",
-          "resourceId": "883d10ce-f1c1-4bdd-8545-21e9ae0044c4",
-          "sampleBytes": 4096,
-          "sampleSha256": "3abf7428ae6275958e4982b080626202a65f1f66ded28056248a5d6afc50d214",
-          "truncated": true
-        }
-      ],
-      "outcome": "success",
-      "reason": null,
-      "selectedResourceId": "883d10ce-f1c1-4bdd-8545-21e9ae0044c4",
+      "attempts": [],
+      "outcome": "not-probeable",
+      "reason": "no-parameter-free-https-resource",
+      "selectedResourceId": null,
       "sourceReferences": [
         "HKAPI-206"
       ],
@@ -5956,7 +5189,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 846,
+          "elapsedMs": 808,
           "finalHost": "sls.hkpl.gov.hk",
           "format": "JSON",
           "httpStatus": 200,
@@ -5964,7 +5197,7 @@
           "outcome": "success",
           "resourceId": "0139d219-e185-45a8-8dae-8dfb78180f20",
           "sampleBytes": 4096,
-          "sampleSha256": "0f3e6f0972ce48096a44b88a91c1bf7e7ad0dc75d69748f7733288f02126d5cb",
+          "sampleSha256": "566344b03edb365b21b1a2989c8ca804a6a608071fffa03d8e17c2da89455893",
           "truncated": true
         }
       ],
@@ -5985,7 +5218,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 1902,
+          "elapsedMs": 1410,
           "finalHost": "webcat.hkpl.gov.hk",
           "format": "RSS",
           "httpStatus": 200,
@@ -6014,7 +5247,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 269,
+          "elapsedMs": 336,
           "finalHost": "www.lcsd.gov.hk",
           "format": "CSV",
           "httpStatus": 206,
@@ -6043,7 +5276,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 222,
+          "elapsedMs": 155,
           "finalHost": "www.lcsd.gov.hk",
           "format": "CSV",
           "httpStatus": 206,
@@ -6072,7 +5305,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 276,
+          "elapsedMs": 252,
           "finalHost": "www.lcsd.gov.hk",
           "format": "CSV",
           "httpStatus": 206,
@@ -6101,7 +5334,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 209,
+          "elapsedMs": 257,
           "finalHost": "www.lcsd.gov.hk",
           "format": "CSV",
           "httpStatus": 206,
@@ -6130,7 +5363,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 206,
+          "elapsedMs": 327,
           "finalHost": "www.lcsd.gov.hk",
           "format": "CSV",
           "httpStatus": 206,
@@ -6159,7 +5392,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 198,
+          "elapsedMs": 330,
           "finalHost": "www.lcsd.gov.hk",
           "format": "CSV",
           "httpStatus": 206,
@@ -6188,7 +5421,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 240,
+          "elapsedMs": 314,
           "finalHost": "www.lcsd.gov.hk",
           "format": "CSV",
           "httpStatus": 206,
@@ -6217,7 +5450,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 257,
+          "elapsedMs": 303,
           "finalHost": "www.lcsd.gov.hk",
           "format": "CSV",
           "httpStatus": 206,
@@ -6246,21 +5479,21 @@
       },
       "attempts": [
         {
-          "elapsedMs": 444,
-          "finalHost": "portal.csdi.gov.hk",
-          "format": "API",
+          "elapsedMs": 531,
+          "finalHost": "www.landreg.gov.hk",
+          "format": "JSON",
           "httpStatus": 206,
-          "mediaType": "text/html",
+          "mediaType": "application/json",
           "outcome": "success",
-          "resourceId": "2600003d-646e-406a-bc20-94da3aa0aa12",
+          "resourceId": "700c8625-42da-4305-a032-cccb7ef8f6ca",
           "sampleBytes": 4096,
-          "sampleSha256": "9271f8576f9e3c12c54a56fb543a2b8331399c58ad083ace396b4590f2037bf2",
+          "sampleSha256": "da0f02f03759bdc484868d850b47f12ba8879e5e6f290686ac47c4fbc5c51bbc",
           "truncated": true
         }
       ],
       "outcome": "success",
       "reason": null,
-      "selectedResourceId": "2600003d-646e-406a-bc20-94da3aa0aa12",
+      "selectedResourceId": "700c8625-42da-4305-a032-cccb7ef8f6ca",
       "sourceReferences": [
         "HKAPI-232"
       ],
@@ -6275,7 +5508,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 386,
+          "elapsedMs": 214,
           "finalHost": "www.mardep.gov.hk",
           "format": "CSV",
           "httpStatus": 206,
@@ -6304,7 +5537,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 311,
+          "elapsedMs": 197,
           "finalHost": "www.mardep.gov.hk",
           "format": "XML",
           "httpStatus": 206,
@@ -6333,21 +5566,21 @@
       },
       "attempts": [
         {
-          "elapsedMs": 438,
-          "finalHost": "portal.csdi.gov.hk",
-          "format": "API",
+          "elapsedMs": 173,
+          "finalHost": "www.mardep.gov.hk",
+          "format": "CSV",
           "httpStatus": 206,
-          "mediaType": "text/html",
+          "mediaType": "text/csv",
           "outcome": "success",
-          "resourceId": "a786ae40-fca6-4193-a69f-7881635a544c",
-          "sampleBytes": 4096,
-          "sampleSha256": "a3280dd9ef79a9050cf6f6c8ea348175b824c40cefa46d6e4653d3112bbeeb33",
-          "truncated": true
+          "resourceId": "b9fc1d4b-3fb3-4660-9ea0-19a53fb42dea",
+          "sampleBytes": 3601,
+          "sampleSha256": "bd7eb01868a422742075f2d2b062788c073c6fb6a90b8ec0b577f00797bd0354",
+          "truncated": false
         }
       ],
       "outcome": "success",
       "reason": null,
-      "selectedResourceId": "a786ae40-fca6-4193-a69f-7881635a544c",
+      "selectedResourceId": "b9fc1d4b-3fb3-4660-9ea0-19a53fb42dea",
       "sourceReferences": [
         "HKAPI-084"
       ],
@@ -6362,7 +5595,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 227,
+          "elapsedMs": 138,
           "finalHost": "www.mardep.gov.hk",
           "format": "XML",
           "httpStatus": 206,
@@ -6370,7 +5603,7 @@
           "outcome": "success",
           "resourceId": "e37ed764-97be-47e2-8e68-68953f5b1060",
           "sampleBytes": 4096,
-          "sampleSha256": "033f8c12e36d6370f93024a522fc6817f9d5f3250a7c21ab996b8709f628e61d",
+          "sampleSha256": "2cb03bc44bef6483df880ccf634c574bdee283fae3a625551cc38935a8ef2d14",
           "truncated": true
         }
       ],
@@ -6391,7 +5624,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 292,
+          "elapsedMs": 241,
           "finalHost": "www.mardep.gov.hk",
           "format": "XML",
           "httpStatus": 206,
@@ -6399,7 +5632,7 @@
           "outcome": "success",
           "resourceId": "4cbf53ae-9611-47be-bb81-b9a0aca81726",
           "sampleBytes": 4096,
-          "sampleSha256": "cfe653eb68f7e376b8e30e7fffaf882fbd7236aa795a17ccb358ae182be8b614",
+          "sampleSha256": "afd574f2e08490a584bc944eef2b70405b5f2b1bd21d446911965a65ebb6d09c",
           "truncated": true
         }
       ],
@@ -6420,7 +5653,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 411,
+          "elapsedMs": 557,
           "finalHost": "www.ofca.gov.hk",
           "format": "CSV",
           "httpStatus": 206,
@@ -6449,7 +5682,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 319,
+          "elapsedMs": 422,
           "finalHost": "www.ofca.gov.hk",
           "format": "CSV",
           "httpStatus": 206,
@@ -6478,7 +5711,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 253,
+          "elapsedMs": 245,
           "finalHost": "www.ofca.gov.hk",
           "format": "CSV",
           "httpStatus": 206,
@@ -6507,21 +5740,21 @@
       },
       "attempts": [
         {
-          "elapsedMs": 421,
-          "finalHost": "portal.csdi.gov.hk",
-          "format": "API",
+          "elapsedMs": 217,
+          "finalHost": "www.ofca.gov.hk",
+          "format": "CSV",
           "httpStatus": 206,
-          "mediaType": "text/html",
+          "mediaType": "text/csv",
           "outcome": "success",
-          "resourceId": "9748b70c-e79b-4ec6-8065-54b247cc9fb9",
+          "resourceId": "0bd141d4-aca9-4a72-a3d2-e4e87e372738",
           "sampleBytes": 4096,
-          "sampleSha256": "3399a4eee80477c9251711650d7d79ee6383f5c9879f27de1b23f8127df092d5",
+          "sampleSha256": "e126fe9cd07b0a549b7374dabf676272f904d5f608209f56d0360b481e00b542",
           "truncated": true
         }
       ],
       "outcome": "success",
       "reason": null,
-      "selectedResourceId": "9748b70c-e79b-4ec6-8065-54b247cc9fb9",
+      "selectedResourceId": "0bd141d4-aca9-4a72-a3d2-e4e87e372738",
       "sourceReferences": [
         "HKAPI-262"
       ],
@@ -6536,7 +5769,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 286,
+          "elapsedMs": 209,
           "finalHost": "www.ofca.gov.hk",
           "format": "CSV",
           "httpStatus": 206,
@@ -6565,7 +5798,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 271,
+          "elapsedMs": 198,
           "finalHost": "www.ofca.gov.hk",
           "format": "CSV",
           "httpStatus": 206,
@@ -6594,7 +5827,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 295,
+          "elapsedMs": 163,
           "finalHost": "www.ofca.gov.hk",
           "format": "CSV",
           "httpStatus": 206,
@@ -6623,7 +5856,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 300,
+          "elapsedMs": 159,
           "finalHost": "www.ofca.gov.hk",
           "format": "CSV",
           "httpStatus": 206,
@@ -6652,7 +5885,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 236,
+          "elapsedMs": 205,
           "finalHost": "www.ofca.gov.hk",
           "format": "CSV",
           "httpStatus": 206,
@@ -6681,7 +5914,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 264,
+          "elapsedMs": 173,
           "finalHost": "www.ofca.gov.hk",
           "format": "CSV",
           "httpStatus": 206,
@@ -6708,23 +5941,10 @@
         "parameters-required": 0,
         "ready": 1
       },
-      "attempts": [
-        {
-          "elapsedMs": 451,
-          "finalHost": "portal.csdi.gov.hk",
-          "format": "API",
-          "httpStatus": 206,
-          "mediaType": "text/html",
-          "outcome": "success",
-          "resourceId": "ca90d731-4a41-4c91-89ee-fb01f468ba9a",
-          "sampleBytes": 4096,
-          "sampleSha256": "be8e28e2b9e7509a17f95bcf5615ec7e80cee58d4e2cd0e24ba0ad627b8a7efd",
-          "truncated": true
-        }
-      ],
-      "outcome": "success",
-      "reason": null,
-      "selectedResourceId": "ca90d731-4a41-4c91-89ee-fb01f468ba9a",
+      "attempts": [],
+      "outcome": "not-probeable",
+      "reason": "no-parameter-free-https-resource",
+      "selectedResourceId": null,
       "sourceReferences": [
         "HKAPI-261"
       ],
@@ -6739,15 +5959,15 @@
       },
       "attempts": [
         {
-          "elapsedMs": 270,
+          "elapsedMs": 157,
           "finalHost": "www.ofca.gov.hk",
           "format": "CSV",
           "httpStatus": 206,
           "mediaType": "text/csv",
           "outcome": "success",
           "resourceId": "91c3263e-f651-4757-aa04-354606bd6e72",
-          "sampleBytes": 1276,
-          "sampleSha256": "388e774322d6e0466936e8b6ec69ddd317271ed938f8bb9d441b96b08c8b4407",
+          "sampleBytes": 1338,
+          "sampleSha256": "b4deaa1e761f4f765347dce7d5521f77a007e38d8a98f6a5e0523600fc5b4cbe",
           "truncated": false
         }
       ],
@@ -6766,23 +5986,10 @@
         "parameters-required": 0,
         "ready": 1
       },
-      "attempts": [
-        {
-          "elapsedMs": 424,
-          "finalHost": "portal.csdi.gov.hk",
-          "format": "API",
-          "httpStatus": 206,
-          "mediaType": "text/html",
-          "outcome": "success",
-          "resourceId": "942feb5c-b536-4c26-bf29-32acc70cefbc",
-          "sampleBytes": 4096,
-          "sampleSha256": "338acd5f325db6fb12a0b1e3cde972cb5f3771f95dd94b2f1dc48d055d4aa996",
-          "truncated": true
-        }
-      ],
-      "outcome": "success",
-      "reason": null,
-      "selectedResourceId": "942feb5c-b536-4c26-bf29-32acc70cefbc",
+      "attempts": [],
+      "outcome": "not-probeable",
+      "reason": "no-parameter-free-https-resource",
+      "selectedResourceId": null,
       "sourceReferences": [
         "HKAPI-226"
       ],
@@ -6795,23 +6002,10 @@
         "parameters-required": 0,
         "ready": 6
       },
-      "attempts": [
-        {
-          "elapsedMs": 479,
-          "finalHost": "portal.csdi.gov.hk",
-          "format": "API",
-          "httpStatus": 206,
-          "mediaType": "text/html",
-          "outcome": "success",
-          "resourceId": "c7c6d261-5434-4329-bbeb-0071bccd2819",
-          "sampleBytes": 4096,
-          "sampleSha256": "b7c1b12f5883f72117674423bf68af4a05e2984aaf31b88e3a5fb80b23604d0b",
-          "truncated": true
-        }
-      ],
-      "outcome": "success",
-      "reason": null,
-      "selectedResourceId": "c7c6d261-5434-4329-bbeb-0071bccd2819",
+      "attempts": [],
+      "outcome": "not-probeable",
+      "reason": "no-parameter-free-https-resource",
+      "selectedResourceId": null,
       "sourceReferences": [
         "HKAPI-225"
       ],
@@ -6826,7 +6020,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 304,
+          "elapsedMs": 323,
           "finalHost": "www.elections.gov.hk",
           "format": "CSV",
           "httpStatus": 206,
@@ -6855,7 +6049,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 273,
+          "elapsedMs": 302,
           "finalHost": "www.elections.gov.hk",
           "format": "CSV",
           "httpStatus": 206,
@@ -6884,21 +6078,21 @@
       },
       "attempts": [
         {
-          "elapsedMs": 414,
-          "finalHost": "portal.csdi.gov.hk",
-          "format": "API",
+          "elapsedMs": 339,
+          "finalHost": "www.elections.gov.hk",
+          "format": "CSV",
           "httpStatus": 206,
-          "mediaType": "text/html",
+          "mediaType": "text/csv",
           "outcome": "success",
-          "resourceId": "d6743dbc-75dc-4020-8229-eee3ceaf07b6",
-          "sampleBytes": 4096,
-          "sampleSha256": "c7517f25379687d22f9b780d846b65507c878d8732ec004306f74e1eaa868d68",
-          "truncated": true
+          "resourceId": "5b9c1299-cb2f-4f44-a240-e8c03887914d",
+          "sampleBytes": 2847,
+          "sampleSha256": "a448b8611174bb98a5a22921138cf9be6211741598354f7baa70d780037cd178",
+          "truncated": false
         }
       ],
       "outcome": "success",
       "reason": null,
-      "selectedResourceId": "d6743dbc-75dc-4020-8229-eee3ceaf07b6",
+      "selectedResourceId": "5b9c1299-cb2f-4f44-a240-e8c03887914d",
       "sourceReferences": [
         "HKAPI-174"
       ],
@@ -6913,21 +6107,21 @@
       },
       "attempts": [
         {
-          "elapsedMs": 519,
-          "finalHost": "portal.csdi.gov.hk",
-          "format": "API",
+          "elapsedMs": 180,
+          "finalHost": "www.elections.gov.hk",
+          "format": "CSV",
           "httpStatus": 206,
-          "mediaType": "text/html",
+          "mediaType": "text/csv",
           "outcome": "success",
-          "resourceId": "c63a63c5-86fd-4628-8fba-f1c8fcc49b1f",
-          "sampleBytes": 4096,
-          "sampleSha256": "67da50e8986d89f6f0d87529c648a9f00ef9626025f92da0f07972753ec99f1d",
-          "truncated": true
+          "resourceId": "6f5de089-3247-4e87-8607-4731fff7d45c",
+          "sampleBytes": 281,
+          "sampleSha256": "a91ce3db05618c66d0c17d70b54a45fa86ac696f481dd625972cff67a5755e01",
+          "truncated": false
         }
       ],
       "outcome": "success",
       "reason": null,
-      "selectedResourceId": "c63a63c5-86fd-4628-8fba-f1c8fcc49b1f",
+      "selectedResourceId": "6f5de089-3247-4e87-8607-4731fff7d45c",
       "sourceReferences": [
         "HKAPI-174"
       ],
@@ -6942,21 +6136,21 @@
       },
       "attempts": [
         {
-          "elapsedMs": 483,
-          "finalHost": "portal.csdi.gov.hk",
-          "format": "API",
+          "elapsedMs": 168,
+          "finalHost": "www.elections.gov.hk",
+          "format": "CSV",
           "httpStatus": 206,
-          "mediaType": "text/html",
+          "mediaType": "text/csv",
           "outcome": "success",
-          "resourceId": "262076e2-370f-49bd-b457-0723dc5cbb8f",
-          "sampleBytes": 4096,
-          "sampleSha256": "1006e06fd7766501327b1a50c92e1d886310362530c7f22c5af2b2a311aff774",
-          "truncated": true
+          "resourceId": "0ff99804-beb4-4e61-b87e-9a3acb543a14",
+          "sampleBytes": 514,
+          "sampleSha256": "e2ee805542809184ccbdad5b727201265c9b946ed9b10ef00c00b389ea880a6b",
+          "truncated": false
         }
       ],
       "outcome": "success",
       "reason": null,
-      "selectedResourceId": "262076e2-370f-49bd-b457-0723dc5cbb8f",
+      "selectedResourceId": "0ff99804-beb4-4e61-b87e-9a3acb543a14",
       "sourceReferences": [
         "HKAPI-174"
       ],
@@ -6971,21 +6165,21 @@
       },
       "attempts": [
         {
-          "elapsedMs": 456,
-          "finalHost": "portal.csdi.gov.hk",
-          "format": "API",
+          "elapsedMs": 209,
+          "finalHost": "www.elections.gov.hk",
+          "format": "CSV",
           "httpStatus": 206,
-          "mediaType": "text/html",
+          "mediaType": "text/csv",
           "outcome": "success",
-          "resourceId": "fd8f5fec-7dd0-4024-9d87-1b44e6291af6",
-          "sampleBytes": 4096,
-          "sampleSha256": "50d472c00cdb68ca760eaf376a608905d2a12ef900e47a315e0b375cccbc27e8",
-          "truncated": true
+          "resourceId": "e698e76c-2e7d-466c-8425-0c5dc2160f3e",
+          "sampleBytes": 303,
+          "sampleSha256": "afe9fdec3eaf2344549e80f231787b553077affa020edcc39618b7e03d067002",
+          "truncated": false
         }
       ],
       "outcome": "success",
       "reason": null,
-      "selectedResourceId": "fd8f5fec-7dd0-4024-9d87-1b44e6291af6",
+      "selectedResourceId": "e698e76c-2e7d-466c-8425-0c5dc2160f3e",
       "sourceReferences": [
         "HKAPI-174"
       ],
@@ -7000,21 +6194,21 @@
       },
       "attempts": [
         {
-          "elapsedMs": 439,
-          "finalHost": "portal.csdi.gov.hk",
-          "format": "API",
+          "elapsedMs": 160,
+          "finalHost": "www.elections.gov.hk",
+          "format": "CSV",
           "httpStatus": 206,
-          "mediaType": "text/html",
+          "mediaType": "text/csv",
           "outcome": "success",
-          "resourceId": "088b3725-a0e4-4449-b924-36515c45af92",
-          "sampleBytes": 4096,
-          "sampleSha256": "18edbe0e1e6d8aefec19e4494f96d762fe90d5d0c21d1d8a07a8608a040a6980",
-          "truncated": true
+          "resourceId": "2d293f52-e67e-4eb8-aec4-2588ea20f1ba",
+          "sampleBytes": 3096,
+          "sampleSha256": "6909ec7364460a9eb52f3c13f0c4fd90b015a0caea751406cad080b17675bb2d",
+          "truncated": false
         }
       ],
       "outcome": "success",
       "reason": null,
-      "selectedResourceId": "088b3725-a0e4-4449-b924-36515c45af92",
+      "selectedResourceId": "2d293f52-e67e-4eb8-aec4-2588ea20f1ba",
       "sourceReferences": [
         "HKAPI-174"
       ],
@@ -7029,21 +6223,21 @@
       },
       "attempts": [
         {
-          "elapsedMs": 397,
-          "finalHost": "portal.csdi.gov.hk",
-          "format": "API",
+          "elapsedMs": 258,
+          "finalHost": "www.elections.gov.hk",
+          "format": "CSV",
           "httpStatus": 206,
-          "mediaType": "text/html",
+          "mediaType": "text/csv",
           "outcome": "success",
-          "resourceId": "7bee141f-1730-4abb-9221-8347e7dba933",
-          "sampleBytes": 4096,
-          "sampleSha256": "2256f8e477d3e31a04cf2ad551f44c0ab5b4a7b6e2da750e3d9dcc33568ba8e9",
-          "truncated": true
+          "resourceId": "6dbdb032-ca7e-442a-8543-a0e9be68bba6",
+          "sampleBytes": 295,
+          "sampleSha256": "1e0db885b93d2397dc070b5f1238c1ec8c629835a44dcd1c6a170440f5afa6de",
+          "truncated": false
         }
       ],
       "outcome": "success",
       "reason": null,
-      "selectedResourceId": "7bee141f-1730-4abb-9221-8347e7dba933",
+      "selectedResourceId": "6dbdb032-ca7e-442a-8543-a0e9be68bba6",
       "sourceReferences": [
         "HKAPI-174"
       ],
@@ -7058,21 +6252,21 @@
       },
       "attempts": [
         {
-          "elapsedMs": 706,
-          "finalHost": "portal.csdi.gov.hk",
-          "format": "API",
+          "elapsedMs": 167,
+          "finalHost": "www.elections.gov.hk",
+          "format": "CSV",
           "httpStatus": 206,
-          "mediaType": "text/html",
+          "mediaType": "text/csv",
           "outcome": "success",
-          "resourceId": "552fa1ff-31ec-4d86-b01a-07b8876301ec",
-          "sampleBytes": 4096,
-          "sampleSha256": "c306208774202f7e37c3cd77b91437e3c0ce2730eb980fe777779b4a745b8034",
-          "truncated": true
+          "resourceId": "43c4b9dc-fe7e-4089-aeec-37c80ecd5431",
+          "sampleBytes": 210,
+          "sampleSha256": "b6294f43b610b18b2ef2fcc1efe8f6ca036e396fa0ace83e632461c9c4d3c260",
+          "truncated": false
         }
       ],
       "outcome": "success",
       "reason": null,
-      "selectedResourceId": "552fa1ff-31ec-4d86-b01a-07b8876301ec",
+      "selectedResourceId": "43c4b9dc-fe7e-4089-aeec-37c80ecd5431",
       "sourceReferences": [
         "HKAPI-174"
       ],
@@ -7087,21 +6281,21 @@
       },
       "attempts": [
         {
-          "elapsedMs": 527,
-          "finalHost": "portal.csdi.gov.hk",
-          "format": "API",
+          "elapsedMs": 225,
+          "finalHost": "www.elections.gov.hk",
+          "format": "CSV",
           "httpStatus": 206,
-          "mediaType": "text/html",
+          "mediaType": "text/csv",
           "outcome": "success",
-          "resourceId": "bcede34e-510d-462b-b634-66309c740a87",
-          "sampleBytes": 4096,
-          "sampleSha256": "3e24583a1cc6ba58148e55ecb3b0e9bfd7b68b628f52f18c6eeac46485ca2d8f",
-          "truncated": true
+          "resourceId": "8d33c3dd-eca1-453f-9da7-f1b869b0e2b1",
+          "sampleBytes": 1356,
+          "sampleSha256": "4814a0aa78d25e5ead77cffbf93fc9b3165cbe757ecf35f6461f5f21fec213f8",
+          "truncated": false
         }
       ],
       "outcome": "success",
       "reason": null,
-      "selectedResourceId": "bcede34e-510d-462b-b634-66309c740a87",
+      "selectedResourceId": "8d33c3dd-eca1-453f-9da7-f1b869b0e2b1",
       "sourceReferences": [
         "HKAPI-174"
       ],
@@ -7114,23 +6308,10 @@
         "parameters-required": 0,
         "ready": 1
       },
-      "attempts": [
-        {
-          "elapsedMs": 434,
-          "finalHost": "portal.csdi.gov.hk",
-          "format": "API",
-          "httpStatus": 206,
-          "mediaType": "text/html",
-          "outcome": "success",
-          "resourceId": "e7ef288e-844e-4b40-ba61-0d72032d0e74",
-          "sampleBytes": 4096,
-          "sampleSha256": "1630ae548365ae2ff5dec07420a36f8179694dcbe9ac427c7baefcf2e47de8d2",
-          "truncated": true
-        }
-      ],
-      "outcome": "success",
-      "reason": null,
-      "selectedResourceId": "e7ef288e-844e-4b40-ba61-0d72032d0e74",
+      "attempts": [],
+      "outcome": "not-probeable",
+      "reason": "no-parameter-free-https-resource",
+      "selectedResourceId": null,
       "sourceReferences": [
         "HKAPI-174"
       ],
@@ -7145,7 +6326,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 315,
+          "elapsedMs": 173,
           "finalHost": "www.elections.gov.hk",
           "format": "CSV",
           "httpStatus": 206,
@@ -7174,7 +6355,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 304,
+          "elapsedMs": 153,
           "finalHost": "www.elections.gov.hk",
           "format": "CSV",
           "httpStatus": 206,
@@ -7203,7 +6384,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 241,
+          "elapsedMs": 174,
           "finalHost": "www.elections.gov.hk",
           "format": "CSV",
           "httpStatus": 206,
@@ -7232,21 +6413,21 @@
       },
       "attempts": [
         {
-          "elapsedMs": 828,
-          "finalHost": "portal.csdi.gov.hk",
-          "format": "API",
+          "elapsedMs": 175,
+          "finalHost": "www.elections.gov.hk",
+          "format": "CSV",
           "httpStatus": 206,
-          "mediaType": "text/html",
+          "mediaType": "text/csv",
           "outcome": "success",
-          "resourceId": "99de6ab1-e6e5-419d-9553-eef87a5fd377",
-          "sampleBytes": 4096,
-          "sampleSha256": "ba5fd0e756a89ec8494268d5c4e3929b62f429c720331e6285e2a7c4f177af96",
-          "truncated": true
+          "resourceId": "9a8e9cbf-8014-4c9f-8f47-8b51dc870c04",
+          "sampleBytes": 635,
+          "sampleSha256": "7a0be81ed401666e92e38d2c0ce144532bec6b854cb92669e2fb461b1ee6e243",
+          "truncated": false
         }
       ],
       "outcome": "success",
       "reason": null,
-      "selectedResourceId": "99de6ab1-e6e5-419d-9553-eef87a5fd377",
+      "selectedResourceId": "9a8e9cbf-8014-4c9f-8f47-8b51dc870c04",
       "sourceReferences": [
         "HKAPI-174"
       ],
@@ -7261,21 +6442,21 @@
       },
       "attempts": [
         {
-          "elapsedMs": 1133,
-          "finalHost": "portal.csdi.gov.hk",
-          "format": "API",
+          "elapsedMs": 161,
+          "finalHost": "www.elections.gov.hk",
+          "format": "CSV",
           "httpStatus": 206,
-          "mediaType": "text/html",
+          "mediaType": "text/csv",
           "outcome": "success",
-          "resourceId": "c23c5265-4685-4f1b-a54c-7dd6632ed05b",
-          "sampleBytes": 4096,
-          "sampleSha256": "18837f9e8bb0416a3cca33e718ba69ea5541747e17db7281f084558219bac720",
-          "truncated": true
+          "resourceId": "d397124d-bd5f-49b8-ac9b-afbd2ce4f79e",
+          "sampleBytes": 3146,
+          "sampleSha256": "1d22864cf393320c28f1f847f443ff1c484efcae4c30991fb4890efc73231fed",
+          "truncated": false
         }
       ],
       "outcome": "success",
       "reason": null,
-      "selectedResourceId": "c23c5265-4685-4f1b-a54c-7dd6632ed05b",
+      "selectedResourceId": "d397124d-bd5f-49b8-ac9b-afbd2ce4f79e",
       "sourceReferences": [
         "HKAPI-174"
       ],
@@ -7290,21 +6471,21 @@
       },
       "attempts": [
         {
-          "elapsedMs": 800,
-          "finalHost": "portal.csdi.gov.hk",
-          "format": "API",
+          "elapsedMs": 223,
+          "finalHost": "www.elections.gov.hk",
+          "format": "CSV",
           "httpStatus": 206,
-          "mediaType": "text/html",
+          "mediaType": "text/csv",
           "outcome": "success",
-          "resourceId": "bf90e63e-3e83-4c08-95dd-61acd29eca6f",
-          "sampleBytes": 4096,
-          "sampleSha256": "9a864073b3fca2ee32b7457ffeb8c7ca1e515b092865175af1fba13ee6618eb6",
-          "truncated": true
+          "resourceId": "551bdb2f-a6a7-44dd-82ec-abce961dd4c4",
+          "sampleBytes": 233,
+          "sampleSha256": "4789a0834654d00136294bc402a760c89c9e84f66e777418a0fa5b30a4c49724",
+          "truncated": false
         }
       ],
       "outcome": "success",
       "reason": null,
-      "selectedResourceId": "bf90e63e-3e83-4c08-95dd-61acd29eca6f",
+      "selectedResourceId": "551bdb2f-a6a7-44dd-82ec-abce961dd4c4",
       "sourceReferences": [
         "HKAPI-174"
       ],
@@ -7319,21 +6500,21 @@
       },
       "attempts": [
         {
-          "elapsedMs": 412,
-          "finalHost": "portal.csdi.gov.hk",
-          "format": "API",
+          "elapsedMs": 196,
+          "finalHost": "www.elections.gov.hk",
+          "format": "CSV",
           "httpStatus": 206,
-          "mediaType": "text/html",
+          "mediaType": "text/csv",
           "outcome": "success",
-          "resourceId": "b68f9266-b11d-466e-a9fc-be7c5b300f96",
-          "sampleBytes": 4096,
-          "sampleSha256": "bf9e9befc6ebe9eab764eb0928575ee8315078b4defbd420ba3b7d720655ae4a",
-          "truncated": true
+          "resourceId": "e90e590b-4754-4750-b0e9-fd7b2999c28f",
+          "sampleBytes": 463,
+          "sampleSha256": "8e2e2409b812df910673b8f36557a6cbba3a689120d023dccb4fd885784c785d",
+          "truncated": false
         }
       ],
       "outcome": "success",
       "reason": null,
-      "selectedResourceId": "b68f9266-b11d-466e-a9fc-be7c5b300f96",
+      "selectedResourceId": "e90e590b-4754-4750-b0e9-fd7b2999c28f",
       "sourceReferences": [
         "HKAPI-174"
       ],
@@ -7348,21 +6529,21 @@
       },
       "attempts": [
         {
-          "elapsedMs": 428,
-          "finalHost": "portal.csdi.gov.hk",
-          "format": "API",
+          "elapsedMs": 191,
+          "finalHost": "www.elections.gov.hk",
+          "format": "CSV",
           "httpStatus": 206,
-          "mediaType": "text/html",
+          "mediaType": "text/csv",
           "outcome": "success",
-          "resourceId": "5bfc626b-933e-41c1-b993-fa534d3d5069",
+          "resourceId": "30499668-d7ee-4d6d-b52f-c3b260413078",
           "sampleBytes": 4096,
-          "sampleSha256": "5b966bb201be44c2f8b252b8105093f515bf337e481977bb4c363578c3db8628",
+          "sampleSha256": "bb3fb39d43b8ddebfb22c98b16e95cb94d95645df12629ce755f880f8762230c",
           "truncated": true
         }
       ],
       "outcome": "success",
       "reason": null,
-      "selectedResourceId": "5bfc626b-933e-41c1-b993-fa534d3d5069",
+      "selectedResourceId": "30499668-d7ee-4d6d-b52f-c3b260413078",
       "sourceReferences": [
         "HKAPI-174"
       ],
@@ -7377,7 +6558,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 245,
+          "elapsedMs": 154,
           "finalHost": "www.elections.gov.hk",
           "format": "CSV",
           "httpStatus": 206,
@@ -7406,21 +6587,21 @@
       },
       "attempts": [
         {
-          "elapsedMs": 476,
-          "finalHost": "portal.csdi.gov.hk",
-          "format": "API",
+          "elapsedMs": 179,
+          "finalHost": "www.elections.gov.hk",
+          "format": "CSV",
           "httpStatus": 206,
-          "mediaType": "text/html",
+          "mediaType": "text/csv",
           "outcome": "success",
-          "resourceId": "3fadf13d-adfe-47d0-9d59-03ef7bfc70c2",
+          "resourceId": "c598fab1-ee21-48be-bfec-5abc74c6873e",
           "sampleBytes": 4096,
-          "sampleSha256": "80026e79c49ae40fcfb61a40ec71e6727be10f698e91e11ab41b4fc705c83d84",
+          "sampleSha256": "4eb77f63e066e8b34b709d065453233edce756143d170ed23e742aae8ae261e1",
           "truncated": true
         }
       ],
       "outcome": "success",
       "reason": null,
-      "selectedResourceId": "3fadf13d-adfe-47d0-9d59-03ef7bfc70c2",
+      "selectedResourceId": "c598fab1-ee21-48be-bfec-5abc74c6873e",
       "sourceReferences": [
         "HKAPI-174"
       ],
@@ -7435,7 +6616,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 375,
+          "elapsedMs": 398,
           "finalHost": "www.voterregistration.gov.hk",
           "format": "CSV",
           "httpStatus": 206,
@@ -7464,21 +6645,21 @@
       },
       "attempts": [
         {
-          "elapsedMs": 406,
-          "finalHost": "portal.csdi.gov.hk",
-          "format": "API",
+          "elapsedMs": 524,
+          "finalHost": "www.rvd.gov.hk",
+          "format": "CSV",
           "httpStatus": 206,
-          "mediaType": "text/html",
+          "mediaType": "text/csv",
           "outcome": "success",
-          "resourceId": "e1cdee18-74b6-4a8e-996e-7185a2ec9d0b",
-          "sampleBytes": 4096,
-          "sampleSha256": "832eccd616ec0da03062e7b5467195ecc2a17d9ed327f11c69c084f63d8dddca",
-          "truncated": true
+          "resourceId": "1960cffb-9faf-4323-ae7f-d897958aebf5",
+          "sampleBytes": 717,
+          "sampleSha256": "9fa735524eb975eadf68c5867e51f7be478a3b0b6701b19001a95a4d24815f8a",
+          "truncated": false
         }
       ],
       "outcome": "success",
       "reason": null,
-      "selectedResourceId": "e1cdee18-74b6-4a8e-996e-7185a2ec9d0b",
+      "selectedResourceId": "1960cffb-9faf-4323-ae7f-d897958aebf5",
       "sourceReferences": [
         "HKAPI-150"
       ],
@@ -7493,21 +6674,21 @@
       },
       "attempts": [
         {
-          "elapsedMs": 551,
-          "finalHost": "portal.csdi.gov.hk",
-          "format": "API",
+          "elapsedMs": 502,
+          "finalHost": "www.rvd.gov.hk",
+          "format": "GML",
           "httpStatus": 206,
-          "mediaType": "text/html",
+          "mediaType": "application/gml+xml",
           "outcome": "success",
-          "resourceId": "83508979-17d6-4236-a266-0a21b9832071",
+          "resourceId": "5ff07c7e-4b11-4526-b0f2-c300053a619f",
           "sampleBytes": 4096,
-          "sampleSha256": "2dcd64c807971caa7b02cc7b61870fb7c9ff7dcbc6d64174c0d116d5f46e3f95",
+          "sampleSha256": "6f77073eda75b6ddcf78e664c2f3c3b1e9ffe7de163d0e060594472666a0478b",
           "truncated": true
         }
       ],
       "outcome": "success",
       "reason": null,
-      "selectedResourceId": "83508979-17d6-4236-a266-0a21b9832071",
+      "selectedResourceId": "5ff07c7e-4b11-4526-b0f2-c300053a619f",
       "sourceReferences": [
         "HKAPI-151"
       ],
@@ -7522,7 +6703,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 456,
+          "elapsedMs": 279,
           "finalHost": "www.rvd.gov.hk",
           "format": "CSV",
           "httpStatus": 206,
@@ -7551,21 +6732,21 @@
       },
       "attempts": [
         {
-          "elapsedMs": 502,
-          "finalHost": "portal.csdi.gov.hk",
-          "format": "API",
+          "elapsedMs": 370,
+          "finalHost": "www.swd.gov.hk",
+          "format": "CSV",
           "httpStatus": 206,
-          "mediaType": "text/html",
+          "mediaType": "text/csv",
           "outcome": "success",
-          "resourceId": "f2eed2fd-6182-4cb0-97e0-7c4e69607394",
+          "resourceId": "07330430-e160-47bf-87f4-3abcd9c813ef",
           "sampleBytes": 4096,
-          "sampleSha256": "7187267460ca6088ad645c05e3084c918c306ff8b3584f4d406ac22643e33040",
+          "sampleSha256": "7b0fbfa3fc8fb3a0c2756cdbfec0a1076fbd92d8be10bc4877c17393c0058c9a",
           "truncated": true
         }
       ],
       "outcome": "success",
       "reason": null,
-      "selectedResourceId": "f2eed2fd-6182-4cb0-97e0-7c4e69607394",
+      "selectedResourceId": "07330430-e160-47bf-87f4-3abcd9c813ef",
       "sourceReferences": [
         "HKAPI-246"
       ],
@@ -7580,21 +6761,21 @@
       },
       "attempts": [
         {
-          "elapsedMs": 437,
-          "finalHost": "portal.csdi.gov.hk",
-          "format": "API",
+          "elapsedMs": 370,
+          "finalHost": "www.swd.gov.hk",
+          "format": "CSV",
           "httpStatus": 206,
-          "mediaType": "text/html",
+          "mediaType": "text/csv",
           "outcome": "success",
-          "resourceId": "97cecf64-cb34-415a-a780-401ea4775a3a",
+          "resourceId": "efd97ab7-10ea-4866-808f-f502ff9c419e",
           "sampleBytes": 4096,
-          "sampleSha256": "261ec274534f3bf9c1f8a0c025bf3df8361bdb1d1fd3aef8eb4a4518d9cbdcc4",
+          "sampleSha256": "a474b5e8f237114bdaaf34669d693522c922888b3f30bb035cd4934735f38b70",
           "truncated": true
         }
       ],
       "outcome": "success",
       "reason": null,
-      "selectedResourceId": "97cecf64-cb34-415a-a780-401ea4775a3a",
+      "selectedResourceId": "efd97ab7-10ea-4866-808f-f502ff9c419e",
       "sourceReferences": [
         "HKAPI-246"
       ],
@@ -7609,7 +6790,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 323,
+          "elapsedMs": 207,
           "finalHost": "elderlyinfo.swd.gov.hk",
           "format": "XML",
           "httpStatus": 206,
@@ -7617,7 +6798,7 @@
           "outcome": "success",
           "resourceId": "45a938d3-16f3-4ea1-a5da-ca0c97430719",
           "sampleBytes": 4096,
-          "sampleSha256": "3e9352f72d7eac0c7cd3f28ad0a0471e8a4028505513dbdf71bed2cf264a90fc",
+          "sampleSha256": "6d287d6215b531a942d21e55a03971790d7a07dc10fa7df2531f16b5a93afa70",
           "truncated": true
         }
       ],
@@ -7638,7 +6819,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 342,
+          "elapsedMs": 162,
           "finalHost": "www.swd.gov.hk",
           "format": "CSV",
           "httpStatus": 206,
@@ -7665,23 +6846,10 @@
         "parameters-required": 0,
         "ready": 1
       },
-      "attempts": [
-        {
-          "elapsedMs": 418,
-          "finalHost": "portal.csdi.gov.hk",
-          "format": "API",
-          "httpStatus": 206,
-          "mediaType": "text/html",
-          "outcome": "success",
-          "resourceId": "00d3248a-1486-4e2d-932a-b317c3fb08ec",
-          "sampleBytes": 4096,
-          "sampleSha256": "dd3788d8c92a0e487a465197cf467ab2131626aa770edfb50a1c76a9dbedad22",
-          "truncated": true
-        }
-      ],
-      "outcome": "success",
-      "reason": null,
-      "selectedResourceId": "00d3248a-1486-4e2d-932a-b317c3fb08ec",
+      "attempts": [],
+      "outcome": "not-probeable",
+      "reason": "no-parameter-free-https-resource",
+      "selectedResourceId": null,
       "sourceReferences": [
         "HKAPI-251"
       ],
@@ -7696,21 +6864,21 @@
       },
       "attempts": [
         {
-          "elapsedMs": 575,
-          "finalHost": "portal.csdi.gov.hk",
-          "format": "API",
+          "elapsedMs": 169,
+          "finalHost": "www.swd.gov.hk",
+          "format": "CSV",
           "httpStatus": 206,
-          "mediaType": "text/html",
+          "mediaType": "text/csv",
           "outcome": "success",
-          "resourceId": "6fb0b71b-dca5-47e1-89cb-78b72bdcb43d",
+          "resourceId": "1db360a8-deee-4308-8107-69f5cb97bc22",
           "sampleBytes": 4096,
-          "sampleSha256": "219cb5953391db82e2c568051f135d9184a07b5d81e4b6a39253b50f18a07118",
+          "sampleSha256": "4ed840ada20ef33bac975a0a9ce7b486e0034b948f50614cd705e9ab59f893e7",
           "truncated": true
         }
       ],
       "outcome": "success",
       "reason": null,
-      "selectedResourceId": "6fb0b71b-dca5-47e1-89cb-78b72bdcb43d",
+      "selectedResourceId": "1db360a8-deee-4308-8107-69f5cb97bc22",
       "sourceReferences": [
         "HKAPI-248"
       ],
@@ -7725,21 +6893,21 @@
       },
       "attempts": [
         {
-          "elapsedMs": 519,
-          "finalHost": "portal.csdi.gov.hk",
-          "format": "API",
+          "elapsedMs": 165,
+          "finalHost": "www.swd.gov.hk",
+          "format": "CSV",
           "httpStatus": 206,
-          "mediaType": "text/html",
+          "mediaType": "text/csv",
           "outcome": "success",
-          "resourceId": "6736de12-d73f-486e-abf5-a9e1ed4d1b53",
+          "resourceId": "010ede02-7390-473b-ab47-22dfc9ff2062",
           "sampleBytes": 4096,
-          "sampleSha256": "126036e85a03d2fccafd5e936020b5e18f1a82ddb1c42ec3f2b0f8865a1c8dcd",
+          "sampleSha256": "423edfc3803a0fa97d90927252b12b5bba7afa742d45e318d29c5a1701090286",
           "truncated": true
         }
       ],
       "outcome": "success",
       "reason": null,
-      "selectedResourceId": "6736de12-d73f-486e-abf5-a9e1ed4d1b53",
+      "selectedResourceId": "010ede02-7390-473b-ab47-22dfc9ff2062",
       "sourceReferences": [
         "HKAPI-248"
       ],
@@ -7752,23 +6920,10 @@
         "parameters-required": 0,
         "ready": 1
       },
-      "attempts": [
-        {
-          "elapsedMs": 520,
-          "finalHost": "portal.csdi.gov.hk",
-          "format": "API",
-          "httpStatus": 206,
-          "mediaType": "text/html",
-          "outcome": "success",
-          "resourceId": "d7d2abf4-b099-4e99-ae37-262f4c012164",
-          "sampleBytes": 4096,
-          "sampleSha256": "86d22e3dd237962a08753ff39dd3d8be3c97cc45c750994afa27380c034896e1",
-          "truncated": true
-        }
-      ],
-      "outcome": "success",
-      "reason": null,
-      "selectedResourceId": "d7d2abf4-b099-4e99-ae37-262f4c012164",
+      "attempts": [],
+      "outcome": "not-probeable",
+      "reason": "no-parameter-free-https-resource",
+      "selectedResourceId": null,
       "sourceReferences": [
         "HKAPI-248"
       ],
@@ -7783,21 +6938,21 @@
       },
       "attempts": [
         {
-          "elapsedMs": 435,
-          "finalHost": "portal.csdi.gov.hk",
-          "format": "API",
+          "elapsedMs": 170,
+          "finalHost": "www.swd.gov.hk",
+          "format": "CSV",
           "httpStatus": 206,
-          "mediaType": "text/html",
+          "mediaType": "text/csv",
           "outcome": "success",
-          "resourceId": "b3987b72-a4f2-422b-ae57-f65035a6d4f0",
+          "resourceId": "59a4efb5-7cf6-4c32-bc8d-d9a45e834c3b",
           "sampleBytes": 4096,
-          "sampleSha256": "1128d99141abd54ab4b367e77850f1d7e2a421ee2245c5e1f9dc95536dad543f",
+          "sampleSha256": "1cfcae19cf172fd68890243508950d4be515717947fbce94d6913a3da2f1b0d1",
           "truncated": true
         }
       ],
       "outcome": "success",
       "reason": null,
-      "selectedResourceId": "b3987b72-a4f2-422b-ae57-f65035a6d4f0",
+      "selectedResourceId": "59a4efb5-7cf6-4c32-bc8d-d9a45e834c3b",
       "sourceReferences": [
         "HKAPI-248"
       ],
@@ -7812,7 +6967,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 266,
+          "elapsedMs": 183,
           "finalHost": "www.swd.gov.hk",
           "format": "CSV",
           "httpStatus": 206,
@@ -7839,23 +6994,10 @@
         "parameters-required": 0,
         "ready": 1
       },
-      "attempts": [
-        {
-          "elapsedMs": 433,
-          "finalHost": "portal.csdi.gov.hk",
-          "format": "API",
-          "httpStatus": 206,
-          "mediaType": "text/html",
-          "outcome": "success",
-          "resourceId": "f3bb5fef-6a3f-445c-accb-d2d25b758600",
-          "sampleBytes": 4096,
-          "sampleSha256": "fe489e12e0b945d028da12a55c4313d5e4230f42759f4a36df3566d80cd217e8",
-          "truncated": true
-        }
-      ],
-      "outcome": "success",
-      "reason": null,
-      "selectedResourceId": "f3bb5fef-6a3f-445c-accb-d2d25b758600",
+      "attempts": [],
+      "outcome": "not-probeable",
+      "reason": "no-parameter-free-https-resource",
+      "selectedResourceId": null,
       "sourceReferences": [
         "HKAPI-248"
       ],
@@ -7868,23 +7010,10 @@
         "parameters-required": 0,
         "ready": 1
       },
-      "attempts": [
-        {
-          "elapsedMs": 419,
-          "finalHost": "portal.csdi.gov.hk",
-          "format": "API",
-          "httpStatus": 206,
-          "mediaType": "text/html",
-          "outcome": "success",
-          "resourceId": "551d7bd6-6b6d-452c-a555-e3063bdea856",
-          "sampleBytes": 4096,
-          "sampleSha256": "35c813ca7445289f669d794d789ea7b08627e66235c6e642d6348895988ea4eb",
-          "truncated": true
-        }
-      ],
-      "outcome": "success",
-      "reason": null,
-      "selectedResourceId": "551d7bd6-6b6d-452c-a555-e3063bdea856",
+      "attempts": [],
+      "outcome": "not-probeable",
+      "reason": "no-parameter-free-https-resource",
+      "selectedResourceId": null,
       "sourceReferences": [
         "HKAPI-248"
       ],
@@ -7899,7 +7028,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 240,
+          "elapsedMs": 172,
           "finalHost": "www.swd.gov.hk",
           "format": "CSV",
           "httpStatus": 206,
@@ -7928,7 +7057,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 311,
+          "elapsedMs": 170,
           "finalHost": "www.swd.gov.hk",
           "format": "CSV",
           "httpStatus": 206,
@@ -7955,23 +7084,10 @@
         "parameters-required": 0,
         "ready": 1
       },
-      "attempts": [
-        {
-          "elapsedMs": 458,
-          "finalHost": "portal.csdi.gov.hk",
-          "format": "API",
-          "httpStatus": 206,
-          "mediaType": "text/html",
-          "outcome": "success",
-          "resourceId": "6727a3d2-f9fb-4c0e-b516-0d119182d6e3",
-          "sampleBytes": 4096,
-          "sampleSha256": "a28685f81fc5443e03b481520dd77c9887a410da60033304c6b794206b97b8a1",
-          "truncated": true
-        }
-      ],
-      "outcome": "success",
-      "reason": null,
-      "selectedResourceId": "6727a3d2-f9fb-4c0e-b516-0d119182d6e3",
+      "attempts": [],
+      "outcome": "not-probeable",
+      "reason": "no-parameter-free-https-resource",
+      "selectedResourceId": null,
       "sourceReferences": [
         "HKAPI-248"
       ],
@@ -7986,21 +7102,21 @@
       },
       "attempts": [
         {
-          "elapsedMs": 429,
-          "finalHost": "portal.csdi.gov.hk",
-          "format": "API",
+          "elapsedMs": 185,
+          "finalHost": "www.swd.gov.hk",
+          "format": "CSV",
           "httpStatus": 206,
-          "mediaType": "text/html",
+          "mediaType": "text/csv",
           "outcome": "success",
-          "resourceId": "9c777b00-c66e-4d2d-ba58-1965d79102db",
-          "sampleBytes": 4096,
-          "sampleSha256": "4678dacecaf1313dcaf2ed780f8fa516b760d9d57791a3521c8d8e5881bfb729",
-          "truncated": true
+          "resourceId": "b1f4b78a-8508-4df6-b04d-dfdb8d475f14",
+          "sampleBytes": 3474,
+          "sampleSha256": "58362cd91fa60ec91bbdbc2b2c1ae91c1e06ae5e7c8f49392e4cf4838845862a",
+          "truncated": false
         }
       ],
       "outcome": "success",
       "reason": null,
-      "selectedResourceId": "9c777b00-c66e-4d2d-ba58-1965d79102db",
+      "selectedResourceId": "b1f4b78a-8508-4df6-b04d-dfdb8d475f14",
       "sourceReferences": [
         "HKAPI-248"
       ],
@@ -8015,7 +7131,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 243,
+          "elapsedMs": 182,
           "finalHost": "www.swd.gov.hk",
           "format": "CSV",
           "httpStatus": 206,
@@ -8044,7 +7160,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 378,
+          "elapsedMs": 177,
           "finalHost": "www.swd.gov.hk",
           "format": "CSV",
           "httpStatus": 206,
@@ -8073,7 +7189,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 290,
+          "elapsedMs": 180,
           "finalHost": "www.swd.gov.hk",
           "format": "CSV",
           "httpStatus": 206,
@@ -8102,7 +7218,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 293,
+          "elapsedMs": 178,
           "finalHost": "www.swd.gov.hk",
           "format": "CSV",
           "httpStatus": 206,
@@ -8132,7 +7248,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 244,
+          "elapsedMs": 192,
           "finalHost": "www.swd.gov.hk",
           "format": "CSV",
           "httpStatus": 206,
@@ -8159,23 +7275,10 @@
         "parameters-required": 0,
         "ready": 1
       },
-      "attempts": [
-        {
-          "elapsedMs": 448,
-          "finalHost": "portal.csdi.gov.hk",
-          "format": "API",
-          "httpStatus": 206,
-          "mediaType": "text/html",
-          "outcome": "success",
-          "resourceId": "b707b343-4faf-4a1b-bc0d-44aa3304592e",
-          "sampleBytes": 4096,
-          "sampleSha256": "f92b05fca60522c91bca2b0d4be84576ae70f9255d279313ecc31b1c3adc7164",
-          "truncated": true
-        }
-      ],
-      "outcome": "success",
-      "reason": null,
-      "selectedResourceId": "b707b343-4faf-4a1b-bc0d-44aa3304592e",
+      "attempts": [],
+      "outcome": "not-probeable",
+      "reason": "no-parameter-free-https-resource",
+      "selectedResourceId": null,
       "sourceReferences": [
         "HKAPI-248",
         "HKAPI-252"
@@ -8189,23 +7292,10 @@
         "parameters-required": 0,
         "ready": 1
       },
-      "attempts": [
-        {
-          "elapsedMs": 434,
-          "finalHost": "portal.csdi.gov.hk",
-          "format": "API",
-          "httpStatus": 206,
-          "mediaType": "text/html",
-          "outcome": "success",
-          "resourceId": "a1150ece-7137-405a-a13a-385e2de80210",
-          "sampleBytes": 4096,
-          "sampleSha256": "3e4b285cc77677f55147dfd7d1818134b53dc6289a3df9692d9fe8fc17c4b5bd",
-          "truncated": true
-        }
-      ],
-      "outcome": "success",
-      "reason": null,
-      "selectedResourceId": "a1150ece-7137-405a-a13a-385e2de80210",
+      "attempts": [],
+      "outcome": "not-probeable",
+      "reason": "no-parameter-free-https-resource",
+      "selectedResourceId": null,
       "sourceReferences": [
         "HKAPI-248"
       ],
@@ -8218,23 +7308,10 @@
         "parameters-required": 0,
         "ready": 1
       },
-      "attempts": [
-        {
-          "elapsedMs": 405,
-          "finalHost": "portal.csdi.gov.hk",
-          "format": "API",
-          "httpStatus": 206,
-          "mediaType": "text/html",
-          "outcome": "success",
-          "resourceId": "7ed28c09-f592-43eb-b3e1-fe605d2ae24f",
-          "sampleBytes": 4096,
-          "sampleSha256": "55c7e9bb743e329deaf56276efe1e5efe24e4c955d8a8af2160d1075b47d45fc",
-          "truncated": true
-        }
-      ],
-      "outcome": "success",
-      "reason": null,
-      "selectedResourceId": "7ed28c09-f592-43eb-b3e1-fe605d2ae24f",
+      "attempts": [],
+      "outcome": "not-probeable",
+      "reason": "no-parameter-free-https-resource",
+      "selectedResourceId": null,
       "sourceReferences": [
         "HKAPI-253"
       ],
@@ -8247,23 +7324,10 @@
         "parameters-required": 0,
         "ready": 1
       },
-      "attempts": [
-        {
-          "elapsedMs": 499,
-          "finalHost": "portal.csdi.gov.hk",
-          "format": "API",
-          "httpStatus": 206,
-          "mediaType": "text/html",
-          "outcome": "success",
-          "resourceId": "231bad0e-a008-4e2a-86cb-82417534366b",
-          "sampleBytes": 4096,
-          "sampleSha256": "fba842fb5a546a2a9966f505f9ef44295d8bec1fefe2a9c7a8e6b967bfc50ee2",
-          "truncated": true
-        }
-      ],
-      "outcome": "success",
-      "reason": null,
-      "selectedResourceId": "231bad0e-a008-4e2a-86cb-82417534366b",
+      "attempts": [],
+      "outcome": "not-probeable",
+      "reason": "no-parameter-free-https-resource",
+      "selectedResourceId": null,
       "sourceReferences": [
         "HKAPI-247"
       ],
@@ -8278,21 +7342,21 @@
       },
       "attempts": [
         {
-          "elapsedMs": 415,
-          "finalHost": "portal.csdi.gov.hk",
-          "format": "API",
+          "elapsedMs": 378,
+          "finalHost": "resource.data.one.gov.hk",
+          "format": "CSV",
           "httpStatus": 206,
-          "mediaType": "text/html",
+          "mediaType": "text/csv",
           "outcome": "success",
-          "resourceId": "7cd4bab6-45f7-4963-a61d-a51894238840",
+          "resourceId": "40ff6aca-cb3f-4b17-8910-7bc967ec18f6",
           "sampleBytes": 4096,
-          "sampleSha256": "a8b5ec6726370b6d9acd90f15960a59191bbe495a5be005d3107f0eb18784b3a",
+          "sampleSha256": "9ce37e329e2664793c08a6a8c665c03bb646e2a68fa2f2f235f978a78dda57ef",
           "truncated": true
         }
       ],
       "outcome": "success",
       "reason": null,
-      "selectedResourceId": "7cd4bab6-45f7-4963-a61d-a51894238840",
+      "selectedResourceId": "40ff6aca-cb3f-4b17-8910-7bc967ec18f6",
       "sourceReferences": [
         "HKAPI-052"
       ],
@@ -8307,21 +7371,21 @@
       },
       "attempts": [
         {
-          "elapsedMs": 485,
-          "finalHost": "portal.csdi.gov.hk",
-          "format": "API",
+          "elapsedMs": 198,
+          "finalHost": "data.nmospiot.gov.hk",
+          "format": "CSV",
           "httpStatus": 206,
-          "mediaType": "text/html",
+          "mediaType": "text/csv",
           "outcome": "success",
-          "resourceId": "4254eb10-66b8-4cfa-b5de-58307e04ae96",
+          "resourceId": "bfcf882f-788f-4fc3-a3e8-16c526e75a87",
           "sampleBytes": 4096,
-          "sampleSha256": "f95df543589771a8197056236a54121a620e465474329467eb84d8abe82fd000",
+          "sampleSha256": "a3a66ee03e9eb6a140b2873ef9b7946d78cb9066e8d98c4094621895c9bc1c56",
           "truncated": true
         }
       ],
       "outcome": "success",
       "reason": null,
-      "selectedResourceId": "4254eb10-66b8-4cfa-b5de-58307e04ae96",
+      "selectedResourceId": "bfcf882f-788f-4fc3-a3e8-16c526e75a87",
       "sourceReferences": [
         "HKAPI-053"
       ],
@@ -8336,7 +7400,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 246,
+          "elapsedMs": 357,
           "finalHost": "static.data.gov.hk",
           "format": "CSV",
           "httpStatus": 206,
@@ -8365,21 +7429,21 @@
       },
       "attempts": [
         {
-          "elapsedMs": 446,
-          "finalHost": "portal.csdi.gov.hk",
-          "format": "API",
+          "elapsedMs": 182,
+          "finalHost": "resource.data.one.gov.hk",
+          "format": "XML",
           "httpStatus": 206,
-          "mediaType": "text/html",
+          "mediaType": "text/xml",
           "outcome": "success",
-          "resourceId": "cd303de9-55aa-46d9-af47-db5c6b483eb8",
+          "resourceId": "ce175a9c-e7dd-4fb2-8d13-a721af1f3cc9",
           "sampleBytes": 4096,
-          "sampleSha256": "529cbf09f57fb07544bdb3a30bd272ab4435ccd53de49bace6faef0765cf8b11",
+          "sampleSha256": "60836b47d5feee390bdce7625336dfdba446dfb58fdfe318dc0f908e13274690",
           "truncated": true
         }
       ],
       "outcome": "success",
       "reason": null,
-      "selectedResourceId": "cd303de9-55aa-46d9-af47-db5c6b483eb8",
+      "selectedResourceId": "ce175a9c-e7dd-4fb2-8d13-a721af1f3cc9",
       "sourceReferences": [
         "HKAPI-063"
       ],
@@ -8394,21 +7458,21 @@
       },
       "attempts": [
         {
-          "elapsedMs": 482,
-          "finalHost": "portal.csdi.gov.hk",
-          "format": "API",
+          "elapsedMs": 187,
+          "finalHost": "resource.data.one.gov.hk",
+          "format": "XML",
           "httpStatus": 206,
-          "mediaType": "text/html",
+          "mediaType": "text/xml",
           "outcome": "success",
-          "resourceId": "9b7797db-2512-4d03-a079-eb130d089a27",
+          "resourceId": "4898c0ba-17f1-4ad0-97ae-afbe5f71a61e",
           "sampleBytes": 4096,
-          "sampleSha256": "2d35ad5b5bf0022c9c72b13d0a60fe26dd1ca7e12fbaff4444e0ef60db26db49",
+          "sampleSha256": "f3bd75d81bd978b60f62d3143c50b57d1543395754385dd9b25875ba128b4c69",
           "truncated": true
         }
       ],
       "outcome": "success",
       "reason": null,
-      "selectedResourceId": "9b7797db-2512-4d03-a079-eb130d089a27",
+      "selectedResourceId": "4898c0ba-17f1-4ad0-97ae-afbe5f71a61e",
       "sourceReferences": [
         "HKAPI-065"
       ],
@@ -8423,7 +7487,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 186,
+          "elapsedMs": 344,
           "finalHost": "static.data.gov.hk",
           "format": "CSV",
           "httpStatus": 206,
@@ -8452,21 +7516,21 @@
       },
       "attempts": [
         {
-          "elapsedMs": 427,
-          "finalHost": "portal.csdi.gov.hk",
-          "format": "API",
+          "elapsedMs": 486,
+          "finalHost": "static.data.gov.hk",
+          "format": "CSV",
           "httpStatus": 206,
-          "mediaType": "text/html",
+          "mediaType": "text/csv",
           "outcome": "success",
-          "resourceId": "6bc63d67-ac4a-4ae3-bfbd-261185142507",
+          "resourceId": "3b57fb6f-4316-46a6-87aa-a24f274915b2",
           "sampleBytes": 4096,
-          "sampleSha256": "0955768c2d098374cada919830161fcd1b515f2fa0d258aa9cee95ac65c7db5b",
+          "sampleSha256": "ced8213a3523f6fbc2e0fcdd6ee6ef7b00fe90db2a5d66b3f179b37d1de50021",
           "truncated": true
         }
       ],
       "outcome": "success",
       "reason": null,
-      "selectedResourceId": "6bc63d67-ac4a-4ae3-bfbd-261185142507",
+      "selectedResourceId": "3b57fb6f-4316-46a6-87aa-a24f274915b2",
       "sourceReferences": [
         "HKAPI-040"
       ],
@@ -8481,21 +7545,21 @@
       },
       "attempts": [
         {
-          "elapsedMs": 405,
-          "finalHost": "portal.csdi.gov.hk",
-          "format": "API",
+          "elapsedMs": 170,
+          "finalHost": "resource.data.one.gov.hk",
+          "format": "JSON",
           "httpStatus": 206,
-          "mediaType": "text/html",
+          "mediaType": "application/json",
           "outcome": "success",
-          "resourceId": "ef43a5b1-65d8-40ef-8682-e2f82024cb77",
+          "resourceId": "84f7d417-a886-441f-8a61-b712003acd7e",
           "sampleBytes": 4096,
-          "sampleSha256": "1d6f2989b08d19e8555ab800dc7bab0f0095efe0004dd18881e4d3faf9febe5e",
+          "sampleSha256": "9f17f12db8f3b6d7ec6f4f0178f242ad0a5da3db641927c5196f773f7c883165",
           "truncated": true
         }
       ],
       "outcome": "success",
       "reason": null,
-      "selectedResourceId": "ef43a5b1-65d8-40ef-8682-e2f82024cb77",
+      "selectedResourceId": "84f7d417-a886-441f-8a61-b712003acd7e",
       "sourceReferences": [
         "HKAPI-059"
       ],
@@ -8510,15 +7574,15 @@
       },
       "attempts": [
         {
-          "elapsedMs": 1241,
+          "elapsedMs": 1193,
           "finalHost": "www.td.gov.hk",
           "format": "XML",
           "httpStatus": 206,
           "mediaType": "application/xml",
           "outcome": "success",
           "resourceId": "bcf73001-b557-48ab-b10c-28d88db0d684",
-          "sampleBytes": 1464,
-          "sampleSha256": "b59157d8965e91c1a8a7612687280e413b7719e82e4c5dac20751b2882984559",
+          "sampleBytes": 1444,
+          "sampleSha256": "8245be7b978f5b4c843066f0a812f6bdb7cb5d5d85eac8b00c32f51341e6a6af",
           "truncated": false
         }
       ],
@@ -8539,21 +7603,21 @@
       },
       "attempts": [
         {
-          "elapsedMs": 411,
-          "finalHost": "portal.csdi.gov.hk",
-          "format": "API",
+          "elapsedMs": 413,
+          "finalHost": "static.data.gov.hk",
+          "format": "XML",
           "httpStatus": 206,
-          "mediaType": "text/html",
+          "mediaType": "text/xml",
           "outcome": "success",
-          "resourceId": "8808ac11-b127-43de-9514-5e5da575b4b3",
+          "resourceId": "3cd734a3-0ef5-4052-b81e-b17c502611db",
           "sampleBytes": 4096,
-          "sampleSha256": "8bfea1d85160d3034359062d5d76fd391281085542031b21eeb63ebd9974429b",
+          "sampleSha256": "a3af42d2179ae0491e7a1d15114613cf323e4443c1ed79280e0cdb7017728d07",
           "truncated": true
         }
       ],
       "outcome": "success",
       "reason": null,
-      "selectedResourceId": "8808ac11-b127-43de-9514-5e5da575b4b3",
+      "selectedResourceId": "3cd734a3-0ef5-4052-b81e-b17c502611db",
       "sourceReferences": [
         "HKAPI-060",
         "HKAPI-061"
@@ -8569,7 +7633,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 1196,
+          "elapsedMs": 1060,
           "finalHost": "www.td.gov.hk",
           "format": "XML",
           "httpStatus": 206,
@@ -8598,21 +7662,21 @@
       },
       "attempts": [
         {
-          "elapsedMs": 642,
-          "finalHost": "portal.csdi.gov.hk",
-          "format": "API",
+          "elapsedMs": 437,
+          "finalHost": "static.data.gov.hk",
+          "format": "JSON",
           "httpStatus": 206,
-          "mediaType": "text/html",
+          "mediaType": "application/json",
           "outcome": "success",
-          "resourceId": "e9900c0d-bfb3-4a33-a2c7-8e3fdf301798",
+          "resourceId": "455c92d8-cb7e-4aec-8deb-5ef769b19037",
           "sampleBytes": 4096,
-          "sampleSha256": "ac3bbe288cdc35d7462858357601a844185e8892b0369812b25384d171796d58",
+          "sampleSha256": "5cebb717be36be613da94ad9f3a58598bb0917b63e2a61ac41e769ce66034068",
           "truncated": true
         }
       ],
       "outcome": "success",
       "reason": null,
-      "selectedResourceId": "e9900c0d-bfb3-4a33-a2c7-8e3fdf301798",
+      "selectedResourceId": "455c92d8-cb7e-4aec-8deb-5ef769b19037",
       "sourceReferences": [
         "HKAPI-039"
       ],
@@ -8627,21 +7691,21 @@
       },
       "attempts": [
         {
-          "elapsedMs": 777,
-          "finalHost": "portal.csdi.gov.hk",
-          "format": "API",
+          "elapsedMs": 848,
+          "finalHost": "www.td.gov.hk",
+          "format": "CSV",
           "httpStatus": 206,
-          "mediaType": "text/html",
+          "mediaType": "text/csv",
           "outcome": "success",
-          "resourceId": "6c9150ca-c2da-4131-9114-4601fc9ee402",
+          "resourceId": "12566c52-3b33-4968-8f25-7001d5e07192",
           "sampleBytes": 4096,
-          "sampleSha256": "3dd287d73f5209a74656db3b5058823a2b5e3d7c1a95e21ffbd9788bef959681",
+          "sampleSha256": "55a8332ad9b6c18d0910d30cb6efeff340a67f09f6795109f59c8170381a10a0",
           "truncated": true
         }
       ],
       "outcome": "success",
       "reason": null,
-      "selectedResourceId": "6c9150ca-c2da-4131-9114-4601fc9ee402",
+      "selectedResourceId": "12566c52-3b33-4968-8f25-7001d5e07192",
       "sourceReferences": [
         "HKAPI-069"
       ],
@@ -8656,21 +7720,21 @@
       },
       "attempts": [
         {
-          "elapsedMs": 761,
-          "finalHost": "portal.csdi.gov.hk",
-          "format": "API",
+          "elapsedMs": 815,
+          "finalHost": "www.td.gov.hk",
+          "format": "CSV",
           "httpStatus": 206,
-          "mediaType": "text/html",
+          "mediaType": "text/csv",
           "outcome": "success",
-          "resourceId": "fedeaaae-41a5-432a-9de5-a11b75dd132c",
+          "resourceId": "d0413435-cdfb-4b7a-bdea-5c4d3f5501b7",
           "sampleBytes": 4096,
-          "sampleSha256": "8830cd1a90a30e25229373327441e352fba6f23b4ead0feeb26b93d258156fc9",
+          "sampleSha256": "f5860e44334e0babdec37bdf5c9a04ae1ee3b5ed3e1ce8dba81cd86633d7c3ee",
           "truncated": true
         }
       ],
       "outcome": "success",
       "reason": null,
-      "selectedResourceId": "fedeaaae-41a5-432a-9de5-a11b75dd132c",
+      "selectedResourceId": "d0413435-cdfb-4b7a-bdea-5c4d3f5501b7",
       "sourceReferences": [
         "HKAPI-069"
       ],
@@ -8708,7 +7772,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 193,
+          "elapsedMs": 351,
           "finalHost": "static.data.gov.hk",
           "format": "CSV",
           "httpStatus": 206,
@@ -8735,23 +7799,10 @@
         "parameters-required": 0,
         "ready": 1
       },
-      "attempts": [
-        {
-          "elapsedMs": 453,
-          "finalHost": "portal.csdi.gov.hk",
-          "format": "API",
-          "httpStatus": 206,
-          "mediaType": "text/html",
-          "outcome": "success",
-          "resourceId": "d3a99f4c-74ec-40e0-83f8-0694b64949d2",
-          "sampleBytes": 4096,
-          "sampleSha256": "1efb40a073cd1bd0ea56bd4e64d07d15d28e13856273313fef8524b9d2f58ba1",
-          "truncated": true
-        }
-      ],
-      "outcome": "success",
-      "reason": null,
-      "selectedResourceId": "d3a99f4c-74ec-40e0-83f8-0694b64949d2",
+      "attempts": [],
+      "outcome": "not-probeable",
+      "reason": "no-parameter-free-https-resource",
+      "selectedResourceId": null,
       "sourceReferences": [
         "HKAPI-070"
       ],
@@ -8766,21 +7817,21 @@
       },
       "attempts": [
         {
-          "elapsedMs": 518,
-          "finalHost": "portal.csdi.gov.hk",
-          "format": "API",
+          "elapsedMs": 187,
+          "finalHost": "resource.data.one.gov.hk",
+          "format": "XML",
           "httpStatus": 206,
-          "mediaType": "text/html",
+          "mediaType": "text/xml",
           "outcome": "success",
-          "resourceId": "ff392c99-3c81-4248-ae7c-84a8308d6c55",
+          "resourceId": "b914e460-1042-4a25-8940-7a4687ef254b",
           "sampleBytes": 4096,
-          "sampleSha256": "5b67bfbb8aa52dc684f22e7c34c32842a12148cfbdefa8ca6c7eeb02fc560a4f",
+          "sampleSha256": "55580a79c323454e519cacb12a9a373463c21242aeb5439e1ea8f8e5f0a8819b",
           "truncated": true
         }
       ],
       "outcome": "success",
       "reason": null,
-      "selectedResourceId": "ff392c99-3c81-4248-ae7c-84a8308d6c55",
+      "selectedResourceId": "b914e460-1042-4a25-8940-7a4687ef254b",
       "sourceReferences": [
         "HKAPI-064"
       ],
@@ -8793,23 +7844,10 @@
         "parameters-required": 0,
         "ready": 1
       },
-      "attempts": [
-        {
-          "elapsedMs": 459,
-          "finalHost": "portal.csdi.gov.hk",
-          "format": "API",
-          "httpStatus": 206,
-          "mediaType": "text/html",
-          "outcome": "success",
-          "resourceId": "a12fa72b-f69f-481e-bdba-365d6c73521a",
-          "sampleBytes": 4096,
-          "sampleSha256": "f8c30a04d7c170f25977f7bf61999b0b81d9a0e9199eeb9c76082d4389eb1566",
-          "truncated": true
-        }
-      ],
-      "outcome": "success",
-      "reason": null,
-      "selectedResourceId": "a12fa72b-f69f-481e-bdba-365d6c73521a",
+      "attempts": [],
+      "outcome": "not-probeable",
+      "reason": "no-parameter-free-https-resource",
+      "selectedResourceId": null,
       "sourceReferences": [
         "HKAPI-075"
       ],
@@ -8822,23 +7860,10 @@
         "parameters-required": 0,
         "ready": 1
       },
-      "attempts": [
-        {
-          "elapsedMs": 412,
-          "finalHost": "portal.csdi.gov.hk",
-          "format": "API",
-          "httpStatus": 206,
-          "mediaType": "text/html",
-          "outcome": "success",
-          "resourceId": "b1242f27-c58c-4010-9865-4a94b862ccd4",
-          "sampleBytes": 4096,
-          "sampleSha256": "9682a10a5617545c5a842f946764eca3c804ad2171638a77a0f53aeb9c6e3d0a",
-          "truncated": true
-        }
-      ],
-      "outcome": "success",
-      "reason": null,
-      "selectedResourceId": "b1242f27-c58c-4010-9865-4a94b862ccd4",
+      "attempts": [],
+      "outcome": "not-probeable",
+      "reason": "no-parameter-free-https-resource",
+      "selectedResourceId": null,
       "sourceReferences": [
         "HKAPI-074"
       ],
@@ -8853,21 +7878,21 @@
       },
       "attempts": [
         {
-          "elapsedMs": 468,
-          "finalHost": "portal.csdi.gov.hk",
-          "format": "API",
+          "elapsedMs": 418,
+          "finalHost": "static.data.gov.hk",
+          "format": "GML",
           "httpStatus": 206,
-          "mediaType": "text/html",
+          "mediaType": "text/gml",
           "outcome": "success",
-          "resourceId": "489005cd-9edb-4675-97ac-d7e867ad7278",
+          "resourceId": "01d7163f-4740-4b12-97c0-8ebedcd0b72c",
           "sampleBytes": 4096,
-          "sampleSha256": "4ec45db6e07dec20f87e11dbbf1267bb22e966ff4f3d532ac757d3c69badb6ee",
+          "sampleSha256": "f5c1fc91244a552812b53fa7276f3206aab46c568fd33fdb69ac6fa5a311e4f6",
           "truncated": true
         }
       ],
       "outcome": "success",
       "reason": null,
-      "selectedResourceId": "489005cd-9edb-4675-97ac-d7e867ad7278",
+      "selectedResourceId": "01d7163f-4740-4b12-97c0-8ebedcd0b72c",
       "sourceReferences": [
         "HKAPI-067",
         "HKAPI-068"
@@ -8883,7 +7908,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 900,
+          "elapsedMs": 706,
           "finalHost": "www.td.gov.hk",
           "format": "CSV",
           "httpStatus": 206,
@@ -8912,7 +7937,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 1188,
+          "elapsedMs": 1013,
           "finalHost": "www.wsd.gov.hk",
           "format": "CSV",
           "httpStatus": 200,
@@ -8941,7 +7966,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 923,
+          "elapsedMs": 863,
           "finalHost": "www.wsd.gov.hk",
           "format": "CSV",
           "httpStatus": 206,
@@ -8999,7 +8024,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 373,
+          "elapsedMs": 386,
           "finalHost": "www.hkelectric.com",
           "format": "CSV",
           "httpStatus": 206,
@@ -9028,7 +8053,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 319,
+          "elapsedMs": 252,
           "finalHost": "www.hkelectric.com",
           "format": "CSV",
           "httpStatus": 206,
@@ -9057,7 +8082,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 363,
+          "elapsedMs": 207,
           "finalHost": "www.hkelectric.com",
           "format": "CSV",
           "httpStatus": 206,
@@ -9086,7 +8111,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 363,
+          "elapsedMs": 171,
           "finalHost": "www.hkelectric.com",
           "format": "CSV",
           "httpStatus": 206,
@@ -9115,7 +8140,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 333,
+          "elapsedMs": 255,
           "finalHost": "www.hkelectric.com",
           "format": "CSV",
           "httpStatus": 206,
@@ -9144,7 +8169,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 301,
+          "elapsedMs": 341,
           "finalHost": "www.hkhs.com",
           "format": "JSON",
           "httpStatus": 200,
@@ -9173,7 +8198,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 308,
+          "elapsedMs": 208,
           "finalHost": "www.hkhs.com",
           "format": "JSON",
           "httpStatus": 200,
@@ -9202,7 +8227,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 696,
+          "elapsedMs": 688,
           "finalHost": "www.hkkfeta.com",
           "format": "JSON",
           "httpStatus": 422,
@@ -9213,7 +8238,7 @@
           "truncated": false
         },
         {
-          "elapsedMs": 852,
+          "elapsedMs": 472,
           "finalHost": "www.hkkfeta.com",
           "format": "JSON",
           "httpStatus": 422,
@@ -9224,7 +8249,7 @@
           "truncated": false
         },
         {
-          "elapsedMs": 761,
+          "elapsedMs": 498,
           "finalHost": "www.hkkfeta.com",
           "format": "JSON",
           "httpStatus": 200,
@@ -9232,7 +8257,7 @@
           "outcome": "success",
           "resourceId": "c8537fa8-c998-4cda-8d82-aa5cdae7ef8d",
           "sampleBytes": 1325,
-          "sampleSha256": "860a9ceeff94bd15069d9800298f252d44ab20f894c66f5500908639fe97582a",
+          "sampleSha256": "ff0f560fa5adf86aa695d715417cd12fcff3ee104ca6ec76592ac1908d9d01fe",
           "truncated": false
         }
       ],
@@ -9253,7 +8278,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 471,
+          "elapsedMs": 397,
           "finalHost": "opendata.hkstp.org",
           "format": "JSON",
           "httpStatus": 206,
@@ -9298,21 +8323,21 @@
       },
       "attempts": [
         {
-          "elapsedMs": 420,
-          "finalHost": "portal.csdi.gov.hk",
-          "format": "API",
+          "elapsedMs": 302,
+          "finalHost": "www.ha.org.hk",
+          "format": "JSON",
           "httpStatus": 206,
-          "mediaType": "text/html",
+          "mediaType": "application/json",
           "outcome": "success",
-          "resourceId": "345c54bc-22af-4a3f-93d0-5a7ba3bdfcc1",
-          "sampleBytes": 4096,
-          "sampleSha256": "c845209452e825f7d246322fe7b22a4371dc22e4ca7052a44a26dd37233344e5",
-          "truncated": true
+          "resourceId": "7336f0d3-957b-40f4-825e-0b3c1018d743",
+          "sampleBytes": 3755,
+          "sampleSha256": "e26cc051d27f1b730df68ded099e0a39ef72081babb9742784358e80190da72f",
+          "truncated": false
         }
       ],
       "outcome": "success",
       "reason": null,
-      "selectedResourceId": "345c54bc-22af-4a3f-93d0-5a7ba3bdfcc1",
+      "selectedResourceId": "7336f0d3-957b-40f4-825e-0b3c1018d743",
       "sourceReferences": [
         "HKAPI-119"
       ],
@@ -9327,21 +8352,21 @@
       },
       "attempts": [
         {
-          "elapsedMs": 1711,
-          "finalHost": "portal.csdi.gov.hk",
-          "format": "API",
+          "elapsedMs": 163,
+          "finalHost": "www.ha.org.hk",
+          "format": "JSON",
           "httpStatus": 206,
-          "mediaType": "text/html",
+          "mediaType": "application/json",
           "outcome": "success",
-          "resourceId": "457ce9f7-8517-4708-b30f-92e975bc6fb4",
+          "resourceId": "beadd3b5-0baa-49b6-bff6-2ae9e76c9db0",
           "sampleBytes": 4096,
-          "sampleSha256": "7e142b3c295b8239c951749614c0739b8ace8f69c6e3900d107f420311658ebb",
+          "sampleSha256": "18e7d0974786f28f06eb422dd1570edcf0961aaf057ad42fe27ec32bc75cc6f4",
           "truncated": true
         }
       ],
       "outcome": "success",
       "reason": null,
-      "selectedResourceId": "457ce9f7-8517-4708-b30f-92e975bc6fb4",
+      "selectedResourceId": "beadd3b5-0baa-49b6-bff6-2ae9e76c9db0",
       "sourceReferences": [
         "HKAPI-122"
       ],
@@ -9356,21 +8381,21 @@
       },
       "attempts": [
         {
-          "elapsedMs": 1719,
-          "finalHost": "portal.csdi.gov.hk",
-          "format": "API",
+          "elapsedMs": 166,
+          "finalHost": "www.ha.org.hk",
+          "format": "JSON",
           "httpStatus": 206,
-          "mediaType": "text/html",
+          "mediaType": "application/json",
           "outcome": "success",
-          "resourceId": "5e49b4bd-0de7-47c8-a22e-24270470ccd0",
+          "resourceId": "eb3b0b73-ff37-4c8e-9788-838d2ef21753",
           "sampleBytes": 4096,
-          "sampleSha256": "7c5e8c8f4d35e50089797f8100c3a7f5175b204452ce648411f7a622a2038129",
+          "sampleSha256": "e85174608668c6370748bcbe2626a120e52838b6558a6d8e6bc501b6d45a377f",
           "truncated": true
         }
       ],
       "outcome": "success",
       "reason": null,
-      "selectedResourceId": "5e49b4bd-0de7-47c8-a22e-24270470ccd0",
+      "selectedResourceId": "eb3b0b73-ff37-4c8e-9788-838d2ef21753",
       "sourceReferences": [
         "HKAPI-120"
       ],
@@ -9385,7 +8410,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 382,
+          "elapsedMs": 165,
           "finalHost": "www.ha.org.hk",
           "format": "JSON",
           "httpStatus": 206,
@@ -9414,7 +8439,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 287,
+          "elapsedMs": 170,
           "finalHost": "www.ha.org.hk",
           "format": "JSON",
           "httpStatus": 206,
@@ -9443,21 +8468,21 @@
       },
       "attempts": [
         {
-          "elapsedMs": 608,
-          "finalHost": "portal.csdi.gov.hk",
-          "format": "API",
+          "elapsedMs": 210,
+          "finalHost": "www.ha.org.hk",
+          "format": "JSON",
           "httpStatus": 206,
-          "mediaType": "text/html",
+          "mediaType": "application/json",
           "outcome": "success",
-          "resourceId": "9b1a7fcf-53e5-415f-895b-baf73fd7ebeb",
+          "resourceId": "4e9dc549-606d-4282-b5b0-5c3fd8a13c52",
           "sampleBytes": 4096,
-          "sampleSha256": "f54f3510a98e0e3a3b8a3a2cb22f42ffccb733879535f3d08bea1f37d8eaa663",
+          "sampleSha256": "b84fc051482359f499dd21aac6350aec1075c60e4b02fb7e2d5a1105c6d93b35",
           "truncated": true
         }
       ],
       "outcome": "success",
       "reason": null,
-      "selectedResourceId": "9b1a7fcf-53e5-415f-895b-baf73fd7ebeb",
+      "selectedResourceId": "4e9dc549-606d-4282-b5b0-5c3fd8a13c52",
       "sourceReferences": [
         "HKAPI-124"
       ],
@@ -9472,21 +8497,21 @@
       },
       "attempts": [
         {
-          "elapsedMs": 403,
-          "finalHost": "portal.csdi.gov.hk",
-          "format": "API",
+          "elapsedMs": 219,
+          "finalHost": "www.ha.org.hk",
+          "format": "JSON",
           "httpStatus": 206,
-          "mediaType": "text/html",
+          "mediaType": "application/json",
           "outcome": "success",
-          "resourceId": "a9d55f2f-8533-445b-acbc-3cc4d1e5af53",
+          "resourceId": "2f5b8da6-c7e3-4a7e-87ce-1f3d49ca1688",
           "sampleBytes": 4096,
-          "sampleSha256": "19e48d381afb1d0376d6990768071b2a38c331e52cca8103212fc0b682b1c4c5",
+          "sampleSha256": "753bd82e341241631c8fa889d9a47c05ee594fe66b7cb64a7aa807658077f2b5",
           "truncated": true
         }
       ],
       "outcome": "success",
       "reason": null,
-      "selectedResourceId": "a9d55f2f-8533-445b-acbc-3cc4d1e5af53",
+      "selectedResourceId": "2f5b8da6-c7e3-4a7e-87ce-1f3d49ca1688",
       "sourceReferences": [
         "HKAPI-125"
       ],
@@ -9501,7 +8526,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 256,
+          "elapsedMs": 151,
           "finalHost": "www.ha.org.hk",
           "format": "JSON",
           "httpStatus": 206,
@@ -9530,7 +8555,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 429,
+          "elapsedMs": 308,
           "finalHost": "open-api.joie.socif.co",
           "format": "JSON",
           "httpStatus": 200,
@@ -9538,7 +8563,7 @@
           "outcome": "success",
           "resourceId": "0868e8d4-7ae5-4585-8bce-b699d6095986",
           "sampleBytes": 4096,
-          "sampleSha256": "34d4062cdaafe44fc962f62d8ddc6a6798d62e4a410d2a920455f21c3eade794",
+          "sampleSha256": "c7e7d807113d4d0a6f57c95e4a09fde57905f6906fc64c5fd21a29045ad26998",
           "truncated": true
         }
       ],
@@ -9559,21 +8584,21 @@
       },
       "attempts": [
         {
-          "elapsedMs": 506,
-          "finalHost": "portal.csdi.gov.hk",
-          "format": "API",
+          "elapsedMs": 212,
+          "finalHost": "www.fehd.gov.hk",
+          "format": "XML",
           "httpStatus": 206,
-          "mediaType": "text/html",
+          "mediaType": "application/xml",
           "outcome": "success",
-          "resourceId": "c4ddc9f5-8d08-4b64-ae39-fab01e3e7970",
+          "resourceId": "3f908e13-8503-4ba5-a96a-da5b4c09ca51",
           "sampleBytes": 4096,
-          "sampleSha256": "44d99d0f2a97ed69df7741f1e5c833f16d04e145cac3116570a8bb8f1acc1a93",
+          "sampleSha256": "18093894bb0f373bdde9c0a0e3980dfbf9d4b742c8b3a34e36ee8fe67183c8ef",
           "truncated": true
         }
       ],
       "outcome": "success",
       "reason": null,
-      "selectedResourceId": "c4ddc9f5-8d08-4b64-ae39-fab01e3e7970",
+      "selectedResourceId": "3f908e13-8503-4ba5-a96a-da5b4c09ca51",
       "sourceReferences": [
         "HKAPI-188"
       ],
@@ -9588,7 +8613,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 570,
+          "elapsedMs": 768,
           "finalHost": "rt.data.gov.hk",
           "format": "JSON",
           "httpStatus": 200,
@@ -9596,7 +8621,7 @@
           "outcome": "success",
           "resourceId": "96c5e827-3d3a-4110-8cd2-e7c80cd562bc",
           "sampleBytes": 4096,
-          "sampleSha256": "0b119d5cc400b0fc46dc732ed0d5720d8832ee08b5d95eab5c1c8bb13504cc87",
+          "sampleSha256": "ab68073d0e0e5126e08ce94604982ebcde1ac7ea5ad76626b33a89bf3ef15207",
           "truncated": true
         }
       ],
@@ -9684,7 +8709,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 7804,
+          "elapsedMs": 11295,
           "finalHost": "appapi.towngas.com",
           "format": "JSON",
           "httpStatus": 200,
@@ -9711,23 +8736,10 @@
         "parameters-required": 0,
         "ready": 1
       },
-      "attempts": [
-        {
-          "elapsedMs": 599,
-          "finalHost": "portal.csdi.gov.hk",
-          "format": "API",
-          "httpStatus": 206,
-          "mediaType": "text/html",
-          "outcome": "success",
-          "resourceId": "1545cf35-43a9-4380-b4d2-d232150c5c33",
-          "sampleBytes": 4096,
-          "sampleSha256": "aa930c77817a43d450bb9b27d28926ef8c5f7a763d3b9e0ea38f893e04b21b21",
-          "truncated": true
-        }
-      ],
-      "outcome": "success",
-      "reason": null,
-      "selectedResourceId": "1545cf35-43a9-4380-b4d2-d232150c5c33",
+      "attempts": [],
+      "outcome": "not-probeable",
+      "reason": "no-parameter-free-https-resource",
+      "selectedResourceId": null,
       "sourceReferences": [
         "HKAPI-224"
       ],
@@ -9735,12 +8747,12 @@
     }
   },
   "failures": 5,
-  "inventorySha256": "528da915711f0a227c0aebb6eba7937662f29ba960185b228fa7a3814e2f8c95",
+  "inventorySha256": "6712dc00ec2376bf45f7c5f30c11ffe4fad5993939184a5b80fd61ff0121516d",
   "maxCandidatesPerDataset": 3,
-  "notProbeable": 35,
+  "notProbeable": 111,
   "provenance": "live-bounded-payload-samples",
   "sampleLimitBytes": 4096,
   "schemaVersion": 1,
-  "successes": 310,
+  "successes": 234,
   "uniqueDatasets": 350
 }

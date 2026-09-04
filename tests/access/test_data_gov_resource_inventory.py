@@ -306,3 +306,37 @@ def test_probe_representatives_marks_legacy_only_dataset_not_probeable() -> None
 
     assert report["notProbeable"] == 1
     assert report["datasets"]["dataset-one"]["outcome"] == "not-probeable"
+
+
+def test_probe_representatives_skips_https_dataset_pages() -> None:
+    inventory = DataGovResourceInventory(
+        schema_version=1,
+        checked_at=datetime(2026, 9, 3, tzinfo=UTC),
+        package_endpoint="https://data.gov.hk/en-data/api/3/action/package_show",
+        resources=(
+            build_resource(
+                "dataset-one",
+                ("HKAPI-101",),
+                {
+                    "id": "landing-page",
+                    "name": "Dataset landing page",
+                    "format": "JSON",
+                    "url": "https://data.gov.hk/en-data/dataset/example",
+                },
+            ),
+        ),
+    )
+
+    class UnexpectedFetcher:
+        def fetch_sample(self, request: ApprovedRequest, *, sample_bytes: int) -> FetchSampleResult:
+            raise AssertionError("dataset pages must not be fetched as provider payloads")
+
+    report = probe_representatives(
+        inventory,
+        fetcher=UnexpectedFetcher(),
+        checked_at=datetime(2026, 9, 3, tzinfo=UTC),
+        inventory_sha256="a" * 64,
+    )
+
+    assert report["notProbeable"] == 1
+    assert report["datasets"]["dataset-one"]["outcome"] == "not-probeable"

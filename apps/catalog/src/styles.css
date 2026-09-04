@@ -1144,7 +1144,7 @@ button {
 
 .provider-resource-controls {
   display: grid;
-  grid-template-columns: minmax(320px, 1fr) 190px 170px auto;
+  grid-template-columns: minmax(280px, 1.3fr) repeat(4, minmax(135px, 0.65fr)) auto;
   align-items: end;
   gap: 18px;
   padding-bottom: 20px;
@@ -1304,6 +1304,21 @@ button {
   font-weight: 750;
 }
 
+.provider-verification-live-verified {
+  color: #187343;
+  font-weight: 750;
+}
+
+.provider-verification-failed {
+  color: #9b2c2c;
+  font-weight: 750;
+}
+
+.provider-verification-metadata-only {
+  color: #66635c;
+  font-weight: 750;
+}
+
 .provider-resource-url {
   min-width: 0;
 }
@@ -1457,6 +1472,31 @@ button {
   flex: 0 0 auto;
 }
 
+.provider-resource-evidence > dl {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 28px;
+  margin: 0;
+  padding: 4px 14px 14px;
+}
+
+.provider-resource-evidence > dl div {
+  display: grid;
+  gap: 3px;
+}
+
+.provider-resource-evidence dt {
+  color: var(--muted);
+  font-size: 0.68rem;
+  font-weight: 750;
+  text-transform: uppercase;
+}
+
+.provider-resource-evidence dd {
+  margin: 0;
+  font-size: 0.76rem;
+}
+
 .provider-resource-usage .copy-announcement {
   margin-inline: 12px;
 }
@@ -1546,7 +1586,7 @@ button {
   }
 
   .provider-resource-controls {
-    grid-template-columns: minmax(280px, 1fr) 180px 160px;
+    grid-template-columns: minmax(280px, 1fr) repeat(2, minmax(160px, 0.6fr));
   }
 
   .provider-resource-clear {

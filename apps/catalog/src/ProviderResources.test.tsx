@@ -20,6 +20,18 @@ const inventory = {
       urlTemplate: "https://rt.data.gov.hk/v2/transport/nlb/route.php?action=list",
       templateParameters: [],
       access: "ready",
+      transport: "https",
+      resourceKind: "api",
+      verification: {
+        status: "live-verified",
+        checkedAt: "2026-09-03T04:00:00Z",
+        datasetOutcome: "success",
+        httpStatus: 200,
+        mediaType: "application/json",
+        sampleBytes: 4096,
+        elapsedMs: 120,
+        errorCode: null,
+      },
     },
     {
       schemaVersion: 1,
@@ -31,6 +43,18 @@ const inventory = {
       urlTemplate: "https://example.gov.hk/flights?date=<date>&lang=en",
       templateParameters: ["date"],
       access: "parameters-required",
+      transport: "https",
+      resourceKind: "api",
+      verification: {
+        status: "live-verified",
+        checkedAt: "2026-09-03T04:00:00Z",
+        datasetOutcome: "success",
+        httpStatus: 200,
+        mediaType: "application/json",
+        sampleBytes: 4096,
+        elapsedMs: 150,
+        errorCode: null,
+      },
     },
     {
       schemaVersion: 1,
@@ -42,6 +66,18 @@ const inventory = {
       urlTemplate: "http://example.gov.hk/statistics.csv",
       templateParameters: [],
       access: "insecure-http",
+      transport: "http",
+      resourceKind: "file",
+      verification: {
+        status: "metadata-only",
+        checkedAt: "2026-09-03T03:57:42.512644Z",
+        datasetOutcome: "not-probeable",
+        httpStatus: null,
+        mediaType: null,
+        sampleBytes: null,
+        elapsedMs: null,
+        errorCode: null,
+      },
     },
   ],
 } as const;
@@ -66,7 +102,7 @@ describe("provider-resource browser", () => {
 
     render(<App catalogue={fixtureCatalogue} initialLocale="en" />);
 
-    expect(await screen.findByRole("heading", { name: "Browse exact provider resources" })).toBeVisible();
+    expect(await screen.findByRole("heading", { name: "Browse provider files and endpoints" })).toBeVisible();
     expect(await screen.findByRole("heading", { name: "3 resources" })).toBeVisible();
     expect(fetchSpy).toHaveBeenCalledTimes(1);
     expect(String(fetchSpy.mock.calls[0]?.[0])).toBe("/data-gov-resources.json");
@@ -78,11 +114,11 @@ describe("provider-resource browser", () => {
     expect(screen.getByText("Historical flight schedule")).toBeVisible();
 
     await user.clear(screen.getByRole("searchbox"));
-    await user.selectOptions(screen.getByLabelText("Access"), "insecure-http");
+    await user.selectOptions(screen.getByLabelText("URL status"), "insecure-http");
     expect(screen.getByRole("heading", { name: "1 resource" })).toBeVisible();
     expect(screen.getByText("Legacy statistics")).toBeVisible();
 
-    await user.selectOptions(screen.getByLabelText("Access"), "all");
+    await user.selectOptions(screen.getByLabelText("URL status"), "all");
     await user.selectOptions(screen.getByLabelText("Format"), "JSON");
     expect(screen.getByRole("heading", { name: "1 resource" })).toBeVisible();
     expect(screen.getByText("Bus route information")).toBeVisible();
@@ -130,7 +166,7 @@ describe("provider-resource browser", () => {
     const user = userEvent.setup();
 
     render(<App catalogue={fixtureCatalogue} initialLocale="en" />);
-    await screen.findByRole("heading", { name: "Browse exact provider resources" });
+    await screen.findByRole("heading", { name: "Browse provider files and endpoints" });
     await user.click(screen.getByRole("button", { name: "Back to catalogue" }));
 
     expect(screen.getByRole("heading", { name: "Hong Kong public data, mapped and runnable." })).toBeVisible();

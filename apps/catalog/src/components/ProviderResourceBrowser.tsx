@@ -22,6 +22,8 @@ import type {
   ProviderResource,
   ProviderResourceAccess,
   ProviderResourceInventory,
+  ProviderResourceKind,
+  ProviderResourceVerificationStatus,
 } from "../types";
 
 interface ProviderResourceBrowserProps {
@@ -39,19 +41,23 @@ const languageLabels: Record<ProviderResourceLanguage, string> = {
 
 const messages = {
   en: {
-    breadcrumb: "Provider resources",
-    heading: "Browse exact provider resources",
+    breadcrumb: "Provider files and endpoints",
+    heading: "Browse provider files and endpoints",
     summary: (total: number, datasets: number) =>
       `Search ${total.toLocaleString("en-HK")} provider files and API endpoints mapped from ${datasets.toLocaleString("en-HK")} DATA.GOV.HK datasets. Browsing stays local; providers are contacted only if you open a resource or run a command.`,
-    ready: "Ready HTTPS",
+    ready: "HTTPS URL",
     parameters: "Parameters needed",
     insecure: "HTTP only",
     invalid: "Invalid URL",
     search: "Search datasets, resource names, formats or URLs…",
-    access: "Access",
+    access: "URL status",
+    kind: "Resource type",
+    verification: "Payload evidence",
     format: "Format",
     allAccess: "All access",
     allFormats: "All formats",
+    allKinds: "All resource types",
+    allVerification: "All evidence states",
     clear: "Clear filters",
     results: (count: number) => `${count.toLocaleString("en-HK")} ${count === 1 ? "resource" : "resources"}`,
     checked: "Inventory checked",
@@ -75,21 +81,44 @@ const messages = {
     retry: "Retry",
     back: "Back to catalogue",
     openResource: "Open provider resource",
+    liveVerified: "Payload verified",
+    failed: "Probe failed",
+    metadataOnly: "Metadata only",
+    evidenceChecked: "Evidence checked",
+    observedMedia: "Observed media type",
+    directUnavailable:
+      "Runnable code is offered only for direct files and API endpoints that passed a bounded payload check. Open this provider page for the authoritative access path.",
+    unverifiedUnavailable:
+      "This appears to be a direct file or API, but this exact resource has not passed a bounded payload check. Open the resource and verify it before adapting code.",
+    failedUnavailable:
+      "The latest bounded attempt for this exact resource did not succeed, so runnable code is withheld.",
+    kindLabels: {
+      api: "API endpoint",
+      file: "Direct file",
+      "dataset-page": "Dataset page",
+      geoportal: "Geoportal",
+      "web-page": "Web page",
+      unknown: "Unclassified",
+    },
   },
   "zh-Hant": {
     breadcrumb: "供應者資源",
-    heading: "瀏覽準確的供應者資源",
+    heading: "瀏覽供應者檔案及端點",
     summary: (total: number, datasets: number) =>
       `搜尋 ${total.toLocaleString("zh-HK")} 個供應者檔案及 API 端點，涵蓋 ${datasets.toLocaleString("zh-HK")} 個 DATA.GOV.HK 數據集。瀏覽只在本機進行；只有開啟資源或執行指令時才會聯絡供應者。`,
-    ready: "HTTPS 可用",
+    ready: "HTTPS 網址",
     parameters: "需要參數",
     insecure: "只提供 HTTP",
     invalid: "網址無效",
     search: "搜尋數據集、資源名稱、格式或網址…",
-    access: "存取狀態",
+    access: "網址狀態",
+    kind: "資源類型",
+    verification: "內容核實證據",
     format: "格式",
     allAccess: "全部存取狀態",
     allFormats: "全部格式",
+    allKinds: "全部資源類型",
+    allVerification: "全部證據狀態",
     clear: "清除篩選",
     results: (count: number) => `${count.toLocaleString("zh-HK")} 項資源`,
     checked: "資源清單核查日期",
@@ -112,6 +141,22 @@ const messages = {
     retry: "重試",
     back: "返回資源目錄",
     openResource: "開啟供應者資源",
+    liveVerified: "已核實內容",
+    failed: "核查失敗",
+    metadataOnly: "只核實元數據",
+    evidenceChecked: "證據核查日期",
+    observedMedia: "觀察所得媒體類型",
+    directUnavailable: "只有通過有界限內容核查的直接檔案及 API 端點才會提供可執行程式碼。請開啟供應者頁面查閱官方存取方式。",
+    unverifiedUnavailable: "此項目看似直接檔案或 API，但尚未通過個別有界限內容核查。請先開啟並核實資源，再調整程式碼。",
+    failedUnavailable: "此項資源最近一次有界限核查未能成功，因此不會提供可執行程式碼。",
+    kindLabels: {
+      api: "API 端點",
+      file: "直接檔案",
+      "dataset-page": "數據集頁面",
+      geoportal: "空間數據平台",
+      "web-page": "網頁",
+      unknown: "未分類",
+    },
   },
 } as const;
 
@@ -125,6 +170,15 @@ function accessLabel(access: ProviderResourceAccess, locale: Locale): string {
   }[access];
 }
 
+function verificationLabel(status: ProviderResourceVerificationStatus, locale: Locale): string {
+  const text = messages[locale];
+  return {
+    "live-verified": text.liveVerified,
+    failed: text.failed,
+    "metadata-only": text.metadataOnly,
+  }[status];
+}
+
 export function ProviderResourceBrowser({ locale, onBack }: ProviderResourceBrowserProps) {
   const [inventory, setInventory] = useState<ProviderResourceInventory>();
   const [error, setError] = useState<string>();
@@ -133,6 +187,8 @@ export function ProviderResourceBrowser({ locale, onBack }: ProviderResourceBrow
   const [query, setQuery] = useState(initialSource);
   const [access, setAccess] = useState<ProviderResourceAccess | "all">("all");
   const [format, setFormat] = useState("all");
+  const [kind, setKind] = useState<ProviderResourceKind | "all">("all");
+  const [verification, setVerification] = useState<ProviderResourceVerificationStatus | "all">("all");
   const [visibleLimit, setVisibleLimit] = useState(PAGE_SIZE);
   const [expandedKey, setExpandedKey] = useState<string>();
   const text = messages[locale];
@@ -153,9 +209,9 @@ export function ProviderResourceBrowser({ locale, onBack }: ProviderResourceBrow
   const filtered = useMemo(
     () =>
       inventory
-        ? filterProviderResources(inventory.resources, { query, access, format })
+        ? filterProviderResources(inventory.resources, { query, access, format, kind, verification })
         : [],
-    [access, format, inventory, query],
+    [access, format, inventory, kind, query, verification],
   );
   const formats = useMemo(
     () => (inventory ? providerResourceFormats(inventory.resources) : []),
@@ -174,12 +230,14 @@ export function ProviderResourceBrowser({ locale, onBack }: ProviderResourceBrow
   useEffect(() => {
     setVisibleLimit(PAGE_SIZE);
     setExpandedKey(undefined);
-  }, [access, format, query]);
+  }, [access, format, kind, query, verification]);
 
   const clearFilters = () => {
     setQuery("");
     setAccess("all");
     setFormat("all");
+    setKind("all");
+    setVerification("all");
     window.history.replaceState({}, "", `${import.meta.env.BASE_URL}provider-resources/`);
   };
 
@@ -261,6 +319,24 @@ export function ProviderResourceBrowser({ locale, onBack }: ProviderResourceBrow
           </select>
         </label>
         <label>
+          <span>{text.kind}</span>
+          <select value={kind} onChange={(event) => setKind(event.target.value as ProviderResourceKind | "all")}>
+            <option value="all">{text.allKinds}</option>
+            {(Object.keys(text.kindLabels) as ProviderResourceKind[]).map((value) => (
+              <option key={value} value={value}>{text.kindLabels[value]}</option>
+            ))}
+          </select>
+        </label>
+        <label>
+          <span>{text.verification}</span>
+          <select value={verification} onChange={(event) => setVerification(event.target.value as ProviderResourceVerificationStatus | "all")}>
+            <option value="all">{text.allVerification}</option>
+            <option value="live-verified">{text.liveVerified}</option>
+            <option value="failed">{text.failed}</option>
+            <option value="metadata-only">{text.metadataOnly}</option>
+          </select>
+        </label>
+        <label>
           <span>{text.format}</span>
           <select value={format} onChange={(event) => setFormat(event.target.value)}>
             <option value="all">{text.allFormats}</option>
@@ -272,7 +348,7 @@ export function ProviderResourceBrowser({ locale, onBack }: ProviderResourceBrow
         <button
           className="provider-resource-clear"
           type="button"
-          disabled={!query && access === "all" && format === "all"}
+          disabled={!query && access === "all" && format === "all" && kind === "all" && verification === "all"}
           onClick={clearFilters}
         >
           {text.clear}
@@ -335,7 +411,9 @@ function ProviderResourceRow({ locale, resource, expanded, onToggle }: ProviderR
       <dl className="provider-resource-metadata">
         <div><dt>{text.source}</dt><dd>{resource.sourceReferences.join(", ")}</dd></div>
         <div><dt>{text.format}</dt><dd>{resource.format}</dd></div>
+        <div><dt>{text.kind}</dt><dd>{text.kindLabels[resource.resourceKind]}</dd></div>
         <div><dt>{text.access}</dt><dd className={`provider-access provider-access-${resource.access}`}>{accessLabel(resource.access, locale)}</dd></div>
+        <div><dt>{text.verification}</dt><dd className={`provider-verification provider-verification-${resource.verification.status}`}>{verificationLabel(resource.verification.status, locale)}</dd></div>
       </dl>
       <div className="provider-resource-url">
         {safeLink ? (
@@ -361,6 +439,7 @@ function ProviderResourceUsage({ locale, resource }: { locale: Locale; resource:
   const [announcement, setAnnouncement] = useState("");
   const command = renderProviderResourceCommand(resource, language, parameters);
   const unsafe = resource.access === "insecure-http" || resource.access === "invalid-url";
+  const direct = resource.resourceKind === "api" || resource.resourceKind === "file";
   const copyCommand = useCallback(async () => {
     if (!command) return;
     try {
@@ -373,6 +452,22 @@ function ProviderResourceUsage({ locale, resource }: { locale: Locale; resource:
 
   if (unsafe) {
     return <p className="provider-resource-unsafe"><AlertTriangle aria-hidden="true" size={20} />{text.unsafe}</p>;
+  }
+  if (!direct || resource.verification.status !== "live-verified") {
+    const message = !direct
+      ? text.directUnavailable
+      : resource.verification.status === "failed"
+        ? text.failedUnavailable
+        : text.unverifiedUnavailable;
+    return (
+      <section className="provider-resource-usage provider-resource-evidence" aria-label={`${text.verification}: ${resource.name}`}>
+        <p className="provider-resource-unsafe"><AlertTriangle aria-hidden="true" size={20} />{message}</p>
+        <dl>
+          <div><dt>{text.evidenceChecked}</dt><dd>{new Date(resource.verification.checkedAt).toLocaleString(locale === "en" ? "en-HK" : "zh-HK")}</dd></div>
+          <div><dt>{text.observedMedia}</dt><dd>{resource.verification.mediaType ?? "—"}</dd></div>
+        </dl>
+      </section>
+    );
   }
   return (
     <section className="provider-resource-usage" aria-label={`${text.viewUsage}: ${resource.name}`}>

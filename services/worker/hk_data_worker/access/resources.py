@@ -16,7 +16,28 @@ from .models import AccessContractModel
 
 RESOURCE_SIZE_LIMIT = 25 * 1024 * 1024
 ResourceAccess = Literal["ready", "parameters-required", "insecure-http", "invalid-url"]
+ResourceTransport = Literal["https", "http", "invalid"]
+ResourceKind = Literal["api", "file", "dataset-page", "geoportal", "web-page", "unknown"]
 _PLACEHOLDER = re.compile(r"\{([A-Za-z][A-Za-z0-9_]*)\}|<([A-Za-z][A-Za-z0-9_]*)>")
+_FILE_FORMATS = {
+    "CSV",
+    "GEOJSON",
+    "GML",
+    "GTFS",
+    "JPEG",
+    "JPG",
+    "JSON",
+    "KML",
+    "KMZ",
+    "PDF",
+    "PNG",
+    "RSS",
+    "TXT",
+    "XLS",
+    "XLSX",
+    "XML",
+    "ZIP",
+}
 _FORMAT_PRIORITY = {
     "API": 0,
     "JSON": 1,
@@ -38,6 +59,8 @@ class DataGovResource(AccessContractModel):
     url_template: Annotated[str, Field(min_length=1)]
     template_parameters: tuple[str, ...]
     access: ResourceAccess
+    transport: ResourceTransport
+    resource_kind: ResourceKind
 
 
 class DataGovResourceInventory(AccessContractModel):
@@ -70,6 +93,42 @@ def _resource_access(url: str, parameters: tuple[str, ...]) -> ResourceAccess:
     return "parameters-required" if parameters else "ready"
 
 
+def _resource_transport(url: str) -> ResourceTransport:
+    try:
+        parsed = urlsplit(url)
+        port = parsed.port
+    except ValueError:
+        return "invalid"
+    if parsed.scheme == "https" and parsed.hostname and port in {None, 443}:
+        return "https"
+    if parsed.scheme == "http" and parsed.hostname and port in {None, 80}:
+        return "http"
+    return "invalid"
+
+
+def _resource_kind(url: str, format_name: str) -> ResourceKind:
+    try:
+        parsed = urlsplit(url)
+    except ValueError:
+        return "unknown"
+    hostname = (parsed.hostname or "").lower().rstrip(".")
+    path = parsed.path.lower()
+    normalized_format = format_name.upper()
+    if hostname == "data.gov.hk" and re.match(r"^/(?:en|tc)-data/dataset(?:/|$)", path):
+        return "dataset-page"
+    if hostname == "portal.csdi.gov.hk":
+        return "geoportal"
+    if normalized_format == "API" or _PLACEHOLDER.search(url) or any(
+        marker in path for marker in ("/api/", "/rest/", "/odata/", "/action/")
+    ):
+        return "api"
+    if normalized_format in _FILE_FORMATS:
+        return "file"
+    if normalized_format in {"HTML", "HTM", "WEB", "URL"} or path.endswith((".html", ".htm")):
+        return "web-page"
+    return "unknown"
+
+
 def build_resource(
     dataset_id: str,
     source_references: Sequence[str],
@@ -99,6 +158,8 @@ def build_resource(
         url_template=url,
         template_parameters=parameters,
         access=_resource_access(url, parameters),
+        transport=_resource_transport(url),
+        resource_kind=_resource_kind(url, format_name),
     )
 
 
@@ -137,6 +198,12 @@ def resolve_resource_url(
     resource: DataGovResource,
     parameters: Mapping[str, str],
 ) -> str:
+    if resource.resource_kind not in {"api", "file"}:
+        raise AccessFailure(
+            "RESOURCE_NOT_DIRECT",
+            "Resource fetching is available only for a classified direct file or API endpoint.",
+            source_reference=resource.source_references[0],
+        )
     if resource.access in {"insecure-http", "invalid-url"}:
         raise AccessFailure(
             "UNSAFE_RESOURCE_URL",
@@ -222,11 +289,21 @@ def rank_resources(resources: Sequence[DataGovResource]) -> tuple[DataGovResourc
         "insecure-http": 2,
         "invalid-url": 3,
     }
+    kind_priority = {
+        "api": 0,
+        "file": 1,
+        "dataset-page": 2,
+        "geoportal": 3,
+        "web-page": 4,
+        "unknown": 5,
+    }
     return tuple(
         sorted(
             resources,
             key=lambda item: (
+                0 if item.resource_kind in {"api", "file"} else 1,
                 access_priority[item.access],
+                kind_priority[item.resource_kind],
                 _FORMAT_PRIORITY.get(item.format, 100),
                 item.name.casefold(),
                 item.resource_id,

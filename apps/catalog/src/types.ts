@@ -168,6 +168,27 @@ export type ProviderResourceAccess =
   | "insecure-http"
   | "invalid-url";
 
+export type ProviderResourceKind =
+  | "api"
+  | "file"
+  | "dataset-page"
+  | "geoportal"
+  | "web-page"
+  | "unknown";
+
+export type ProviderResourceVerificationStatus = "live-verified" | "failed" | "metadata-only";
+
+export interface ProviderResourceVerification {
+  status: ProviderResourceVerificationStatus;
+  checkedAt: string;
+  datasetOutcome: "success" | "failure" | "not-probeable" | "unknown";
+  httpStatus: number | null;
+  mediaType: string | null;
+  sampleBytes: number | null;
+  elapsedMs: number | null;
+  errorCode: string | null;
+}
+
 export interface ProviderResource {
   schemaVersion: 1;
   sourceReferences: string[];
@@ -178,6 +199,9 @@ export interface ProviderResource {
   urlTemplate: string;
   templateParameters: string[];
   access: ProviderResourceAccess;
+  transport: "https" | "http" | "invalid";
+  resourceKind: ProviderResourceKind;
+  verification: ProviderResourceVerification;
 }
 
 export interface ProviderResourceInventory {

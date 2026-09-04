@@ -21,6 +21,15 @@ describe("static catalogue build", () => {
       readFileSync(resolve(appRoot, "dist/data-gov-resources.json"), "utf8"),
     );
     expect(providerResources.resources.length).toBeGreaterThan(5_000);
+    expect(providerResources.resources[0]).toHaveProperty("resourceKind");
+    expect(providerResources.resources[0]).toHaveProperty("transport");
+    expect(providerResources.resources[0]).toHaveProperty("verification.status");
+    expect(
+      providerResources.resources.some(
+        (resource: { verification: { status: string } }) =>
+          resource.verification.status === "live-verified",
+      ),
+    ).toBe(true);
 
     const providerBrowser = readFileSync(
       resolve(appRoot, "dist/provider-resources/index.html"),

@@ -43,7 +43,38 @@ def test_inventory_normalizes_current_ckan_resource_metadata() -> None:
         "urlTemplate": "https://api.example.hk/routes/{routeId}?language={language}",
         "templateParameters": ["routeId", "language"],
         "access": "parameters-required",
+        "transport": "https",
+        "resourceKind": "api",
     }
+
+
+@pytest.mark.parametrize(
+    ("url", "format_name", "expected"),
+    [
+        ("https://data.gov.hk/en-data/dataset/example", "JSON", "dataset-page"),
+        ("https://portal.csdi.gov.hk/geoportal/?id=example", "GML", "geoportal"),
+        ("https://example.hk/data.csv", "CSV", "file"),
+        ("https://example.hk/rest/current", "API", "api"),
+        ("https://example.hk/about.html", "HTML", "web-page"),
+    ],
+)
+def test_resource_kind_distinguishes_payloads_from_web_pages(
+    url: str, format_name: str, expected: str
+) -> None:
+    resource = _resource(url=url, format=format_name)
+
+    assert resource.resource_kind == expected
+
+
+def test_resource_request_refuses_dataset_landing_page() -> None:
+    resource = _resource(
+        url="https://data.gov.hk/en-data/dataset/hk-epd-lamppost-air-quality-lamppost",
+        format="JSON",
+    )
+
+    with pytest.raises(AccessFailure, match="direct file or API") as caught:
+        resource_request(resource, {}, max_bytes=65_536)
+    assert caught.value.code == "RESOURCE_NOT_DIRECT"
 
 
 def test_resolver_requires_every_placeholder_and_encodes_values() -> None:

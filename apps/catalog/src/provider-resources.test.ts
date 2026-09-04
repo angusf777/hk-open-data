@@ -17,6 +17,18 @@ const parameterized: ProviderResource = {
   urlTemplate: "https://example.gov.hk/flights?date=<date>&label={label}",
   templateParameters: ["date", "label"],
   access: "parameters-required",
+  transport: "https",
+  resourceKind: "api",
+  verification: {
+    status: "metadata-only",
+    checkedAt: "2026-09-03T03:57:42.512644Z",
+    datasetOutcome: "not-probeable",
+    httpStatus: null,
+    mediaType: null,
+    sampleBytes: null,
+    elapsedMs: null,
+    errorCode: null,
+  },
 };
 
 describe("provider-resource helpers", () => {
@@ -35,18 +47,38 @@ describe("provider-resource helpers", () => {
 
   it("generates bounded no-overwrite examples and shell-quotes CLI values", () => {
     const values = { date: "2026-09-02", label: "$(touch /tmp/nope)" };
-    expect(renderProviderResourceCommand(parameterized, "curl", values)).toMatch(
+    const verified = {
+      ...parameterized,
+      verification: { ...parameterized.verification, status: "live-verified" as const },
+    };
+    expect(renderProviderResourceCommand(verified, "curl", values)).toMatch(
       /--max-filesize 26214400 .*--no-clobber/,
     );
-    expect(renderProviderResourceCommand(parameterized, "python", values)).toContain(
+    expect(renderProviderResourceCommand(verified, "python", values)).toContain(
       'open("xb")',
     );
-    expect(renderProviderResourceCommand(parameterized, "node", values)).toContain(
+    expect(renderProviderResourceCommand(verified, "node", values)).toContain(
       '{ flag: "wx" }',
     );
-    expect(renderProviderResourceCommand(parameterized, "hkdata", values)).toContain(
+    expect(renderProviderResourceCommand(verified, "hkdata", values)).toContain(
       "--param 'label=$(touch /tmp/nope)'",
     );
+  });
+
+  it("generates commands only for direct resources with resource-level proof", () => {
+    const verified = {
+      ...parameterized,
+      verification: { ...parameterized.verification, status: "live-verified" as const },
+    };
+    expect(renderProviderResourceCommand(parameterized, "curl", { date: "2026-09-02", label: "x" })).toBeNull();
+    expect(renderProviderResourceCommand(verified, "curl", { date: "2026-09-02", label: "x" })).toContain("curl");
+    expect(
+      renderProviderResourceCommand(
+        { ...verified, resourceKind: "dataset-page" },
+        "curl",
+        { date: "2026-09-02", label: "x" },
+      ),
+    ).toBeNull();
   });
 
   it("searches across source, dataset and resource metadata while applying filters", () => {
@@ -63,6 +95,8 @@ describe("provider-resource helpers", () => {
         query: "HKAPI-076 arrivals",
         access: "ready",
         format: "JSON",
+        kind: "all",
+        verification: "all",
       }),
     ).toEqual([ready]);
   });
