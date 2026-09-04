@@ -249,6 +249,16 @@ export const dataGovResourceAccessSchema = z.enum([
   "invalid-url",
 ]);
 
+export const dataGovResourceTransportSchema = z.enum(["https", "http", "invalid"]);
+export const dataGovResourceKindSchema = z.enum([
+  "api",
+  "file",
+  "dataset-page",
+  "geoportal",
+  "web-page",
+  "unknown",
+]);
+
 export const dataGovResourceSchema = z
   .object({
     schemaVersion: z.literal(1),
@@ -260,6 +270,8 @@ export const dataGovResourceSchema = z
     urlTemplate: z.string().min(1),
     templateParameters: z.array(z.string().regex(/^[A-Za-z][A-Za-z0-9_]*$/)),
     access: dataGovResourceAccessSchema,
+    transport: dataGovResourceTransportSchema,
+    resourceKind: dataGovResourceKindSchema,
   })
   .strict()
   .superRefine((resource, context) => {
@@ -273,6 +285,17 @@ export const dataGovResourceSchema = z
     if (resource.access !== expected) {
       context.addIssue({ code: "custom", message: `resource access must be ${expected}` });
     }
+    const expectedTransport = resource.access === "insecure-http"
+      ? "http"
+      : resource.access === "invalid-url"
+        ? "invalid"
+        : "https";
+    if (resource.transport !== expectedTransport) {
+      context.addIssue({
+        code: "custom",
+        message: `resource transport must be ${expectedTransport}`,
+      });
+    }
     if (new Set(resource.sourceReferences).size !== resource.sourceReferences.length) {
       context.addIssue({ code: "custom", message: "source references must be unique" });
     }
@@ -281,16 +304,33 @@ export const dataGovResourceSchema = z
     }
   });
 
+export const dataGovDatasetSchema = z
+  .object({
+    schemaVersion: z.literal(1),
+    sourceReferences: z.array(z.string().regex(/^HKAPI-[0-9]{3}$/)).min(1),
+    datasetId: z.string().min(1),
+    title: z.string().min(1),
+    description: z.string(),
+    providerName: z.string().min(1).nullable(),
+    landingUrl: z.url().startsWith("https://"),
+    modifiedAt: z.string().min(1).nullable(),
+    resourceCount: z.number().int().nonnegative(),
+    formats: z.array(z.string().min(1)),
+  })
+  .strict();
+
 export const dataGovResourceInventorySchema = z
   .object({
     schemaVersion: z.literal(1),
     checkedAt: z.iso.datetime(),
     packageEndpoint: z.url().startsWith("https://"),
+    datasets: z.array(dataGovDatasetSchema).default([]),
     resources: z.array(dataGovResourceSchema),
   })
   .strict();
 
 export type DataGovResource = z.infer<typeof dataGovResourceSchema>;
+export type DataGovDataset = z.infer<typeof dataGovDatasetSchema>;
 export type DataGovResourceInventory = z.infer<typeof dataGovResourceInventorySchema>;
 
 const workspaceRoot = resolve(dirname(fileURLToPath(import.meta.url)), "../../..");

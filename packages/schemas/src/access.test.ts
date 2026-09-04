@@ -84,6 +84,9 @@ describe("DATA.GOV.HK resource inventory contract", () => {
     expect(inventory.resources.every((resource) => resource.sourceReferences.length > 0)).toBe(
       true,
     );
+    expect(inventory.datasets).toHaveLength(350);
+    expect(inventory.resources[0]).toHaveProperty("resourceKind");
+    expect(inventory.resources[0]).toHaveProperty("transport");
   });
 
   it("rejects an HTTPS template incorrectly labelled ready", () => {
@@ -103,6 +106,8 @@ describe("DATA.GOV.HK resource inventory contract", () => {
             urlTemplate: "https://example.hk/stops/{routeId}",
             templateParameters: ["routeId"],
             access: "ready",
+            transport: "https",
+            resourceKind: "api",
           },
         ],
       }),
