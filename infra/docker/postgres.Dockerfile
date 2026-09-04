@@ -1,4 +1,4 @@
-FROM postgis/postgis:16-3.5-alpine
+FROM postgis/postgis:17-3.5-alpine
 
 RUN apk upgrade --no-cache \
     && apk add --no-cache gosu=1.19-r4 \
