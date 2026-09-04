@@ -63,10 +63,24 @@ class DataGovResource(AccessContractModel):
     resource_kind: ResourceKind
 
 
+class DataGovDataset(AccessContractModel):
+    schema_version: Literal[1] = 1
+    source_references: tuple[Annotated[str, Field(pattern=r"^HKAPI-[0-9]{3}$")], ...]
+    dataset_id: Annotated[str, Field(min_length=1)]
+    title: Annotated[str, Field(min_length=1)]
+    description: str
+    provider_name: str | None
+    landing_url: Annotated[str, Field(pattern=r"^https://")]
+    modified_at: str | None
+    resource_count: Annotated[int, Field(ge=0)]
+    formats: tuple[str, ...]
+
+
 class DataGovResourceInventory(AccessContractModel):
     schema_version: Literal[1]
     checked_at: datetime
     package_endpoint: Annotated[str, Field(pattern=r"^https://")]
+    datasets: tuple[DataGovDataset, ...] = ()
     resources: tuple[DataGovResource, ...]
 
 

@@ -204,10 +204,24 @@ export interface ProviderResource {
   verification: ProviderResourceVerification;
 }
 
+export interface ProviderDataset {
+  schemaVersion: 1;
+  sourceReferences: string[];
+  datasetId: string;
+  title: string;
+  description: string;
+  providerName: string | null;
+  landingUrl: string;
+  modifiedAt: string | null;
+  resourceCount: number;
+  formats: string[];
+}
+
 export interface ProviderResourceInventory {
   schemaVersion: 1;
   checkedAt: string;
   packageEndpoint: string;
+  datasets: ProviderDataset[];
   resources: ProviderResource[];
 }
 
@@ -222,5 +236,6 @@ export interface ResourceFilters {
 declare global {
   interface Window {
     __HK_OPEN_DATA_RESOURCE_ID__?: string;
+    __HK_OPEN_DATA_DATASET_ID__?: string;
   }
 }

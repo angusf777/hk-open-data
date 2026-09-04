@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-09-04T03:13:33.770563Z",
+  "checkedAt": "2026-09-04T03:20:20.416715Z",
   "datasets": {
     "aahk-team1-flight-info": {
       "accessCounts": {
@@ -26,7 +26,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 445,
+          "elapsedMs": 980,
           "finalHost": "api.amigo.taxi",
           "format": "JSON",
           "httpStatus": 200,
@@ -34,7 +34,7 @@
           "outcome": "success",
           "resourceId": "0044fd2e-945f-4b33-938d-1c3d0aad43c4",
           "sampleBytes": 4096,
-          "sampleSha256": "f32fcbeb68a994758149175f5a4dd14a3f2d9343846e4d9910632ece90fe2993",
+          "sampleSha256": "a7e4ce96907f5b172d2dba9af33042fd50e21d11b26b5bd097766f4c7a6e0848",
           "truncated": true
         }
       ],
@@ -55,7 +55,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 251,
+          "elapsedMs": 331,
           "finalHost": "data.bigboss.hk",
           "format": "JSON",
           "httpStatus": 200,
@@ -63,7 +63,7 @@
           "outcome": "success",
           "resourceId": "5e0c3e93-1e57-4a1b-87f9-c7fbbd79ef56",
           "sampleBytes": 4096,
-          "sampleSha256": "c90105018d8a8d45147b696b35c64da0dec964492a0ad5e1d666ab0880358810",
+          "sampleSha256": "3c10c7c3cf7a9fdb3d4c74aad7e5f9e157a6faf0ce0488a7458f09cc2afd2921",
           "truncated": true
         }
       ],
@@ -84,7 +84,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 666,
+          "elapsedMs": 476,
           "finalHost": "www.cfs.gov.hk",
           "format": "XML",
           "httpStatus": 206,
@@ -113,7 +113,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 626,
+          "elapsedMs": 443,
           "finalHost": "www.cfs.gov.hk",
           "format": "JSON",
           "httpStatus": 206,
@@ -142,7 +142,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 102,
+          "elapsedMs": 122,
           "finalHost": "api.clp.com.hk",
           "format": "JSON",
           "httpStatus": 403,
@@ -331,7 +331,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 164,
+          "elapsedMs": 262,
           "finalHost": "www.eac.hk",
           "format": "JSON",
           "httpStatus": 206,
@@ -408,7 +408,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 143,
+          "elapsedMs": 254,
           "finalHost": "www.archsd.gov.hk",
           "format": "JSON",
           "httpStatus": 206,
@@ -437,7 +437,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 142,
+          "elapsedMs": 178,
           "finalHost": "www.archsd.gov.hk",
           "format": "JSON",
           "httpStatus": 206,
@@ -466,7 +466,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 379,
+          "elapsedMs": 407,
           "finalHost": "static.csdi.gov.hk",
           "format": "CSV",
           "httpStatus": 200,
@@ -527,7 +527,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 93,
+          "elapsedMs": 132,
           "finalHost": "static.data.gov.hk",
           "format": "CSV",
           "httpStatus": 206,
@@ -556,7 +556,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 144,
+          "elapsedMs": 199,
           "finalHost": "www.bd.gov.hk",
           "format": "CSV",
           "httpStatus": 206,
@@ -729,7 +729,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 244,
+          "elapsedMs": 225,
           "finalHost": "data.cr.gov.hk",
           "format": "API",
           "httpStatus": 200,
@@ -774,7 +774,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 447,
+          "elapsedMs": 871,
           "finalHost": "www.cr.gov.hk",
           "format": "XLS",
           "httpStatus": 206,
@@ -803,7 +803,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 429,
+          "elapsedMs": 1065,
           "finalHost": "www.cr.gov.hk",
           "format": "CSV",
           "httpStatus": 206,
@@ -832,7 +832,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 417,
+          "elapsedMs": 1236,
           "finalHost": "www.cr.gov.hk",
           "format": "CSV",
           "httpStatus": 206,
@@ -861,7 +861,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 273,
+          "elapsedMs": 1253,
           "finalHost": "www.cr.gov.hk",
           "format": "CSV",
           "httpStatus": 206,
@@ -890,7 +890,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 743,
+          "elapsedMs": 1111,
           "finalHost": "www.cr.gov.hk",
           "format": "CSV",
           "httpStatus": 200,
@@ -919,7 +919,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 422,
+          "elapsedMs": 211,
           "finalHost": "www.csb.gov.hk",
           "format": "JSON",
           "httpStatus": 206,
@@ -948,7 +948,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 1099,
+          "elapsedMs": 1953,
           "finalHost": "www.tourism.gov.hk",
           "format": "CSV",
           "httpStatus": 200,
@@ -977,7 +977,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 908,
+          "elapsedMs": 1309,
           "finalHost": "www.tourism.gov.hk",
           "format": "CSV",
           "httpStatus": 200,
@@ -1006,7 +1006,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 929,
+          "elapsedMs": 867,
           "finalHost": "www.tourism.gov.hk",
           "format": "CSV",
           "httpStatus": 206,
@@ -1035,7 +1035,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 1309,
+          "elapsedMs": 875,
           "finalHost": "www.tourism.gov.hk",
           "format": "CSV",
           "httpStatus": 200,
@@ -1064,7 +1064,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 861,
+          "elapsedMs": 778,
           "finalHost": "www.tourism.gov.hk",
           "format": "CSV",
           "httpStatus": 206,
@@ -1093,7 +1093,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 916,
+          "elapsedMs": 902,
           "finalHost": "www.tourism.gov.hk",
           "format": "CSV",
           "httpStatus": 200,
@@ -1122,7 +1122,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 1249,
+          "elapsedMs": 1316,
           "finalHost": "www.tourism.gov.hk",
           "format": "CSV",
           "httpStatus": 200,
@@ -1151,7 +1151,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 909,
+          "elapsedMs": 897,
           "finalHost": "www.tourism.gov.hk",
           "format": "CSV",
           "httpStatus": 200,
@@ -1180,7 +1180,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 1204,
+          "elapsedMs": 814,
           "finalHost": "www.tourism.gov.hk",
           "format": "CSV",
           "httpStatus": 206,
@@ -1209,7 +1209,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 1391,
+          "elapsedMs": 1428,
           "finalHost": "www.tourism.gov.hk",
           "format": "CSV",
           "httpStatus": 200,
@@ -1238,7 +1238,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 888,
+          "elapsedMs": 880,
           "finalHost": "www.tourism.gov.hk",
           "format": "CSV",
           "httpStatus": 200,
@@ -1267,7 +1267,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 877,
+          "elapsedMs": 1159,
           "finalHost": "www.tourism.gov.hk",
           "format": "CSV",
           "httpStatus": 206,
@@ -1296,7 +1296,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 891,
+          "elapsedMs": 867,
           "finalHost": "www.tourism.gov.hk",
           "format": "CSV",
           "httpStatus": 206,
@@ -1325,7 +1325,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 886,
+          "elapsedMs": 854,
           "finalHost": "www.customs.gov.hk",
           "format": "CSV",
           "httpStatus": 206,
@@ -1354,7 +1354,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 502,
+          "elapsedMs": 228,
           "finalHost": "www.chp.gov.hk",
           "format": "CSV",
           "httpStatus": 206,
@@ -1415,7 +1415,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 184,
+          "elapsedMs": 183,
           "finalHost": "www.chp.gov.hk",
           "format": "CSV",
           "httpStatus": 206,
@@ -1460,7 +1460,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 171,
+          "elapsedMs": 156,
           "finalHost": "www.chp.gov.hk",
           "format": "CSV",
           "httpStatus": 206,
@@ -1534,7 +1534,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 178,
+          "elapsedMs": 168,
           "finalHost": "www.chp.gov.hk",
           "format": "CSV",
           "httpStatus": 206,
@@ -1563,7 +1563,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 149,
+          "elapsedMs": 167,
           "finalHost": "www.chp.gov.hk",
           "format": "CSV",
           "httpStatus": 206,
@@ -1592,7 +1592,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 145,
+          "elapsedMs": 200,
           "finalHost": "www.chp.gov.hk",
           "format": "CSV",
           "httpStatus": 206,
@@ -1621,7 +1621,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 193,
+          "elapsedMs": 199,
           "finalHost": "www.chp.gov.hk",
           "format": "CSV",
           "httpStatus": 206,
@@ -1650,7 +1650,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 220,
+          "elapsedMs": 219,
           "finalHost": "www.chp.gov.hk",
           "format": "CSV",
           "httpStatus": 206,
@@ -1679,7 +1679,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 207,
+          "elapsedMs": 143,
           "finalHost": "www.chp.gov.hk",
           "format": "CSV",
           "httpStatus": 206,
@@ -1708,7 +1708,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 183,
+          "elapsedMs": 163,
           "finalHost": "www.chp.gov.hk",
           "format": "CSV",
           "httpStatus": 206,
@@ -1737,7 +1737,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 168,
+          "elapsedMs": 160,
           "finalHost": "www.chp.gov.hk",
           "format": "CSV",
           "httpStatus": 206,
@@ -1766,7 +1766,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 159,
+          "elapsedMs": 157,
           "finalHost": "www.chp.gov.hk",
           "format": "CSV",
           "httpStatus": 206,
@@ -1811,7 +1811,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 159,
+          "elapsedMs": 203,
           "finalHost": "www.chp.gov.hk",
           "format": "CSV",
           "httpStatus": 206,
@@ -1840,7 +1840,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 147,
+          "elapsedMs": 232,
           "finalHost": "www.chp.gov.hk",
           "format": "CSV",
           "httpStatus": 206,
@@ -1869,7 +1869,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 172,
+          "elapsedMs": 222,
           "finalHost": "www.chp.gov.hk",
           "format": "CSV",
           "httpStatus": 206,
@@ -1898,7 +1898,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 562,
+          "elapsedMs": 605,
           "finalHost": "www.cmchk.org.hk",
           "format": "XML",
           "httpStatus": 206,
@@ -1975,7 +1975,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 316,
+          "elapsedMs": 216,
           "finalHost": "www.rrc.gov.hk",
           "format": "XML",
           "httpStatus": 206,
@@ -2004,7 +2004,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 193,
+          "elapsedMs": 168,
           "finalHost": "www.chp.gov.hk",
           "format": "CSV",
           "httpStatus": 206,
@@ -2033,7 +2033,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 582,
+          "elapsedMs": 355,
           "finalHost": "resource.data.one.gov.hk",
           "format": "ZIP",
           "httpStatus": 206,
@@ -2062,7 +2062,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 675,
+          "elapsedMs": 473,
           "finalHost": "resource.data.one.gov.hk",
           "format": "ZIP",
           "httpStatus": 206,
@@ -2091,7 +2091,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 263,
+          "elapsedMs": 226,
           "finalHost": "resource.data.one.gov.hk",
           "format": "JSON",
           "httpStatus": 206,
@@ -2120,7 +2120,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 157,
+          "elapsedMs": 244,
           "finalHost": "rt.data.gov.hk",
           "format": "JSON",
           "httpStatus": 422,
@@ -2131,7 +2131,7 @@
           "truncated": false
         },
         {
-          "elapsedMs": 137,
+          "elapsedMs": 278,
           "finalHost": "rt.data.gov.hk",
           "format": "JSON",
           "httpStatus": 422,
@@ -2159,7 +2159,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 184,
+          "elapsedMs": 226,
           "finalHost": "api.data.gov.hk",
           "format": "API",
           "httpStatus": 200,
@@ -2189,7 +2189,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 393,
+          "elapsedMs": 185,
           "finalHost": "www.digitalpolicy.gov.hk",
           "format": "CSV",
           "httpStatus": 206,
@@ -2218,7 +2218,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 424,
+          "elapsedMs": 355,
           "finalHost": "resource.data.one.gov.hk",
           "format": "JPEG",
           "httpStatus": 206,
@@ -2247,7 +2247,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 957,
+          "elapsedMs": 496,
           "finalHost": "www.dsd.gov.hk",
           "format": "JSON",
           "httpStatus": 206,
@@ -2276,7 +2276,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 1019,
+          "elapsedMs": 301,
           "finalHost": "www.edb.gov.hk",
           "format": "CSV",
           "httpStatus": 206,
@@ -2305,7 +2305,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 959,
+          "elapsedMs": 305,
           "finalHost": "www.edb.gov.hk",
           "format": "CSV",
           "httpStatus": 206,
@@ -2334,7 +2334,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 336,
+          "elapsedMs": 311,
           "finalHost": "www.edb.gov.hk",
           "format": "CSV",
           "httpStatus": 206,
@@ -2523,7 +2523,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 275,
+          "elapsedMs": 333,
           "finalHost": "www.edb.gov.hk",
           "format": "CSV",
           "httpStatus": 206,
@@ -2552,7 +2552,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 272,
+          "elapsedMs": 269,
           "finalHost": "www.edb.gov.hk",
           "format": "CSV",
           "httpStatus": 206,
@@ -2661,7 +2661,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 262,
+          "elapsedMs": 280,
           "finalHost": "www.edb.gov.hk",
           "format": "CSV",
           "httpStatus": 206,
@@ -2786,7 +2786,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 311,
+          "elapsedMs": 330,
           "finalHost": "www.edb.gov.hk",
           "format": "CSV",
           "httpStatus": 206,
@@ -2863,7 +2863,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 306,
+          "elapsedMs": 332,
           "finalHost": "www.edb.gov.hk",
           "format": "CSV",
           "httpStatus": 206,
@@ -2892,7 +2892,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 382,
+          "elapsedMs": 372,
           "finalHost": "www.edb.gov.hk",
           "format": "CSV",
           "httpStatus": 206,
@@ -2921,7 +2921,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 331,
+          "elapsedMs": 267,
           "finalHost": "www.edb.gov.hk",
           "format": "CSV",
           "httpStatus": 206,
@@ -2950,7 +2950,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 556,
+          "elapsedMs": 643,
           "finalHost": "www.emsd.gov.hk",
           "format": "CSV",
           "httpStatus": 206,
@@ -2979,7 +2979,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 466,
+          "elapsedMs": 482,
           "finalHost": "www.emsd.gov.hk",
           "format": "CSV",
           "httpStatus": 206,
@@ -3008,7 +3008,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 230,
+          "elapsedMs": 494,
           "finalHost": "www.emsd.gov.hk",
           "format": "CSV",
           "httpStatus": 206,
@@ -3037,7 +3037,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 178,
+          "elapsedMs": 166,
           "finalHost": "www.emsd.gov.hk",
           "format": "CSV",
           "httpStatus": 206,
@@ -3066,7 +3066,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 145,
+          "elapsedMs": 190,
           "finalHost": "www.emsd.gov.hk",
           "format": "CSV",
           "httpStatus": 206,
@@ -3095,7 +3095,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 152,
+          "elapsedMs": 153,
           "finalHost": "www.emsd.gov.hk",
           "format": "CSV",
           "httpStatus": 206,
@@ -3124,7 +3124,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 221,
+          "elapsedMs": 186,
           "finalHost": "www.emsd.gov.hk",
           "format": "CSV",
           "httpStatus": 206,
@@ -3153,7 +3153,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 199,
+          "elapsedMs": 209,
           "finalHost": "www.emsd.gov.hk",
           "format": "CSV",
           "httpStatus": 206,
@@ -3182,7 +3182,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 245,
+          "elapsedMs": 198,
           "finalHost": "www.emsd.gov.hk",
           "format": "CSV",
           "httpStatus": 206,
@@ -3211,7 +3211,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 158,
+          "elapsedMs": 167,
           "finalHost": "www.emsd.gov.hk",
           "format": "CSV",
           "httpStatus": 206,
@@ -3240,7 +3240,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 141,
+          "elapsedMs": 159,
           "finalHost": "www.emsd.gov.hk",
           "format": "CSV",
           "httpStatus": 206,
@@ -3269,7 +3269,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 172,
+          "elapsedMs": 171,
           "finalHost": "www.emsd.gov.hk",
           "format": "CSV",
           "httpStatus": 206,
@@ -3298,7 +3298,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 156,
+          "elapsedMs": 154,
           "finalHost": "www.emsd.gov.hk",
           "format": "CSV",
           "httpStatus": 206,
@@ -3327,7 +3327,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 160,
+          "elapsedMs": 175,
           "finalHost": "www.emsd.gov.hk",
           "format": "CSV",
           "httpStatus": 206,
@@ -3356,7 +3356,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 151,
+          "elapsedMs": 169,
           "finalHost": "www.emsd.gov.hk",
           "format": "CSV",
           "httpStatus": 206,
@@ -3385,7 +3385,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 226,
+          "elapsedMs": 201,
           "finalHost": "www.emsd.gov.hk",
           "format": "CSV",
           "httpStatus": 206,
@@ -3414,7 +3414,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 216,
+          "elapsedMs": 204,
           "finalHost": "www.emsd.gov.hk",
           "format": "CSV",
           "httpStatus": 206,
@@ -3443,7 +3443,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 232,
+          "elapsedMs": 178,
           "finalHost": "www.emsd.gov.hk",
           "format": "CSV",
           "httpStatus": 206,
@@ -3472,7 +3472,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 170,
+          "elapsedMs": 166,
           "finalHost": "www.emsd.gov.hk",
           "format": "CSV",
           "httpStatus": 206,
@@ -3501,7 +3501,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 195,
+          "elapsedMs": 167,
           "finalHost": "www.emsd.gov.hk",
           "format": "CSV",
           "httpStatus": 206,
@@ -3530,7 +3530,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 152,
+          "elapsedMs": 167,
           "finalHost": "www.emsd.gov.hk",
           "format": "CSV",
           "httpStatus": 206,
@@ -3559,7 +3559,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 157,
+          "elapsedMs": 166,
           "finalHost": "www.emsd.gov.hk",
           "format": "CSV",
           "httpStatus": 206,
@@ -3588,7 +3588,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 153,
+          "elapsedMs": 172,
           "finalHost": "www.aqhi.gov.hk",
           "format": "RSS",
           "httpStatus": 206,
@@ -3617,7 +3617,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 142,
+          "elapsedMs": 160,
           "finalHost": "www.aqhi.gov.hk",
           "format": "RSS",
           "httpStatus": 206,
@@ -3646,7 +3646,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 164,
+          "elapsedMs": 192,
           "finalHost": "www.aqhi.gov.hk",
           "format": "XML",
           "httpStatus": 206,
@@ -3675,7 +3675,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 192,
+          "elapsedMs": 156,
           "finalHost": "www.aqhi.gov.hk",
           "format": "XML",
           "httpStatus": 206,
@@ -3752,7 +3752,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 971,
+          "elapsedMs": 686,
           "finalHost": "cd.epic.epd.gov.hk",
           "format": "CSV",
           "httpStatus": 200,
@@ -3781,7 +3781,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 880,
+          "elapsedMs": 608,
           "finalHost": "cd.epic.epd.gov.hk",
           "format": "RSS",
           "httpStatus": 200,
@@ -3810,7 +3810,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 669,
+          "elapsedMs": 334,
           "finalHost": "cnsd.gov.hk",
           "format": "JSON",
           "httpStatus": 206,
@@ -3839,7 +3839,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 162,
+          "elapsedMs": 192,
           "finalHost": "cnsd.gov.hk",
           "format": "JSON",
           "httpStatus": 206,
@@ -3884,7 +3884,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 678,
+          "elapsedMs": 552,
           "finalHost": "cd.epic.epd.gov.hk",
           "format": "CSV",
           "httpStatus": 200,
@@ -3913,7 +3913,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 653,
+          "elapsedMs": 830,
           "finalHost": "cd.epic.epd.gov.hk",
           "format": "CSV",
           "httpStatus": 200,
@@ -3942,7 +3942,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 648,
+          "elapsedMs": 511,
           "finalHost": "cd.epic.epd.gov.hk",
           "format": "CSV",
           "httpStatus": 200,
@@ -3971,7 +3971,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 523,
+          "elapsedMs": 697,
           "finalHost": "cd.epic.epd.gov.hk",
           "format": "CSV",
           "httpStatus": 200,
@@ -4128,7 +4128,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 202,
+          "elapsedMs": 176,
           "finalHost": "www.ftp.cfs.gov.hk",
           "format": "JSON",
           "httpStatus": 206,
@@ -4157,7 +4157,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 371,
+          "elapsedMs": 175,
           "finalHost": "www.fehd.gov.hk",
           "format": "XML",
           "httpStatus": 206,
@@ -4186,7 +4186,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 184,
+          "elapsedMs": 236,
           "finalHost": "www.fehd.gov.hk",
           "format": "XML",
           "httpStatus": 206,
@@ -4215,7 +4215,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 218,
+          "elapsedMs": 222,
           "finalHost": "www.fehd.gov.hk",
           "format": "XML",
           "httpStatus": 206,
@@ -4244,7 +4244,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 207,
+          "elapsedMs": 246,
           "finalHost": "www.fehd.gov.hk",
           "format": "XML",
           "httpStatus": 206,
@@ -4273,7 +4273,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 148,
+          "elapsedMs": 215,
           "finalHost": "www.fehd.gov.hk",
           "format": "XML",
           "httpStatus": 206,
@@ -4302,7 +4302,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 149,
+          "elapsedMs": 162,
           "finalHost": "www.fehd.gov.hk",
           "format": "XML",
           "httpStatus": 206,
@@ -4331,7 +4331,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 262,
+          "elapsedMs": 252,
           "finalHost": "es.hkfsd.gov.hk",
           "format": "CSV",
           "httpStatus": 200,
@@ -4360,7 +4360,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 497,
+          "elapsedMs": 350,
           "finalHost": "pcms2.gld.gov.hk",
           "format": "XML",
           "httpStatus": 200,
@@ -4389,7 +4389,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 447,
+          "elapsedMs": 267,
           "finalHost": "www.gld.gov.hk",
           "format": "CSV",
           "httpStatus": 206,
@@ -4434,7 +4434,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 713,
+          "elapsedMs": 586,
           "finalHost": "www.hadla.gov.hk",
           "format": "CSV",
           "httpStatus": 200,
@@ -4463,7 +4463,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 443,
+          "elapsedMs": 449,
           "finalHost": "www.hadla.gov.hk",
           "format": "CSV",
           "httpStatus": 206,
@@ -4492,7 +4492,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 424,
+          "elapsedMs": 430,
           "finalHost": "www.hadla.gov.hk",
           "format": "CSV",
           "httpStatus": 206,
@@ -4521,7 +4521,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 1050,
+          "elapsedMs": 465,
           "finalHost": "data.housingauthority.gov.hk",
           "format": "JSON",
           "httpStatus": 200,
@@ -4550,7 +4550,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 826,
+          "elapsedMs": 267,
           "finalHost": "data.housingauthority.gov.hk",
           "format": "JSON",
           "httpStatus": 200,
@@ -4627,7 +4627,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 475,
+          "elapsedMs": 156,
           "finalHost": "secure1.info.gov.hk",
           "format": "JSON",
           "httpStatus": 206,
@@ -4656,7 +4656,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 275,
+          "elapsedMs": 263,
           "finalHost": "www.immd.gov.hk",
           "format": "CSV",
           "httpStatus": 206,
@@ -4701,7 +4701,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 334,
+          "elapsedMs": 256,
           "finalHost": "www.ipd.gov.hk",
           "format": "CSV",
           "httpStatus": 206,
@@ -4954,7 +4954,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 722,
+          "elapsedMs": 235,
           "finalHost": "data.smartplay.lcsd.gov.hk",
           "format": "JSON",
           "httpStatus": 200,
@@ -4983,7 +4983,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 443,
+          "elapsedMs": 241,
           "finalHost": "data.smartplay.lcsd.gov.hk",
           "format": "JSON",
           "httpStatus": 200,
@@ -5012,7 +5012,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 1149,
+          "elapsedMs": 1051,
           "finalHost": "www.lcsd.gov.hk",
           "format": "JSON",
           "httpStatus": 206,
@@ -5057,7 +5057,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 247,
+          "elapsedMs": 577,
           "finalHost": "data.smartplay.lcsd.gov.hk",
           "format": "JSON",
           "httpStatus": 200,
@@ -5086,7 +5086,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 257,
+          "elapsedMs": 274,
           "finalHost": "data.smartplay.lcsd.gov.hk",
           "format": "JSON",
           "httpStatus": 200,
@@ -5115,7 +5115,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 226,
+          "elapsedMs": 250,
           "finalHost": "data.smartplay.lcsd.gov.hk",
           "format": "JSON",
           "httpStatus": 200,
@@ -5144,7 +5144,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 288,
+          "elapsedMs": 106,
           "finalHost": "www.lcsd.gov.hk",
           "format": "CSV",
           "httpStatus": 206,
@@ -5189,7 +5189,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 808,
+          "elapsedMs": 897,
           "finalHost": "sls.hkpl.gov.hk",
           "format": "JSON",
           "httpStatus": 200,
@@ -5197,7 +5197,7 @@
           "outcome": "success",
           "resourceId": "0139d219-e185-45a8-8dae-8dfb78180f20",
           "sampleBytes": 4096,
-          "sampleSha256": "566344b03edb365b21b1a2989c8ca804a6a608071fffa03d8e17c2da89455893",
+          "sampleSha256": "6a1d72714773b89f203c0c27a022769a0b3707ac9fddb1eef0321c161053acbe",
           "truncated": true
         }
       ],
@@ -5218,7 +5218,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 1410,
+          "elapsedMs": 699,
           "finalHost": "webcat.hkpl.gov.hk",
           "format": "RSS",
           "httpStatus": 200,
@@ -5247,7 +5247,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 336,
+          "elapsedMs": 96,
           "finalHost": "www.lcsd.gov.hk",
           "format": "CSV",
           "httpStatus": 206,
@@ -5276,7 +5276,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 155,
+          "elapsedMs": 112,
           "finalHost": "www.lcsd.gov.hk",
           "format": "CSV",
           "httpStatus": 206,
@@ -5305,7 +5305,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 252,
+          "elapsedMs": 113,
           "finalHost": "www.lcsd.gov.hk",
           "format": "CSV",
           "httpStatus": 206,
@@ -5334,7 +5334,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 257,
+          "elapsedMs": 173,
           "finalHost": "www.lcsd.gov.hk",
           "format": "CSV",
           "httpStatus": 206,
@@ -5363,7 +5363,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 327,
+          "elapsedMs": 111,
           "finalHost": "www.lcsd.gov.hk",
           "format": "CSV",
           "httpStatus": 206,
@@ -5392,7 +5392,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 330,
+          "elapsedMs": 96,
           "finalHost": "www.lcsd.gov.hk",
           "format": "CSV",
           "httpStatus": 206,
@@ -5421,7 +5421,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 314,
+          "elapsedMs": 106,
           "finalHost": "www.lcsd.gov.hk",
           "format": "CSV",
           "httpStatus": 206,
@@ -5450,7 +5450,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 303,
+          "elapsedMs": 112,
           "finalHost": "www.lcsd.gov.hk",
           "format": "CSV",
           "httpStatus": 206,
@@ -5479,7 +5479,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 531,
+          "elapsedMs": 904,
           "finalHost": "www.landreg.gov.hk",
           "format": "JSON",
           "httpStatus": 206,
@@ -5508,7 +5508,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 214,
+          "elapsedMs": 185,
           "finalHost": "www.mardep.gov.hk",
           "format": "CSV",
           "httpStatus": 206,
@@ -5537,7 +5537,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 197,
+          "elapsedMs": 179,
           "finalHost": "www.mardep.gov.hk",
           "format": "XML",
           "httpStatus": 206,
@@ -5566,7 +5566,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 173,
+          "elapsedMs": 180,
           "finalHost": "www.mardep.gov.hk",
           "format": "CSV",
           "httpStatus": 206,
@@ -5595,7 +5595,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 138,
+          "elapsedMs": 236,
           "finalHost": "www.mardep.gov.hk",
           "format": "XML",
           "httpStatus": 206,
@@ -5624,7 +5624,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 241,
+          "elapsedMs": 131,
           "finalHost": "www.mardep.gov.hk",
           "format": "XML",
           "httpStatus": 206,
@@ -5653,7 +5653,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 557,
+          "elapsedMs": 199,
           "finalHost": "www.ofca.gov.hk",
           "format": "CSV",
           "httpStatus": 206,
@@ -5682,7 +5682,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 422,
+          "elapsedMs": 201,
           "finalHost": "www.ofca.gov.hk",
           "format": "CSV",
           "httpStatus": 206,
@@ -5711,7 +5711,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 245,
+          "elapsedMs": 176,
           "finalHost": "www.ofca.gov.hk",
           "format": "CSV",
           "httpStatus": 206,
@@ -5740,7 +5740,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 217,
+          "elapsedMs": 193,
           "finalHost": "www.ofca.gov.hk",
           "format": "CSV",
           "httpStatus": 206,
@@ -5769,7 +5769,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 209,
+          "elapsedMs": 190,
           "finalHost": "www.ofca.gov.hk",
           "format": "CSV",
           "httpStatus": 206,
@@ -5798,7 +5798,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 198,
+          "elapsedMs": 171,
           "finalHost": "www.ofca.gov.hk",
           "format": "CSV",
           "httpStatus": 206,
@@ -5827,7 +5827,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 163,
+          "elapsedMs": 159,
           "finalHost": "www.ofca.gov.hk",
           "format": "CSV",
           "httpStatus": 206,
@@ -5856,7 +5856,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 159,
+          "elapsedMs": 141,
           "finalHost": "www.ofca.gov.hk",
           "format": "CSV",
           "httpStatus": 206,
@@ -5885,7 +5885,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 205,
+          "elapsedMs": 173,
           "finalHost": "www.ofca.gov.hk",
           "format": "CSV",
           "httpStatus": 206,
@@ -5914,7 +5914,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 173,
+          "elapsedMs": 160,
           "finalHost": "www.ofca.gov.hk",
           "format": "CSV",
           "httpStatus": 206,
@@ -5959,7 +5959,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 157,
+          "elapsedMs": 210,
           "finalHost": "www.ofca.gov.hk",
           "format": "CSV",
           "httpStatus": 206,
@@ -6020,7 +6020,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 323,
+          "elapsedMs": 232,
           "finalHost": "www.elections.gov.hk",
           "format": "CSV",
           "httpStatus": 206,
@@ -6049,7 +6049,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 302,
+          "elapsedMs": 207,
           "finalHost": "www.elections.gov.hk",
           "format": "CSV",
           "httpStatus": 206,
@@ -6078,7 +6078,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 339,
+          "elapsedMs": 175,
           "finalHost": "www.elections.gov.hk",
           "format": "CSV",
           "httpStatus": 206,
@@ -6107,7 +6107,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 180,
+          "elapsedMs": 173,
           "finalHost": "www.elections.gov.hk",
           "format": "CSV",
           "httpStatus": 206,
@@ -6136,7 +6136,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 168,
+          "elapsedMs": 163,
           "finalHost": "www.elections.gov.hk",
           "format": "CSV",
           "httpStatus": 206,
@@ -6165,7 +6165,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 209,
+          "elapsedMs": 153,
           "finalHost": "www.elections.gov.hk",
           "format": "CSV",
           "httpStatus": 206,
@@ -6194,7 +6194,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 160,
+          "elapsedMs": 172,
           "finalHost": "www.elections.gov.hk",
           "format": "CSV",
           "httpStatus": 206,
@@ -6223,7 +6223,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 258,
+          "elapsedMs": 159,
           "finalHost": "www.elections.gov.hk",
           "format": "CSV",
           "httpStatus": 206,
@@ -6252,7 +6252,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 167,
+          "elapsedMs": 194,
           "finalHost": "www.elections.gov.hk",
           "format": "CSV",
           "httpStatus": 206,
@@ -6281,7 +6281,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 225,
+          "elapsedMs": 186,
           "finalHost": "www.elections.gov.hk",
           "format": "CSV",
           "httpStatus": 206,
@@ -6326,7 +6326,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 173,
+          "elapsedMs": 185,
           "finalHost": "www.elections.gov.hk",
           "format": "CSV",
           "httpStatus": 206,
@@ -6355,7 +6355,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 153,
+          "elapsedMs": 158,
           "finalHost": "www.elections.gov.hk",
           "format": "CSV",
           "httpStatus": 206,
@@ -6384,7 +6384,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 174,
+          "elapsedMs": 170,
           "finalHost": "www.elections.gov.hk",
           "format": "CSV",
           "httpStatus": 206,
@@ -6413,7 +6413,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 175,
+          "elapsedMs": 161,
           "finalHost": "www.elections.gov.hk",
           "format": "CSV",
           "httpStatus": 206,
@@ -6442,7 +6442,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 161,
+          "elapsedMs": 152,
           "finalHost": "www.elections.gov.hk",
           "format": "CSV",
           "httpStatus": 206,
@@ -6471,7 +6471,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 223,
+          "elapsedMs": 176,
           "finalHost": "www.elections.gov.hk",
           "format": "CSV",
           "httpStatus": 206,
@@ -6500,7 +6500,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 196,
+          "elapsedMs": 160,
           "finalHost": "www.elections.gov.hk",
           "format": "CSV",
           "httpStatus": 206,
@@ -6529,7 +6529,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 191,
+          "elapsedMs": 222,
           "finalHost": "www.elections.gov.hk",
           "format": "CSV",
           "httpStatus": 206,
@@ -6558,7 +6558,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 154,
+          "elapsedMs": 247,
           "finalHost": "www.elections.gov.hk",
           "format": "CSV",
           "httpStatus": 206,
@@ -6587,7 +6587,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 179,
+          "elapsedMs": 244,
           "finalHost": "www.elections.gov.hk",
           "format": "CSV",
           "httpStatus": 206,
@@ -6616,7 +6616,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 398,
+          "elapsedMs": 189,
           "finalHost": "www.voterregistration.gov.hk",
           "format": "CSV",
           "httpStatus": 206,
@@ -6645,7 +6645,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 524,
+          "elapsedMs": 189,
           "finalHost": "www.rvd.gov.hk",
           "format": "CSV",
           "httpStatus": 206,
@@ -6674,7 +6674,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 502,
+          "elapsedMs": 177,
           "finalHost": "www.rvd.gov.hk",
           "format": "GML",
           "httpStatus": 206,
@@ -6703,7 +6703,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 279,
+          "elapsedMs": 155,
           "finalHost": "www.rvd.gov.hk",
           "format": "CSV",
           "httpStatus": 206,
@@ -6732,7 +6732,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 370,
+          "elapsedMs": 218,
           "finalHost": "www.swd.gov.hk",
           "format": "CSV",
           "httpStatus": 206,
@@ -6761,7 +6761,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 370,
+          "elapsedMs": 215,
           "finalHost": "www.swd.gov.hk",
           "format": "CSV",
           "httpStatus": 206,
@@ -6790,7 +6790,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 207,
+          "elapsedMs": 231,
           "finalHost": "elderlyinfo.swd.gov.hk",
           "format": "XML",
           "httpStatus": 206,
@@ -6819,7 +6819,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 162,
+          "elapsedMs": 171,
           "finalHost": "www.swd.gov.hk",
           "format": "CSV",
           "httpStatus": 206,
@@ -6864,7 +6864,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 169,
+          "elapsedMs": 162,
           "finalHost": "www.swd.gov.hk",
           "format": "CSV",
           "httpStatus": 206,
@@ -6893,7 +6893,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 165,
+          "elapsedMs": 166,
           "finalHost": "www.swd.gov.hk",
           "format": "CSV",
           "httpStatus": 206,
@@ -6938,7 +6938,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 170,
+          "elapsedMs": 156,
           "finalHost": "www.swd.gov.hk",
           "format": "CSV",
           "httpStatus": 206,
@@ -6967,7 +6967,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 183,
+          "elapsedMs": 153,
           "finalHost": "www.swd.gov.hk",
           "format": "CSV",
           "httpStatus": 206,
@@ -7028,7 +7028,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 172,
+          "elapsedMs": 173,
           "finalHost": "www.swd.gov.hk",
           "format": "CSV",
           "httpStatus": 206,
@@ -7057,7 +7057,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 170,
+          "elapsedMs": 203,
           "finalHost": "www.swd.gov.hk",
           "format": "CSV",
           "httpStatus": 206,
@@ -7102,7 +7102,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 185,
+          "elapsedMs": 196,
           "finalHost": "www.swd.gov.hk",
           "format": "CSV",
           "httpStatus": 206,
@@ -7131,7 +7131,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 182,
+          "elapsedMs": 257,
           "finalHost": "www.swd.gov.hk",
           "format": "CSV",
           "httpStatus": 206,
@@ -7160,7 +7160,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 177,
+          "elapsedMs": 222,
           "finalHost": "www.swd.gov.hk",
           "format": "CSV",
           "httpStatus": 206,
@@ -7189,7 +7189,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 180,
+          "elapsedMs": 154,
           "finalHost": "www.swd.gov.hk",
           "format": "CSV",
           "httpStatus": 206,
@@ -7218,7 +7218,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 178,
+          "elapsedMs": 162,
           "finalHost": "www.swd.gov.hk",
           "format": "CSV",
           "httpStatus": 206,
@@ -7248,7 +7248,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 192,
+          "elapsedMs": 165,
           "finalHost": "www.swd.gov.hk",
           "format": "CSV",
           "httpStatus": 206,
@@ -7342,7 +7342,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 378,
+          "elapsedMs": 462,
           "finalHost": "resource.data.one.gov.hk",
           "format": "CSV",
           "httpStatus": 206,
@@ -7371,7 +7371,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 198,
+          "elapsedMs": 225,
           "finalHost": "data.nmospiot.gov.hk",
           "format": "CSV",
           "httpStatus": 206,
@@ -7400,7 +7400,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 357,
+          "elapsedMs": 92,
           "finalHost": "static.data.gov.hk",
           "format": "CSV",
           "httpStatus": 206,
@@ -7429,7 +7429,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 182,
+          "elapsedMs": 263,
           "finalHost": "resource.data.one.gov.hk",
           "format": "XML",
           "httpStatus": 206,
@@ -7437,7 +7437,7 @@
           "outcome": "success",
           "resourceId": "ce175a9c-e7dd-4fb2-8d13-a721af1f3cc9",
           "sampleBytes": 4096,
-          "sampleSha256": "60836b47d5feee390bdce7625336dfdba446dfb58fdfe318dc0f908e13274690",
+          "sampleSha256": "d546cfc88705f74848526c0a6f7ae623fe196fe30b436c213de9d597ccdfe062",
           "truncated": true
         }
       ],
@@ -7458,7 +7458,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 187,
+          "elapsedMs": 352,
           "finalHost": "resource.data.one.gov.hk",
           "format": "XML",
           "httpStatus": 206,
@@ -7466,7 +7466,7 @@
           "outcome": "success",
           "resourceId": "4898c0ba-17f1-4ad0-97ae-afbe5f71a61e",
           "sampleBytes": 4096,
-          "sampleSha256": "f3bd75d81bd978b60f62d3143c50b57d1543395754385dd9b25875ba128b4c69",
+          "sampleSha256": "c44148b7285f7fcf90553a081bfcd8d4ba45a7328ed55dab6e474f9109ec8f53",
           "truncated": true
         }
       ],
@@ -7487,7 +7487,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 344,
+          "elapsedMs": 90,
           "finalHost": "static.data.gov.hk",
           "format": "CSV",
           "httpStatus": 206,
@@ -7516,7 +7516,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 486,
+          "elapsedMs": 92,
           "finalHost": "static.data.gov.hk",
           "format": "CSV",
           "httpStatus": 206,
@@ -7545,7 +7545,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 170,
+          "elapsedMs": 281,
           "finalHost": "resource.data.one.gov.hk",
           "format": "JSON",
           "httpStatus": 206,
@@ -7574,7 +7574,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 1193,
+          "elapsedMs": 277,
           "finalHost": "www.td.gov.hk",
           "format": "XML",
           "httpStatus": 206,
@@ -7603,7 +7603,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 413,
+          "elapsedMs": 154,
           "finalHost": "static.data.gov.hk",
           "format": "XML",
           "httpStatus": 206,
@@ -7633,7 +7633,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 1060,
+          "elapsedMs": 353,
           "finalHost": "www.td.gov.hk",
           "format": "XML",
           "httpStatus": 206,
@@ -7662,7 +7662,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 437,
+          "elapsedMs": 93,
           "finalHost": "static.data.gov.hk",
           "format": "JSON",
           "httpStatus": 206,
@@ -7691,7 +7691,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 848,
+          "elapsedMs": 362,
           "finalHost": "www.td.gov.hk",
           "format": "CSV",
           "httpStatus": 206,
@@ -7720,7 +7720,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 815,
+          "elapsedMs": 429,
           "finalHost": "www.td.gov.hk",
           "format": "CSV",
           "httpStatus": 206,
@@ -7772,7 +7772,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 351,
+          "elapsedMs": 156,
           "finalHost": "static.data.gov.hk",
           "format": "CSV",
           "httpStatus": 206,
@@ -7817,7 +7817,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 187,
+          "elapsedMs": 269,
           "finalHost": "resource.data.one.gov.hk",
           "format": "XML",
           "httpStatus": 206,
@@ -7825,7 +7825,7 @@
           "outcome": "success",
           "resourceId": "b914e460-1042-4a25-8940-7a4687ef254b",
           "sampleBytes": 4096,
-          "sampleSha256": "55580a79c323454e519cacb12a9a373463c21242aeb5439e1ea8f8e5f0a8819b",
+          "sampleSha256": "e77b5e0b1156a064da7a3d79ef1d04a7f524fe4bb9b97b99f1edb7297e8eb43e",
           "truncated": true
         }
       ],
@@ -7878,7 +7878,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 418,
+          "elapsedMs": 93,
           "finalHost": "static.data.gov.hk",
           "format": "GML",
           "httpStatus": 206,
@@ -7908,7 +7908,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 706,
+          "elapsedMs": 431,
           "finalHost": "www.td.gov.hk",
           "format": "CSV",
           "httpStatus": 206,
@@ -7937,7 +7937,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 1013,
+          "elapsedMs": 488,
           "finalHost": "www.wsd.gov.hk",
           "format": "CSV",
           "httpStatus": 200,
@@ -7966,7 +7966,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 863,
+          "elapsedMs": 402,
           "finalHost": "www.wsd.gov.hk",
           "format": "CSV",
           "httpStatus": 206,
@@ -8024,7 +8024,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 386,
+          "elapsedMs": 309,
           "finalHost": "www.hkelectric.com",
           "format": "CSV",
           "httpStatus": 206,
@@ -8053,7 +8053,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 252,
+          "elapsedMs": 233,
           "finalHost": "www.hkelectric.com",
           "format": "CSV",
           "httpStatus": 206,
@@ -8082,7 +8082,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 207,
+          "elapsedMs": 184,
           "finalHost": "www.hkelectric.com",
           "format": "CSV",
           "httpStatus": 206,
@@ -8111,7 +8111,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 171,
+          "elapsedMs": 169,
           "finalHost": "www.hkelectric.com",
           "format": "CSV",
           "httpStatus": 206,
@@ -8140,7 +8140,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 255,
+          "elapsedMs": 200,
           "finalHost": "www.hkelectric.com",
           "format": "CSV",
           "httpStatus": 206,
@@ -8169,7 +8169,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 341,
+          "elapsedMs": 172,
           "finalHost": "www.hkhs.com",
           "format": "JSON",
           "httpStatus": 200,
@@ -8198,7 +8198,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 208,
+          "elapsedMs": 204,
           "finalHost": "www.hkhs.com",
           "format": "JSON",
           "httpStatus": 200,
@@ -8227,7 +8227,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 688,
+          "elapsedMs": 260,
           "finalHost": "www.hkkfeta.com",
           "format": "JSON",
           "httpStatus": 422,
@@ -8238,7 +8238,7 @@
           "truncated": false
         },
         {
-          "elapsedMs": 472,
+          "elapsedMs": 450,
           "finalHost": "www.hkkfeta.com",
           "format": "JSON",
           "httpStatus": 422,
@@ -8249,7 +8249,7 @@
           "truncated": false
         },
         {
-          "elapsedMs": 498,
+          "elapsedMs": 543,
           "finalHost": "www.hkkfeta.com",
           "format": "JSON",
           "httpStatus": 200,
@@ -8257,7 +8257,7 @@
           "outcome": "success",
           "resourceId": "c8537fa8-c998-4cda-8d82-aa5cdae7ef8d",
           "sampleBytes": 1325,
-          "sampleSha256": "ff0f560fa5adf86aa695d715417cd12fcff3ee104ca6ec76592ac1908d9d01fe",
+          "sampleSha256": "c3b56805a30f133ab548fe188d2f265f25dbe88fbd0231a72c56f6d2c62e296b",
           "truncated": false
         }
       ],
@@ -8278,7 +8278,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 397,
+          "elapsedMs": 306,
           "finalHost": "opendata.hkstp.org",
           "format": "JSON",
           "httpStatus": 206,
@@ -8323,15 +8323,15 @@
       },
       "attempts": [
         {
-          "elapsedMs": 302,
+          "elapsedMs": 178,
           "finalHost": "www.ha.org.hk",
           "format": "JSON",
           "httpStatus": 206,
           "mediaType": "application/json",
           "outcome": "success",
           "resourceId": "7336f0d3-957b-40f4-825e-0b3c1018d743",
-          "sampleBytes": 3755,
-          "sampleSha256": "e26cc051d27f1b730df68ded099e0a39ef72081babb9742784358e80190da72f",
+          "sampleBytes": 3808,
+          "sampleSha256": "d87e46e33ab426fc68e9e571a481a624f20fa75d2811d01ff080653b06a82aad",
           "truncated": false
         }
       ],
@@ -8352,7 +8352,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 163,
+          "elapsedMs": 168,
           "finalHost": "www.ha.org.hk",
           "format": "JSON",
           "httpStatus": 206,
@@ -8381,7 +8381,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 166,
+          "elapsedMs": 211,
           "finalHost": "www.ha.org.hk",
           "format": "JSON",
           "httpStatus": 206,
@@ -8410,7 +8410,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 165,
+          "elapsedMs": 232,
           "finalHost": "www.ha.org.hk",
           "format": "JSON",
           "httpStatus": 206,
@@ -8439,7 +8439,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 170,
+          "elapsedMs": 169,
           "finalHost": "www.ha.org.hk",
           "format": "JSON",
           "httpStatus": 206,
@@ -8468,7 +8468,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 210,
+          "elapsedMs": 158,
           "finalHost": "www.ha.org.hk",
           "format": "JSON",
           "httpStatus": 206,
@@ -8497,7 +8497,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 219,
+          "elapsedMs": 172,
           "finalHost": "www.ha.org.hk",
           "format": "JSON",
           "httpStatus": 206,
@@ -8526,7 +8526,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 151,
+          "elapsedMs": 227,
           "finalHost": "www.ha.org.hk",
           "format": "JSON",
           "httpStatus": 206,
@@ -8555,7 +8555,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 308,
+          "elapsedMs": 294,
           "finalHost": "open-api.joie.socif.co",
           "format": "JSON",
           "httpStatus": 200,
@@ -8563,7 +8563,7 @@
           "outcome": "success",
           "resourceId": "0868e8d4-7ae5-4585-8bce-b699d6095986",
           "sampleBytes": 4096,
-          "sampleSha256": "c7e7d807113d4d0a6f57c95e4a09fde57905f6906fc64c5fd21a29045ad26998",
+          "sampleSha256": "56927593831b76673a83a72a13f4fc08fc47bf3dee54249248222db346dac803",
           "truncated": true
         }
       ],
@@ -8584,7 +8584,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 212,
+          "elapsedMs": 167,
           "finalHost": "www.fehd.gov.hk",
           "format": "XML",
           "httpStatus": 206,
@@ -8613,7 +8613,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 768,
+          "elapsedMs": 407,
           "finalHost": "rt.data.gov.hk",
           "format": "JSON",
           "httpStatus": 200,
@@ -8621,7 +8621,7 @@
           "outcome": "success",
           "resourceId": "96c5e827-3d3a-4110-8cd2-e7c80cd562bc",
           "sampleBytes": 4096,
-          "sampleSha256": "ab68073d0e0e5126e08ce94604982ebcde1ac7ea5ad76626b33a89bf3ef15207",
+          "sampleSha256": "5e8140b0968fb8e130809645a24e18e4afa7efb10e7adc611322c2d7a6a9d716",
           "truncated": true
         }
       ],
@@ -8709,7 +8709,7 @@
       },
       "attempts": [
         {
-          "elapsedMs": 11295,
+          "elapsedMs": 168,
           "finalHost": "appapi.towngas.com",
           "format": "JSON",
           "httpStatus": 200,
@@ -8747,7 +8747,7 @@
     }
   },
   "failures": 5,
-  "inventorySha256": "6712dc00ec2376bf45f7c5f30c11ffe4fad5993939184a5b80fd61ff0121516d",
+  "inventorySha256": "a5e73e6d1b2bc68318cca97193e884b37fc74a90a7b7186a1536ff1735170431",
   "maxCandidatesPerDataset": 3,
   "notProbeable": 111,
   "provenance": "live-bounded-payload-samples",

@@ -9,6 +9,20 @@ const inventory = {
   schemaVersion: 1,
   checkedAt: "2026-09-03T03:57:42.512644Z",
   packageEndpoint: "https://data.gov.hk/en-data/api/3/action/package_show",
+  datasets: [
+    {
+      schemaVersion: 1,
+      sourceReferences: ["HKAPI-030"],
+      datasetId: "nlb-bus-service-v2",
+      title: "New Lantao Bus routes",
+      description: "Current bus route information.",
+      providerName: "New Lantao Bus",
+      landingUrl: "https://data.gov.hk/en-data/dataset/nlb-bus-service-v2",
+      modifiedAt: "2026-09-02T04:05:06.000000",
+      resourceCount: 1,
+      formats: ["JSON"],
+    },
+  ],
   resources: [
     {
       schemaVersion: 1,
@@ -171,5 +185,17 @@ describe("provider-resource browser", () => {
 
     expect(screen.getByRole("heading", { name: "Hong Kong public data, mapped and runnable." })).toBeVisible();
     await waitFor(() => expect(window.location.pathname).toBe("/"));
+  });
+
+  it("renders a permanent dataset page with exact files and endpoints", async () => {
+    window.history.replaceState({}, "", "/datasets/nlb-bus-service-v2/");
+    vi.spyOn(globalThis, "fetch").mockResolvedValue(new Response(JSON.stringify(inventory), { status: 200 }));
+
+    render(<App catalogue={fixtureCatalogue} initialLocale="en" />);
+
+    expect(await screen.findByRole("heading", { name: "New Lantao Bus routes" })).toBeVisible();
+    expect(screen.getByText("Current bus route information.")).toBeVisible();
+    expect(screen.getByRole("article", { name: "Bus route information" })).toBeVisible();
+    expect(screen.queryByRole("article", { name: "Historical flight schedule" })).not.toBeInTheDocument();
   });
 });

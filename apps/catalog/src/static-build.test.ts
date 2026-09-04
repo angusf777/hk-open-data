@@ -39,5 +39,16 @@ describe("static catalogue build", () => {
       '<link rel="canonical" href="https://angusf777.github.io/hk-open-data/provider-resources/" />',
     );
     expect(providerBrowser).toContain('href="../data-gov-resources.json"');
+
+    const dataset = readFileSync(
+      resolve(appRoot, "dist/datasets/nlb-bus-nlb-bus-service-v2/index.html"),
+      "utf8",
+    );
+    expect(dataset).toContain(
+      '<link rel="canonical" href="https://angusf777.github.io/hk-open-data/datasets/nlb-bus-nlb-bus-service-v2/" />',
+    );
+    expect(dataset).toContain(
+      'window.__HK_OPEN_DATA_DATASET_ID__="nlb-bus-nlb-bus-service-v2"',
+    );
   });
 });

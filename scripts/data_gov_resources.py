@@ -11,9 +11,10 @@ from datetime import UTC, datetime
 from hashlib import sha256
 from pathlib import Path
 from typing import Protocol
-from urllib.parse import urlencode, urlsplit
+from urllib.parse import quote, urlencode, urlsplit
 
 from hk_data_worker.access.resources import (
+    DataGovDataset,
     DataGovResource,
     DataGovResourceInventory,
     build_resource,
@@ -98,6 +99,7 @@ def inventory_from_packages(
             references_by_dataset[dataset_id].append(source_reference)
 
     resources = []
+    datasets = []
     for dataset_id, source_references in sorted(references_by_dataset.items()):
         package = packages.get(dataset_id)
         if package is None:
@@ -107,15 +109,49 @@ def inventory_from_packages(
         raw_resources = package.get("resources")
         if not isinstance(raw_resources, list):
             raise ValueError(f"DATA.GOV.HK package {dataset_id} lacks a resources list")
+        dataset_resources: list[DataGovResource] = []
         for raw in raw_resources:
             if not isinstance(raw, dict):
                 raise ValueError(f"DATA.GOV.HK package {dataset_id} has an invalid resource")
-            resources.append(build_resource(dataset_id, source_references, raw))
+            resource = build_resource(dataset_id, source_references, raw)
+            dataset_resources.append(resource)
+            resources.append(resource)
+        title = package.get("title")
+        description = package.get("notes")
+        organization = package.get("organization")
+        provider_name = organization.get("title") if isinstance(organization, dict) else None
+        modified_at = package.get("metadata_modified")
+        datasets.append(
+            DataGovDataset(
+                source_references=tuple(sorted(set(source_references))),
+                dataset_id=dataset_id,
+                title=title.strip() if isinstance(title, str) and title.strip() else dataset_id,
+                description=(
+                    description.strip()
+                    if isinstance(description, str) and description.strip()
+                    else ""
+                ),
+                provider_name=(
+                    provider_name.strip()
+                    if isinstance(provider_name, str) and provider_name.strip()
+                    else None
+                ),
+                landing_url=f"https://data.gov.hk/en-data/dataset/{quote(dataset_id, safe='')}",
+                modified_at=(
+                    modified_at.strip()
+                    if isinstance(modified_at, str) and modified_at.strip()
+                    else None
+                ),
+                resource_count=len(dataset_resources),
+                formats=tuple(sorted({resource.format for resource in dataset_resources})),
+            )
+        )
 
     return DataGovResourceInventory(
         schema_version=1,
         checked_at=checked_at,
         package_endpoint=PACKAGE_ENDPOINT,
+        datasets=tuple(datasets),
         resources=tuple(
             sorted(
                 resources,
@@ -139,7 +175,7 @@ def inventory_summary(inventory: DataGovResourceInventory) -> dict[str, int]:
     for resource in inventory.resources:
         counts[resource.access] += 1
     return {
-        "datasets": len({resource.dataset_id for resource in inventory.resources}),
+        "datasets": len(inventory.datasets) or len({resource.dataset_id for resource in inventory.resources}),
         "resources": len(inventory.resources),
         **counts,
     }

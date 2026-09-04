@@ -58,6 +58,22 @@ function isProviderResourceInventory(value: unknown): value is ProviderResourceI
     candidate.schemaVersion === 1 &&
     typeof candidate.checkedAt === "string" &&
     typeof candidate.packageEndpoint === "string" &&
+    Array.isArray(candidate.datasets) &&
+    candidate.datasets.every((dataset) => {
+      if (typeof dataset !== "object" || dataset === null) return false;
+      const item = dataset as Record<string, unknown>;
+      return (
+        item.schemaVersion === 1 &&
+        typeof item.datasetId === "string" &&
+        typeof item.title === "string" &&
+        typeof item.description === "string" &&
+        (typeof item.providerName === "string" || item.providerName === null) &&
+        typeof item.landingUrl === "string" &&
+        typeof item.resourceCount === "number" &&
+        Array.isArray(item.sourceReferences) &&
+        Array.isArray(item.formats)
+      );
+    }) &&
     Array.isArray(candidate.resources) &&
     candidate.resources.every(isProviderResource)
   );

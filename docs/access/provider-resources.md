@@ -1,6 +1,6 @@
 # DATA.GOV.HK provider-resource verification
 
-**Checked:** 2026-09-04T03:13:33.770563Z
+**Checked:** 2026-09-04T03:20:20.416715Z
 
 A bounded live run sampled one usable provider resource for **234 of 350 datasets**. It recorded **5 current failures** and **111 datasets without a parameter-free HTTPS candidate**.
 

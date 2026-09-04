@@ -97,6 +97,7 @@ describe("provider-resource helpers", () => {
         format: "JSON",
         kind: "all",
         verification: "all",
+        datasetId: undefined,
       }),
     ).toEqual([ready]);
   });

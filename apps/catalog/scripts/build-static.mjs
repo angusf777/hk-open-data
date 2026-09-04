@@ -133,6 +133,30 @@ await writeFile(
 );
 sitemapUrls.push(providerResourcesCanonical);
 
+for (const dataset of providerInventory.datasets ?? []) {
+  const encodedId = encodeURIComponent(dataset.datasetId);
+  const canonical = `${siteRoot}datasets/${encodedId}/`;
+  const description = dataset.description || `${dataset.resourceCount} mapped provider files and endpoints.`;
+  const html = indexHtml
+    .replace(/<title>.*?<\/title>/s, `<title>${text(dataset.title)} — HK Open Data</title>`)
+    .replace(
+      /<meta\s+name="description"\s+content="[^"]*"\s*\/?>/,
+      `<meta name="description" content="${attribute(description)}" />`,
+    )
+    .replace(
+      /<link\s+rel="canonical"\s+href="[^"]*"\s*\/?>/,
+      `<link rel="canonical" href="${canonical}" />`,
+    )
+    .replace(
+      "</head>",
+      `<script>window.__HK_OPEN_DATA_DATASET_ID__=${JSON.stringify(dataset.datasetId).replaceAll("<", "\\u003c")};</script></head>`,
+    );
+  const directory = resolve(distRoot, "datasets", encodedId);
+  await mkdir(directory, { recursive: true });
+  await writeFile(resolve(directory, "index.html"), html, "utf8");
+  sitemapUrls.push(canonical);
+}
+
 for (const resource of catalogue.resources) {
   const encodedId = encodeURIComponent(resource.id);
   const html = resourceHtml(resource);
@@ -163,4 +187,6 @@ await writeFile(
 );
 await copyFile(resolve(distRoot, "index.html"), resolve(distRoot, "404.html"));
 
-console.log(`generated ${catalogue.resources.length} static resource pages`);
+console.log(
+  `generated ${catalogue.resources.length} source pages and ${(providerInventory.datasets ?? []).length} dataset pages`,
+);

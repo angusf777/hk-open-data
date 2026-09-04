@@ -60,6 +60,10 @@ def test_inventory_joins_dataset_resources_to_every_mapped_source() -> None:
         {
             "dataset-one": {
                 "id": "dataset-one",
+                "title": "Example transport dataset",
+                "notes": "Current routes and stops.",
+                "organization": {"title": "Transport Department"},
+                "metadata_modified": "2026-09-02T04:05:06.000000",
                 "resources": [
                     {
                         "id": "resource-one",
@@ -80,6 +84,18 @@ def test_inventory_joins_dataset_resources_to_every_mapped_source() -> None:
     )
 
     assert len(inventory.resources) == 2
+    assert inventory.datasets[0].model_dump(mode="json", by_alias=True) == {
+        "schemaVersion": 1,
+        "sourceReferences": ["HKAPI-030", "HKAPI-031"],
+        "datasetId": "dataset-one",
+        "title": "Example transport dataset",
+        "description": "Current routes and stops.",
+        "providerName": "Transport Department",
+        "landingUrl": "https://data.gov.hk/en-data/dataset/dataset-one",
+        "modifiedAt": "2026-09-02T04:05:06.000000",
+        "resourceCount": 2,
+        "formats": ["CSV", "JSON"],
+    }
     assert inventory.resources[0].source_references == ("HKAPI-030", "HKAPI-031")
     assert inventory.resources[0].resource_id == "resource-one"
     assert inventory.resources[1].access == "insecure-http"

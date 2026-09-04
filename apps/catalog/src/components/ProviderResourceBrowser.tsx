@@ -29,6 +29,7 @@ import type {
 interface ProviderResourceBrowserProps {
   locale: Locale;
   onBack: () => void;
+  datasetId?: string | undefined;
 }
 
 const PAGE_SIZE = 20;
@@ -81,6 +82,13 @@ const messages = {
     retry: "Retry",
     back: "Back to catalogue",
     openResource: "Open provider resource",
+    datasetFallback: "DATA.GOV.HK dataset",
+    datasetSummary: (count: number) =>
+      `${count.toLocaleString("en-HK")} mapped provider files and endpoints. Commands appear only for exact resources with current bounded payload evidence.`,
+    provider: "Provider",
+    sourceReferences: "Catalogue sources",
+    formats: "Formats",
+    openDataset: "Open dataset on DATA.GOV.HK",
     liveVerified: "Payload verified",
     failed: "Probe failed",
     metadataOnly: "Metadata only",
@@ -141,6 +149,13 @@ const messages = {
     retry: "重試",
     back: "返回資源目錄",
     openResource: "開啟供應者資源",
+    datasetFallback: "DATA.GOV.HK 數據集",
+    datasetSummary: (count: number) =>
+      `${count.toLocaleString("zh-HK")} 個已配對供應者檔案及端點。只有具備現行有界限內容核實證據的個別資源才會顯示指令。`,
+    provider: "供應者",
+    sourceReferences: "目錄來源",
+    formats: "格式",
+    openDataset: "在 DATA.GOV.HK 開啟數據集",
     liveVerified: "已核實內容",
     failed: "核查失敗",
     metadataOnly: "只核實元數據",
@@ -179,11 +194,11 @@ function verificationLabel(status: ProviderResourceVerificationStatus, locale: L
   }[status];
 }
 
-export function ProviderResourceBrowser({ locale, onBack }: ProviderResourceBrowserProps) {
+export function ProviderResourceBrowser({ locale, onBack, datasetId }: ProviderResourceBrowserProps) {
   const [inventory, setInventory] = useState<ProviderResourceInventory>();
   const [error, setError] = useState<string>();
   const [attempt, setAttempt] = useState(0);
-  const initialSource = new URLSearchParams(window.location.search).get("source") ?? "";
+  const initialSource = datasetId ? "" : new URLSearchParams(window.location.search).get("source") ?? "";
   const [query, setQuery] = useState(initialSource);
   const [access, setAccess] = useState<ProviderResourceAccess | "all">("all");
   const [format, setFormat] = useState("all");
@@ -206,24 +221,31 @@ export function ProviderResourceBrowser({ locale, onBack }: ProviderResourceBrow
     return () => controller.abort();
   }, [attempt]);
 
+  const scopedResources = useMemo(
+    () =>
+      datasetId
+        ? inventory?.resources.filter((resource) => resource.datasetId === datasetId) ?? []
+        : inventory?.resources ?? [],
+    [datasetId, inventory],
+  );
   const filtered = useMemo(
     () =>
       inventory
-        ? filterProviderResources(inventory.resources, { query, access, format, kind, verification })
+        ? filterProviderResources(scopedResources, { query, access, format, kind, verification, datasetId })
         : [],
-    [access, format, inventory, kind, query, verification],
+    [access, datasetId, format, inventory, kind, query, scopedResources, verification],
   );
   const formats = useMemo(
-    () => (inventory ? providerResourceFormats(inventory.resources) : []),
-    [inventory],
+    () => providerResourceFormats(scopedResources),
+    [scopedResources],
   );
   const counts = useMemo(() => {
     const values = { ready: 0, "parameters-required": 0, "insecure-http": 0, "invalid-url": 0 };
-    for (const resource of inventory?.resources ?? []) values[resource.access] += 1;
+    for (const resource of scopedResources) values[resource.access] += 1;
     return values;
-  }, [inventory]);
+  }, [scopedResources]);
   const datasetCount = useMemo(
-    () => new Set(inventory?.resources.map((resource) => resource.datasetId)).size,
+    () => inventory?.datasets.length ?? 0,
     [inventory],
   );
 
@@ -238,7 +260,10 @@ export function ProviderResourceBrowser({ locale, onBack }: ProviderResourceBrow
     setFormat("all");
     setKind("all");
     setVerification("all");
-    window.history.replaceState({}, "", `${import.meta.env.BASE_URL}provider-resources/`);
+    const path = datasetId
+      ? `${import.meta.env.BASE_URL}datasets/${encodeURIComponent(datasetId)}/`
+      : `${import.meta.env.BASE_URL}provider-resources/`;
+    window.history.replaceState({}, "", path);
   };
 
   if (error) {
@@ -260,6 +285,14 @@ export function ProviderResourceBrowser({ locale, onBack }: ProviderResourceBrow
     );
   }
 
+  const dataset = datasetId
+    ? inventory.datasets.find((candidate) => candidate.datasetId === datasetId)
+    : undefined;
+  const pageHeading = datasetId ? dataset?.title ?? datasetId : text.heading;
+  const pageSummary = datasetId
+    ? dataset?.description || text.datasetSummary(scopedResources.length)
+    : text.summary(inventory.resources.length, datasetCount);
+
   const visible = filtered.slice(0, visibleLimit);
   return (
     <main id="main-content" className="provider-browser">
@@ -269,13 +302,13 @@ export function ProviderResourceBrowser({ locale, onBack }: ProviderResourceBrow
           {text.back}
         </button>
         <span aria-hidden="true">/</span>
-        <span aria-current="page">{text.breadcrumb}</span>
+        <span aria-current="page">{datasetId ? dataset?.title ?? text.datasetFallback : text.breadcrumb}</span>
       </nav>
 
       <section className="provider-browser-introduction" aria-labelledby="provider-browser-title">
         <div>
-          <h1 id="provider-browser-title">{text.heading}</h1>
-          <p>{text.summary(inventory.resources.length, datasetCount)}</p>
+          <h1 id="provider-browser-title">{pageHeading}</h1>
+          <p>{pageSummary}</p>
           <small>
             {text.checked}:{" "}
             {new Date(inventory.checkedAt).toLocaleDateString(locale === "en" ? "en-HK" : "zh-HK", {
@@ -287,6 +320,19 @@ export function ProviderResourceBrowser({ locale, onBack }: ProviderResourceBrow
         </div>
         <span className="provider-browser-route" aria-hidden="true" />
       </section>
+
+      {dataset && (
+        <section className="provider-dataset-summary" aria-label={text.datasetFallback}>
+          <dl>
+            <div><dt>{text.provider}</dt><dd>{dataset.providerName ?? "—"}</dd></div>
+            <div><dt>{text.sourceReferences}</dt><dd>{dataset.sourceReferences.join(", ")}</dd></div>
+            <div><dt>{text.formats}</dt><dd>{dataset.formats.join(" / ") || "—"}</dd></div>
+          </dl>
+          <a href={dataset.landingUrl} target="_blank" rel="noreferrer">
+            {text.openDataset}<ExternalLink aria-hidden="true" size={15} />
+          </a>
+        </section>
+      )}
 
       <dl className="provider-resource-counts">
         {(["ready", "parameters-required", "insecure-http"] as const).map((status) => (
@@ -406,7 +452,12 @@ function ProviderResourceRow({ locale, resource, expanded, onToggle }: ProviderR
       </span>
       <div className="provider-resource-identity">
         <h3>{resource.name}</h3>
-        <p><strong>{text.dataset}</strong> {resource.datasetId}</p>
+        <p>
+          <strong>{text.dataset}</strong>{" "}
+          <a href={`${import.meta.env.BASE_URL}datasets/${encodeURIComponent(resource.datasetId)}/`}>
+            {resource.datasetId}
+          </a>
+        </p>
       </div>
       <dl className="provider-resource-metadata">
         <div><dt>{text.source}</dt><dd>{resource.sourceReferences.join(", ")}</dd></div>

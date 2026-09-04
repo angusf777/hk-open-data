@@ -18,7 +18,12 @@ interface AppProps {
 }
 
 export function App({ catalogue, initialLocale = "en" }: AppProps) {
-  const initialProviderBrowser = /\/provider-resources\/?$/.test(window.location.pathname);
+  const pathDatasetId = decodeURIComponent(
+    window.location.pathname.match(/\/datasets\/([^/]+)\/?$/)?.[1] ?? "",
+  );
+  const initialDatasetId = window.__HK_OPEN_DATA_DATASET_ID__ ?? (pathDatasetId || undefined);
+  const initialProviderBrowser =
+    /\/provider-resources\/?$/.test(window.location.pathname) || Boolean(initialDatasetId);
   const initialResource = catalogue.resources.find(
     (resource) => resource.id === window.__HK_OPEN_DATA_RESOURCE_ID__,
   );
@@ -29,6 +34,7 @@ export function App({ catalogue, initialLocale = "en" }: AppProps) {
     initialProviderBrowser ? undefined : initialResource,
   );
   const [providerBrowser, setProviderBrowser] = useState(initialProviderBrowser);
+  const [providerDatasetId, setProviderDatasetId] = useState<string | undefined>(initialDatasetId);
   const [visibleLimit, setVisibleLimit] = useState(10);
   const text = copy(locale);
   const visibleResources = useMemo(
@@ -39,6 +45,7 @@ export function App({ catalogue, initialLocale = "en" }: AppProps) {
 
   const openResource = (resource: Resource) => {
     setProviderBrowser(false);
+    setProviderDatasetId(undefined);
     setSelected(resource);
     window.history.pushState(
       { resourceId: resource.id },
@@ -50,6 +57,7 @@ export function App({ catalogue, initialLocale = "en" }: AppProps) {
   const closeResource = () => {
     setSelected(undefined);
     setProviderBrowser(false);
+    setProviderDatasetId(undefined);
     window.history.pushState({}, "", import.meta.env.BASE_URL);
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
@@ -57,12 +65,18 @@ export function App({ catalogue, initialLocale = "en" }: AppProps) {
   useEffect(() => {
     const handlePopState = () => {
       const onProviderBrowser = /\/provider-resources\/?$/.test(window.location.pathname);
+      const nextDatasetId = decodeURIComponent(
+        window.location.pathname.match(/\/datasets\/([^/]+)\/?$/)?.[1] ?? "",
+      );
       const pathId = decodeURIComponent(
         window.location.pathname.match(/\/resources\/([^/]+)\/?$/)?.[1] ?? "",
       );
-      setProviderBrowser(onProviderBrowser);
+      setProviderBrowser(onProviderBrowser || Boolean(nextDatasetId));
+      setProviderDatasetId(nextDatasetId || undefined);
       setSelected(
-        onProviderBrowser ? undefined : catalogue.resources.find((resource) => resource.id === pathId),
+        onProviderBrowser || nextDatasetId
+          ? undefined
+          : catalogue.resources.find((resource) => resource.id === pathId),
       );
     };
     window.addEventListener("popstate", handlePopState);
@@ -111,7 +125,7 @@ export function App({ catalogue, initialLocale = "en" }: AppProps) {
       </header>
 
       {providerBrowser ? (
-        <ProviderResourceBrowser locale={locale} onBack={closeResource} />
+        <ProviderResourceBrowser locale={locale} onBack={closeResource} datasetId={providerDatasetId} />
       ) : selected ? (
         <ResourceDetail locale={locale} resource={selected} onBack={closeResource} />
       ) : (

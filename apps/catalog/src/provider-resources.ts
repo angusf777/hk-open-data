@@ -13,6 +13,7 @@ export interface ProviderResourceFilters {
   format: string;
   kind: ProviderResourceKind | "all";
   verification: ProviderResourceVerificationStatus | "all";
+  datasetId?: string | undefined;
 }
 
 const MAX_BYTES = 25 * 1024 * 1024;
@@ -24,6 +25,7 @@ export function filterProviderResources(
 ): ProviderResource[] {
   const terms = filters.query.trim().toLocaleLowerCase().split(/\s+/).filter(Boolean);
   return resources.filter((resource) => {
+    if (filters.datasetId && resource.datasetId !== filters.datasetId) return false;
     if (filters.access !== "all" && resource.access !== filters.access) return false;
     if (filters.format !== "all" && resource.format !== filters.format) return false;
     if (filters.kind !== "all" && resource.resourceKind !== filters.kind) return false;
