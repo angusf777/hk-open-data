@@ -1,5 +1,5 @@
-FROM ghcr.io/astral-sh/uv:0.8.14 AS uv
-FROM python:3.12.11-alpine3.22
+FROM ghcr.io/astral-sh/uv:0.12.9 AS uv
+FROM python:3.14.5-alpine3.22
 ENV PYTHONDONTWRITEBYTECODE=1 PYTHONUNBUFFERED=1 UV_COMPILE_BYTECODE=1
 WORKDIR /app
 RUN apk upgrade --no-cache \
