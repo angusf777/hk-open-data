@@ -102,7 +102,7 @@ const messages = {
     },
   },
   "zh-Hant": {
-    breadcrumb: "供應者資源",
+    breadcrumb: "供應者檔案及端點",
     heading: "瀏覽供應者檔案及端點",
     summary: (total: number, datasets: number) =>
       `搜尋 ${total.toLocaleString("zh-HK")} 個供應者檔案及 API 端點，涵蓋 ${datasets.toLocaleString("zh-HK")} 個 DATA.GOV.HK 數據集。瀏覽只在本機進行；只有開啟資源或執行指令時才會聯絡供應者。`,

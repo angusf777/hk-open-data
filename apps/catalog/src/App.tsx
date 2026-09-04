@@ -131,11 +131,20 @@ export function App({ catalogue, initialLocale = "en" }: AppProps) {
               }}
             />
             <section className="catalogue-layout" id="catalogue-results" aria-labelledby="results-title">
-              <Filters locale={locale} value={filters} onChange={setFilters} />
+              <Filters
+                locale={locale}
+                value={filters}
+                onChange={setFilters}
+                queryActive={Boolean(query.trim())}
+                onClearAll={() => {
+                  setQuery("");
+                  setFilters({});
+                }}
+              />
               <div className="results-list" aria-live="polite">
                 <div className="results-heading">
                   <h2 id="results-title">{text.results(visibleResources.length)}</h2>
-                  <span>{locale === "en" ? "Sorted by source ID" : "按來源編號排序"}</span>
+                  <span>{locale === "en" ? "Official sources first" : "官方來源優先"}</span>
                 </div>
                 {visibleResources.length > 0 ? (
                   visibleResources.slice(0, visibleLimit).map((resource) => (

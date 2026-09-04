@@ -39,5 +39,8 @@ export function searchResources(
           (filters.access === "none" && resource.accessRecipe?.request === null))
       );
     })
-    .sort((left, right) => left.id.localeCompare(right.id));
+    .sort((left, right) => {
+      const typePriority = { official: 0, external: 1, mcp: 2 } as const;
+      return typePriority[left.type] - typePriority[right.type] || left.id.localeCompare(right.id);
+    });
 }

@@ -8,9 +8,11 @@ interface FiltersProps {
   locale: Locale;
   value: ResourceFilters;
   onChange: (filters: ResourceFilters) => void;
+  queryActive: boolean;
+  onClearAll: () => void;
 }
 
-export function Filters({ locale, value, onChange }: FiltersProps) {
+export function Filters({ locale, value, onChange, queryActive, onClearAll }: FiltersProps) {
   const text = copy(locale);
   const [expanded, setExpanded] = useState(
     () => typeof window !== "undefined" && window.matchMedia?.("(min-width: 761px)").matches,
@@ -29,7 +31,7 @@ export function Filters({ locale, value, onChange }: FiltersProps) {
     else delete filters[key];
     onChange(filters);
   };
-  const activeCount = Object.values(value).filter(Boolean).length;
+  const activeCount = Object.values(value).filter(Boolean).length + (queryActive ? 1 : 0);
 
   return (
     <details
@@ -47,7 +49,7 @@ export function Filters({ locale, value, onChange }: FiltersProps) {
       <div className="filter-panel">
         <div className="filter-heading">
           <h2>{text.filter}</h2>
-          <button type="button" onClick={() => onChange({})} disabled={activeCount === 0}>
+          <button type="button" onClick={onClearAll} disabled={activeCount === 0}>
             {text.clear}
           </button>
         </div>

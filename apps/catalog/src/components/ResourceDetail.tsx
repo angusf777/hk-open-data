@@ -65,7 +65,7 @@ export function ResourceDetail({ locale, resource, onBack }: ResourceDetailProps
           </div>
         </section>
 
-        <aside className="metadata-ledger" aria-label={locale === "en" ? "Resource metadata" : "資源元數據"}>
+        <aside className="metadata-ledger" aria-label={locale === "en" ? "Source metadata" : "來源元數據"}>
           <MetadataRow label={text.type} value={labelValue(resource.type, locale)} />
           <MetadataRow
             label={text.protocol}

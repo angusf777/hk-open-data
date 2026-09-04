@@ -36,4 +36,11 @@ describe("searchResources", () => {
       executable,
     ]);
   });
+
+  it("ranks official sources before external and MCP entries by default", () => {
+    expect(searchResources(fixtureResources, "", {}).map((item) => item.type)).toEqual([
+      "official",
+      "external",
+    ]);
+  });
 });
