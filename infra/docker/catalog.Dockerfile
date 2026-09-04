@@ -1,5 +1,5 @@
 FROM ghcr.io/astral-sh/uv:0.8.14 AS uv
-FROM node:22.22.0-alpine3.22 AS build
+FROM node:26.3.0-alpine3.22 AS build
 WORKDIR /app
 RUN apk upgrade --no-cache && apk add --no-cache python3
 RUN corepack enable && corepack prepare pnpm@10.0.0 --activate
