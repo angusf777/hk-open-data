@@ -3,7 +3,7 @@ import { expect, test } from "@playwright/test";
 test("public visitor sees reviewed status and can switch language", async ({ page }) => {
   await page.goto("http://localhost:4174/");
   await expect(page.getByRole("heading", { name: "Public data status" })).toBeVisible();
-  await expect(page.getByText(/not provider endorsement/i)).toBeVisible();
+  await expect(page.getByText(/not maintained or endorsed/i)).toBeVisible();
   await expect(page.getByRole("table", { name: "Current incidents" })).toBeVisible();
   await page.getByRole("button", { name: "繁體中文" }).click();
   await expect(page.getByRole("heading", { name: "公共數據狀態" })).toBeVisible();

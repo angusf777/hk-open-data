@@ -9,14 +9,14 @@ test("catalogue and detail page have no automated accessibility violations", asy
   expect(catalogueResults.violations).toEqual([]);
 
   await page.getByRole("searchbox").fill("DATA.GOV.HK CKAN package list");
-  await page.getByRole("link", { name: "View resource" }).click();
+  await page.getByRole("link", { name: "View source" }).click();
   const detailResults = await new AxeBuilder({ page })
     .withTags(["wcag2a", "wcag2aa", "wcag21a", "wcag21aa"])
     .analyze();
   expect(detailResults.violations).toEqual([]);
 
   await page.goto("provider-resources/");
-  await expect(page.getByRole("heading", { level: 1, name: "Browse exact provider resources" })).toBeVisible();
+  await expect(page.getByRole("heading", { level: 1, name: "Browse provider files and endpoints" })).toBeVisible();
   const providerResourcesResults = await new AxeBuilder({ page })
     .withTags(["wcag2a", "wcag2aa", "wcag21a", "wcag21aa"])
     .analyze();
