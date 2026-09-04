@@ -5,7 +5,7 @@ Thank you for improving this independent Hong Kong open-data catalogue and self-
 ## Ways to contribute
 
 - Request or correct a resource through a structured GitHub issue.
-- Improve English or Traditional Chinese catalogue metadata.
+- Improve factual catalogue metadata or public documentation.
 - Add one validated YAML resource record.
 - Improve documentation, accessibility, tests, SDKs or read-only MCP tools.
 - Add a connector using synthetic test data, with the connection off until a user enables it.
@@ -45,6 +45,17 @@ uv run python scripts/catalog.py check
 
 Preserve official names where available. Mark seeded Traditional Chinese text as seeded until a fluent reviewer confirms it. Do not hide a missing translation by claiming it was reviewed.
 
+Translation review is welcome but is not a prerequisite for taking on other issues. Keep an
+existing translation status unchanged unless the pull request actually provides the stated level
+of review.
+
+## Pick a first task
+
+Start with the [scoped good-first contribution list](docs/community/GOOD_FIRST_ISSUES.md) and the
+matching labelled issue. Comment before starting, keep the pull request to one outcome, and cite
+the authoritative source used for any factual change. Questions and early proposals are welcome in
+[GitHub Discussions](https://github.com/angusf777/hk-open-data/discussions).
+
 ## Code and tests
 
 Use the locked project-local toolchains. Add a failing test first, implement the smallest focused change, and run the relevant checks. Before requesting review, run `make verify-all` when the complete runtime is available.
@@ -56,3 +67,5 @@ By submitting a contribution, you agree that it is licensed under the Apache Lic
 ## Privacy and secrets
 
 Never include credentials or non-public data. Report security vulnerabilities privately as described in [SECURITY.md](SECURITY.md). Use the correction and takedown process for rights, attribution or catalogue disputes.
+
+For setup questions and the expected response boundary, see [SUPPORT.md](SUPPORT.md).

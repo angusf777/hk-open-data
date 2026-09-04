@@ -1,5 +1,8 @@
 blank_issues_enabled: false
 contact_links:
+  - name: Questions and ideas
+    url: https://github.com/angusf777/hk-open-data/discussions
+    about: Ask for setup help, share examples, or discuss a proposed improvement.
   - name: Private security report
     url: https://github.com/angusf777/hk-open-data/security/advisories/new
     about: Report vulnerabilities privately; do not publish credentials or exploit details.
