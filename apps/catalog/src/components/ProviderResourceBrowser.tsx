@@ -5,6 +5,7 @@ import {
   ChevronDown,
   ChevronUp,
   Copy as CopyIcon,
+  Download,
   ExternalLink,
   Search,
 } from "lucide-react";
@@ -111,6 +112,11 @@ const messages = {
       "web-page": "Web page",
       unknown: "Unclassified",
     },
+    downloads: "Download metadata snapshots",
+    downloadsSummary: "Project metadata and access evidence only — no provider dataset payloads.",
+    downloadJson: "JSON",
+    downloadCsv: "CSV",
+    downloadSqlite: "SQLite",
   },
   "zh-Hant": {
     breadcrumb: "供應者檔案及端點",
@@ -177,6 +183,11 @@ const messages = {
       "web-page": "網頁",
       unknown: "未分類",
     },
+    downloads: "下載元數據快照",
+    downloadsSummary: "只包含本項目的元數據及存取證據，不包含供應者數據內容。",
+    downloadJson: "JSON",
+    downloadCsv: "CSV",
+    downloadSqlite: "SQLite",
   },
 } as const;
 
@@ -325,6 +336,29 @@ export function ProviderResourceBrowser({ locale, onBack, datasetId }: ProviderR
         </div>
         <span className="provider-browser-route" aria-hidden="true" />
       </section>
+
+      {!datasetId && (
+        <aside className="provider-downloads" aria-labelledby="provider-downloads-title">
+          <div>
+            <h2 id="provider-downloads-title">
+              <Download aria-hidden="true" size={18} />
+              {text.downloads}
+            </h2>
+            <p>{text.downloadsSummary}</p>
+          </div>
+          <nav aria-label={text.downloads}>
+            <a href={`${import.meta.env.BASE_URL}downloads/provider-resources.json`} download>
+              {text.downloadJson}
+            </a>
+            <a href={`${import.meta.env.BASE_URL}downloads/provider-resources.csv`} download>
+              {text.downloadCsv}
+            </a>
+            <a href={`${import.meta.env.BASE_URL}downloads/hk-open-data.sqlite`} download>
+              {text.downloadSqlite}
+            </a>
+          </nav>
+        </aside>
+      )}
 
       {dataset && (
         <section className="provider-dataset-summary" aria-label={text.datasetFallback}>

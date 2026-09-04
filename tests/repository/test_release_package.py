@@ -4,6 +4,7 @@ import hashlib
 import json
 import os
 import subprocess
+import tarfile
 from pathlib import Path
 
 ROOT = Path(__file__).parents[2]
@@ -28,6 +29,7 @@ def test_release_package_contains_metadata_not_provider_data(tmp_path: Path) -> 
     names = {path.name for path in result}
     assert names == {
         "hk-open-data-catalogue-v0.1.0.json",
+        "hk-open-data-metadata-v0.1.0.tar.gz",
         "hk-open-data-sbom-v0.1.0.cdx.json",
         "SHA256SUMS",
     }
@@ -39,11 +41,22 @@ def test_release_package_contains_metadata_not_provider_data(tmp_path: Path) -> 
         if path.name == "SHA256SUMS":
             continue
         assert hashlib.sha256(path.read_bytes()).hexdigest() == checksums[path.name]
-    catalogue = (tmp_path / "hk-open-data-catalogue-v0.1.0.json").read_text(
-        encoding="utf-8"
-    )
+    catalogue = (tmp_path / "hk-open-data-catalogue-v0.1.0.json").read_text(encoding="utf-8")
     assert '"resources"' in catalogue
     assert "provider payload" not in catalogue.lower()
+
+    with tarfile.open(tmp_path / "hk-open-data-metadata-v0.1.0.tar.gz") as archive:
+        members = {Path(member.name).name for member in archive.getmembers() if member.isfile()}
+        assert members == {
+            "README.txt",
+            "SHA256SUMS",
+            "catalogue.json",
+            "datasets.csv",
+            "hk-open-data.sqlite",
+            "provider-resources.csv",
+            "provider-resources.json",
+            "sources.csv",
+        }
 
     sbom_path = tmp_path / "hk-open-data-sbom-v0.1.0.cdx.json"
     sbom_text = sbom_path.read_text(encoding="utf-8")
@@ -58,4 +71,4 @@ def test_release_package_contains_metadata_not_provider_data(tmp_path: Path) -> 
 def test_normal_packaging_requires_a_clean_tree() -> None:
     script = (ROOT / "scripts/package-release.sh").read_text(encoding="utf-8")
     assert "git status --porcelain" in script
-    assert 'HKOD_RELEASE_ALLOW_DIRTY:-' in script
+    assert "HKOD_RELEASE_ALLOW_DIRTY:-" in script

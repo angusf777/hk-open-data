@@ -45,14 +45,19 @@ uv run python scripts/catalog.py check
 
 catalogue="hk-open-data-catalogue-v${version}.json"
 sbom="hk-open-data-sbom-v${version}.cdx.json"
+metadata="hk-open-data-metadata-v${version}.tar.gz"
 mkdir -p "$output"
-rm -f "$output/$catalogue" "$output/$sbom" "$output/SHA256SUMS"
+rm -f "$output/$catalogue" "$output/$sbom" "$output/$metadata" "$output/SHA256SUMS"
 cp catalog/generated/catalogue.json "$output/$catalogue"
 node scripts/create-sbom.mjs "$output/$sbom"
+snapshot_tmp="$(mktemp -d "${TMPDIR:-/tmp}/hk-open-data-snapshot.XXXXXX")"
+trap 'rm -rf "$snapshot_tmp"' EXIT HUP INT TERM
+uv run python -m scripts.export_snapshots "$snapshot_tmp"
+COPYFILE_DISABLE=1 tar -czf "$output/$metadata" -C "$snapshot_tmp" .
 
 (
   cd "$output"
-  shasum -a 256 "$catalogue" "$sbom" > SHA256SUMS
+  shasum -a 256 "$catalogue" "$sbom" "$metadata" > SHA256SUMS
 )
 
 (

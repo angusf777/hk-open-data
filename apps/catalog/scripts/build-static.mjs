@@ -59,6 +59,11 @@ await writeFile(
   `${JSON.stringify(publicProviderInventory, null, 2)}\n`,
   "utf8",
 );
+execFileSync(
+  "uv",
+  ["run", "python", "-m", "scripts.export_snapshots", resolve(distRoot, "downloads")],
+  { cwd: repositoryRoot, stdio: "inherit" },
+);
 
 for (const name of [
   "access-recipes.json",

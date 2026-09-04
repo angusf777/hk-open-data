@@ -39,6 +39,16 @@ describe("static catalogue build", () => {
       '<link rel="canonical" href="https://angusf777.github.io/hk-open-data/provider-resources/" />',
     );
     expect(providerBrowser).toContain('href="../data-gov-resources.json"');
+    const exportedResources = JSON.parse(
+      readFileSync(resolve(appRoot, "dist/downloads/provider-resources.json"), "utf8"),
+    );
+    expect(exportedResources.resources).toHaveLength(providerResources.resources.length);
+    expect(
+      readFileSync(resolve(appRoot, "dist/downloads/provider-resources.csv"), "utf8"),
+    ).toContain("verification_status");
+    expect(
+      readFileSync(resolve(appRoot, "dist/downloads/hk-open-data.sqlite")),
+    ).not.toHaveLength(0);
 
     const dataset = readFileSync(
       resolve(appRoot, "dist/datasets/nlb-bus-nlb-bus-service-v2/index.html"),

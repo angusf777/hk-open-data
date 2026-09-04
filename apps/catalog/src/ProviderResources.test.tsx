@@ -121,6 +121,18 @@ describe("provider-resource browser", () => {
     expect(fetchSpy).toHaveBeenCalledTimes(1);
     expect(String(fetchSpy.mock.calls[0]?.[0])).toBe("/data-gov-resources.json");
     expect(fetchSpy.mock.calls[0]?.[1]).toMatchObject({ signal: expect.any(AbortSignal) });
+    expect(screen.getByRole("link", { name: "JSON" })).toHaveAttribute(
+      "href",
+      "/downloads/provider-resources.json",
+    );
+    expect(screen.getByRole("link", { name: "CSV" })).toHaveAttribute(
+      "href",
+      "/downloads/provider-resources.csv",
+    );
+    expect(screen.getByRole("link", { name: "SQLite" })).toHaveAttribute(
+      "href",
+      "/downloads/hk-open-data.sqlite",
+    );
 
     const user = userEvent.setup();
     await user.type(screen.getByRole("searchbox"), "HKAPI-076");
