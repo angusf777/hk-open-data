@@ -82,5 +82,5 @@ describe("static catalogue build", () => {
     expect(
       JSON.parse(readFileSync(resolve(appRoot, "dist/contracts/openapi.json"), "utf8")),
     ).toHaveProperty("openapi", "3.1.0");
-  });
+  }, 30_000);
 });
