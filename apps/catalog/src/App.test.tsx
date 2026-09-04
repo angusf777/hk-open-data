@@ -71,6 +71,9 @@ describe("catalogue application", () => {
 
     await user.type(screen.getByRole("searchbox"), "observatory");
     expect(screen.getByRole("heading", { name: "1 source" })).toBeVisible();
+    expect(window.location.search).toBe("?q=observatory");
+    expect(screen.getByRole("button", { name: "Download JSON" })).toBeVisible();
+    expect(screen.getByRole("button", { name: "Download CSV" })).toBeVisible();
     await user.click(screen.getByRole("button", { name: "Clear all" }));
     expect(screen.getByRole("heading", { name: "2 sources" })).toBeVisible();
     expect(screen.getByRole("searchbox")).toHaveValue("");

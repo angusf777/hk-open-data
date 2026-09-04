@@ -18,6 +18,65 @@ export interface ProviderResourceFilters {
 
 const MAX_BYTES = 25 * 1024 * 1024;
 const PLACEHOLDER = /\{([A-Za-z][A-Za-z0-9_]*)\}|<([A-Za-z][A-Za-z0-9_]*)>/;
+const providerAccess = new Set<ProviderResourceAccess>([
+  "ready",
+  "parameters-required",
+  "insecure-http",
+  "invalid-url",
+]);
+const providerKinds = new Set<ProviderResourceKind>([
+  "api",
+  "file",
+  "dataset-page",
+  "geoportal",
+  "web-page",
+  "unknown",
+]);
+const verificationStates = new Set<ProviderResourceVerificationStatus>([
+  "live-verified",
+  "failed",
+  "metadata-only",
+]);
+
+export function parseProviderResourceSearch(search: string): ProviderResourceFilters {
+  const parameters = new URLSearchParams(search);
+  const access = parameters.get("access");
+  const kind = parameters.get("kind");
+  const verification = parameters.get("evidence");
+  return {
+    query: (parameters.get("q") ?? parameters.get("source") ?? "").trim(),
+    access: access && providerAccess.has(access as ProviderResourceAccess)
+      ? (access as ProviderResourceAccess)
+      : "all",
+    format: parameters.get("format")?.trim() || "all",
+    kind: kind && providerKinds.has(kind as ProviderResourceKind)
+      ? (kind as ProviderResourceKind)
+      : "all",
+    verification:
+      verification && verificationStates.has(verification as ProviderResourceVerificationStatus)
+        ? (verification as ProviderResourceVerificationStatus)
+        : "all",
+  };
+}
+
+export function providerResourceLocation(
+  basePath: string,
+  datasetId: string | undefined,
+  filters: ProviderResourceFilters,
+): string {
+  const base = basePath.endsWith("/") ? basePath : `${basePath}/`;
+  const path = datasetId
+    ? `${base}datasets/${encodeURIComponent(datasetId)}/`
+    : `${base}provider-resources/`;
+  const parameters = new URLSearchParams();
+  if (filters.query.trim()) parameters.set("q", filters.query.trim());
+  if (filters.access !== "all") parameters.set("access", filters.access);
+  if (filters.format !== "all") parameters.set("format", filters.format);
+  if (filters.kind !== "all") parameters.set("kind", filters.kind);
+  if (filters.verification !== "all") parameters.set("evidence", filters.verification);
+  const search = parameters.toString();
+  return search ? `${path}?${search}` : path;
+}
 
 export function filterProviderResources(
   resources: ProviderResource[],

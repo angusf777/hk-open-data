@@ -2,6 +2,8 @@ import { describe, expect, it } from "vitest";
 
 import {
   filterProviderResources,
+  parseProviderResourceSearch,
+  providerResourceLocation,
   renderProviderResourceCommand,
   resolveProviderResourceUrl,
 } from "./provider-resources";
@@ -100,5 +102,21 @@ describe("provider-resource helpers", () => {
         datasetId: undefined,
       }),
     ).toEqual([ready]);
+  });
+
+  it("round-trips shareable provider-resource filters", () => {
+    const filters = parseProviderResourceSearch(
+      "?q=routes&access=ready&format=JSON&kind=api&evidence=live-verified",
+    );
+    expect(filters).toEqual({
+      query: "routes",
+      access: "ready",
+      format: "JSON",
+      kind: "api",
+      verification: "live-verified",
+    });
+    expect(providerResourceLocation("/hk-open-data/", undefined, filters)).toBe(
+      "/hk-open-data/provider-resources/?q=routes&access=ready&format=JSON&kind=api&evidence=live-verified",
+    );
   });
 });

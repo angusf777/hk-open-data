@@ -8,6 +8,8 @@ import { ProviderResourceBrowser } from "./components/ProviderResourceBrowser";
 import { ResourceCard } from "./components/ResourceCard";
 import { ResourceDetail } from "./components/ResourceDetail";
 import { ToolkitBand } from "./components/ToolkitBand";
+import { downloadCatalogueExport } from "./catalogue-export";
+import { catalogueLocation, parseCatalogueLocation } from "./catalogue-state";
 import { copy } from "./i18n";
 import { searchResources } from "./search";
 import type { Catalogue, Locale, Resource, ResourceFilters } from "./types";
@@ -18,6 +20,9 @@ interface AppProps {
 }
 
 export function App({ catalogue, initialLocale = "en" }: AppProps) {
+  const initialState = parseCatalogueLocation(
+    `${window.location.pathname}${window.location.search}`,
+  );
   const pathCategory = decodeURIComponent(
     window.location.pathname.match(/\/categories\/([^/]+)\/?$/)?.[1] ?? "",
   );
@@ -32,9 +37,11 @@ export function App({ catalogue, initialLocale = "en" }: AppProps) {
     (resource) => resource.id === window.__HK_OPEN_DATA_RESOURCE_ID__,
   );
   const [locale, setLocale] = useState<Locale>(initialLocale);
-  const [query, setQuery] = useState("");
+  const [query, setQuery] = useState(initialState.query);
   const [filters, setFilters] = useState<ResourceFilters>(
-    initialCategory ? { category: initialCategory } : {},
+    initialCategory
+      ? { ...initialState.filters, category: initialCategory }
+      : initialState.filters,
   );
   const [selected, setSelected] = useState<Resource | undefined>(
     initialProviderBrowser ? undefined : initialResource,
@@ -48,6 +55,14 @@ export function App({ catalogue, initialLocale = "en" }: AppProps) {
     [catalogue.resources, filters, query],
   );
   useEffect(() => setVisibleLimit(10), [filters, query]);
+  useEffect(() => {
+    if (selected || providerBrowser) return;
+    window.history.replaceState(
+      {},
+      "",
+      catalogueLocation(import.meta.env.BASE_URL, query, filters),
+    );
+  }, [filters, providerBrowser, query, selected]);
 
   const openResource = (resource: Resource) => {
     setProviderBrowser(false);
@@ -77,17 +92,16 @@ export function App({ catalogue, initialLocale = "en" }: AppProps) {
       const nextCategory = decodeURIComponent(
         window.location.pathname.match(/\/categories\/([^/]+)\/?$/)?.[1] ?? "",
       );
+      const nextState = parseCatalogueLocation(
+        `${window.location.pathname}${window.location.search}`,
+      );
       const pathId = decodeURIComponent(
         window.location.pathname.match(/\/resources\/([^/]+)\/?$/)?.[1] ?? "",
       );
       setProviderBrowser(onProviderBrowser || Boolean(nextDatasetId));
       setProviderDatasetId(nextDatasetId || undefined);
-      setFilters((current) => {
-        const next = { ...current };
-        if (nextCategory) next.category = nextCategory;
-        else delete next.category;
-        return next;
-      });
+      setQuery(nextState.query);
+      setFilters(nextCategory ? { ...nextState.filters, category: nextCategory } : nextState.filters);
       setSelected(
         onProviderBrowser || nextDatasetId
           ? undefined
@@ -177,7 +191,21 @@ export function App({ catalogue, initialLocale = "en" }: AppProps) {
               <div className="results-list" aria-live="polite">
                 <div className="results-heading">
                   <h2 id="results-title">{text.results(visibleResources.length)}</h2>
-                  <span>{locale === "en" ? "Official sources first" : "官方來源優先"}</span>
+                  <div className="results-actions">
+                    <span>{locale === "en" ? "Official sources first" : "官方來源優先"}</span>
+                    <button
+                      type="button"
+                      onClick={() => downloadCatalogueExport(visibleResources, "json")}
+                    >
+                      {text.downloadJson}
+                    </button>
+                    <button
+                      type="button"
+                      onClick={() => downloadCatalogueExport(visibleResources, "csv")}
+                    >
+                      {text.downloadCsv}
+                    </button>
+                  </div>
                 </div>
                 {visibleResources.length > 0 ? (
                   visibleResources.slice(0, visibleLimit).map((resource) => (

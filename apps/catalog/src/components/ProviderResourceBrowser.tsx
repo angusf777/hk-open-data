@@ -15,6 +15,8 @@ import { loadProviderResourceInventory } from "../data";
 import { correctionIssueUrl } from "../issue-links";
 import {
   filterProviderResources,
+  parseProviderResourceSearch,
+  providerResourceLocation,
   providerResourceFormats,
   renderProviderResourceCommand,
   type ProviderResourceLanguage,
@@ -211,15 +213,17 @@ function verificationLabel(status: ProviderResourceVerificationStatus, locale: L
 }
 
 export function ProviderResourceBrowser({ locale, onBack, datasetId }: ProviderResourceBrowserProps) {
+  const initialFilters = parseProviderResourceSearch(window.location.search);
   const [inventory, setInventory] = useState<ProviderResourceInventory>();
   const [error, setError] = useState<string>();
   const [attempt, setAttempt] = useState(0);
-  const initialSource = datasetId ? "" : new URLSearchParams(window.location.search).get("source") ?? "";
-  const [query, setQuery] = useState(initialSource);
-  const [access, setAccess] = useState<ProviderResourceAccess | "all">("all");
-  const [format, setFormat] = useState("all");
-  const [kind, setKind] = useState<ProviderResourceKind | "all">("all");
-  const [verification, setVerification] = useState<ProviderResourceVerificationStatus | "all">("all");
+  const [query, setQuery] = useState(initialFilters.query);
+  const [access, setAccess] = useState<ProviderResourceAccess | "all">(initialFilters.access);
+  const [format, setFormat] = useState(initialFilters.format);
+  const [kind, setKind] = useState<ProviderResourceKind | "all">(initialFilters.kind);
+  const [verification, setVerification] = useState<ProviderResourceVerificationStatus | "all">(
+    initialFilters.verification,
+  );
   const [visibleLimit, setVisibleLimit] = useState(PAGE_SIZE);
   const [expandedKey, setExpandedKey] = useState<string>();
   const text = messages[locale];
@@ -269,6 +273,20 @@ export function ProviderResourceBrowser({ locale, onBack, datasetId }: ProviderR
     setVisibleLimit(PAGE_SIZE);
     setExpandedKey(undefined);
   }, [access, format, kind, query, verification]);
+
+  useEffect(() => {
+    window.history.replaceState(
+      {},
+      "",
+      providerResourceLocation(import.meta.env.BASE_URL, datasetId, {
+        query,
+        access,
+        format,
+        kind,
+        verification,
+      }),
+    );
+  }, [access, datasetId, format, kind, query, verification]);
 
   const clearFilters = () => {
     setQuery("");

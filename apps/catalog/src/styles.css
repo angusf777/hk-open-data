@@ -445,6 +445,29 @@ button {
   font-size: 0.82rem;
 }
 
+.results-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.results-actions button {
+  min-height: 32px;
+  padding: 0 10px;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: transparent;
+  color: var(--ink);
+  cursor: pointer;
+  font-size: 0.72rem;
+  font-weight: 700;
+}
+
+.results-actions button:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
 .resource-row {
   position: relative;
   display: grid;
@@ -1915,6 +1938,14 @@ button {
 
   .results-heading {
     min-height: 82px;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: center;
+    padding-block: 12px;
+  }
+
+  .results-actions {
+    flex-wrap: wrap;
   }
 
   .resource-row {
