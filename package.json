@@ -16,6 +16,8 @@
     "resources:refresh": "uv run python -m scripts.data_gov_resources refresh",
     "resources:probe": "uv run python -m scripts.data_gov_resources probe",
     "resources:check": "uv run python -m scripts.data_gov_resources check",
+    "quickstarts:generate": "uv run python -m scripts.quickstarts generate",
+    "quickstarts:check": "uv run python -m scripts.quickstarts check",
     "test": "pnpm -r --if-present test && uv run pytest -q",
     "test:browser": "playwright test",
     "test:contract": "pnpm --filter @hk-open-data/api test -- openapi-contract.test.ts",
