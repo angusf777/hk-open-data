@@ -1,4 +1,4 @@
-FROM ghcr.io/astral-sh/uv:0.8.14 AS uv
+FROM ghcr.io/astral-sh/uv:0.12.9 AS uv
 FROM node:22.22.0-alpine3.22 AS build
 WORKDIR /app
 RUN apk upgrade --no-cache && apk add --no-cache python3
@@ -18,7 +18,7 @@ COPY scripts/export_snapshots.py scripts/export_snapshots.py
 COPY llms.txt llms.txt
 RUN pnpm --filter @hk-open-data/catalog build && cp -R apps/catalog/dist /site
 
-FROM nginxinc/nginx-unprivileged:1.27.4-alpine
+FROM nginxinc/nginx-unprivileged:1.31.5-alpine
 USER root
 RUN apk upgrade --no-cache
 COPY infra/docker/catalog.nginx.conf /etc/nginx/conf.d/default.conf

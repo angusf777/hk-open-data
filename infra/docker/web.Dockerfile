@@ -17,7 +17,7 @@ COPY packages/sdk-typescript packages/sdk-typescript
 COPY apps apps
 RUN pnpm --filter "@hk-open-data/${APP}..." build && cp -R "apps/${APP}/dist" /site
 
-FROM nginxinc/nginx-unprivileged:1.27.4-alpine
+FROM nginxinc/nginx-unprivileged:1.31.5-alpine
 USER root
 RUN apk upgrade --no-cache
 COPY infra/docker/web.nginx.conf /etc/nginx/conf.d/default.conf
