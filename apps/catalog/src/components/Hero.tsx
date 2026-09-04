@@ -71,16 +71,23 @@ export function Hero({
       </form>
       <nav className="category-links" aria-label={locale === "en" ? "Categories" : "類別"}>
         {categoryLinks.map(([value, en, zh, Icon]) => (
-          <button
+          <a
             className={selectedCategory === value ? "is-active" : ""}
             key={value}
-            type="button"
-            aria-pressed={selectedCategory === value}
-            onClick={() => onCategoryChange(selectedCategory === value ? undefined : value)}
+            aria-current={selectedCategory === value ? "page" : undefined}
+            href={
+              selectedCategory === value
+                ? import.meta.env.BASE_URL
+                : `${import.meta.env.BASE_URL}categories/${encodeURIComponent(value)}/`
+            }
+            onClick={(event) => {
+              event.preventDefault();
+              onCategoryChange(selectedCategory === value ? undefined : value);
+            }}
           >
             <Icon aria-hidden="true" size={18} strokeWidth={1.75} />
             {locale === "en" ? en : zh}
-          </button>
+          </a>
         ))}
       </nav>
     </section>

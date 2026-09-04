@@ -18,6 +18,10 @@ interface AppProps {
 }
 
 export function App({ catalogue, initialLocale = "en" }: AppProps) {
+  const pathCategory = decodeURIComponent(
+    window.location.pathname.match(/\/categories\/([^/]+)\/?$/)?.[1] ?? "",
+  );
+  const initialCategory = window.__HK_OPEN_DATA_CATEGORY__ ?? (pathCategory || undefined);
   const pathDatasetId = decodeURIComponent(
     window.location.pathname.match(/\/datasets\/([^/]+)\/?$/)?.[1] ?? "",
   );
@@ -29,7 +33,9 @@ export function App({ catalogue, initialLocale = "en" }: AppProps) {
   );
   const [locale, setLocale] = useState<Locale>(initialLocale);
   const [query, setQuery] = useState("");
-  const [filters, setFilters] = useState<ResourceFilters>({});
+  const [filters, setFilters] = useState<ResourceFilters>(
+    initialCategory ? { category: initialCategory } : {},
+  );
   const [selected, setSelected] = useState<Resource | undefined>(
     initialProviderBrowser ? undefined : initialResource,
   );
@@ -68,11 +74,20 @@ export function App({ catalogue, initialLocale = "en" }: AppProps) {
       const nextDatasetId = decodeURIComponent(
         window.location.pathname.match(/\/datasets\/([^/]+)\/?$/)?.[1] ?? "",
       );
+      const nextCategory = decodeURIComponent(
+        window.location.pathname.match(/\/categories\/([^/]+)\/?$/)?.[1] ?? "",
+      );
       const pathId = decodeURIComponent(
         window.location.pathname.match(/\/resources\/([^/]+)\/?$/)?.[1] ?? "",
       );
       setProviderBrowser(onProviderBrowser || Boolean(nextDatasetId));
       setProviderDatasetId(nextDatasetId || undefined);
+      setFilters((current) => {
+        const next = { ...current };
+        if (nextCategory) next.category = nextCategory;
+        else delete next.category;
+        return next;
+      });
       setSelected(
         onProviderBrowser || nextDatasetId
           ? undefined
@@ -142,6 +157,10 @@ export function App({ catalogue, initialLocale = "en" }: AppProps) {
                 if (category) next.category = category;
                 else delete next.category;
                 setFilters(next);
+                const path = category
+                  ? `${import.meta.env.BASE_URL}categories/${encodeURIComponent(category)}/`
+                  : import.meta.env.BASE_URL;
+                window.history.pushState({}, "", path);
               }}
             />
             <section className="catalogue-layout" id="catalogue-results" aria-labelledby="results-title">

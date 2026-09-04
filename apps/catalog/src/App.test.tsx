@@ -6,6 +6,25 @@ import { App } from "./App";
 import { fixtureCatalogue } from "./test-fixtures";
 
 describe("catalogue application", () => {
+  it("opens permanent category pages and links category navigation", async () => {
+    window.history.replaceState({}, "", "/categories/climate-weather/");
+    const user = userEvent.setup();
+
+    render(<App catalogue={fixtureCatalogue} initialLocale="en" />);
+
+    expect(screen.getByRole("heading", { name: "1 source" })).toBeVisible();
+    expect(screen.getByRole("heading", { name: /observatory/i })).toBeVisible();
+    expect(screen.queryByRole("heading", { name: "Map Service" })).not.toBeInTheDocument();
+    const weather = screen.getByRole("link", { name: "Weather" });
+    expect(weather).toHaveAttribute("href", "/");
+    expect(weather).toHaveAttribute("aria-current", "page");
+
+    await user.click(weather);
+    expect(screen.getByRole("heading", { name: "2 sources" })).toBeVisible();
+    expect(window.location.pathname).toBe("/");
+    expect(weather).toHaveAttribute("href", "/categories/climate-weather/");
+  });
+
   it("shows the independent-project notice before catalogue results", () => {
     render(<App catalogue={fixtureCatalogue} initialLocale="en" />);
 

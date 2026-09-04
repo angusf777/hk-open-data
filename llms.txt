@@ -1,0 +1,26 @@
+# HK Open Data
+
+> A bilingual, evidence-labelled catalogue and optional self-hosted toolkit for Hong Kong public-data sources.
+
+HK Open Data is an independent community project. It is not a Hong Kong Government service and it
+does not host or resell provider datasets. Catalogue inclusion and technical reachability do not
+grant permission for commercial use, caching, scraping, or redistribution. Check each provider's
+current terms and applicable law.
+
+## Primary resources
+
+- [Live catalogue](https://angusf777.github.io/hk-open-data/): Search 521 source records.
+- [Provider files and endpoints](https://angusf777.github.io/hk-open-data/provider-resources/): Browse DATA.GOV.HK metadata with bounded payload evidence.
+- [Catalogue JSON](https://angusf777.github.io/hk-open-data/catalogue.json): Generated public catalogue.
+- [Metadata downloads](https://angusf777.github.io/hk-open-data/downloads/README.txt): JSON, CSV, and SQLite snapshots; no provider dataset payloads.
+- [DCAT metadata](https://angusf777.github.io/hk-open-data/dcat.jsonld): Machine-readable catalogue description.
+- [Self-hosted runtime OpenAPI](https://angusf777.github.io/hk-open-data/contracts/openapi.json): Contract for the optional local runtime, not a hosted public API.
+- [Source access guide](https://github.com/angusf777/hk-open-data/blob/main/docs/getting-started/access-recipes.md): CLI, SDK, API, and MCP usage.
+- [Quickstarts](https://github.com/angusf777/hk-open-data/tree/main/docs/quickstarts): Evidence-backed examples for representative live sources.
+- [Rights guidance](https://github.com/angusf777/hk-open-data/blob/main/docs/governance/SOURCE_RIGHTS.md): Required source-specific terms checks.
+
+## Repository
+
+- [Source code](https://github.com/angusf777/hk-open-data)
+- [Contribution guide](https://github.com/angusf777/hk-open-data/blob/main/CONTRIBUTING.md)
+- [Citation metadata](https://github.com/angusf777/hk-open-data/blob/main/CITATION.cff)

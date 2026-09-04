@@ -237,5 +237,6 @@ declare global {
   interface Window {
     __HK_OPEN_DATA_RESOURCE_ID__?: string;
     __HK_OPEN_DATA_DATASET_ID__?: string;
+    __HK_OPEN_DATA_CATEGORY__?: string;
   }
 }

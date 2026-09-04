@@ -17,7 +17,7 @@ export const fixtureResources: Resource[] = [
       name: { en: "Hong Kong Observatory", "zh-Hant": "香港天文台" },
       type: "public-authority",
     },
-    categories: ["weather"],
+    categories: ["climate-weather"],
     tags: ["forecast"],
     protocols: ["https", "rest"],
     formats: ["json"],

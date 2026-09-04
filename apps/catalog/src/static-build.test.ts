@@ -60,5 +60,27 @@ describe("static catalogue build", () => {
     expect(dataset).toContain(
       'window.__HK_OPEN_DATA_DATASET_ID__="nlb-bus-nlb-bus-service-v2"',
     );
+
+    const category = readFileSync(
+      resolve(appRoot, "dist/categories/transportation/index.html"),
+      "utf8",
+    );
+    expect(category).toContain(
+      '<link rel="canonical" href="https://angusf777.github.io/hk-open-data/categories/transportation/" />',
+    );
+    expect(category).toContain('window.__HK_OPEN_DATA_CATEGORY__="transportation"');
+    expect(category).toContain('"@type":"CollectionPage"');
+    expect(readFileSync(resolve(appRoot, "dist/index.html"), "utf8")).toContain(
+      '"@type":"WebSite"',
+    );
+    expect(JSON.parse(readFileSync(resolve(appRoot, "dist/dcat.jsonld"), "utf8"))).toMatchObject(
+      { "@type": "dcat:Catalog" },
+    );
+    expect(readFileSync(resolve(appRoot, "dist/llms.txt"), "utf8")).toContain(
+      "# HK Open Data",
+    );
+    expect(
+      JSON.parse(readFileSync(resolve(appRoot, "dist/contracts/openapi.json"), "utf8")),
+    ).toHaveProperty("openapi", "3.1.0");
   });
 });

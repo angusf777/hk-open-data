@@ -1,0 +1,21 @@
+cff-version: 1.2.0
+message: "If HK Open Data helped your work, please cite the repository and the original data providers."
+title: "HK Open Data"
+type: software
+authors:
+  - name: "angusf777"
+repository-code: "https://github.com/angusf777/hk-open-data"
+url: "https://angusf777.github.io/hk-open-data/"
+license: Apache-2.0
+version: 0.1.0
+date-released: 2026-09-01
+keywords:
+  - Hong Kong
+  - open data
+  - public API
+  - MCP
+  - data catalogue
+abstract: >-
+  A bilingual, evidence-labelled catalogue and optional self-hosted toolkit for discovering and
+  accessing Hong Kong public-data sources. Third-party data and provider rights remain with their
+  original owners.
