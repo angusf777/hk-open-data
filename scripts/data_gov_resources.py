@@ -175,7 +175,8 @@ def inventory_summary(inventory: DataGovResourceInventory) -> dict[str, int]:
     for resource in inventory.resources:
         counts[resource.access] += 1
     return {
-        "datasets": len(inventory.datasets) or len({resource.dataset_id for resource in inventory.resources}),
+        "datasets": len(inventory.datasets)
+        or len({resource.dataset_id for resource in inventory.resources}),
         "resources": len(inventory.resources),
         **counts,
     }
