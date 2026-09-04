@@ -33,7 +33,7 @@ Requirements are Python 3.12+ and [uv](https://docs.astral.sh/uv/).
 ```bash
 git clone https://github.com/angusf777/hk-open-data.git
 cd hk-open-data
-uv sync --frozen --all-groups
+uv sync --frozen --all-packages --all-groups
 ```
 
 The commands below use the project-local environment, so they do not install a global package.

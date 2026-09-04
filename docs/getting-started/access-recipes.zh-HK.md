@@ -27,7 +27,7 @@ MCP 軟件。詳見[涵蓋範圍及證據表](../access/coverage.md)。
 ```bash
 git clone https://github.com/angusf777/hk-open-data.git
 cd hk-open-data
-uv sync --frozen --all-groups
+uv sync --frozen --all-packages --all-groups
 ```
 
 以下指令使用項目本身的環境，不會安裝全域套件。

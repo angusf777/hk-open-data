@@ -28,7 +28,7 @@ runs:
       shell: bash
       run: |
         pnpm install --frozen-lockfile
-        uv sync --frozen --all-groups
+        uv sync --frozen --all-packages --all-groups
     - name: Install Chromium
       if: inputs.install-browser == 'true'
       shell: bash

@@ -21,6 +21,16 @@ def test_ci_has_read_only_permissions_and_required_jobs() -> None:
     assert {"catalogue", "typescript", "python", "browser", "boundary"} <= set(jobs)
 
 
+def test_setup_installs_all_python_workspace_packages() -> None:
+    setup = yaml.safe_load(
+        (ROOT / ".github/actions/setup/action.yml").read_text(encoding="utf-8")
+    )
+    install = next(
+        step for step in setup["runs"]["steps"] if step.get("name") == "Install dependencies"
+    )
+    assert "uv sync --frozen --all-packages --all-groups" in install["run"]
+
+
 def test_pages_uploads_only_static_catalogue_dist() -> None:
     pages = workflow("pages.yml")
     jobs = pages["jobs"]

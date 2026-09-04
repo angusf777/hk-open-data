@@ -18,7 +18,7 @@ Docker is not required.
 ```bash
 git clone https://github.com/angusf777/hk-open-data.git
 cd hk-open-data
-pnpm install --frozen-lockfile && uv sync --frozen --all-groups
+pnpm install --frozen-lockfile && uv sync --frozen --all-packages --all-groups
 make catalogue
 ```
 
