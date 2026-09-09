@@ -14,22 +14,6 @@ from scripts.catalog import (
 FIXTURES = Path(__file__).parent / "fixtures"
 
 
-def test_business_ideas_reference_is_not_a_runtime_integration() -> None:
-    records = load_records(Path("catalog"))
-    reference = next(record for record in records if record["id"] == "external:ext-146")
-
-    assert validate_records([reference]) == []
-    assert reference["type"] == "external"
-    assert reference["access"] == "repository"
-    assert reference["urls"]["landing"] == (
-        "https://github.com/yourincomehome/awesome-passive-income"
-    )
-    assert reference["integrations"] == {"connector": "none", "sdk": "none", "mcp": "none"}
-    assert "2020" in reference["summary"]["en"]
-    assert "unverified" in reference["summary"]["en"]
-    assert "linked services" in reference["termsEvidence"]["note"]["en"]
-
-
 def fixture_access_index(
     source_reference: str = "HKAPI-EXAMPLE",
     *,

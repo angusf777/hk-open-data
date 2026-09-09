@@ -2,7 +2,7 @@
 
 [![授權：Apache-2.0](https://img.shields.io/github/license/angusf777/hk-open-data)](LICENSE)
 [![GitHub 星標](https://img.shields.io/github/stars/angusf777/hk-open-data?style=flat)](https://github.com/angusf777/hk-open-data/stargazers)
-[![目錄資源](https://img.shields.io/badge/catalogue-522_resources-c81e3a)](catalog/generated/counts.json)
+[![目錄資源](https://img.shields.io/badge/catalogue-521_resources-c81e3a)](catalog/generated/counts.json)
 [![持續整合](https://github.com/angusf777/hk-open-data/actions/workflows/ci.yml/badge.svg)](https://github.com/angusf777/hk-open-data/actions/workflows/ci.yml)
 
 > **獨立社群項目。** 本儲存庫並非由香港特別行政區政府或任何列出的提供者營運，亦不代表
@@ -15,7 +15,7 @@
 資料來源、核查日期，以及本項目對來源使用條款的查核結果。
 
 <!-- catalog-counts:start -->
-**522 項資源** · **265 項官方資源** · **146 項外部資源** · **111 項 MCP 候選項目**
+**521 項資源** · **265 項官方資源** · **145 項外部資源** · **111 項 MCP 候選項目**
 <!-- catalog-counts:end -->
 
 [**瀏覽線上目錄 →**](https://angusf777.github.io/hk-open-data/) ·
@@ -104,11 +104,9 @@ Node 或 `hkdata` 指令。瀏覽及產生指令均在本機完成；只有當�
 同一清單亦以供機器讀取的
 [`access/generated/data-gov-resources.json`](access/generated/data-gov-resources.json) 發布。
 
-**146 項外部資源**及 **111 個社群 MCP 項目**是供讀者探索的目錄項目，並非隨附連接器。
-2026 年 9 月 1 日的連結核查涵蓋當時的 145 項外部資源及 111 個 MCP 儲存庫，分別成功
-連接或跟隨有效重新導向至 128 項及 107 個，並為其餘項目記錄結果。Awesome Passive
-Income 於 2026 年 9 月 9 日另行核對目錄資料，並未測試其連結服務。
-該次核查並無登入外部 API，亦無安裝或執行第三方 MCP
+**145 項外部資源**及 **111 個社群 MCP 項目**是供讀者探索的目錄項目，並非隨附連接器。
+2026 年 9 月 1 日的連結核查成功連接或跟隨有效重新導向至 128 項外部資源及 107 個 MCP
+儲存庫，並為其餘項目記錄結果。該次核查並無登入外部 API，亦無安裝或執行第三方 MCP
 程式碼。本儲存庫自有的 15 項唯讀 MCP 工具則另有合約及整合測試。詳見
 [覆蓋及證據矩陣](docs/access/coverage.md)。
 

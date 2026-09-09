@@ -147,13 +147,13 @@ def test_importer_runs_as_a_direct_cli(tmp_path: Path) -> None:
     assert len(load_records(tmp_path)) == 3
 
 
-def test_committed_catalogue_has_complete_import_and_additions() -> None:
+def test_committed_catalogue_has_complete_import() -> None:
     records = load_records(Path("catalog"))
     counts = Counter(item["type"] for item in records)
 
-    assert counts == {"official": 265, "external": 146, "mcp": 111}
-    assert len({item["id"] for item in records}) == 522
-    assert len({(item["type"], item["sourceReference"]) for item in records}) == 522
+    assert counts == {"official": 265, "external": 145, "mcp": 111}
+    assert len({item["id"] for item in records}) == 521
+    assert len({(item["type"], item["sourceReference"]) for item in records}) == 521
     assert validate_records(records) == []
 
 

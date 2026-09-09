@@ -22,7 +22,7 @@ def test_exports_publish_catalogue_and_access_metadata_without_provider_payloads
         "sources.csv",
     }
     with (tmp_path / "sources.csv").open(encoding="utf-8", newline="") as stream:
-        assert len(list(csv.DictReader(stream))) == 522
+        assert len(list(csv.DictReader(stream))) == 521
     with (tmp_path / "provider-resources.csv").open(encoding="utf-8", newline="") as stream:
         resources = list(csv.DictReader(stream))
     assert len(resources) == 5_862
@@ -30,7 +30,7 @@ def test_exports_publish_catalogue_and_access_metadata_without_provider_payloads
     assert "body" not in resources[0]
 
     with sqlite3.connect(tmp_path / "hk-open-data.sqlite") as database:
-        assert database.execute("select count(*) from catalogue_sources").fetchone() == (522,)
+        assert database.execute("select count(*) from catalogue_sources").fetchone() == (521,)
         assert database.execute("select count(*) from datasets").fetchone() == (350,)
         assert database.execute("select count(*) from provider_resources").fetchone() == (5_862,)
         tables = {

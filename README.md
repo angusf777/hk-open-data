@@ -4,7 +4,7 @@
 [![GitHub stars](https://img.shields.io/github/stars/angusf777/hk-open-data?style=flat)](https://github.com/angusf777/hk-open-data/stargazers)
 [![GitHub release](https://img.shields.io/github/v/release/angusf777/hk-open-data)](https://github.com/angusf777/hk-open-data/releases)
 [![Contributors](https://img.shields.io/github/contributors/angusf777/hk-open-data)](https://github.com/angusf777/hk-open-data/graphs/contributors)
-[![Catalogue sources](https://img.shields.io/badge/catalogue-522_sources-c81e3a)](catalog/generated/counts.json)
+[![Catalogue sources](https://img.shields.io/badge/catalogue-521_sources-c81e3a)](catalog/generated/counts.json)
 [![CI](https://github.com/angusf777/hk-open-data/actions/workflows/ci.yml/badge.svg)](https://github.com/angusf777/hk-open-data/actions/workflows/ci.yml)
 
 > **Independent community project.** This repository is not operated by, affiliated with, or
@@ -19,7 +19,7 @@ catalogue. Every record shows where the information came from, when it was check
 found about the source's terms of use.
 
 <!-- catalog-counts:start -->
-**522 sources** · **265 official** · **146 external** · **111 MCP candidates**
+**521 sources** · **265 official** · **145 external** · **111 MCP candidates**
 <!-- catalog-counts:end -->
 
 [**Browse the live catalogue →**](https://angusf777.github.io/hk-open-data/) ·
@@ -125,11 +125,9 @@ Machines can use the [catalogue JSON](catalog/generated/catalogue.json), exact
 with a [copyable download and query guide](docs/getting-started/metadata-downloads.md).
 Those downloads contain project metadata and technical evidence, not provider dataset payloads.
 
-The **146 external resources** and **111 community MCP projects** are discovery entries, not bundled
-connectors. A 1 September 2026 link check of the previous 145 external entries and 111 MCP
-repositories reached or followed a valid redirect for 128 and 107 respectively; it recorded
-findings for the rest. Awesome Passive Income was separately metadata-reviewed on 9 September
-2026; its linked services were not tested. Those checks did not log in to
+The **145 external resources** and **111 community MCP projects** are discovery entries, not bundled
+connectors. A 1 September 2026 link check reached or followed a valid redirect for 128 external
+entries and 107 MCP repositories; it recorded findings for the rest. Those checks did not log in to
 external APIs or install and execute third-party MCP code. The repository's own 15-tool read-only
 MCP server is separately covered by contract and integration tests. See the
 [coverage and evidence matrix](docs/access/coverage.md).

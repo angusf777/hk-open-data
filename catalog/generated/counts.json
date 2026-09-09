@@ -7,17 +7,17 @@
     "manual-only": 38
   },
   "byTermsEvidenceState": {
-    "ambiguity-identified": 331,
+    "ambiguity-identified": 330,
     "not-reviewed": 111,
     "restriction-identified": 80
   },
   "byTranslationStatus": {
-    "seeded": 522
+    "seeded": 521
   },
   "byType": {
-    "external": 146,
+    "external": 145,
     "mcp": 111,
     "official": 265
   },
-  "total": 522
+  "total": 521
 }
