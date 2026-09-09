@@ -21,7 +21,7 @@ Landing pages and geoportals are deliberately not counted as payload proof. See 
 [exact exceptions and method](../access/provider-resources.md). Live evidence expires and never
 guarantees later availability.
 
-The 145 external resources and 111 community MCP projects are catalogue candidates rather than
+The external resources and community MCP projects are catalogue candidates rather than
 source recipes. The current link pass reached or safely redirected 128 external landing pages and
 107 MCP repository links, but it did not authenticate to those APIs or execute third-party MCP
 software. See the [coverage and evidence matrix](../access/coverage.md).

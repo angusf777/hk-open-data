@@ -3045,6 +3045,28 @@
     "type": "external"
   },
   {
+    "authentication": "none",
+    "categories": [
+      "business",
+      "open-source-projects"
+    ],
+    "id": "external:ext-146",
+    "name": {
+      "en": "Awesome Passive Income",
+      "zh-Hant": "Awesome Passive Income（網上業務靈感資源）"
+    },
+    "provider": {
+      "en": "yourincomehome / Your Income At Home",
+      "zh-Hant": "yourincomehome / Your Income At Home"
+    },
+    "summary": {
+      "en": "Curated list of online-business models and tools, including affiliate marketing, digital products, freelancing and e-commerce. Global inspiration for Hong Kong builders, not an API or MCP. The README describes a 2020 list; current availability, Hong Kong eligibility and earnings claims are unverified.",
+      "zh-Hant": "網上業務模式與工具的整理清單，涵蓋聯盟行銷、數碼產品、自由工作及電子商務。可供香港創業者參考，並非 API 或 MCP。README 說明這是 2020 年的清單；服務現況、香港用戶資格及收入說法均未經核實。"
+    },
+    "termsEvidenceState": "ambiguity-identified",
+    "type": "external"
+  },
+  {
     "authentication": "not-applicable",
     "categories": [
       "aggregators"

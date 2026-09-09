@@ -14,10 +14,11 @@ for (const file of ["README.md", "README.zh-HK.md"]) {
 }
 
 test("README statistics are delimited for deterministic updates", async () => {
+  const counts = JSON.parse(await readFile("catalog/generated/counts.json", "utf8"));
   for (const file of ["README.md", "README.zh-HK.md"]) {
     const text = await readFile(file, "utf8");
     assert.equal(text.match(/<!-- catalog-counts:start -->/g)?.length, 1);
     assert.equal(text.match(/<!-- catalog-counts:end -->/g)?.length, 1);
-    if (file === "README.md") assert.match(text, /\*\*521 sources\*\*/);
+    if (file === "README.md") assert.ok(text.includes(`**${counts.total} sources**`));
   }
 });

@@ -1,5 +1,5 @@
 {
-  "count": 145,
+  "count": 146,
   "resources": [
     {
       "access": "open-endpoint",
@@ -9711,6 +9711,77 @@
         "checkedAt": "2026-08-31",
         "evidenceUrl": "https://docs.openalex.org/",
         "status": "candidate"
+      }
+    },
+    {
+      "access": "repository",
+      "authentication": "none",
+      "availability": "Public repository reviewed on 9 September 2026; linked services were not individually tested.",
+      "categories": [
+        "business",
+        "open-source-projects"
+      ],
+      "formats": [
+        "text"
+      ],
+      "id": "external:ext-146",
+      "integrations": {
+        "connector": "none",
+        "mcp": "none",
+        "sdk": "none"
+      },
+      "languages": [
+        "en"
+      ],
+      "name": {
+        "en": "Awesome Passive Income",
+        "zh-Hant": "Awesome Passive Income（網上業務靈感資源）"
+      },
+      "protocols": [
+        "https"
+      ],
+      "provider": {
+        "name": {
+          "en": "yourincomehome / Your Income At Home",
+          "zh-Hant": "yourincomehome / Your Income At Home"
+        },
+        "type": "community-project"
+      },
+      "publicationStatus": "published",
+      "schemaVersion": 1,
+      "sourceReference": "EXT-146",
+      "summary": {
+        "en": "Curated list of online-business models and tools, including affiliate marketing, digital products, freelancing and e-commerce. Global inspiration for Hong Kong builders, not an API or MCP. The README describes a 2020 list; current availability, Hong Kong eligibility and earnings claims are unverified.",
+        "zh-Hant": "網上業務模式與工具的整理清單，涵蓋聯盟行銷、數碼產品、自由工作及電子商務。可供香港創業者參考，並非 API 或 MCP。README 說明這是 2020 年的清單；服務現況、香港用戶資格及收入說法均未經核實。"
+      },
+      "tags": [
+        "Business ideas",
+        "Reference collection",
+        "Digital products",
+        "Online business"
+      ],
+      "termsEvidence": {
+        "attribution": null,
+        "checkedAt": "2026-09-09",
+        "note": {
+          "en": "The repository lists CC0-1.0. This does not license linked services or their content; their terms, fees and territorial eligibility require separate checks. Inclusion is not an endorsement, earnings guarantee or investment advice.",
+          "zh-Hant": "儲存庫列明 CC0-1.0，並不代表已取得所連結服務或內容的使用許可；其條款、費用及地區資格須另行核實。收錄不構成認可、收入保證或投資建議。"
+        },
+        "restrictions": [],
+        "state": "ambiguity-identified"
+      },
+      "translationStatus": "seeded",
+      "type": "external",
+      "updateCadence": "Not specified; the README describes a 2020 list.",
+      "urls": {
+        "documentation": "https://github.com/yourincomehome/awesome-passive-income/blob/master/README.md",
+        "landing": "https://github.com/yourincomehome/awesome-passive-income",
+        "terms": "https://github.com/yourincomehome/awesome-passive-income/blob/master/LICENSE"
+      },
+      "verification": {
+        "checkedAt": "2026-09-09",
+        "evidenceUrl": "https://github.com/yourincomehome/awesome-passive-income",
+        "status": "metadata-reviewed"
       }
     }
   ],
