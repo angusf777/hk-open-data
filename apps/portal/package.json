@@ -13,7 +13,7 @@
     "@hk-open-data/sdk-typescript": "workspace:*",
     "@hk-open-data/ui": "workspace:*",
     "@tanstack/react-query": "5.90.21",
-    "lucide-react": "0.468.0",
+    "lucide-react": "1.38.0",
     "react": "19.2.4",
     "react-dom": "19.2.4",
     "react-router-dom": "7.18.2"
